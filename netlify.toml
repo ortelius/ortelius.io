@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "git submodule update -f --init && hugo"
+command = "git submodule update --init --recursive --depth 1 && hugo"
 
 [context.production.environment]
 HUGO_VERSION = "0.80.0"
@@ -9,7 +9,7 @@ HUGO_ENABLEGITINFO = "true"
 
 
 [context.deploy-preview]
-command = "git submodule update -f --init && hugo --buildFuture -b $DEPLOY_PRIME_URL"
+command = "git submodule update --init --recursive --depth 1 && hugo --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.80.0"
