@@ -1,0 +1,15 @@
+[build]
+publish = "public"
+command = "git submodule update -f --init && npm install postcss-cli && hugo -gc --minify"
+
+[context.production.environment]
+HUGO_VERSION = "0.80.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+
+
+[context.deploy-preview]
+command = "git submodule update -f --init && npm install postcss-cli &&  hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.80.0"
