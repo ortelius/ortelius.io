@@ -158,3 +158,8 @@ enable = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[[menu.main]]
+    name = "Documentation"
+    weight = 90
+    url = "https://docs.ortelius.io/guides/"

@@ -1,0 +1,89 @@
+// HERO
+.header-hero {
+    background-image: url(/images/header.png);
+    background-color: darkslategrey;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 120px;
+    margin-bottom: 0;
+    position: relative;
+  
+    &.bot-bar:after {
+      display: block;
+      margin-bottom: -24px;
+      height: 8px;
+      width: 100%;
+      background-color: transparentize(white, 0.9);
+      content: "";
+    }
+  
+    &.no-sub {
+      h5 {
+        display: none;
+      }
+  
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .td-home .header-hero:after {
+    display: none;
+  }
+  
+  .header-hero {
+    background-color: darkslategrey;
+  
+    h5 {
+      margin: 20px 0;
+      line-height: 28px;
+    }
+  }
+
+
+  .flip-nav .td-navbar {
+    background: #676767 !important;
+}
+
+.td-navbar {
+  background: transparent !important;
+}
+
+// box-variant creates the main style for a colored section used on the site.
+@mixin box-variant($parent, $color-name, $color-value) {
+    $text-color: color-yiq($color-value);
+    $link-color: mix($ortelius_orange, $text-color, lightness($color-value));
+    $link-hover-color: rgba($link-color, 0.5) !default;
+
+    #{$parent} {
+        &--#{$color-name} {
+            color: $text-color;
+            background-color: #{$color-value};
+
+            .td-arrow-down {
+                &::before {
+                    left: 50%;
+                    margin-left: -30px;
+                    bottom: -25px;
+                    border: {
+                        style: solid;
+                        width: 25px 30px 0 30px;
+                        color: #{$color-value} transparent transparent transparent;
+                    };
+                    z-index: 3;
+                    position: absolute;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    // Improve contrast for the links in paragraphs.
+    @include link-variant("#{$parent}--#{$color-name} p > a", $link-color, $link-hover-color, false);
+
+    @if $enable-gradients {
+        @include bg-gradient-variant("#{$parent}--1#{$color-name}#{$parent}--gradient", $color-value,true);
+    }
+}
