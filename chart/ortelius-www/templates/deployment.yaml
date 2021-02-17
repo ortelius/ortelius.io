@@ -20,6 +20,6 @@ spec:
         - name: {{ include "ortelius-www.name" . }}
           image: "{{ .Values.DockerRepo }}:{{ .Values.DockerTag }}"
           imagePullPolicy: Always
-          args: ["server", "-b", "http://docs.ortelius.io", "--appendPort=false"] 
+          args: ["server", "-b", "https://dev.ortelius.io", "--appendPort=false"] 
           ports:
             - containerPort: 1313     
