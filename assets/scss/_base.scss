@@ -2,10 +2,11 @@
 .header-hero {
     background-image: url(/images/header.png);
     background-color: darkslategrey;
+    background-position: center center;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 120px;
+    padding-top: 280px;
     margin-bottom: 0;
     position: relative;
   
@@ -86,4 +87,55 @@
     @if $enable-gradients {
         @include bg-gradient-variant("#{$parent}--1#{$color-name}#{$parent}--gradient", $color-value,true);
     }
+}
+
+.home-logo {
+  display:block;
+  margin:auto;
+}
+
+#home-topleft > h2 {
+  text-align: center;
+}
+
+#home-topleft > p {
+  text-align: center;
+}
+
+#home-topleft > p > button {
+  border-radius: 200px;
+  box-shadow: none;
+  outline:none;
+  color: white;
+  background-color: #f8951a;
+  padding: 15px;
+}
+
+#home-github > p {
+  text-align: center;
+}
+
+#home-github > p > button {
+  border-radius: 200px;
+  box-shadow: none;
+  outline:none;
+  color: white;
+  background-color: #f8951a;
+  padding: 15px;
+}
+
+p > button > a:link {
+  color: white;
+}
+
+p > button > a:visited {
+  color: white;
+}
+
+p > button > a:hover {
+  color: white;
+}
+
+p > button > a:active {
+  color: white;
 }

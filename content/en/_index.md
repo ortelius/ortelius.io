@@ -5,9 +5,11 @@ description: Welcome to the Ortelius Hugo Demo Site
 
 {{< blocks/section color=dark >}}
 {{< blocks/feature_dual >}} 
-# PLACEHOLDER IMAGE
-## Microservice Configuration Mapping
-[GET STARTED TODAY - SIGN UP FOR FREE SAAS]("https://console.deployhub.com/dmadminweb/signup.html")
+<div id="home-topleft">
+<img class="home-logo" src="/images/Otelius-transparent1-300x290.png" alt="Ortelius Logo" />
+<h2>Microservice Configuration Mapping</h2>
+<p><button><a href="https://console.deployhub.com/dmadminweb/signup.html">GET STARTED TODAY - SIGN UP FOR FREE SAAS</a></button></p>
+</div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}} 
 # Our Mission
@@ -16,7 +18,11 @@ Our mission is to simplify the adoption of modern architecture through a world-c
 
 # What is Ortelius?
 
-Ortelius is a microservice management platform that visualizes ‘logical’ application versions in a microservice architecture. From packaging to deployment, Ortelius maps your microservice configurations with their relationships to the application that use them.  Your microservice configurations are versioned and tracked across all clusters so you always know before you go.  The latest version of Ortelius is maintained by the Ortelius Community managed by the Continuous Delivery Foundation (Linux Foundation).  It was originally created by  DeployHub and OpenMake Software.
+Ortelius is a microservice management platform that visualizes ‘logical’ application versions in a microservice architecture. From packaging to deployment, Ortelius maps your microservice configurations with their relationships to the application that use them.  Your microservice configurations are versioned and tracked across all clusters so you always know before you go.  The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com).
+<div id="home-github">
+<p><button><a href="https://github.com/ortelius/ortelius"><span>Join the Ortelius GitHub Project</span></a></button></p>
+<p><a href="https://github.com/ortelius/ortelius"><img loading="lazy" src="/images/githubstar-button.png" alt="github star" width="190" height="60"></a></p>
+</div>
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
