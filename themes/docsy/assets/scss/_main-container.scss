@@ -11,6 +11,10 @@
         section:first-of-type {
             @include media-breakpoint-up(md) {
                 padding-top: 8rem;
+                background-image: url(/images/header.jpg);
+                background-color: #676767;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
 

@@ -1,12 +1,11 @@
 // HERO
 .header-hero {
-    background-image: url(/images/header.png);
-    background-color: darkslategrey;
+    background:black;
     background-position: center center;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
-    padding-top: 280px;
+    padding-top: 24px;
     margin-bottom: 0;
     position: relative;
   
@@ -35,7 +34,7 @@
   }
   
   .header-hero {
-    background-color: darkslategrey;
+    background-color: black;
   
     h5 {
       margin: 20px 0;
@@ -45,11 +44,11 @@
 
 
   .flip-nav .td-navbar {
-    background: #676767 !important;
+    background: black !important;
 }
 
 .td-navbar {
-  background: transparent !important;
+  background: black !important;
 }
 
 // box-variant creates the main style for a colored section used on the site.
@@ -89,39 +88,54 @@
     }
 }
 
-.home-logo {
-  display:block;
-  margin:auto;
-}
-
-#home-topleft > h2 {
-  text-align: center;
-}
-
-#home-topleft > p {
-  text-align: center;
-}
-
-#home-topleft > p > button {
-  border-radius: 200px;
-  box-shadow: none;
-  outline:none;
-  color: white;
-  background-color: #f8951a;
-  padding: 15px;
-}
 
 #home-github > p {
   text-align: center;
 }
 
 #home-github > p > button {
-  border-radius: 200px;
+  border-radius: 6px;
   box-shadow: none;
   outline:none;
   color: white;
-  background-color: #f8951a;
-  padding: 15px;
+  background-color: #72df04;
+  padding: 6px 20px;
+}
+
+.col-center {
+  width: 100%;
+}
+
+.col-center > table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.col-center > tr, td {
+  padding: 10px;
+}
+
+.col-center > table > tbody > tr > td:nth-child(1) {
+  font-size: 1.5em;
+}
+
+.col-center > table > tbody > tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.750);
+}
+
+.wrapdiv {
+  &_image {
+    margin: 0px 30px 30px 0;
+    float: left;
+    height: 170px;
+  }
+  &_text {
+    display: inline;
+  }
+}
+
+.col-12 > h3 {
+  padding-top: 20px;
 }
 
 p > button > a:link {
