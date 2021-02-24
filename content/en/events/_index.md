@@ -6,12 +6,18 @@ menu:
   main:
    weight: 100
 ---
-# Webcast
+
+{{< blocks/section color="primary" >}}
+
+## Webcast
 Welcome Ortelius – the CDF Newest Project
 
 [January 27th 11 PT / 2 ET](https://zoom.us/webinar/register/WN_1c_K2h2oSXqllT8eiP04zg)
 
 ## Placeholder for image
+
+{{< /blocks/section >}}
+{{< blocks/section color="white" >}}
 
 # Community Meetings
 Join a SIG or attend our General meetings. We look forward to your help and input on the Ortelius project:
@@ -20,13 +26,17 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 - **Architecture and Marketplace SIG** – This group is driven to help define the future roadmap of Ortelius including a global marketplace for sharing microservices and their deployment requirements.
 - **Ortelius Outreach SIG** – This group wants to help with driving adoption and messaging of the Ortelius platform.
 
-___
+{{< /blocks/section >}}
+{{< blocks/section color="primary" >}}
 
 # Meeting Calendar
 <iframe style="border: 0px; opacity: 1; visibility: visible;" src="https://calendar.google.com/calendar/embed?src=c_vjebhusp537ftgsu6qiboiphcg%40group.calendar.google.com&amp;ctz=America%2FDenver" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-___
+{{< /blocks/section >}}
+{{< blocks/section color="white" >}}
 
 # Zoom Background Images
 
 # TODO: Add zoom background shortcode
+
+{{< /blocks/section >}}
