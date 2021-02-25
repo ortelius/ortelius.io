@@ -18,11 +18,8 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-Ortelius is a microservice management platform that visualizes ‘logical’ application versions in a microservice architecture. From packaging to deployment, Ortelius maps your microservice configurations with their relationships to the application that use them.  Your microservice configurations are versioned and tracked across all clusters so you always know before you go.  The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). 
-
-Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
-
-<p><a href="https://github.com/ortelius/ortelius"><img loading="lazy" src="/images/githubstar-button.png" alt="github star" width="190" height="60"></a></p>
+Ortelius is a microservice management platform that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
+<p></p>
 {{< /blocks/section >}}
 
 {{< blocks/section color=white >}}
@@ -31,11 +28,11 @@ Our mission is to simplify the adoption of modern architecture through a world-c
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservice-mapping" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/microservice-publishing" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Packaging" url="/microservice-packaging" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
