@@ -20,6 +20,6 @@ spec:
         - name: {{ include "ortelius-www.name" . }}
           image: "{{ .Values.DockerRepo }}:{{ .Values.DockerTag }}"
           imagePullPolicy: Always
-          args: ["server", "-b", "https://ortelius.io", "--appendPort=false", "-e", "HUGO_ENVIRONMENT=production"] 
+          args: ["server", "-b", "https://ortelius.io", "--appendPort=false", "-e", "HUGO_ENV=production"] 
           ports:
             - containerPort: 1313     
