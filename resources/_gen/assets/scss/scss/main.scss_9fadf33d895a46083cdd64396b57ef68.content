@@ -20165,5 +20165,13 @@ Nothing defined here. The Hugo project that uses this theme can override Bootstr
 assets/scss/_styles_project.scss
 
 */
+a {
+  color: blue; }
+
+.td-box--white p > a {
+  color: blue; }
+
+.td-box--primary p > a {
+  color: blue; }
 
 /*# sourceMappingURL=main.css.map */

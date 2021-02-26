@@ -59,6 +59,8 @@ anchor = "smart"
 [params]
 copyright = "Linux Foundation"
 
+link-color = "blue"
+
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
 
