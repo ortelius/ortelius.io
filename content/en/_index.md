@@ -79,7 +79,7 @@ Supports both microservice and monolithic applications. | <i class="fas fa-3x fa
 
 {{< blocks/section color=primary >}}
 {{< blocks/feature_dual >}}
-# Abraham Ortelius – Our Inspiration
+## Abraham Ortelius – Our Inspiration
 
 <div class="wrapdiv">
 <img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" />
@@ -87,7 +87,7 @@ Supports both microservice and monolithic applications. | <i class="fas fa-3x fa
 </div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-# A Thought Leader in Sharing
+## A Thought Leader in Sharing
 Ortelius also in some ways created on open source community of his day. To accomplish his goal, he was the first cartographers to give credit to his fellow scientists by adding their names to the Atlas. Ortelius was known to have corresponded with other professionals throughout Europe and pulled together their knowledge to create his publication and a truly global view of the world.
 
 Thank you Abraham Ortelius for showing us the way.

@@ -74,9 +74,16 @@ Add styles or override variables from the theme here.
   margin-left: auto;
   margin-right: auto; }
 
-.col-center > P {
+.col-center > p {
   text-align: center;
   margin-bottom: 30px; }
+
+.col-center-onpage {
+  width: 60%;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .col-center2 {
   width: 60%; }
