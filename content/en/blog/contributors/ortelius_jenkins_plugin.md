@@ -1,13 +1,18 @@
 ---
-date: 2021-01-05
+date: 2020-12-17
 title: "Ortelius Jenkins Plugin"
 linkTitle: "Ortelius Jenkins Plugin"
-author: Tracy Ragan
+author: Phil Gibbs
 ---
-# PLACEHOLDER IMAGE
+
 *Contributed by Phil Gibbs, Ortelius Core Contributor* 
 
 @philgibbs
+
+<div>
+<img src="/images/Jenkins.png" alt="Jenkins and Ortelius" height="192px" width="192x" />
+</div>
+<p></p>
 
 The Ortelius Jenkins plugin (https://plugins.jenkins.io/deployhub) allows Jenkins to notify Ortelius that a build has been performed and (optionally) trigger Ortelius to perform a deployment, which enables [Jenkins to scale to thousands](https://www.deployhub.com/scalable-jenkins-workflows-plugin/) of endpoints without agents.
 
@@ -34,10 +39,9 @@ You can use this technique when Ortelius requires a different IP address or host
 # Jenkins Pipeline Support
 Call Ortelius from your Jenkins File to perform deployment actions as part of your pipeline. A Ortelius [Groovy library](https://www.deployhub.com/native-groovy-api/) provides this support.
 
-Further reading:  [https://www.deployhub.com/continuous-deliv…lease-automation/](https://www.deployhub.com/continuous-delivery-vs-application-release-automation/) ‎
-
 See Jenkins and Ortelius (DeployHub Team) Working Together
 
-# PLACEHOLDER VIDEO
+# A demo 
 
-Jenkins, BlueOcean and DeployHub Team based on Ortelius
+This demo shows Jenkins, BlueOcean and DeployHub Team (Ortelius hosted) as a complete solution.
+<iframe src="https://youtube.com/embed/tgMexearoIE" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
