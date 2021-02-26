@@ -28,11 +28,11 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
@@ -42,11 +42,11 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor" %}}
+{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
 {{% /blocks/feature %}}
 {{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events" %}}
+{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
