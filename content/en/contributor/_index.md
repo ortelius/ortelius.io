@@ -64,9 +64,9 @@ Don’t be shy, schedule a call with [Steve Taylor](https://drift.me/sbtaylor15/
 - Tara Hernandez – Google, Sr. Engineering Manager, CDF TOC
 - Christopher William Palmer – End User, Unisys
 - Hank Hendrickson  – Open Source Community, BP
-- Phil Gibbs – Open Source Community, OpenMake Software
-- Tim Kelton – Descartes Labs, Co-founder
-- Doug Orr – Sr. Engineering Director, Google (retired)
+- Phil Gibbs – Open Source Community, Red Flag Alert
+- Tim Kelton – Tech Lead Manager, Aurora
+- Doug Orr – ML Architect Dianomic
 - Bill Portelli – Former Collabnet CEO, CEO Quest, Board Advisor
 - Jeremy Davis – Chief Cloud Architect, RedHat
 {{< /blocks/feature_dual >}}
