@@ -1,16 +1,17 @@
 ---
 date: 2021-01-05
-title: "January 2021 News And Update"
-summary: January 2021 News And Update
+title: "January 2021 Newsletter"
+summary: January 2021 Newsletter
 author: Tracy Ragan
 ---
 
 # December Recap and January Events
 December 8th marks the day the Ortelius project was accepted into the Continuous Delivery Foundation. Congratulations to all.  The team celebrated with a ‘Beer and Donuts” zoom party that was attended by over 30 enthusiastic contributors and supporters.
 
-Ortelius beer and donuts
-
-# PLACEHOLDER IMAGE
+<div class="col-center">
+<img src="/images/beeranddonuts.png" alt="Beer and Donuts" />
+</div>
+<p></p>
 The announcement generated some news with articles by:
 
 - [DevOps.com](https://devops.com/cd-foundation-welcomes-ortelius-open-source-microservices-management-platform-as-new-incubating-project/)
@@ -30,4 +31,4 @@ There were 27 pull requests completed during the month of December.
 Goals for the first quarter of 2021 will focus on increasing adoption of the Ortelius platform and building the open source contributor core.
 
 # Events
-The CD Foundation will be hosting a Podcast and Webcast for the Ortelius Announcement.  The Podcast will be a panel discussion with Tracy Ragan, Siddarth Pareek and Neetu Jain. It will be recorded on January 12th and posted shortly after. A webcast has been scheduled with Steve Taylor presenting the Ortelius solution for January 27th 10AM PT / 1PM ET.  Show your support by [registering for the Webcast.](https://zoom.us/webinar/register/WN_1c_K2h2oSXqllT8eiP04zg)
+The CD Foundation will be hosting a Podcast and Webcast for the Ortelius Announcement.  The Podcast will be a panel discussion with Tracy Ragan, Siddarth Pareek and Neetu Jain. It will be recorded on January 12th and posted shortly after. A webcast has been scheduled with Steve Taylor presenting the Ortelius solution for January 27th 10AM PT / 1PM ET. 
