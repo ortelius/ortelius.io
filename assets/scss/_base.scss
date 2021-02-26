@@ -88,6 +88,16 @@
     }
 }
 
+@media (max-width: 991.98px) {
+  .td-navbar-nav-scroll {
+    display: contents;
+  } 
+}
+
+.navbar-nav {
+  flex-wrap: wrap;
+}  
+
 #home-github > p {
   text-align: center;
 }
