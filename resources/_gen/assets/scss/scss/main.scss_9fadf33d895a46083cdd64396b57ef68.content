@@ -41,6 +41,13 @@ Add styles or override variables from the theme here.
 .td-navbar {
   background: black !important; }
 
+@media (max-width: 991.98px) {
+  .td-navbar-nav-scroll {
+    display: contents; } }
+
+.navbar-nav {
+  flex-wrap: wrap; }
+
 #home-github > p {
   text-align: center; }
 
@@ -20165,13 +20172,5 @@ Nothing defined here. The Hugo project that uses this theme can override Bootstr
 assets/scss/_styles_project.scss
 
 */
-a {
-  color: blue; }
-
-.td-box--white p > a {
-  color: blue; }
-
-.td-box--primary p > a {
-  color: blue; }
 
 /*# sourceMappingURL=main.css.map */
