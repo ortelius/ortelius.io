@@ -42,7 +42,7 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/become-a-contributor" %}}
+{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor" %}}
 {{% /blocks/feature %}}
 {{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
 {{% /blocks/feature %}}
@@ -56,25 +56,33 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-
+{{< blocks/feature_dual >}}
 {{% blocks/table_center %}}
  | 
 --- | ----------- 
-Catalog and publish microservices using Domains. | <i class="fas fa-3x fa-check-square"></i>
-Track microservices to “logical” application versions. | <i class="fas fa-3x fa-check-square"></i>
-Version a microservice based on unique configurations. | <i class="fas fa-3x fa-check-square"></i>
-Track microservices usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>
-Track microservice dependency and impact. | <i class="fas fa-3x fa-check-square"></i>
-Deploy to hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
-Associate poly databases to microservices. | <i class="fas fa-3x fa-check-square"></i>
-Customize using built-in reusable Actions and Workflows. | <i class="fas fa-3x fa-check-square"></i>
-Supports AWS Lamda,  Ansible, RedHat Operators and Helm. | <i class="fas fa-3x fa-check-square"></i>
+Microservice ownership. | <i class="fas fa-3x fa-check-square"></i>
+Logical application versions. | <i class="fas fa-3x fa-check-square"></i>
+Microservice blast radius. | <i class="fas fa-3x fa-check-square"></i>
+Difference reports over time, microservice and logical application. | <i class="fas fa-3x fa-check-square"></i>
+Microservice inventory usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>
+Microservice key value pairs management. | <i class="fas fa-3x fa-check-square"></i>
+{{% /blocks/table_center %}}
+{{< /blocks/feature_dual >}}
+
+{{< blocks/feature_dual >}}
+{{% blocks/table_center %}}
+
+ | 
+--- | ----------- 
+Helm and Ansible Support. | <i class="fas fa-3x fa-check-square"></i>
+Reusable actions and templated deployment logic. | <i class="fas fa-3x fa-check-square"></i>
+Supports hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
 Blue/Green and Canary deployment models. | <i class="fas fa-3x fa-check-square"></i>
 Rollback and roll forward recovery. | <i class="fas fa-3x fa-check-square"></i>
-Continuous Feedback Loop from build to end point | <i class="fas fa-3x fa-check-square"></i>
-Supports both microservice and monolithic applications. | <i class="fas fa-3x fa-check-square"></i>
+Integrates with CI/CD.  | <i class="fas fa-3x fa-check-square"></i>
 
 {{% /blocks/table_center %}}
+{{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 {{< blocks/section color=primary >}}

@@ -6,7 +6,10 @@ author: Tracy Ragan
 ---
 
 # The Ortelius Open Source project accepted as an incubating CDF project
-# PLACEHOLDER IMAGE
+
+<div class="col-center">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" />
+</div>
 
 **Santa Fe, NM** – December 8, 2020– DeployHub, creators of the first microservice management platform, today announced that Ortelius, the DeployHub open source core, has been accepted into the [Continuous Delivery Foundation](http://cd.foundation/) as an incubating project. The mission of the Ortelius open source project is to simplify the adoption of a [microservice architecture](https://www.deployhub.com/microservice-architecture/) through a world-class microservice management platform driven by a supportive and diverse global open source community. Ortelius is the core of DeployHub Pro and allows DevOps teams to visualize the ‘logical’ application versions in a microservice architecture. Ortelius catalogs, versions and tracks microservices across clusters and supports continuous delivery by adding automated configuration management to the pipeline.
 
