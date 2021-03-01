@@ -33,8 +33,8 @@ Now you're ready to attend your first [General Community Meeting](https://orteli
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 # Ortelius Chairs
-- [Steve Taylor](%20steve@deployhub.com)
-- [Tracy Ragan](%20tracy@deployhub.com)
+- [Steve Taylor](mailto:steve@deployhub.com)
+- [Tracy Ragan](mailto:tracy@deployhub.com)
 
 # Get Your Questions Answered
 Don’t be shy, schedule a call with [Steve Taylor](https://drift.me/sbtaylor15/meeting/quickpeek) and ask him for help to get started. Building things and mentoring is what he does.

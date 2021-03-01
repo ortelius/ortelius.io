@@ -16,7 +16,7 @@ menu:
 <div class="col-center">
 <img src="/images/Blog-A-Thon-286x300.png" alt="ortelius blog-a-thon" />
 <p></p>
-<p>From February 1st thru March 31st – <a href="/ortelius-blog-a-thon">Learn More</a></p>
+<p>From February 1st thru March 31st – <a href="/blog/2021/01/20/2021-blog-a-thon/">Learn More</a></p>
 
 <div class="col-12">
 <h2>Community Meetings</h2>
