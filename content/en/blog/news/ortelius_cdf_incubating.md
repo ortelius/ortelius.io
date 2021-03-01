@@ -35,11 +35,9 @@ Join the project – [Google Groups (Ortelius-dev)](https://groups.google.com/g/
 
 GitHub Repository – [https://github.com/ortelius/ortelius](https://github.com/ortelius/ortelius)
 
-Reach us by email: [request-info@ortelius.io](request-info@ortelius.io)
+Reach us by email: [request-info@ortelius.io](mailto:request-info@ortelius.io)
 
-Project Site: [ortelius.io](ortelius.io)
-
-                                                 
+Project Site: [ortelius.io](https://ortelius.io)
 
 **About DeployHub**
 
