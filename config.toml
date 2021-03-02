@@ -144,7 +144,7 @@ enable = false
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
 	name ="Twitter"
-	url = "https://twitter.com/@Orteliusproj"
+	url = "https://twitter.com/@OrteliusOs"
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
 [[params.links.user]]
