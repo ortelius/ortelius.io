@@ -37,7 +37,7 @@ Now you're ready to attend your first [General Community Meeting](https://orteli
 - [Tracy Ragan](mailto:tracy@deployhub.com)
 
 # Get Your Questions Answered
-Don’t be shy, schedule a call with [Steve Taylor](https://drift.me/sbtaylor15/meeting/quickpeek) and ask him for help to get started. Building things and mentoring is what he does.
+Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/SteveTaylor) and ask him for help to get started. Building things and mentoring is what he does.
 
 <div align="center">
 <img src="/images/steveruby.jpg" alt="Steve Taylor" />
