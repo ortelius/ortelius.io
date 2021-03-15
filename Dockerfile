@@ -1,5 +1,5 @@
 # base nginx image
-FROM nginx:alpine
+FROM wernight/alpine-nginx-pagespeed
 
 # an arbitrary directory to build our site in
 WORKDIR /build
@@ -16,6 +16,7 @@ RUN set -x && \
 
 # Hugo extended doesn't run on Alpine https://github.com/gohugoio/hugo/issues/4961
 # Following https://github.com/dettmering/hugo-build/blob/3275b1c4eb90abf7f5cab7107f7e6c894eb74505/Dockerfile
+# and https://github.com/sgerrand/alpine-pkg-glibc
 # Install glibc
 
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
@@ -38,6 +39,14 @@ RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${H
   apk del wget ca-certificates && \
   rm /var/cache/apk/*
 
+# Configure pagespeed
+
+RUN mv conf/pagespeed.conf /etc/nginx/ && \
+    mv conf/nginx.conf /etc/nginx && \
+    mkdir -p /tmp/pagespeed_cache && \
+    # fix /tmp/pagespeed_cache permission denied
+    chmod a+w /tmp/pagespeed_cache
+
 # Move site content to nginx
 
-RUN cp -fR /build/public/* /usr/share/nginx/html
+RUN cp -fR /build/public/* /etc/nginx/html
