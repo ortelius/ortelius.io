@@ -1,9 +1,9 @@
 {
-    "name": "ortelius-website",
-    "version": "0.0.1",
-    "dependencies": {},
-    "devDependencies": {
-      "autoprefixer": "^9.5.0",
-      "postcss-cli": "^5.0.1"
-    }
+  "name": "ortelius-website",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "postcss-cli": "^5.0.1"
   }
+}
