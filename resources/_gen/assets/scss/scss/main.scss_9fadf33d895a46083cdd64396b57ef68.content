@@ -48,6 +48,10 @@ Add styles or override variables from the theme here.
 .navbar-nav {
   flex-wrap: wrap; }
 
+.navbar-logo > img {
+  width: 180px;
+  height: 44px; }
+
 #home-github > p {
   text-align: center; }
 
