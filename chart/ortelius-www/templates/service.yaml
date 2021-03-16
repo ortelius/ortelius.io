@@ -10,4 +10,4 @@ spec:
     - name: hugo
       protocol: TCP
       port: 80
-      targetPort: 1313
+      targetPort: 80

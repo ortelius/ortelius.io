@@ -90,7 +90,7 @@ Integrates with CI/CD.  | <i class="fas fa-3x fa-check-square"></i>
 ## Abraham Ortelius – Our Inspiration
 
 <div class="wrapdiv">
-<img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" />
+<img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" style="width:121px; height:170px" />
 <p class="wrapdiv_text">Abraham Ortelius made his name by collecting data from scientists, geographers, and cartographers of his time and transforming it into what the world now knows as a world Atlas. His Atlas, titled Theatrum Orbis Terrarum (Theatre of the World), was published on May 20, 1570. His Atlas disrupted the way the world was seen, with the first concepts imagining continental drift. Also of interest are the sea monsters shown in the water – mythical creatures that were a subject of fascination in Ortelius’ generation.</p>
 </div>
 {{< /blocks/feature_dual >}}
