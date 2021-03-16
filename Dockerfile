@@ -3,6 +3,7 @@ FROM node:alpine as build
 
 # an arbitrary directory to build our site in
 WORKDIR /build
+ENV HUGO_ENV=production
 
 # the copy and build the site
 COPY . .
