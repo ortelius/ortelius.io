@@ -72,8 +72,8 @@ Help us get the Blog-A-Thon info out. Here are some suggested posts.
 {{% blocks/table_center2 %}}
 Post Type | Caption  
  --- | ----------- 
-General Post | I'm participating at #BlogAThon ! Join @OrteliusOs, the #microservice management platform, starting Feb 1st until Mar 31st with a diverse global open source community. Learn More: [https://cutt.ly/mj9nhf3](https://cutt.ly/mj9nhf3)
-General Post | I'm excited to announce that I'll be participating at #BlogAThon starting Feb 1st until Mar 31st with @OrteliusOs. Participate with me for some great #microservice learning. Learn More: [https://cutt.ly/mj9nhf3](https://cutt.ly/mj9nhf3)
-Topic Post | Excited to be participating at #BlogAThon on [YOUR TOPIC]! Tune in with @OrteliusOs, the #microservice management platform, starting Feb 1st until Mar 31st with a diverse global open source community! Learn More: [https://cutt.ly/mj9nhf3](https://cutt.ly/mj9nhf3)
-Topic Post | Both @OrteliusOs and I hope to see you at #BlogAThon starting Feb 1st until Mar 31st! I will be participating in [YOUR TOPIC]. [https://cutt.ly/mj9nhf3](https://cutt.ly/mj9nhf3)
+General Post | I'm participating at #BlogAThon ! Join @OrteliusOs, the #microservice management platform, starting Feb 1st until Mar 31st with a diverse global open source community. Learn More: [https://cutt.ly/nlCPWkT](https://cutt.ly/nlCPWkT)
+General Post | I'm excited to announce that I'll be participating at #BlogAThon starting Feb 1st until Mar 31st with @OrteliusOs. Participate with me for some great #microservice learning. Learn More: [https://cutt.ly/nlCPWkT](https://cutt.ly/nlCPWkT)
+Topic Post | Excited to be participating at #BlogAThon on [YOUR TOPIC]! Tune in with @OrteliusOs, the #microservice management platform, starting Feb 1st until Mar 31st with a diverse global open source community! Learn More: [https://cutt.ly/nlCPWkT](https://cutt.ly/nlCPWkT)
+Topic Post | Both @OrteliusOs and I hope to see you at #BlogAThon starting Feb 1st until Mar 31st! I will be participating in [YOUR TOPIC]. [https://cutt.ly/nlCPWkT](https://cutt.ly/nlCPWkT)
 {{% /blocks/table_center2 %}}

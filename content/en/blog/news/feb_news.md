@@ -39,7 +39,7 @@ In a push to increase open source participation in Ortelius, the Outreach team d
 A recognition program is currently in the works led by [Garima Bajpai](https://www.linkedin.com/in/garimabajpai) and Siddharth Pareek. Art work for the badges is being led by [Sergio Canales](https://www.linkedin.com/in/sergio-canales-espinoza). Examples have been posted in the discord channel.
 
 #### Google Summer of Code
-Ortelius [submitted](/blog/2021/01/05/ortelius-joins-gsoc/) to be part of the [Google Summer of Code](https://summerofcode.withgoogle.com), through the Continuous Delivery Foundation. Three projects have been submitted with 4 mentors.
+Ortelius [submitted](/blog/2021/01/18/ortelius-joins-gsoc/) to be part of the [Google Summer of Code](https://summerofcode.withgoogle.com), through the Continuous Delivery Foundation. Three projects have been submitted with 4 mentors.
 
 <div class="col-center">
 <img src="/images/googlesummerofcode-300x300.png" alt="Google Summer of Code" height="400px" width="200px" />

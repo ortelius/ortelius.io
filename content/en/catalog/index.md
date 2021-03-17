@@ -56,7 +56,7 @@ When you publish a microservice you define critical deployment details allowing 
 * Container Tag
 * Git Commit
 
-And when a new version of the Container has been created in the Ortelius version control engine, Ortelius automatically increments the versions of all consuming applications, providing a [map](/microservicemapping) that shows all applications that could be impacted by an update, what we like to call the 'blast radius.'
+And when a new version of the Container has been created in the Ortelius version control engine, Ortelius automatically increments the versions of all consuming applications, providing a [map](/microservicemapping/) that shows all applications that could be impacted by an update, what we like to call the 'blast radius.'
 
 
 ## Conclusion

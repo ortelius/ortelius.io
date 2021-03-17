@@ -32,9 +32,9 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 Now you're ready to attend your first [General Community Meeting](https://ortelius.io/events/) and [Create Your First Pull Request](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) by adding yourself to the Readme.
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-# Ortelius Community Chairs
-- [Steve Taylor](%20steve@deployhub.com)
-- [Tracy Ragan](%20tracy@deployhub.com)
+# Ortelius Chairs
+- [Steve Taylor](mailto:steve@deployhub.com)
+- [Tracy Ragan](mailto:tracy@deployhub.com)
 
 ## Ortelius Outreach Chair
 - [Siddarth Pareek](https://www.linkedin.com/in/siddharthpareek/)
@@ -43,7 +43,7 @@ Now you're ready to attend your first [General Community Meeting](https://orteli
 - [Garima Bajpai](https://www.linkedin.com/in/garimabajpai/)
 
 # Get Your Questions Answered
-Don’t be shy, schedule a call with [Steve Taylor](https://drift.me/sbtaylor15/meeting/quickpeek) and ask him for help to get started. Building things and mentoring is what he does.
+Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/SteveTaylor) and ask him for help to get started. Building things and mentoring is what he does.
 
 <div align="center">
 <img src="/images/steveruby.jpg" alt="Steve Taylor" />

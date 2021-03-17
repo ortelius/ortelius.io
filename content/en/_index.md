@@ -28,11 +28,11 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
@@ -42,11 +42,11 @@ Ortelius is a microservice management platform that versions and tracks microser
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor" %}}
+{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
 {{% /blocks/feature %}}
 {{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events" %}}
+{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
@@ -90,7 +90,7 @@ Integrates with CI/CD.  | <i class="fas fa-3x fa-check-square"></i>
 ## Abraham Ortelius – Our Inspiration
 
 <div class="wrapdiv">
-<img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" />
+<img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" style="width:121px; height:170px" />
 <p class="wrapdiv_text">Abraham Ortelius made his name by collecting data from scientists, geographers, and cartographers of his time and transforming it into what the world now knows as a world Atlas. His Atlas, titled Theatrum Orbis Terrarum (Theatre of the World), was published on May 20, 1570. His Atlas disrupted the way the world was seen, with the first concepts imagining continental drift. Also of interest are the sea monsters shown in the water – mythical creatures that were a subject of fascination in Ortelius’ generation.</p>
 </div>
 {{< /blocks/feature_dual >}}
