@@ -1,12 +1,12 @@
 ---
 date: 2021-01-18
-title: "Ortelius Joins GSOC"
+title: "Ortelius GSOC Project Proposal"
 summary: January 2021 Newsletter
 author: Tracy Ragan
 ---
 
 
-## Ortelius joins GSOC - A Learning Experience for all
+## Ortelius submits to GSOC - A Learning Experience for all
 
 <div class="col-center">
 <img src="/images/googlesummerofcode-300x300.png" alt="Google Summer of Code" height="400px" width="200px" />
