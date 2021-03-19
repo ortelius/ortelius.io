@@ -2,7 +2,7 @@
 date: 2021-03-18
 title: "Installing Ortelius On-Premise"
 summary: "Installing Ortelius On-Premise"
-author: Aditi Argawal- Architecture Working Group
+author: Aditi Agarwal- Architecture Working Group
 ---
 
 # Ortelius On-Prem Installation Tips
