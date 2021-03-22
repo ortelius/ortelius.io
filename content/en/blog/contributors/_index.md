@@ -1,5 +1,5 @@
 ---
-title: "Ortelius Contributors"
-linkTitle: "Ortelius Contributors"
+title: "Ortelius Contributor Tips and Thoughts"
+linkTitle: "Ortelius Contributor Tips and Thoughts"
 weight: 20
 ---
