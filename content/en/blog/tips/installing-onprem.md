@@ -42,6 +42,10 @@ Ortelius runs in a Docker container with all the required dependencies included,
 </div>
 <p></p>
 <div>
+<img src="/images/onpreminstall/docker7.png" alt="Installing Docker" height="80x" width="602px" />
+</div>
+<p></p>
+<div>
 <img src="/images/onpreminstall/docker8.png" alt="Installing Docker" height="73x" width="602px" />
 </div>
 
