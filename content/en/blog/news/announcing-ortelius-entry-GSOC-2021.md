@@ -28,13 +28,13 @@ For GSOC projects we have selected these [3 enhancements to Ortelius](https://gi
 
 Students, here is a workflow of how it works and what to expect:
 
--- Checkout https://ortelius.io/ to understand what the opensource project is about. 
--- Checkout the [3 issues](https://github.com/ortelius/ortelius/issues?q=is%3Aissue+is%3Aopen+label%3Agsoc) we have created to enter into GSOC.
--- March 9th to April 12th 2021 - Reach out to us if you are interested in discussing these projects https://ortelius.io/expert/
--- March 29-April 13 2021 - register and submit applications to Ortelius with a proposal to work on the issue of your choice from above 3 issues.
--- April 13-May 17 2021 - if selected, we will review and choose student proposals.
--- May 17-June 7 2021 - once you get selected we will pair you with mentor/s to work with you and create a project plan.
--- June 7 to August 31 2021  - you will execute on the project plan to close the issue assigned to you and reach out to your mentor and community if you hit any blockers. 
+- Checkout https://ortelius.io/ to understand what the opensource project is about. 
+- Checkout the [3 issues](https://github.com/ortelius/ortelius/issues?q=is%3Aissue+is%3Aopen+label%3Agsoc) we have created to enter into GSOC.
+- March 9th to April 12th 2021 - Reach out to us if you are interested in discussing these projects https://ortelius.io/expert/
+- March 29-April 13 2021 - register and submit applications to Ortelius with a proposal to work on the issue of your choice from above 3 issues.
+- April 13-May 17 2021 - if selected, we will review and choose student proposals.
+- May 17-June 7 2021 - once you get selected we will pair you with mentor/s to work with you and create a project plan.
+- June 7 to August 31 2021  - you will execute on the project plan to close the issue assigned to you and reach out to your mentor and community if you hit any blockers. 
 
 Mentors and Students will submit evaluations of each other twice in this period and at the end based on the code submission, project summary and evaluations GSOC assigns Pass/Fail statuses.
 
