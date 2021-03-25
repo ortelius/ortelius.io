@@ -1,7 +1,7 @@
 ---
 date: 2021-01-18
 title: "Ortelius GSOC Project Proposal"
-summary: January 2021 Newsletter
+summary: Ortelius GSOC Project Proposal
 author: Tracy Ragan
 ---
 
