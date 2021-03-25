@@ -5,15 +5,14 @@ summary: Ortelius Season of Docs Proposal
 author: Owen Bowers Adams and Tracy Ragan
 ---
 
-
 ## Purpose for Ortelius Documentation Project
 The following information is for the Ortelius open-source community to explore the application process to [Google Season of Docs](https://developers.google.com/season-of-docs/). Ortelius is a new incubating project under the [Continuous Delivery Foundation](cd.foundation).  The current documentation has a good structure, but much of the content is presented in isolation. In addition, there are gaps/weaknesess around clarity, completeness of information, and is generally ambiguous in terms of for whom the information is written. The result is documentation that is not always suitable for the intended audience. In particular, there is a bit too much assumed knowledge within the documentation which does not facilitate learning or improving the user's skill set. In order to improve the onboarding of Ortelius, this primary documentation issue must be addressed.
 
-Ortelius Documentation Repository - 
+Ortelius Documentation Repository - [https://github.com/ortelius/ortelius-docs](https://github.com/ortelius/ortelius-docs)
 
 The following documentation project is presented for the Google Season of Docs:
 
-### Persona Skillset Development
+### Persona Skill Set Development
 
 The existing documentation has a substantial amount of content which works well for someone who has a deep technical understanding and simply needs the documentation for reference. The core problem with the documentation is that it is not usable for developing a skill set in Ortelius. The result is new users of Ortelius struggle with on-boarding and adoption of the solution.
 
