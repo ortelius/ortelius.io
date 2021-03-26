@@ -81,7 +81,6 @@ Ortelius uses container data, deployment logs and its own revision history and r
 
 <strong>Deployment Logs</strong> - To track cluster inventory, the deployment of each microservice is recorded, allowing Ortelius to track an Environment state at any point in time.
 
-
 ## Conclusion
 As you move into a microservice architecture, you will need the ability to first 'visualize' your microservice configuration data across clusters, with the proactive knowledge of how a single change will impact multiple instances. Once deployed, your telemetry data will provide you cluster observability which is critical in improving performance. Knowing before you deploy and then understanding what occurred after deployment provides the complete picture for building out a solid microservice architecture.
 
