@@ -1,5 +1,5 @@
 # base nginx image
-FROM node:alpine as build
+FROM node:lts-alpine3.13 as build
 
 # an arbitrary directory to build our site in
 WORKDIR /build
