@@ -44,4 +44,4 @@ See Jenkins and Ortelius (DeployHub Team) Working Together
 # A demo 
 
 This demo shows Jenkins, BlueOcean and DeployHub Team (Ortelius hosted) as a complete solution.
-<iframe src="https://youtube.com/embed/tgMexearoIE" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+{{< youtube tgMexearoIE >}}
