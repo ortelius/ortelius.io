@@ -49,4 +49,7 @@ Now enters the mothership [DeployHub](https://www.deployhub.com/) (SaaS) herself
 We have now reached the end of our journey with DeployHub pushing the container image into Azure Kubernetes to serve [Ortelius](https://ortelius.io/) on a fresh plate of HTML.
 
 ## Outro
-That's all the time we have this time folks, I appreciate your time and I look forward to you all going bananas giving Ortelius a test-drive and crying with joy as you experience all your containerised aches and pains disappear. 
+That's all the time we have this time folks, I appreciate your time and I look forward to you all going bananas giving Ortelius a test-drive and crying with joy as you experience all your containerised aches and pains disappear. For more information - watch the training video with Steve Taylor and myself on this topic.
+
+{{< youtube MAnvHxY3_YY >}}
+
