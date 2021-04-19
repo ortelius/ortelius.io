@@ -30,6 +30,16 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 3. [Join the Discord Channel](https://discord.gg/ZtXU74x)
 
 Now you're ready to attend your first [General Community Meeting](https://ortelius.io/events/) and [Create Your First Pull Request](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) by adding yourself to the Readme.
+
+## Get Recognized
+Get recognized for your contribution through the Ortelius Recognition Program. Badges are awarded in 3 categories:
+
+- Champions - focused on technical contribution.
+- Ambassadors - focused on education and outreach.
+- Legends - those who excel in both of the above.
+
+[Learn More](/blog/2021/04/19/ortelius-community-recognition-program/)
+
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 # Ortelius Chairs
