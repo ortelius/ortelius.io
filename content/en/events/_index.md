@@ -9,14 +9,19 @@ menu:
 
 {{< blocks/section color="primary" >}}
 <div class="col-12">
-<h2>Blog-a-thon</h2>
+<h2>Ortelius Microservice Visionaries 2021</h2>
 <hr>
 </div>
 
+
 <div class="col-center">
-<img src="/images/Blog-A-Thon-286x300.png" alt="ortelius blog-a-thon" />
+<img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries 2021" height="500px" width="1000px" />
 <p></p>
-<p>From February 1st thru March 31st – <a href="/blog/2021/01/20/2021-blog-a-thon/">Learn More</a></p>
+</div>
+
+Join us on May 20th, 2021 for our first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. And we want to know where you are in your microservice journey. Be part of the celebration by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
+
+No registration required [Learn More](/blog/2021/04/16/ortelius-microservice-visionaries-2021//)
 
 <div class="col-12">
 <h2>Community Meetings</h2>

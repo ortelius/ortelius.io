@@ -9,6 +9,19 @@ author: Tracy Ragan
 <img src="/images/blog-a-thon.png" alt="Ortelius Blog-A-Thon" height="600px" width="300px" />
 </div>
 <p></p>
+
+## BlogAThon 2021 Closed
+Thank you for all who contributed to this years BlogAThon.  Here are some of the highlights:
+
+- [Bootstrapping an Open Source Community through Engagement by Garima Bajpai](/blog/2021/04/02/bootstrapping-an-open-source-community-through-engagement/)
+- [Microservice Monitoring and Visualization by Karamjot Singh](/blog/2021/03/26/microservice-monitoring-and-visualization/)
+- [Ortelius Google Cloud Build Update Process by Sacha Wharton](/blog/2021/03/19/ortelius-website-google-cloud-build-update-process/)
+- [The Genesis for Joining as an Open Source Contributor by Pawel Kuleck](/blog/2021/03/19/the-genesis-for-joining-as-an-open-source-contributor/)
+- [Getting started with the SaaS version of Ortelius by Natch Khongpasuk ](/blog/2021/03/31/getting-started-with-saas-version-of-ortelius/)
+- [Installing Ortelius on Premise by Aditi Agarwal](/blog/2021/03/18/installing-ortelius-on-premise/)
+
+
+## 2021 BlogAThon 
 Whether you are new to open source or an expert at it, the Ortelius BlogAThon is a way for you to create meaningful content to educate and inform others. The goal of the Ortelius BlogAThon is to:
 * Help new contributors become productive members of the Ortelius open source community;
 * Help new open source users adopt the Ortelius platform;</span></li>
