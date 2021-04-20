@@ -41,7 +41,7 @@ In this session we will define why a domain driven design (DDD) is important to 
 Observability - the process of tracing transactions between services on a single cluster - is an important aspect of microservices. But knowing how your microservices relate to one another across clusters in a logical view is another important data point.  Visibility into microservices provides a proactive method for tracking the ‘logical’ application versions as their underlying components are updated. This presentation will show you how Ortelius creates the visibility across all clusters.
 
 <strong> 10:00 Pitfalls - Monolithic practice in a microservice architecture </strong>
-<br>Presented by Sergio Canales and Hosted by Saim Safder
+<br>Presented by Sergio Canales and Hosted by Saim Safdar
 
 If you are getting started with microservices in a Kubernetes environment, be careful to avoid falling back on monolithic constructs in a microservice environment. Options on using namespaces to manage your architecture will be discussed in this presentation. We will also cover how Ortelius can help you from going back to monolithic habits.
 
