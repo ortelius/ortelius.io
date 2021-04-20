@@ -28,14 +28,12 @@ This live Zoom event will kick off our Visionaries gathering. Join us for a live
 
 [Join the Ortelius Discord Channel](https://discord.gg/wM4b5yEFzS). The presentations and chats will be held at #Ortelius-Microservice-Visionaries-2021
 
-<strong> 8:30 - 8:45 Introduction by Tracy Ragan on the Microservice Visionaries event. </strong>
-
-<strong> 9:00 Implementing a Microservice Architecture using a Domain Driven Design </strong> 
+<strong> 8:30 Implementing a Microservice Architecture using a Domain Driven Design </strong> 
 <br>Presented by Aditi Agarwal and Hosted by Garima Bajpai  
 
 In this session we will define why a domain driven design (DDD) is important to building a shared service architecture. DDD is not new and has been a core methodology for defining 'problem' spaces to organize shared libraries. This session will give a basic definition of DDD and demonstrate how Ortelius helps facilitate this methodology through Domains.
   
-<strong> 9:45: Observability vs. Visibility - what is the difference? </strong> 
+<strong> 9:15 Observability vs. Visibility - what is the difference? </strong> 
 <br>Presented by Sacha Wharton and Hosted by Karamjot Singh
 
 Observability - the process of tracing transactions between services on a single cluster - is an important aspect of microservices. But knowing how your microservices relate to one another across clusters in a logical view is another important data point.  Visibility into microservices provides a proactive method for tracking the ‘logical’ application versions as their underlying components are updated. This presentation will show you how Ortelius creates the visibility across all clusters.
@@ -50,10 +48,11 @@ If you are getting started with microservices in a Kubernetes environment, be ca
  
 So you feel like you’re flying blind sometimes? That is because you may not have the data to show you how a single microservice update will impact a specific cluster, and the applications. In this presentation, you will see how Ortelius manages your impact analysis and blast radius of all microservices.
 
-<strong> 11:00 Ortelius and GitOps (Panel) - the Road Ahead </strong>
+<strong> 11:30 Ortelius and GitOps (Panel) - the Road Ahead </strong>
 <br>Panelist: Steve Taylor, Christopher Hicks,  Brad McCoy
 <br>Hosted by Tracy Ragan
 
 As Ortelius evolves, it will support a GitOps model. This panel discussion will cover design concepts for the Ortelius GitOps approach. This project will begin in the early fall. 
 
-<strong> 11:30 - Closing statements from Steve Taylor.</strong>
+<strong> 12:15 - Closing statements from Steve Taylor.</strong>
+
