@@ -47,6 +47,8 @@ No registration required [Learn More](/blog/2021/04/16/ortelius-microservice-vis
 
 1:40 MT - Tracy Ragan "Immutable Deployments" - the Goal of the GitOps Movement
 
+2:15 MT - Intro to Ortelius live Demo - DeployHub Booth
+
 <strong>June 24th</strong>
 
 1:15 MT - Karamjot Singh "Microservice Visualization - Challenges with Microservices"
