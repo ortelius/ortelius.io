@@ -37,7 +37,7 @@ No registration required [Learn More](/blog/2021/04/16/ortelius-microservice-vis
 <br>
 <strong>June 23rd</strong>
 
-9:15 - Events in CI/CD SIG Birds of a Feather
+9:15 MT - Events in CI/CD SIG Birds of a Feather
 
 12 MT - Ortelius Birds of a Feather
 
