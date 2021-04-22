@@ -9,23 +9,57 @@ menu:
 
 {{< blocks/section color="primary" >}}
 <div class="col-12">
-<h2>Ortelius Microservice Visionaries 2021</h2>
+<h2>Ortelius Microservice Visionaries May 20th 2021</h2>
 <hr>
 </div>
 
 
 <div class="col-center">
-<img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries 2021" height="500px" width="1000px" />
+<img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries 2021" height="250px" width="500px" />
 <p></p>
 </div>
 
 Join us on May 20th, 2021 for our first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. And we want to know where you are in your microservice journey. Be part of the celebration by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
 
 No registration required [Learn More](/blog/2021/04/16/ortelius-microservice-visionaries-2021//)
+<br>
+<br>
+<div class="col-12">
+<h2>cdCon 2021 June 23-24</h2>
+<hr>
 
+<div class="col-center">
+<img src="/images/cdcon2021.png" alt="cdCon 2021" height="250px" width="500px" />
+<p></p>
+</div>
+
+[Free Registration](https://events.linuxfoundation.org/cdcon/register/_) - Recommended Sessions:
+<br>
+<strong>June 23rd</strong>
+
+9:15 - Events in CI/CD SIG Birds of a Feather
+
+12 MT - Ortelius Birds of a Feather
+
+12:30 MT - Juan Peredo "Tame Your Microservices with Ortelius"
+
+1:05 MT - Steve Taylor "Adding Ortelius for Microservice Tracking to Your Jenkins Pipeline"
+
+1:40 MT - Tracy Ragan "Immutable Deployments" - the Goal of the GitOps Movement
+
+<strong>June 24th</strong>
+
+1:15 MT - Karamjot Singh "Microservice Visualization - Challenges with Microservices"
+<br>
+<br>
 <div class="col-12">
 <h2>Community Meetings</h2>
 <hr>
+
+<div class="col-center">
+<img src="/images/beer.png" alt="community meetings" height="250px" width="500px" />
+<p></p>
+</div>
 
 Join a SIG or attend our General meetings. We look forward to your help and input on the Ortelius project:
 
