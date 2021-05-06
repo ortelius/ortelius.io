@@ -16,7 +16,6 @@ Join us on May 20th, 2021 for our first Microservice Visionaries gathering to ce
 
 And we want to know where you are in your microservice journey. Be part of the celebration by [completing this quick 7 question poll.](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link)
 
-
 ## Agenda: (all times in MT)
 
 ### 8:00 Beer and Donuts 
@@ -49,7 +48,7 @@ If you are getting started with microservices in a Kubernetes environment, be ca
 So you feel like you’re flying blind sometimes? That is because you may not have the data to show you how a single microservice update will impact a specific cluster, and the applications. In this presentation, you will see how Ortelius manages your impact analysis and blast radius of all microservices.
 
 <strong> 11:30 Ortelius and GitOps (Panel) - the Road Ahead </strong>
-<br>Panelist: Steve Taylor, Christopher Hicks,  Brad McCoy, Sergio Cannales
+<br>Panelist: Steve Taylor, Christopher Hicks,  Brad McCoy, Sergio Canales
 <br>Hosted by Tracy Ragan
 
 As Ortelius evolves, it will support a GitOps model. This panel discussion will cover design concepts for the Ortelius GitOps approach. This project will begin in the early fall. 
