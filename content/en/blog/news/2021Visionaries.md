@@ -41,7 +41,7 @@ Observability - the process of tracing transactions between services on a single
 <strong> 10:00 Pitfalls - Monolithic practice in a microservice architecture </strong>
 <br>Presented by Sergio Canales and Hosted by Saim Safdar
 
-If you are getting started with microservices in a Kubernetes environment, be careful to avoid falling back on monolithic constructs in a microservice environment. Options on using namespaces to manage your architecture will be discussed in this presentation. We will also cover how Ortelius can help you from going back to monolithic habits.
+If you are getting started with microservices in a Kubernetes environment, be careful to avoid falling back on monolithic constructs in a microservice environment. Saim and Sergio will explore the topics and point out the pitfalls you should watch for.
 
 <strong> 10:45 Know Your Blast Radius </strong>
 <br>Presented by Munirat Sulaimon & Temitope Bimbo Babatola and Hosted by Atul Tiwari 
@@ -49,7 +49,7 @@ If you are getting started with microservices in a Kubernetes environment, be ca
 So you feel like you’re flying blind sometimes? That is because you may not have the data to show you how a single microservice update will impact a specific cluster, and the applications. In this presentation, you will see how Ortelius manages your impact analysis and blast radius of all microservices.
 
 <strong> 11:30 Ortelius and GitOps (Panel) - the Road Ahead </strong>
-<br>Panelist: Steve Taylor, Christopher Hicks,  Brad McCoy
+<br>Panelist: Steve Taylor, Christopher Hicks,  Brad McCoy, Sergio Cannales
 <br>Hosted by Tracy Ragan
 
 As Ortelius evolves, it will support a GitOps model. This panel discussion will cover design concepts for the Ortelius GitOps approach. This project will begin in the early fall. 
