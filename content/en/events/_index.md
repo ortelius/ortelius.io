@@ -113,4 +113,8 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 {{< video autoplay="true" loop="true" muted="true" controls="true" src="orteliuscockpit.mp4" >}}
 {{< /blocks/feature_dual >}}
 
+{{< blocks/feature_dual >}}
+{{< video autoplay="true" loop="true" muted="true" controls="true" src="rotatingortelius.mp4" >}}
+{{< /blocks/feature_dual >}}
+
 {{< /blocks/section >}}
