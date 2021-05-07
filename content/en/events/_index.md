@@ -21,7 +21,7 @@ menu:
 
 Join us on May 20th, 2021 for our first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. And we want to know where you are in your microservice journey. Be part of the celebration by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
 
-No registration required [Learn More](/blog/2021/04/16/ortelius-microservice-visionaries-2021//)
+All sessions will be posted to the Discord Channel. [Learn More](/blog/2021/04/16/ortelius-microservice-visionaries-2021//)
 <br>
 <br>
 <div class="col-12">
