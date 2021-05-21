@@ -12,7 +12,7 @@ author: Tracy Ragan
 
 ## An Amazing Community
 
-On May 20th, 2021 the Ortelius community hosted thier first 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. We hosted the entire event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions and links to the sessions. 
+On May 20th, 2021 the Ortelius community hosted the first 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. We hosted the entire event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions and links to the sessions. 
 
 ## Agenda: (all times in MT)
 
