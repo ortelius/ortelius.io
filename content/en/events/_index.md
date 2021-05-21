@@ -9,19 +9,36 @@ menu:
 
 {{< blocks/section color="primary" >}}
 <div class="col-12">
-<h2>Ortelius Microservice Visionaries May 20th 2021</h2>
-<hr>
 </div>
 
+<div class="col-12">
+<h2>Microservice Maturity Survey - Running Through July 2021</h2>
+<hr>
+</div>
+<br>
+<br>
+<div class="col-center">
+<img src="/images/ortelius-maturitypoll.png" alt="Ortelius Microservice Visionaries 2021" height="250px" width="500px" />
+<p></p>
+</div>
 
+Share your microservice journey by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
+
+<br>
+<br>
+<div class="col-12">
+<h2>Ortelius Microservice Visionaries - a Wild Success</h2>
+<hr>
+</div>
 <div class="col-center">
 <img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries 2021" height="250px" width="500px" />
 <p></p>
 </div>
 
-Join us on May 20th, 2021 for our first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. And we want to know where you are in your microservice journey. Be part of the celebration by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
+On May 20th, 2021 the Ortelius Community held the first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. 
 
-All sessions will be posted to the Discord Channel. [Learn More](/blog/2021/04/16/ortelius-microservice-visionaries-2021//)
+
+All sessions are available on-demand. [Watch Now](https://www.ortelius.io/blog/2021/05/20/ortelius-microservice-visionaries-2021/)
 <br>
 <br>
 <div class="col-12">
@@ -81,12 +98,16 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 
 {{< blocks/feature_dual >}}
 <h2>Webcast</h2>
+<div style="width:60%">
 {{< youtube xez36h_WJRI >}}
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
 <h2>Podcast</h2>
+<div style="width:60%">
 {{< buzzsprout src="https://www.buzzsprout.com/1008697/7682923-cdf-s-newest-incubating-project-ortelius-microservice-mgmt"  >}}
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
@@ -98,23 +119,34 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 </div>
 
 {{< blocks/feature_dual >}}
+<div style="width:70%">
 <img src="/images/tim-warnock-tychostation-concept-03v4-ortelius-768x432.png" alt="tyco station" style="width:90%" />
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
+<div style="width:70%">
 <img src="/images/rocicockpit-ortelius-1-768x432.png" alt="tyco station"  style="width:90%" />
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
+<div style="width:70%">
 {{< video autoplay="true" loop="true" muted="true" controls="true" src="galaxyortelius.mp4" >}}
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
+<div style="width:70%">
 {{< video autoplay="true" loop="true" muted="true" controls="true" src="orteliuscockpit.mp4" >}}
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
+<div style="width:70%">
 {{< video autoplay="true" loop="true" muted="true" controls="true" src="rotatingortelius.mp4" >}}
+</div>
 {{< /blocks/feature_dual >}}
+
 
 {{< /blocks/section >}}
