@@ -1,5 +1,5 @@
 ---
-title: "Ortelius Contributor Thought Leadership"
-linkTitle: "Ortelius Contributor Thought Leadership"
+title: "Ortelius Thought Leadership"
+linkTitle: "Ortelius Thought Leadership"
 weight: 20
 ---
