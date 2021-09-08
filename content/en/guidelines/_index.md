@@ -6,25 +6,30 @@ menu:
   main:
    weight: 60
 ---
-# Who We Are
+
+## Who We Are
+
 The Ortelius project is a community of technologist dedicated to the goal of simplifying the development of microservice applications. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
 The project is a part of the Continuous Delivery Foundation and affiliated with the Linux Foundation legal entities which legally own the project assets and act as treasury.
 The governance board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
 
 ## Our Philosophy
+
 A welcoming, global, diverse community
 Ortelius welcomes all who are interested in learning and mentoring on the topic of DevOps in a cloud native architecture. The Ortelius community does not require participants to prove themselves before they are ‘admitted’ to the community. We assume that everybody has skills and experience to offer, and they do so with good intentions until proven otherwise. This principle applies to anybody without arbitrary discrimination. We recognize that every contribution is precious, and we actively encourage underserved communities to become involved.
 To support a diverse and inclusive community our project structure is designed based on a microservice model, allowing individuals to have expertise in ‘bounded context,’ which create independent pieces, thereby reducing the need for collaboration and communication. We try to let everyone have their own swim lane where they can work efficiently, and not feel they are holding back any aspect of the project. We believe everyone has the right to express their ideas in their own contributions.
 This diverse community approach is also partly achieved by recognizing that people move on. Lots of code in the project is maintained by people other than the original author. We encourage new contributors to take over existing projects that aren’t actively maintained. We believe that “old” contributors deserve respect from “new” contributors, but the inaction on the part of the original contributors shall not block new contributors from making changes.
- 
+
 ## Transparency
+
 We believe in running the project transparently. This includes everything from decision-making to defects in the code.
 Governance Board Purpose
 The purpose of the Board is to bring various perspectives to the table such as:
-- What are the needs of users and committers?
--	 How is the market changing and what are the commercial needs?
-As the composition of the Ortelius board changes over time, we want to ensure that this balance of viewpoints is maintained. In addition, the Governance Board should strive to be diverse and encourage women and minorities to run for Governance Board seats. This may require active outreach on the part of the Governance Board during each year’s election cycle.
 
+- What are the needs of users and committers?
+-	How is the market changing and what are the commercial needs?
+
+As the composition of the Ortelius board changes over time, we want to ensure that this balance of viewpoints is maintained. In addition, the Governance Board should strive to be diverse and encourage women and minorities to run for Governance Board seats. This may require active outreach on the part of the Governance Board during each year’s election cycle.
 
 ## I’ve Got A Question
 
@@ -56,7 +61,8 @@ Look at the Ortelius GitHub issues list, find an issue to work on, and see if yo
 
 **Steve Taylor** is a visionary and industry leader in the area of microservices, Istio, Kubernetes, DevOps process improvement, software build and release, and configuration management. Steve was designing continuous delivery pipelines for Fortune 1000 companies before the term ‘continuous integration’ was ever used.  Steve is the architect of DeployHub, the first microservice management platform that also versions and maps microservices and their configurations. He is also the  mastermind behind OpenMake Meister, a build automation solution that has served its customers for over 20 years.  In his free time, Steve is the Fire Chief of his local Volunteer fire department, plays hockey, builds houses and hangs out with his 4 dogs on his ranch in New Mexico.
 
-# Community Code of Conduct
+## Community Code of Conduct
+
 Every community can be strengthened by a diverse variety of viewpoints, insights, opinions, skillsets, and skill levels. However, with diversity comes the potential for disagreement and miscommunication. The purpose of this Code of Conduct is to ensure that disagreements and differences of opinion are conducted respectfully and on their own merits, without personal attacks or other behavior that might create an unsafe or unwelcoming environment. Topics around continuous delivery can be very diverse, everyone’s opinion is important. These policies are not designed to be a comprehensive set of Things You Cannot Do. We ask that you treat your fellow community members with respect and courtesy, and in general, Don’t Be A Jerk. This Code of Conduct is meant to be followed in spirit as much as in letter and is not exhaustive.
 
 All Ortelius events and participants therein are governed by this Code of Conduct and anti-harassment policy. We expect organizers to enforce these guidelines throughout all events, and we expect attendees, speakers, sponsors, and volunteers to help ensure a safe environment for our whole community. Specifically, this Code of Conduct covers participation in all Ortelius-related forums and mailing lists, code and documentation contributions, public IRC channels, private correspondence, and public meetings.
@@ -112,19 +118,20 @@ The Ortelius Community Code of Conduct is licensed under the Creative Commons At
 - Ansible
 - Ubuntu
 
-</div>
-
-# Ortelius Governance Board Bylaws
+## Ortelius Governance Board Bylaws
 
 The purpose of the Ortelius Governance Board is to bring various perspectives to the table such as:
+
 - What are the needs of users and committers?
--	 How is the market changing and what are the commercial needs?
+- How is the market changing and what are the commercial needs?
+
 As the composition of the Ortelius board changes over time, we want to ensure that this balance of viewpoints is maintained. In addition, the Governance Board should strive to be diverse and encourage women and minorities to run for Governance Board seats. This may require active outreach on the part of the Governance Board during each year’s election cycle.
-Governance Board Goals: 
--	To ensure that the board reflects "the will of project participants" instead of just being self-appointed.
--	To ensure that the board reflects the balance of different viewpoints — the needs of users; of committers; of organizations, both large and small; of commercial interests.
--	 Maintain stability and avoid sudden direction changes.
--	To ensure the community is diverse and inclusive. 
+Governance Board Goals:
+
+- To ensure that the board reflects "the will of project participants" instead of just being self-appointed.
+- To ensure that the board reflects the balance of different viewpoints — the needs of users; of committers; of organizations, both large and small; of commercial interests.
+- Maintain stability and avoid sudden direction changes.
+- To ensure the community is diverse and inclusive.
 
 ## Board Terms and Rules
 
@@ -136,22 +143,21 @@ The Governance Board follows [<em>Robert's Rules of Order</em>](https://www.ibab
 
 The Governance Board has the power to define Officer roles and hold elections of those Officers. The Board shall maintain a minimum of two Officer roles one to serve as the Board Chair and the other to serve as the Board Secretary. The responsibility of the Board Chair is to call the meetings to order, manage the meeting agenda and call the meeting to end. The Board Secretary will be responsible for recording the minutes of the meeting and maintaining meeting records. Officer positions are for 1 year terms. The Board shall elect Officers on the first meeting following the election of new Board Members.
  Additional Officer roles can be determined by the board. Suggested roles include:
+
 - Security Officer – Manages User access to infrastructure and directs the Board on security issues, security scanning and other DevSecOps requirements.
 - Release Officer – Maintains the automation around releases.
 - Product Management Officer – Manages the Ortelius Roadmap.
+
 Officer roles can be shared between multiple individuals and called ‘co-officers’ if needed. 
 
 ## Non-Voting Board Attendees
 
 There will be two permanent Non-voting Board Attendees, the Ambassador Chair and the Champions Chair.  These two positions will be a one year term. Elections will be held at the same time as the General Board elections. 
 The purpose of the Champion Chair is to represent the general Architecture and Committer community. They will be responsible for holding regular Architecture meetings and working with the General Board to communicate and resolve issues. The purpose of the Ambassador Chair is to represent the general Outreach Community, hold regular meetings and work with the General board to communicate and resolve issues. 
-The Board can invite other individuals to the Board meetings, such as Technology Oversight Committee (TOC) members. These guest members will not have the right to vote if a vote is required. They can provide input by providing a non-binding vote. 
- 
+The Board can invite other individuals to the Board meetings, such as Technology Oversight Committee (TOC) members. These guest members will not have the right to vote if a vote is required. They can provide input by providing a non-binding vote.
+
 ## Board and Committee Chair Election Process
 
 The election process is driven by the Ortelius Governance Board and must be initiated in September of each year, with Board Seat winners announcements in December of that year.
 General members of the Ortelius Community will be encouraged to nominate themselves and others to the General Board and the Ambassador and Committee Chairs.  Anyone can be nominated to the Board or Committee Chair including individuals who are not part of the general Ortelius Community. Nominations can be done via email or an online form. The method of nomination will be determined by the Governance Board. Nominations must be initiated before the end of September. Committee Chairs can be managed as ‘Co-Chairs’ if required.
 The Board will determine when to close nominations and open voting. Voting will be done by the General Ortelius Community defined by the list of all individuals currently receiving emails and meeting invites. An ‘opt-out’ email will be provided allowing members to be removed from the voting process. Elections will be held via an online voting service such as Condorcet Internet Voting Service, determined by the Governance Board. Election announcements must be completed by the first week of December. 
- 
-
-
