@@ -12,18 +12,21 @@ menu:
 
 ## Who We Are
 
-The Ortelius project is a community of technologist dedicated to the goal of simplifying the development of microservice applications. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
-The project is a part of the Continuous Delivery Foundation and affiliated with the Linux Foundation legal entities which legally own the project assets and act as treasury.
-The governance board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
+The Ortelius project is a community of technologist dedicated to the goal of simplifying the development of microservice applications through the use of a unified microservice catalog. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
+
+The project is incubating at the [Continuous Delivery Foundation](https://cd.foundation) a part of the [Linux Foundation](https://www.linuxfoundation.org/) which legally owns the project assets and act as treasury. The Ortelius Governance Board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
 ## Our Philosophy
 
-A welcoming, global, diverse community
-Ortelius welcomes all who are interested in learning and mentoring on the topic of DevOps in a cloud native architecture. The Ortelius community does not require participants to prove themselves before they are ‘admitted’ to the community. We assume that everybody has skills and experience to offer, and they do so with good intentions until proven otherwise. This principle applies to anybody without arbitrary discrimination. We recognize that every contribution is precious, and we actively encourage underserved communities to become involved.
+A welcoming, global, diverse community. . .
+
+Ortelius welcomes all who are interested in learning and mentoring on the topic of DevOps in a cloud native architecture. The Ortelius community does not require participants to prove themselves before they are ‘admitted’ to the community. We assume that everybody has skills and experience to offer, and they do so with good intentions until proven otherwise. This principle applies to anybody without arbitrary discrimination. We recognize that every contribution is precious, and we actively encourage under served communities to become involved.
+
 To support a diverse and inclusive community our project structure is designed based on a microservice model, allowing individuals to have expertise in ‘bounded context,’ which create independent pieces, thereby reducing the need for collaboration and communication. We try to let everyone have their own swim lane where they can work efficiently, and not feel they are holding back any aspect of the project. We believe everyone has the right to express their ideas in their own contributions.
+
 This diverse community approach is also partly achieved by recognizing that people move on. Lots of code in the project is maintained by people other than the original author. We encourage new contributors to take over existing projects that aren’t actively maintained. We believe that “old” contributors deserve respect from “new” contributors, but the inaction on the part of the original contributors shall not block new contributors from making changes.
 
 {{< /blocks/feature_dual >}}
@@ -47,7 +50,7 @@ As the composition of the Ortelius board changes over time, we want to ensure th
 
 ## Ortelius Project Chair: Steve Taylor
 
-**Steve Taylor** is a visionary and industry leader in the area of microservices, Istio, Kubernetes, DevOps process improvement, software build and release, and configuration management. Steve was designing continuous delivery pipelines for Fortune 1000 companies before the term ‘continuous integration’ was ever used.  Steve is the architect of DeployHub, the first microservice management platform that also versions and maps microservices and their configurations. He is also the  mastermind behind OpenMake Meister, a build automation solution that has served its customers for over 20 years.  In his free time, Steve is the Fire Chief of his local Volunteer fire department, plays hockey, builds houses and hangs out with his 4 dogs on his ranch in New Mexico.
+**Steve Taylor** is a visionary and industry leader in the area of microservices, Istio, Kubernetes, DevOps process improvement, software build and release, and configuration management. Steve was designing continuous delivery pipelines for Fortune 1000 companies before the term ‘continuous integration’ was ever used.  Steve is the CTO and Architect of DeployHub, the first [microservice catalog](https://www.deployhub.com) that also versions and maps microservices and their configurations. He is also the  mastermind behind OpenMake Meister, a build automation solution that has served its customers for over 20 years.  In his free time, Steve is the Fire Chief of his local Volunteer fire department, plays hockey, builds houses and hangs out with his 4 dogs on his ranch in New Mexico.
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -70,9 +73,8 @@ Ortelius bugs should be reported to GitHub after signing up for a free [GitHub](
 
 ### How Do I Find Ortelius on Social Media?
 
-- OrteliusOS
 - Twitter:  [@OrteliusOs](https://twitter.com/OrteliusOs)
-- LinkedIn Group: [Ortelius Microservices & Configuration Management](https://www.linkedin.com/groups/13835566/)
+- LinkedIn Group: [Ortelius Open Source](https://www.linkedin.com/company/ortelius-open-source)
 
 ### I’d Like To Join the Ortelius OS Community
 
