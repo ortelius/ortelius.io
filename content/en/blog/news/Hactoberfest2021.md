@@ -5,6 +5,11 @@ summary: Ortelius Hacktoberfest 2021
 author: Tracy Ragan
 ---
 
+<div class="col-center">
+<img src="/images/hacktoberfest2021.png" alt="Hacktoberfest 2021" height="474px" width="989px" />
+</div>
+<p></p>
+
 ## Join the Hacktoberfest Fun
 
 The Ortelius open source community will be participating in Hacktoberfest 2021. We invite you to participate in Hacktoberfest by contributing to the Ortelius Open Source project. Everyone is eligible to join Hacktoberfest with lots of different ways to contribute. Blogs, code contribution, website updates, and new documentation all qualify as contribution for Hacktoberfest. Most pull requests in GitHub would qualify.
