@@ -6,70 +6,40 @@ menu:
   main:
    weight: 100
 ---
+{{< blocks/section color="white" >}}
+
+<div class="col-12">
+<h2>Hackoberfest 2021</h2>
+<hr>
+</div>
+
+{{< blocks/feature_dual >}}
+
+<h2>Contribute to Ortelius for Hacktoberfest</h2>
+<a href="https://ortelius.io/blog/2021/08/31/hactoberfest-2021/"><img src="/images/hacktoberfest2021.png" alt="Hactoberfest 2021" height="250px" width="500px"></a>
+
+<br>
+Join the Ortelius Hacktoberfest team - We need you!
+<br>
+
+[Get the Details](https://ortelius.io/blog/2021/08/31/hactoberfest-2021/).
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<h2>Learn How to Contribute to Ortelius for Hacktoberfest</h2>
+<a href="https://us02web.zoom.us/webinar/register/WN_YKagT7Q1R0W9nkkXBVFpcA"><img src="/images/hacktoberfestwebinar-2021-small.png" alt="Hactoberfest 2021 Webinar" height="250px" width="500px"></a>
+<br>
+Join Steve Taylor on October 1st at 9:00 AM MT and learn how to get started contributing to Ortelius as part of the Hacktoberfest celebration.
+<br>
+
+[Register](https://us02web.zoom.us/webinar/register/WN_YKagT7Q1R0W9nkkXBVFpcA)
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 {{< blocks/section color="primary" >}}
-<div class="col-12">
-</div>
-
-<div class="col-12">
-<h2>Microservice Maturity Survey - Running Through July 2021</h2>
-<hr>
-</div>
-<br>
-<br>
-<div class="col-center">
-<img src="/images/ortelius-maturitypoll.png" alt="Ortelius Microservice Visionaries 2021" height="250px" width="500px" />
-<p></p>
-</div>
-
-Share your microservice journey by completing this [quick 7 question poll](https://docs.google.com/forms/d/e/1FAIpQLSegf2PaK0fQJg-TqsjmQoGfV_1OxRuX0zFM3qiiKv-9A7pP4w/viewform?usp=sf_link).
-
-<br>
-<br>
-<div class="col-12">
-<h2>Ortelius Microservice Visionaries - a Wild Success</h2>
-<hr>
-</div>
-<div class="col-center">
-<img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries 2021" height="250px" width="500px" />
-<p></p>
-</div>
-
-On May 20th, 2021 the Ortelius Community held the first Microservice Visionaries gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. 
-
-
-All sessions are available on-demand. [Watch Now](https://www.ortelius.io/blog/2021/05/20/ortelius-microservice-visionaries-2021/)
-<br>
-<br>
-<div class="col-12">
-<h2>cdCon 2021 June 23-24</h2>
-<hr>
-
-<div class="col-center">
-<img src="/images/cdcon2021.png" alt="cdCon 2021" height="250px" width="500px" />
-<p></p>
-</div>
-
-[Free Registration](https://events.linuxfoundation.org/cdcon/register/_) - Recommended Sessions:
-<br>
-<strong>June 23rd</strong>
-
-9:15 MT - Events in CI/CD SIG Birds of a Feather
-
-12 MT - Ortelius Birds of a Feather
-
-12:30 MT - Juan Peredo "Tame Your Microservices with Ortelius"
-
-1:05 MT - Steve Taylor "Adding Ortelius for Microservice Tracking to Your Jenkins Pipeline"
-
-1:40 MT - Tracy Ragan "Immutable Deployments" - the Goal of the GitOps Movement
-
-2:15 MT - Intro to Ortelius live Demo - DeployHub Booth
-
-<strong>June 24th</strong>
-
-1:15 MT - Karamjot Singh "Microservice Visualization - Challenges with Microservices"
-<br>
 <br>
 <div class="col-12">
 <h2>Community Meetings</h2>
