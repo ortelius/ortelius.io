@@ -49,8 +49,34 @@ Ortelius is a microservice management platform that versions and tracks microser
 {{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
-
 {{< blocks/section color=white >}}
+
+<div class="col-12">
+<h1 class="text-center">Signup for the Ortelius Development Environment</h1>
+<hr>
+<p></p>
+</div>
+
+{{< blocks/feature_dual >}}
+Ortelius has a development instance running on Azure Kubernetes.  We use this instance for testing out the latest version and pull requests.  Please signup to help us test the changes being made by our contributors.  
+
+A private domain with sample test data will be created when you complete the signup.  This allows you to test independently, so don't worry about breaking anything.
+
+Please submit any issues you find in the [ortelius/ortelius](https://github.com/ortelius/ortelius/issues) repo.
+
+<p align="center">
+<svg height="280px" width="280px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-field" class="svg-inline--fa fa-pen-field fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M192 320c0 17.67 14.33 32 32 32s32-14.33 32-32S241.7 288 224 288S192 302.3 192 320zM96 320c0 17.67 14.33 32 32 32s32-14.33 32-32S145.7 288 128 288S96 302.3 96 320zM639.1 69.79c0-11.26-4.295-22.52-12.89-31.11L601.3 12.89c-8.592-8.592-19.85-12.89-31.11-12.89S547.7 4.295 539.1 12.89L311.7 240.3c-3.072 3.072-5.164 6.984-6.016 11.24l-17.46 87.32c-.1486 .7434-.2188 1.471-.2188 2.191c0 6.012 4.924 10.94 10.94 10.94c.7197 0 1.449-.0707 2.192-.2194l87.33-17.46c4.258-.8516 8.168-2.945 11.24-6.016l227.4-227.4C635.7 92.31 639.1 81.05 639.1 69.79zM511.1 326.6C511.1 326.6 511.1 326.6 511.1 326.6L511.1 448H63.1V192h228.1l63.1-64H63.1C28.66 128 0 156.7 0 192v256c0 35.35 28.66 64 63.1 64h447.1c35.34 0 63.1-28.65 63.1-63.1L576 219.9l-64 63.99L511.1 326.6z"></path></svg>
+</p>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+<div align="center">
+
+<iframe width="600px" height="550px" src="http://localhost:8181/dmadminweb/signup.html" frameBorder="0" scrolling="no"></iframe>
+</div>
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+{{< blocks/section color=primary >}}
 <div class="col-12">
 <h1 class="text-center">Ortelius Features</h1>
 <hr>
@@ -85,7 +111,7 @@ Integrates with CI/CD.  | <i class="fas fa-3x fa-check-square"></i>
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=primary >}}
+{{< blocks/section color=white >}}
 {{< blocks/feature_dual >}}
 ## Abraham Ortelius – Our Inspiration
 
