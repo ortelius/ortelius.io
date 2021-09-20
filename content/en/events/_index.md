@@ -76,8 +76,7 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 {{< blocks/feature_dual >}}
 <h2>Podcast</h2>
 <div style="width:60%">
-{{< buzzsprout src="https://www.buzzsprout.com/1008697/7682923-cdf-s-newest-incubating-project-ortelius-microservice-mgmt"  >}}
-</div>
+<div id='buzzsprout-small-player-1774320'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/1774320.js?container_id=buzzsprout-small-player-1774320&player=small'></script></div></div>
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
