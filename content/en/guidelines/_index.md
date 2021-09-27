@@ -195,5 +195,11 @@ The election process is driven by the Ortelius Governance Board and must be init
 General members of the Ortelius Community will be encouraged to nominate themselves and others to the General Board and the Ambassador and Committee Chairs.  Anyone can be nominated to the Board or Committee Chair including individuals who are not part of the general Ortelius Community. Nominations can be done via email or an online form. The method of nomination will be determined by the Governance Board. Nominations must be initiated before the end of September. Committee Chairs can be managed as ‘Co-Chairs’ if required.
 The Board will determine when to close nominations and open voting. Voting will be done by the General Ortelius Community defined by the list of all individuals currently receiving emails and meeting invites. An ‘opt-out’ email will be provided allowing members to be removed from the voting process. Elections will be held via an online voting service such as Condorcet Internet Voting Service, determined by the Governance Board. Election announcements must be completed by the first week of December.
 
+### Nominations are Open for 2021
+
+[Governance Board Nomination Form](https://forms.gle/zM8bWEKvRezqegq19)
+
+[Committee Chairs Nomination Form](https://forms.gle/Sa4YeBr23jnZNFzk8)
+
 </div>
 {{< /blocks/section >}}
