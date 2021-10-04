@@ -29,7 +29,7 @@ Join the Ortelius Hacktoberfest team - We need you!
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
-- Watch Steve Taylor's video on setting up your [Local Dev Enviornment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
+- Watch Steve Taylor's video on setting up your [Local Dev Environment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
 
 [Get the full Details](https://ortelius.io/blog/2021/08/31/hactoberfest-2021/).
 
@@ -38,12 +38,8 @@ Join the Ortelius Hacktoberfest team - We need you!
 {{< blocks/feature_dual >}}
 
 <h2>Learn How to Contribute to Ortelius for Hacktoberfest</h2>
-<a href="https://us02web.zoom.us/webinar/register/WN_YKagT7Q1R0W9nkkXBVFpcA"><img src="/images/hacktoberfestwebinar-2021-small.png" alt="Hactoberfest 2021 Webinar" height="250px" width="500px"></a>
-<br>
-Join Steve Taylor on October 1st at 9:00 AM MT and learn how to get started contributing to Ortelius as part of the Hacktoberfest celebration.
-<br>
-
-[Register](https://us02web.zoom.us/webinar/register/WN_YKagT7Q1R0W9nkkXBVFpcA)
+Get started as an Ortelius Contributor.
+{{< youtube K7r-jp9ZmTE >}}
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
