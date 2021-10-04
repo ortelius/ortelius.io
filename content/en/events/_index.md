@@ -29,7 +29,7 @@ Join the Ortelius Hacktoberfest team - We need you!
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
-- Watch Steve Taylor's video on setting up your [Local Dev Enviornment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
+- Watch Steve Taylor's video on setting up your [Local Dev Environment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
 
 [Get the full Details](https://ortelius.io/blog/2021/08/31/hactoberfest-2021/).
 
