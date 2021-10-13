@@ -18,7 +18,7 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-Ortelius is a microservice management platform that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
+Ortelius is a unified microservice catalog that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
 <p></p>
 {{< /blocks/section >}}
 
@@ -52,15 +52,13 @@ Ortelius is a microservice management platform that versions and tracks microser
 {{< blocks/section color=white >}}
 
 <div class="col-12">
-<h1 class="text-center">Signup for the Ortelius Development Environment</h1>
+<h1 class="text-center">Sign-up for the Ortelius Development Environment</h1>
 <hr>
 <p></p>
 </div>
 
 {{< blocks/feature_dual >}}
-Ortelius has a development instance running on Azure Kubernetes.  We use this instance for testing out the latest version and pull requests.  Please signup to help us test the changes being made by our contributors.  
-
-A private domain with sample test data will be created when you complete the signup.  This allows you to test independently, so don't worry about breaking anything.
+Ortelius has a testing instance running on Azure Kubernetes.  Sign-up and use this instance for testing out the latest version and pull requests. A private domain with sample test data will be created when you complete the sign-up.  This allows you to test independently, so don't worry about breaking anything.
 
 Please submit any issues you find in the [ortelius/ortelius](https://github.com/ortelius/ortelius/issues) repo.
 
@@ -73,7 +71,11 @@ Please submit any issues you find in the [ortelius/ortelius](https://github.com/
 <div align="center">
 
 <iframe width="600px" height="550px" src="https://dev.ortelius.io/dmadminweb/signup.html" frameBorder="0" scrolling="no"></iframe>
+
+Already signed up - [Login Here](https://dev.ortelius.io/dmadminweb/Login#dhmain)
+
 </div>
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 {{< blocks/section color=primary >}}
