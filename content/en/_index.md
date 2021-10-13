@@ -18,11 +18,7 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-<<<<<<< HEAD
 Ortelius is a unified microservice catalog that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
-=======
-Ortelius is a unified microservice catalog that versions and tracks your microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration and supply chain data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
->>>>>>> 4c709a5... cleaned up intro
 <p></p>
 {{< /blocks/section >}}
 
