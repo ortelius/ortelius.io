@@ -18,7 +18,11 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
+<<<<<<< HEAD
 Ortelius is a unified microservice catalog that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
+=======
+Ortelius is a unified microservice catalog that versions and tracks your microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration and supply chain data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
+>>>>>>> 4c709a5... cleaned up intro
 <p></p>
 {{< /blocks/section >}}
 
@@ -52,13 +56,13 @@ Ortelius is a unified microservice catalog that versions and tracks microservice
 {{< blocks/section color=white >}}
 
 <div class="col-12">
-<h1 class="text-center">Sign-up for the Ortelius Development Environment</h1>
+<h1 class="text-center">Sign-up for the Ortelius Test Environment</h1>
 <hr>
 <p></p>
 </div>
 
 {{< blocks/feature_dual >}}
-Ortelius has a testing instance running on Azure Kubernetes.  Sign-up and use this instance for testing out the latest version and pull requests. A private domain with sample test data will be created when you complete the sign-up.  This allows you to test independently, so don't worry about breaking anything.
+Ortelius has a test instance running on Azure Kubernetes.  You can use this instance to test the latest version and pull requests. A private domain with sample test data will be created when you complete the sign-up.  This allows you to test independently, so don't worry about breaking anything.
 
 Please submit any issues you find in the [ortelius/ortelius](https://github.com/ortelius/ortelius/issues) repo.
 
