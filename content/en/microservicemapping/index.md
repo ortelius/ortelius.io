@@ -19,7 +19,7 @@ As microservices are consumed by applications, Ortelius tracks the dependencies.
 ## Mapping in Action
 This video shows how Ortelius tracks microservice versions to their 'logical' application versions.
 <p></p>
-<video autoplay="autoplay" loop="loop" controls="controls" width="60%" height="60%"><source src="https://ortelius.io/docs/mapview.mp4" type="video/mp4" />
+<video autoplay="autoplay" loop="loop" controls="controls" width="60%" height="60%"><source src="/images/mapview.mp4" type="video/mp4" />
 
 ## Conclusion
 
