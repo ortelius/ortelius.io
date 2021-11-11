@@ -6,16 +6,16 @@ author: Tracy Ragan
 ---
 
 <div class="col-center">
-<img src="/images/hacktoberfest2021.png" alt="Hacktoberfest 2021" height="474px" width="989px" />
+<img src="/images/OrteliusHackktoberfestPost2021.png" alt="Hacktoberfest 2021" height="474px" width="989px" />
 </div>
 <p></p>
 
-## Join the Hacktoberfest Fun
+## We did it
 
-The Ortelius open source community will be participating in Hacktoberfest 2021. We invite you to participate in Hacktoberfest by contributing to the Ortelius Open Source project. Everyone is eligible to join Hacktoberfest with lots of different ways to contribute. Blogs, code contribution, website updates, and new documentation all qualify as contribution for Hacktoberfest. Most pull requests in GitHub would qualify.
+The Ortelius open source community participated in this years Hacktoberfest. The team completed 27 pull request, got lots of documentation completed and tied up many loose ends. We thank Digital Ocean for hosting this amazing event each year. And congrats to all who completed their 4 pull request. 
 
-## Quick start
-- Sign-up to Hacktoberfest on the [event website](https://hacktoberfest.digitalocean.com/).
+## Don't stop - more work is needed
+Continue the contributions. We are building out an amazing open source microservice catalog. Here is how to get started:
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
@@ -27,7 +27,7 @@ We have created a [Hacktoberfest 2021 Project](https://github.com/ortelius/ortel
 
 ## Suggested Issues
 
-In the 'Subject' of the Issue, the type of work that needs to be done is described. For example, documentation, microservice, GitOps, website, or blogs. This is intended to make it easier to search for something that may be of interest. Following are suggested issues for Hacktoberfest. You will need to create 4 pull request to win the free Hacktoberfest Swag. 
+In the 'Subject' of the Issue, the type of work that needs to be done is described. For example, documentation, microservice, GitOps, website, or blogs. This is intended to make it easier to search for something that may be of interest. Following are suggested issues. 
 
 - <strong>Documentation Issues:</strong><br>
      - [cdf: change license to Apache 2 #176 - We need to update all files to reference Apache 2 with the Linux Foundation Copyright.](https://github.com/ortelius/ortelius/issues/176)
@@ -46,12 +46,7 @@ In the 'Subject' of the Issue, the type of work that needs to be done is describ
     - [Components: add secrets to component versions](https://github.com/ortelius/ortelius/issues/341)
     - [Components: add urls to GitHub Wiki and GitHub Issues](https://github.com/ortelius/ortelius/issues/340)
     - [Create Operator to install Ortelius into K8s #353](https://github.com/ortelius/ortelius/issues/353)
-    - [Testing: Testing needs to be completed on the CVE integration at the Component level in Ortelius 10.0 #357](https://github.com/ortelius/ortelius/issues/357)
-    - [Testing: The Licensing integration needs to be tested on Components in Ortelius 10.0 #358](https://github.com/ortelius/ortelius/issues/358)
-    - [Testing: The Swagger integration in Ortelius 10 (Service Catalog) #356](https://github.com/ortelius/ortelius/issues/356)
-     - [Documentation - Need to document the new Install process for Ortelius version 10 (Service Catalog) #354](https://github.com/ortelius/ortelius/issues/354)
-     - [Documentation: Need to document the new data elements at the Component level for Ortelius 10.0 #355](https://github.com/ortelius/ortelius/issues/355)
-- <strong>Front End Updates</strong><br>
+ - <strong>Front End Updates</strong><br>
    - [Filter in application -> map does not appear to work #294](https://github.com/ortelius/ortelius/issues/294)
    - [Application stops responding after changing Global domain name #265](https://github.com/ortelius/ortelius/issues/265)
    - [Report of Environment -> Application Versions #83](https://github.com/ortelius/ortelius/issues/83)
@@ -70,4 +65,4 @@ In the 'Subject' of the Issue, the type of work that needs to be done is describ
    - [Screwdriver Integration #106](https://github.com/ortelius/ortelius/issues/106)
    - [Spinnaker Integration #105](https://github.com/ortelius/ortelius/issues/105)
 
-We look forward to working with you on the Hacktoberfest event. Lets make this a big year for Ortelius. 
+We look forward to working with you on becoming a leading Ortelius contributor. 
