@@ -14,14 +14,14 @@ author: Tracy Ragan
 
 The Ortelius open source community participated in this years Hacktoberfest. The team completed 27 pull request, got lots of documentation completed and tied up many loose ends. We thank Digital Ocean for hosting this amazing event each year. And congrats to all who completed their 4 pull request. 
 
-## Don't stop - more work is needed
+## Don't stop - More Work is Needed
 Continue the contributions. We are building out an amazing open source microservice catalog. Here is how to get started:
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
 - Watch Steve Taylor's video on setting up your [Local Dev Enviornment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
 
-## Where to Find an Issue to Work on
+## Where to Find an Issue to Work On
 We have created a [Hacktoberfest 2021 Project](https://github.com/ortelius/ortelius/projects/5) and assigned GitHub Issues to the project. These Issues are ideal candidates for creating your Hacktoberfest pull request. You are not required to work only under the Hacktoberfest 2021 Project. You can choose any issue. If you choose an issue outside of the Hactoberfest 2021 project you will need to create your pull request with the field called 'Label' using the keyword 'Hacktoberfest' so it can be recognized.
 
 
