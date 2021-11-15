@@ -21,9 +21,11 @@ menu:
 
 ### Join the Ortelius Committer Celebration
 
-As always - we will start our Microservice Visionaries Summit with 'Beer and Donuts' presented live over Zoom. Recognition badges will be awarded.
+As always - we will start our Microservice Visionaries Summit with 'Beer and Donuts' presented live over Zoom. Recognition badges will be awarded. 
 
-Agenda:
+After 'Beer and Donuts', join the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos) to participate in the 'campiest' technical conference available. We combine sci fi and having fun with our technical discussions. We hope you will enjoy the show.
+
+Full Agenda:
 
 <p>8:00 AM MST Beer and Donuts will be followed up by technical discussions.</p>
 <p>8:45 AM MST Keynote - Top 10 development challenges in a distributed architecture using Microservices </p>
