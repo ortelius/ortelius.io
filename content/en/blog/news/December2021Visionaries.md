@@ -34,7 +34,7 @@ Join Ankur to hear the challenges organizations face with microservices 'in the 
 <p><strong> 9:30 AM MST Getting yourself setup to start contributing code to Ortelius
 </strong>
 
-Presented by [Utkarsh Sharma](https://www.linkedin.com/in/utkarsh-sharma-53362836/), Cloud Architect Consultant, Capgemini 
+Presented by [Utkarsh Sharma](https://www.linkedin.com/in/utkarsh-sharma-53362836/), Consultant, Capgemini 
 
 Learn from Utkarsh how to become a 'powerhouse' open source committer. Utkarsh will walk through the steps you need to go through to setup your local environment and begin working on Ortelius Issues and create Pull Request. The lessons learned can apply to many Open Source projects. This is your chance to learn from one of the best. Thank you Utkarsh for your amazing work and contributions. 
   
