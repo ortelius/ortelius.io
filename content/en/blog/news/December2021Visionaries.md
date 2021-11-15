@@ -12,14 +12,18 @@ author: Tracy Ragan
 
 # An Amazing Community of Committers
 
-On December 8th, 2021 the Ortelius community will host its second bi-annual 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly microservice architecture. We host the entire event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions of the topics for the day.
+On December 8th, 2021 the Ortelius community will host its second bi-annual 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly microservice architecture. We host the entire event on the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos) giving our committers a platform for creating a unique virtual conference experience. 
 
-## Live Presentations on Zoom
+## Full Agenda
+
+### Live Presentations on Zoom
 <p><strong>8:00 AM MST Beer and Donuts </strong></p>
 
 This live Zoom event kicks off our Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends. To join the live event - add yourself to the [Ortelius Google Groups](https://groups.google.com/g/ortelius-dev).
 
-## Presentations on the Ortelius Twitch Channel 
+### Presentations on the Ortelius Twitch Channel 
+
+Join the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos) to participate in the 'campiest' technical conference available. We combine sci fi and having fun with our technical discussions. We hope you will enjoy the show
 
 <p><strong> 8:45 AM MST Keynote - Top 10 development challenges in a distributed architecture using Microservices</strong></p>
 
@@ -52,6 +56,7 @@ Ortelius is not the only project that is going through a modernization process. 
 Presented by [Arvind Singharpuria](https://www.linkedin.com/in/arvind-singharpuria-a88686202/) 
 
 <p>Ortelius hoards an amazing amount of data. As we move the project forward, Data Science will allow us to leverage this data to pursue machine learning and predictive behavior of microservices shared across teams. Join Arvind, a data science enthusiast and brilliant University student as he shared is thoughts on the road forward to applying data science to the Ortelius project. </p>
+
 
 </p><strong> 12:30 PM MST Closing Thoughts </strong>
 
