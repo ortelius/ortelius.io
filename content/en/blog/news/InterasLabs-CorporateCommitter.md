@@ -12,7 +12,7 @@ author: Tracy Ragan
 
 ## Interas Labs builds on their commitment to supporting open source in the cloud native space
 
-<strong>Santa Fe, NM – November 11, 2021 </strong>– The [Ortelius Open-Source](https://www.ortelius.io) community added [Interas Labs](https://www.interaslabs.com) as a new corporate contributor to its open-source team. Ortelius is an open source microservice catalog that integrates into the CD Pipeline to track versions, usage and ownership of microservices across clusters. Ortelius is incubating at the [Continuous Delivery Foundation](https://cd.foundation/).
+<strong>Santa Fe, NM – November 17, 2021 </strong>– The [Ortelius Open-Source](https://www.ortelius.io) community added [Interas Labs](https://www.interaslabs.com) as a new corporate contributor to its open-source team. Ortelius is an open source microservice catalog that integrates into the CD Pipeline to track versions, usage and ownership of microservices across clusters. Ortelius is incubating at the [Continuous Delivery Foundation](https://cd.foundation/).
 
 “Interas Labs is a Kubernetes engineering company with the mission of improving our customer’s move to a secure and simplified cloud native platform. We strongly believe in open-source projects. We choose the Ortelius project as it aligns with our corporate mission to simplify a complex microservice architecture” explains Ujwal Yelmareddy, Founder of Interas Labs. Tracy Ragan, Ortelius community manager emphasized, “Interas Labs brings deep end user insights into the open-source community. We are honored to have Interas Labs a key part of the Ortelius team.”  
 
