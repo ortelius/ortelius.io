@@ -1,4 +1,4 @@
 description: A Helm chart for Kubernetes
 name: ortelius-www
 version: 0.1.0
-Version: "07091a2"
+Version: "debc65c"
