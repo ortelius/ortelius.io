@@ -6,7 +6,7 @@ author: Tracy Ragan
 ---
 
 <div class="col-center">
-<img src="/images/InterasLabs.png" alt="Interas Labs" height="250px" width="500px" />
+<img src="/images/InterasPR.png" alt="Interas Labs" height="250px" width="500px" />
 </div>
 <br>
 
