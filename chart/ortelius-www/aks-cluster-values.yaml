@@ -1,0 +1,40 @@
+Chart: chart/ortelius-www
+ChartNamespace: ortelius
+DockerRepo: quay.io/ortelius/website
+DockerSha: 55997e5a8936c963c4334940414bd1176434ed546bb3907b9cc16a39a40bee0a
+DockerTag: main-v9.0.0.263-gf7944cc
+EXT: sh
+GitBranch: main
+GitCommit: f7944cc
+GitRepo: ortelius/website
+GitTag: main
+GitUrl: git@github.com:ortelius/website.git
+RE_PHYSICAL_HOSTNAME: localhost
+RE_PHYSICAL_SERVER: localhost
+aks:
+  admin: true
+  certificate: /root/.ssh/aks.pem
+  cluster: cluster2-aks
+  resourcegroup: cluster1-rg
+application: ortelius-www;62
+builddate: Thu Nov 18 19:38:45 UTC 2021
+buildid: 6d7bf0c9-a26e-4163-9d39-aff0a12b26da
+buildurl: https://console.cloud.google.com/cloud-build/builds/6d7bf0c9-a26e-4163-9d39-aff0a12b26da?project=eighth-physics-169321
+chart: chart/ortelius-www
+chartnamespace: ortelius
+chartpublish: y
+component: website;main;v9_0_0_263_gf7944cc
+dockerrepo: quay.io/ortelius/website
+dockersha: 55997e5a8936c963c4334940414bd1176434ed546bb3907b9cc16a39a40bee0a
+dockertag: main-v9.0.0.263-gf7944cc
+dropzone: /tmp/tdm.1443.1
+environment: aks-cluster
+gitcommit: f7944cc
+gitrepo: ortelius/website
+gittag: main
+giturl: git@github.com:ortelius/website.git
+image:
+  pullPolicy: Always
+kubectl_context: cluster2-aks-admin
+server_hostname: localhost
+server_name: localhost
