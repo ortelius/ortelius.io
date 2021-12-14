@@ -27,7 +27,7 @@ component: website;main;v9_0_0_273_g1f5182e
 dockerrepo: quay.io/ortelius/website
 dockersha: 47d94889c84a39f671e959ab500aefa90d07cdfcd6c4c14493662dc859905b12
 dockertag: main-v9.0.0.273-g1f5182e
-dropzone: /tmp/tdm.1444.3
+dropzone: /tmp/tdm.1479.1
 environment: aks-cluster
 gitcommit: 1f5182e
 gitrepo: ortelius/website
