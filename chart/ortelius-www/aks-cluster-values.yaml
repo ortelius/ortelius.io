@@ -1,11 +1,11 @@
 Chart: chart/ortelius-www
 ChartNamespace: ortelius
 DockerRepo: quay.io/ortelius/website
-DockerSha: 01408aee858c1d4d14af7ea71392c0c0340d3a88034747a74b55be51d0a9b5d2
-DockerTag: main-v9.0.0.279-g8ad153e
+DockerSha: c302e04fa5af952a8abd40f50381642b72c23a5d305d2944fde1c8e2540ec467
+DockerTag: main-v9.0.0.287-g89a9691
 EXT: sh
 GitBranch: main
-GitCommit: 8ad153e
+GitCommit: 89a9691
 GitRepo: ortelius/website
 GitTag: main
 GitUrl: git@github.com:ortelius/website.git
@@ -16,20 +16,20 @@ aks:
   certificate: /root/.ssh/aks.pem
   cluster: cluster2-aks
   resourcegroup: cluster1-rg
-application: ortelius-www;72
-builddate: Tue Dec 14 18:47:25 UTC 2021
-buildid: 92e45371-926c-46c4-9844-a67b0f0436d4
-buildurl: https://console.cloud.google.com/cloud-build/builds/92e45371-926c-46c4-9844-a67b0f0436d4?project=eighth-physics-169321
+application: ortelius-www;73
+builddate: Wed Feb  2 21:10:35 UTC 2022
+buildid: ecbbf489-e5b5-4154-bd8f-ef0ae24ad3d8
+buildurl: https://console.cloud.google.com/cloud-build/builds/ecbbf489-e5b5-4154-bd8f-ef0ae24ad3d8?project=eighth-physics-169321
 chart: chart/ortelius-www
 chartnamespace: ortelius
 chartpublish: y
-component: website;main;v9_0_0_279_g8ad153e
+component: website;main;v9_0_0_287_g89a9691
 dockerrepo: quay.io/ortelius/website
-dockersha: 01408aee858c1d4d14af7ea71392c0c0340d3a88034747a74b55be51d0a9b5d2
-dockertag: main-v9.0.0.279-g8ad153e
-dropzone: /tmp/tdm.1505.1
+dockersha: c302e04fa5af952a8abd40f50381642b72c23a5d305d2944fde1c8e2540ec467
+dockertag: main-v9.0.0.287-g89a9691
+dropzone: /tmp/tdm.1505.3
 environment: aks-cluster
-gitcommit: 8ad153e
+gitcommit: 89a9691
 gitrepo: ortelius/website
 gittag: main
 giturl: git@github.com:ortelius/website.git
