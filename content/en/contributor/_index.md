@@ -42,15 +42,11 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-# Ortelius Chairs
-- [Steve Taylor](mailto:steve@deployhub.com)
-- [Tracy Ragan](mailto:tracy@deployhub.com)
+## Ortelius Architecture Chair
+- [Sergio Canales](https://www.linkedin.com/in/sergio-canales-espinoza/)
 
 ## Ortelius Outreach Chair
-- [Siddarth Pareek](https://www.linkedin.com/in/siddharthpareek/)
-
-## Ortelius Recognition Program Chair
-- [Garima Bajpai](https://www.linkedin.com/in/garimabajpai/)
+- [Saim Safder](https://www.linkedin.com/in/saim-safder/)
 
 # Get Your Questions Answered
 Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/SteveTaylor) and ask him for help to get started. Building things and mentoring is what he does.
