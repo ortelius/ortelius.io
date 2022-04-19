@@ -42,6 +42,10 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
+
+## Ortelius Governing Board
+- [Meet the Ortelius Governance Board](https://ortelius.io/blog/2021/12/13/ortelius-2022-governing-board/)
+
 ## Ortelius Architecture Chair
 - [Sergio Canales](https://www.linkedin.com/in/sergio-canales-espinoza/)
 
