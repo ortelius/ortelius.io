@@ -53,7 +53,7 @@ Team Topologies are the leading approach to organizing business and technology t
  </strong>
 <br><strong>Presented by Turja Narayan Chaudhuri</strong>
 <br>
-It is indeed a valid argument that microservices allows engineering organization to grow and scale, providing better constructs for isolation and independence. But, microservices do not only add technical complexity -they also introduce organizational complexity and pose a serious threat to scaling at the enterprise level. Over time, with hundreds of services and no governance or oversight, when something breaks, nobody knows who to reach out to. A microservice catalog is a record/list of all the microservices that an enterprise has in its ecosystem, providing powerful information at your fingertips. In this talk, you will learn how a microservice catalog facilitates a successful microservice at scale architecture by helping developers find and share services, providing DevOps teams metadata about services needed to make solid decisions, and support teams ownership and consumption information needed when something goes wrong.</p>
+It is indeed a valid argument that microservices allows engineering organization to grow and scale, providing better constructs for isolation and independence. But, microservices do not only add technical complexity -they also introduce organizational complexity and pose a serious threat to scaling at the enterprise level. Over time, with hundreds of services and no governance or oversight, when something breaks, nobody knows who to reach out to. A microservice catalog is a record/list of all the microservices that an enterprise has in its ecosystem, providing powerful information at your fingertips. In this talk, you will learn how a microservice catalog facilitates a successful microservice at scale architecture by helping developers find and share services, providing DevOps teams metadata about services needed to make solid decisions, and give the support teams the ownership and consumption information needed when something goes wrong.</p>
 
 </p><strong> 11:35 Microservices and the CD Pipeline</strong>
 <br><strong>Presented by Deepesh Nellutla </strong>
@@ -82,6 +82,7 @@ Using Kubernetes-as-a-Service from a cloud provider could be the best way for yo
 </p>
 <br>
 <p><strong> 12:50 - SBOMs for All Using Ortelius</strong>
-<br>Presented by Steve Taylor
+<br><strong>Presented by Steve Taylor</strong>
+<br>
 Hardening cybersecurity in cloud-native environments means we need to track not just service SBOMs, but more importantly application SBOMs. In a de-coupled architecture it can be almost impossible to create an application SBOM - Steve Taylor will show us how Ortelius gets this job done so everyone has an SBOM.  
 </p>
