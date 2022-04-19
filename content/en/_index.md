@@ -5,7 +5,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=dark >}}
 <div class="col-12">
-<h1 class="text-center">An Open Source Microservice Management Platform</h1>
+<h1 class="text-center">An Open Source Microservice Catalog for Supply Chain Management</h1>
 <div id="home-github">
 <p><button><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
 </div>
@@ -18,7 +18,7 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-Ortelius is a unified microservice catalog that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata.  By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice management platform driven by a supportive and diverse global open source community.
+Ortelius is a unified microservice catalog designed to track and version your microservice software supply chain along with all consuming 'logical' applications. With Ortelius, you can easily view your 'logical' application's SBOM, CVEs, service dependencies, and inventory based on versions. Ortelius generates new versions of microservices and their consuming logical applications each time you update your container registry. By centralizing and tracking detailed supply chain data, Ortelius provides you a proactive view of your microservice architecture and the differences between each service update. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 <p></p>
 {{< /blocks/section >}}
 
@@ -28,11 +28,11 @@ Ortelius is a unified microservice catalog that versions and tracks microservice
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Mapping" url="/microservicemapping/" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Dependency Mapping" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog and Publishing" url="/catalog/" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Versioning" url="/versioning/" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Supply Chain with Versioning" url="/versioning/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
@@ -89,7 +89,7 @@ Already signed up - [Login Here](https://dev.ortelius.io/dmadminweb/Login#dhmain
  | 
 --- | ----------- 
 Microservice ownership. | <i class="fas fa-3x fa-check-square"></i>
-Logical application versions. | <i class="fas fa-3x fa-check-square"></i>
+Logical application versions with SBOMs and CVEs. | <i class="fas fa-3x fa-check-square"></i>
 Microservice blast radius. | <i class="fas fa-3x fa-check-square"></i>
 Difference reports over time, microservice and logical application. | <i class="fas fa-3x fa-check-square"></i>
 Microservice inventory usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>

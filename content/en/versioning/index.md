@@ -14,7 +14,7 @@ type: contributor
 
 As we move into a microservice architecture, it is important to see a new use of versioning. In our monolithic days, it was important to version source code so we understood what version of the code was compiled/linked into our builds. Microservices are the new code. A deployment of a microservice is our new 'compile/link' step. For this reason, microservice versioning is critical.
 
-In a microservice architecture that linking is done dynamically at the dev, test and prod runtime environments. But as the saying goes, "the more things change, the more things stay the same." While your application is a collection of loosely coupled microservices, it is still an application that needs to be managed as a package with versions that you are delivering to your customers.
+In a microservice architecture linking is done dynamically at the dev, test and prod runtime environments. But as the saying goes, "the more things change, the more things stay the same." While your application is a collection of loosely coupled microservices, it is still an application that needs to be managed as a package with versions that you are delivering to your customers.
 
 #### Microservice Impact on Applications
 
@@ -33,7 +33,7 @@ The use of versioning at the microservice and application package level addresse
 
 Ortelius integrates into your CD Pipeline to automate the versioning of your services. Ortelius is called at the point in time a new container has been registered. Ortelius grabs the new container data, such as the tag, and creates a new version of the service. This in turn creates new versions of all consuming 'logical' applications. No manual work required. 
 
-#### Microservice Application Supply Chain
+#### Microservice Software Supply Chain
 
 As your 'logical' application changes, Ortelius tracks the applications Software Bill of Material (SBOM). This shows the precise version of each microservice the application is consuming. This level of data is critical when you have a vulnerability in a particular service, but do not have the knowledge of where it is used. 
 
