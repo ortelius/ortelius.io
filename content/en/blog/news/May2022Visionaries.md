@@ -12,7 +12,7 @@ author: Tracy Ragan
 
 ## An Amazing Community of Committers
 
-On May 20th, 2022 the Ortelius community will host our 4th 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared microservice oriented architecture. We host the majority of the event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions of the May 20th event. 
+On May 20th, 2022 the Ortelius community will host our 4th 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared microservice oriented architecture. We host the majority of the event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour is hosted via zoom. Below are descriptions of the May 20th event. 
 
 ## Agenda: (all times in MT)
 
