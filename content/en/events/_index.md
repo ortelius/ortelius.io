@@ -7,6 +7,50 @@ menu:
    weight: 100
 ---
 
+{{< blocks/section color="white" >}}
+
+
+{{< blocks/feature_dual >}}
+<div class="col-center" style="width:100%">
+{{< video autoplay="true" loop="true" controls="true" src="ortelius-scifi-intro.mp4" >}}
+</div>
+{{< /blocks/feature_dual >}}
+
+{{< blocks/feature_dual >}}
+<h2>Ortelius Visionaries Summit - May 20th</h2>
+<p>Join us for another Ortelius Visionaries Summit - We promise you a fun, campy, adventure into the minds of the Ortelius contributors. </p> 
+<br>
+<h4>Agenda: (all times in MT)</h4>
+
+- 9:00 AM - 10:00 AM Beer and Donuts Live via Zoom
+- 10 AM  - 10:20 AM Panel Discussion - The Evolution of a Microservice Catalog Live via Zoom, Sacha Wharton, Steve Taylor, Tracy Ragan
+</strong>
+<br>
+
+<strong>Ten minute lighting talks on the Ortelius Twitch Channel  - Hosted by Sergio Canales </strong>
+<br>
+
+- 10:25 AM What you should know to contribute to Ortelius - a 10 minute guide, Presented by Saim Safder
+- 10:40 AM  Developing Applications with the Microservices Architecture: Design Patterns, Presented by Utkarsh Sharma
+- 10:55 AM Pitfalls - Team Topologies from the field, Presented by Sergio Canales
+- Break 11:10 AM to 11:20 AM 
+- 11:20 AM Why do you need a microservice catalog to enhance developer productivity? Presented by Turja Narayan Chaudhuri
+- 11:35 AM Microservices and the CD Pipeline, Presented by Deepesh Nellutla
+- 11:50 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
+- 12:05 AM From Dev to Prod in one step, Presented by Sacha Wharton
+- 12:20 AM Topic to be Announced, Presented by Siddharth Pareek 
+- 12:35 AM Topic to be Announced,  Presented by Arvind Singharpuria 
+- 12:50 AM - SBOMs for All Using Ortelius, Presented by Steve Taylor
+
+[Full Agenda - Learn More](https://ortelius.io/blog/2022/04/15/ortelius-microservice-visionaries-2022/)
+
+
+<p></p>
+{{< /blocks/feature_dual >}}
+
+{{< /blocks/section >}}
+
+
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
@@ -35,6 +79,8 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+
 
 {{< blocks/section color="white" >}}
 

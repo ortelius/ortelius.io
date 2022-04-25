@@ -6,7 +6,7 @@ author: Tracy Ragan
 ---
 
 <div class="col-center">
-<img src="/images/ortelius-visonaires-date.png" alt="Ortelius Microservice Visionaries May 2022" height="2000px" width="1000px" />
+<img src="/images/ortelius-visionaries-bc-05-2022.png" alt="Ortelius Microservice Visionaries May 2022" height="2000px" width="1000px" />
 </div>
 <p></p>
 
@@ -16,19 +16,18 @@ On May 20th, 2022 the Ortelius community will host our 4th 'Microservice Visiona
 
 ## Agenda: (all times in MT)
 
-### 9:00 AM - 10:00 AM Beer and Donuts 
+### 9:00 AM - 10:00 AM Beer and Donuts Live via Zoom 
 This live Zoom event kicks off the Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
 
-## Ortelius Twitch Channel Schedule
-The following presentation will be on the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos). 
-
-### 10 AM  - 10:20 AM Panel Discussion
+### 10 AM  - 10:20 AM Panel Discussion Live via Zoom
 <strong>The Evolution of a Microservice Catalog</strong>
 <br>
 Join a panel of Ortelius Contributors to learn what it means to be part of the Ortelius team, what is in the Ortelius roadmap and general conversation about the work ahead. Sacha Wharton, Steve Taylor, Tracy Ragan
 
+Join the [Ortelius Google Group](https://groups.google.com/g/ortelius-dev) to get your zoom meeting invite. 
 
 ## Ten minute lighting talks on the Ortelius Twitch Channel  - Hosted by Sergio Canales
+The following presentation will be on the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos). 
 
 <p><strong> 10:25 AM What you should know to contribute to Ortelius - a 10 minute guide</strong> 
 <br><strong>Presented by Saim Safder</strong>
@@ -67,7 +66,7 @@ Learn what is needed to follow best practices for building a microservice based 
 <br>
 Using Kubernetes-as-a-Service from a cloud provider could be the best way for you to develop your application. What is KaaS? Why and when should you use it? What should you know before you pick a provider? Join this session to learn the answers. 
 </p>
-</p><strong> 12:05 AM TBA
+</p><strong> 12:05 AM From Dev to Prod in one step
 </strong>
 <br><strong>Presented by Sacha Wharton</strong>
 </p>
