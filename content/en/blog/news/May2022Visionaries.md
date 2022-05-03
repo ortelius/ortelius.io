@@ -69,13 +69,16 @@ Using Kubernetes-as-a-Service from a cloud provider could be the best way for yo
 </p><strong> 12:05 AM From Dev to Prod in one step
 </strong>
 <br><strong>Presented by Sacha Wharton</strong>
-</p>
 <br>
-</p><strong> 12:20 AM TBA
+Automation is king. Learn from Sacha how he has been delivering a streamlined process for moving updates across the pipeline as fast as possible. We've always wanted one 'big button' see how close Sacha has gotten. 
+<br>
+</p><strong> 12:20 AM DevOps - People before Tech
 </strong>
-<br><strong>Presented by Siddharth Pareek</strong>
-</p>
+<br><strong>Presented by Miklos Sagi</strong>
 <br>
+Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
+In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process.
+</br>
 </p><strong> 12:35 AM TBA
 </strong>
 <br><strong>Presented by Arvind Singharpuria</strong>
