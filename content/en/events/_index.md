@@ -38,7 +38,7 @@ menu:
 - 11:35 AM Microservices and the CD Pipeline, Presented by Deepesh Nellutla
 - 11:50 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
 - 12:05 AM From Dev to Prod in one step, Presented by Sacha Wharton
-- 12:20 AM Topic to be Announced, Presented by Siddharth Pareek 
+- 12:20 AM DevOps - People before Tech, Presented by Miklos Sagi 
 - 12:35 AM Topic to be Announced,  Presented by Arvind Singharpuria 
 - 12:50 AM - SBOMs for All Using Ortelius, Presented by Steve Taylor
 
