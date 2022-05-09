@@ -39,7 +39,7 @@ menu:
 - 11:50 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
 - 12:05 AM From Dev to Prod in one step, Presented by Sacha Wharton
 - 12:20 AM DevOps - People before Tech, Presented by Miklos Sagi 
-- 12:35 AM Automating microservice configurations by Ansible, Presented by Piha Adhikari 
+- 12:35 AM Automating microservice configurations with Ansible, Presented by Piha Adhikari 
 - 12:50 AM SBOMs for All Using Ortelius, Presented by Steve Taylor
 
 [Full Agenda - Learn More](https://ortelius.io/blog/2022/04/15/ortelius-microservice-visionaries-2022/)

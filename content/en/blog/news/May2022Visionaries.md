@@ -79,7 +79,7 @@ Automation is king. Learn from Sacha how he has been delivering a streamlined pr
 Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
 In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process.
 </br>
-</p><strong> 12:35 AM Automating microservice configurations by Ansible 
+</p><strong> 12:35 AM Automating microservice configurations with Ansible 
 </strong>
 <br><strong>Presented by Piha Adhikari</strong>
 <br>
