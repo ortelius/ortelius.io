@@ -79,10 +79,12 @@ Automation is king. Learn from Sacha how he has been delivering a streamlined pr
 Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
 In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process.
 </br>
-</p><strong> 12:35 AM TBA
+</p><strong> 12:35 AM Automating microservice configurations by Ansible 
 </strong>
-<br><strong>Presented by Arvind Singharpuria</strong>
-</p>
+<br><strong>Presented by Piha Adhikari</strong>
+<br>
+One of the main principles of microservices is that they are each independently deployed. As a consequence of their distributed nature, microservice development and operations tend to be much more complex creating a barrier to adoption. If your teams have not moved from their monolithic silos and DevOps practices they may not fully see the benefits of a microservice architecture. Sticking with the "good old monolith" may sound better than dealing with the need to deploy hundreds of independent software pieces. In this talk, Piha will throw some light on how Ansible can help solve managing the deployment of hundreds of services, with their configuration changes, for you build and deploy automation. 
+</br>
 <br>
 <p><strong> 12:50 AM - SBOMs for All Using Ortelius</strong>
 <br><strong>Presented by Steve Taylor</strong>
