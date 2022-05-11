@@ -66,27 +66,27 @@ Learn what is needed to follow best practices for building a microservice based 
 <br>
 Using Kubernetes-as-a-Service from a cloud provider could be the best way for you to develop your application. What is KaaS? Why and when should you use it? What should you know before you pick a provider? Join this session to learn the answers. 
 </p>
-</p><strong> 12:05 AM From Dev to Prod in one step
+</p><strong> 12:05 PM From Dev to Prod in one step
 </strong>
 <br><strong>Presented by Sacha Wharton</strong>
 <br>
 Automation is king. Learn from Sacha how he has been delivering a streamlined process for moving updates across the pipeline as fast as possible. We've always wanted one 'big button' see how close Sacha has gotten. 
 <br>
-</p><strong> 12:20 AM DevOps - People before Tech
+</p><strong> 12:20 PM DevOps - People before Tech
 </strong>
 <br><strong>Presented by Miklos Sagi</strong>
 <br>
 Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
 In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process.
 </br>
-</p><strong> 12:35 AM Automating microservice configurations with Ansible 
+</p><strong> 12:35 PM Automating microservice configurations with Ansible 
 </strong>
 <br><strong>Presented by Piha Adhikari</strong>
 <br>
 One of the main principles of microservices is that they are each independently deployed. As a consequence of their distributed nature, microservice development and operations tend to be much more complex creating a barrier to adoption. If your teams have not moved from their monolithic silos and DevOps practices they may not fully see the benefits of a microservice architecture. Sticking with the "good old monolith" may sound better than dealing with the need to deploy hundreds of independent software pieces. In this talk, Piha will throw some light on how Ansible can help solve managing the deployment of hundreds of services, with their configuration changes, for you build and deploy automation. 
 </br>
 <br>
-<p><strong> 12:50 AM - SBOMs for All Using Ortelius</strong>
+<p><strong> 12:50 PM - SBOMs for All Using Ortelius</strong>
 <br><strong>Presented by Steve Taylor</strong>
 <br>
 Hardening cybersecurity in cloud-native environments means we need to track not just service SBOMs, but more importantly application SBOMs. In a de-coupled architecture it can be almost impossible to create an application SBOM - Steve Taylor will show us how Ortelius gets this job done so everyone has an SBOM.  
