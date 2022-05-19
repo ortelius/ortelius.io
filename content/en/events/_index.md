@@ -35,12 +35,11 @@ menu:
 - 10:55 AM Pitfalls - Team Topologies from the field, Presented by Sergio Canales
 - Break 11:10 AM to 11:20 AM 
 - 11:20 AM Why do you need a microservice catalog to enhance developer productivity? Presented by Turja Narayan Chaudhuri
-- 11:35 AM Microservices and the CD Pipeline, Presented by Deepesh Nellutla
-- 11:50 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
-- 12:05 PM From Dev to Prod in one step, Presented by Sacha Wharton
-- 12:20 PM DevOps - People before Tech, Presented by Miklos Sagi 
-- 12:35 PM Automating microservice configurations with Ansible, Presented by Piha Adhikari 
-- 12:50 PM SBOMs for All Using Ortelius, Presented by Steve Taylor
+- 11:35 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
+- 11:50 PM From Dev to Prod in one step, Presented by Sacha Wharton
+- 12:05 PM DevOps - People before Tech, Presented by Miklos Sagi 
+- 12:20 PM Automating microservice configurations with Ansible, Presented by Piha Adhikari 
+- 12:35 PM SBOMs for All Using Ortelius, Presented by Steve Taylor
 
 [Full Agenda - Learn More](https://ortelius.io/blog/2022/04/15/ortelius-microservice-visionaries-2022/)
 

@@ -55,38 +55,33 @@ Team Topologies are the leading approach to organizing business and technology t
 <br>
 It is indeed a valid argument that microservices allows engineering organization to grow and scale, providing better constructs for isolation and independence. But, microservices do not only add technical complexity -they also introduce organizational complexity and pose a serious threat to scaling at the enterprise level. Over time, with hundreds of services and no governance or oversight, when something breaks, nobody knows who to reach out to. A microservice catalog is a record/list of all the microservices that an enterprise has in its ecosystem, providing powerful information at your fingertips. In this talk, you will learn how a microservice catalog facilitates a successful microservice at scale architecture by helping developers find and share services, providing DevOps teams metadata about services needed to make solid decisions, and give the support teams the ownership and consumption information needed when something goes wrong.</p>
 
-</p><strong> 11:35 AM Microservices and the CD Pipeline</strong>
-<br><strong>Presented by Deepesh Nellutla </strong>
-<br>
-Learn what is needed to follow best practices for building a microservice based CD Pipeline. Your pipeline will be disrupted as each team is independently developing and deploying microservices. In this session we will explore what changes will be required to adapt to a microservice architecture.</p>
-
-</p><strong> 11:50 AM Why Kubernetes-as-a-Service is better for you?
+</p><strong> 11:35 AM Why Kubernetes-as-a-Service is better for you?
 </strong>
 <br><strong>Presented by Pavan Gudiwada</strong>
 <br>
 Using Kubernetes-as-a-Service from a cloud provider could be the best way for you to develop your application. What is KaaS? Why and when should you use it? What should you know before you pick a provider? Join this session to learn the answers. 
 </p>
-</p><strong> 12:05 PM From Dev to Prod in one step
+</p><strong> 11:50 PM From Dev to Prod in one step
 </strong>
 <br><strong>Presented by Sacha Wharton</strong>
 <br>
 Automation is king. Learn from Sacha how he has been delivering a streamlined process for moving updates across the pipeline as fast as possible. We've always wanted one 'big button' see how close Sacha has gotten. 
 <br>
-</p><strong> 12:20 PM DevOps - People before Tech
+</p><strong> 12:05 PM DevOps - People before Tech
 </strong>
 <br><strong>Presented by Miklos Sagi</strong>
 <br>
 Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
 In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process.
 </br>
-</p><strong> 12:35 PM Automating microservice configurations with Ansible 
+</p><strong> 12:20 PM Automating microservice configurations with Ansible 
 </strong>
 <br><strong>Presented by Piha Adhikari</strong>
 <br>
 One of the main principles of microservices is that they are each independently deployed. As a consequence of their distributed nature, microservice development and operations tend to be much more complex creating a barrier to adoption. If your teams have not moved from their monolithic silos and DevOps practices they may not fully see the benefits of a microservice architecture. Sticking with the "good old monolith" may sound better than dealing with the need to deploy hundreds of independent software pieces. In this talk, Piha will throw some light on how Ansible can help solve managing the deployment of hundreds of services, with their configuration changes, for you build and deploy automation. 
 </br>
 <br>
-<p><strong> 12:50 PM - SBOMs for All Using Ortelius</strong>
+<p><strong> 12:35 PM - SBOMs for All Using Ortelius</strong>
 <br><strong>Presented by Steve Taylor</strong>
 <br>
 Hardening cybersecurity in cloud-native environments means we need to track not just service SBOMs, but more importantly application SBOMs. In a de-coupled architecture it can be almost impossible to create an application SBOM - Steve Taylor will show us how Ortelius gets this job done so everyone has an SBOM.  
