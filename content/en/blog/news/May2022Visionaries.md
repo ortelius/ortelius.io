@@ -1,5 +1,5 @@
 ---
-date: 2022-04-15
+date: 2022-06-10
 title: "Ortelius Microservice Visionaries 2022"
 summary: Ortelius Microservice Visionaries 2022
 author: Tracy Ragan
