@@ -17,31 +17,29 @@ menu:
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
-<h2>Ortelius Visionaries Summit - May 20th</h2>
-<p>Join us for another Ortelius Visionaries Summit - We promise you a fun, campy, adventure into the minds of the Ortelius contributors. </p> 
+<h2>Ortelius Visionaries Summit - Held on May 20th</h2>
+<p>View the Ortelius Visionaries Summit on-demand.</p> 
 <br>
-<h4>Agenda: (all times in MT)</h4>
+<h4>Line-up:</h4>
 
-- 9:00 AM - 10:00 AM Beer and Donuts Live via Zoom
-- 10 AM  - 10:20 AM Panel Discussion - The Evolution of a Microservice Catalog Live via Zoom, Sacha Wharton, Steve Taylor, Tracy Ragan
+- [Beer and Donuts with Community Awards followed by a Panel Discussion - The Evolution of a Microservice Catalog Sacha Wharton, Steve Taylor, Tracy Ragan](https://youtu.be/NF8N0gldbEU)
 </strong>
 <br>
 
 <strong>Ten minute lighting talks on the Ortelius Twitch Channel  - Hosted by Sergio Canales </strong>
 <br>
 
-- 10:25 AM What you should know to contribute to Ortelius - a 10 minute guide, Presented by Saim Safder
-- 10:40 AM  Developing Applications with the Microservices Architecture: Design Patterns, Presented by Utkarsh Sharma
-- 10:55 AM Pitfalls - Team Topologies from the field, Presented by Sergio Canales
-- Break 11:10 AM to 11:20 AM 
-- 11:20 AM Why do you need a microservice catalog to enhance developer productivity? Presented by Turja Narayan Chaudhuri
-- 11:35 AM Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada
-- 11:50 PM From Dev to Prod in one step, Presented by Sacha Wharton
-- 12:05 PM DevOps - People before Tech, Presented by Miklos Sagi 
-- 12:20 PM Automating microservice configurations with Ansible, Presented by Piha Adhikari 
-- 12:35 PM SBOMs for All Using Ortelius, Presented by Steve Taylor
+- [What you should know to contribute to Ortelius - a 10 minute guide, Presented by Saim Safder](https://youtu.be/E22HOged4t4)
+- [Developing Applications with the Microservices Architecture: Design Patterns, Presented by Utkarsh Sharma](https://youtu.be/JO3ZOz1rt7E)
+- [Pitfalls - Team Topologies from the field, Presented by Sergio Canales](https://youtu.be/EYRIm-KvMS4)
+- [Why do you need a microservice catalog to enhance developer productivity? Presented by Turja Narayan Chaudhuri](https://youtu.be/KRHS67lj0oY)
+- [Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada](https://youtu.be/5i1TQEb7c90)
+- [From Dev to Prod in one step, Presented by Sacha Wharton](https://youtu.be/l6GMOws60hY)
+- [DevOps - People before Tech, Presented by Miklos Sagi](https://youtu.be/slAdXePxqIE) 
+- [Automating microservice configurations with Ansible, Presented by Piha Adhikari](https://youtu.be/SkiVi02zhiM) 
+- [SBOMs for All Using Ortelius, Presented by Steve Taylor](https://youtu.be/DAxm9jODVzg)
 
-[Full Agenda - Learn More](https://ortelius.io/blog/2022/04/15/ortelius-microservice-visionaries-2022/)
+[Complete Recording](https://youtu.be/NF8N0gldbEU)
 
 <p></p>
 {{< /blocks/feature_dual >}}
