@@ -1,0 +1,60 @@
+{{- if .Values.ingress.enabled -}}
+{{- if lt .Capabilities.KubeVersion.Minor "19" }}
+apiVersion: networking.k8s.io/v1beta1
+{{- else }}
+apiVersion: networking.k8s.io/v1
+{{- end }}
+kind: Ingress
+metadata:
+{{- if .Values.ingress.annotations }}
+  annotations:
+  {{- range $key, $value := .Values.ingress.annotations }}
+    {{ $key }}: {{ $value | quote }}
+  {{- end }}
+{{- end }}
+  name: ortelius-website
+  namespace: {{ .Release.Namespace }}
+spec:
+  {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
+  ingressClassName: {{ .Values.ingress.className }}
+  {{- end }}
+  rules:
+  {{- if .Values.ingress.host }}
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+        {{- if lt .Capabilities.KubeVersion.Minor "19" }}
+        - backend:
+            serviceName: ortelius-website
+            servicePort: {{ .Values.service.port }}
+        {{- else }}
+        - path: {{ .Values.ingress.path }}
+          pathType: {{ .Values.ingress.pathType }}
+          backend:
+            service:
+              name: ortelius-website
+              port:
+                number: {{ .Values.service.port }}
+        {{- end -}}
+  {{- else }}
+    - http:
+        paths:
+        {{- if lt .Capabilities.KubeVersion.Minor "19" }}
+        - backend:
+            serviceName: ortelius-website
+            servicePort: {{ .Values.service.port }}
+        {{- else }}
+        - path: {{ .Values.ingress.path }}
+          pathType: {{ .Values.ingress.pathType }}
+          backend:
+            service:
+              name: ortelius-website
+              port:
+                number: {{ .Values.service.port }}
+        {{- end -}}
+  {{- end -}}
+  {{- if .Values.ingress.tls }}
+  tls:
+    {{- toYaml .Values.ingress.tls | nindent 4 }}
+  {{- end -}}
+{{- end -}}
