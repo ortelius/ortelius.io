@@ -19,7 +19,9 @@ ingress:
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
-  paths: []
+  path: /
+  pathType: Prefix
+  className: ""
   hosts:
     - dh-ms-docs.local
   tls: []
