@@ -25,14 +25,14 @@ spec:
         paths:
         {{- if lt .Capabilities.KubeVersion.Minor "19" }}
         - backend:
-            serviceName: ortelius-website
+            serviceName: {{ include "ortelius-www.name" . }}
             servicePort: {{ .Values.service.port }}
         {{- else }}
         - path: {{ .Values.ingress.path }}
           pathType: {{ .Values.ingress.pathType }}
           backend:
             service:
-              name: ortelius-website
+              name: {{ include "ortelius-www.name" . }}
               port:
                 number: {{ .Values.service.port }}
         {{- end -}}
@@ -41,14 +41,14 @@ spec:
         paths:
         {{- if lt .Capabilities.KubeVersion.Minor "19" }}
         - backend:
-            serviceName: ortelius-website
+            serviceName: {{ include "ortelius-www.name" . }}
             servicePort: {{ .Values.service.port }}
         {{- else }}
         - path: {{ .Values.ingress.path }}
           pathType: {{ .Values.ingress.pathType }}
           backend:
             service:
-              name: ortelius-website
+              name: {{ include "ortelius-www.name" . }}
               port:
                 number: {{ .Values.service.port }}
         {{- end -}}
