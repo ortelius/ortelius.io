@@ -22,8 +22,7 @@ ingress:
   path: /
   pathType: Prefix
   className: ""
-  hosts:
-    - dh-ms-docs.local
+  host: dh-ms-docs.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
