@@ -35,8 +35,8 @@ spec:
               name: {{ include "ortelius-www.name" . }}
               port:
                 number: {{ .Values.service.port }}
-        {{- end -}}
-    - host: www.{{ .Values.ingress.host }}
+        {{- end }}
+    - host: {{- printf " www.%s" .Values.ingress.host }}
       http:
         paths:
         {{- if lt .Capabilities.KubeVersion.Minor "19" }}

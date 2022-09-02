@@ -11,18 +11,18 @@ service:
   type: ClusterIP
   port: 80
 
-DockerRepo: "quay.io/ortelius/ortelius-www"
-DockerTag: "latest"
+DockerRepo: "quay.io/ortelius/website"
+DockerTag: "main-v9.0.0.334-gcd73761"
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
   pathType: Prefix
   className: ""
-  host: dh-ms-docs.local
+  host: ortelius.io
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

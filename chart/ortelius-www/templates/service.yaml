@@ -7,7 +7,7 @@ spec:
     app: {{ include "ortelius-www.name" . }}
     tier: backend
   ports:
-    - name: hugo
+    - name: www
       protocol: TCP
       port: 80
       targetPort: 80
