@@ -45,3 +45,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+keptnLabels:
+  keptnProject: ortelius
+  keptnService: website
+  keptnStage: prd
