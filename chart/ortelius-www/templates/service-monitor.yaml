@@ -1,0 +1,21 @@
+{{- if .Values.service.serviceMonitor.enabled -}}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{-  $service := printf "%s-%s-%s" .Values.keptnLabels.keptnService .Values.keptnLabels.keptnProject .Values.keptnLabels.keptnStage -}}
+  namespace: {{ .Release.Namespace }}
+  labels:
+  {{- range $key, $val := .Values.keptnLabels }}
+    {{ $key }}: {{ $val | quote }}
+  {{- end }}
+spec:
+  endpoints:
+  - interval: 30s
+    port: http-metrics
+  namespaceSelector:
+    matchNames:
+    - {{ .Release.Namespace }}
+  selector:
+    matchLabels:
+      app: {{ include "ortelius-www.name" . }}
+{{- end -}}
