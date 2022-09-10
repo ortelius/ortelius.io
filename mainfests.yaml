@@ -1,0 +1,111 @@
+NAME: ortelius-www-1662780751
+LAST DEPLOYED: Sat Sep 10 13:32:35 2022
+NAMESPACE: ci-cd
+STATUS: pending-install
+REVISION: 1
+TEST SUITE: None
+HOOKS:
+MANIFEST:
+---
+# Source: ortelius-www/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ortelius-www
+  labels:
+    keptnProject: "ortelius"
+    keptnService: "website"
+    keptnStage: "prd"
+spec:
+  selector:
+    app: ortelius-www
+    tier: backend
+  ports:
+    - name: www
+      protocol: TCP
+      port: 80
+      targetPort: 80
+---
+# Source: ortelius-www/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  ortelius-www
+  labels:
+    keptnProject: "ortelius"
+    keptnService: "website"
+    keptnStage: "prd"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app:  ortelius-www
+      tier: backend
+      track: stable
+  template:
+    metadata:
+      labels:
+        app:  ortelius-www
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: ortelius-www
+          image: "quay.io/ortelius/website:main-v9.0.0.334-gcd73761"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+---
+# Source: ortelius-www/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ortelius-website
+  labels:
+    keptnProject: "ortelius"
+    keptnService: "website"
+    keptnStage: "prd"
+spec:
+  rules:
+    - host: ortelius.io
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: ortelius-www
+              port:
+                number: 80
+    - host: www.ortelius.io
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: ortelius-www
+              port:
+                number: 80
+---
+# Source: ortelius-www/templates/service-monitor.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: website-ortelius-prd
+  namespace: ci-cd
+  labels:
+    keptnProject: "ortelius"
+    keptnService: "website"
+    keptnStage: "prd"
+spec:
+  endpoints:
+  - interval: 30s
+    port: http-metrics
+  namespaceSelector:
+    matchNames:
+    - ci-cd
+  selector:
+    matchLabels:
+      app: ortelius-www
+
