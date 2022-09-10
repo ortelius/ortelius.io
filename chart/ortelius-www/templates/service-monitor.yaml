@@ -2,7 +2,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{- printf "%s-%s-%s" .Values.keptnLabels.keptnService .Values.keptnLabels.keptnProject .Values.keptnLabels.keptnStage }}
+  name: {{ printf "%s-%s-%s" .Values.keptnLabels.keptnService .Values.keptnLabels.keptnProject .Values.keptnLabels.keptnStage }}
   namespace: {{ .Release.Namespace }}
   labels:
   {{- range $key, $val := .Values.keptnLabels }}
