@@ -17,6 +17,8 @@ The Ortelius open-source community will participate in its 3rd annual Hacktoberf
 ## Getting Started
 Here is how to get started:
 
+- [Register for Hacktoberfest](https://hacktoberfest.com/register/)
+
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
 - Watch Steve Taylor's video on setting up your [Local Dev Enviornment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
