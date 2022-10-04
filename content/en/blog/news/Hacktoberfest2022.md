@@ -21,7 +21,7 @@ Here is how to get started:
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
 
-- Watch Steve Taylor's video on setting up your [Local Dev Enviornment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
+- Watch Steve Taylor's video on setting up your [Local Dev Environment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
 
 ## Where to Find an Issue to Work On
 We have created a [Hacktoberfest 2022 Project](https://github.com/ortelius/ortelius/projects/5) and assigned GitHub Issues to the project. These Issues are ideal candidates for creating your Hacktoberfest pull request. You are not required to work only under the Hacktoberfest Project. You can choose any issue. If you choose an issue outside of the Hacktoberfest project you will need to create your pull request with the field called 'Label' using the keyword 'Hacktoberfest' so it can be recognized.
