@@ -6,7 +6,7 @@ author: Tracy Ragan
 ---
 
 <div class="col-center">
-<img src="/images/ortelius-holiday-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="2000px" width="1000px" />
+<img src="/images/ortelius-holiday-gathering-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="2000px" width="1000px" />
 </div>
 <p></p>
 
