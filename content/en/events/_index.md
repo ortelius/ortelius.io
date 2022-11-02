@@ -8,44 +8,32 @@ menu:
 ---
 
 {{< blocks/section color="white" >}}
-
-
 {{< blocks/feature_dual >}}
-<div class="col-center" style="width:100%">
-{{< video autoplay="true" loop="true" controls="true" src="ortelius-scifi-intro.mp4" >}}
+<h2>Ortelius Holiday Gathering - December 14th</h2>
+<div class="col-center">
+<img src="/images/ortelius-holiday-gathering-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="600px" width="1050px" />
 </div>
-{{< /blocks/feature_dual >}}
 
+{{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-<h2>Ortelius Visionaries Summit - Held on May 20th</h2>
-<p>View the Ortelius Visionaries Summit on-demand.</p> 
+
 <br>
-<h4>Line-up:</h4>
-
-- [Beer and Donuts with Community Awards followed by a Panel Discussion - The Evolution of a Microservice Catalog Sacha Wharton, Steve Taylor, Tracy Ragan](https://youtu.be/NF8N0gldbEU)
-</strong>
+<h2>Celebrating our Amazing Community of Committers</h2>
+On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering' to celebrate the community committers of Ortelius, discuss microservice best practices, supply chain management and challenges of implementing a truly shared component-driven architecture. It will be hosted on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour will be hosted live via zoom. Below are descriptions of the December 14th event.
 <br>
-
-<strong>Ten minute lighting talks on the Ortelius Twitch Channel  - Hosted by Sergio Canales </strong>
-<br>
-
-- [What you should know to contribute to Ortelius - a 10 minute guide, Presented by Saim Safder](https://youtu.be/E22HOged4t4)
-- [Developing Applications with the Microservices Architecture: Design Patterns, Presented by Utkarsh Sharma](https://youtu.be/JO3ZOz1rt7E)
-- [Pitfalls - Team Topologies from the field, Presented by Sergio Canales](https://youtu.be/EYRIm-KvMS4)
-- [Why do you need a microservice catalog to enhance developer productivity? Presented by Turja Narayan Chaudhuri](https://youtu.be/KRHS67lj0oY)
-- [Why Kubernetes-as-a-Service is better for you? Presented by Pavan Gudiwada](https://youtu.be/5i1TQEb7c90)
-- [From Dev to Prod in one step, Presented by Sacha Wharton](https://youtu.be/l6GMOws60hY)
-- [DevOps - People before Tech, Presented by Miklos Sagi](https://youtu.be/slAdXePxqIE) 
-- [Automating microservice configurations with Ansible, Presented by Piha Adhikari](https://youtu.be/SkiVi02zhiM) 
-- [SBOMs for All Using Ortelius, Presented by Steve Taylor](https://youtu.be/DAxm9jODVzg)
-
-[Complete Recording](https://youtu.be/NF8N0gldbEU)
-
 <p></p>
+<h2>Agenda: (all times in MT)</h2>
+<strong>9:00 AM - 10:00 AM Beer and Donuts</strong> 
+<br><strong>10:15-11:00 Dinner with Abraham Ortelius</strong>
+<br><strong>11:10 - 11:50 AM  Using the Ortelius CI/CD Command Line Interface</strong>
+<br><strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs</strong>
+<br><strong>12:15 - 1:00 Lightening Talks To Be Announced.</strong>
+<p></p>
+
+[Get the full Details](/blog/2022/11/01/ortelius-holiday-gathering-december-2022/)
+
 {{< /blocks/feature_dual >}}
-
 {{< /blocks/section >}}
-
 
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
