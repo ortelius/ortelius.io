@@ -1,5 +1,5 @@
 ---
-date: 2022-09-14
+date: 2022-11-14
 title: "Hactoberfest 2022"
 summary: Ortelius Hacktoberfest 2022
 author: Tracy Ragan
@@ -10,17 +10,14 @@ author: Tracy Ragan
 </div>
 <p></p>
 
-## Get your Coding On!
+## We did it
 
-The Ortelius open-source community will participate in its 3rd annual Hacktoberfest. Last year the team completed 27 pull request, got lots of documentation completed and tied up many loose ends. We thank Digital Ocean for hosting this amazing event each year. We look forward to having many of you get your first Hacktoberfest T-shirt!
+The Ortelius open source community participated in this years Hacktoberfest. The team completed 23 pull request, got lots of documentation completed and tied up many loose ends. We thank Digital Ocean for hosting this amazing event each year. And congrats to all who completed their 4 pull request. 
 
-## Getting Started
-Here is how to get started:
-
-- [Register for Hacktoberfest](https://hacktoberfest.com/register/)
+## Don't stop - More Work is Needed
+Continue the contributions. We are building out an amazing open source supply chain catalog. Keep in touch with the team:
 
 - Join our [Discord channel](https://discord.gg/wM4b5yEFzS).
-
 - Watch Steve Taylor's video on setting up your [Local Dev Environment.](https://www.youtube.com/watch?v=K7r-jp9ZmTE&list=PLjQ1l9KZoIQ39x2230RCUZM8ZlRT1-rp4) 
 
 ## Where to Find an Issue to Work On
@@ -32,9 +29,9 @@ We have created a [Hacktoberfest 2022 Project](https://github.com/ortelius/ortel
 In the 'Subject' of the Issue, the type of work that needs to be done is described. For example, documentation, microservice, GitOps, website, or blogs. This is intended to make it easier to search for something that may be of interest. Following are suggested issues. 
 
 - <strong>Good First Issue:</strong><br>
-    - [Rest API document for components has a C when it should be a lowercase one #513](https://github.com/ortelius/ortelius/issues/513) 
-    - [Document SBOM #494](https://github.com/ortelius/ortelius/issues/494) 
-    - [Starring repo triggers the Trivy Code Scan github action #509](https://github.com/ortelius/ortelius/issues/509) 
+    - Closed [Rest API document for components has a C when it should be a lowercase one #513](https://github.com/ortelius/ortelius/issues/513) 
+    - Closed [Document SBOM #494](https://github.com/ortelius/ortelius/issues/494) 
+    - Closed [Starring repo triggers the Trivy Code Scan github action #509](https://github.com/ortelius/ortelius/issues/509) 
     - [New Component - Database file - missing data #491](https://github.com/ortelius/ortelius/issues/491) 
     - [Application file type component layout needs clean-up #490](https://github.com/ortelius/ortelius/issues/490) 
     - [Add CycloneDX SBOM for ortelius/ortelius-ms-compitem-crud #480](https://github.com/ortelius/ortelius/issues/480)
@@ -45,7 +42,7 @@ In the 'Subject' of the Issue, the type of work that needs to be done is describ
     - [Testing: The Swagger integration in Ortelius 10 (Service Catalog) #356](https://github.com/ortelius/ortelius/issues/356)
     - [New application base version does not display in edit mode #489](https://github.com/ortelius/ortelius/issues/489) 
     - [Move Application Dependency Map to top right corner from bottom #488](https://github.com/ortelius/ortelius/issues/488) 
-    - [PRs workflow failing due to error in Trivy code scan #479](https://github.com/ortelius/ortelius/issues/479) 
+    - Closed [PRs workflow failing due to error in Trivy code scan #479](https://github.com/ortelius/ortelius/issues/479) 
     - [Documentation link broken #442](https://github.com/ortelius/ortelius/issues/442) 
 - <strong>Documentation Issues:</strong><br>
     - [Question: What is the map option meant to show in the component tab? #296](https://github.com/ortelius/ortelius/issues/296)
@@ -53,7 +50,7 @@ In the 'Subject' of the Issue, the type of work that needs to be done is describ
     - [Enhance documentation around integration with CI/CD in general #102](https://github.com/ortelius/ortelius/issues/102)
     - [Enhance integration doc around Jenkins #101](https://github.com/ortelius/ortelius/issues/101)
 - <strong>GitOps</strong><br>
-    - [GitOps: Implement Argo Http sensor #346](https://github.com/ortelius/ortelius/issues/346)
+    - Closed [GitOps: Implement Argo Http sensor #346](https://github.com/ortelius/ortelius/issues/346)
     - [GitOps: Installing Ortelius with ArgoCD #345](https://github.com/ortelius/ortelius/issues/345)
 - <strong>Service Catalog</strong><br>
     - [Components: add secrets to component versions #341](https://github.com/ortelius/ortelius/issues/341)
@@ -71,12 +68,12 @@ In the 'Subject' of the Issue, the type of work that needs to be done is describ
    - [Add Application Table to base Application version #485](https://github.com/ortelius/ortelius/issues/485) 
 - <strong>Website:</strong><br>
     - [Website: blog instructions on blogging #245](https://github.com/ortelius/ortelius/issues/245)
-    - [Website: Avoid CSS @import #240](https://github.com/ortelius/ortelius/issues/240)
+    - Closed [Website: Avoid CSS @import #240](https://github.com/ortelius/ortelius/issues/240)
  - <strong>Training:</strong><br>
     - [Training videos with Blog to help first-time users get started and adopt Ortelius : Training Video 2 #198](https://github.com/ortelius/ortelius/issues/198)
     - Any training videos with Blogs that you think are needed. Just create a new issue under the Hacktoberfest project.  
 - <strong>Blockchain XRP Ledger:</strong><br>
     - [POC to persist and read data using arangoDb javascript library #515](https://github.com/ortelius/ortelius/issues/515)
-    - [Add and retrieve json file from nft.storage #498](https://github.com/ortelius/ortelius/issues/498)
+    - Closed [Add and retrieve json file from nft.storage #498](https://github.com/ortelius/ortelius/issues/498)
 
 We look forward to working with you on becoming a leading Ortelius contributor. 
