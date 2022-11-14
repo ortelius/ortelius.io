@@ -11,7 +11,7 @@ menu:
 {{< blocks/feature_dual >}}
 <h2>Ortelius Holiday Gathering - December 14th</h2>
 <div class="col-center">
-<img src="/images/ortelius-holiday-gathering-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="600px" width="1050px" />
+<img src="/images/ortelius-holiday-gathering-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="450px" width="787px" />
 </div>
 
 {{< /blocks/feature_dual >}}
