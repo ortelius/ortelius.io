@@ -41,9 +41,11 @@ Learn how to easily integrate Ortelius into your DevOps Pipeline, including the 
 <strong>Presented by Tracy Ragan</strong><br>
 Generating an SBOM for a decomposed application can be a massive undertaking. Each dependency has its own build, SBOM and CVE. Creating a single SBOM for the application as a complete software system requires knowing the dependencies and pulling together all of the unique SBOMs into one. Ortelius makes this easy by integrating into your CD Pipeline to store and aggregate this level of information for every logical release candidate. Tracy shows us how it is done.</p>
 
-To Be Announced
+<strong>12:15-12:25 PM The Ortelius XRP Ledger Project - Learn what they are up to</strong>
+<strong>Presented by Utkarsh Sharma</strong>
+Many of you are aware that Ortelius received funding to create an immutable SBOM ledger using XRP. Join Utkarsh as he reviews the status of this very important Ortelius project. He will give us insights into how the team is implementing blockchain NFTs to capture SBOMs and how SBOM data is being condensed so it is manageable. This session is important for anyone interested in joining the working group and getting paid for their efforts through bounties.
 
-12:15-12:25 PM 
+To Be Announced:
 
 12:30 - 12:40 PM 
 
