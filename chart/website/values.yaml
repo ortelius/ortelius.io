@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: quay.io/ortelius/website
+  tag: 10.0.0
+  sha: a325ab3b18da  
+  pullPolicy: Always
+
+keptnLabels:
+  keptnProject: ortelius
+  keptnService: website
+  keptnStage: prd
