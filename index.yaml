@@ -84,6 +84,15 @@ entries:
     version: 0.0.1
   website:
   - apiVersion: v1
+    appVersion: 10.0.4
+    created: "2022-11-16T03:09:26.29814121Z"
+    description: A Helm chart for Kubernetes
+    digest: 8ef38b1a723ba13240e0007803d19e3075a8ce237f8b9dc636244d85950df544
+    name: website
+    urls:
+    - https://github.com/ortelius/website/releases/download/website-10.0.4/website-10.0.4.tgz
+    version: 10.0.4
+  - apiVersion: v1
     appVersion: 10.0.3
     created: "2022-11-16T02:04:21.282591065Z"
     description: A Helm chart for Kubernetes
@@ -92,4 +101,4 @@ entries:
     urls:
     - https://github.com/ortelius/website/releases/download/website-10.0.3/website-10.0.3.tgz
     version: 10.0.3
-generated: "2022-11-16T02:04:21.282746367Z"
+generated: "2022-11-16T03:09:26.298192912Z"
