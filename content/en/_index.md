@@ -5,9 +5,11 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=dark >}}
 <div class="col-12">
-<h1 class="text-center">An Open Source Microservice Catalog for Supply Chain Management</h1>
+<div style="max-width:400px">
+<h1 class="text-left">An Open Source Microservice Catalog for Supply Chain Management</h1>
+</div>
 <div id="home-github">
-<p><button><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
+<p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
 </div>
 </div>
 {{< /blocks/section >}}
