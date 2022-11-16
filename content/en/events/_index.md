@@ -27,7 +27,8 @@ On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering
 <br><strong>10:15-11:00 Dinner with Abraham Ortelius</strong>
 <br><strong>11:10 - 11:50 AM  Using the Ortelius CI/CD Command Line Interface</strong>
 <br><strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs</strong>
-<br><strong>12:15 - 1:00 Lightening Talks To Be Announced.</strong>
+<br><strong>12:15 - 12:25 PM The Ortelius XRP Ledger Project</strong>
+<br><strong>12:30 - 1:00 Lightening Talks To Be Announced.</strong>
 <p></p>
 
 [Get the full Details](/blog/2022/11/01/ortelius-holiday-gathering-december-2022/)
