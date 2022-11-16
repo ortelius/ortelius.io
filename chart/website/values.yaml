@@ -14,10 +14,9 @@ ingress:
 
 image:
   repository: quay.io/ortelius/website
-  tag: 10.0.0
-  sha: a325ab3b18da  
+  tag: main-v10.0.3-gbf3fbe
+  sha: sha256:06e01ec93c658a3789bc0473354d9de0c9cad3ce3d82e7fe0c3851d59ccdd998
   pullPolicy: Always
-
 keptnLabels:
   keptnProject: ortelius
   keptnService: website
