@@ -1,5 +1,17 @@
 replicaCount: 1
 
+service:
+  serviceMonitor:
+    enabled: true
+ingress:
+  enabled: true
+  addDefaultBackend: true
+  host: ortelius.io
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    nginx.ingress.kubernetes.io/ssl-passthrough: "false"
+
 image:
   repository: quay.io/ortelius/website
   tag: 10.0.0
