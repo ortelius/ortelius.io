@@ -26,7 +26,7 @@ This live Zoom event kicks off the Holiday gathering. Meet the contributors and 
 Join us on the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
 
 ### Keynote Presentation:
-<strong>10:15-11:00 Dinner with Abraham Ortelius</strong>
+<strong>10:15-11:00 Dining with Abraham Ortelius</strong>
 <strong>Presented by Sacha Wharton and Arvind Singharpuria</strong><br>
 Join Sacha Wharton and Arvind Singharpuria as they review a menu of tools you can use to become an Ortelius 'Champion' contributor. Arvind will cover what is required from a personal time commitment. Sacha will walk through the menu of tools he uses to contribute code. This 45 minute session will be packed with information. It is a full 7 course meal of tools and tips.  
 

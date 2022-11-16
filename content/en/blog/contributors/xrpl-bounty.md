@@ -9,8 +9,10 @@ author: Steve Taylor
 
 @sbtaylor15
 
+<img src="/images/xrpLedgerProjec.png" style="width:586px;height:406px;">
 
-## How To Get Paid For Contributing
+
+## How To Get Paid For Contributing to the Ortelius Ledger Project
 
 Ortelius has been given a $75K Grant (see GitHub Repo [ortelius/la-sbom-ledger](https://github.com/ortelius/la-sbom-ledger)) by the [XRP Ledger](https://xrplgrants.org/) to build on top of their blockchain ledger.  The high-level project plan is [here](https://docs.google.com/spreadsheets/d/1YaNd-tEnwl3vFVyx_CGAEK1uEcJyvzB4zOYY7uAN6Ko/edit?usp=sharing).
 
