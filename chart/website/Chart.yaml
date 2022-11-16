@@ -1,4 +1,4 @@
 description: A Helm chart for Kubernetes
 name: website
-version: "10.0.5"
-appVersion: 10.0.5
+version: "10.0.6"
+appVersion: 10.0.6
