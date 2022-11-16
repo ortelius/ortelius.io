@@ -1,5 +1,4 @@
 replicaCount: 1
-
 service:
   serviceMonitor:
     enabled: true
@@ -11,11 +10,10 @@ ingress:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/backend-protocol: HTTP
     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
-
 image:
   repository: quay.io/ortelius/website
-  tag: main-v10.0.3-gbf3fbe
-  sha: sha256:06e01ec93c658a3789bc0473354d9de0c9cad3ce3d82e7fe0c3851d59ccdd998
+  tag: main-v10.0.4-g08fa4e
+  sha: sha256:acb8769d7dbf63cf11701ae10df19dff8df80e8bdc576c63926b54c59b3b6f9e
   pullPolicy: Always
 keptnLabels:
   keptnProject: ortelius
