@@ -12,8 +12,8 @@ ingress:
     nginx.ingress.kubernetes.io/ssl-passthrough: "false"
 image:
   repository: quay.io/ortelius/website
-  tag: main-v10.0.4-g08fa4e
-  sha: sha256:acb8769d7dbf63cf11701ae10df19dff8df80e8bdc576c63926b54c59b3b6f9e
+  tag: main-v10.0.5-gd06d3b
+  sha: sha256:4e67a7797ec654827457df5a972ac13d4d346909b1d87aee39d9533cd23255a3
   pullPolicy: Always
 keptnLabels:
   keptnProject: ortelius
