@@ -5,7 +5,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=dark >}}
 <div class="col-12">
-<div style="max-width:400px">
+<div style="max-width:500px">
 <h1 class="text-left">An Open Source Microservice Catalog for Supply Chain Management</h1>
 </div>
 <div id="home-github">
