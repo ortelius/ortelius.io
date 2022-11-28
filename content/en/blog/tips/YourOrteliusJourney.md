@@ -5,7 +5,7 @@ summary: "Your Ortelius Journey"
 author: Siddharth Pareek
 ---
 
-The [Ortelius microservice catalog](https://ortelius.io) has been gaining immense popularity as it brings an open source, breakthrough solution for organizing microservices. So the question is how can we jointly contribute to the success of both the catalog and the idea itself and continue to build on a solution that prepares us for microservices at scale. This article demonstrates a few of the ways you can kick-start your journey for the good of all.
+The [Ortelius Supply Chain catalog](https://ortelius.io) has been gaining immense popularity as it brings an open source, breakthrough solution for tracking your Supply Chain metadata, including SBOM and CVEs, across the DevOps Pipeline. So the question is how can we jointly contribute to the success of both the catalog and the idea itself and continue to build on a solution that prepares us for centralizing supply chain intelligence needed for understanding the ingredients of the software we create. This article demonstrates a few of the ways you can kick-start your journey for the good of all.
 
 # The Development Path
 If coding is your thing, you would fit into the 'Champion' group.  This Group focuses on architecture and coding. To get involved, the very first step is to create your account on [GitHub](https://github.com/) if you don't already have one, and then visit the [Ortelius GitHub Project page.](https://github.com/ortelius/ortelius)

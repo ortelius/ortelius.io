@@ -16,29 +16,33 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">What is Ortelius?</h1>
+<h1 class="text-center">A Centralized Supply Chain Evidence Store</h1>
 <hr>
 </div>
 
-Ortelius is a unified microservice catalog designed to track and version your microservice software supply chain along with all consuming 'logical' applications. With Ortelius, you can easily view your 'logical' application's SBOM, CVEs, service dependencies, and inventory based on versions. Ortelius generates new versions of microservices and their consuming logical applications each time you update your container registry. By centralizing and tracking detailed supply chain data, Ortelius provides you a proactive view of your microservice architecture and the differences between each service update. The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
+Ortelius is central catalog of supply chain and DevOps intelligence. It is designed to track and version composition details for every component of your software supply chain along with all consuming 'logical' applications. With Ortelius, you can easily view your 'logical' application's SBOM, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
+
+Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the 'logical application' becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every 'logical application' that is impacted by a component change. It then aggregates that data to the 'logical' application level so you don't have to.  
+
+ The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  It was originally created by [DeployHub](https://www.deployhub.com/) and [OpenMake Software](https://www.openmakesoftware.com). Our mission is to simplify the adoption of modern architecture through a world-class microservice catalog driven by a supportive and diverse global open source community.
 <p></p>
 {{< /blocks/section >}}
 
 {{< blocks/section color=white >}}
 <div class="col-12">
-<h1 class="text-center">What Ortelius Does</h1>
+<h1 class="text-center"> Continuous Versioning of Your Software Composition</h1>
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Microservice Dependency Mapping" url="/microservicemapping/" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Versioning" url="/versioning/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Microservice Catalog" url="/catalog/" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Supply Chain Data" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Microservice Supply Chain with Versioning" url="/versioning/" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Logical Application Tracking" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=primary >}}
+{{< blocks/section color=white >}}
 <div class="col-12">
 <h1 class="text-center">Get Involved</h1>
 <hr>
@@ -51,36 +55,8 @@ Ortelius is a unified microservice catalog designed to track and version your mi
 {{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
 {{% /blocks/feature %}}
 {{< /blocks/section >}}
+
 {{< blocks/section color=white >}}
-
-<div class="col-12">
-<h1 class="text-center">Sign-up for the Ortelius Test Environment</h1>
-<hr>
-<p></p>
-</div>
-
-{{< blocks/feature_dual >}}
-Ortelius has a test instance running on Azure Kubernetes.  You can use this instance to test the latest version and pull requests. A private domain with sample test data will be created when you complete the sign-up.  This allows you to test independently, so don't worry about breaking anything.
-
-Please submit any issues you find in the [ortelius/ortelius](https://github.com/ortelius/ortelius/issues) repo.
-
-<p align="center">
-<svg height="280px" width="280px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-field" class="svg-inline--fa fa-pen-field fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M192 320c0 17.67 14.33 32 32 32s32-14.33 32-32S241.7 288 224 288S192 302.3 192 320zM96 320c0 17.67 14.33 32 32 32s32-14.33 32-32S145.7 288 128 288S96 302.3 96 320zM639.1 69.79c0-11.26-4.295-22.52-12.89-31.11L601.3 12.89c-8.592-8.592-19.85-12.89-31.11-12.89S547.7 4.295 539.1 12.89L311.7 240.3c-3.072 3.072-5.164 6.984-6.016 11.24l-17.46 87.32c-.1486 .7434-.2188 1.471-.2188 2.191c0 6.012 4.924 10.94 10.94 10.94c.7197 0 1.449-.0707 2.192-.2194l87.33-17.46c4.258-.8516 8.168-2.945 11.24-6.016l227.4-227.4C635.7 92.31 639.1 81.05 639.1 69.79zM511.1 326.6C511.1 326.6 511.1 326.6 511.1 326.6L511.1 448H63.1V192h228.1l63.1-64H63.1C28.66 128 0 156.7 0 192v256c0 35.35 28.66 64 63.1 64h447.1c35.34 0 63.1-28.65 63.1-63.1L576 219.9l-64 63.99L511.1 326.6z"></path></svg>
-</p>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-<div align="center">
-
-<iframe width="600px" height="550px" src="https://dev.ortelius.io/dmadminweb/signup.html" frameBorder="0" scrolling="no"></iframe>
-
-Already signed up - [Login Here](https://dev.ortelius.io/dmadminweb/Login#dhmain)
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-{{< blocks/section color=primary >}}
 <div class="col-12">
 <h1 class="text-center">Ortelius Features</h1>
 <hr>
@@ -90,12 +66,12 @@ Already signed up - [Login Here](https://dev.ortelius.io/dmadminweb/Login#dhmain
 {{% blocks/table_center %}}
  | 
 --- | ----------- 
-Microservice ownership. | <i class="fas fa-3x fa-check-square"></i>
-Logical application versions with SBOMs and CVEs. | <i class="fas fa-3x fa-check-square"></i>
-Microservice blast radius. | <i class="fas fa-3x fa-check-square"></i>
-Difference reports over time, microservice and logical application. | <i class="fas fa-3x fa-check-square"></i>
-Microservice inventory usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>
-Microservice key value pairs management. | <i class="fas fa-3x fa-check-square"></i>
+Component ownership. | <i class="fas fa-3x fa-check-square"></i>
+Logical application versioning. | <i class="fas fa-3x fa-check-square"></i>
+Component blast radius. | <i class="fas fa-3x fa-check-square"></i>
+Component 'Drift' reporting. | <i class="fas fa-3x fa-check-square"></i>
+Component inventory usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>
+Component key value pairs management. | <i class="fas fa-3x fa-check-square"></i>
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
 
@@ -104,18 +80,18 @@ Microservice key value pairs management. | <i class="fas fa-3x fa-check-square">
 
  | 
 --- | ----------- 
-Helm and Ansible Support. | <i class="fas fa-3x fa-check-square"></i>
-Reusable actions and templated deployment logic. | <i class="fas fa-3x fa-check-square"></i>
+Application Level SBOM Reporting. | <i class="fas fa-3x fa-check-square"></i>
+Application Level CVE Reporting. | <i class="fas fa-3x fa-check-square"></i>
 Supports hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
-Blue/Green and Canary deployment models. | <i class="fas fa-3x fa-check-square"></i>
-Rollback and roll forward recovery. | <i class="fas fa-3x fa-check-square"></i>
-Integrates with CI/CD.  | <i class="fas fa-3x fa-check-square"></i>
+Integration with Deployment Engines. | <i class="fas fa-3x fa-check-square"></i>
+Integrates into DevOps Pipelines. | <i class="fas fa-3x fa-check-square"></i>
+Easily extentable.  | <i class="fas fa-3x fa-check-square"></i>
 
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 {{< blocks/feature_dual >}}
 ## Abraham Ortelius – Our Inspiration
 
