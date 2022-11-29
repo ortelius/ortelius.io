@@ -6,6 +6,8 @@ metadata:
   {{- range $key, $val := .Values.keptnLabels }}
     {{ $key }}: {{ $val | quote }}
   {{- end }}
+  annotations:
+    backstage.io/kubernetes-id: ortelius-www
 spec:
   replicas: 1
   selector:
