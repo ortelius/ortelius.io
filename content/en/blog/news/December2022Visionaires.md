@@ -16,38 +16,43 @@ On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering
 
 ## Agenda: (all times in MT)
 
-<strong>9:00 AM - 10:00 AM Beer and Donuts</strong> 
-This live Zoom event kicks off the Holiday gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
-
 [Join the Zoom Session](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09)
 
+<br>
+<strong>9:00 AM - 10:00 AM Beer and Donuts</strong> 
+This live Zoom event kicks off the Holiday gathering.
+
+* Saim Safder - A review of 2022
+* Steve Taylor - Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
+* Tracy Ragan - A look at our goals for 2023
 
 ### Jump to Twitch - Hosted by Sergio Canales
 Join us on the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
 
 ### Keynote Presentation:
-<strong>10:15-11:00 Dining with Abraham Ortelius</strong>
+<strong>10:15-11:00 Dining with Abraham Ortelius, </strong>
 <strong>Presented by Sacha Wharton and Arvind Singharpuria</strong><br>
 Join Sacha Wharton and Arvind Singharpuria as they review a menu of tools you can use to become an Ortelius 'Champion' contributor. Arvind will cover what is required from a personal time commitment. Sacha will walk through the menu of tools he uses to contribute code. This 45 minute session will be packed with information. It is a full 7 course meal of tools and tips.  
 
-<strong>11:10 - 11:50 AM  Using the Ortelius CI/CD Command Line Interface</strong>
+<strong>11:10 - 11:50 AM  Using the Ortelius CI/CD Command Line Interface, </strong>
 <strong>Presented by Steve Taylor</strong><br>
 Learn how to easily integrate Ortelius into your DevOps Pipeline, including the generation of SBOMs if you have not already done so. Steve Taylor walks through how to setup your CI/CD pipeline using the Ortelius Command Line Interface to automate the storing of your supply chain evidence with Ortelius. 
 <br>
 
 ## Ten Minute Lighting Talks - Hosted by Sergio Canales
 
-<strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs</strong>
+<strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs, </strong>
 <strong>Presented by Tracy Ragan</strong><br>
 Generating an SBOM for a decomposed application can be a massive undertaking. Each dependency has its own build, SBOM and CVE. Creating a single SBOM for the application as a complete software system requires knowing the dependencies and pulling together all of the unique SBOMs into one. Ortelius makes this easy by integrating into your CD Pipeline to store and aggregate this level of information for every logical release candidate. Tracy shows us how it is done.</p>
 
-<strong>12:15-12:25 PM The Ortelius XRP Ledger Project - Learn what they are up to</strong>
+<strong>12:15-12:25 PM The Ortelius XRP Ledger Project - Learn what they are up to, </strong>
 <strong>Presented by Utkarsh Sharma</strong>
 Many of you are aware that Ortelius received funding to create an immutable SBOM ledger using XRP. Join Utkarsh as he reviews the status of this very important Ortelius project. He will give us insights into how the team is implementing blockchain NFTs to capture SBOMs and how SBOM data is being condensed so it is manageable. This session is important for anyone interested in joining the working group and getting paid for their efforts through bounties.
 
+<strong>12:35-12:45 PM Ortelius and Backstage and New Friendship, </strong>
+<strong>Presented by Brad McCoy</strong>
+Backstage is an open platform for building developer portals. Microservice and API developers use backstage to setup a new project and register their service. Ortelius now integrates into Backstage to consume the 'Component' information and perform the versioning and association to the 'logical application.' Brad McCoy provides us a review of the work he has done to make this a reality. 
+
 To Be Announced:
-
-12:30 - 12:40 PM 
-
 12:50 - 1:00 PM 
 
