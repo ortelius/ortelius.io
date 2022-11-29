@@ -11,25 +11,42 @@ menu:
 {{< blocks/section color="primary">}}
 {{< blocks/feature_dual >}}
 # Contribute
-The Ortelius Team needs you. Regardless of your previous involvement in an open source community, you can help.  From outreach, project management, testing and core developers, Ortelius has a place for anyone interested in working on an open source project. 
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-# Why Contribute to Ortelius?
-- We want Members to learn and understand solutions around microservice use and their challenges through a diverse contributor base.
+The Ortelius Team needs you. Regardless of your previous involvement in an open source community, you can help.  From outreach, project management, testing and core developers, Ortelius has a place for anyone interested in working on an open source project. And most important are our Ortelius Adopters. They are responsible for defining our roadmap and keeping us honest. 
+
+## Why Contribute to Ortelius?
+- We want Members to learn and understand cloud-native development and learn to overcome the challenges through mentorship and a diverse contributor base.
+- We want Members to learn how to harden their cybersecurity through the consumption of SBOM and CVE data. 
 - We want our members to develop their careers, skills and gain community recognition for their work and expertise.
 - We want our members to have the opportunity to share and reuse open source microservices to further the adoption of a cloud native development.
 - We want members to learn how to contribute to an open source community and become part of the broader conversation around cloud native architecture.
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+# Tips for Getting Started 
+
+* Add yourself to the [Ortelius Google Group](https://groups.google.com/g/ortelius-dev)
+* [Join the Discord Channel](https://discord.gg/ZtXU74x)
+* Attend your first [General Community Meeting](https://ortelius.io/events/) and [Create Your First Pull Request](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) by adding yourself to the Readme.
+
+<strong>For New Adopters</strong>
+
+* [Install Ortelius](https://docs.ortelius.io/guides/userguide/installation-and-support/0-on-premise-installation-for-pro/)
+* [Add Ortelius to your Pipeline and Perfrom a POC](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)
+
+<strong>For New Contributors</strong>
+
+* [Review the Ortelius Contributor Guide](https://docs.ortelius.io/guides/contributorguide/)
+* [General Tools for Setting Up Your Development Environment](https://docs.ortelius.io/guides/contributorguide/dev-environment/)
+* [Required Tools for Contributing to Ortelius](https://docs.ortelius.io/guides/contributorguide/application-build-and-containerisation/)
+
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 {{< blocks/section color="white">}}
 {{< blocks/feature_dual >}}
-# Get Started – Easy as 1-2-3.
-1. [Review the Ortelius Contributor Guide](https://docs.ortelius.io/guides/contributorguide/)
-2. Add yourself to the [Ortelius Google Group](https://groups.google.com/g/ortelius-dev)
-3. [Join the Discord Channel](https://discord.gg/ZtXU74x)
 
-Now you're ready to attend your first [General Community Meeting](https://ortelius.io/events/) and [Create Your First Pull Request](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) by adding yourself to the Readme.
 
 ## Get Recognized
 Get recognized for your contribution through the Ortelius Recognition Program. Badges are awarded in 3 categories:
@@ -39,6 +56,11 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 - Legends - those who excel in both of the above.
 
 [Learn More](/blog/2021/04/19/ortelius-community-recognition-program/)
+
+<div>
+<img src="/images/ortelius-evil-lord.png" alt="Ortelius recognition program" height="300px" width="400px" />
+</div>
+
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
@@ -56,7 +78,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/SteveTaylor) and ask him for help to get started. Building things and mentoring is what he does.
 
 <div align="center">
-<img src="/images/steveruby.jpg" alt="Steve Taylor" />
+<img src="/images/steveandalien2.png" alt="Steve Taylor" />
 </div>
 
 {{< /blocks/feature_dual >}}
