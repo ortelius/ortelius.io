@@ -1,7 +1,7 @@
 ---
 title: Become A Contributor
-description: Become Part of our 'Think Tank'
-summary: Join our Open Source Community and Help Define Microservice Management
+description: Help us Build a Supply Chain Catalog
+summary: Become Part of our Amazing Community of Contributors and Adopters
 type: contributor
 menu:
   main:
