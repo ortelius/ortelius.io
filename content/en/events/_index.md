@@ -29,6 +29,7 @@ On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering
 <br><strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs</strong>
 <br><strong>12:15 - 12:25 PM The Ortelius XRP Ledger Project</strong>
 <br><strong>12:35 - 12:45 PM Ortelius and Backstage - a New Friendship</strong>
+<br><strong>12:50 - 1 PM What is a 'logical' application in a cloud-native environment?</strong>
 <p></p>
 
 [Get the full Details](/blog/2022/11/01/ortelius-holiday-gathering-december-2022/)
@@ -70,11 +71,23 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 {{< blocks/section color="white" >}}
 
 {{< blocks/feature_dual >}}
-<h2>Webcast</h2>
+<h2>On-Demand</h2>
+
 <div style="width:60%">
 {{< youtube xez36h_WJRI >}}
 </div>
+<br>
+
+<div style="width:60%">
+{{< youtube HftLrIDc4s0 >}}
+</div>
+<br>
+<div style="width:60%">
+{{< youtube XjYorGR2aoY >}}
+</div>
+
 {{< /blocks/feature_dual >}}
+
 
 {{< blocks/feature_dual >}}
 <h2>Podcast</h2>
