@@ -53,6 +53,8 @@ Many of you are aware that Ortelius received funding to create an immutable SBOM
 <strong>Presented by Brad McCoy</strong>
 Backstage is an open platform for building developer portals. Microservice and API developers use backstage to setup a new project and register their service. Ortelius now integrates into Backstage to consume the 'Component' information and perform the versioning and association to the 'logical application.' Brad McCoy provides us a review of the work he has done to make this a reality. 
 
-To Be Announced:
-12:50 - 1:00 PM 
+<strong>12:50 - 1:00 PM What is a 'logical' application in a cloud-native environment?, </strong>
+<strong> Presented by Joseph Akayesi</strong>
+The growing adoption of microservices has caused an equal growth in application complexity. However, such complexities need not trickle down into the way that we track and version our application's supply chain. An application in a cloud-native environment can have the ease of a monoliths if we define clear ways to show the 'logical' application's dependencies, SBOMs and metadata. Ortelius is one way to get the job done.  
+
 
