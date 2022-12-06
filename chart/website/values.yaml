@@ -15,8 +15,8 @@ ingress:
     backstage.io/kubernetes-id: ortelius-www
 image:
   repository: quay.io/ortelius/website
-  tag: main-v10.0.12-g0c028b
-  sha: sha256:1a24efd3012056c1c18285753c0cdb1b13cfa41c6d3ab2a699e3eb3a67528d02
+  tag: main-v10.0.13-g8ee8e3
+  sha: sha256:27b279a8dd3d677c91717e2228c3592498b4fcb99086eb2b0b4faa18e9df7294
   pullPolicy: Always
 keptnLabels:
   keptnProject: ortelius
