@@ -10,7 +10,7 @@ type: contributor
 <h1 class="text-center">Supply Chain Data and DevOps Intelligence for Hardening Cybersecurity</h1>
 <hr>
 
-Ortelius collects and versions as much data as possible from the DevOps Pipeline process. Much of this data is left in the underlying build directory where the DevOps pipeline was run. Ortelius collects and presents this data in a central catalog and dashboard, providing critical reports at both the component and consuming ['logical application'](/microservicemapping/) levels.
+Ortelius collects and versions as much data as possible from the DevOps Pipeline process. Much of this data is left in the underlying build directory where the DevOps pipeline was executed. Ortelius collects and presents this data in a central catalog and dashboard, providing critical reports at both the component and consuming ['logical application'](/microservicemapping/) levels.
 
 * Ownership (email, Pagerduty, phone)
 * Swagger
