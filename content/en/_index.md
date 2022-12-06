@@ -85,7 +85,7 @@ Application Level CVE Reporting. | <i class="fas fa-3x fa-check-square"></i>
 Supports hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
 Integration with Deployment Engines. | <i class="fas fa-3x fa-check-square"></i>
 Integrates into DevOps Pipelines. | <i class="fas fa-3x fa-check-square"></i>
-Easily extentable.  | <i class="fas fa-3x fa-check-square"></i>
+Easily extendable.  | <i class="fas fa-3x fa-check-square"></i>
 
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
