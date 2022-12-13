@@ -10,26 +10,24 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <h2>Ortelius Holiday Gathering - December 14th</h2>
-<div class="col-center">
-<img src="/images/ortelius-holiday-gathering-12-2022.png" alt="Ortelius Holiday Gathering 2022" height="450px" width="787px" />
-</div>
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<br>
 <h2>Celebrating our Amazing Community of Committers</h2>
 On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering' to celebrate the community committers of Ortelius, discuss microservice best practices, supply chain management and challenges of implementing a truly shared component-driven architecture. It will be hosted on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour will be hosted live via zoom. Below are descriptions of the December 14th event.
 <br>
 <p></p>
 <h2>Agenda: (all times in MT)</h2>
-<strong>9:00 AM - 10:00 AM Beer and Donuts</strong> 
-<br><strong>10:15-11:00 Keynote - Dining with Abraham Ortelius</strong>
-<br><strong>11:10 - 11:50 AM Using the Ortelius CI/CD Command Line Interface</strong>
-<br><strong>12:00 -12:10 PM The Ortelius Evidence Store of SBOMs</strong>
-<br><strong>12:15 - 12:25 PM The Ortelius XRP Ledger Project</strong>
-<br><strong>12:35 - 12:45 PM Ortelius and Backstage - a New Friendship</strong>
-<br><strong>12:50 - 1 PM What is a 'logical' application in a cloud-native environment?</strong>
+10AM Beer and Donuts on Zoom <br>
+
+### Twitch Presentations
+- Keynote - Dining with Abraham Ortelius
+- Using the Ortelius CI/CD Command Line Interface
+- The Ortelius Evidence Store of SBOMs
+- What is a 'logical' application in a cloud-native environment?
+- The Ortelius XRP Ledger Project
+
 <p></p>
 
 [Get the full Details](/blog/2022/11/01/ortelius-holiday-gathering-december-2022/)
