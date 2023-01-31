@@ -9,29 +9,30 @@ menu:
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
-<h2>Ortelius Holiday Gathering - December 14th</h2>
+<div class="col-center">
+<h2 class="col-center">Ortelius BlogAthon</h2>
+<br>
+
+<img src="/images/blogathon2023.png" alt="Ortelius Blog-A-Thon" height="350px" width="350px" />
+</div>
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
+<h3>Feb 1st through April 15th, 2023</h3>
 
-<h2>Celebrating our Amazing Community of Committers</h2>
-On December 14, 2022 the Ortelius community with host the 1st 'Holiday Gathering' to celebrate the community committers of Ortelius, discuss microservice best practices, supply chain management and challenges of implementing a truly shared component-driven architecture. It will be hosted on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour will be hosted live via zoom. Below are descriptions of the December 14th event.
-<br>
-<p></p>
-<h2>Agenda: (all times in MT)</h2>
-10AM Beer and Donuts on Zoom <br>
+<strong>Share your thoughts and earn recognition badges.</strong>
 
-### Twitch Presentations
-- Keynote - Dining with Abraham Ortelius
-- Using the Ortelius CI/CD Command Line Interface
-- The Ortelius Evidence Store of SBOMs
-- What is a 'logical' application in a cloud-native environment?
-- The Ortelius XRP Ledger Project
+Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog? 
 
-<p></p>
+Or maybe you have some tips and tricks for implementing Ortelius, or contributing. If so, join the Ortelius BlogAthon from February 1st through April 15.
 
-[Get the full Details](/blog/2022/11/01/ortelius-holiday-gathering-december-2022/)
 
+We are looking for Blogs on: 
+- Help for new contributors to become productive members of the Ortelius open source community;
+- Help for new open source users to adopt the Ortelius platform;
+- Educate the community on general supply chain, security and DevOps topics related to a microservices architecture.
+
+[Get the full Details](https://ortelius.io/blog/2023/01/18/2023-blogathon/)
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
