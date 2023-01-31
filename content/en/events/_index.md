@@ -20,7 +20,7 @@ menu:
 {{< blocks/feature_dual >}}
 <h3>Feb 1st through April 15th, 2023</h3>
 
-<strong>Share your thoughts and earn recognition badges.</strong>
+<strong>Share your thoughts and earn Ambassador Recognition badges.</strong>
 
 Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog? 
 
