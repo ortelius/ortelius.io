@@ -9,7 +9,7 @@ The following information is submitted by the Ortelius open-source community to 
 
 ## Update Ortelius Documentation to Improve Adoption and Skills Development
 
-Ortelius is a microservice management platform that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata. By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime across all clusters. Ortelius is a new incubating project under the [Continuous Delivery Foundation](cd.foundation).
+Ortelius is a microservice management platform that versions and tracks microservices, their consuming applications, ownership, blast radius and where they have been deployed with all critical deployment metadata. By centralizing and tracking detailed configuration data, Ortelius provides you a proactive view of how your microservice architecture is changing overtime across all clusters. Ortelius is a new incubating project under the [Continuous Delivery Foundation](https://cd.foundation).
 
 ### The Ortelius Documentation Challenge
 
