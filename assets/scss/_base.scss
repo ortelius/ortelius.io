@@ -1,0 +1,218 @@
+// HERO
+.header-hero {
+    background:black;
+    background-position: center center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 24px;
+    margin-bottom: 0;
+    position: relative;
+  
+    &.bot-bar:after {
+      display: block;
+      margin-bottom: -24px;
+      height: 8px;
+      width: 100%;
+      background-color: transparentize(white, 0.9);
+      content: "";
+    }
+  
+    &.no-sub {
+      h5 {
+        display: none;
+      }
+  
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .td-home .header-hero:after {
+    display: none;
+  }
+  
+  .header-hero {
+    background-color: black;
+  
+    h5 {
+      margin: 20px 0;
+      line-height: 28px;
+    }
+  }
+
+
+  .flip-nav .td-navbar {
+    background: black !important;
+}
+
+.td-navbar {
+  background: black !important;
+}
+
+// box-variant creates the main style for a colored section used on the site.
+@mixin box-variant($parent, $color-name, $color-value) {
+    $text-color: color-yiq($color-value);
+    $link-color: mix($ortelius_orange, $text-color, lightness($color-value));
+    $link-hover-color: rgba($link-color, 0.5) !default;
+
+    #{$parent} {
+        &--#{$color-name} {
+            color: $text-color;
+            background-color: #{$color-value};
+
+            .td-arrow-down {
+                &::before {
+                    left: 50%;
+                    margin-left: -30px;
+                    bottom: -25px;
+                    border: {
+                        style: solid;
+                        width: 25px 30px 0 30px;
+                        color: #{$color-value} transparent transparent transparent;
+                    };
+                    z-index: 3;
+                    position: absolute;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    // Improve contrast for the links in paragraphs.
+    @include link-variant("#{$parent}--#{$color-name} p > a", $link-color, $link-hover-color, false);
+
+    @if $enable-gradients {
+        @include bg-gradient-variant("#{$parent}--1#{$color-name}#{$parent}--gradient", $color-value,true);
+    }
+}
+
+@media (max-width: 991.98px) {
+  .td-navbar-nav-scroll {
+    display: contents;
+  } 
+}
+
+.navbar-nav {
+  flex-wrap: wrap;
+}  
+
+.navbar-logo > img {
+  width: 180px;
+  height: 44px;
+}
+
+#home-github > p {
+  text-align: center;
+}
+
+#home-github > p > button {
+  border-radius: 6px;
+  box-shadow: none;
+  outline:none;
+  color: white;
+  background-color: #72df04;
+  padding: 6px 20px;
+}
+
+.col-center {
+  width: 100%;
+}
+
+.col-center > table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.col-center > tr, td {
+  padding: 10px;
+}
+
+.col-center > table > tbody > tr > td:nth-child(1) {
+  font-size: 1.5em;
+}
+
+.col-center > table > tbody > tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.750);
+}
+
+.col-center > img {
+  margin-top: 30px;
+  display: block;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.col-center > p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.col-center-onpage {
+  width: 60%;
+  margin-top: 30px;
+  display: block;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.col-center2 {
+  width: 60%;
+}
+
+.col-center2 > table {
+  margin-left:auto; 
+  margin-right:auto;
+  margin-bottom: 2em;
+}
+
+.col-center2 > tr, td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.col-center2 > table > thead > tr > th:nth-child(1) {
+  width:20%;
+} 
+
+.col-center2 > table > thead > tr > th:nth-child(2) {
+  width:50%;
+} 
+
+
+.col-center2 > table > tbody > tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.750);
+}
+
+.wrapdiv {
+  &_image {
+    margin: 0px 30px 30px 0;
+    float: left;
+    height: 170px;
+  }
+  &_text {
+    display: inline;
+  }
+}
+
+.col-12 > h3 {
+  padding-top: 20px;
+}
+
+p > button > a:link {
+  color: white;
+}
+
+p > button > a:visited {
+  color: white;
+}
+
+p > button > a:hover {
+  color: white;
+}
+
+p > button > a:active {
+  color: white;
+}
+
