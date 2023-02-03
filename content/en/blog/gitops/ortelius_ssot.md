@@ -13,7 +13,7 @@ Ortelius is a microservice catalog that stores critical information about contai
 
 # A Component-Driven Single Source of Truth
 
-Ortelius is an open source microservice catalog governed under the [Continuous Delivery Foundation](http://cd.foundation/). The Ortelius open source project evolves the DevOps pipeline to include automated supply chain management that tracks the lifecycle of a microservice or component, and the changes overtime. Ortelius performs version control of the microservices and rolls that versioning data up to all consuming 'logical applications.' Ortelius’s versioning reports on what version of a microservice is in a container, who is using it, who created it, and the microservice's relationship to all consuming applications.
+Ortelius is an open source microservice catalog governed under the [Continuous Delivery Foundation](https://cd.foundation/). The Ortelius open source project evolves the DevOps pipeline to include automated supply chain management that tracks the lifecycle of a microservice or component, and the changes overtime. Ortelius performs version control of the microservices and rolls that versioning data up to all consuming 'logical applications.' Ortelius’s versioning reports on what version of a microservice is in a container, who is using it, who created it, and the microservice's relationship to all consuming applications.
 
 # Critical Features for Microservice Architecture
 

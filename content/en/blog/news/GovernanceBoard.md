@@ -31,7 +31,7 @@ Further into the process of defining our new open-source Governance Board, we st
 
 Creating a solid foundation of the Ortelius Board starts with defining a consistent structure and electing our Board Members with an inclusive process. Core to the Ortelius Board is the definition of shared goals, inclusive composition and rotation of members. We also recognized that the composition and structure may evolve with the maturity of the project. We encourage our community to provide us insights to further strengthen our core, with continuously improving overall governance of the Ortelius open-source project.
 
-To learn more about the Ortelius Governance By-Laws -  visit the [Guidelines page](https://www.ortelius.io/guidelines/).
+To learn more about the Ortelius Governance By-Laws -  visit the [Guidelines page](https://ortelius.io/guidelines/).
 
 ## Follow Ortelius:
 

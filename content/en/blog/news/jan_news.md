@@ -16,7 +16,7 @@ December 8th marks the day the Ortelius project was accepted into the Continuous
 The announcement generated some news with articles by:
 
 - [DevOps.com](https://devops.com/cd-foundation-welcomes-ortelius-open-source-microservices-management-platform-as-new-incubating-project/)
-- [ITNewsOnline.com](http://www.itnewsonline.com/PRNewswire/Ortelius-Accepted-into-the-Continuous-Delivery-Foundation/724344)
+- [ITNewsOnline.com](https://www.itnewsonline.com/PRNewswire/Ortelius-Accepted-into-the-Continuous-Delivery-Foundation/724344)
 - [CTOUniverse.com](https://www.ctouniverse.com/?query=ortelius)
 
 In December, the Ortelius team focused on simplifying the ‘on-boarding’ of new contributing members through the use of bots in the Discord Channel led by Karamjot Singh. A [Contributor Guide](https://docs.ortelius.io/guides/contributorguide/), led by Siddharth Pareek, was also published to help individuals who are new to open source to become active members of the Ortelius community.
