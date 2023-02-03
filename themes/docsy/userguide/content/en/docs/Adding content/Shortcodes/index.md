@@ -55,10 +55,10 @@ Note that the relevant shortcode parameters above will have sensible defaults, b
 
 | Parameter        | Default    | Description  |
 | ---------------- |------------| ------------|
-| title | | The main display title for the block. | 
+| title | | The main display title for the block. |
 | image_anchor | |
 | height | | See above.
-| color | | See above. 
+| color | | See above.
 | byline | Byline text on featured image. |
 
 
@@ -76,7 +76,7 @@ The **blocks/lead** block shortcode is a simple lead/title block with centred te
 
 ```go-html-template
 {{%/* blocks/lead color="dark" */%}}
-TechOS is the OS of the future. 
+TechOS is the OS of the future.
 
 Runs on **bare metal** in the **cloud**!
 {{%/* /blocks/lead */%}}
@@ -85,7 +85,7 @@ Runs on **bare metal** in the **cloud**!
 | Parameter        | Default    | Description  |
 | ---------------- |------------| ------------|
 | height | | See above.
-| color | | See above. 
+| color | | See above.
 
 ### blocks/section
 
@@ -112,7 +112,7 @@ For announcement of latest features etc.
 | Parameter        | Default    | Description  |
 | ---------------- |------------| ------------|
 | height | | See above.
-| color | | See above. 
+| color | | See above.
 | type  | | Specify "section" if you want a general container,  omit this parameter if you want this section to contain a horizontal row of features.
 
 ### blocks/feature
@@ -145,7 +145,7 @@ The **blocks/link-down** shortcode creates a navigation link down to the next se
 
 | Parameter        | Default    | Description  |
 | ---------------- |------------| ------------|
-| color | info | See above. 
+| color | info | See above.
 
 ## Shortcode helpers
 

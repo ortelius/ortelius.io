@@ -12,11 +12,12 @@ author: Tracy Ragan
 
 ## An Amazing Community of Committers
 
-On May 20th, 2021 the Ortelius community hosted the first 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. We hosted the entire event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions and links to the sessions. 
+On May 20th, 2021 the Ortelius community hosted the first 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared service oriented architecture. We hosted the entire event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. Below are descriptions and links to the sessions.
 
 ## Agenda: (all times in MT)
 
-### 8:00 Beer and Donuts 
+### 8:00 Beer and Donuts
+
 This live Zoom event kicked off the Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
 <div style="width:30%">
 {{< youtube r0fGw_Igiv8 >}}
@@ -24,15 +25,15 @@ This live Zoom event kicked off the Visionaries gathering. Meet the contributors
 
 ### Presentations on the Ortelius Twitch Channel  - Hosted by Sergio Canales
 
-<p><strong> 8:30 Implementing a Microservice Architecture using a Domain Driven Design</strong> 
-<br>Presented by Aditi Agarwal and Hosted by Garima Bajpai  
+<p><strong> 8:30 Implementing a Microservice Architecture using a Domain Driven Design</strong>
+<br>Presented by Aditi Agarwal and Hosted by Garima Bajpai
 <div style="width:30%">
 {{< youtube ohIPRrJTl2M >}}
 </div>
 In this session we will define why a domain driven design (DDD) is important to building a shared service architecture. DDD is not new and has been a core methodology for defining 'problem' spaces to organize shared libraries. This session will give a basic definition of DDD and demonstrate how Ortelius helps facilitate this methodology through Domains.</p>
 <br>
-  
-<p><strong> 9:15 Observability vs. Visibility - what is the difference? </strong> 
+
+<p><strong> 9:15 Observability vs. Visibility - what is the difference? </strong>
 <br>Presented by Sacha Wharton and Hosted by Karamjot Singh
 <div style="width:30%">
 {{< youtube TCs64jGtMjM >}}
@@ -49,7 +50,7 @@ If you are getting started with microservices in a Kubernetes environment, be ca
 <br>
 
 <p><strong> 10:45 Know Your Blast Radius </strong>
-<br>Presented by Munirat Sulaimon & Temitope Bimbo Babatola and Hosted by Atul Tiwari 
+<br>Presented by Munirat Sulaimon & Temitope Bimbo Babatola and Hosted by Atul Tiwari
 <div style="width:30%">
 {{< youtube PtOWPAqCBKg >}}
 </div>
@@ -67,4 +68,3 @@ As Ortelius evolves, it will support a GitOps model. This panel discussion will 
 <div style="width:30%">
 {{< youtube NebRnh_9BHM >}}
 </div></p>
-

@@ -12,11 +12,11 @@ author: Tracy Ragan
 
 ## An Amazing Community of Committers
 
-On May 20th, 2022 the Ortelius community hosted our 4th 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared microservice oriented architecture. We hosted the majority of the event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour was hosted via zoom. Below are descriptions of the May 20th event and on-demand viewing. 
+On May 20th, 2022 the Ortelius community hosted our 4th 'Microservice Visionaries' gathering to celebrate the community committers of Ortelius, discuss microservice best practices, and drive awareness of the benefits and challenges of implementing a truly shared microservice oriented architecture. We hosted the majority of the event on the Ortelius Twitch TV Channel giving our committers a platform for presenting technical topics. The first hour was hosted via zoom. Below are descriptions of the May 20th event and on-demand viewing.
 
 ## Agenda: (all times in MT)
 
-[9:00 AM - 10:20 AM Beer and Donuts followed by Panel Discussion Broadcasted Live via Zoom](https://youtu.be/LoFp1Prs_Y8) 
+[9:00 AM - 10:20 AM Beer and Donuts followed by Panel Discussion Broadcasted Live via Zoom](https://youtu.be/LoFp1Prs_Y8)
 This live Zoom event kicks off the Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
 
 Panel:
@@ -26,7 +26,7 @@ Join a panel of Ortelius Contributors to learn what it means to be part of the O
 
 ## Ten minute lighting talks on the Ortelius Twitch Channel  - Hosted by Sergio Canales
 
-[10:25 AM What you should know to contribute to Ortelius - a 10 minute guide](https://youtu.be/E22HOged4t4) 
+[10:25 AM What you should know to contribute to Ortelius - a 10 minute guide](https://youtu.be/E22HOged4t4)
 <br><strong>Presented by Saim Safder</strong>
 <br>
 If you are into the world of microservices and looking for ways to contribute, you have found your match.  The Ortelius microservices-based open source project is the place to be to share your knowledge around open-source, or to learn how to get started on your microservice journey. This lightning talk covers the steps you need to start contributing to the Ortelius  Open Source project and learn about microservices at the same time. </p>
@@ -38,7 +38,7 @@ In this lighting talk, we will share famous design patterns that are widely used
 <br>
 [10:55 AM Pitfalls - Team Topologies from the field](https://youtu.be/EYRIm-KvMS4)
 <br><strong>Presented by Sergio Canales</strong>
-<br> 
+<br>
 Team Topologies are the leading approach to organizing business and technology teams for fast flow, providing a practical, step-by‑step, adaptive model for organizational design and team interaction.Let's talk from the field how this comes into reality.</p>
 <br>
 [11:20 AM Why do you need a microservice catalog to enhance developer productivity?](https://youtu.be/KRHS67lj0oY)
@@ -53,7 +53,7 @@ Using Kubernetes-as-a-Service from a cloud provider could be the best way for yo
 [11:50 PM From Dev to Prod in one step](https://youtu.be/l6GMOws60hY)
 <br><strong>Presented by Sacha Wharton</strong>
 <br>
-Automation is king. Learn from Sacha how he has been delivering a streamlined process for moving updates across the pipeline as fast as possible. We've always wanted one 'big button' see how close Sacha has gotten. </p> 
+Automation is king. Learn from Sacha how he has been delivering a streamlined process for moving updates across the pipeline as fast as possible. We've always wanted one 'big button' see how close Sacha has gotten. </p>
 <br>
 [12:05 PM DevOps - People before Tech](https://youtu.be/slAdXePxqIE)
 <br><strong>Presented by Miklos Sagi</strong>
@@ -61,13 +61,13 @@ Automation is king. Learn from Sacha how he has been delivering a streamlined pr
 Delivery focused leaders often prioritize milestones and deadlines over people and culture and treat technical work as a technology and process challenge only.
 In this lightning talk, Miklos will share about how investing into the engineering culture of your organization can measurably contribute to more effective delivery in the form of eliminating non-value-add work from the overall process. </p>
 <br>
-[12:20 PM Automating microservice configurations with Ansible](https://youtu.be/SkiVi02zhiM) 
+[12:20 PM Automating microservice configurations with Ansible](https://youtu.be/SkiVi02zhiM)
 <br><strong>Presented by Piha Adhikari</strong>
 <br>
-One of the main principles of microservices is that they are each independently deployed. As a consequence of their distributed nature, microservice development and operations tend to be much more complex creating a barrier to adoption. If your teams have not moved from their monolithic silos and DevOps practices they may not fully see the benefits of a microservice architecture. Sticking with the "good old monolith" may sound better than dealing with the need to deploy hundreds of independent software pieces. In this talk, Piha will throw some light on how Ansible can help solve managing the deployment of hundreds of services, with their configuration changes, for you build and deploy automation. </p> 
+One of the main principles of microservices is that they are each independently deployed. As a consequence of their distributed nature, microservice development and operations tend to be much more complex creating a barrier to adoption. If your teams have not moved from their monolithic silos and DevOps practices they may not fully see the benefits of a microservice architecture. Sticking with the "good old monolith" may sound better than dealing with the need to deploy hundreds of independent software pieces. In this talk, Piha will throw some light on how Ansible can help solve managing the deployment of hundreds of services, with their configuration changes, for you build and deploy automation. </p>
 </br>
 [12:35 PM - SBOMs for All Using Ortelius](https://youtu.be/DAxm9jODVzg)
 <br><strong>Presented by Steve Taylor</strong>
 <br>
-Hardening cybersecurity in cloud-native environments means we need to track not just service SBOMs, but more importantly application SBOMs. In a de-coupled architecture it can be almost impossible to create an application SBOM - Steve Taylor will show us how Ortelius gets this job done so everyone has an SBOM.  
+Hardening cybersecurity in cloud-native environments means we need to track not just service SBOMs, but more importantly application SBOMs. In a de-coupled architecture it can be almost impossible to create an application SBOM - Steve Taylor will show us how Ortelius gets this job done so everyone has an SBOM.
 </p>

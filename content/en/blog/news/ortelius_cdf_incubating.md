@@ -27,8 +27,6 @@ author: Tracy Ragan
 
 “Microservice are more than an architecture, it’s a mindset which essentially represents a paradigm shift and a natural progression of DevOps. The Ortelius team brings a platform that is driven by Global leaders helping in the mindset change thus supporting your DevOps transformation journey,” Siddharth Pareek, Global DevOps CoE Practice Lead, Natwest Group
 
- 
-
 **Ortelius Links**
 
 Join the project – [Google Groups (Ortelius-dev)](https://groups.google.com/g/ortelius-dev)

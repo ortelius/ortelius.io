@@ -34,8 +34,7 @@ The Ortelius microservice catalog is built upon a Domain Driven Design to make i
 
 Each time a component or microservice is updated, all of the consuming 'logical' applications are impacted. Ortelius automatically tracks this impact by creating a new version number at the application level. This alerts all teams consuming that component or microservice that they have a new release candidate. Tracking changes at the logical application level gives project teams the knowledge of how their application changes overtime, even when they don't make an update. It also allows for reporting of SBOM and CVEs at the logical application level based on a specific version.
 
-And when a new version of the service has been created, Ortelius provides a map that shows all 'logical' applications that are impacted by an update, what we like to call the 'blast radius.' And yes, each impacted 'logical application' gets a new software bill of material report and CVE, with all lower level transitive dependencies and open-source packages. 
-
+And when a new version of the service has been created, Ortelius provides a map that shows all 'logical' applications that are impacted by an update, what we like to call the 'blast radius.' And yes, each impacted 'logical application' gets a new software bill of material report and CVE, with all lower level transitive dependencies and open-source packages.
 
 <div class="col-center">
 <p class="text-center"><strong>Component Usage</strong></p>
@@ -44,7 +43,7 @@ And when a new version of the service has been created, Ortelius provides a map 
 
 ## Conclusion
 
-Lets face it, implementing a decoupled cloud-native architecture could become a huge tangled hair ball without a catalog to organize the data and a dashboard to use it. Ortelius is the easiest way to manage your software component supply chain across all clusters and endpoints. 
+Lets face it, implementing a decoupled cloud-native architecture could become a huge tangled hair ball without a catalog to organize the data and a dashboard to use it. Ortelius is the easiest way to manage your software component supply chain across all clusters and endpoints.
 
 </div>
 {{< /blocks/section >}}

@@ -40,7 +40,7 @@ _Note: the site will automatically refresh on a file save._
 ## Merging your changes
 
 Create a PR in the [ortelius/website](https://github.com/ortelius/website) repo referencing
-your forked repo as where to merge from.  
+your forked repo as where to merge from.
 
 Make sure that you squash your commits in your local repo before doing your push.  See the [Git PR Cheatsheet](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) for instructions.  Also, reference any issues for example as `resolves ortelius/ortelius#201` so they will close on the completion of the merge.
 

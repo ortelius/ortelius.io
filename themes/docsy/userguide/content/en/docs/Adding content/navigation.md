@@ -8,7 +8,7 @@ description: >
 
 ## Top-level menu
 
-The top level menu (the one that appears in the top navigation bar for the entire site) uses your site's [`main` menu](https://gohugo.io/content-management/menus/). All Hugo sites have a `main` menu array of menu entries, accessible via the `.Site.Menus` site variable and populatable via page front matter or your site's `config.toml`. 
+The top level menu (the one that appears in the top navigation bar for the entire site) uses your site's [`main` menu](https://gohugo.io/content-management/menus/). All Hugo sites have a `main` menu array of menu entries, accessible via the `.Site.Menus` site variable and populatable via page front matter or your site's `config.toml`.
 
 To add a page or section to this menu, add it to the site's `main` menu in either `config.toml` or in the destination page's front matter (in `_index.md` or `_index.html` for a section, as that's the section landing page). For example, here's how we added the Documentation section landing page to the main menu in this site:
 
@@ -38,7 +38,7 @@ If you want to add a link to an external site to this menu, add it in `config.to
 If you add some `[params.versions]` in `config.toml`, the Docsy theme adds a
 version selector drop down to the top-level menu.
 
-You can find out more in the guide to 
+You can find out more in the guide to
 [versioning your docs](/docs/adding-content/versioning/).
 
 ### Adding a language drop-down
@@ -96,7 +96,7 @@ By default Docsy uses a [Google Custom Search Engine](https://cse.google.com/cse
 
 ### Setting up site search
 
-1.  Deploy your site and ensure that it's built with `HUGO_ENV="production"`, as Google will only crawl and index Docsy sites built with this setting (you probably don't want your not-ready-for-prime-time site to be searchable!). You can specify this variable as a command line flag to Hugo: 
+1.  Deploy your site and ensure that it's built with `HUGO_ENV="production"`, as Google will only crawl and index Docsy sites built with this setting (you probably don't want your not-ready-for-prime-time site to be searchable!). You can specify this variable as a command line flag to Hugo:
 
     ```
     $ env HUGO_ENV="production" hugo
@@ -108,7 +108,7 @@ By default Docsy uses a [Google Custom Search Engine](https://cse.google.com/cse
 
     * Select **Look and feel**. Change from the default **Overlay** layout to **Results only**, as this option means your search results are embedded in your search page rather than appearing in a separate box. Click **Save** to save your changes.
     * Edit the default result link behavior so that search results from your site don't open in a new tab. To do this, select **Search Features** - **Advanced** - **Websearch Settings**. In the **Link Target** field, type "\_parent". Click **Save** to save your changes.
-    
+
 {{% alert title="Tip" %}}
 Your site search results should show up within a couple of days. If it takes longer than that, you can manually request that your site is indexed by [submitting a sitemap through the Google Search Console](https://support.google.com/webmasters/answer/183668?hl=en).
 {{% /alert %}}

@@ -6,6 +6,7 @@ author: Tracy Ragan
 ---
 
 ## cdCon 2021
+
 The Continuous Delivery Foundation’s annual flagship event is happening June 23-24 and its call for papers is open!
 <p></p>
 <div class="col-center">
@@ -17,11 +18,14 @@ cdCon 2021 is your chance to share what you’ve been doing with Ortelius! Have 
 Submit your talk for cdCon 2021 to be part of the conversation driving the future of software delivery for technology teams, enterprise leadership, and open-source communities.
 
 #### Submission Deadlines
+
 Early-Bird Deadline: Friday, February 19 by 11:59 PM PST
 Final Deadline: Friday, March 5 at 11:59 PM PST
 
 #### Topics
+
 Here are the suggested cdCon 2021 tracks:
+
 * Continuous Delivery Ecosystem</strong> – This track spans the entire Continuous Delivery ecosystem, from workflow orchestration, configuration management, testing, security, release automation, deployment strategies, developer experience, and more.
 Advanced Delivery Techniques – For talks on the very cutting edge of continuous delivery and emerging technology, for example, progressive delivery, observability, and MLOps.
 
@@ -34,6 +38,7 @@ Advanced Delivery Techniques – For talks on the very cutting edge of continuou
 * Community Track – There is more to open source than code contributions. This track covers topics such as growing open source project communities, diversity &amp; inclusion, measuring community health, project roadmaps, and any other topic around sustaining open source and open source communities.
 
 Singular project focus and/or interoperability between:
+
 * Jenkins
 * Jenkins X
 * Ortelius

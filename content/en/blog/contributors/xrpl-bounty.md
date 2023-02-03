@@ -5,12 +5,11 @@ linkTitle: "Ortelius XRPL Bounty Process"
 author: Steve Taylor
 ---
 
-*Contributed by Steve Taylor, Ortelius Core Contributor* 
+*Contributed by Steve Taylor, Ortelius Core Contributor*
 
 @sbtaylor15
 
 <img src="/images/xrpLedgerProjec.png" style="width:586px;height:406px;">
-
 
 ## How To Get Paid For Contributing to the Ortelius Ledger Project
 
@@ -34,7 +33,7 @@ This Grant will be paid out to individuals that participate work around Ortelius
 3. Bounties will be assigned to each issue based on estimated time to complete the task.
 4. Issues should have only 1 person assigned by default.  Collaborative work on a single issue should be noted in the PR with bounty allocation listed for each contributor.
 5. If needed, new issues should be added to address additional work instead of updating the bounty amount on an existing issue.
-6. The contributors will get paid monthly based on the number of bounties they have collected in a month.  
+6. The contributors will get paid monthly based on the number of bounties they have collected in a month.
 7. The payment will be made using the Linux Foundation Crowdfunding program.
 8. Bounty disputes will be handled by the Ortelius Governing Board.
 9. Governing Board decisions are final.

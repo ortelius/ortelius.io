@@ -38,7 +38,3 @@ A number of layout partials and hooks are defined that can be used to customize 
 Hooks can be defined on a per-type basis.  For example, you may want to customize the layouts of heading for "blog" pages vs "docs". This can be achieved by creating `layouts/partials/print/page-heading-<type>.html` - eg. `page-heading-blog.html`.  It defaults to using the page title and description as a heading.
 
 Similarly, the formatting for each page can be customized by creating `layouts/partials/print/content-<type>.html`.
-
-
-
-

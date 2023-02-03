@@ -18,13 +18,15 @@ Ortelius submitted 3 projects to the GSOC as part of the Continuous Delivery Fou
 Ortelius mentors will include [Steve Taylor](https://github.com/sbtaylor15), [Karamjot Singh](https://github.com/karamjotsingh/), [Sacha Wharton](https://github.com/sachajw/), and [Neetu Jain](https://github.com/Neetuj/).
 
 Ortelius is a microservice management platform that provides a microservice catalog and inventory of services across hybrid clusters. As an incubating member of the CD Foundation, Ortelius will participate in GSOC as part of the CD Foundation. Below are the descriptions of the three projects for GSOC:
+
 #### Requirements for Spinnaker Integration</h2>
+
 There is a need to create an Ortelius Spinnaker plugin for capturing configuration, deployment data and relationships for visualization in the Ortelius UI. [Spinnaker Plugin Guide](https://spinnaker.io/guides/developer/plugin-creators/).
 
 Configuration Data:
 {{% blocks/table_center2 %}}
-Field | Description  
- --- | ----------- 
+Field | Description
+ --- | -----------
 Build Job | The Continuous Delivery Build Job that is used to build/compile the <em>Component</em>.
 Last Build Number | The number of the last Continuous Delivery (CD) Workflow that created the files referenced within the <em>Component.</em> This number will default to the Build ID if one is not set by the CD Workflow.
 Build ID | The internal identifier for the <em>Build Engine</em>.
@@ -45,8 +47,8 @@ Git URL | The URL for the Git Repository.Populated when integrated into Continuo
 
 Deployment Data:
 {{% blocks/table_center2 %}}
-Field | Description  
- --- | ----------- 
+Field | Description
+ --- | -----------
 Application Version | Version of the application deployed.
 Environment | Name of the environment that the application was deployed to.
 Endpoints | Endpoints in the environment that were updated by the deployment.</tr>
@@ -54,22 +56,22 @@ Endpoints | Endpoints in the environment that were updated by the deployment.</t
 
 Relationships:
 {{% blocks/table_center2 %}}
-Field | Description  
- --- | ----------- 
+Field | Description
+ --- | -----------
 Application Version | Version of the application.
 Components Versions | Component versions that belong to the Application Version.
 {{% /blocks/table_center2 %}}
 
 The plugin should grab this information and push it to Ortelius via the Ortelius RestAPIs
 
+#### Requirements for ArgoCD Integration
 
-#### Requirements for ArgoCD Integration 
 There is a need to create an Ortelius resource hook for capturing deployment data and relationships for visualization in the Ortelius UI. [ArgoCD Resource Hook Example](https://argoproj.github.io/argo-cd/user-guide/resource_hooks/)
 
 Deployment Data:
 {{% blocks/table_center2 %}}
-Field | Description  
- --- | ----------- 
+Field | Description
+ --- | -----------
 Application Version | Version of the application deployed.
 Environment | Name of the environment that the application was deployed to.
 Endpoints | Endpoints in the environment that were updated by the deployment.
@@ -77,8 +79,8 @@ Endpoints | Endpoints in the environment that were updated by the deployment.
 
 Relationships:
 {{% blocks/table_center2 %}}
-Field | Description  
- --- | ----------- 
+Field | Description
+ --- | -----------
 Application Version |Version of the application.
 Components Versions | Component versions that belong to the Application Version.
 {{% /blocks/table_center2 %}}
@@ -89,8 +91,8 @@ Argo does not have a CI/CD process so no way to hook into the build process for 
 
 The ArgoCD resource hook (PostSync) logic could be used to capture updates to the clusters from other GitOps controllers such as fluxd.
 
-
 #### Relationships Visualization
+
 The current visualized relationships are: Application Version to Component Versions (Consumer -&gt; Producer), Component Versions to Application Versions (Producer -&gt; Consumers) and Environments to Application Versions and Component Versions.
 
 <div class="col-center">
