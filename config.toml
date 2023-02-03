@@ -10,7 +10,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 disableBrowserError = true
-enableSourceMap = true
+enableSourceMap = false
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
