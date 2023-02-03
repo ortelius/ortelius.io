@@ -10,7 +10,7 @@ author: Tracy Ragan
 </div>
 
 ## Ortelius will be enhanced with an XRP Ledger Audit Trail
-[DeployHub](https://www.deployhub.com), visionaries in microservice governance, today announced they have won a $75k grant to improve access and audits of software bill of material reports, a key tool in hardening cybersecurity. DeployHub will apply the grant funding to the [Ortelius.io](https://ortelius.io) open-source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation). The [XRPL Grant](https://dev.to/ripplexdev/welcoming-the-xrpl-grants-wave-3-awardees-lga) program sponsored by Ripple provides funding to support software development projects that leverage the open-source XRP Ledger (XRPL). 
+[DeployHub](https://www.deployhub.com), visionaries in microservice governance, today announced they have won a $75k grant to improve access and audits of software bill of material reports, a key tool in hardening cybersecurity. DeployHub will apply the grant funding to the [Ortelius.io](https://ortelius.io/) open-source project, incubating at the [Continuous Delivery Foundation](https://cd.foundation/). The [XRPL Grant](https://dev.to/ripplexdev/welcoming-the-xrpl-grants-wave-3-awardees-lga) program sponsored by Ripple provides funding to support software development projects that leverage the open-source XRP Ledger (XRPL). 
 
 The Ortelius open-source community will work with DeployHub to develop the open-source governance catalog to create an immutable SBOM audit trail that allows open-source developers to easily register their packages with SBOM information allowing organizations consuming open-source to easily access and act upon SBOM data, CVEs, and other usage information. 
 

@@ -209,7 +209,7 @@ If you want to build and/or serve your site [locally](/docs/deployment/#serving-
 git submodule update --init --recursive
 ```
 
-For more information, see [Theme Components](https://gohugo.io/hugo-modules/theme-components/) on the [Hugo](https://gohugo.io) site.
+For more information, see [Theme Components](https://gohugo.io/hugo-modules/theme-components/) on the [Hugo](https://gohugo.io/) site.
 
 #### Preview your site
 

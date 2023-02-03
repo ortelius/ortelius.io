@@ -14,7 +14,7 @@ menu:
 
 The Ortelius project is a community of technologist dedicated to the goal of simplifying the development of microservice applications through the use of a unified microservice catalog. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
 
-The project is incubating at the [Continuous Delivery Foundation](https://cd.foundation) a part of the [Linux Foundation](https://www.linuxfoundation.org/) which legally owns the project assets and act as treasury. The Ortelius Governance Board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
+The project is incubating at the [Continuous Delivery Foundation](https://cd.foundation/) a part of the [Linux Foundation](https://www.linuxfoundation.org/) which legally owns the project assets and act as treasury. The Ortelius Governance Board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
