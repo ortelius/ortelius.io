@@ -8,7 +8,7 @@
     padding-top: 24px;
     margin-bottom: 0;
     position: relative;
-  
+
     &.bot-bar:after {
       display: block;
       margin-bottom: -24px;
@@ -17,12 +17,12 @@
       background-color: transparentize(white, 0.9);
       content: "";
     }
-  
+
     &.no-sub {
       h5 {
         display: none;
       }
-  
+
       h1 {
         margin-bottom: 20px;
       }
@@ -32,10 +32,10 @@
   .td-home .header-hero:after {
     display: none;
   }
-  
+
   .header-hero {
     background-color: black;
-  
+
     h5 {
       margin: 20px 0;
       line-height: 28px;
@@ -91,12 +91,12 @@
 @media (max-width: 991.98px) {
   .td-navbar-nav-scroll {
     display: contents;
-  } 
+  }
 }
 
 .navbar-nav {
   flex-wrap: wrap;
-}  
+}
 
 .navbar-logo > img {
   width: 180px;
@@ -121,7 +121,7 @@
 }
 
 .col-center > table {
-  margin-left:auto; 
+  margin-left:auto;
   margin-right:auto;
 }
 
@@ -140,7 +140,7 @@
 .col-center > img {
   margin-top: 30px;
   display: block;
-  margin-left:auto; 
+  margin-left:auto;
   margin-right:auto;
 }
 
@@ -153,7 +153,7 @@
   width: 60%;
   margin-top: 30px;
   display: block;
-  margin-left:auto; 
+  margin-left:auto;
   margin-right:auto;
 }
 
@@ -162,7 +162,7 @@
 }
 
 .col-center2 > table {
-  margin-left:auto; 
+  margin-left:auto;
   margin-right:auto;
   margin-bottom: 2em;
 }
@@ -174,11 +174,11 @@
 
 .col-center2 > table > thead > tr > th:nth-child(1) {
   width:20%;
-} 
+}
 
 .col-center2 > table > thead > tr > th:nth-child(2) {
   width:50%;
-} 
+}
 
 
 .col-center2 > table > tbody > tr:nth-child(even) {
@@ -215,4 +215,3 @@ p > button > a:hover {
 p > button > a:active {
   color: white;
 }
-

@@ -9,7 +9,7 @@ description: >
 
 By default, a site using Docsy has the theme's default fonts, colors, and general look and feel. However, if you want your own color scheme (and you probably will!) you can very easily override the theme defaults with your own project-specific values - Hugo will look in your project files first when looking for information to build your site. Also because Docsy uses Bootstrap 4 and SCSS for styling, you can override just single values in its special SCSS project variables file, or do more serious customization by creating your own versions of entire SCSS files.
 
-## Color palette and other styles 
+## Color palette and other styles
 
 To quickly change your site's colors, add SCSS variable project overrides to `assets/scss/_variables_project.scss`. A simple example changing the primary and secondary color to two shades of purple:
 
@@ -124,7 +124,7 @@ Docsy includes JavaScript and CSS files for a basic Prism configuration, which s
 * Syntax highlighting for a number of common languages, as specified in the following Prism download link:
 
 ```none
-    https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+c+csharp+cpp+go+java+markdown+python+scss+sql+toml+yaml&plugins=toolbar+copy-to-clipboard    
+    https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+c+csharp+cpp+go+java+markdown+python+scss+sql+toml+yaml&plugins=toolbar+copy-to-clipboard
 ```
 
 ### Code blocks with no language
@@ -142,7 +142,7 @@ If the included Prism configuration is not sufficient for your requirements, and
 
 ## Diagrams with Mermaid
 
-[Mermaid](https://mermaid-js.github.io) is a Javascript library for rendering simple text definitions to useful diagrams in the browser.  It can generate a variety of different diagram types, including flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, user journey diagrams, Gantt charts and pie charts.
+[Mermaid](https://mermaid-js.github.io/) is a Javascript library for rendering simple text definitions to useful diagrams in the browser.  It can generate a variety of different diagram types, including flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, user journey diagrams, Gantt charts and pie charts.
 
 With Mermaid support enabled in Docsy, you can include the text definition of a Mermaid diagram inside a code block, and it will automatically be rendered by the browser as soon as the page loads.
 
@@ -234,4 +234,3 @@ Both `head.html` and `scripts.html` are then used to build Docsy's [base page la
   </body>
 </html>
 ```
-

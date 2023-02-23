@@ -52,5 +52,3 @@ Specify a value here if you have would like to reference a different branch for 
 ```toml
 github_branch = "release"
 ```
-
-

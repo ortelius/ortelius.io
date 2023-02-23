@@ -6,9 +6,10 @@ author: Tracy Ragan
 ---
 
 ## Understanding the Brilliance and Limitations of GitOps
+
 Before you begin down the GitOps path, you must understand its pros and cons. This blog will cover the fundamentals of GitOps, why it is brilliant, and what are its limitations. Please no hate mail. I know there are many GitOps enthusiasts and for good reason. But like any technology, the path to success is about managing expectations and being fully aware of a technology’s strengths and weaknesses. By understanding them, you can accurately determine if the solution is right for your culture, environment, and process. </span>
 
-GitOps began its journey to solve one primary problem - creating an immutable continuous deployment process around containers and Kubernetes. While it can be expanded to other platforms, it was designed when teams began to containerize their applications to run in a  Kubernetes cluster. A containerized application is a monolithic software solution that is built and deployed in a container. All the application dependencies are installed in the container insulating the solution from external changes. 
+GitOps began its journey to solve one primary problem - creating an immutable continuous deployment process around containers and Kubernetes. While it can be expanded to other platforms, it was designed when teams began to containerize their applications to run in a  Kubernetes cluster. A containerized application is a monolithic software solution that is built and deployed in a container. All the application dependencies are installed in the container insulating the solution from external changes.
 
 Before we dive into the pros and cons of GitOps, let’s review its fundamentals. GitOps is the management of your Kubernetes cluster by the pull request. GitOps uses a repository of deployment files (normally .yaml) along with a GitOps operator to continually synchronize your cluster to what is stored in Git. In your GitOps model, you will have two Git repositories. One, your source code repository. This is the repository where all of your application-level changes are made. The second repository is an ‘environment’ repository. This repository stores only the deployment .yaml files of your container. It is this repository that is monitored by a GitOps Operator running in your cluster. When the GitOps Operator sees a commit to the ‘environment’ repository, it updates the cluster with the new configuration. </span>
 
@@ -18,19 +19,19 @@ Before we dive into the pros and cons of GitOps, let’s review its fundamentals
 </div>
 <p></p>
 
-
-1) A developer makes an update to the code and commits the changes to Git. A new container image is created and registered (manually or via a pipeline process) which creates a new Container ‘tag.’ This ‘tag’ is unique to that specific container image. 
+1) A developer makes an update to the code and commits the changes to Git. A new container image is created and registered (manually or via a pipeline process) which creates a new Container ‘tag.’ This ‘tag’ is unique to that specific container image.
 2) The developer updates the deployment .yaml file with the new ‘tag’ and commits it back to the Git ‘environment’ repository.
 3) The GitOps operator sees the new commit and updates the cluster with the new container  - brilliant.
 
 This process works similar to the solutions we have seen before. Think Chef and Puppet. Git becomes the master and the GitOps operator becomes the puppet, always performing exactly what Git instructed. This is the brilliance of the GitOps solutions. Without a huge change in the way we work, checking in code, and triggering an action, GitOps has created an airtight deployment process. With this method, we have a high level of confidence that what is stored in Git is running in our cluster. While we will review the pros and cons of GitOps, it must be recognized that the GitOps technology leveraged Git in a clever new way to solve an old problem - eliminating manual manipulation of a deployment script just before deployment.
 
-## The Benefits of GitOps 
-The Pros of GitOps is focused squarely on the benefits of using a version control system to track the changes. 
+## The Benefits of GitOps
+
+The Pros of GitOps is focused squarely on the benefits of using a version control system to track the changes.
 
 <strong>Revisions with history</strong> - By using Git, we leverage the power of tracking revisions with history. This means we can compare two .yaml files to see the differences. We know what changes were made, and in most cases, the change can be traced back to a specific incident or change request.
 
-<strong>Ownership</strong> - Knowing who owns the .yaml file means that you also know who owns the container running in your cluster. In a microservice implementation, knowing the owner of a service is critical when something goes wrong. So without any investment in any other type of tooling, we get this critical information. 
+<strong>Ownership</strong> - Knowing who owns the .yaml file means that you also know who owns the container running in your cluster. In a microservice implementation, knowing the owner of a service is critical when something goes wrong. So without any investment in any other type of tooling, we get this critical information.
 
 <strong>Immutable deployments</strong> - Ever had that experience where something in the environment has changed but you can’t see what it is? That is probably because someone made a manual update. GitOps makes your deployments ‘airtight’ which is the ultimate goal of GitOps.
 
@@ -41,6 +42,7 @@ The Pros of GitOps is focused squarely on the benefits of using a version contro
 While we explore both the pros and cons of GitOps, these basic benefits cannot be overlooked. If your path is to manage all of your Kubernetes changes with .yaml files, you should not discount the features that GitOps offers. And it does so with minimal investment in tooling while also supporting a process that your developers are accustomed to - checking in code.
 
 ## The Challenge of GitOps
+
 Of all of the discussion around the pros and cons of GitOps, scaling is the area that needs the closest look. As noted, one of the benefits of GitOps is the ability for the GitOps operator to easily scale to thousands of clusters. But there is a human element that also must be considered. In GitOps, the deployments are driven by the .yaml file pull request, and the .yaml files are written and managed by DevOps teams.
 
 As you begin managing multiple clusters for your pipeline, each cluster will contain unique configuration values. The script, being imperative, cannot automatically adjust based on the environment. This means that a different deployment script is needed for each environment. This problem grows as you introduce more environments - clusters and Namespaces. And with microservices, the problem grows exponentially.
@@ -54,7 +56,6 @@ Our pipeline process now requires the developer to update the container ‘tag�
 <p><em>Image 2 - Branching .yaml</em></p>
 </div>
 <p></p>
-
 
 <span style="font-weight: 400;">Remember we are only required to make multiple updates if the 3 environments use different configuration values. If the values across the clusters are the same, no branching is needed. </span>
 
@@ -85,14 +86,15 @@ Exploring the pros and cons of GitOps is an exercise in determining if the solut
 
 Ultimately to support hundreds, if not thousands, of microservices moving to dozens of clusters, methods of cataloging microservices, aggregating their relationships, tracking the metadata, and separating the data from the definition will be the direction required by most large enterprises.
 
-As this technology grows, open-source communities and vendors will work to solve some of these challenges. For example, more intelligence and control will be driven by the GitOps operator, managing environment ‘overrides’ to centralize where unique configuration values are updated. Checkout a [FluxCD](https://fluxcd.io/), [ArgoCD](https://argoproj.github.io/argo-cd/), and [Rancher Fleet](https://fleet.rancher.io/). Rancher’s Fleet GitOps operators working to create a GitOps structure that can minimize the number of manual updates required. Even the commercial market is getting involved.[Codefresh](https://codefresh.io/) recently announced their GitOps strategy built into continuous delivery orchestration.  The [Ortelius](https://ortelius.io) Ortelius Open Source Community will be looking at expanding the use of generated deployment .yaml files based on the data stored in the microservice catalog. Those .yaml files can then be committed to the proper environment repository based on a trigger or on-demand.  By doing so, scripting is minimized with more visibility into microservice relationships, blast radius, environment overrides, and inventory tracking.
+As this technology grows, open-source communities and vendors will work to solve some of these challenges. For example, more intelligence and control will be driven by the GitOps operator, managing environment ‘overrides’ to centralize where unique configuration values are updated. Checkout a [FluxCD](https://fluxcd.io/), [ArgoCD](https://argoproj.github.io/argo-cd/), and [Rancher Fleet](https://fleet.rancher.io/). Rancher’s Fleet GitOps operators working to create a GitOps structure that can minimize the number of manual updates required. Even the commercial market is getting involved.[Codefresh](https://codefresh.io/) recently announced their GitOps strategy built into continuous delivery orchestration.  The [Ortelius](https://ortelius.io/) Ortelius Open Source Community will be looking at expanding the use of generated deployment .yaml files based on the data stored in the microservice catalog. Those .yaml files can then be committed to the proper environment repository based on a trigger or on-demand.  By doing so, scripting is minimized with more visibility into microservice relationships, blast radius, environment overrides, and inventory tracking.
 
-If you are interested in exploring this topic further, the [CNCF](http://cncf.io) has started a [GitOps Working Group](https://github.com/gitops-working-group/gitops-working-group). This group is led by Weaveworks and Codefresh with a focus on defining GitOps and exploring its evolution. 
+If you are interested in exploring this topic further, the [CNCF](https://cncf.io/) has started a [GitOps Working Group](https://github.com/gitops-working-group/gitops-working-group). This group is led by Weaveworks and Codefresh with a focus on defining GitOps and exploring its evolution.
 
-There is no doubt GitOps is the future of continuous deployments. Understanding the pros and cons of GitOps is a path for moving forward and making this technology a common solution designed for a cloud-native world. 
+There is no doubt GitOps is the future of continuous deployments. Understanding the pros and cons of GitOps is a path for moving forward and making this technology a common solution designed for a cloud-native world.
 
 #### About the Author
-Tracy is CEO and Co-Founder of DeployHub. She is expert in configuration management and pipeline life cycle practices with a hyper focus on microservices and cloud native architecture. She currently serves as a board member of the [Continuous Delivery Foundation](http://cd.foundation) and the Executive Director of the Ortelius Open Source project for Microservice Management. Tracy is a recognized evangelist in microservices and the continuous delivery pipeline. She is the creator of the [Continuous Delivery Foundation Interactive Landscape](https://landscape.cd.foundation), a blog contributor for the CDF, recognized by [TechBeacon](https://techbeacon.com/devops/devops-100-do-your-ops-boss-follow-these-top-pros) as on of the top 100 DevOps visionaries and speaks at many DevOps events such as CNCF’s KubeCon and CloudBees DevOps World. Tracy is also a [DevOps Institute Ambassador](https://devopsinstitute.com/become-a-community-member/devops-institute-ambassador) and speaks at AWS Marketplace webinar educational events. She is also the host of the [CI/CDF Online Meetups](https://www.meetup.com/nm-cdf-Area-Meetup/).
+
+Tracy is CEO and Co-Founder of DeployHub. She is expert in configuration management and pipeline life cycle practices with a hyper focus on microservices and cloud native architecture. She currently serves as a board member of the [Continuous Delivery Foundation](https://cd.foundation) and the Executive Director of the Ortelius Open Source project for Microservice Management. Tracy is a recognized evangelist in microservices and the continuous delivery pipeline. She is the creator of the [Continuous Delivery Foundation Interactive Landscape](https://landscape.cd.foundation), a blog contributor for the CDF, recognized by [TechBeacon](https://techbeacon.com/devops/devops-100-do-your-ops-boss-follow-these-top-pros) as on of the top 100 DevOps visionaries and speaks at many DevOps events such as CNCF’s KubeCon and CloudBees DevOps World. Tracy is also a [DevOps Institute Ambassador](https://devopsinstitute.com/become-a-community-member/devops-institute-ambassador) and speaks at AWS Marketplace webinar educational events. She is also the host of the [CI/CDF Online Meetups](https://www.meetup.com/nm-cdf-Area-Meetup/).
 
 <div>
 <img src="/images/TracyRaganonZoom.jpg" alt="tracy ragan" height="300px" width="282px" />

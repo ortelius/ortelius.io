@@ -22,7 +22,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 Ortelius is central catalog of supply chain and DevOps intelligence providing a unified view of an organization's security profile. It is designed to track and version composition details for every component of your software supply chain and aggregate the data to 'logical' applications and deployed environments. With Ortelius, you can easily view your 'logical' application's SBOM, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
 
-Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the 'logical application' becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every 'logical application' that is impacted by a component change. It then aggregates that data to the 'logical' application level so you don't have to.  
+Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the 'logical application' becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every 'logical application' that is impacted by a component change. It then aggregates that data to the 'logical' application level so you don't have to.
 
  The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  Approximately 80% of the code base is based on DeployHub's [Microservice Catalog](https://www.deployhub.com/). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.
 <p></p>
@@ -64,8 +64,8 @@ Ortelius aggregates DevOps, security and supply chain data for each independent 
 </div>
 {{< blocks/feature_dual >}}
 {{% blocks/table_center %}}
- | 
---- | ----------- 
+ |
+--- | -----------
 Component ownership. | <i class="fas fa-3x fa-check-square"></i>
 Logical application versioning. | <i class="fas fa-3x fa-check-square"></i>
 Component blast radius. | <i class="fas fa-3x fa-check-square"></i>
@@ -78,8 +78,8 @@ Component key value pairs management. | <i class="fas fa-3x fa-check-square"></i
 {{< blocks/feature_dual >}}
 {{% blocks/table_center %}}
 
- | 
---- | ----------- 
+ |
+--- | -----------
 Application Level SBOM Reporting. | <i class="fas fa-3x fa-check-square"></i>
 Application Level CVE Reporting. | <i class="fas fa-3x fa-check-square"></i>
 Supports hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
@@ -93,6 +93,7 @@ Easily extendable.  | <i class="fas fa-3x fa-check-square"></i>
 
 {{< blocks/section color=primary >}}
 {{< blocks/feature_dual >}}
+
 ## Abraham Ortelius – Our Inspiration
 
 <div class="wrapdiv">

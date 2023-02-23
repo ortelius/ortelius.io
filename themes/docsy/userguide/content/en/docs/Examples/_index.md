@@ -17,9 +17,9 @@ Example sites that have low to no customization:
 | ["Goldydocs" - a Docsy example site](https://example.docsy.dev) | https://github.com/google/docsy-example  |
 | https://www.kubeflow.org/  | https://github.com/kubeflow/website  |
 | https://agones.dev/site/ | https://github.com/GoogleCloudPlatform/agones/tree/master/site |
-| https://googlecontainertools.github.io/kpt/ | https://github.com/GoogleContainerTools/kpt/tree/master/docs | 
-| [Navidrome Music Server](https://www.navidrome.org) | https://github.com/navidrome/website | 
-| https://docs.agilebase.co.uk/ | https://github.com/okohll/abdocs | 
+| https://googlecontainertools.github.io/kpt/ | https://github.com/GoogleContainerTools/kpt/tree/master/docs |
+| [Navidrome Music Server](https://www.navidrome.org) | https://github.com/navidrome/website |
+| https://docs.agilebase.co.uk/ | https://github.com/okohll/abdocs |
 
 ## Customized Docsy examples
 

@@ -11,7 +11,7 @@ author: Tracy Ragan
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" />
 </div>
 
-**Santa Fe, NM** – December 8, 2020– DeployHub, creators of the first microservice management platform, today announced that Ortelius, the DeployHub open source core, has been accepted into the [Continuous Delivery Foundation](http://cd.foundation/) as an incubating project. The mission of the Ortelius open source project is to simplify the adoption of a [microservice architecture](https://www.deployhub.com/microservice-architecture/) through a world-class microservice management platform driven by a supportive and diverse global open source community. Ortelius is the core of DeployHub Pro and allows DevOps teams to visualize the ‘logical’ application versions in a microservice architecture. Ortelius catalogs, versions and tracks microservices across clusters and supports continuous delivery by adding automated configuration management to the pipeline.
+**Santa Fe, NM** – December 8, 2020– DeployHub, creators of the first microservice management platform, today announced that Ortelius, the DeployHub open source core, has been accepted into the [Continuous Delivery Foundation](https://cd.foundation/) as an incubating project. The mission of the Ortelius open source project is to simplify the adoption of a [microservice architecture](https://www.deployhub.com/microservice-architecture/) through a world-class microservice management platform driven by a supportive and diverse global open source community. Ortelius is the core of DeployHub Pro and allows DevOps teams to visualize the ‘logical’ application versions in a microservice architecture. Ortelius catalogs, versions and tracks microservices across clusters and supports continuous delivery by adding automated configuration management to the pipeline.
 
 “We welcome Ortelius to the CD Foundation to help improve microservice adoption and implementation of better development practices,” said Tracy Miranda, Continuous Delivery Foundation Executive Director.
 
@@ -27,21 +27,19 @@ author: Tracy Ragan
 
 “Microservice are more than an architecture, it’s a mindset which essentially represents a paradigm shift and a natural progression of DevOps. The Ortelius team brings a platform that is driven by Global leaders helping in the mindset change thus supporting your DevOps transformation journey,” Siddharth Pareek, Global DevOps CoE Practice Lead, Natwest Group
 
- 
-
 **Ortelius Links**
 
 Join the project – [Google Groups (Ortelius-dev)](https://groups.google.com/g/ortelius-dev)
 
 GitHub Repository – [https://github.com/ortelius/ortelius](https://github.com/ortelius/ortelius)
 
-Reach us by email: [request-info@ortelius.io](mailto:request-info@ortelius.io)
+Reach us by email: [request-info@ortelius.io](mailto:request-info@ortelius.io/)
 
-Project Site: [ortelius.io](https://ortelius.io)
+Project Site: [ortelius.io](https://ortelius.io/)
 
 **About DeployHub**
 
-Moving to microservices breaks the way we assemble and configure software. DeployHub puts it back together by providing a central ‘hub’ for cataloging, versioning, sharing and releasing microservices across the organization. DeployHub empowers your high performing software engineers to easily move from monolithic to microservices.  For more information on DeployHub, go to www.DeployHub.com
+Moving to microservices breaks the way we assemble and configure software. DeployHub puts it back together by providing a central ‘hub’ for cataloging, versioning, sharing and releasing microservices across the organization. DeployHub empowers your high performing software engineers to easily move from monolithic to microservices.  For more information on DeployHub, go to www.deployhub.com
 
 **About the CD Foundation**
 

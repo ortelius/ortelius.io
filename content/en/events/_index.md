@@ -22,12 +22,12 @@ menu:
 
 <strong>Share your thoughts and earn Ambassador Recognition badges.</strong>
 
-Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog? 
+Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog?
 
 Or maybe you have some tips and tricks for implementing Ortelius, or contributing. If so, join the Ortelius BlogAthon from February 1st through April 15.
 
+We are looking for Blogs on:
 
-We are looking for Blogs on: 
 - Help for new contributors to become productive members of the Ortelius open source community;
 - Help for new open source users to adopt the Ortelius platform;
 - Educate the community on general supply chain, security and DevOps topics related to a microservices architecture.
@@ -65,8 +65,6 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-
-
 {{< blocks/section color="white" >}}
 
 {{< blocks/feature_dual >}}
@@ -86,7 +84,6 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 </div>
 
 {{< /blocks/feature_dual >}}
-
 
 {{< blocks/feature_dual >}}
 <h2>Podcast</h2>
@@ -131,6 +128,5 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 {{< video autoplay="true" loop="true" muted="true" controls="true" src="rotatingortelius.mp4" >}}
 </div>
 {{< /blocks/feature_dual >}}
-
 
 {{< /blocks/section >}}
