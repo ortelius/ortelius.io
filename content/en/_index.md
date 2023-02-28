@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">An Open Source Microservice Catalog for Supply Chain Management</h1>
+<h1 class="text-left">Unlock Your Supply Chain Intelligence Trapped Across Siloed Containers</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -16,15 +16,13 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">A Centralized Supply Chain Evidence Store</h1>
+<h1 class="text-center">A Comprehensive View of Your Organization's Security Profile</h1>
 <hr>
 </div>
 
-Ortelius is central catalog of supply chain and DevOps intelligence providing a unified view of an organization's security profile. It is designed to track and version composition details for every component of your software supply chain and aggregate the data to 'logical' applications and deployed environments. With Ortelius, you can easily view your 'logical' application's SBOM, CVEs, service dependencies, and inventory based on versions, even in a decoupled microservices architecture.
+Ortelius is unified catalog of supply chain evidence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
 
-Ortelius aggregates DevOps, security and supply chain data for each independent component moving through the pipeline. It is particularly useful in cloud-native, microservices architectures where the 'logical application' becomes ambiguous. Ortelius tracks who is consuming shared components, versions them when they are updated and then creates new release candidates for every 'logical application' that is impacted by a component change. It then aggregates that data to the 'logical' application level so you don't have to.
-
- The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation).  Approximately 80% of the code base is based on DeployHub's [Microservice Catalog](https://www.deployhub.com/). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.
+ The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.  Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Microservice Catalog](https://www.deployhub.com/).
 <p></p>
 {{< /blocks/section >}}
 
