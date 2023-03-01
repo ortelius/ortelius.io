@@ -151,18 +151,13 @@ enable = false
 	icon = "fab fa-twitter"
         desc = "Follow us on Twitter to get the latest news!"
 [[params.links.user]]
-	name ="Facebook"
-	url = "https://www.facebook.com/groups/OrteliusProject/?ref=bookmarks"
-	icon = "fab fa-facebook"
-        desc = "Follow us on Facebook to get the latest news!"
-[[params.links.user]]
 	name ="LinkedIn"
-	url = "https://www.linkedin.com/company/Orteliusproj/"
+	url = "https://www.linkedin.com/company/ortelius-open-source/"
 	icon = "fab fa-linkedin"
         desc = "Follow us on LinkedIn to get the latest news!"
 [[params.links.user]]
 	name ="YouTube"
-	url = "https://www.youtube.com/channel/UC7jomcQ2D4VgjGV2ePtKWfA"
+	url = "https://www.youtube.com/@orteliusopensource1086"
 	icon = "fab fa-youtube"
         desc = "Follow us on YouTube to get the latest videos!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
