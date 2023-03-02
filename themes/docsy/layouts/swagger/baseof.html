@@ -21,8 +21,8 @@
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-bundle.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-standalone-preset.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-bundle.min.js" integrity="sha256-Yi8whW0LhKHY7iFNTQV/dXeH3xrh7KeV1QqSYQl325k= sha384-teQymmstWy/chgd+nZwshmgu7Ep+LIAmsoMioG+vvOy3rvIpy8yWaed87/384c0u sha512-WdG1MXAid5RSREGfO1axi9jPd/43el8+VkPbZQlfm+NcZVVSHjiKFGQ+02kYzPGpuorZAtiCoejpdvJAEcjTxA==" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.17.0/swagger-ui-standalone-preset.min.js" integrity="sha256-jhgioIk6G2dLn9OE7Xd7gDNlVaTMWloErtO8sF4FXRc= sha384-uo8p8L25ZXVQ0xSnj9eFwredaQnV/oxsDTXwLtwN21bwWkm1Y0LBspj4Cs2aB+Fe sha512-dQDXlqaJDnXhlgBLVyoNPZeVC7dvQ1ylq/F9DRHbvJ4WMFVD1GtB7T8QmnWdhFy2sGJU2xxSsoPIEx85gnAXnw==" crossorigin="anonymous"></script>
             {{ block "main" . }}{{ end }}
           </main>
         </div>
