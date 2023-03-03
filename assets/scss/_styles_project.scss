@@ -3,3 +3,14 @@ body > div > main > section.row.td-box.td-box--1.position-relative.td-box--gradi
     text-align: left!important;
     max-width: 400px;
 }
+
+body > div > main > section.row.td-box.td-box--dark.td-box--gradient.td-box--height-auto
+ {
+    padding-top: 8rem;
+    background-image: url(/images/header.jpg);
+    background-color: #676767;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
