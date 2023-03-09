@@ -34,7 +34,7 @@ Blockchain is most popular in the banking and financial sector. This may be due 
 
 Since the range of usage has broaden, we will see mixed concerns about the product as well. For some data, privacy, and authenticity would matter most. Blockchain would be introducing transparency in their system with blockchain security. The difference between one product to other can be as big as architectural design or might be just a change in algorithms for cryptography. The validation of the block creation also varies depending on the use case. 
 
-## Conclusion: -
+## Conclusion: 
 
 Currently, we see the usage of blockchain in almost all domains. A few of the popular ones have been captured by Kaspars Zīle and Renāte Strazdiņa in their white paper [“Blockchain Use Cases and Their Feasibility”](https://www.researchgate.net/publication/325534791_Blockchain_Use_Cases_and_Their_Feasibility).  Even though the blockchain has a strong security foundation with data encryption, cryptography, and consensus, the safety of using blockchain purely depends on how it has been implemented. The application of blockchain could be a little challenging when you use it without considering all its features. If you don’t want an immutable transaction or don’t know how to manage decentralized data, adding security layers to your system might be difficult and hence making it vulnerable. 
 
@@ -44,3 +44,13 @@ There are several technical aspects like the integrity of network participants, 
 
 [Blockchain Use Cases and Their Feasibility](https://sciendo.com/pdf/10.2478/acss-2018-0002) <br />
 [Untangling Blockchain: A Data Processing View of Blockchain Systems](https://ieeexplore.ieee.org/document/8246573)
+
+## About Utkarsh Sharma
+
+{{< figure src="/images/utkarsh.png" width="300px" height="300px" >}}
+
+Utkarsh is one of the main contributors to Ortelius, and is one of the lead developers of the [Ortelius XRP Ledger](https://ortelius.io/blog/2022/07/20/deployhub-secures-a-75k-xrpl-grant-for-ortelius/) for storing immutable SBOM data. Utkarsh is a natural leader, and often mentors new Ortelius contributors along their open-source journey. 
+
+Utkarsh is a passionate and self-driven IT professional with 3+ years of diverse experience in Product Development in Microservice architecture, Azure Cloud. He has expertise in Agile methodology and DevOps tools. Utkarsh focuses on developing solutions that are flexible to change, abstracted, and robust.
+
+Learn more about Utkarsh from his [LinkedIn Profile](https://www.linkedin.com/in/codewithutkarsh/)
