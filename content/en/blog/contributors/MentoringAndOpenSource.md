@@ -5,7 +5,8 @@ summary: Mentoring for mentors and mentees, critical for Open Source Growth
 author: Tony Carrato
 ---
 
-![Mentoring](/images/mentoring.jpg)
+
+{{< figure src="/images/mentoring.jpg" width="800px" height="800px" >}}
 
 ## What is Mentoring and Why is it Important?  And What the heck is a “Mentee”, Anyway?
 

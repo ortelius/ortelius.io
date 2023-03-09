@@ -5,8 +5,7 @@ summary: Is Blockchain Safe?
 author: Utkarsh Sharma
 ---
 
-
-![Is blockchain safe?](/images/isBlockchainSafe.png)
+{{< figure src="/images/isBlockchainSafe.png" width="800px" height="800px" >}}
 
 
 ## What is Blockchain?
