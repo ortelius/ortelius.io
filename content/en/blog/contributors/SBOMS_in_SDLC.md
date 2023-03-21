@@ -10,7 +10,7 @@ author: Ankur Kumar
 
 # Introduction
 
-The software supply chain is a model for producing quality products with an integrated lifecycle of upstream and downstream dependencies. An SBOM is a key component of the software supply chain. SBOM adoption has increased exponentially considering legal, compliance, and security considerations. This article briefly introduces SBOM and describes its usage in the Software Delivery Life Cycle (SDLC). 
+The software supply chain is a model for producing quality products with an integrated lifecycle of upstream and downstream dependencies. An SBOM is a key component of the software supply chain. SBOM adoption has increased exponentially considering legal, compliance, and security considerations. This article briefly introduces SBOM and describes its usage in the Software Delivery Life Cycle (SDLC).
 
 
 
@@ -49,7 +49,7 @@ While there are many different areas of SBOM usage, below are the three most com
 - With the increasing usage of open source and third-party software in building solutions across industries, an SBOM helps to comply with licensing obligations transparently with your customers and other partners.
 - An SBOM provides broader visibility to understand complex projects for better quality management. An organization can also use it for understanding the need for the required experience and expertise for the respective product.
 
-> Gartner expects the adoption of software bills of material (SBOM) by enterprise organizations to go from less than 5% now to 60% by 2025. 
+> Gartner expects the adoption of software bills of material (SBOM) by enterprise organizations to go from less than 5% now to 60% by 2025.
 
 ### #2 - Detect, prioritize, and mitigate security vulnerabilities
 
@@ -106,7 +106,4 @@ At every supply chain level, the shift from herd vulnerability to herd immunity 
 
 Ankur is a Senior engineering leader with more than 20 years of IT industry experience. He is a leader in multi-year digital transformation programs at all stages of the software delivery lifecycle, including strategy, planning, architecture & design, implementation, and site reliability. He is a results-driven core technologist with experience in Cloud, Microservices, Event-driven, and Web-scale distributed architectures.
 
-Ankur works with the Ortelius community on outreach events and has presented at the Ortelius bi-annual Visionaries Summit. Learn more about Ankur from his [LinkedIn Profile](https://www.linkedin.com/in/ankurkumarz/). 
-
-
-
+Ankur works with the Ortelius community on outreach events and has presented at the Ortelius bi-annual Visionaries Summit. Learn more about Ankur from his [LinkedIn Profile](https://www.linkedin.com/in/ankurkumarz/).
