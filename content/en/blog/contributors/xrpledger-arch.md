@@ -38,7 +38,7 @@ Ortelius was originally designed using a monolithic approach. Overtime, microser
 - Database
   - Postgres DB is used for all data.  Both the Monolith and Microservices read/write to the database over JDBC and PyODBC respectively.
 
-[Existing Architecture Diagram](existingarch.md)
+[Existing Architecture Diagram](/diagrams/existingarch/)
 
 ## New Architecture
 
@@ -158,7 +158,7 @@ The database abstraction handler Python function encapsulates the database inter
 | ms-validate-user      |         |  X       |        |         |       | Validate the JWT cookie for a user |
 
 
-[New Architecture Diagram](newarch.md)
+[New Architecture Diagram](/diagrams/newarch/)
 
 #### Object Definitions
 
@@ -291,9 +291,9 @@ cached User
 Since nft.storage is slow, a push through cache will be utilized for storing the data.  This means that the cache will be updated first so read transactions can access the data while it is being persisted to long term storage in nft.storage.  The microservices will using the following
 transaction flows:
 
-[Write Transaction Flow](writecache.md)
+[Write Transaction Flow](/diagrams/writecache/)
 
-[Read Tranaction Flow](readcache.md)
+[Read Tranaction Flow](/diagrams/readcache/)
 
 
 #### Example Schemas for all classes
