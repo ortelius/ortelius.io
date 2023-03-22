@@ -12,7 +12,10 @@ Supply chain intelligence, such as SBOMs and dependency insights, can only be us
 
 The 2023 Ortelius architecture will include the tracking of SBOM level data using ledger technology. In July of 2022, the Ortelius team was awarded a $75k grant to pursue the building of an immutable SBOM ledger using XRPL. The team pursued a proof of concept around the ledger approach which led to the design of this new architecture. The new architecture will incorporate the use of the XRPLedger to create a continuous historical record of component changes, with SBOM information.
 
-### Current Hybrid Implementation of Ortelius
+## Become Part of the Team - Get Paid on 'Bounty' Issues
+If you would like to get involved in building this new microservice architecture, and get paid for your work, check-out the [Ortelius GitHub issues](https://github.com/ortelius/ortelius/issues) tagged as 'bounty.' Learn more about the [Bounty program](http://localhost:1313/blog/2022/10/10/ortelius-xrpl-bounty-process/) and how to [setup your GitHub account](http://localhost:1313/blog/2023/03/09/ortelius-xrpl-bounty-github-setup/) for payment. The Ortelius team looks forward to working with a diverse group of committers to complete this ambitious project. 
+
+## Current Hybrid Implementation of Ortelius
 Ortelius was originally designed using a monolithic approach. Overtime, microservice were added as contributors designed new features. As a result, it is now in a hybrid architecture that includes:
 
   - The Ortelius backend is currently written in Java and JSP, and runs on Tomcat/Jetty application server in a Docker container.     The main goal of the backend is to handle http requests from the JavaScript running in the browser and from the Ortelius CLI.  A small set of "Rest APIs" have been exposed for public access to the data in the Postgres database.
@@ -23,17 +26,17 @@ Ortelius was originally designed using a monolithic approach. Overtime, microser
   - Python FastAPI programs that expose RestAPI endpoint for a specific task. These microservices use SqlAlchemy to connect to the Postgres DB and perform SQL queries.
 
   - Current Microservices:
-    - **ms-validate-user:** Checks to see if the current transaction has a validate user associated with it, i.e. logged in user.  This services receives a cookie with the JWT token produced by the login.  The JWT token is used to determine if the user is logged in or not.
+    - ms-validate-user: Checks to see if the current transaction has a validate user associated with it, i.e. logged in user.  This services receives a cookie with the JWT token produced by the login.  The JWT token is used to determine if the user is logged in or not.
 
-    - **ms-compitem-crud:** Creates/Retrieves/Updates/Deletes the component detail data for a component version.
+    - ms-compitem-crud: Creates/Retrieves/Updates/Deletes the component detail data for a component version.
 
-    - **ms-depkg-cud:** Handles the upload of the SBOM (Spdx or Cyclone) file for a component version.
+    - ms-depkg-cud: Handles the upload of the SBOM (Spdx or Cyclone) file for a component version.
 
-    - **ms-deppkg-r:** Retrieves the SBOM for a component version.
+    - ms-deppkg-r: Retrieves the SBOM for a component version.
 
-    - **ms-textfile-crud:** Creates/Retrieves/Updates/Deletes the readme and license files for a component version.
+    - ms-textfile-crud: Creates/Retrieves/Updates/Deletes the readme and license files for a component version.
 
-    - **ms-scorecard:** Creates a scorecard web page showing the compliance scorecard for component versions and application versions.
+    - ms-scorecard: Creates a scorecard web page showing the compliance scorecard for component versions and application versions.
 
 - Database
   - Postgres DB is used for all data.  Both the Monolith and Microservices read/write to the database over JDBC and PyODBC respectively.
@@ -42,7 +45,7 @@ Ortelius was originally designed using a monolithic approach. Overtime, microser
 
 ## New Architecture
 
-The new architecture will be a pure microservice implementation running in a Kubernetes environment. It will include an XRPLedger and the potential integration with a Universal Object Reference, or extended OCI Registry that can support any type of object.  
+The new architecture will be a pure microservice implementation running in a Kubernetes environment. It will include an XRPLedger and the potential integration with a [Universal Object Reference](https://emporous.io/docs/intro), or extended OCI Registry that can support any type of object.  
 
 ### Functional Requirements
 
@@ -191,7 +194,7 @@ For example, the denormalized json:
     }
 ```
 
-Gets transposed into its normalized json format:
+The denormalized json is transposed into its normalized json format:
 
 ```json
   {
@@ -247,13 +250,13 @@ is transposed for ArangoDB to
 
 > Note: Removing the key from the ArangoDB object will enable the SHA256/IPFS CID calculation to return the correct value, i.e. the _key value.
 
-#### ArangoDB as a push through cache
+#### ArangoDB as a Push Through Cache
 
 nft.storage and IPFS objects (NFTs) do not have any search capabilities.  You can only find objects based on their CID.  Loading all of the NFTs into ArangoDB is too much data, terra-bytes worth.  Instead, ArangoDB will contain a sparse view of nft.storage.  This sparse data will enable searching based on common fields, i.e. Domain Name, Object Type, and Object Name.  The returned data from the search will include cached and un-cached objects.
 
 The microservice doing the database retrieval will loop through the search results pulling together the denormalized version of the object requested. When it comes across an un-cached version it will use the CID supplied, retrieve the object and add it to ArangoDB as a cached object.  The existence of the `cache` field is used to distinguish between cached and un-cached objects.
 
-un-cached User
+un-cached User:
 
 ```json
      {
@@ -265,7 +268,7 @@ un-cached User
     }
 ```
 
-cached User
+cached User:
 
 ```json
      {
