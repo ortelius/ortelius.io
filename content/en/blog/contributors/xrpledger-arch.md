@@ -38,7 +38,7 @@ Ortelius was originally designed using a monolithic approach. Overtime, microser
 - Database
   - Postgres DB is used for all data.  Both the Monolith and Microservices read/write to the database over JDBC and PyODBC respectively.
 
-[Existing Architecture Diagram](/blog/contributors/existingarch.md)
+[Existing Architecture Diagram](existingarch.md)
 
 ## New Architecture
 
