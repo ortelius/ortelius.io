@@ -6,11 +6,34 @@ menu:
   main:
    weight: 100
 ---
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+<div class="col-center">
+<h2 class="col-center">May 19th - Ortelius Visionaries Summit</h2>
+<br>
+
+<img src="/images/ortelius-visionaries-banner-May23.png" alt="Ortelius Visionaries Summit" height="350px" width="550px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<br>
+
+<h2>A remote celebration of the Ortelius Community</h2>
+
+On May 19th, the Ortelius community will come together, celebrate individuals who have been awarded recognition badges, and share knowledge on supply chain, microservices, and the need for a centralized catalog. 
+
+We start with our "Beer and Donuts" Zoom gathering, and finish on the Ortelius Twitch channel for presentations, networking and games. Hope to see you there. 
+
+[Get the full Details](https://ortelius.io/blog/2023/03/21/ortelius-microservice-visionaries-2023/)
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">Ortelius BlogAthon</h2>
+<h2 class="col-center">Feb 1st - April 15th Ortelius BlogAthon</h2>
 <br>
 
 <img src="/images/blogathon2023.png" alt="Ortelius Blog-A-Thon" height="350px" width="350px" />
@@ -18,9 +41,9 @@ menu:
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-<h3>Feb 1st through April 15th, 2023</h3>
+<br>
 
-<strong>Share your thoughts and earn Ambassador Recognition badges.</strong>
+<h2>Share your thoughts and earn Ambassador Recognition badges.</h2>
 
 Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog?
 
