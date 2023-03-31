@@ -168,7 +168,7 @@ Governance Board Goals:
 
 ### Board Terms and Rules
 
-The Governance Board is made up of seven individuals. Steve Taylor, the original creator of the Ortelius Core code will be provided a permanent seat on the Governance Board until he decides to step down. The remaining 6 board members will serve a 2-year term, except for 3 members who are initially elected to serve a 1-year term. This will allow the rotation of 3 new members being elected each subsequent year. The Board has the power to add additional seats if required but must maintain an uneven number of Board Members.
+The Governance Board is made up of nine individuals. Steve Taylor, the original creator of the Ortelius Core code will be provided a permanent seat on the Governance Board until he decides to step down. The remaining 8 board members will serve a 2-year term, except for 3 members who are initially elected to serve a 1-year term. This will allow the rotation of 3 new members being elected each subsequent year. The Board has the power to add additional seats if required but must maintain an uneven number of Board Members.
 No single Company or Organization shall have employees or representatives that make up more than 50% of the Board.
 The Governance Board follows [<em>Robert's Rules of Order</em>](https://www.ibabs.com/en/roberts-rules-of-order/complete-guide/) for running all meetings. The Governance Board will meet at a minimum of 4 times per year, and can determine the dates, time, and location of the meeting.  Meetings can be held in person or remote.
 
@@ -182,6 +182,8 @@ The Governance Board has the power to define Officer roles and hold elections of
 - Product Management Officer – Manages the Ortelius Roadmap.
 
 Officer roles can be shared between multiple individuals and called ‘co-officers’ if needed.
+
+[Current Governing Board Members](https://ortelius.io/blog/2022/12/13/ortelius-2023-governing-board/) 
 
 ### Non-Voting Board Attendees
 
