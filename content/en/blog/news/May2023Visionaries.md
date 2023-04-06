@@ -21,9 +21,11 @@ On May 19th, 2023 the Ortelius community will host the 'Microservice Visionaries
 <strong>9:00 AM - 10:20 AM Beer and Donuts</strong>
 This live Zoom event kicks off the Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
 
-<strong>10:30 Keynote (TBA)</strong>
+On the Ortelius Twitch Channel: 
 
-<strong>11:00 Keynote (TBA)</strong>
+<strong>10:30 Keynote - A Review of the New Ortelius Architecture presented by Steve Taylor, DeployHub</strong>
+
+<strong>11:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat</strong>
 
 <strong>11:30 Ten minute lighting talks on the Ortelius Twitch Channel</strong>
 Would you like to try your hand at presenting? We encourage and welcome first time presenters. All sessions are pre-recorded and added to the [Ortelius Youtube channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw) after the event. Your recording can then be used for other CFPs as an example of your work. If you have a lighting talk you would like to submit, let us know. Send your name, bio and topic to [orteliusopensource@gmail.com](mailto:orteliusopensource@gmail.com).
