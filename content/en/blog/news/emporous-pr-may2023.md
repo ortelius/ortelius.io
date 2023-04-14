@@ -30,7 +30,7 @@ Integrating Emporous into Ortelius provides a unique opportunity to support the 
 
 Ortelius provides mapping support for software systems that use a wide ecosystem of components and dependencies, gathering supplemental resources, like Software Bill of Materials (SBOMs) and vulnerability reports. Emporous will enhance these capabilities to include the artifacts themselves, as well as improve the metadata search capabilities. 
 
-According to Vincent Danen, Vice President of Red Hat Product Security, “Ortelius, augmented by Emporous, provides exciting opportunities for tracking security data associated with a variety of attributes that meet critical compliance and security data needs at the organizational level.  These tools will assist security and operational teams enforce supply chain policies and procedures through easy, automated mechanisms..”
+According to Vincent Danen, Vice President of Red Hat Product Security and OpenSSF Governing Board Member, “Ortelius, augmented by Emporous, provides exciting opportunities for tracking security data associated with a variety of attributes that meet critical compliance and security data needs at the organizational level.  These tools will assist security and operational teams enforce supply chain policies and procedures through easy, automated mechanisms.”
 
 The Ortelius governance board has approved an expansion of two seats to allow for representation from the Emporous community to bring their knowledge and experience to support and steer the project forward into the future.   
 
