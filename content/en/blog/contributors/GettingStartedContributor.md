@@ -5,6 +5,8 @@ summary: Getting Started as an Ortelius Open Source Contributor
 author: Afzal Ansari
 ---
 
+{{< figure src="/images/welcomehumans.png" width="600px" height="600px" >}}
+
 ## First - Don't Get Overwhelmed
 
 Are you interested in becoming an Open Source Project contributor but feeling a bit overwhelmed with getting started? If so, don't worry, because you're not alone. Many developers feel the same way when it comes to open-source contributions. However, there are ways to make the process more manageable and less stressful.
