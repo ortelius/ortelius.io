@@ -28,6 +28,12 @@ On the Ortelius Twitch Channel:
 <strong>11:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat</strong>
 
 <strong>11:30 Ten minute lighting talks on the Ortelius Twitch Channel</strong>
+
+11:30 - 11:40 Mentors and Mentees presented by Tony Carrato
+Learn what it means to be a mentor and a mentee. Tony Carrato reviews the benefits of the mentor and mentee relationship and how to find your mentor.
+
+## Submit your Talk
+
 Would you like to try your hand at presenting? We encourage and welcome first time presenters. All sessions are pre-recorded and added to the [Ortelius Youtube channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw) after the event. Your recording can then be used for other CFPs as an example of your work. If you have a lighting talk you would like to submit, let us know. Send your name, bio and topic to [orteliusopensource@gmail.com](mailto:orteliusopensource@gmail.com).
 
 Suggested Topics:
