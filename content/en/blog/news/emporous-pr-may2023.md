@@ -26,7 +26,7 @@ Ortelius gathers and aggregates DevOps and Supply Chain intelligence for all typ
 
 Emporous is a universal object reference initially created by the open-source contributors at [Red Hat](https://www.redhat.com). Emporous helps organizations effortlessly store, organize and search metadata related to software artifacts along with the artifacts themselves.
 
-Integrating Emporous into Ortelius provides a unique opportunity to support the project goals of effectively categorizing all of the relevant software dependencies, relationships, security insights, with the artifacts themselves in a single location. Managing, discovering, and organizing DevOps and security insights for primary assets is a challenge faced by most organizations.
+Integrating Emporous into Ortelius provides a unique opportunity to support the project goals of effectively categorizing all of the relevant software dependencies, relationships, security insights, with the artifacts themselves in a single location. Managing, discovering, and organizing DevOps and security insights for primary assets is a challenge faced by most organizations. [Learn more](https://cd.foundation/blog/2023/05/08/new-ortelius-sub-project-emporous/) 
 
 Ortelius provides mapping support for software systems that use a wide ecosystem of components and dependencies, gathering supplemental resources, like Software Bill of Materials (SBOMs) and vulnerability reports. Emporous will enhance these capabilities to include the artifacts themselves, as well as improve the metadata search capabilities. 
 
