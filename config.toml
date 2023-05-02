@@ -171,3 +171,8 @@ enable = false
     name = "Documentation"
     weight = 90
     url = "https://docs.ortelius.io/guides/"
+    
+[[menu.main]]
+    name = "Emporous"
+    weight = 75
+    url = "https://emporous.io/"
