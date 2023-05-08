@@ -1,5 +1,5 @@
 ---
-date: 2023-05-08
+date: 2023-05-07
 title: "Emporous Joins Ortelius as a Sub-project"
 summary: Emporous Joins Ortelius as a Sub-project
 author: Tracy Ragan and Andrew Block
