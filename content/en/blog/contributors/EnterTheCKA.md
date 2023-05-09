@@ -27,16 +27,16 @@ I did the following:
 - You only have 6 minutes a question which should leave you with roughly 16 minutes to review flagged questions. I finished the exam with 10 seconds to spare.
 - Don't get hung up on a question, remember you only have 6 minutes a question. Just answer what you can and move on otherwise you will not finish.
 - Make sure you go through this page thoroughly https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad
-- The proctor will inspect every corner in your room where you are writing - under the mouse pad, under the keyboard, under your computer. It felt like I was moving house. I removed all paper, all electronic devices, covered the windows, remove all smart devices etc.... go through the URL above thoroughly. I also got asked if I had a table with a glass top.
+- The proctor will inspect every corner of your room where you are writing - under the mouse pad, under the keyboard, under your computer. It felt like I was moving house. I removed all paper, all electronic devices, covered the windows, remove all smart devices etc.... go through the URL above thoroughly. I also got asked if I had a table with a glass top.
 - If you so much as whisper the question to yourself the proctor will interrupt you in the chat window reminding you not to whisper as this is not allowed, which I found irritating and distracting when you are trying to chase down 17 questions in 2 hours. Especially since the chat window covers a part of your screen. I also feel that this is a frustrating rule as some of us whisper a question to ourselves to comprehend the required tasks.
-- You can use any screen as long as there is only one screen and you must have a webcam of course, so if your camera is built into your Mac like mine is I was forced to use my mac screen, luckily mine is 16inch if you have smaller than 15inch you will suffer with the lack of screen real estate. Practise using the smaller screen if you are forced to as it develops muscle memory.
+- You can use any screen as long as there is only one screen and you must have a webcam of course, so if your camera is built into your Mac like mine is I was forced to use my mac screen, luckily mine is 16inch if you have smaller than 15inch you will suffer with the lack of screen real estate. Practise using the smaller screen to get used to working with minimal screen real estate and to develop muscle memory.
 - If you can shave a second here and there its worth it, 2 hours is super short.
 - Be quick and comfortable on the Bash command line and get familiar with VI.
 - I did not bother with TMUX I felt it just added more things I have to remember.
-- I just opened two terminals and split them by resizing them which is way easier and changed my font to bright green and enabled selection copy.
+- I just opened two terminals and split them by resizing them which is way easier and changed my font to bright green and enabled copy on selection.
 - I zoomed the Kubernetes documentation page to 90% to score more real estate and I also had the shortcuts on the side of the Kubernetes documentation page visible to various topics.
-- You can write on weekends which is what I did as this allows to prepare
-- Use declarative commands as much as you can even just to build basic yaml template. This saves a ton of pain with indentation and creates a YAML template which is a massive time saver.
+- You can write on weekends which is what I did as this allows you to prepare in peace without work interference.
+- Use declarative commands as much as you can even just to build the basic yaml template. This saves a ton of pain with indentation and creates YAML skeleton code which is a massive time saver.
 
 ## Keyboard Kung Fu
 
