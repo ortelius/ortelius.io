@@ -18,7 +18,7 @@ On May 19th, 2023 the Ortelius community will host the 'Microservice Visionaries
 
 ## Agenda: (all times in MT)
 
-9:00 AM - 10:30 AM Beer and Donuts
+<strong>9:00 AM - 10:30 AM Beer and Donuts</strong>
 
 9:00 New Messaging and learn who earned committer badges for Ambassadors, Champions and Legends by Tracy Ragan
 
@@ -28,7 +28,7 @@ On May 19th, 2023 the Ortelius community will host the 'Microservice Visionaries
 
 10:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat
 
-On the Ortelius Twitch Channel: 
+<strong> On the Ortelius Twitch Channel:</strong>
 
 10:30 Ten minute lighting talks mixed with Alien videos and games
 
