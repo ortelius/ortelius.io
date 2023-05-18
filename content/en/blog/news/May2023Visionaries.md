@@ -18,33 +18,26 @@ On May 19th, 2023 the Ortelius community will host the 'Microservice Visionaries
 
 ## Agenda: (all times in MT)
 
-<strong>9:00 AM - 10:20 AM Beer and Donuts</strong>
-This live Zoom event kicks off the Visionaries gathering. Meet the contributors and see who earned committer badges. There are 3 categories, Ambassador, Champions and Legends.
+<strong>9:00 AM - 10:30 AM Beer and Donuts</strong>
+This live Zoom event kicks off the Visionaries gathering. 
+
+<strong> 9:00 New Messaging and learn who earned committer badges for Ambassadors, Champions and Legends by Tracy Ragan </strong>
+
+<strong> 9:30 Ortelius Outreach Successes by Saim Safder </strong>
+
+<strong> 9:40 Keynote - A Review of the new Ortelius Architecture presented by Steve Taylor, DeployHub</strong>
+
+<strong> 10:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat</strong>
 
 On the Ortelius Twitch Channel: 
 
-<strong>10:30 Keynote - A Review of the New Ortelius Architecture presented by Steve Taylor, DeployHub</strong>
+<strong>10:30 Ten minute lighting talks mixed with Alien videos and games</strong>
 
-<strong>11:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat</strong>
-
-<strong>11:30 Ten minute lighting talks on the Ortelius Twitch Channel</strong>
-
-11:30 - 11:40 Mentors and Mentees presented by Tony Carrato
+10:35 - 10:45 Mentors and Mentees presented by Tony Carrato
 Learn what it means to be a mentor and a mentee. Tony Carrato reviews the benefits of the mentor and mentee relationship and how to find your mentor.
 
-## Submit your Talk
+10:50 - 11:00 Using Ortelius and Syft to collect Open-Source Supply Chain data by Tracy Ragan
+See how easy it is to add SBOM generation and collection to your pipeline with Ortelius and Syft
 
-Would you like to try your hand at presenting? We encourage and welcome first time presenters. All sessions are pre-recorded and added to the [Ortelius Youtube channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw) after the event. Your recording can then be used for other CFPs as an example of your work. If you have a lighting talk you would like to submit, let us know. Send your name, bio and topic to [orteliusopensource@gmail.com](mailto:orteliusopensource@gmail.com).
-
-Suggested Topics:
-
-- Software Supply Chain Challenges
-- SBOMs and CVEs
-- benefits of using a centralized microservice catalog
-- actionable Evidence of the Ortelius Catalog
-- microservice Drift Management
-- Domain Driven Design
-- challenge tracking and securing open-source
-- or, your favorite Topic on Supply Chain and Microservices
-
-We look forward to seeing your presentation, and participation in the Ortelius Visionaries Summit, 2023. 
+11:05 -11:15 Doman Driven Design and Digital Transformation by Joseph Akayesi
+Start understanding the use of Domain Driven Design in a modern architecture.
