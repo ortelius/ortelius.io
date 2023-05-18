@@ -18,20 +18,19 @@ On May 19th, 2023 the Ortelius community will host the 'Microservice Visionaries
 
 ## Agenda: (all times in MT)
 
-<strong>9:00 AM - 10:30 AM Beer and Donuts</strong>
-This live Zoom event kicks off the Visionaries gathering. 
+9:00 AM - 10:30 AM Beer and Donuts
 
-<strong> 9:00 New Messaging and learn who earned committer badges for Ambassadors, Champions and Legends by Tracy Ragan </strong>
+9:00 New Messaging and learn who earned committer badges for Ambassadors, Champions and Legends by Tracy Ragan
 
-<strong> 9:30 Ortelius Outreach Successes by Saim Safder </strong>
+9:30 Ortelius Outreach Successes by Saim Safder 
 
-<strong> 9:40 Keynote - A Review of the new Ortelius Architecture presented by Steve Taylor, DeployHub</strong>
+9:40 Keynote - A Review of the new Ortelius Architecture presented by Steve Taylor, DeployHub 
 
-<strong> 10:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat</strong>
+10:00 Keynote - Introducing Emporous, a Universal Object Reference presented by Andrew Block, Red Hat
 
 On the Ortelius Twitch Channel: 
 
-<strong>10:30 Ten minute lighting talks mixed with Alien videos and games</strong>
+10:30 Ten minute lighting talks mixed with Alien videos and games
 
 10:35 - 10:45 Mentors and Mentees presented by Tony Carrato
 Learn what it means to be a mentor and a mentee. Tony Carrato reviews the benefits of the mentor and mentee relationship and how to find your mentor.
