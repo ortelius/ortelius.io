@@ -9,7 +9,9 @@ author: Sacha Wharton
 
 ## Enter the ~~Dragon~~ CKA
 This is my blog post about taking on the CKA in the spirit of Bruce Lee based on his film [Enter the Dragon](https://www.imdb.com/title/tt0070034/?ref_=tt_sims_tt_i_4) a Kung Fu cult classic.
-The CKA was my dragon which I was determined to conquor which I did on 27 March 2023. I have shared my strategy and experience which I used to subdue the beast.
+The CKA was my dragon which I was determined to conquer which I did on 27 March 2023. I have shared my strategy and experience which I used to subdue the beast.
+
+And if you are not into reading - [check out my video on the topic.](https://youtu.be/mrMPUK4MrzQ) 
 
 ## Strategy
 
@@ -40,7 +42,7 @@ I did the following:
 
 ## Keyboard Kung Fu
 
-I used the below commands alot!
+I used the below commands a lot!
 
 ```
 kubectl create
@@ -50,7 +52,7 @@ kubectl replace --force -f
 kubectl get
 ```
 
-Get very familiar with the Kubernetes cheatsheet so that you can practice commands and get innovative with some of the examples.
+Get very familiar with the Kubernetes cheat sheet so that you can practice commands and get innovative with some of the examples.
 For example this one below is fantastic to figure out your JSON path query.
 
 #### Produce a period-delimited tree of all keys returned for nodes | Helpful when locating a key within a complex nested JSON structure
