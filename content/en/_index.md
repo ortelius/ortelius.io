@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">Unlock Your Supply Chain Intelligence Trapped Across Siloed Containers</h1>
+<h1 class="text-left">An Evidence Store for Supply Chain and DevOps Intelligence</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -20,7 +20,7 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-Ortelius is a unified catalog of supply chain evidence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
+Ortelius is an evidence store that centralizes supply chain intelligence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
 
  The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.  Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Microservice Catalog](https://www.deployhub.com/).
 <p></p>
