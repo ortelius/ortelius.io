@@ -44,6 +44,7 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 - **Ortelius General Community Meeting** – this is an ‘all hands’ meeting giving the SIGs an opportunity to share their progress.
 - **Architecture and Marketplace SIG** – This group is driven to help define the future roadmap of Ortelius including a global marketplace for sharing microservices and their deployment requirements.
 - **Ortelius Outreach SIG** – This group wants to help with driving adoption and messaging of the Ortelius platform.
+- **Emporous Community Meeting** - This meeting focuses on the Emporous Universal Object Reference, the backend to Ortelius. 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
