@@ -6,10 +6,10 @@ menu:
   main:
    weight: 100
 ---
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">May 19th - Ortelius Visionaries Summit</h2>
+<h2 class="col-center">May 19th - Ortelius Visionaries Summit - Now On Demand</h2>
 <br>
 
 <img src="/images/ortelius-visionaries-banner-May23.png" alt="Ortelius Visionaries Summit" height="350px" width="550px" />
@@ -22,40 +22,9 @@ menu:
 
 <h2>A remote celebration of the Ortelius Community</h2>
 
-On May 19th, the Ortelius community will come together, celebrate individuals who have been awarded recognition badges, and share knowledge on supply chain, microservices, and the need for a centralized catalog. 
+On May 19th, the Ortelius community celebrated individuals who have been awarded recognition badges, and shared knowledge on supply chain, microservices, and the need for a centralized catalog. 
 
-We start with our "Beer and Donuts" Zoom gathering, and finish on the Ortelius Twitch channel for presentations, networking and games. Hope to see you there. 
-
-[Get the full Details](https://ortelius.io/blog/2023/03/21/ortelius-microservice-visionaries-2023/)
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color="white" >}}
-{{< blocks/feature_dual >}}
-<div class="col-center">
-<h2 class="col-center">Feb 1st - April 15th Ortelius BlogAthon</h2>
-<br>
-
-<img src="/images/blogathon2023.png" alt="Ortelius Blog-A-Thon" height="350px" width="350px" />
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-<br>
-
-<h2>Share your thoughts and earn Ambassador Recognition badges.</h2>
-
-Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog?
-
-Or maybe you have some tips and tricks for implementing Ortelius, or contributing. If so, join the Ortelius BlogAthon from February 1st through April 15.
-
-We are looking for Blogs on:
-
-- Help for new contributors to become productive members of the Ortelius open source community;
-- Help for new open source users to adopt the Ortelius platform;
-- Educate the community on general supply chain, security and DevOps topics related to a microservices architecture.
-
-[Get the full Details](https://ortelius.io/blog/2023/01/18/2023-blogathon/)
+[View on Demand.](https://ortelius.io/blog/2023/03/21/ortelius-microservice-visionaries-2023/)
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
