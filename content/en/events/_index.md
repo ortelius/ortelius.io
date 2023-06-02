@@ -95,11 +95,6 @@ Securing your organization from cyber hacks is not just the job of production te
 {{< blocks/feature_dual >}}
 
 
-
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-
 <h2>Community Meetings</h2>
 <hr>
 
