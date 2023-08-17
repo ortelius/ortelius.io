@@ -66,12 +66,12 @@ Our mission is to defend the software supply chain by federating open-source sof
 {{% blocks/table_center %}}
  |
 --- | -----------
-Component ownership. | <i class="fas fa-3x fa-check-square"></i>
-Logical application versioning. | <i class="fas fa-3x fa-check-square"></i>
-Component blast radius. | <i class="fas fa-3x fa-check-square"></i>
-Component 'Drift' reporting. | <i class="fas fa-3x fa-check-square"></i>
-Component inventory usage across all clusters. | <i class="fas fa-3x fa-check-square"></i>
-Component key value pairs management. | <i class="fas fa-3x fa-check-square"></i>
+Federated SBOMs | <i class="fas fa-3x fa-check-square"></i>
+Domain Security Profiles | <i class="fas fa-3x fa-check-square"></i>
+Blast Radius Reporting | <i class="fas fa-3x fa-check-square"></i>
+Component 'Drift' Analysis | <i class="fas fa-3x fa-check-square"></i>
+Open-Source Package Transparency | <i class="fas fa-3x fa-check-square"></i>
+Component Versioning | <i class="fas fa-3x fa-check-square"></i>
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
 
@@ -80,12 +80,12 @@ Component key value pairs management. | <i class="fas fa-3x fa-check-square"></i
 
  |
 --- | -----------
-Application Level SBOM Reporting. | <i class="fas fa-3x fa-check-square"></i>
-Application Level CVE Reporting. | <i class="fas fa-3x fa-check-square"></i>
-Supports hybrid environments. | <i class="fas fa-3x fa-check-square"></i>
-Integration with Deployment Engines. | <i class="fas fa-3x fa-check-square"></i>
-Integrates into DevOps Pipelines. | <i class="fas fa-3x fa-check-square"></i>
-Easily extendable.  | <i class="fas fa-3x fa-check-square"></i>
+Centralized Security Insights | <i class="fas fa-3x fa-check-square"></i>
+Federated CVE Reporting | <i class="fas fa-3x fa-check-square"></i>
+Supports hybrid environments | <i class="fas fa-3x fa-check-square"></i>
+Integration with Deployment Engines | <i class="fas fa-3x fa-check-square"></i>
+Integrates into DevOps Pipelines | <i class="fas fa-3x fa-check-square"></i>
+Easily extendable  | <i class="fas fa-3x fa-check-square"></i>
 
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
