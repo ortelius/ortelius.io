@@ -20,7 +20,9 @@ description: Welcome to the Ortelius Open Source Project Site
 <hr>
 </div>
 
-Ortelius is an evidence store that centralizes supply chain intelligence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
+Today’s software security tools gather data for mostly low-level ‘objects’ causing critical AI intelligence to be stored across siloed logs and tools. There is currently no way to consolidate the intelligence of multiple security tools for building AI threat models, generating pipelines or automating a rapid response system. 
+
+Our mission is to defend the software supply chain by federating open-source software security intelligence creating AI threat models and a rapid response system designed for both consumers and producers of publicly shared  software. Ortelius is an evidence store that federates supply chain and DevOps intelligence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications, organizational Domains, and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
 
  The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.  Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Microservice Catalog](https://www.deployhub.com/).
 <p></p>
