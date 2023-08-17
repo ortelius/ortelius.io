@@ -15,12 +15,18 @@ author: Steve Taylor
 
 GitHub Sponsorship program is used to pay folks for work they do on issues tagged with a _Bounty_.
 
-- Login into GitHUb and click on your Profile Icon, then select _Your Sponsors_.
-    ![Your Sponsors](/images/gh-step1.png)
-- Select _Dashboard_
-    ![Dachboard](/images/gh-step2.png)
-- Complete the _Profile_ and _Setting_ sections.  The _Profile_ is used to describe your background.  The _Settings_ is where you link GitHub to Stripe and Stripe to your bank account.
-    ![Dachboard](/images/gh-step3.png)
+- Login into GitHub and click on your Profile Icon, then select _Your sponsors_ with the heart logo.
+    {{< figure src="/images/gitsponsor1-menu.png" caption="Your Sponsors" >}}
+- Select _Join the waitlist_
+    {{< figure src="/images/gitsponsor2-waitlist.png" caption="Join the waitlist" >}}
+- Complete _Country or region of residence_ and _How you recieve payments_, then select _Join waitlist_.
+    {{< figure src="/images/gitsponsor3-setupregionandbanking.png" caption="Join waitlist" >}}
+- Complete the bullet points by selecting the blue link in each line. 
+    {{< figure src="/images/gitsponsor4-todolist.png" caption="Todo List" >}}
+- When all steps are completed select _Request approval_.
+    {{< figure src="/images/gitsponsor5-requestapproval.png" caption="Request approval" >}}
+- Completion should look as follows
+    {{< figure src="/images/gitsponsor5-completed.png" caption="Pending approval" >}}
 
 ## Payouts
 
