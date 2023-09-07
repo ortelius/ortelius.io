@@ -6,7 +6,7 @@ author: Tracy Ragan
 ---
 
 <div class="col-left">
-<img src="/images/blog/hacktoberfest_2022.svg" alt="Hacktoberfest 2022" height="235px" width="470px" />
+<img src="/images/blog/hacktoberfest2023.png" alt="Hacktoberfest 2022" height="235px" width="470px" />
 </div>
 <p></p>
 
