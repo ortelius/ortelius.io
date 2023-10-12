@@ -116,7 +116,7 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 <h2>Meeting Calendar</h2>
 <hr>
 <div>
-<iframe style="border: 0px; opacity: 1; visibility: visible;" src="https://calendar.google.com/calendar/embed?src=c_vjebhusp537ftgsu6qiboiphcg%40group.calendar.google.com&amp;ctz=America%2FDenver" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+<iframe style="border: 0px; opacity: 1; visibility: visible;" src="https://calendar.google.com/calendar/u/0?cid=b3J0ZWxpdXNvcGVuc291cmNlQGdtYWlsLmNvbQ" width="600" height="400" frameborder="0" scrolling="no"></iframe>
 </div>
 
 {{< /blocks/feature_dual >}}
