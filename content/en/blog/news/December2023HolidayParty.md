@@ -34,7 +34,7 @@ Suggestions for Lightning talks include:
 - What is on the 2024 Ortelius Roadmap
 - What is on the 2024 Emporous Roadmap
 
-We look forward to hearing your lightning talks. Remember, everyone is welcome to participate. The Holiday gathering is a great way to do your first presentation, so be brave, submit a talk. Your voice is important. 
+We look forward to hearing your lightning talks. Remember, everyone is welcome to participate. The Holiday gathering is a great way to do your first presentation, so be brave, submit a talk. Your voice is important. The Ortelius team will use your lightning talk for social media post through 2024. 
 
 
 
