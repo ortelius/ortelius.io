@@ -53,7 +53,7 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 <h2>Meeting Calendar</h2>
 <hr>
 <div>
-<iframe src="https://calendar.google.com/calendar/embed?src=orteliusopensource%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe style="border: 0px; opacity: 1; visibility: visible;" src="https://calendar.google.com/calendar/u/0?cid=b3J0ZWxpdXNvcGVuc291cmNlQGdtYWlsLmNvbQ" width="600" height="400" frameborder="0" scrolling="no"></iframe>
 </div>
 
 
