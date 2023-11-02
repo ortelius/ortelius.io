@@ -31,5 +31,21 @@ Board Advisor
 <img src="/images/2023gb.png" alt="Ortelius 2022 Governing Board" height="685px" width="1328px" />
 </div>
 <p></p>
+
+
+## 2023 Technology Oversight Committee
+The Ortelius Technology Oversight Commitee is responsible for facilitating communication and collaboration across the Ortelius committers and making recommendations for architectual and process updates. [Learn more](https://github.com/ortelius/ortelius-toc/blob/main/README.md/). 
+
+- [Vincent Danen](https://www.linkedin.com/in/vdanen/) - Vice President, Red Hat Product Security, Canada
+- [Brian Fox](https://www.linkedin.com/in/brianefox/) - Co-Founder, CTO Sonatype, USA
+- [Adam Gardner](https://www.linkedin.com/in/agardner1/) - DevRel - Open Observability and Security, Dynatrace, Austrailia
+- [Garima Bajpai](https://www.linkedin.com/in/garimabajpai/)  - Founder, DevOps Canada Community of Practice, Canada
+- [Steve Taylor](https://www.linkedin.com/in/steve-taylor-oms/)  - CTO DeployHub, Inc., USA
+
+<div class="col-center">
+<img src="/images/tocboard.png" alt="Ortelius TOC Board" height="270px" width="1250px" />
+</div>
+<p></p>
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
