@@ -82,7 +82,7 @@ Aggregated security profiles give CISO teams a comprehensive view of the organiz
 Ortelius has an active and growing community with 275 members, 800 LinkedIn Followers, and 70 GitHub Contributors, averaging 200 Pull Requests per year, equaling over 30,000 person-hours of contributed code. Learn more about Ortelius and the Ortelius project at Ortelius.io.
 
 ## More Learning
-To learn more about supply chain security, visit the OpenSSF and the NIST Cybersecurity Framework. The OpenSSF is committed to advancing open-source security through community collaboration. The OpenSSF is home to Sigstore, the OpenSSF Security Score Card, and SLSA.  
+To learn more about supply chain security, visit the [OpenSSF](https://openssf.org/) and the [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework). The OpenSSF is committed to advancing open-source security through community collaboration. The OpenSSF is home to Sigstore, the OpenSSF Security Score Card, and SLSA.  
 
 The NIST Cybersecurity Framework helps organizations better understand and improve their management of cybersecurity risks. NIST is also home to the National Vulnerability Database. 
 
