@@ -19,7 +19,7 @@ On December 8, 2023, 9AM MT, the Ortelius community will host their 2nd 'Holiday
 
 Agenda:
 - 9:00 - 9:30 Beer and Donuts - Award Recognition for top performers in Outreach and Architecture
-- 9:30 -10:00 Juice Shop - Steve Taylor to host a walkthrough of Juice Shop. You get to help in find the Security flaws. [Download Juice Shop](https://owasp.org/www-project-juice-shop/) and Work along side Steve to find the top ten website vulnerabilities. 
+- 9:30 -10:00 Juice Shop - Steve Taylor to host a walkthrough of Juice Shop. You get to help in find the Security flaws. [Download Juice Shop](https://owasp.org/www-project-juice-shop/) and work along side Steve to find the top ten website vulnerabilities. 
 - 10:10 - 12:00 Twitch Games and Lightning talks. 
 
 Lightning talks:
