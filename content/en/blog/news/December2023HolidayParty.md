@@ -12,30 +12,20 @@ author: Tracy Ragan
 
 ## Celebrating our Amazing Community of Committers
 
-On December 9, 2023 the Ortelius community will host their 2nd 'Holiday Gathering' to celebrate the community committers of Ortelius. The celebration with start with Beer and Donuts hosted on Zoom, followed by lightning talks and games, hosted on the Ortelius Twitch channel.
+On December 8, 2023, 9AM MT, the Ortelius community will host their 2nd 'Holiday Gathering' to celebrate the community committers of Ortelius. The celebration with start with Beer and Donuts hosted on Zoom, followed by lightning talks and games, hosted on the Ortelius Twitch channel.
 
 - Join the [Ortelius Development Google Group](https://groups.google.com/g/ortelius-dev) to be given access to the Zoom invite for Beer and Donuts.
 - Visit the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos) to participate in games and hear Lightning talks
 
 Agenda:
 - 9:00 - 9:30 Beer and Donuts - Award Recognition for top performers in Outreach and Architecture
-- 9:45 - 11:00 Twitch Games and Lightning talks. (Presenter TBA)
+- 9:30 -10:00 Juice Shop - Steve Taylor to host a walkthrough of Juice Shop. You get to help in find the Security flaws. [Download Juice Shop](https://owasp.org/www-project-juice-shop/) and Work along side Steve to find the top ten website vulnerabilities. 
+- 10:10 - 12:00 Twitch Games and Lightning talks. 
 
-Call for lightining talks is now open. If you are interested, please send an email to tracyragan@deployhub.com with your topic proposal. 
+Lightning talks:
 
-Suggestions for Lightning talks include:
-
-- Aggregating SBOM data to the "logical application"
-- Ortelius's Central Evidence Store and ML Workflows
-- Using Pulami to install Ortelius and Emporous
-- A Universal Object Repository - why it is important
-- Why Open-Source Projects are Important for Shared Learning
-- A review of Ortelius in 2023
-- What is on the 2024 Ortelius Roadmap
-- What is on the 2024 Emporous Roadmap
-
-We look forward to hearing your lightning talks. Remember, everyone is welcome to participate. The Holiday gathering is a great way to do your first presentation, so be brave, submit a talk. Your voice is important. The Ortelius team will use your lightning talk for social media post through 2024. 
-
-
-
+- Utkarsh Sharma - Defining a Workflow Classification using a Machine Learning Model for the Ortelius Software Supply Chain Management catalog.
+- Garima Bajpai - Strategizing Continuous Delivery in Cloud
+- Steve Taylor -  Federated Security Compliance Reports 
+- Tracy Ragan - Federated SBOMs
 
