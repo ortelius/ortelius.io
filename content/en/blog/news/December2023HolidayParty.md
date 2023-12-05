@@ -25,7 +25,7 @@ Agenda:
 Lightning talks:
 
 - Utkarsh Sharma - Defining a Workflow Classification using a Machine Learning Model for the Ortelius Software Supply Chain Management catalog.
-- Garima Bajpai - Strategizing Continuous Delivery in Cloud
+- Garima Bajpai - DevOps with Data - Shooting for the Moon - Space Technology 
 - Steve Taylor -  Federated Security Compliance Reports 
 - Tracy Ragan - Federated SBOMs
 
