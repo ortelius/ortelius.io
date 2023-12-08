@@ -9,10 +9,10 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">December 9th, 2023 - Ortelius Holiday Gathering</h2>
+<h2 class="col-center">December 8th, 2023 - Ortelius Holiday Gathering</h2>
 <br>
 
-<img src="/images/ortelius-holiday-gathering-12-2023.png" alt="Ortelius Holiday Gathering" height="350px" width="550px" />
+<img src="/images/Utkarsh-GoldBadge.png" alt="Utkarsh Sharma Gold Legend" height="350px" width="550px" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -22,7 +22,16 @@ menu:
 
 <h2>A Holiday celebration of the Ortelius Community</h2>
 
-Join the Ortelius community to celebrate individuals who have been awarded recognition badges, attend Ortelius contributor lighting talks, and play twitch games with fellow contributors. Hosted on Zoom and the Ortleius Twitch Channel.
+[View the Beer and Donuts Gathering](https://youtu.be/DVqReJImonE). Big announcement was made. Utkarsh Sharma earned a Gold Legend Badge. This badge represents excellence in both code contribution and DevRel outreach. Congratulations Utkarsh. 
+
+Lightning Talks on Demand:
+
+- [Utkarsh Sharma taught us about Machine Learning and the direction for Ortelius.](https://youtu.be/VrO7jTissRU)
+- [Garima Bajpai taught us about the space industry and the driving need for DevOps and DevOps data.](https://youtu.be/4cderHu_6vU)
+- [Arvind Singharpuria taught us about Open Telemetry and Microservices. Nice job for his first solo presentation.](https://youtu.be/cDkiI6Eeit4)
+- [Sacha Wharton showed us how to build an open-source development platform using tools such as Control Plane, ZeroTeir, Kubernetes and other tools. (Late entry - was not shown).](https://youtu.be/7l_JwhYWp6k)
+
+In addition, Saim Safder interviewed Steve Taylor and Tracy Ragan for the [Beaming Ortelius Podcast. They discussed accomplishments for 2023.](https://www.buzzsprout.com/1774320/14115136 ) 
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
