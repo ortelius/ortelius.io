@@ -1,5 +1,5 @@
 ---
-date: 2023-10-16
+date: 2023-12-08
 title: "Ortelius Holiday Gathering December 2023"
 summary: Ortelius Holiday Gathering December 2023
 author: Tracy Ragan
@@ -10,22 +10,27 @@ author: Tracy Ragan
 </div>
 <p></p>
 
+Utkarsh-GoldBadge
+
 ## Celebrating our Amazing Community of Committers
 
-On December 8, 2023, 9AM MT, the Ortelius community will host their 2nd 'Holiday Gathering' to celebrate the community committers of Ortelius. The celebration with start with Beer and Donuts hosted on Zoom, followed by lightning talks and games, hosted on the Ortelius Twitch channel.
+On December 8, 2023, 9AM MT, the Ortelius community held their 2nd 'Holiday Gathering' to celebrate the community committers of Ortelius. The celebration started with "Beer and Donuts" hosted on Zoom, followed by lightning talks and games, hosted on the Ortelius Twitch channel.
 
-- Join the [Ortelius Development Google Group](https://groups.google.com/g/ortelius-dev) to be given access to the Zoom invite for Beer and Donuts.
-- Visit the [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos) to participate in games and hear Lightning talks
+[On-demand Viewing](https://youtu.be/DVqReJImonE)   
 
-Agenda:
-- 9:00 - 9:30 Beer and Donuts - Award Recognition for top performers in Outreach and Architecture
-- 9:30 -10:00 Juice Shop - Steve Taylor to host a walkthrough of Juice Shop. You get to help in find the Security flaws. [Download Juice Shop](https://owasp.org/www-project-juice-shop/) and work along side Steve to find the top ten website vulnerabilities. 
-- 10:10 - 12:00 Twitch Games and Lightning talks. 
+## Utkarsh Sharma Awarded Gold Legend Badge
 
-Lightning talks:
+Utkarsh Sharma, a core Ortelius contributor, earned the coveted Gold Legend Badge for his outstanding work in both the Champion and Ambassador Ortelius contributor programs. This badge is particularly difficult to earn as it requires achieving goals in both code and technical contributions as well as work in DevRel and community outreach. Congratulations Utkarsh for a job well done. 
 
-- Utkarsh Sharma - Defining a Workflow Classification using a Machine Learning Model for the Ortelius Software Supply Chain Management catalog.
-- Garima Bajpai - DevOps with Data - Shooting for the Moon - Space Technology 
-- Steve Taylor -  Federated Security Compliance Reports 
-- Tracy Ragan - Federated SBOMs
+<div class="col-center">
+<img src="/images/Utkarsh-GoldBadge.png" alt="Utkarsh Sharma" height="2000px" width="1000px" />
+</div>
+<p></p>
+
+Lightning talk on Demand Viewing:
+
+- Utkarsh Sharma - [Defining a Workflow Classification using a Machine Learning Model for the Ortelius Software Supply Chain Management catalog.](https://youtu.be/VrO7jTissRU)
+- Garima Bajpai - [DevOps with Data - Shooting for the Moon - Space Technology](https://youtu.be/4cderHu_6vU) 
+- Arvind Singharpuria -  [Open Telemetry and Microservices](https://youtu.be/cDkiI6Eeit4)
+- Sacha Wharton - [The Future of Open-Source Dev - You are the cloud.](https://youtu.be/7l_JwhYWp6k) 
 
