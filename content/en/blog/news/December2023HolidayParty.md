@@ -10,7 +10,6 @@ author: Tracy Ragan
 </div>
 <p></p>
 
-Utkarsh-GoldBadge
 
 ## Celebrating our Amazing Community of Committers
 
