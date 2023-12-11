@@ -12,7 +12,7 @@ author: Tracy Ragan
 
 # The Ortelius Community Congratulates Utkarsh Sharma, their First Contributor to Achieve Gold Legend Status
 
-The Ortelius community is pleased to congratulate Utkarsh Sharma, the first recipient of the Ortelius Gold Legend Recognition Award. Gold Legend is the highest award that can be achieved. In order to receive this recognition, Utkarsh had to first achieve Gold status in both the Champion and Ambassador levels, a task that requires extensive work in both coding and DevRel activities.
+The Ortelius community is pleased to congratulate [Utkarsh Sharma](https://www.linkedin.com/in/codewithutkarsh/), the first recipient of the Ortelius Gold Legend Recognition Award. Gold Legend is the highest award that can be achieved. In order to receive this recognition, Utkarsh had to first achieve Gold status in both the Champion and Ambassador levels, a task that requires extensive work in both coding and DevRel activities.
 
 Utkarsh has shown excellence in both code commitment, technical leadership and community outreach. Utkarsh is a core member of the Ortelius community. He has worked on the Ortelius blockchain architecture, and is now providing leadership in Machine Learning aspects of the Ortelius project. Utkarsh is and educator and mentor. He has presented at the Ortelius Visionaries Summit, and has taken leadership roles in many aspects of the Ortelius project. 
 
