@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">An Evidence Store for Supply Chain and DevOps Intelligence</h1>
+<h1 class="text-left">An Evidence Store for Aggregated Supply Chain and DevOps Intelligence</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -16,15 +16,17 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">A Comprehensive View of Your Organization's Security Profile</h1>
+<h1 class="text-center">Centralized DevOps and Security Evidence for Rapid Software Supply Chain Security Response </h1>
 <hr>
 </div>
 
-Today’s software security tools gather data for mostly low-level ‘objects’ causing critical AI intelligence to be stored across siloed logs and tools. There is currently no way to consolidate the intelligence of multiple security tools for building AI threat models, generating pipelines or automating a rapid response system. 
+Today’s software security tools gather data for mostly low-level objects, like containers, causing critical security intelligence to be fragmented and stored across siloed logs and tools. Responding to a software supply chain security threat requires consolidated evidence that shows where a high-risk vulnerability's impact across the entire organization. Ortelius continuously monitors updates to your organization's software supply chain, tracking open-source inventory, and providing insights on impact and usage. In addition, the  Ortelius historical trend analysis is the basis for tomorrow's threat modeling with automated rapid response.
 
-Our mission is to defend the software supply chain by federating open-source software security intelligence creating AI threat models and a rapid response system designed for both consumers and producers of publicly shared  software. Ortelius is an evidence store that federates supply chain and DevOps intelligence providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications, organizational Domains, and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
+The mission of the Ortelius community is to defend the software supply chain by leveraging the open-source software security intelligence already generated across the DevOps pipeline, and to create AI threat models for rapid supply chain attack response. 
 
- The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.  Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Microservice Catalog](https://www.deployhub.com/).
+Ortelius is an evidence store that federates supply chain and DevOps intelligence generated across the DevOps pipeline, providing an end-to-end view of an organization's security profile. Ortelius tracks and versions DevOps and security details for every component of your software supply chain. This data is then collected and aggregated to the 'logical' applications, organizational Domains, and deployed environments giving you a sweeping view of your organization's security insights. With Ortelius, you can easily answer the question, "where is Log4J running?"
+
+The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](http://cd.foundation/) (Linux Foundation). The Ortelius mission is to provide a comprehensive view of your organizations security profile using a world-class microservice catalog driven by a supportive and diverse global open source community.  Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Microservice Catalog](https://www.deployhub.com/).
 <p></p>
 {{< /blocks/section >}}
 
@@ -67,11 +69,11 @@ Our mission is to defend the software supply chain by federating open-source sof
  |
 --- | -----------
 Federated SBOMs | <i class="fas fa-3x fa-check-square"></i>
-Domain Security Profiles | <i class="fas fa-3x fa-check-square"></i>
-Blast Radius Reporting | <i class="fas fa-3x fa-check-square"></i>
+Decoupled Application Security Profiles | <i class="fas fa-3x fa-check-square"></i>
+OS Package Blast Radius Reporting | <i class="fas fa-3x fa-check-square"></i>
 Component 'Drift' Analysis | <i class="fas fa-3x fa-check-square"></i>
-Open-Source Package Transparency | <i class="fas fa-3x fa-check-square"></i>
-Component Versioning | <i class="fas fa-3x fa-check-square"></i>
+Open-Source Package Inventory by Environment and Application | <i class="fas fa-3x fa-check-square"></i>
+Software Supply Chain Change Tracking | <i class="fas fa-3x fa-check-square"></i>
 {{% /blocks/table_center %}}
 {{< /blocks/feature_dual >}}
 
@@ -80,11 +82,11 @@ Component Versioning | <i class="fas fa-3x fa-check-square"></i>
 
  |
 --- | -----------
-Centralized Security Insights | <i class="fas fa-3x fa-check-square"></i>
+Centralized SBOMs Insights | <i class="fas fa-3x fa-check-square"></i>
 Federated CVE Reporting | <i class="fas fa-3x fa-check-square"></i>
-Supports hybrid environments | <i class="fas fa-3x fa-check-square"></i>
-Integration with Deployment Engines | <i class="fas fa-3x fa-check-square"></i>
-Integrates into DevOps Pipelines | <i class="fas fa-3x fa-check-square"></i>
+Security Compliance Tracking | <i class="fas fa-3x fa-check-square"></i>
+Integration with Deployment Engine You Use | <i class="fas fa-3x fa-check-square"></i>
+Integrates into CI/CD | <i class="fas fa-3x fa-check-square"></i>
 Easily extendable  | <i class="fas fa-3x fa-check-square"></i>
 
 {{% /blocks/table_center %}}
