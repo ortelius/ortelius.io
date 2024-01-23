@@ -6,13 +6,14 @@ menu:
   main:
    weight: 100
 ---
+
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">December 8th, 2023 - Ortelius Holiday Gathering</h2>
+<h2 class="col-center">Ortelius 2024 BlogAThon, February 1st through April 1st, 2024</h2>
 <br>
 
-<img src="/images/Utkarsh-GoldBadge.png" alt="Utkarsh Sharma Gold Legend" height="350px" width="550px" />
+<img src="/images/blogathon2024.png" alt="blogathon2024" height="288px" width="312px" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -20,24 +21,56 @@ menu:
 
 <br>
 
-<h2>A Holiday celebration of the Ortelius Community</h2>
+It is that time of year to put on your thinking caps and submit a blog for the 3rd annual Ortelius BlogAThon. Pick a topic that you are passionate about related to:
+* Open-source Security
+* Supply Chain Management
+* Ortelius Architecture
+* Ortelius Tips and Tricks
+* Your experience as an open-source contributor on the Ortelius Project
+* Infrastructure for open-source projects
+* Challenges of decoupled architectures, microservices
+* Machine Learning and AI related to DevOps and Supply Chain data
 
-[View the Beer and Donuts Gathering](https://youtu.be/DVqReJImonE). Big announcement was made. Utkarsh Sharma earned a Gold Legend Badge. This badge represents excellence in both code contribution and DevRel outreach. Congratulations Utkarsh. 
+Get your Blogs in by April 1st, 2024. The annual BlogAThon is a great way to earn [Ortelius Recognition Award points](https://ortelius.io/blog/2021/04/19/ortelius-community-recognition-program/) for the Ortelius Ambassador Category.
 
-Lightning Talks on Demand:
+[Learn More](https://ortelius.io/blog/2024/01/23/2024-blogathon/)
 
-- [Utkarsh Sharma taught us about Machine Learning and the direction for Ortelius.](https://youtu.be/VrO7jTissRU)
-- [Garima Bajpai taught us about the space industry and the driving need for DevOps and DevOps data.](https://youtu.be/4cderHu_6vU)
-- [Arvind Singharpuria taught us about Open Telemetry and Microservices. Nice job for his first solo presentation.](https://youtu.be/cDkiI6Eeit4)
-- [Sacha Wharton showed us how to build an open-source development platform using tools such as Control Plane, ZeroTeir, Kubernetes and other tools. (Late entry - was not shown).](https://youtu.be/7l_JwhYWp6k)
+[Learn how to Submit a Blog](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/)
 
-In addition, Saim Safder interviewed Steve Taylor and Tracy Ragan for the [Beaming Ortelius Podcast. They discussed accomplishments for 2023.](https://www.buzzsprout.com/1774320/14115136 ) 
+[View the Ortelius Blog Repo](https://github.com/ortelius/outreach/issues) and assign yourself to a topic.
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 
+
 {{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+<div class="col-center">
+<h2 class="col-center">cdCon 2024, April 16th-18th, Seattle WA</h2>
+<br>
+
+<img src="/images/cdcon2024.png" alt="cdcon2024" height="168px" width="384px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<br>
+
+Join the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers for a three-day experience as we improve the world’s capacity to deliver software with security and speed.
+
+cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon is part of Open Source Summit North America, along with many other great events.
+
+This event is co-located with Open Source Summit North America. Plan to attend on April 16–18, 2024 in Seattle, Washington.
+
+[Register for Open Source Summit and cdCon 2024](https://cd.foundation/cdcon-2024/)
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 
@@ -69,7 +102,7 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="primary" >}}
 
 {{< blocks/feature_dual >}}
 <h2>On-Demand</h2>
@@ -119,7 +152,7 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 <div class="col-12">
 <h2>Zoom Background Images</h2>
 <hr>
