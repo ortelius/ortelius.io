@@ -1,13 +1,13 @@
 ---
 title: Supply Chain Data and DevOps Intelligence Dashboard
-description: Supply Chain Data in Ortelius
-summary: Supply Chain Data and DevOps Intelligence Dashboard
+description: Ortelius Aggregates Supply Chain Data Across the Pipeline
+summary: Use the Evidence You Already Collect
 type: contributor
 ---
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">Supply Chain Data and DevOps Intelligence for Hardening Cybersecurity</h1>
+<h1 class="text-center">Aggregated Security and DevOps Intelligence Across the Organization</h1>
 <hr>
 
 Ortelius is your go to place for DevOps and Security intelligence. The Ortelius evidence store and dashboard collects and displays as much data as possible from the DevOps Pipeline process. DevOps and Security data is fragmented across tools and left in the underlying build directory where the DevOps pipeline was executed. Most of the data is collected for one container at a time, making it difficult to see a complete software application's security profile, CVEs and SBOMs. By aggregating the data, Ortelius provides critical software supply chain intelligence needed for rapidly responding to cyber threats. Most important, Ortelius shows your open-source usage and details across the organization with ['logical applications'](/microservicemapping/ mapping. Some of the data collected by Ortelius includes:
