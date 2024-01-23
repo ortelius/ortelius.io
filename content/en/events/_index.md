@@ -33,7 +33,7 @@ It is that time of year to put on your thinking caps and submit a blog for the 3
 
 Get your Blogs in by April 1st, 2024. The annual BlogAThon is a great way to earn [Ortelius Recognition Award points](https://ortelius.io/blog/2021/04/19/ortelius-community-recognition-program/) for the Ortelius Ambassador Category.
 
-[Learn More](https://ortelius.io/blog/2024/01/23/2024-blogathon/)
+[Learn More](https://ortelius.io/blog/2024/01/12/2024-blogathon/)
 
 [Learn how to Submit a Blog](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/)
 
