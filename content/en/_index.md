@@ -60,37 +60,27 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 <div class="col-12">
-<h1 class="text-center">Ortelius Features</h1>
+<h1 class="text-center">Ortelius Integrations:</h1>
 <hr>
 <p></p>
 </div>
-{{< blocks/feature_dual >}}
-{{% blocks/table_center %}}
- |
---- | -----------
-Federated SBOMs | <i class="fas fa-3x fa-check-square"></i>
-Decoupled Application Security Profiles | <i class="fas fa-3x fa-check-square"></i>
-OS Package Blast Radius Reporting | <i class="fas fa-3x fa-check-square"></i>
-Component 'Drift' Analysis | <i class="fas fa-3x fa-check-square"></i>
-Open-Source Package Inventory by Environment and Application | <i class="fas fa-3x fa-check-square"></i>
-Software Supply Chain Change Tracking | <i class="fas fa-3x fa-check-square"></i>
-{{% /blocks/table_center %}}
-{{< /blocks/feature_dual >}}
 
-{{< blocks/feature_dual >}}
-{{% blocks/table_center %}}
+<div class="col-sm"></div>
 
- |
---- | -----------
-Centralized SBOMs Insights | <i class="fas fa-3x fa-check-square"></i>
-Federated CVE Reporting | <i class="fas fa-3x fa-check-square"></i>
-Security Compliance Tracking | <i class="fas fa-3x fa-check-square"></i>
-Integration with Deployment Engine You Use | <i class="fas fa-3x fa-check-square"></i>
-Integrates into CI/CD | <i class="fas fa-3x fa-check-square"></i>
-Easily extendable  | <i class="fas fa-3x fa-check-square"></i>
+<div class="col-sm">
+
+{{% blocks/table_center %}}
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Syft | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">OSV.dev  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">SonarQube</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">VeraCode</p>| <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Jenkins</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Tekton</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Helm</p> | <i class="fas fa-3x fa-check-square"></i> |
+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Spinnaker | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Swagger</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">DORA</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">GitHub</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Jira</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Slack</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Hipchat</p> | <i class="fas fa-3x fa-check-square"></i> |
 
 {{% /blocks/table_center %}}
-{{< /blocks/feature_dual >}}
+</div>
+<div class="col-sm"></div>
 {{< /blocks/section >}}
 
 {{< blocks/section color=primary >}}
