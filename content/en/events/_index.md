@@ -21,7 +21,7 @@ menu:
 
 <br>
 
-It is that time of year to put on your thinking caps and submit a blog for the 3rd annual Ortelius BlogAThon. Pick a topic that you are passionate about related to:
+It is that time of year to put on your thinking caps and submit a blog for the 4th annual Ortelius BlogAThon. Pick a topic that you are passionate about related to:
 * Open-source Security
 * Supply Chain Management
 * Ortelius Architecture

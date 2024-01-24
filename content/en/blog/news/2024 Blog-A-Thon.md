@@ -12,7 +12,7 @@ author: Tracy Ragan
 
 ## 2024 BlogAThon
 
-Whether you are new to open source or an expert at it, the Ortelius BlogAThon is a way for you to create meaningful content to educate and inform others. The goal of the Ortelius BlogAThon is to:
+Join the Ortelius community for the 4th annual BlogAThon. Whether you are new to open source or an expert at it, the Ortelius BlogAThon is a way for you to create meaningful content to educate and inform others. The goal of the Ortelius BlogAThon is to:
 
 * Help new contributors become productive members of the Ortelius open source community;
 * Help new open source users adopt the Ortelius platform;
