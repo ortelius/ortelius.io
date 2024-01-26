@@ -44,7 +44,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 <div class="col-12">
-<h1 class="text-center">Learn More </h1>
+<h1 class="text-center">Learn More: </h1>
 <hr>
 <p></p>
 </div>
@@ -60,7 +60,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 <div class="col-12">
-<h1 class="text-center">Ortelius Integrations</h1>
+<h1 class="text-center">Ortelius Integrations Include:</h1>
 
 <hr>
 
@@ -68,17 +68,14 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 <div class="col-sm"></div>
 
-<div class="col-sm">
+<div class="col-sm" style="text-wrap:nowrap">
 
 {{% blocks/table_center %}}
 
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Syft | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">OSV.dev  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">SonarQube</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">VeraCode</p>| <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Jenkins</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Tekton</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Helm</p> | <i class="fas fa-3x fa-check-square"></i> |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | 
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-cyclonedx-syft/) | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Swagger](https://docs.ortelius.io/guides/userguide/integrations/swagger/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Dora Metrics](https://docs.ortelius.io/guides/userguide/integrations/dora/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Deployment Engines](https://docs.ortelius.io/guides/userguide/integrations/intro-to-deployment-integrations/)</p> | <i class="fas fa-3x fa-check-square"></i>  |
 
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Spinnaker | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Swagger</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">DORA</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">GitHub</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Jira</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Slack</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">Hipchat</p> | <i class="fas fa-3x fa-check-square"></i> |
 
 {{% /blocks/table_center %}}
 </div>
@@ -92,7 +89,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 <div class="col-12">
 
 
-<h1 class="text-center">Get Involved</h1>
+<h1 class="text-center">Get Involved:</h1>
 <hr>
 <p></p>
 </div>
