@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">An Evidence Store for Aggregated Supply Chain and DevOps Intelligence</h1>
+<h1 class="text-left">A Central Evidence Store to Make Software Security and DevOps Intelligence Actionable</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -29,7 +29,7 @@ The mission of the Ortelius community is to defend the software supply chain by 
 
 With Ortelius, you can easily answer the question, "where is Log4J running?"
 
-The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](cd.foundation), part of the Linux Foundation. Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Software Supply Chain Security Platform](www.deployhub.com). 
+The latest version of Ortelius is maintained by the Ortelius Community managed by the [Continuous Delivery Foundation](cd.foundation), part of the Linux Foundation. Corporate support comes from DeployHub with 80% of the codebase from DeployHub's [Software Supply Chain Security Platform](www.deployhub.com).
 
 </div>
 {{< /blocks/feature_dual >}}
