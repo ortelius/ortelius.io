@@ -23,9 +23,10 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="margin-top:80px;margin-left:140px">
 
-Generating security insights like SBOMs is not enough to harden your software supply chain. Consumption and analysis of the data is needed to rapidly respond to supply chain threats. IT teams struggle to respond to threats when this critical security intelligence is fragmented across tools and DevOps Pipelines. Without centralized insights it is impossible to know where a particular high-risk vulnerability is running across the entire organization because the data is managed at the container level.
+The mission of the Ortelius community is to expose weak links in the software supply chain by continuously gathering and analyzing software supply chain intelligence introduced across the DevOps pipeline.
+Generating security insights like SBOMs is not enough to harden your software supply chain. Consumption and analysis of the data is needed to rapidly respond to supply chain threats.
 
-The mission of the Ortelius community is to defend the software supply chain by leveraging the open-source software security intelligence already generated across the DevOps pipeline using a central evidence store. In addition, Ortelius's centralized data is the catalyst for software supply chain threat modeling. 
+IT teams struggle to respond to threats when critical security intelligence is fragmented across tools and managed at the container level. Ortelius gathers and aggregates security and DevOps intelligence, tracking open-source inventory and vulnerabilities at the higher organizational levels including logical applications, runtime environments and organizational domains. 
 
 With Ortelius, you can easily answer the question, "where is Log4J running?"
 
