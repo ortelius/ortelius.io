@@ -11,7 +11,7 @@ author: Tracy Ragan
 <p></p>
 
 
-## A free online, half-day micro-conference for DevOps and Security Professionals
+## A Free Online, Half-Day Micro-Conference for DevOps and Security Professionals
 
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level!
 
@@ -27,7 +27,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 - Attend for free (Hosted by the Ortelius Open-Source Community)
 - Join Live or View On-Demand
 
-## Who should attend:
+## Who Should Attend:
 - DevOps Engineers
 - CISO Teams
 - Security Engineers
@@ -53,7 +53,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 
 ## Agenda
 
-### Join us on Zoom 
+### Join Us on Zoom 
 [Registration Required](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
 
 8:30 Beer and Donuts Networking - Meet the Ortelius Contributors
@@ -66,7 +66,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 
 9:50 Break 
 
-### Join us on Twitch 
+### Join Us on Twitch 
 [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
 
 10:00 - 11:00  Presentation and Lighting Talks
