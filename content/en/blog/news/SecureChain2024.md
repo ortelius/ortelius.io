@@ -6,7 +6,7 @@ author: Tracy Ragan
 ---
 
 <div class="col-center">
-<img src="/images/supplychain banner.png" alt="SecureChainCon" height="530px" width="786px" />
+<img src="/images/supplychainbanner.png" alt="SecureChainCon" height="530px" width="786px" />
 </div>
 <p></p>
 
