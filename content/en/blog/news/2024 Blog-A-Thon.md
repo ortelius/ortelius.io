@@ -26,7 +26,7 @@ Everyone is invited to participate. Individuals who submit one accepted blog wil
 
 The BlogAThon will be held February 1st and run through April 1st. Blogs will be reviewed by the Ortelius Outreach committee to determine their qualifications or need to be pushed back to the author for updates. 
 
-Learn How to [Submit a Blog](http://localhost:1313/blog/2023/03/08/how-to-submit-blogs-to-ortelius/).
+Learn How to [Submit a Blog](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/).
 
 View the Blog Issues in [GitHub](https://github.com/ortelius/outreach/issues).
 
