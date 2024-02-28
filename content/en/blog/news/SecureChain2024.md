@@ -32,6 +32,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 - DevOps Engineers
 - CISO Teams
 - Security Engineers
+- Open Source Project Office
 - Developers 
 
 ## Key Takeaways:

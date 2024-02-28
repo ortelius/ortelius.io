@@ -53,7 +53,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 Join us for SecureChainCon 2024, <strong>the ultimate free, online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
 
 Why You Should Attend:
-- Connect and share with your Peers
+- Connect and share with your peers
 - Hear presentations by expert practitioners
 - Learn about supply chain security in decoupled architectures.
 - Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
