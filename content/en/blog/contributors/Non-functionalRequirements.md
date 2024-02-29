@@ -13,7 +13,7 @@ author: Kate Scarcella, Jing Chen and Tony Carrato
 
 In the modern DevSecOps world, we are often building the system (plane) as it is flying; at least that is the saying. The point of this adage is that we often build as we go and without any documentation, including making sure that we’ve thought through and are keeping track of our requirements. The IT industry is hardly new and there is a hope that we will be better at documenting, that includes diagrams to help us not only technically but also with purpose. We’re going to discuss this, with a focus on the Ortelius open source project.
 
-<h2 class="text-left">Why Ortelius and what is the objective?</h2>
+<h2 class="text-left">Why Ortelius and What is the Objective?</h2>
 <hr>
 
 The name for Ortelius came from a man who is known for creating the first Atlas, Abraham Ortelius. The name of the Atlas, Theatrum Orbis Terrarum (Theatre of the World), was published on May 20, 1570. His Atlas disrupted the way the world was seen. The Ortelius project is creating a console which will help users to see the vulnerabilities within software systems, and provide greater visibility into which components, usually libraries and microservices, are being used to an organization. Different business users will be provided different views, much like an Atlas that will give you an overall view, however, if you spin the globe around, you can be given a deeper dive to where you may want to go. 
