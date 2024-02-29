@@ -79,7 +79,7 @@ Join us on for this amazing online mind share and take your DevSecOps skills to 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Submit to Speak at SecureChainCon-</h2>
+<h2 class="text-center">Submit to Speak at SecureChainCon</h2>
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
