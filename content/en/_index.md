@@ -64,6 +64,13 @@ Join us on for this amazing online mind share and take your DevSecOps skills to 
 
 [Learn More](https://ortelius.io/blog/2024/02/26/securechaincon-2024/)
 
+Submit a talk - 
+[Submit a Talk Today](https://sessionize.com/securechaincon2024)
+
+CFP for SecureChainCon is open through March 25th.
+
+<a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
+
 </div>
 {{< /blocks/feature_dual >}}
 
