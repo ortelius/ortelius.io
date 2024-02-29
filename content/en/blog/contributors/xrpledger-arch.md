@@ -82,7 +82,9 @@ Data persisted and analyzed (not limited to this list):
 - Component Version Creation
 - Component Aggregation (Logical Application)
 
-### Non-Functional Requirements - How it Works
+### Non-Functional Requirements
+
+#### How it Works
 
 The Web front-end is where the end user will interact to persist and consume the data stored in the back-end databases. The user can create, retrieve, and update the data using the front end. However, deleting data is impossible since the blockchain ledger keeps all transactions. Therefore, the end user will use an Archived Tag to delete data, which hides the old data.
 
@@ -105,6 +107,10 @@ Ortelius UI delivers responses within the expected timeframe of less than 5 seco
 #### Scalability
 
 Ortelius must ensure seamless scalability to accommodate a growing user base and increasing data volume, with the ability to dynamically scale the UI and database independently. The UI should scale horizontally using Kubernetes and Cloud Infrastructure, while the database should be scalable through the addition of database cluster resources. The system must efficiently handle unlimited disk storage, persisted indefinitely using NFT storage. Additionally, ArangoDB caching mechanisms should be optimized for high-performance, ensuring that frequently accessed data is efficiently cached, and data absent in the cache is seamlessly retrieved from NFT Storage without compromising system responsiveness.
+
+#### Reliability
+
+Zero-downtime rolling updates: The system must support rolling updates without any service downtime. During updates, the cached data can be deleted and repopulated based on access from the NFT Storage. In the event of NFT Storage becoming inaccessible or delayed, a user-friendly error message should be displayed to inform users about the issue.
 
 #### Security
 
@@ -131,10 +137,6 @@ Users should be promptly notified about the need to update Ortelius in case of a
 
 8. Security Documentation:
 Comprehensive security documentation should be provided, including guidelines for secure deployment, configuration, and usage of Ortelius. Users should have access to up-to-date security documentation that reflects the latest security measures and best practices.
-
-#### Reliability
-
-Zero-downtime rolling updates: The system must support rolling updates without any service downtime. During updates, the cached data can be deleted and repopulated based on access from the NFT Storage. In the event of NFT Storage becoming inaccessible or delayed, a user-friendly error message should be displayed to inform users about the issue.
 
 ### Technical Decisions
 
