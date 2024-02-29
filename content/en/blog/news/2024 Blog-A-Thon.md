@@ -56,7 +56,6 @@ Educate on Ortelius Architecture and Integrations. Suggested Topics:
 - [The New Ortelius Front-end](https://github.com/ortelius/outreach/issues/39)
 - [New Security Integrations](https://github.com/ortelius/outreach/issues/40)
 
-
 ## How to Submit Your Blog
 
 Join the [Ortelius GitHub Repository](https://github.com/ortelius) and submit your Blog under the [Ortelius Outreach repo](https://github.com/ortelius/outreach). Your Blog should be submitted in [markdown](https://www.markdownguide.org/basic-syntax/) format.
