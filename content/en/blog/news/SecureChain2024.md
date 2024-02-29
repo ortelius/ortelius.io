@@ -11,9 +11,10 @@ author: Tracy Ragan
 <p></p>
 
 
-## A Free Online, Half-Day Micro-Conference for DevOps and Security Professionals
 
+<h2 class="text-left">A Free Online, Half-Day Micro-Conference for DevOps and Security Professionals</h2>
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level! 
+
 
 <strong> May 24th, 2024 - 8:30 to Noon MT </strong>
 
