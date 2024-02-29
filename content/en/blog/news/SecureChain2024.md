@@ -130,7 +130,7 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 ### Join Us on Zoom 
 [Registration Required](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
 
-All times in Mountain Time
+All times in Mountain Time.
 
 8:30 Beer and Donuts Networking - Meet the Ortelius Contributors
 
