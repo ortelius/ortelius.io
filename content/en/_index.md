@@ -47,7 +47,17 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 <h1 class="text-center">Join us for SecureChainCon 2024 - May 24th, 2024 8:30 MT </h1>
 <hr>
 
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/securechaincon-CFP.png" alt="CFP SecureChainCon" height="400px" width="589px" />
+</div>
+
 {{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Attend SecureChainCon</h2>
+</div>
+
 
 <div style="margin-top:80px;margin-left:140px">
 Join us for SecureChainCon 2024, <strong>the ultimate free, online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
@@ -63,26 +73,35 @@ Why You Should Attend:
 Join us on for this amazing online mind share and take your DevSecOps skills to the next level!
 
 [Learn More](https://ortelius.io/blog/2024/02/26/securechaincon-2024/)
+</div>
 
-Submit a talk - 
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Submit to Speak at SecureChainCon-</h2>
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+CFP Open Through March 25th, 2024
+</div>
+
+
 [Submit a Talk Today](https://sessionize.com/securechaincon2024)
 
-CFP for SecureChainCon is open through March 25th.
+The Call for Papers is open for SecureChainCon. Everyone is welcome to submit talks with a focus on:
+
+- Use Cases on Open-Source Security Tools and the DevOps Pipeline
+- Threat Modeling and data generation from the DevSecOps Pipeline
+- Blockers, Drivers, and Solutions for making the software supply chain more secure
+- Compliance and Governance Tools and KPIs
+
+<strong>First time presenters are encouraged to submit talks.</strong>
 
 <a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
 
-</div>
-{{< /blocks/feature_dual >}}
-
-{{< blocks/feature_dual >}}
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/supplychainbanner.png" alt="SecureChainCon" height="400px" width="589px" />
-</div>
-
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
 
 {{< blocks/section color=white >}}
 <div class="col-12">
