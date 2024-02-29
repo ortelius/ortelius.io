@@ -52,7 +52,7 @@ Depending upon the system being designed, there can be several other non-functio
 <h2 class="text-left">Requirements that Need to be Addressed</h2>
 <hr>
 
-In order to properly design a system, such as Ortelius, to support this range of deployment options, several requirements need to be addressed. _Note: This blog post doesn’t try to include the actual designs to meet these requirements._ This blog is about discussing what those requirements might be, so that developers and architects can consider them. For more information on the Ortelius non-functional requirements, check-out the [2024 Ortelius Non-functional Requirements blog](https://ortelius.io/blog/2024/2/21/the-2024-ortelius-architecture/) written by Steve Taylor.
+In order to properly design a system, such as Ortelius, to support this range of deployment options, several requirements need to be addressed. _Note: This blog post doesn’t try to include the actual designs to meet these requirements._ This blog is about discussing what those requirements might be, so that developers and architects can consider them. For more information on the Ortelius non-functional requirements, check-out the [2024 Ortelius Non-functional Requirements blog](https://ortelius.io/blog/2024/02/29/2024-ortelius-non-functional-requirements/) written by Steve Taylor.
 
 - Availability: Just what is the expectation for uptime for Ortelius? In a large, multi-user and possibly multi-time zone case, what allowances need to be made to make sure that Ortelius can stay up as much as needed?
 - Performance: How many queries per minute, from how many users, does Ortelius need to support, especially in a large installation? 
