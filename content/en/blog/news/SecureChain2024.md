@@ -20,6 +20,7 @@ author: Tracy Ragan
 
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level! 
 
+
 <strong> May 24th, 2024 - 8:30 to Noon MT </strong>
 
 [Register Today](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
@@ -42,6 +43,29 @@ First time presenters are encouraged to submit talks.
 [Submit a Talk Today](https://sessionize.com/securechaincon2024)
 
 <a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Caroline Wong to be Keynote Presenter</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+<div class="col-center">
+<img src="/images/carolinewong.png" alt="Caroline Wong" height="400px" width="300px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<h2 class="text-left">Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</h2>
+
+Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of 'offensive' strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies. 
+
+[Caroline Wong](https://www.linkedin.com/in/carolinewmwong/) is the Chief Strategy Officer at [Cobalt.io](https://cobalt.io). She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, [Security Metrics: A Beginner's Guide](https://www.amazon.com/Security-Metrics-Beginners-Guide-Caroline/dp/0071744002). She teachers cybersecurity courses on LinkedIn Learning and hosts the [Humans of InfoSec podcast](https://resource.cobalt.io/humans-of-infosec).
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -122,7 +146,7 @@ First time presenters are encouraged to submit talks.
 ### Join Us on Twitch 
 [Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
 
-10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
+<strong>10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
 
 10:20 Lightening Talks
 
