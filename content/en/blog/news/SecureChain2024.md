@@ -30,7 +30,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Present</h2>
+<h2 class="text-left">Call for Speakers Now Open</h2>
 
 The Call for Papers is open through March 25th, 2024. Everyone is welcome to submit talks for SecureChainCon. Tracks include:
 - Use Cases on Open-Source Security Tools and the DevOps Pipeline
