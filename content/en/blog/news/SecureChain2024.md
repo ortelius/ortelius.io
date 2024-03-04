@@ -150,7 +150,8 @@ All times in Mountain Time.
 
 <strong>10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
 
-10:20 Lightening Talks
+10:20 - Securing Software: A Panel Discussion on Actionable Metrics and Metadata hosted by Sacha Wharton
+
 
 11:00 Break - Twitch Games
 
