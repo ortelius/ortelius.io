@@ -1,11 +1,11 @@
 ---
 date: 2024-03-27
-title: "What is Threat Modeling"
-linkTitle: "What is Threat Modeling"
+title: "What is Threat Modeling?"
+linkTitle: "What is Threat Modeling?"
 author: Elizabeth Calderon
 ---
 
-# What is Threat Modeling - Basic Concepts to Get Started?
+# What is Threat Modeling? - Basic Concepts to Get You Started
 
 <div class="col-center">
 <img src="/images/yesno.jpg" alt="threatmodeling" height="300px" width="650px" />
