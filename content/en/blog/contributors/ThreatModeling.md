@@ -12,6 +12,8 @@ author: Elizabeth Calderon
 </div>
 <p></p>
 
+
+
 In a data-driven world digital security and awareness are vital for people, academy, industry, and government. A cyberattack can take away more than your breath. It can take away your network worth. For this reason, the implementation of forecasting and nowcasting models have become the basis for quick, informed decision on even minor risks within the scope of an attack. For most of us, cybersecurity, threat models, and software supply chain attacks are a new area of expertise, that impacts our DevOps practices. For this reason, education around key concepts in cybersecurity and DevSecOps is critical. When talking about *Threat Modeling* context matters; so, let's freshen up our vocabulary, shall we?
 
 - **Cybersecurity:** is a collection of strategies to guard against cyberattacks, and it has three pillars: people, processes, and technology.
