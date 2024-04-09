@@ -27,18 +27,19 @@ Image source: [XKCD](https://xkcd.com/)
 <p></p>
 
 
-## Expanding Application Security Tools, but the Data is Fragemented?
+## Data is Fragemented in Current Application Security Tools
 
-There are many new applicaiton secuity tools on the market that are important to address this broad problem of open-source security. The Linux Foundation's  [OpenSSF](https://www.openssf.org) has gathered together the 'giants' including Google, IBM and Intel, to address come up with answers. The commerical application security market is growing at a record pace. Everyone is talking about SBOMs. 
+There are many new application secuity tools on the market that are important to address this broad problem of open-source security. The Linux Foundation's  [OpenSSF](https://www.openssf.org) has gathered together the 'giants' including Google, IBM and Intel, to address come up with answers. The commercial application security market is growing at a record pace. Everyone is talking about SBOMs. 
 
-Two primary problems exists with the addition of these new tools. First, automation of security tooling is essential. That level of automation is needed in DevOps pipelines. These pipelines are static and need manual updates. There are millions of these workflow scripts that need enhancement of basic security tooling. Just ponder for a minute what it would take to add Software Bill of Material generaiton to 100 million Jenkins workflows. The Ortelius team is pondering this question and looking at ways to address the issue. They are currently looking at the use of [CDEvents](https://cdevents.dev/) to automate the addition of new tools into the pipeline.  
+Two primary problems exists with the addition of these new tools.
+- First, automation of security tooling is essential. That level of automation is needed in DevOps pipelines. These pipelines are static and need manual updates. There are millions of these workflow scripts that need enhancement of basic security tooling. Just ponder for a minute what it would take to add Software Bill of Material generaiton to 100 million Jenkins workflows. The Ortelius team is pondering this question and looking at ways to address the issue. They are currently looking at the use of [CDEvents](https://cdevents.dev/) to automate the addition of new tools into the pipeline.  
 
-Second, organizations are moving to decoupled archtictures. Most security tooling is based on a single GitHub Repo that supports the creation of a single service, with it's own independent workflow. That service is updated all day long impacting every 'logical' application that consumes it.  While cloud-native is a critical new architecutre, it is also a very complex one. The new data created by many new application security tools is fragmented across thousands of artifacts that have deep dependencies. This complexity is too much for a human to track in spreadsheets alone. 
+- Second, organizations are moving to decoupled archtictures. Most security tooling is based on a single GitHub Repo that supports the creation of a single service, with it's own independent workflow. That service is updated all day long impacting every 'logical' application that consumes it.  While cloud-native is a critical new architecutre, it is also a very complex one. The new data created by many new application security tools is fragmented across thousands of artifacts that have deep dependencies. This complexity is too much for a human to track in spreadsheets alone. 
 
 The Ortelius open-source project is working to solve these two basic problems. Ortelius is incubating at the [Continuous Delivery Foundation](https://ww.cd.foundation)
 
 
-##  What Ddoes Ortelius Do?
+##  What Does Ortelius Do?
 
 The Ortelius platform aggregates security and DevOps data for every component, building a vast amount of security data that is mapped to deployment data. For example, Ortelius can show where a particular open-source package is used across all deployed environments. This consolidated DevSecOps data can be used to build machine learning (ML) workflows for accessing and generating threat models, a feature on the Ortelius roadmap.  
 
@@ -58,9 +59,13 @@ Ortelius also provides a top-down view of all the dependencies and flags all the
 
 ## What Threat Model Logic is the Ortelius Community Working Toward? 
 
-The Ortelius Community is beginning to analyze how the Ortelius data could be used to build ML workflows based on particular threats. For example, if our bright intern is using a package that is now vulnerable to  “Content Injection”, then Ortelius in real time, could identify the vulnerability, look-up tactics for  remediation (such as TA0040 in MITRE list) and apply the update. Imagine a scenario where, the ‘mitigation’ for the vulnerablity is in the MITRE ATT&CK list (ID: M1021 in MITRE List ). Ortelius finds it, deploys the known mitigation (M1021) and creates a pull request to push the new update. This  criticality is then flagged on the CISO’s dashboard and a new ticket is opened with the DevSecOps team.
+The Ortelius Community is beginning to analyze how the Ortelius data could be used to build ML workflows based on particular threats. For example, if our bright intern is using a package that is now vulnerable to  “Content Injection”, then Ortelius in real time could:
+1. Looks up and logs the known ‘tactic’ (TA0040 is its ID in MITRE list).
+2. Find the ‘mitigation’ for the vulnerability in the MITRE ATT&CK list (ID: M1021 in MITRE List).
+3. Deploys the known mitigation (M1021) and restricts web based content in the developer environment.
+4. This reduced criticality is flagged on the CISO’s dashboard and a new ticket is opened with the DevSecOps’ team to further work on it
 
-Note: MITRE is a known free database for threat models
+Note: [MITRE](https://attack.mitre.org/) is a free database for threat models that has a battle tested mitigations list for enterprise, mobile and other tactics like content injection, man-in-the middle attacks.
 
 
 ## Yes, But What’s the Catch? 
