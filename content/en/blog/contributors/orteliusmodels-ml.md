@@ -36,7 +36,7 @@ Two primary problems exists with the addition of these new tools.
 
 - Second, organizations are moving to decoupled archtictures. Most security tooling is based on a single GitHub Repo that supports the creation of a single service, with it's own independent workflow. That service is updated all day long impacting every 'logical' application that consumes it.  While cloud-native is a critical new architecutre, it is also a very complex one. The new data created by many new application security tools is fragmented across thousands of artifacts that have deep dependencies. This complexity is too much for a human to track in spreadsheets alone. 
 
-The Ortelius open-source project is working to solve these two basic problems. Ortelius is incubating at the [Continuous Delivery Foundation](https://ww.cd.foundation).
+The Ortelius open-source project is working to solve these two basic problems. Ortelius is incubating at the [Continuous Delivery Foundation](https://cd.foundation/).
 
 
 ##  What Does Ortelius Do?
