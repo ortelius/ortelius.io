@@ -5,7 +5,11 @@ linkTitle: "How to Bake an Ortelius Pi Part 3 | The Configuration"
 author: Sacha Wharton
 ---
 
-## How to Bake an Ortelius Pi Part 3 | The Configuration
+
+<div class="col-center">
+<img src="/images/orteliuspi-part3.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
 
 ### Introduction
 

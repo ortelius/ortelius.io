@@ -6,10 +6,8 @@ author: Sacha Wharton
 ---
 
 
-## How to Bake an Ortelius Pi Part 1 | The Hardware
-
 <div class="col-center">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<img src="/images/orteliuspi-part1.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 
