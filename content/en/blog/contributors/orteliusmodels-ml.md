@@ -36,7 +36,7 @@ Two primary problems exists with the addition of these new tools.
 
 - Second, organizations are moving to decoupled archtictures. Most security tooling is based on a single GitHub Repo that supports the creation of a single service, with it's own independent workflow. That service is updated all day long impacting every 'logical' application that consumes it.  While cloud-native is a critical new architecutre, it is also a very complex one. The new data created by many new application security tools is fragmented across thousands of artifacts that have deep dependencies. This complexity is too much for a human to track in spreadsheets alone. 
 
-The Ortelius open-source project is working to solve these two basic problems. Ortelius is incubating at the [Continuous Delivery Foundation](https://ww.cd.foundation)
+The Ortelius open-source project is working to solve these two basic problems. Ortelius is incubating at the [Continuous Delivery Foundation](https://ww.cd.foundation).
 
 
 ##  What Does Ortelius Do?
@@ -107,10 +107,10 @@ Our example of an Ortelius ML workflow enables Ortelius to dynamically map vulne
 The model is dependent on the real time data pulled from osv.dev and MITRE ATT&CK and thus solves for tactics and mitigations identified by them daily. 
 
 References and Citations:
-- [Source MITRE Attack](https://attack.mitre.org/)
-- [Source Common Vulnerabilities and Exposures Maintained](https://www.cvedetails.com/)
-- [Other source of Common Vulnerabilities](https://osv.dev/list)
-- [Ortelius catalog of DevSecOps Data:](https://ortelius.io/catalog/)
+- [MITRE Attack](https://attack.mitre.org/)
+- [Common Vulnerabilities and Exposures Maintained](https://www.cvedetails.com/)
+- [Common Vulnerabilities](https://osv.dev/list)
+- [Ortelius catalog of DevSecOps Data](https://ortelius.io/catalog/)
 
 
 {{< blocks/section color=white >}}
