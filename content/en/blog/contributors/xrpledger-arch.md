@@ -82,18 +82,6 @@ Data persisted and analyzed (not limited to this list):
 - Component Version Creation
 - Component Aggregation (Logical Application)
 
-### Non-Functional Requirements - How it Works
-
-The Web front-end is where the end user will interact to persist and consume the data stored in the back-end databases. The user can create, retrieve, and update the data using the front end. However, deleting data is impossible since the blockchain ledger keeps all transactions. Therefore, the end user will use an Archived Tag to delete data, which hides the old data.
-
-The front end will send data to the NGINX reverse proxy using HTTPS with a JSON payload. The NGINX reverse proxy will route the transaction to the appropriate back-end microservice based on the end-point URL.   The microservice then normalizes the JSON to prevent redundant data from being stored in the database. Next, the microservice calls the database abstraction handler Python function to persist the data in Arango, NFT Storage, and XRPL. Finally, a Push-Through Cache is used to handle the slowness of NFT Storage and provide fast responses back to the end user. See [Transaction Flow](#transaction-flow) for further details.
-
-The Ortelius CLI is where end users will hook in Ortelius into the CI/CD pipeline. The Ortelius CLI is used to persist data from the pipeline into the Ortelius database. The CLI uses the same steps as the front end for persisting data.
-
-The front end will send the request over HTTPS with appropriate parameters to the NGINX reverse proxy for retrieving data. The NGINX reverse proxy will route the transaction to the appropriate back-end microservice based on the end-point URL. Next, the microservice calls the database abstraction handler Python function to find the data in the Arango Cache. If the data is not found, the database abstraction handler will pull it from NFT Storage and XRPL, return it, and add it to the cache.
-
-The database abstraction handler Python function encapsulates the database interaction enabling the replacement of XRPL and NFT Storage for an OCI-based registry.  The Arango database for searching and caching remains in place.
-
 
 ### Technical Decisions
 

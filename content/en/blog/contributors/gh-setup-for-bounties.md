@@ -13,14 +13,16 @@ author: Steve Taylor
 
 ## Getting Paid for your contributions to the Ortelius XRPL Project
 
-GitHub Sponsorship program is used to pay folks for work they do on issues tagged with a _Bounty_.
+The GitHub Sponsor program is used to pay folks for work they do on issues tagged with a _Bounty_. It may seem odd, but you will be registering yourself as a 'sponsor.' It would seem like you would be registering as a 'sponsee,' but no - you are a 'sponsor' which is the receiving party. Follow these steps to register:
 
-- Login into GitHUb and click on your Profile Icon, then select _Your Sponsors_.
-    ![Your Sponsors](/images/gh-step1.png)
-- Select _Dashboard_
-    ![Dachboard](/images/gh-step2.png)
-- Complete the _Profile_ and _Setting_ sections.  The _Profile_ is used to describe your background.  The _Settings_ is where you link GitHub to Stripe and Stripe to your bank account.
-    ![Dachboard](/images/gh-step3.png)
+- Login into GitHub and click on your Profile Icon, then select _Your sponsors_ with the heart logo.
+    {{< figure src="/images/gh-step1.png" caption="Your Sponsors" >}}
+- Select _Join the waitlist_
+    {{< figure src="/images/gh-step2.png" caption="Join the waitlist" >}}
+
+- Once you pass the 'waitlist' you will be directed to setup your profile, provide a bio, and connect a Stripe Account to receive payments. The Stripe Account will connect to your bank account where payments will be deposited. If you don't have a Stripe Account, you can create one from here. 
+ {{< figure src="/images/stripe.png" caption="Connect Stripe" >}}
+ - Once you connect your Stripe account, you will be asked to submit your request for approval. It could take a few days for this to be finalized. 
 
 ## Payouts
 

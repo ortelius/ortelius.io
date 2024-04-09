@@ -6,61 +6,73 @@ menu:
   main:
    weight: 100
 ---
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-<div class="col-center">
-<h2 class="col-center">May 19th - Ortelius Visionaries Summit</h2>
-<br>
-
-<img src="/images/ortelius-visionaries-banner-May23.png" alt="Ortelius Visionaries Summit" height="350px" width="550px" />
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<br>
-
-<h2>A remote celebration of the Ortelius Community</h2>
-
-On May 19th, the Ortelius community will come together, celebrate individuals who have been awarded recognition badges, and share knowledge on supply chain, microservices, and the need for a centralized catalog. 
-
-We start with our "Beer and Donuts" Zoom gathering, and finish on the Ortelius Twitch channel for presentations, networking and games. Hope to see you there. 
-
-[Get the full Details](https://ortelius.io/blog/2023/03/21/ortelius-microservice-visionaries-2023/)
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">Feb 1st - April 15th Ortelius BlogAthon</h2>
+<h2 class="col-center">Ortelius 2024 BlogAThon, February 1st through April 1st, 2024</h2>
 <br>
 
-<img src="/images/blogathon2023.png" alt="Ortelius Blog-A-Thon" height="350px" width="350px" />
+<img src="/images/blogathon2024.png" alt="blogathon2024" height="288px" width="312px" />
 </div>
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
+
 <br>
 
-<h2>Share your thoughts and earn Ambassador Recognition badges.</h2>
+It is that time of year to put on your thinking caps and submit a blog for the 4th annual Ortelius BlogAThon. Pick a topic that you are passionate about related to:
+* Open-source Security
+* Supply Chain Management
+* Ortelius Architecture
+* Ortelius Tips and Tricks
+* Your experience as an open-source contributor on the Ortelius Project
+* Infrastructure for open-source projects
+* Challenges of decoupled architectures, microservices
+* Machine Learning and AI related to DevOps and Supply Chain data
 
-Do you have some amazing thoughts on how to better manage microservices using the Ortelius Evidence catalog?
+Get your Blogs in by April 1st, 2024. The annual BlogAThon is a great way to earn [Ortelius Recognition Award points](https://ortelius.io/blog/2021/04/19/ortelius-community-recognition-program/) for the Ortelius Ambassador Category.
 
-Or maybe you have some tips and tricks for implementing Ortelius, or contributing. If so, join the Ortelius BlogAthon from February 1st through April 15.
+[Learn More](https://ortelius.io/blog/2024/01/12/2024-blogathon/)
 
-We are looking for Blogs on:
+[Learn how to Submit a Blog](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/)
 
-- Help for new contributors to become productive members of the Ortelius open source community;
-- Help for new open source users to adopt the Ortelius platform;
-- Educate the community on general supply chain, security and DevOps topics related to a microservices architecture.
+[View the Ortelius Blog Repo](https://github.com/ortelius/outreach/issues) and assign yourself to a topic.
 
-[Get the full Details](https://ortelius.io/blog/2023/01/18/2023-blogathon/)
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
+
+
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
+<div class="col-center">
+<h2 class="col-center">cdCon 2024, April 16th-18th, Seattle WA</h2>
+<br>
+
+<img src="/images/cdcon2024.png" alt="cdcon2024" height="168px" width="384px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<br>
+
+Join the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers for a three-day experience as we improve the world’s capacity to deliver software with security and speed.
+
+cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon is part of Open Source Summit North America, along with many other great events.
+
+This event is co-located with Open Source Summit North America. Plan to attend on April 16–18, 2024 in Seattle, Washington.
+
+[Register for Open Source Summit and cdCon 2024](https://cd.foundation/cdcon-2024/)
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="white" >}}
+{{< blocks/feature_dual >}}
+
 
 <h2>Community Meetings</h2>
 <hr>
@@ -70,11 +82,12 @@ We are looking for Blogs on:
 <p></p>
 </div>
 
-Join a SIG or attend our General meetings. We look forward to your help and input on the Ortelius project:
+Attend a meeting to keep up to date, or to get started as a contributor. We look forward to your help and input on the Ortelius project:
 
-- **Ortelius General Community Meeting** – this is an ‘all hands’ meeting giving the SIGs an opportunity to share their progress.
-- **Architecture and Marketplace SIG** – This group is driven to help define the future roadmap of Ortelius including a global marketplace for sharing microservices and their deployment requirements.
-- **Ortelius Outreach SIG** – This group wants to help with driving adoption and messaging of the Ortelius platform.
+- **Ortelius and Emporous General Community Meeting** – this monthly meeting is an ‘all hands’ meeting giving the everyone an opportunity to share their progress. This is a good meeting for new contributors to meet the teams and hear what's up. 
+- **Ortelius and Emporous Architecture Meeting** – This group is driven to help define the future roadmap of Ortelius and Emporous including a global evidence store for sharing security profiles, SBOMs, open-source libraries, with historical data.  
+- **Ortelius Outreach Meeting** – This group helps drive adoption and messaging of the Ortelius platform.
+- **Emporous Community Meeting** - This meeting focuses on the Emporous Universal Object Reference, the backend to Ortelius. 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
@@ -82,16 +95,42 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 <h2>Meeting Calendar</h2>
 <hr>
 <div>
-<iframe style="border: 0px; opacity: 1; visibility: visible;" src="https://calendar.google.com/calendar/embed?src=c_vjebhusp537ftgsu6qiboiphcg%40group.calendar.google.com&amp;ctz=America%2FDenver" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?src=orteliusopensource%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="primary" >}}
 
 {{< blocks/feature_dual >}}
 <h2>On-Demand</h2>
+
+
+
+<br>
+<div style="width:60%">
+{{< youtube bqQRqbVjSx4 >}}
+</div>
+<br>
+
+<div style="width:60%">
+{{< youtube nBzN9S5np44 >}}
+</div>
+<br>
+
+
+<div style="width:60%">
+{{< youtube C9-olwp1Rss >}}
+</div>
+<br> 
+
+<div style="width:60%">
+{{< youtube Lk7R_92QcFQ >}}
+</div>
+<br> 
+
 
 <div style="width:60%">
 {{< youtube xez36h_WJRI >}}
@@ -101,10 +140,7 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 <div style="width:60%">
 {{< youtube HftLrIDc4s0 >}}
 </div>
-<br>
-<div style="width:60%">
-{{< youtube XjYorGR2aoY >}}
-</div>
+
 
 {{< /blocks/feature_dual >}}
 
@@ -116,7 +152,7 @@ Join a SIG or attend our General meetings. We look forward to your help and inpu
 
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 <div class="col-12">
 <h2>Zoom Background Images</h2>
 <hr>
