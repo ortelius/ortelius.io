@@ -1,12 +1,12 @@
 ---
-date: 2024-03-27
-title: "How to bake an Ortelius Pi Part 1 | The Hardware"
-linkTitle: "How to bake an Ortelius Pi Part 1 | The Hardware"
+date: 2024-04-05
+title: "How to Bake an Ortelius Pi Part 1 | The Hardware"
+linkTitle: "How to Bake an Ortelius Pi Part 1 | The Hardware"
 author: Sacha Wharton
 ---
 
 
-## How to bake an Ortelius Pi Part 1 | The Hardware
+## How to Bake an Ortelius Pi Part 1 | The Hardware
 
 <div class="col-center">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="raspberry-pi-4b" height="300px" width="650px" />

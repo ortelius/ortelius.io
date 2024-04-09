@@ -1,14 +1,29 @@
-## How to bake an Ortelius Pi Part 3 | The Configuration
+---
+date: 2024-04-09
+title: "How to Bake an Ortelius Pi Part 3 | The Configuration"
+linkTitle: "How to Bake an Ortelius Pi Part 3 | The Configuration"
+author: Sacha Wharton
+---
+
+## How to Bake an Ortelius Pi Part 3 | The Configuration
 
 ### Introduction
 
-In [Part 2](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-2-the-preperation/), of this series we configured DHCP, DNS, NFS and deployed MicroK8s. In Part 3 we will deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage, deploy [MetalLB load-balancer](https://metallb.universe.tf/), deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and deploy [Ortelius](https://ortelius.io/) the ultimate evidence store.
+In [Part 1](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-1-the-hardware/), of this series I walked through an installation of Ubuntu Server 22.04.4 LTS on the Raspberry Pis.
 
-We will be using Helm Charts to configure some of our services as this makes getting going a lot easier. Also Helm Charts are great to compare your configuration or reset your `values.yaml` in case you totally lose the plot. Think of `values.yaml` as the defaults for the application you are deploying.
+In [Part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-preparation/), of this series I walked through how to configure DHCP, DNS, NFS and deployed MicroK8s. 
+
+In this part 3, I will walk through how to:
+- deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage
+- deploy [MetalLB load-balancer](https://metallb.universe.tf/)
+- deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices 
+- deploy [Ortelius](https://ortelius.io/) the ultimate evidene store for devops and open-source security validation
+
+I will be using Helm Charts to configure some of the services as this makes getting started a lot easier. Also Helm Charts are great to compare configuration or reset `values.yaml` in case the plot is totally lost. Think of `values.yaml` as the defaults for the application you are deploying.
 
 ### NFS CSI Driver
 
-With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to our pods using the Synology NAS as the central storage server.
+With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to pods using the Synology NAS as the central storage server. Here is some additional technical information for your reference: 
 
 - Kubectl quick reference [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
@@ -18,7 +33,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
 
----------------------------------------------------------------------------------------------------------------
+Now let's get started:
 
 - On your local machine open your favourite terminal
 - Switch to the `kube-system` namespace
@@ -54,10 +69,13 @@ helm install csi-driver-nfs csi-driver-nfs/csi-driver-nfs --namespace kube-syste
 kubectl get pods
 ```
 
-![csi nfs driver storage pods](images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png" alt="csi nfs driver storage pods" />
+</div>
+<p></p>
 
-- Now lets create a Storage Class to be used for central data access between our nodes and pods
-- Create a file called `nfs-setup.yaml`, copy the YAML below and run `kubectl apply -f nfs-setup.yaml`
+
+- Now let's create a Storage Class to be used for central data access between our nodes and pods. Create a file called `nfs-setup.yaml`, copy the YAML below and run `kubectl apply -f nfs-setup.yaml.`
 
 ```
 apiVersion: storage.k8s.io/v1
@@ -78,15 +96,17 @@ mountOptions:
   - nfsvers=4
 ```
 
-- Kubectl show me the Storage Class
+- Kubectl shows the Storage Class
 
 ```
 kubectl get sc
 ```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png" alt="csi nfs driver storage class" />
+</div>
+<p></p>
 
-![csi nfs driver storage class](images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png)
-
-- Lets make this the default Storage Class as in the above image
+- Let's make this the default Storage Class as in the above image
 
 ```
 kubectl patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
@@ -98,7 +118,7 @@ kubectl patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclas
 kubectl patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 ```
 
-- Great we now have Kubernetes managing NFS volume mounts dynamically for us to our NAS (Network Attached Storage)!
+- Great! We now have Kubernetes managing NFS volume mounts dynamically for us to our NAS (Network Attached Storage)!
 
 ### MetalLB load-balancer for bare metal Kubernetes
 
@@ -141,11 +161,12 @@ kubectl config set-context --current --namespace=metallb-system
 ```
 kubectl get pods
 ```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png" alt="metallb pods" />
+</div>
+<p></p>
 
-![metallb pods](images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png)
-
-- Now lets enable [L2 Advertisement](https://metallb.universe.tf/troubleshooting/) and setup our IP pool
-- Copy the YAML below into `metallb-setup.yaml` and run `kubectl apply -f metallb-setup.yaml`
+- Now lets enable [L2 Advertisement](https://metallb.universe.tf/troubleshooting/) and setup our IP pool. Copy the YAML below into `metallb-setup.yaml` and run `kubectl apply -f metallb-setup.yaml`
 
 ```
 apiVersion: metallb.io/v1beta1
@@ -167,14 +188,15 @@ spec:
   - default-pool
 ```
 
-- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic
-- Kubectl show me all CRDs for MetalLB
+- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl shows all CRDs for MetalLB:
 
 ```
 kubectl get crds | grep metallb
 ```
-
-![metallb crds](images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png" alt="metallb crds" />
+</div>
+<p></p>
 
 
 - Kubectl show me the IP address pools for MetalLB
@@ -183,7 +205,11 @@ kubectl get crds | grep metallb
 kubectl get ipaddresspools.metallb.io
 ```
 
-![metallb ip pools](images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb ip pools" />
+</div>
+<p></p>
+
 
 - Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy
 
@@ -237,8 +263,11 @@ helm install traefik traefik/traefik --namespace=traefik-v2
 ```
 kubectl get pods
 ```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png" alt="traefik pods" />
+</div>
+<p></p>
 
-![traefik pods](images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png)
 
 - Using GitHub fork the [Traefik Helm Chart](https://github.com/traefik/traefik-helm-chart)
 - Clone the Helm Chart to your local machine and enable the Traefik `dashboard, kubernetesCRD and kubernetesIngress` in `values.yaml` and don't forget to save
@@ -271,13 +300,17 @@ helm upgrade traefik traefik/traefik --values values.yaml
 
 - Now we need to deploy an `ingress route` which forms part of the [CRDs](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) that were installed with Traefik
 - CRDs are custom resources created in our Kubernetes cluster that add additional magic
-- Kubectl show me all CRDs for Traefik
+- Kubectl shows all CRDs for Traefik
 
 ```
 kubectl get crds | grep traefik
 ```
 
-![traefik pod](images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png" alt="traefik pods" />
+</div>
+<p></p>
+
 
 - Create a file called `dashboard.yaml` and apply the following logic with `kubectl apply -f dashboard.yaml`
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
@@ -302,21 +335,30 @@ spec:
           kind: TraefikService
 ```
 
-- Kubectl show me the Traefik ingress routes
+- Kubectl shows the Traefik ingress routes
 
 ```
 kubectl get ingressroutes.traefik.io
 ```
 
-![traefik pod](images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png" alt="traefik pod" />
+</div>
+<p></p>
 
-- Kubectl show me that the Traefik service has claimed our MetalLB single IP address
+
+- Kubectl shows that the Traefik service has claimed our MetalLB single IP address
 
 ```
 kubectl get svc
 ```
 
-![traefik service](images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png" alt="traefik service" />
+</div>
+<p></p>
+
+
 
 - Here is a view of the services for all namespaces
 ```
@@ -349,7 +391,11 @@ What you see is the `traefik` service with the `TYPE LoadBalancer` which means i
 
 - Hopefully you should be able to access your dashboard at the FQDN (fully qualified domain name) you set
 
-![traefik dashboard](images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png" alt="traefik dashboard" />
+</div>
+<p></p>
+
 
 ### Ortelius the Ultimate Evidence Store
 
@@ -363,9 +409,17 @@ Well done for making it this far! We have made it to the point where we can depl
 
 Ortelius currently consists of the following Microservices. The one we are most interested at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
 
-![ortelius microservices](images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices" />
+</div>
+<p></p>
+<br>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/12-ortelius-dashboard.png" alt="ortelius dashboard"  height="200px" width="300px" />
+</div>
+<p></p>
 
-![ortelius dashboard](images/how-to-bake-an-ortelius-pi/part03/12-ortelius-dashboard.png)
+
 
 ##### Ortelius Microservice GitHub repos
 - [ms-dep-pkg-cud](https://github.com/ortelius/ms-dep-pkg-cud)
@@ -378,7 +432,6 @@ Ortelius currently consists of the following Microservices. The one we are most 
 - [ms-scorecard](https://github.com/ortelius/ms-scorecard)
 - [scec-nginx](https://github.com/ortelius/scec-nginx)
 
----------------------------------------------------------------------------------------------------------------
 
 - Kubectl create the Ortelius namespace
 
@@ -386,7 +439,7 @@ Ortelius currently consists of the following Microservices. The one we are most 
 kubectl create ns ortelius
 ```
 
-- Kubectl switch to the ortelius namespace
+- Kubectl switches to the Ortelius namespace
 
 ```
 kubectl config set-context --current --namespace=ortelius
@@ -411,23 +464,31 @@ helm upgrade --install ortelius ortelius/ortelius --set ms-general.dbpass=postgr
 ```
 
 -Lets stop here to discuss some of these settings.
+
 - `--set ms-general.dbpass=postgres` | Set the PostgreSQL database password
 - `--set global.nginxController.enabled=true` | Sets the ingress controller which could be one of `default nginx ingress, AWS Load Balancer or Google Load Balancer` | Refer to the Helm Chart in ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 - `--set ms-nginx.ingress.type=k3d` | This setting is for enabling the Traefik Class so that Traefik is made aware of Ortelius even thou its for [K3d](https://k3d.io/v5.6.0/) another very lightweight Kubernetes deployment which uses Traefik as the default ingress
 - The `k3d` value enables the Traefik ingress class to make Traefik Ortelius aware.
 - `--set ms-nginx.ingress.dnsname=<your domain name goes here>` | This is URL that will go in your browser to access Ortelius
 
-- Kubectl show me the pods for Ortelius
+- Kubectl shows the pods for Ortelius
 
 ```
 kubectl get pods
 ```
 
-![ortelius microservices](images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices" />
+</div>
+<p></p>
 
 
-- Now we will deploy a Traefik ingress route for Ortelius by applying the following YAML
-- Create a YAML file called `ortelius-traefik.yaml`, copy the YAML into the file and then run `kubectl apply -f ortelius-traefik.yaml`
+- Now we will deploy a Traefik ingress route for Ortelius by applying the following YAML. Create a YAML file called `ortelius-traefik.yaml`, copy the YAML into the file and then run:
+
+``` 
+kubectl apply -f ortelius-traefik.yaml`
+```
+
 
 ```
 apiVersion: networking.k8s.io/v1
@@ -459,10 +520,35 @@ status:
 
 Happy alien hunting.......
 
-<img src="images/how-to-bake-an-ortelius-pi/part03/13-ortelius-logo.svg" alt="ortelius-logo" width="600">
+<div class="col-left">
+<img src="/images/Otelius-transparent1-300x290.png" alt="ortelius"/>
+</div>
+<p></p>
+
+
 
 ### Conclusion
 
 By this stage you should have three Pi's each with the NFS CSI Driver, Traefik and Ortelius up and running. Stay tuned for Part 4 where we use Cloudflare, Traefik and LetsEncrypt to implement `HTTPS` and `TLS v1.3`. Yes there is more extraterrestrial life in a cloud deployment near you........
 
-#### Disclaimer: Any brands I mention in this blog post series are not monetised. This is my home setup!
+<strong>Disclaimer</strong>: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}

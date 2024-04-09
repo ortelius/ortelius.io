@@ -1,7 +1,7 @@
 ---
-date: 2024-04-09
-title: "How to bake an Ortelius Pi Part 2 | The Preparation"
-linkTitle: "How to bake an Ortelius Pi Part 2 | The Preparation"
+date: 2024-04-08
+title: "How to Bake an Ortelius Pi Part 2 | The Preparation"
+linkTitle: "How to Bake an Ortelius Pi Part 2 | The Preparation"
 author: Sacha Wharton
 ---
 
