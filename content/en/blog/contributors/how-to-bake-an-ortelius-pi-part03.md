@@ -13,9 +13,9 @@ author: Sacha Wharton
 
 ### Introduction
 
-In [Part 1](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-1-the-hardware/), of this series I walked through an installation of Ubuntu Server 22.04.4 LTS on the Raspberry Pis.
+In [Part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware), of this series I walked through an installation of Ubuntu Server 22.04.4 LTS on the Raspberry Pis.
 
-In [Part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-preparation/), of this series I walked through how to configure DHCP, DNS, NFS and deployed MicroK8s. 
+In [Part 2](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation), of this series I walked through how to configure DHCP, DNS, NFS and deployed MicroK8s. 
 
 In this part 3, I will walk through how to:
 - deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage

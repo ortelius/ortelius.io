@@ -14,7 +14,7 @@ author: Sacha Wharton
 
 ### Introduction
 
-In [Part 1](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-1-the-hardware/), of this series we installed Ubuntu Server 22.04.4 LTS on our Raspberry Pis.
+In [Part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/), of this series we installed Ubuntu Server 22.04.4 LTS on our Raspberry Pis.
 
 In this follow-up blog, I will help you prepare three Pis for DHCP, DNS, NFS (Network File System) storage with a [Synology NAS](https://www.synology.com/) and install [MicroK8s](https://microk8s.io/).
 
@@ -402,6 +402,10 @@ kubectl get pods --all-namespaces
 ### Conclusion
 
 Great work! Stay tuned for Part 3 where I will show how to deploy the NSF [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, deploy [MetalLB load balancer](https://metallb.universe.tf/), deploy [Traefik](https://traefik.io/) and [Ortelius](https://ortelius.io/).
+
+### Next Steps:
+
+[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
 
 <strong>Disclaimer</strong>: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
 

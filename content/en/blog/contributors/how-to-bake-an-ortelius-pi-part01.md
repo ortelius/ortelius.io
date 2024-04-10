@@ -157,6 +157,12 @@ Fill in the required info according to your specifications. Remember to change t
 
 By this stage you should have multiple Pi 4 B's running with Ubuntu 22.04.4 LTS. Stay tuned for part 2 where we will dive into optimizing USB flash sticks for the best performance and stability and the installation of MicroK8s.
 
+### Next Steps
+
+[How to Bake on Ortelius Pi - Part 2 The Preparation](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+
+[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
+
 <strong> Disclaimer: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
 
 
