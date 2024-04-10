@@ -53,22 +53,32 @@ Giving the Pis a home address makes them contactable. This is where either a [st
 
 ### DNS
 
-#### The easiest way to serve localhost - Local.gd
+#### The easiest way to serve localhost. DNS that Always Resolve to 127.0.0.1
 
-If you don't have something like NextDNS or similar you can use `local.gd` which works great and is very easy to setup. It provides a DNS that always resolves to 127.0.0.1. Use mysite.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. It's the simplest method to serve localhost since its DNS always resolves to 127.0.0.1. I use Netlify DNS so I'm pretty sure that it is always within 10ms of a DNS server, whatever the location. It's super quick! Use any subdomain you like, and sub-sub-domains work too!
+An easy way to serve localhost is to use DNS that always resolves to 127.0.0.1. For example you could use ortelius.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. Its the easiest way to serve localhost as its DNS that always resolves to 127.0.0.1.
+
+- I use mysite.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. 
+
+- I use Netlify DNS so I'm pretty sure that it is always within 10ms of a DNS server, whatever the location. It's super quick! Use any subdomain you like, and sub-sub-domains work too!
 
 ```
 $ dig startup.local.gd
-startup.local.gd.                  86400	IN	A	127.0.0.1
+ortelius.local.gd.                  86400	IN	A	127.0.0.1
+```
 
+```
 $ dig www.startup.local.gd
-www.startup.local.gd.              86400	IN	A	127.0.0.1
+www.ortleius.local.gd.              86400	IN	A	127.0.0.1
+```
 
+```
 $ dig my.project.company.local.gd
-my.project.company.local.gd.       86400	IN	A	127.0.0.1
+aliens.are.real.oretlius.local.gd.       86400	IN	A	127.0.0.1
+```
 
+```
 $ dig alderaan.local.gd
-alderaan.local.gd.                 86400	IN	A	127.0.0.10.0.1
+xrpl.local.gd.                 86400	IN	A	127.0.0.10.0.1
 ```
 
 - Edit localhosts on Linux and Mac here with sudo rights `sudo vi /etc/hosts`
