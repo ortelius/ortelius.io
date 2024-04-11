@@ -14,20 +14,25 @@ author: Sacha Wharton
 
 #### Introduction
 
+I recently started building an entire Cloud Native environment on three Raspberry Pi 4 B's with an old Synology DS413j (ARMv5 architecture) running the latest firmware update, DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM), and so far its been quite a journey.
+
+To help other Ortelius open-source contributors build private development and testing environments, I would like to share how I have created a local environment in a series of blog posts. In this first blog, I will cover the Raspberry Pi hardware, NFS and setup. In subsequent post, I will move on to [Canonicals MicroK8s](https://microk8s.io/) (Kubernetes), [Traefik](https://doc.traefik.io/traefik/) (Cloud Native Proxy and Load Balancer) and [Ortelius](https://ortelius.io/) the ultimate evidence store. While you do not need all of these tools for running Ortelius, this stack gives you a complete DevOps environment for expanding your skills.
+
+Why Raspberry Pi's you ask?  First of all I live in Cape Town South Africa where we are experiencing some of the worst electricity outages in years. We need to share electricity by taking turns through rotational blocks of time commonly know to locals as "Load Shedding." We use an application like this one [Load Shedding App](https://play.google.com/store/apps/details?id=com.abisoft.loadsheddingnotifier&hl=en_ZA&gl=US) to inform ourselves when the next bout of load shedding will be hitting our area. Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
+
+#### My Home Setup
+- 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply). Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/).
+
 I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts. First I will cover the Raspberry Pi hardware, NFS and setup and then move on to [Canonicals MicroK8s](https://microk8s.io/) (Kubernetes), [Traefik](https://doc.traefik.io/traefik/) (Cloud Native Proxy and Load Balancer) and [Ortelius (The Ultimate Evidence Store)](https://ortelius.io/).
 
 Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa where we are experiencing some of the worst electricity outages in years thus we need to share electricity by taking turns through rotational blocks of time commonly know to locals as Load Shedding. We use an app like this one [Load Shedding App](https://play.google.com/store/apps/details?id=com.abisoft.loadsheddingnotifier&hl=en_ZA&gl=US) to inform ourselves when the next bout of load shedding will be hitting our area. Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
-
-### My Home Setup
-- 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply)
-- Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
 
 -------------------------------------------------------------------------------------------------------------
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 - Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
 - I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi
 
-`OR`
+<strong>or</strong>
 
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
 -------------------------------------------------------------------------------------------------------------
@@ -36,7 +41,9 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 - 1X [KVM Switch device](https://www.amazon.com/3-port-kvm-switch/s?k=3+port+kvm+switch)
 - 1X 8 Port Switch
 - Networking | Use [DHCP](https://www.youtube.com/watch?v=ldtUSSZJCGg) or [static IP addresses](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address) in a [private range](https://www.lifewire.com/what-is-a-private-ip-address-2625970).
-- 1X UPS (Uninterruptable Power Supply) for the Pis and switch | Something like this [Mecer 650VA](https://mecer.co.za/mecer-line-interactive-ups/). Please note this is a South African brand of UPS but I am showing this for example purposes. The Mecer brand is extremely good and all my lead acid battery UPS's are from Mecer. I have a combination of the 650VA, 2000VA and 3000VA to keep me going (7 in all)
+- 1X UPS (Uninterruptable Power Supply) for the Pi's and switch | Something like this [Mecer 650VA](https://mecer.co.za/mecer-line-interactive-ups/).
+
+Please note this is a South African brand of UPS but I am showing this for example purposes. The Mecer brand is extremely good and all my lead acid battery UPS's are from Mecer. I have a combination of the 650VA, 2000VA and 3000VA to keep me going (7 in all).
 
 ### NFS Storage
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
@@ -65,7 +72,11 @@ If you use USB flash drives you will need to do the following as mentioned in th
 - Raspi-Config allows you to configure your Pis hardware without having to fiddle with `/boot/firmware/cmdline.txt`
 - Run Raspi-Config like this `sudo raspi-config` and you will get a screen like this
 
-![raspi-config](images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png" alt="raspberry-config" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 - Use Raspi-Config to configure boot order, enable or disable read-only filesystem and many other tweaks
 - I found it much easier just to use the right microSD Card and skip all this but it was still a good learning curve
@@ -127,7 +138,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <p></p>
 <br>
 
-
 #### Choose OS
 
 <strong>Choose:</strong> `Other general-purpose OS`
@@ -154,7 +164,7 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 
 #### Choose Storage
 
-Note: This may look different on your machine.
+Note: This will look different on your machine especially if you are using either SD Card or USB flash drive
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -173,7 +183,7 @@ Use OS Customization by clicking: `EDIT SETTINGS`
 <br>
 
 Fill in the required info according to your specifications. Remember to change the:
- `HOSTNAMES` `pi01` | `pi02` | `pi03` 
+ `HOSTNAMES` `pi01` | `pi02` | `pi03`
  (You can use whatever hostnames make sense to you)
  <p></p>
  <br>
@@ -230,6 +240,42 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
+- If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
+- Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
+- Generate the keys in the home folder at this location `C:\Users\username\.ssh` if you are using Windows
+
+```
+ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
+ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
+```
+- Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
+- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
+- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
+- Then add this config to `.ssh/config`
+
+```
+Host pi01.yourdomain.com
+	HostName pi01.yourdomain.com
+    AddKeysToAgent yes
+	IdentityFile ~/.ssh/<private key name>
+	User <your user>
+
+Host pi02.yourdomain.com
+	HostName pi02.yourdomain.com
+    AddKeysToAgent yes
+	IdentityFile ~/.ssh/<private key name>
+	User <your user>
+
+Host pi03.yourdomain.com
+	HostName pi03.yourdomain.com
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/<private key name>
+	User <your user>
+```
+
+- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- Check the boxes that make sense to you
+
 <strong>Check:</strong> `all boxes specific to your needs.`
 <p></p>
 <div class="col-left">
@@ -252,7 +298,7 @@ Host pi03.yourdomain.com
 
 ## Conclusion
 
-By this stage you should have multiple Pi 4 B's running with Ubuntu 22.04.4 LTS. Stay tuned for part 2 where we will dive into optimizing USB flash sticks for the best performance and stability and the installation of MicroK8s.
+By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS each configured for SSH with a password or preferably a SSH private key and public key. Stay tuned for part 2 where we will dive into DHCP, NextDNS, NFS and install MicroK8s.
 
 ### Next Steps
 

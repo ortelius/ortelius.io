@@ -53,37 +53,30 @@ Giving the Pis a home address makes them contactable. This is where either a [st
 
 ### DNS
 
-#### The easiest way to serve localhost. DNS that Always Resolve to 127.0.0.1
+#### [Local.gd](https://local.gd)
 
-An easy way to serve localhost is to use DNS that always resolves to 127.0.0.1. For example you could use ortelius.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. Its the easiest way to serve localhost as its DNS that always resolves to 127.0.0.1.
+If you don't have something like NextDNS or similar you can use `local.gd` which works very well and is very easy to setup.
 
-- I use mysite.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. 
-
-- I use Netlify DNS so I'm pretty sure that it is always within 10ms of a DNS server, whatever the location. It's super quick! Use any subdomain you like, and sub-sub-domains work too!
+A easy way to serve localhost is to use DNS that always resolves to 127.0.0.1. For example you could use ortelius.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. The use of subdomains and sub-sub-domains work too as in the example below.
 
 ```
-$ dig startup.local.gd
+$ dig ortelius.local.gd
 ortelius.local.gd.                  86400	IN	A	127.0.0.1
-```
 
-```
-$ dig www.startup.local.gd
-www.ortleius.local.gd.              86400	IN	A	127.0.0.1
-```
+$ dig www.ortelius.local.gd
+www.ortelius.local.gd.              86400	IN	A	127.0.0.1
 
-```
-$ dig my.project.company.local.gd
-aliens.are.real.oretlius.local.gd.       86400	IN	A	127.0.0.1
-```
+$ dig aliens.are.real.ortelius.local.gd
+aliens.are.real.ortelius.local.gd.       86400	IN	A	127.0.0.1
 
-```
-$ dig alderaan.local.gd
+$ dig xrpl.local.gd
 xrpl.local.gd.                 86400	IN	A	127.0.0.10.0.1
 ```
 
 - Edit localhosts on Linux and Mac here with sudo rights `sudo vi /etc/hosts`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts`
 
+-------------------------------------------------------------------------------------------------------------
 
 #### NextDNS
 
@@ -91,6 +84,7 @@ For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS it is a co
 
 <strong>Disclaimer</strong> - NextDNS is free to a certain amount of DNS queries once you reach that limit resolution stops. It is inexpensive and totally worth it.
 
+-------------------------------------------------------------------------------------------------------------
 
 - Think of a domain name for your environment - mine is pangarabbit.com.
 - Go to the NextDNS Wiki [here](https://github.com/nextdns/nextdns/wiki).
@@ -161,6 +155,7 @@ NextDNS will instantly auto refresh all your NextDNS agents with any configurati
 
 Great! DNS is done.
 
+---------------------------------------------------------------------------------------------------------------
 
 ### NFS Prep
 - [Synology](https://www.synology.com/)
@@ -277,6 +272,7 @@ Great! DNS is done.
 
 - Congrats you just configured the Synology for NFS!
 
+---------------------------------------------------------------------------------------------------------------
 
 ### OS Prep
 
@@ -308,6 +304,7 @@ Great! DNS is done.
 - `FYI` there are commands related to `MickroK8s` such as `sudo microk8s config` which are run on the Pis where MicroK8s is installed.
 - Please find the MicroK8s command reference [here](https://microk8s.io/docs/command-reference).
 
+---------------------------------------------------------------------------------------------------------------
 
 - SSH into each Pi and configure the Pi BIOS `sudo vi /boot/firmware/cmdline.txt` and add the following `cgroup_enable=memory cgroup_memory=1.`
 - Below is the config from my Pi as an example:
@@ -401,7 +398,7 @@ kubectl get pods --all-namespaces
 
 ### Conclusion
 
-Great work! Stay tuned for Part 3 where I will show how to deploy the NSF [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, deploy [MetalLB load balancer](https://metallb.universe.tf/), deploy [Traefik](https://traefik.io/) and [Ortelius](https://ortelius.io/).
+By this stage you should have three Pi's each with NFS and MicroK8s. Stay tuned for Part 3 where we will deploy the NSF [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, deploy [MetalLB load balancer](https://metallb.universe.tf/), deploy [Traefik](https://traefik.io/) and [Ortelius](https://ortelius.io/).
 
 ### Next Steps:
 

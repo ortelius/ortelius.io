@@ -15,19 +15,19 @@ author: Sacha Wharton
 
 In [Part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware), of this series I walked through an installation of Ubuntu Server 22.04.4 LTS on the Raspberry Pis.
 
-In [Part 2](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation), of this series I walked through how to configure DHCP, DNS, NFS and deployed MicroK8s. 
+In [Part 2](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-2-the-preperation/), of this series we configured DHCP, DNS, NFS and deployed MicroK8s.
 
-In this part 3, I will walk through how to:
-- deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage
-- deploy [MetalLB load-balancer](https://metallb.universe.tf/)
-- deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices 
-- deploy [Ortelius](https://ortelius.io/) the ultimate evidene store for devops and open-source security validation
+In Part 3 we will deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage
+
+- Deploy [MetalLB load-balancer](https://metallb.universe.tf/)
+- Deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices
+- Deploy [Ortelius](https://ortelius.io/) the ultimate evidence store for devops and open-source security validation.
 
 I will be using Helm Charts to configure some of the services as this makes getting started a lot easier. Also Helm Charts are great to compare configuration or reset `values.yaml` in case the plot is totally lost. Think of `values.yaml` as the defaults for the application you are deploying.
 
 ### NFS CSI Driver
 
-With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to pods using the Synology NAS as the central storage server. Here is some additional technical information for your reference: 
+With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to pods using the Synology NAS as the central storage server. Here is some additional technical information for your reference:
 
 - Kubectl quick reference [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
@@ -36,6 +36,8 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
+
+---------------------------------------------------------------------------------------------------------------
 
 Now let's get started:
 
@@ -489,7 +491,7 @@ kubectl get pods
 
 - Now we will deploy a Traefik ingress route for Ortelius by applying the following YAML. Create a YAML file called `ortelius-traefik.yaml`, copy the YAML into the file and then run:
 
-``` 
+```
 kubectl apply -f ortelius-traefik.yaml`
 ```
 
