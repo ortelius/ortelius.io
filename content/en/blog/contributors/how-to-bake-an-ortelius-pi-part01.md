@@ -69,7 +69,11 @@ If you use USB flash drives you will need to do the following as mentioned in th
 - Raspi-Config allows you to configure your Pis hardware without having to fiddle with `/boot/firmware/cmdline.txt`
 - Run Raspi-Config like this `sudo raspi-config` and you will get a screen like this
 
-![raspi-config](images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png" alt="raspberry-config" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 - Use Raspi-Config to configure boot order, enable or disable read-only filesystem and many other tweaks
 - I found it much easier just to use the right microSD Card and skip all this but it was still a good learning curve
@@ -189,12 +193,15 @@ Fill in the required info according to your specifications. Remember to change t
 <br>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
-- Generate the keys in the home folder so on Mac its `/Users/<your username>/.ssh`
+- Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
+- Generate the keys in the home folder at this location `C:\Users\username\.ssh` if you are using Windows
+
 ```
 ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
 ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
 ```
-- Then you will end up with two files - One will be the private key which you never ever share and the other will be the public key with a bunch of scrambled numbers and text. You then copy all the scrambled numbers and text and paste the same public key each time on the line under `Allow public-key authentication only` for each Pi
+- Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
+- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
 - This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
 - Then add this config to `.ssh/config`
 
@@ -218,7 +225,7 @@ Host pi03.yourdomain.com
 	User <your user>
 ```
 
-- You can also reference this how to from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 - Check the boxes that make sense to you
 
 <strong>Check:</strong> `all boxes specific to your needs.`
