@@ -193,48 +193,6 @@ Fill in the required info according to your specifications. Remember to change t
 <img src="/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 <p></p>
 </div>
-If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps:
-
-- Generate the keys in the home folder so on Mac its `/Users/<your username>/.ssh`
-
-```
-ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
-ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
-```
-
-- You will end up with two files - One will be the private key which you never ever share and the other will be the public key with a bunch of scrambled numbers and text. You then copy all the scrambled numbers and text and paste the same public key each time on the line under `Allow public-key authentication only` for each Pi.
-
-- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
-
-- Then add this config to `.ssh/config`
-
-```
-Host pi01.yourdomain.com
-	HostName pi01.yourdomain.com
-    AddKeysToAgent yes
-	IdentityFile ~/.ssh/<private key name>
-	User <your user>
-```
-
-```
-Host pi02.yourdomain.com
-	HostName pi02.yourdomain.com
-    AddKeysToAgent yes
-	IdentityFile ~/.ssh/<private key name>
-	User <your user>
-```
-```
-Host pi03.yourdomain.com
-	HostName pi03.yourdomain.com
-    AddKeysToAgent yes
-    IdentityFile ~/.ssh/<private key name>
-	User <your user>
-```
-
-- You can also reference this how to from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
-- Check the boxes that make sense to you
-<p></p>
-<br>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
 - Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
