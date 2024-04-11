@@ -194,7 +194,7 @@ spec:
   - default-pool
 ```
 
-- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl shows all CRDs for MetalLB:
+- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl show all CRDs for MetalLB:
 
 ```
 kubectl get crds | grep metallb
