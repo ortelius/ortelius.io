@@ -1,15 +1,13 @@
 ---
-date: 2024-03-27
-title: "How to bake an Ortelius Pi Part 1 | The Hardware"
-linkTitle: "How to bake an Ortelius Pi Part 1 | The Hardware"
+date: 2024-04-05
+title: "How to Bake an Ortelius Pi Part 1 | The Hardware"
+linkTitle: "How to Bake an Ortelius Pi Part 1 | The Hardware"
 author: Sacha Wharton
 ---
 
 
-## How to bake an Ortelius Pi Part 1 | The Hardware
-
 <div class="col-center">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<img src="/images/orteliuspi-part1.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 
@@ -26,7 +24,8 @@ Why Raspberry Pi's you ask?  First of all I live in Cape Town South Africa where
 - 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply). Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/).
 
 -------------------------------------------------------------------------------------------------------------
-- 3X 32GB minimum Micro SD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s) | Speed chart [here](https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes).
+
+- 3X 32GB minimum Micro SD Card `UHS-II: theoretical maximum transfer speeds up to 312MB/s` | Speed chart [here](https://www.kingston.com/en/blog/personal-storage/memory-card-speed-classes).
 
 <strong>or</strong>
 
@@ -157,6 +156,12 @@ Fill in the required info according to your specifications. Remember to change t
 ## Conclusion
 
 By this stage you should have multiple Pi 4 B's running with Ubuntu 22.04.4 LTS. Stay tuned for part 2 where we will dive into optimizing USB flash sticks for the best performance and stability and the installation of MicroK8s.
+
+### Next Steps
+
+[How to Bake on Ortelius Pi - Part 2 The Preparation](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+
+[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
 
 <strong> Disclaimer: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
 

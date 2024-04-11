@@ -102,17 +102,21 @@ By Elizabeth Calderon | Wednesday, March 27, 2024
 {{< blocks/section color=white >}}
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="Ortelius PI Part 1 - Hardware" height="288px" width="350px" />
+<img src="/images/orteliuspi-part1.png" alt="Ortelius PI Part 1 - Hardware" height="288px" width="350px" />
 </div>
 <p></p>
 
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">How to Bake an Ortelius Pi Part 1 | The Hardware</h2>
+<h2 class="text-left">How to Bake an Ortelius Pi Part 1 - 3</h2>
 <hr>
 By Sacha Wharton | Wednesday, March 28, 2024
 
-[Read Now](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-1-the-hardware/)
+- [Read Part 1 Now](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)
+
+- [Read Part 2 Now](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation//)
+
+- [Read Part 3 Now](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
@@ -124,7 +128,7 @@ By Sacha Wharton | Wednesday, March 28, 2024
 {{< blocks/section color=white >}}
 
 <div class="col-left">
-<img src="/images/AIdata.png" alt="Ortelius PI Part 1 - Hardware" height="288px" width="350px" />
+<img src="/images/AIdata.png" alt="AI for DevSecOps" height="288px" width="350px" />
 </div>
 <p></p>
 
@@ -135,6 +139,29 @@ By Sacha Wharton | Wednesday, March 28, 2024
 By Tracy Ragan | Wednesday, March 30, 2024
 
 [Read Now](https://ortelius.io/blog/2024/03/30/what-metadata-is-required-for-ai-devsecops/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color=white >}}
+
+<div class="col-left">
+<img src="/images/ortelius-ml-models.png" alt="Ortelius ML Workflows" height="288px" width="350px" />
+</div>
+<p></p>
+
+{{< blocks/feature_dual >}}
+
+<h2 class="text-left">How Ortelius Models Threats with ML Workflows - A Roadmap</h2>
+<hr>
+By Raj Shah | Monday, April 8, 2024
+
+[Read Now](https://ortelius.io/blog/2024/04/09/how-ortelius-models-threats-with-ml-workflows-a-roadmap/)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
