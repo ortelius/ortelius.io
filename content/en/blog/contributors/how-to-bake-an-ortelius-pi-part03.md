@@ -194,7 +194,7 @@ spec:
   - default-pool
 ```
 
-- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl shows all CRDs for MetalLB:
+- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl show all CRDs for MetalLB:
 
 ```
 kubectl get crds | grep metallb
@@ -306,7 +306,7 @@ helm upgrade traefik traefik/traefik --values values.yaml
 
 - Now we need to deploy an `ingress route` which forms part of the [CRDs](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) that were installed with Traefik
 - CRDs are custom resources created in our Kubernetes cluster that add additional magic
-- Kubectl shows all CRDs for Traefik
+- Kubectl show all CRDs for Traefik
 
 ```
 kubectl get crds | grep traefik
@@ -413,7 +413,7 @@ Well done for making it this far! We have made it to the point where we can depl
 - Ortelius docs [here](https://docs.ortelius.io/guides/)
 - Ortelius Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 
-Ortelius currently consists of the following Microservices. The one we are most interested at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
+Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices" />
@@ -477,7 +477,7 @@ helm upgrade --install ortelius ortelius/ortelius --set ms-general.dbpass=postgr
 - The `k3d` value enables the Traefik ingress class to make Traefik Ortelius aware.
 - `--set ms-nginx.ingress.dnsname=<your domain name goes here>` | This is URL that will go in your browser to access Ortelius
 
-- Kubectl shows the pods for Ortelius
+- Kubectl show the pods for Ortelius
 
 ```
 kubectl get pods
