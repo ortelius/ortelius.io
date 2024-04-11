@@ -20,7 +20,7 @@ In this follow-up blog, I will help you prepare three Pis for DHCP, DNS, NFS (Ne
 
 ### IP Addresses and DHCP
 
-Giving the Pis a home address makes them contactable. This is where either a [static IP address](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address) or [DHCP](https://www.youtube.com/watch?v=ldtUSSZJCGg) comes in. Your home internet router generally comes with DHCP pre-configured. I use the [tp-link | AX5400 Wi-Fi 6 Router](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax73/). I will use my router as the example here.
+We need to give the Pis a home address so that they are contactable and this is where either a [static IP addresse](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address) or [DHCP](https://www.youtube.com/watch?v=ldtUSSZJCGg) comes in. Your home internet router generally comes with DHCP pre-configured. I use the [tp-link | AX5400 Wi-Fi 6 Router](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax73/) and so I will use my router as the example here.
 
 - Login to your home router with your browser and look for your DHCP configuration. Mine is `Network` --> `DHCP Server`
 
@@ -50,6 +50,7 @@ Giving the Pis a home address makes them contactable. This is where either a [st
 </div>
 <p></p>
 
+---------------------------------------------------------------------------------------------------------------
 
 ### DNS
 
@@ -163,6 +164,7 @@ Great! DNS is done.
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - I am using a `Synology DS413j with DSM 6.2.4-25556 Update 7` so the following steps will be inline with my Synology.
 
+---------------------------------------------------------------------------------------------------------------
 
 #### Enable NFS on the Synology
 
