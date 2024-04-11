@@ -23,15 +23,18 @@ Why Raspberry Pi's you ask?  First of all I live in Cape Town South Africa where
 #### My Home Setup
 - 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply). Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/).
 
--------------------------------------------------------------------------------------------------------------
+I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts. First I will cover the Raspberry Pi hardware, NFS and setup and then move on to [Canonicals MicroK8s](https://microk8s.io/) (Kubernetes), [Traefik](https://doc.traefik.io/traefik/) (Cloud Native Proxy and Load Balancer) and [Ortelius (The Ultimate Evidence Store)](https://ortelius.io/).
 
+Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa where we are experiencing some of the worst electricity outages in years thus we need to share electricity by taking turns through rotational blocks of time commonly know to locals as Load Shedding. We use an app like this one [Load Shedding App](https://play.google.com/store/apps/details?id=com.abisoft.loadsheddingnotifier&hl=en_ZA&gl=US) to inform ourselves when the next bout of load shedding will be hitting our area. Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
+
+-------------------------------------------------------------------------------------------------------------
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 - Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
 - I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi
 
 <strong>or</strong>
 
-- 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further.
+- 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
 -------------------------------------------------------------------------------------------------------------
 - 1X Screen HDMI
 - 1X Keyboard USB
@@ -42,13 +45,13 @@ Why Raspberry Pi's you ask?  First of all I live in Cape Town South Africa where
 
 Please note this is a South African brand of UPS but I am showing this for example purposes. The Mecer brand is extremely good and all my lead acid battery UPS's are from Mecer. I have a combination of the 650VA, 2000VA and 3000VA to keep me going (7 in all).
 
-#### NFS Storage
+### NFS Storage
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - 1X NAS device for the NFS storage which can be a virtual machine, laptop, old desktop or Synology type device. There are plenty options out there just do a internet search.
 - 1X 650VA UPS
 
-#### Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation
+### Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation
 
 The imaging utility will be used install Ubuntu onto your SD Card or USB flash drive.
 - [Raspberry Pi imaging Utility](https://www.raspberrypi.com/software/)
@@ -113,6 +116,8 @@ usb-storage.quirks=05dc:a838:u
 usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=serial0,115200 dwc_otg.lpm_enable=0 console=tty1 root=LABEL=writable rootfstype=ext4 rootwait fixrtc quiet splash
 ```
 
+---------------------------------------------------------------------------------------------------
+
 ### Using the Raspberry Pi Imager
 - Repeat these steps for each SD Card or USB flash stick
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
@@ -164,7 +169,9 @@ Note: This will look different on your machine especially if you are using eithe
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
+- Click Next
 <p></p>
+
 <br>
 
 Use OS Customization by clicking: `EDIT SETTINGS`
@@ -188,7 +195,48 @@ Fill in the required info according to your specifications. Remember to change t
 <br>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<p></p>
 </div>
+If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps:
+
+- Generate the keys in the home folder so on Mac its `/Users/<your username>/.ssh`
+
+```
+ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
+ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
+```
+
+- You will end up with two files - One will be the private key which you never ever share and the other will be the public key with a bunch of scrambled numbers and text. You then copy all the scrambled numbers and text and paste the same public key each time on the line under `Allow public-key authentication only` for each Pi.
+
+- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
+
+- Then add this config to `.ssh/config`
+
+```
+Host pi01.yourdomain.com
+	HostName pi01.yourdomain.com
+    AddKeysToAgent yes
+	IdentityFile ~/.ssh/<private key name>
+	User <your user>
+```
+
+```
+Host pi02.yourdomain.com
+	HostName pi02.yourdomain.com
+    AddKeysToAgent yes
+	IdentityFile ~/.ssh/<private key name>
+	User <your user>
+```
+```
+Host pi03.yourdomain.com
+	HostName pi03.yourdomain.com
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/<private key name>
+	User <your user>
+```
+
+- You can also reference this how to from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- Check the boxes that make sense to you
 <p></p>
 <br>
 
