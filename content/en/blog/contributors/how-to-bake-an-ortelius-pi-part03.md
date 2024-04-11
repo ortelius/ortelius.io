@@ -413,7 +413,7 @@ Well done for making it this far! We have made it to the point where we can depl
 - Ortelius docs [here](https://docs.ortelius.io/guides/)
 - Ortelius Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 
-Ortelius currently consists of the following Microservices. The one we are most interested at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
+Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices" />
