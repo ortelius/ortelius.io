@@ -228,7 +228,6 @@ Host pi03.yourdomain.com
 ```
 
 - You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
-- Check the boxes that make sense to you
 
 <strong>Check:</strong> `all boxes specific to your needs.`
 <p></p>
