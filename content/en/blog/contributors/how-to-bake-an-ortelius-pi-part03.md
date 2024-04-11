@@ -17,11 +17,11 @@ In [Part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 
 In [Part 2](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-2-the-preperation/), of this series we configured DHCP, DNS, NFS and deployed MicroK8s.
 
-In Part 3 we will deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage
-
-- Deploy [MetalLB load-balancer](https://metallb.universe.tf/)
+In Part 3 we will deploy the following:
+- Deploy [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage.
+- Deploy [MetalLB load-balancer](https://metallb.universe.tf/) for a dedicated IP address an entry point into the Kubernetes cluster
 - Deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices
-- Deploy [Ortelius](https://ortelius.io/) the ultimate evidence store for devops and open-source security validation.
+- Deploy [Ortelius](https://ortelius.io/) the ultimate evidence store for devops and open-source security validation
 
 I will be using Helm Charts to configure some of the services as this makes getting started a lot easier. Also Helm Charts are great to compare configuration or reset `values.yaml` in case the plot is totally lost. Think of `values.yaml` as the defaults for the application you are deploying.
 
@@ -469,7 +469,7 @@ helm repo update
 helm upgrade --install ortelius ortelius/ortelius --set ms-general.dbpass=postgres --set global.postgresql.enabled=true --set global.nginxController.enabled=true --set ms-nginx.ingress.type=k3d --set ms-nginx.ingress.dnsname=<your domain name goes here>  --version "${ORTELIUS_VERSION}" --namespace ortelius
 ```
 
--Lets stop here to discuss some of these settings.
+- Lets stop here to discuss some of these settings.
 
 - `--set ms-general.dbpass=postgres` | Set the PostgreSQL database password
 - `--set global.nginxController.enabled=true` | Sets the ingress controller which could be one of `default nginx ingress, AWS Load Balancer or Google Load Balancer` | Refer to the Helm Chart in ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
