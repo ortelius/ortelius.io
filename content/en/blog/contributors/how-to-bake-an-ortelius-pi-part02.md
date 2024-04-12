@@ -81,9 +81,9 @@ xrpl.local.gd.                 86400	IN	A	127.0.0.10.0.1
 
 #### NextDNS
 
-For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS it is complete protection for all your devices no matter where you go in the world for all your devices including your Pi MicroK8s nodes. It will use `127.0.0.1:53` to resolve your local IPs. However, you will need to do some configuration by logging into the NextDNS portal to add local DNS records and installing the cli.
+For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS it is complete protection for all your devices no matter where you go in the world including your Pi MicroK8s nodes. It will use `127.0.0.1:53` to resolve your local IPs. However, you will need to do some configuration by logging into the NextDNS portal to add local DNS records and installing the cli.
 
-<strong>Disclaimer</strong> - NextDNS is free to a certain amount of DNS queries once you reach that limit resolution stops. It is inexpensive and totally worth it.
+<strong>Disclaimer</strong> - NextDNS is free up to 300 000 DNS queries once you reach that limit resolution stops. It is inexpensive and totally worth it.
 
 -------------------------------------------------------------------------------------------------------------
 
