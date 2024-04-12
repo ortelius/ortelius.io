@@ -283,6 +283,7 @@ Great! DNS is done.
 - Install `sudo apt install nfs-common -y` for each Pi.
 
 #### Kubectl | Your machine
+- [Kubectl and Kustomize Sig CLI](https://kubectl.docs.kubernetes.io/])
 - Kubectl docs [here](https://kubernetes.io/docs/reference/kubectl/)
 - Kubectl quick reference [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Install Kubectl [here](https://kubernetes.io/docs/tasks/tools/) on `your local machine`
