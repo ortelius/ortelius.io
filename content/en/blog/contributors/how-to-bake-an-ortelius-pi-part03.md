@@ -15,19 +15,19 @@ author: Sacha Wharton
 
 In [Part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware), of this series I walked through an installation of Ubuntu Server 22.04.4 LTS on the Raspberry Pis.
 
-In [Part 2](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation), of this series I walked through how to configure DHCP, DNS, NFS and deployed MicroK8s. 
+In [Part 2](https://ortelius.io/blog/2024/03/27/how-to-bake-an-ortelius-pi-part-2-the-preperation/), of this series we configured DHCP, DNS, NFS and deployed MicroK8s.
 
-In this part 3, I will walk through how to:
-- deploy the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage
-- deploy [MetalLB load-balancer](https://metallb.universe.tf/)
-- deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices 
-- deploy [Ortelius](https://ortelius.io/) the ultimate evidene store for devops and open-source security validation
+In Part 3 we will deploy the following:
+- Deploy [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised storage.
+- Deploy [MetalLB load-balancer](https://metallb.universe.tf/) for a dedicated IP address an entry point into the Kubernetes cluster
+- Deploy [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices
+- Deploy [Ortelius](https://ortelius.io/) the ultimate evidence store for devops and open-source security validation
 
 I will be using Helm Charts to configure some of the services as this makes getting started a lot easier. Also Helm Charts are great to compare configuration or reset `values.yaml` in case the plot is totally lost. Think of `values.yaml` as the defaults for the application you are deploying.
 
 ### NFS CSI Driver
 
-With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to pods using the Synology NAS as the central storage server. Here is some additional technical information for your reference: 
+With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to pods using the Synology NAS as the central storage server. Here is some additional technical information for your reference:
 
 - Kubectl quick reference [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
@@ -36,6 +36,8 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) I  w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
+
+---------------------------------------------------------------------------------------------------------------
 
 Now let's get started:
 
@@ -192,7 +194,7 @@ spec:
   - default-pool
 ```
 
-- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl shows all CRDs for MetalLB:
+- The `ipaddresspools.metallb.io` is a [CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) which is a custom resource created in our Kubernetes cluster that adds additional magic. Kubectl show all CRDs for MetalLB:
 
 ```
 kubectl get crds | grep metallb
@@ -304,7 +306,7 @@ helm upgrade traefik traefik/traefik --values values.yaml
 
 - Now we need to deploy an `ingress route` which forms part of the [CRDs](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) that were installed with Traefik
 - CRDs are custom resources created in our Kubernetes cluster that add additional magic
-- Kubectl shows all CRDs for Traefik
+- Kubectl show all CRDs for Traefik
 
 ```
 kubectl get crds | grep traefik
@@ -411,7 +413,7 @@ Well done for making it this far! We have made it to the point where we can depl
 - Ortelius docs [here](https://docs.ortelius.io/guides/)
 - Ortelius Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 
-Ortelius currently consists of the following Microservices. The one we are most interested at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
+Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Helm then configure Traefik to send requests to `ms-nginx` and then we should get the Ortelius dashboard.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices" />
@@ -467,7 +469,7 @@ helm repo update
 helm upgrade --install ortelius ortelius/ortelius --set ms-general.dbpass=postgres --set global.postgresql.enabled=true --set global.nginxController.enabled=true --set ms-nginx.ingress.type=k3d --set ms-nginx.ingress.dnsname=<your domain name goes here>  --version "${ORTELIUS_VERSION}" --namespace ortelius
 ```
 
--Lets stop here to discuss some of these settings.
+- Lets stop here to discuss some of these settings.
 
 - `--set ms-general.dbpass=postgres` | Set the PostgreSQL database password
 - `--set global.nginxController.enabled=true` | Sets the ingress controller which could be one of `default nginx ingress, AWS Load Balancer or Google Load Balancer` | Refer to the Helm Chart in ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
@@ -475,7 +477,7 @@ helm upgrade --install ortelius ortelius/ortelius --set ms-general.dbpass=postgr
 - The `k3d` value enables the Traefik ingress class to make Traefik Ortelius aware.
 - `--set ms-nginx.ingress.dnsname=<your domain name goes here>` | This is URL that will go in your browser to access Ortelius
 
-- Kubectl shows the pods for Ortelius
+- Kubectl show the pods for Ortelius
 
 ```
 kubectl get pods
@@ -489,7 +491,7 @@ kubectl get pods
 
 - Now we will deploy a Traefik ingress route for Ortelius by applying the following YAML. Create a YAML file called `ortelius-traefik.yaml`, copy the YAML into the file and then run:
 
-``` 
+```
 kubectl apply -f ortelius-traefik.yaml`
 ```
 

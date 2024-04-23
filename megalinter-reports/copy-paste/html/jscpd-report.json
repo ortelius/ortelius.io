@@ -1,0 +1,198 @@
+{
+  "statistics": {
+    "detectionDate": "2024-04-11T16:54:44.327Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "static/js/script.js": {
+            "lines": 13,
+            "tokens": 108,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "postcss.config.js": {
+            "lines": 17,
+            "tokens": 28,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 30,
+          "tokens": 136,
+          "sources": 2,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "scss": {
+        "sources": {
+          "assets/scss/_variables_project.scss": {
+            "lines": 4,
+            "tokens": 6,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_variables.scss": {
+            "lines": 132,
+            "tokens": 880,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_styles_project.scss": {
+            "lines": 26,
+            "tokens": 108,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_sidebar-tree.scss": {
+            "lines": 131,
+            "tokens": 615,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_sidebar-toc.scss": {
+            "lines": 56,
+            "tokens": 243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_boxes.scss": {
+            "lines": 117,
+            "tokens": 653,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 99,
+            "percentage": 13.68,
+            "percentageTokens": 15.16,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "assets/scss/_base.scss": {
+            "lines": 220,
+            "tokens": 1123,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 99,
+            "percentage": 7.27,
+            "percentageTokens": 8.82,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 686,
+          "tokens": 3628,
+          "sources": 7,
+          "clones": 1,
+          "duplicatedLines": 16,
+          "duplicatedTokens": 99,
+          "percentage": 2.33,
+          "percentageTokens": 2.73,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 716,
+      "tokens": 3764,
+      "sources": 9,
+      "clones": 1,
+      "duplicatedLines": 16,
+      "duplicatedTokens": 99,
+      "percentage": 2.23,
+      "percentageTokens": 2.63,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "scss",
+      "lines": 17,
+      "fragment": ";\n\n    #{$parent} {\n        &--#{$color-name} {\n            color: $text-color;\n            background-color: #{$color-value};\n\n            .td-arrow-down {\n                &::before {\n                    left: 50%;\n                    margin-left: -30px;\n                    bottom: -25px;\n                    border: {\n                        style: solid;\n                        width: 25px 30px 0 30px;\n                        color: #{$color-value} transparent transparent transparent;\n                    };",
+      "tokens": 0,
+      "firstFile": {
+        "name": "assets/scss/_base.scss",
+        "start": 58,
+        "end": 74,
+        "startLoc": {
+          "line": 58,
+          "column": 9,
+          "position": 305
+        },
+        "endLoc": {
+          "line": 74,
+          "column": 2,
+          "position": 404
+        }
+      },
+      "secondFile": {
+        "name": "assets/scss/_boxes.scss",
+        "start": 11,
+        "end": 28,
+        "startLoc": {
+          "line": 11,
+          "column": 2,
+          "position": 88
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 8,
+          "position": 191
+        }
+      }
+    }
+  ],
+  "filename": "/node-deps/node_modules/@jscpd/html-reporter/dist/templates/main.pug"
+}

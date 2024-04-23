@@ -20,7 +20,7 @@ In this follow-up blog, I will help you prepare three Pis for DHCP, DNS, NFS (Ne
 
 ### IP Addresses and DHCP
 
-Giving the Pis a home address makes them contactable. This is where either a [static IP address](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address) or [DHCP](https://www.youtube.com/watch?v=ldtUSSZJCGg) comes in. Your home internet router generally comes with DHCP pre-configured. I use the [tp-link | AX5400 Wi-Fi 6 Router](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax73/). I will use my router as the example here.
+We need to give the Pis a home address so that they are contactable and this is where either a [static IP addresse](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address) or [DHCP](https://www.youtube.com/watch?v=ldtUSSZJCGg) comes in. Your home internet router generally comes with DHCP pre-configured. I use the [tp-link | AX5400 Wi-Fi 6 Router](https://www.tp-link.com/us/home-networking/wifi-router/archer-ax73/) and so I will use my router as the example here.
 
 - Login to your home router with your browser and look for your DHCP configuration. Mine is `Network` --> `DHCP Server`
 
@@ -50,47 +50,42 @@ Giving the Pis a home address makes them contactable. This is where either a [st
 </div>
 <p></p>
 
+---------------------------------------------------------------------------------------------------------------
 
 ### DNS
 
-#### The easiest way to serve localhost. DNS that Always Resolve to 127.0.0.1
+#### [Local.gd](https://local.gd)
 
-An easy way to serve localhost is to use DNS that always resolves to 127.0.0.1. For example you could use ortelius.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. Its the easiest way to serve localhost as its DNS that always resolves to 127.0.0.1.
+If you don't have something like NextDNS or similar you can use `local.gd` which works very well and is very easy to setup.
 
-- I use mysite.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. 
-
-- I use Netlify DNS so I'm pretty sure that it is always within 10ms of a DNS server, whatever the location. It's super quick! Use any subdomain you like, and sub-sub-domains work too!
+A easy way to serve localhost is to use DNS that always resolves to 127.0.0.1. For example you could use ortelius.local.gd when developing locally and it will resolve to 127.0.0.1. Any subdomain like *.local.gd will work. The use of subdomains and sub-sub-domains work too as in the example below.
 
 ```
-$ dig startup.local.gd
+$ dig ortelius.local.gd
 ortelius.local.gd.                  86400	IN	A	127.0.0.1
-```
 
-```
-$ dig www.startup.local.gd
-www.ortleius.local.gd.              86400	IN	A	127.0.0.1
-```
+$ dig www.ortelius.local.gd
+www.ortelius.local.gd.              86400	IN	A	127.0.0.1
 
-```
-$ dig my.project.company.local.gd
-aliens.are.real.oretlius.local.gd.       86400	IN	A	127.0.0.1
-```
+$ dig aliens.are.real.ortelius.local.gd
+aliens.are.real.ortelius.local.gd.       86400	IN	A	127.0.0.1
 
-```
-$ dig alderaan.local.gd
+$ dig xrpl.local.gd
 xrpl.local.gd.                 86400	IN	A	127.0.0.10.0.1
 ```
 
 - Edit localhosts on Linux and Mac here with sudo rights `sudo vi /etc/hosts`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts`
 
+-------------------------------------------------------------------------------------------------------------
 
 #### NextDNS
 
-For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS it is a complete protection for all your devices no matter where you go in the world for all your devices including your Pi MicroK8s nodes. It will use `127.0.0.1:53` to resolve your local IPs. However, you will need to do some configuration by logging into the NextDNS portal and installing the cli.
+For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS it is complete protection for all your devices no matter where you go in the world including your Pi MicroK8s nodes. It will use `127.0.0.1:53` to resolve your local IPs. However, you will need to do some configuration by logging into the NextDNS portal to add local DNS records and installing the cli.
 
-<strong>Disclaimer</strong> - NextDNS is free to a certain amount of DNS queries once you reach that limit resolution stops. It is inexpensive and totally worth it.
+<strong>Disclaimer</strong> - NextDNS is free up to 300 000 DNS queries once you reach that limit resolution stops. It is inexpensive and totally worth it.
 
+-------------------------------------------------------------------------------------------------------------
 
 - Think of a domain name for your environment - mine is pangarabbit.com.
 - Go to the NextDNS Wiki [here](https://github.com/nextdns/nextdns/wiki).
@@ -161,6 +156,7 @@ NextDNS will instantly auto refresh all your NextDNS agents with any configurati
 
 Great! DNS is done.
 
+---------------------------------------------------------------------------------------------------------------
 
 ### NFS Prep
 - [Synology](https://www.synology.com/)
@@ -168,6 +164,7 @@ Great! DNS is done.
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - I am using a `Synology DS413j with DSM 6.2.4-25556 Update 7` so the following steps will be inline with my Synology.
 
+---------------------------------------------------------------------------------------------------------------
 
 #### Enable NFS on the Synology
 
@@ -277,6 +274,7 @@ Great! DNS is done.
 
 - Congrats you just configured the Synology for NFS!
 
+---------------------------------------------------------------------------------------------------------------
 
 ### OS Prep
 
@@ -308,6 +306,7 @@ Great! DNS is done.
 - `FYI` there are commands related to `MickroK8s` such as `sudo microk8s config` which are run on the Pis where MicroK8s is installed.
 - Please find the MicroK8s command reference [here](https://microk8s.io/docs/command-reference).
 
+---------------------------------------------------------------------------------------------------------------
 
 - SSH into each Pi and configure the Pi BIOS `sudo vi /boot/firmware/cmdline.txt` and add the following `cgroup_enable=memory cgroup_memory=1.`
 - Below is the config from my Pi as an example:
@@ -401,7 +400,7 @@ kubectl get pods --all-namespaces
 
 ### Conclusion
 
-Great work! Stay tuned for Part 3 where I will show how to deploy the NSF [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, deploy [MetalLB load balancer](https://metallb.universe.tf/), deploy [Traefik](https://traefik.io/) and [Ortelius](https://ortelius.io/).
+By this stage you should have three Pi's each with NFS and MicroK8s. Stay tuned for Part 3 where we will deploy the NSF [csi-driver-nfs](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, deploy [MetalLB load balancer](https://metallb.universe.tf/), deploy [Traefik](https://traefik.io/) and [Ortelius](https://ortelius.io/).
 
 ### Next Steps:
 

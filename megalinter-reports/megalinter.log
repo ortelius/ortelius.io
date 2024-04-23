@@ -1,0 +1,111 @@
+----------------------------------------------------------------------------------------------------
+------------------------------------ MegaLinter, by OX Security ------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2024-03-10T20:25:08Z
+ - Image Revision: a7a0163b6c8ff7474a283d99a706e27483ddd80f
+ - Image Version: v7.10.0
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.io/7.10.0
+----------------------------------------------------------------------------------------------------
+MegaLinter initialization
+MegaLinter will analyze workspace [/tmp/lint]
+
+[Activation] ACTION_ACTIONLINT has been set inactive, as subdirectory has not been found: .github/workflows (set value "any" to always activate)
+[Activation] ANSIBLE_ANSIBLE_LINT has been set inactive, as subdirectory has not been found: ansible (set value "any" to always activate)
+[Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
+[Activation] JAVASCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] JSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] KUBERNETES_KUBECONFORM has been set inactive, as subdirectory has not been found: kubernetes (set value "any" to always activate)
+[Activation] KUBERNETES_HELM has been set inactive, as none of these files has been found: ['Chart.yml', 'Chart.yaml']
+[Activation] KUBERNETES_KUBESCAPE has been set inactive, as none of these files has been found: ['Chart.yml', 'Chart.yaml']
+[SemgrepLinter] Deactivated because no ruleset has been defined
+[Activation] SALESFORCE_SFDX_SCANNER_APEX has been set inactive, as subdirectory has not been found: force-app (set value "any" to always activate)
+[Activation] SALESFORCE_SFDX_SCANNER_AURA has been set inactive, as subdirectory has not been found: force-app (set value "any" to always activate)
+[Activation] SALESFORCE_SFDX_SCANNER_LWC has been set inactive, as subdirectory has not been found: force-app (set value "any" to always activate)
+[Activation] SALESFORCE_LIGHTNING_FLOW_SCANNER has been set inactive, as subdirectory has not been found: force-app (set value "any" to always activate)
+[Activation] SPELL_PROSELINT has been set inactive, as none of these files has been found: ['.proselintrc', 'proselint/config.json']
+[Activation] SPELL_VALE has been set inactive, as none of these files has been found: ['.vale.ini']
+[Activation] SQL_SQLFLUFF has been set inactive, as none of these files has been found: ['.sqlfluff']
+[Activation] SWIFT_SWIFTLINT has been set inactive, as none of these files has been found: ['.swiftlint.yml']
+[Activation] TSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] TYPESCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+CLOJURE_CLJSTYLE has been temporary disabled in MegaLinter, please use a previous MegaLinter version or wait for the next one !
+MARKDOWN_REMARK_LINT has been temporary disabled in MegaLinter, please use a previous MegaLinter version or wait for the next one !
+Skipped linters: ACTION_ACTIONLINT, ANSIBLE_ANSIBLE_LINT, CLOJURE_CLJSTYLE, EDITORCONFIG_EDITORCONFIG_CHECKER, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JSX_ESLINT, KUBERNETES_HELM, KUBERNETES_KUBECONFORM, KUBERNETES_KUBESCAPE, MARKDOWN_REMARK_LINT, REPOSITORY_SEMGREP, SALESFORCE_LIGHTNING_FLOW_SCANNER, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SPELL_PROSELINT, SPELL_VALE, SQL_SQLFLUFF, SWIFT_SWIFTLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+
+MegaLinter now collects the files to analyse
+Listing all files in directory [/tmp/lint], then filter with:
+- File extensions: , .R, .RMD, .Rmd, .bash, .bicep, .c, .c++, .cc, .cdxml, .clj, .cljc, .cljs, .coffee, .cpp, .cs, .csproj, .css, .cu, .cuh, .cxx, .dart, .dash, .edn, .env, .feature, .go, .gradle, .graphql, .groovy, .gvy, .h, .h++, .hcl, .hh, .hpp, .htm, .html, .hxx, .java, .js, .json, .json5, .jsonc, .ksh, .kt, .kts, .lua, .markdown, .md, .mdx, .nf, .p6, .php, .pl, .pl6, .pm, .pm6, .pp, .proto, .ps1, .ps1xml, .psd1, .psm1, .psrc, .pssc, .py, .r, .raku, .rakumod, .rakutest, .rb, .rs, .rst, .saas, .scala, .scss, .sh, .smk, .sql, .t, .tex, .tf, .ts, .txt, .vb, .xml, .yaml, .yml
+- File names (regex): Containerfile, Dockerfile, Jenkinsfile, Makefile, Snakefile, package\.json
+- Excluding .gitignored files [238]: public/404.html, public/blog/1/01/01/ortelius-microservice-visionaries-december-2021/index.html, public/blog/1/01/01/retrieve-from-push-through-cache/index.html, public/blog/2020/12/29/ortelius-a-single-source-of-truth/index.html, public/blog/2020/12/29/ortelius-an-incubating-cdf-project/index.html, public/blog/2020/12/29/publishing-microservices/index.html, public/blog/2021/01/05/january-2021-newsletter/index.html, public/blog/2021/01/18/ortelius-gsoc-project-proposal/index.html, public/blog/2021/01/20/2021-blog-a-thon/index.html, public/blog/2021/02/11/february-2021-newsletter/index.html,…(full list in DEBUG)
+Kept [120] files on [557] found files
+
++----MATCHING LINTERS-------------------+------------------------------------------------------------------------+----------------+------------+
+| Descriptor | Linter                   | Criteria                                                               | Matching files | Format/Fix |
++------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
+| COPYPASTE  | jscpd                    |                                                                        | project        | no         |
+| CSS        | stylelint                | .css|.scss|.saas                                                       | 7              | no         |
+| CSS        | scss-lint                | .scss|.saas                                                            | 7              | no         |
+| HTML       | djlint                   | .html|.htm                                                             | 21             | no         |
+| HTML       | htmlhint                 | .html|.htm                                                             | 21             | no         |
+| JAVASCRIPT | standard                 | .js                                                                    | 2              | no         |
+| JSON       | jsonlint                 | .json                                                                  | 3              | no         |
+| JSON       | eslint-plugin-jsonc      | .json|.json5|.jsonc                                                    | 3              | no         |
+| JSON       | v8r                      | .json                                                                  | 3              | no         |
+| JSON       | prettier                 | .json                                                                  | 3              | no         |
+| JSON       | npm-package-json-lint    | .json|package\.json                                                    | project        | no         |
+| MARKDOWN   | markdownlint             | .md                                                                    | 77             | no         |
+| MARKDOWN   | markdown-link-check      | .md                                                                    | 77             | no         |
+| MARKDOWN   | markdown-table-formatter | .md                                                                    | 77             | no         |
+| OPENAPI    | spectral                 | .yml|.yaml|.json                                                       | 1              | no         |
+| REPOSITORY | checkov                  |                                                                        | project        | no         |
+| REPOSITORY | devskim                  |                                                                        | project        | no         |
+| REPOSITORY | dustilock                |                                                                        | project        | no         |
+| REPOSITORY | git_diff                 |                                                                        | project        | no         |
+| REPOSITORY | gitleaks                 |                                                                        | project        | no         |
+| REPOSITORY | grype                    |                                                                        | project        | no         |
+| REPOSITORY | kics                     |                                                                        | project        | no         |
+| REPOSITORY | secretlint               |                                                                        | project        | no         |
+| REPOSITORY | syft                     |                                                                        | project        | no         |
+| REPOSITORY | trivy                    |                                                                        | project        | no         |
+| REPOSITORY | trivy-sbom               |                                                                        | project        | no         |
+| REPOSITORY | trufflehog               |                                                                        | project        | no         |
+| SPELL      | cspell                   |                                                                        | 120            | no         |
+| SPELL      | lychee                   | .md|.mdx|.markdown|.html|.htm|.rst|.txt|.json|.jsonc|.json5|.yaml|.yml | 102            | no         |
+| YAML       | prettier                 | .yml|.yaml                                                             | 1              | no         |
+| YAML       | yamllint                 | .yml|.yaml                                                             | 1              | no         |
+| YAML       | v8r                      | .yml|.yaml                                                             | 1              | no         |
++------------+--------------------------+------------------------------------------------------------------------+----------------+------------+
+
+Processing linters on [4] parallel cores…
+[31m❌ Linted [COPYPASTE] files with [jscpd]: Found 1 error(s) - (33.52s)[0m
+- Using [jscpd v3.5.10] https://megalinter.io/7.10.0/descriptors/copypaste_jscpd
+- MegaLinter key: [COPYPASTE_JSCPD]
+- Rules config: [.jscpd.json]
+--Error detail:
+Clone found (scss):
+ - assets/scss/_base.scss [58:9 - 74:2] (16 lines, 99 tokens)
+   assets/scss/_boxes.scss [11:2 - 28:8]
+
+┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ javascript │ 2              │ 30          │ 136          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ scss       │ 7              │ 686         │ 3628         │ 1            │ 16 (2.33%)       │ 99 (2.73%)        │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:     │ 9              │ 716         │ 3764         │ 1            │ 16 (2.23%)       │ 99 (2.63%)        │
+└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 1 clones.
+HTML report saved to /tmp/lint/megalinter-reports/copy-paste/html/
+ERROR: jscpd found too many duplicates (2.23%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (2.23%) over threshold (0%)
+    at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/reporters/threshold.js:12:19)
+    at /node-deps/node_modules/@jscpd/finder/dist/in-files-detector.js:82:26
+    at Array.forEach (<anonymous>)
+    at /node-deps/node_modules/@jscpd/finder/dist/in-files-detector.js:81:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
