@@ -149,5 +149,10 @@ All times in Mountain Time.
 
 - DevSecOps for Network Operations, Presented by [Akash Bhaskar](https://www.linkedin.com/in/akash-k-bhaskar/), Cisco
 
+<div class="col-center">
+<img src="/images/securechaincon2024-speakersphotos.png" alt="2024 SecureChainCon Speakers" height="600px" width="1500px" />
+</div>
+
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
