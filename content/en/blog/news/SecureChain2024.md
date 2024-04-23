@@ -20,7 +20,10 @@ author: Tracy Ragan
 
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level! 
 
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
 
+<h2 class="text-left">Time and Place</h2>
 <strong> May 24th, 2024 - 8:30 to Noon MT </strong>
 
 [Register Today](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
