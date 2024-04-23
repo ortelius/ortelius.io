@@ -28,23 +28,6 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 [Download and Share the Announcement](/images/securechaincon2024.pdf)
 
 {{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<h2 class="text-left">Call for Speakers Now Open</h2>
-
-The Call for Papers is open through March 25th, 2024. Everyone is welcome to submit talks for SecureChainCon. Tracks include:
-- Use Cases on Open-Source Security Tools and the DevOps Pipeline
-- Threat Modeling and data generation from the DevSecOps Pipeline
-- Understand the Blockers, Drivers, and Solutions for making the software supply chain more secure
-- Compliance and Governance Tools and KPIs
-
-First time presenters are encouraged to submit talks. 
-
-[Submit a Talk Today](https://sessionize.com/securechaincon2024)
-
-<a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
-
-{{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 {{< blocks/section color=white >}}
