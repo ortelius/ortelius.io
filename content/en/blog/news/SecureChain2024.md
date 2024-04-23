@@ -157,11 +157,11 @@ All times in Mountain Time.
 
 11:15 - 12:00 Presentations, Lighting Talks and Closing Remarks
 
-- A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity, Presented by John Kjell - TestifySec
+- A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity, Presented by [John Kjell](linkedin.com/in/john-kjell/) - TestifySec
 
-- Google Cloud Software Supply Chain Security, Presented by Nael Fridhi - Google Cloud
+- Google Cloud Software Supply Chain Security, Presented by [Nael Fridhi]( linkedin.com/in/naelfridhi/) - Google Cloud
 
-- DevSecOps for Network Operations, Presented by Akash Bhaskar
+- DevSecOps for Network Operations, Presented by [Akash Bhaskar](linkedin.com/in/akash-k-bhaskar/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
