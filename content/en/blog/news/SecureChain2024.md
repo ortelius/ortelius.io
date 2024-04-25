@@ -136,7 +136,15 @@ All times in Mountain Time.
 
 <strong>10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
 
-10:20 - Securing Software: A Panel Discussion on Actionable Metrics and Metadata hosted by Sacha Wharton
+10:20 - Securing Software: A Panel Discussion on Actionable Metrics and Metadata hosted by Sacha Wharton. Panelist include:
+- Luigi Gubello - Sr. Security Engineer, Pitch
+- John Linford - Security Portfolio Forum Director, The Open Group
+- Tracy Ragan - CEO, DeployHub, Inc. 
+
+<div class="col-center">
+<img src="/images/panelspeakersphotos.png" alt="2024 SecureChainCon Panel Speakers" height="600px" width="1500px" />
+</div>
+
 
 
 11:00 Break - Twitch Games
