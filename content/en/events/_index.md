@@ -61,8 +61,8 @@ Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of c
 
 <br>
 
-Thank you the CDFoundation for an amazing CDCOn 2024. If you could not attend, no problem. You can now watch all sessions [On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
-) Learn from the the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
+Thank you to the CDFoundation for an amazing CDCOn 2024. If you could not attend, no problem. You can now watch all sessions [On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
+). Learn from the the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
 
 A special congratulations to Utkarsh Sharma for receiving both the Ortelius MVP Award and the CDF Top Contributor Award. Thank you for your excellence Utkarsh. 
 
