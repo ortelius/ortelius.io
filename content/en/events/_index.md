@@ -55,18 +55,25 @@ Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of c
 <img src="/images/cdcon2024.png" alt="cdcon2024" height="168px" width="384px" />
 </div>
 
+Thank you to the CDFoundation for an amazing CDCOn 2024. If you could not attend, no problem. You can now watch all sessions on-demand. Learn from the the Jenkins and Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
+
+[Watch On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
+)
+
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
+<div class="col-center">
 <br>
 
-Thank you to the CDFoundation for an amazing CDCOn 2024. If you could not attend, no problem. You can now watch all sessions [On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
-). Learn from the the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
+<img src="/images/utkarsh.png" alt="Utkarsh Sharma"  height="200px" width="200px"/>
+</div>
+<br>
 
-A special congratulations to Utkarsh Sharma for receiving both the Ortelius MVP Award and the CDF Top Contributor Award. Thank you for your excellence Utkarsh. 
+A special congratulations to [Utkarsh Sharma](https://cd.foundation/blog/2023/12/13/utkarsh-sharma-achieves-gold-legend-status/) for receiving both the Ortelius MVP Award and the CDF Top Contributor Award. Thank you for your excellence Utkarsh. 
 
-cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon is part of Open Source Summit North America, along with many other great events.
+cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon was part of Open Source Summit North America, along with many other great events.
 
 
 
