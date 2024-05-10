@@ -171,7 +171,12 @@ enable = false
     name = "Documentation"
     weight = 90
     url = "https://docs.ortelius.io/guides/"
-    
+
+[[menu.main]]
+    name = "SaaS Login"
+    weight = 92
+    url = "https://console.deployhub.com/dmadminweb/Home"
+
 [[menu.main]]
     name = "Emporous"
     weight = 75
