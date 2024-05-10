@@ -79,26 +79,20 @@ Join us on for this amazing online mind share and take your DevSecOps skills to 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Submit to Speak at SecureChainCon</h2>
+<h2 class="text-center">Keynote </h2>
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
-CFP Open Through March 25th, 2024
+</div>
+<div class="col-center">
+<img src="/images/carolinewong.png" alt="Caroline Wong" height="300px" width="300px" />
 </div>
 
+Caroline Wong presents: Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
 
-[Submit a Talk Today](https://sessionize.com/securechaincon2024)
+ Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of ‘offensive’ strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies.
 
-The Call for Papers is open for SecureChainCon. Everyone is welcome to submit talks with a focus on:
-
-- Use Cases on Open-Source Security Tools and the DevOps Pipeline
-- Threat Modeling and data generation from the DevSecOps Pipeline
-- Blockers, Drivers, and Solutions for making the software supply chain more secure
-- Compliance and Governance Tools and KPIs
-
-<strong>First time presenters are encouraged to submit talks.</strong>
-
-<a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
+Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
