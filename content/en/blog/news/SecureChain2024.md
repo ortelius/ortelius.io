@@ -120,11 +120,9 @@ All times in Mountain Time.
 
 8:30 Beer and Donuts Networking - Meet the Ortelius Contributors
 
-8:50 Welcome Keynote presented by Saim Safder
+8:45 Recognition Awards presented by Tracy Ragan
 
-9:05 Recognition Awards presented by Tracy Ragan
-
-9:20 OpenSSF Scorecard Workshop presented by Steve Taylor
+9:10 OpenSSF Scorecard Workshop presented by Steve Taylor
 
 9:50 Break 
 
@@ -154,8 +152,7 @@ All times in Mountain Time.
 
 - A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity, Presented by [John Kjell](https://www.linkedin.com/in/john-kjell/), TestifySec
 
-- Google Cloud Software Supply Chain Security, Presented by [Nael Fridhi](https://www.linkedin.com/in/naelfridhi/),  Google Cloud
-
+- The Hero Project - Evolving DevOps Pipelines to DevSecOps Pipelines with CDEvents and Ortelius [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
 
 
 <div class="col-center">
