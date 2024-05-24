@@ -1,5 +1,5 @@
 ---
-date: 2024-02-26
+date: 2024-05-24
 title: "SecureChainCon 2024"
 summary: SecureChainCon 2024
 author: Tracy Ragan
@@ -11,7 +11,7 @@ author: Tracy Ragan
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">A Free Online, Half-Day Micro-Conference for DevOps and Security Professionals</h2>
+<h2 class="text-left">View On-Demand Sessions from SecureChainCon 2024, Micro-Conference for DevOps and Security Professionals</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -34,7 +34,7 @@ Welcome to SecureChainCon, the ultimate online conference designed to foster kno
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Caroline Wong to be Keynote Presenter</h2>
+<h2 class="text-left">Caroline Wong Keynote Presenter</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -62,12 +62,10 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 <h2 class="text-left">Why You Should Watch</h2>
 <hr>
-- Connect and share with your Peers
+
 - Hear presentations by expert practitioners
 - Learn about supply chain security in decoupled architectures.
 - Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
-- Attend for free (Hosted by the Ortelius Open-Source Community)
-- Join Live or View On-Demand
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
@@ -115,9 +113,9 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 ### Beer and Donuts 
 
-Recognition Awards presented by Tracy Ragan
+[Recognition Awards presented](https://youtu.be/M-QNMVAiICg) by Tracy Ragan
 
-OpenSSF Scorecard Workshop presented by Steve Taylor
+[OpenSSF Scorecard Workshop](https://youtu.be/2JWAWQ2Akd4) presented by Steve Taylor
 
 
 {{< /blocks/feature_dual >}}
