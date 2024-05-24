@@ -152,6 +152,8 @@ All times in Mountain Time.
 
 - A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity, Presented by [John Kjell](https://www.linkedin.com/in/john-kjell/), TestifySec
 
+- A Google Cloud Software Supply Chain Security, Presented by [Nael Fridhi](https://www.linkedin.com/in/naelfridhi/)
+
 - The Hero Project - Evolving DevOps Pipelines to DevSecOps Pipelines with CDEvents and Ortelius [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
 
 
