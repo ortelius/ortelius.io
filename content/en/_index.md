@@ -44,35 +44,31 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 
-<h1 class="text-center">Join us for SecureChainCon 2024 - May 24th, 2024 8:30 MT </h1>
+<h1 class="text-center">View SecureChainCon 2024 - On Demand </h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/securechaincon-CFP.png" alt="CFP SecureChainCon" height="400px" width="589px" />
+<img src="/images/supplychainbanner.png" alt="SecureChainCon" height="400px" width="589px" />
 </div>
 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Attend SecureChainCon</h2>
+<h2 class="text-center">SecureChainCon Now Available on YouTube</h2>
 </div>
 
 
 <div style="margin-top:80px;margin-left:140px">
-Join us for SecureChainCon 2024, <strong>the ultimate free, online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
+Watch SecureChainCon 2024, the online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
 
-Why You Should Attend:
-- Connect and share with your peers
+Why You Should Watch:
 - Hear presentations by expert practitioners
 - Learn about supply chain security in decoupled architectures.
 - Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
-- Attend for free (Hosted by the Ortelius Open-Source Community)
-- Join Live or View On-Demand
 
-Join us on for this amazing online mind share and take your DevSecOps skills to the next level!
 
-[Learn More](https://ortelius.io/blog/2024/02/26/securechaincon-2024/)
+[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
 </div>
 
 {{< /blocks/feature_dual >}}
