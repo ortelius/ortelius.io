@@ -16,19 +16,18 @@ author: Tracy Ragan
 
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Attend</h2>
+<h2 class="text-left">Watch Today</h2>
 
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level! 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Time and Place</h2>
-<strong> May 24th, 2024 - 8:30 to Noon MT </strong>
+<h2 class="text-left">View On Demand</h2>
 
-[Register Today](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
 
-[Download and Share the Announcement](/images/securechaincon2024.pdf)
+[View the Entire Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -53,6 +52,7 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 [Caroline Wong](https://www.linkedin.com/in/carolinewmwong/) is the Chief Strategy Officer at [Cobalt.io](https://cobalt.io). She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, [Security Metrics: A Beginner's Guide](https://www.amazon.com/Security-Metrics-Beginners-Guide-Caroline/dp/0071744002). She teachers cybersecurity courses on LinkedIn Learning and hosts the [Humans of InfoSec podcast](https://resource.cobalt.io/humans-of-infosec).
 
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
@@ -60,7 +60,7 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Why You Should Attend</h2>
+<h2 class="text-left">Why You Should Watch</h2>
 <hr>
 - Connect and share with your Peers
 - Hear presentations by expert practitioners
@@ -72,7 +72,7 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Who Should Attend</h2>
+<h2 class="text-left">Who Should Watch</h2>
 <hr>
 
 - DevOps Engineers
@@ -108,33 +108,27 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Agenda</h2>
+<h2 class="text-left">Program</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
 
-### Join Us on Zoom 
-[Registration Required](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
+### Beer and Donuts 
 
-All times in Mountain Time.
+Recognition Awards presented by Tracy Ragan
 
-8:30 Beer and Donuts Networking - Meet the Ortelius Contributors
+OpenSSF Scorecard Workshop presented by Steve Taylor
 
-8:45 Recognition Awards presented by Tracy Ragan
-
-9:10 OpenSSF Scorecard Workshop presented by Steve Taylor
-
-9:50 Break 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-### Join Us on Twitch 
-[Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
+### View the Entire Playlist
+[Playlist](https://www.twitch.tv/orteliusos)
 
-<strong>10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
+[Keynote with Caroline Wong](https://youtu.be/JMK54x3EzOY?si=DNV3Unv3Z1yTAhcl) - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
 
-10:20 - Securing Software: A Panel Discussion on Actionable Metrics and Metadata hosted by Steve Taylor. Panelist include:
+[Panel Discussion](https://youtu.be/ZEOEVGpYlaM?si=OjS4KE3FM2C122ed) - Securing Software with Actionable Metrics and Metadata hosted by Steve Taylor. Panelist include:
 - Luigi Gubello - Sr. Security Engineer, Pitch and OpenSSF Committee Chair Metrics and Meta Data Working Group
 - John Linford - Security Portfolio Forum Director, The Open Group
 - Tracy Ragan - CEO, DeployHub, Inc. 
@@ -144,17 +138,13 @@ All times in Mountain Time.
 </div>
 
 
-11:00 Break - Twitch Games
+- [DevSecOps for Network Operations](https://youtu.be/V713qfjaIFw?si=YMvoOzBvXsxKzwD2), Presented by [Akash Bhaskar](https://www.linkedin.com/in/akash-k-bhaskar/), Cisco
 
-11:15 - 12:00 Presentations, Lighting Talks and Closing Remarks
+- [A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity](https://youtu.be/R8O3ldOFCew), Presented by [John Kjell](https://www.linkedin.com/in/john-kjell/), TestifySec
 
-- DevSecOps for Network Operations, Presented by [Akash Bhaskar](https://www.linkedin.com/in/akash-k-bhaskar/), Cisco
+- [A Google Cloud Software Supply Chain Security](https://youtu.be/XKFAQWmV7JQ), Presented by [Nael Fridhi](https://www.linkedin.com/in/naelfridhi/)
 
-- A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity, Presented by [John Kjell](https://www.linkedin.com/in/john-kjell/), TestifySec
-
-- A Google Cloud Software Supply Chain Security, Presented by [Nael Fridhi](https://www.linkedin.com/in/naelfridhi/)
-
-- The Hero Project - Evolving DevOps Pipelines to DevSecOps Pipelines with CDEvents and Ortelius [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
+- [The Hero Project - Evolving DevOps Pipelines to DevSecOps Pipelines with CDEvents and Ortelius](https://youtu.be/YkFhiIz9Kjs), Presented by [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
 
 
 <div class="col-center">
