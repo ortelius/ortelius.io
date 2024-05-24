@@ -10,17 +10,15 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">SecureChainCon May 24th, 2024</h2>
+<h2 class="col-center">SecureChainCon Available On Demand</h2>
 <br>
 
 <img src="/images/socialnetworkingtile.png" alt="SecureChainCon2024" height="300px" width="500px" />
 </div>
 <br>
-Join Us for SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. 
+Watch SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. 
 
-May 24th, 2024 - 8:30 to Noon MT
-
-[Register Today](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
+[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
