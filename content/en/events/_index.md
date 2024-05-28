@@ -36,7 +36,6 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
 
-
 [Learn More](https://ortelius.io/blog/2024/05/24/securechaincon-2024/)
 
 {{< /blocks/feature_dual >}}
