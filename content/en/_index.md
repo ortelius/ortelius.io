@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">A Central Evidence Store to Make Software Security and DevOps Intelligence Actionable</h1>
+<h1 class="text-left">A Central Evidence Store to Gather Continuous Security Intelligence</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -44,61 +44,53 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 
-<h1 class="text-center">Join us for SecureChainCon 2024 - May 24th, 2024 8:30 MT </h1>
+<h1 class="text-center">View SecureChainCon 2024 - On Demand </h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/securechaincon-CFP.png" alt="CFP SecureChainCon" height="400px" width="589px" />
+<img src="/images/supplychainbanner.png" alt="SecureChainCon" height="400px" width="589px" />
 </div>
 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Attend SecureChainCon</h2>
+<h2 class="text-center">SecureChainCon Now Available on YouTube</h2>
 </div>
 
 
 <div style="margin-top:80px;margin-left:140px">
-Join us for SecureChainCon 2024, <strong>the ultimate free, online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
+Watch SecureChainCon 2024, the online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
 
-Why You Should Attend:
-- Connect and share with your peers
+Why You Should Watch:
 - Hear presentations by expert practitioners
 - Learn about supply chain security in decoupled architectures.
 - Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
-- Attend for free (Hosted by the Ortelius Open-Source Community)
-- Join Live or View On-Demand
 
-Join us on for this amazing online mind share and take your DevSecOps skills to the next level!
 
-[Learn More](https://ortelius.io/blog/2024/02/26/securechaincon-2024/)
+[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
 </div>
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Submit to Speak at SecureChainCon</h2>
+<h2 class="text-center">Keynote </h2>
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
-CFP Open Through March 25th, 2024
+</div>
+<div class="col-center">
+<img src="/images/carolinewong.png" alt="Caroline Wong" height="300px" width="300px" />
 </div>
 
+Caroline Wong presents: Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
 
-[Submit a Talk Today](https://sessionize.com/securechaincon2024)
+ Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of ‘offensive’ strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies.
 
-The Call for Papers is open for SecureChainCon. Everyone is welcome to submit talks with a focus on:
+Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
 
-- Use Cases on Open-Source Security Tools and the DevOps Pipeline
-- Threat Modeling and data generation from the DevSecOps Pipeline
-- Blockers, Drivers, and Solutions for making the software supply chain more secure
-- Compliance and Governance Tools and KPIs
-
-<strong>First time presenters are encouraged to submit talks.</strong>
-
-<a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
+[Learn More](https://ortelius.io/blog/2024/05/24/securechaincon-2024/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}

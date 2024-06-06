@@ -1,5 +1,5 @@
 ---
-date: 2024-02-26
+date: 2024-05-24
 title: "SecureChainCon 2024"
 summary: SecureChainCon 2024
 author: Tracy Ragan
@@ -11,45 +11,30 @@ author: Tracy Ragan
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">A Free Online, Half-Day Micro-Conference for DevOps and Security Professionals</h2>
+<h2 class="text-left">View On-Demand Sessions from SecureChainCon 2024, Micro-Conference for DevOps and Security Professionals</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Attend</h2>
+<h2 class="text-left">Watch Today</h2>
 
 Welcome to SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. Join us on May 24th for this online mind share and take your Software Security skills to the next level! 
-
-
-<strong> May 24th, 2024 - 8:30 to Noon MT </strong>
-
-[Register Today](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
-
-[Download and Share the Announcement](/images/securechaincon2024.pdf)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Call for Speakers Now Open</h2>
+<h2 class="text-left">View On Demand</h2>
 
-The Call for Papers is open through March 25th, 2024. Everyone is welcome to submit talks for SecureChainCon. Tracks include:
-- Use Cases on Open-Source Security Tools and the DevOps Pipeline
-- Threat Modeling and data generation from the DevSecOps Pipeline
-- Understand the Blockers, Drivers, and Solutions for making the software supply chain more secure
-- Compliance and Governance Tools and KPIs
 
-First time presenters are encouraged to submit talks. 
+[View the Entire Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
 
-[Submit a Talk Today](https://sessionize.com/securechaincon2024)
-
-<a href="https://sessionize.com/"><img src="https://sessionize.com/landing/images/brand/banners/sessionize-banner-medium.png" alt="The smart way to do Call for Papers, Schedule and Speaker Management." width="220" height="80"></a>
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Caroline Wong to be Keynote Presenter</h2>
+<h2 class="text-left">Caroline Wong Keynote Presenter</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -67,6 +52,7 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 [Caroline Wong](https://www.linkedin.com/in/carolinewmwong/) is the Chief Strategy Officer at [Cobalt.io](https://cobalt.io). She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, [Security Metrics: A Beginner's Guide](https://www.amazon.com/Security-Metrics-Beginners-Guide-Caroline/dp/0071744002). She teachers cybersecurity courses on LinkedIn Learning and hosts the [Humans of InfoSec podcast](https://resource.cobalt.io/humans-of-infosec).
 
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
@@ -74,19 +60,17 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Why You Should Attend</h2>
+<h2 class="text-left">Why You Should Watch</h2>
 <hr>
-- Connect and share with your Peers
+
 - Hear presentations by expert practitioners
 - Learn about supply chain security in decoupled architectures.
 - Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
-- Attend for free (Hosted by the Ortelius Open-Source Community)
-- Join Live or View On-Demand
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<h2 class="text-left">Who Should Attend</h2>
+<h2 class="text-left">Who Should Watch</h2>
 <hr>
 
 - DevOps Engineers
@@ -122,39 +106,49 @@ Understanding cybersecurity requires first an understanding of how to defend aga
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Agenda</h2>
+<h2 class="text-left">Program</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
 
-### Join Us on Zoom 
-[Registration Required](https://us02web.zoom.us/meeting/register/tZckd-ytqjojGt2f8V1fp7mXsHu1RbqRfw2d#/registration)
+### Beer and Donuts 
 
-All times in Mountain Time.
+[Recognition Awards presented](https://youtu.be/M-QNMVAiICg) by Tracy Ragan
 
-8:30 Beer and Donuts Networking - Meet the Ortelius Contributors
+[OpenSSF Scorecard Workshop](https://youtu.be/2JWAWQ2Akd4) presented by Steve Taylor
 
-8:50 Welcome Keynote presented by Saim Safder
-
-9:05 Recognition Awards presented by Tracy Ragan
-
-9:20 OpenSSF Scorecard Workshop presented by Steve Taylor
-
-9:50 Break 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-### Join Us on Twitch 
-[Ortelius Twitch Channel](https://www.twitch.tv/orteliusos)
+### View the Entire Playlist
+[Playlist](https://www.twitch.tv/orteliusos)
 
-<strong>10:00 - Keynote with Caroline Wong - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
+[Keynote with Caroline Wong](https://youtu.be/JMK54x3EzOY?si=DNV3Unv3Z1yTAhcl) - Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity</strong>
 
-10:20 - Securing Software: A Panel Discussion on Actionable Metrics and Metadata hosted by Sacha Wharton
+[Panel Discussion](https://youtu.be/ZEOEVGpYlaM?si=OjS4KE3FM2C122ed) - Securing Software with Actionable Metrics and Metadata hosted by Steve Taylor. Panelist include:
+- Luigi Gubello - Sr. Security Engineer, Pitch and OpenSSF Committee Chair Metrics and Meta Data Working Group
+- John Linford - Security Portfolio Forum Director, The Open Group
+- Tracy Ragan - CEO, DeployHub, Inc. 
+
+<div class="col-center">
+<img src="/images/speakersphotos.png" alt="2024 SecureChainCon Speakers" height="600px" width="1500px" />
+</div>
 
 
-11:00 Break - Twitch Games
+- [DevSecOps for Network Operations](https://youtu.be/V713qfjaIFw?si=YMvoOzBvXsxKzwD2), Presented by [Akash Bhaskar](https://www.linkedin.com/in/akash-k-bhaskar/), Cisco
 
-11:15 - 12:00 Presentations, Lighting Talks and Closing Remarks
+- [A step closer to in-toto’lly secure: Using in-toto and OPA Gatekeeper to verify artifact integrity](https://youtu.be/R8O3ldOFCew), Presented by [John Kjell](https://www.linkedin.com/in/john-kjell/), TestifySec
+
+- [A Google Cloud Software Supply Chain Security](https://youtu.be/XKFAQWmV7JQ), Presented by [Nael Fridhi](https://www.linkedin.com/in/naelfridhi/)
+
+- [The Hero Project - Evolving DevOps Pipelines to DevSecOps Pipelines with CDEvents and Ortelius](https://youtu.be/YkFhiIz9Kjs), Presented by [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
+
+
+<div class="col-center">
+<img src="/images/securechaincon2024-speakersphotos.png" alt="2024 SecureChainCon Speakers" height="600px" width="1500px" />
+</div>
+
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}

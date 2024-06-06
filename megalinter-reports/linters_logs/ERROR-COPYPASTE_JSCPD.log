@@ -1,0 +1,29 @@
+Results of jscpd linter (version 3.5.10)
+See documentation on https://megalinter.io/7.10.0/descriptors/copypaste_jscpd/
+-----------------------------------------------
+
+❌ [ERROR] for workspace /tmp/lint
+Linter raw log:
+Clone found (scss):
+ - assets/scss/_base.scss [58:9 - 74:2] (16 lines, 99 tokens)
+   assets/scss/_boxes.scss [11:2 - 28:8]
+
+┌────────────┬────────────────┬─────────────┬──────────────┬──────────────┬──────────────────┬───────────────────┐
+│ Format     │ Files analyzed │ Total lines │ Total tokens │ Clones found │ Duplicated lines │ Duplicated tokens │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ javascript │ 2              │ 30          │ 136          │ 0            │ 0 (0%)           │ 0 (0%)            │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ scss       │ 7              │ 686         │ 3628         │ 1            │ 16 (2.33%)       │ 99 (2.73%)        │
+├────────────┼────────────────┼─────────────┼──────────────┼──────────────┼──────────────────┼───────────────────┤
+│ Total:     │ 9              │ 716         │ 3764         │ 1            │ 16 (2.23%)       │ 99 (2.63%)        │
+└────────────┴────────────────┴─────────────┴──────────────┴──────────────┴──────────────────┴───────────────────┘
+Found 1 clones.
+HTML report saved to megalinter-reports/copy-paste/html/
+ERROR: jscpd found too many duplicates (2.23%) over threshold (0%)
+Error: ERROR: jscpd found too many duplicates (2.23%) over threshold (0%)
+    at ThresholdReporter.report (/node-deps/node_modules/@jscpd/finder/dist/reporters/threshold.js:12:19)
+    at /node-deps/node_modules/@jscpd/finder/dist/in-files-detector.js:82:26
+    at Array.forEach (<anonymous>)
+    at /node-deps/node_modules/@jscpd/finder/dist/in-files-detector.js:81:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+

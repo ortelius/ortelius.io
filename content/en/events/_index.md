@@ -10,34 +10,33 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">Ortelius 2024 BlogAThon, February 1st through April 1st, 2024</h2>
+<h2 class="col-center">SecureChainCon Available On Demand</h2>
 <br>
 
-<img src="/images/blogathon2024.png" alt="blogathon2024" height="288px" width="312px" />
+<img src="/images/socialnetworkingtile.png" alt="SecureChainCon2024" height="300px" width="500px" />
 </div>
+<br>
+Watch SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. 
+
+[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
+<div class="col-center">
+<h2 class="col-center">Caroline Wong - Keynote Speaker</h2>
 <br>
 
-It is that time of year to put on your thinking caps and submit a blog for the 4th annual Ortelius BlogAThon. Pick a topic that you are passionate about related to:
-* Open-source Security
-* Supply Chain Management
-* Ortelius Architecture
-* Ortelius Tips and Tricks
-* Your experience as an open-source contributor on the Ortelius Project
-* Infrastructure for open-source projects
-* Challenges of decoupled architectures, microservices
-* Machine Learning and AI related to DevOps and Supply Chain data
+<img src="/images/carolinewong.png" alt="Caroline Wong"  height="200px" width="200px"/>
+</div>
 
-Get your Blogs in by April 1st, 2024. The annual BlogAThon is a great way to earn [Ortelius Recognition Award points](https://ortelius.io/blog/2021/04/19/ortelius-community-recognition-program/) for the Ortelius Ambassador Category.
 
-[Learn More](https://ortelius.io/blog/2024/01/12/2024-blogathon/)
+Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
+Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of ‘offensive’ strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies.
 
-[Learn how to Submit a Blog](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/)
+Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
 
-[View the Ortelius Blog Repo](https://github.com/ortelius/outreach/issues) and assign yourself to a topic.
+[Learn More](https://ortelius.io/blog/2024/05/24/securechaincon-2024/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -47,24 +46,33 @@ Get your Blogs in by April 1st, 2024. The annual BlogAThon is a great way to ear
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
-<h2 class="col-center">cdCon 2024, April 16th-18th, Seattle WA</h2>
+<h2 class="col-center">Thank You CDF for a Great CDCon</h2>
 <br>
 
 <img src="/images/cdcon2024.png" alt="cdcon2024" height="168px" width="384px" />
 </div>
 
+Thank you to the CDFoundation for an amazing CDCOn 2024. If you could not attend, no problem. You can now watch all sessions on-demand. Learn from the the Jenkins and Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
+
+[Watch On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
+)
+
+
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
+<div class="col-center">
 <br>
 
-Join the Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers for a three-day experience as we improve the world’s capacity to deliver software with security and speed.
+<img src="/images/utkarsh.png" alt="Utkarsh Sharma"  height="200px" width="200px"/>
+</div>
+<br>
 
-cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon is part of Open Source Summit North America, along with many other great events.
+A special congratulations to [Utkarsh Sharma](https://cd.foundation/blog/2023/12/13/utkarsh-sharma-achieves-gold-legend-status/) for receiving both the Ortelius MVP Award and the CDF Top Contributor Award. Thank you for your excellence Utkarsh. 
 
-This event is co-located with Open Source Summit North America. Plan to attend on April 16–18, 2024 in Seattle, Washington.
+cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon was part of Open Source Summit North America, along with many other great events.
 
-[Register for Open Source Summit and cdCon 2024](https://cd.foundation/cdcon-2024/)
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
