@@ -1,17 +1,3 @@
-- [author: Sacha Wharton](#author-sacha-wharton)
-- [How to bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik](#how-to-bake-an-ortelius-pi-part-4--cloudflare-certificates-and-traefik)
-  - [Introduction](#introduction)
-  - [Roadmap](#roadmap)
-  - [Cloudflare | Connectivity Cloud](#cloudflare--connectivity-cloud)
-    - [Buying a domain name](#buying-a-domain-name)
-    - [SSL/TLS](#ssltls)
-  - [Traefik](#traefik)
-    - [Helm-Release | Traefik](#helm-release--traefik)
-    - [Manifest Folder | Traefik](#manifest-folder--traefik)
-    - [Ortelius](#ortelius)
-    - [Argocd](#argocd)
-  - [Conclusion](#conclusion)
-
 ---
 date: 2024-08-08
 title: "How to Bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik"
