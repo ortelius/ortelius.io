@@ -24,7 +24,7 @@ author: Sacha Wharton
 - [Fluxcd](#fluxcd)
   - [VS Code Extension](#vs-code-extension)
   - [Flux CRD's](#flux-crds)
-- [Gimlet Installation Self-Hosted](#gimlet-installation-self-hosted)
+- [Gimlet Installation](#gimlet-installation)
   - [Prerequisites](#prerequisites)
   - [Gimlet on the command line](#gimlet-on-the-command-line)
   - [Install Gimlet](#install-gimlet)
@@ -158,31 +158,47 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 
 - When the Gimlet dashboard loads you will be met with the repostories section which is where you import your `application` repos to be managed by the GitOps process
 
-![gimlet repos](images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png" alt="gimlet repos"/>
+</div>
+<p></p>
 
 #### Gimlet Environments
 
 - Environments are the representation of your journey to getting your applications to the end user such as dev, staging and production
 
-![gimlet environments](images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environment"/>
+</div>
+<p></p>
+
 
 #### Gimlet Environment Config
 
 - These are pre baked in environment configs which can be turned on and off with a toggle
-![gimlet environment configs](images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png" alt="gimlet environment config"/>
+</div>
+<p></p>
 
 #### Gimlet Observability
 
 - This is where you can cycle through different elements of the GitOps process and get feedback on deployments
 - Click on the environment name at the bottom left of the interface
 
-![gimlet obs gitops](images/how-to-bake-an-ortelius-pi/part03/30-gimlet-obs-gitops.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/30-gimlet-obs-gitops.png" alt="gimlet obs gitops"/>
+</div>
+<p></p>
 
 - The `Flux Runtime` shows you exactly what Flux is chewing on and gives the operator visuals into whats going on in the environment
-- Click on logs to get logs
-- Click describe to run a `kubectl describe`
+- Click on `Logs` to get logs
+- Click `Describe` to run a `kubectl describe`
 
-![gimlet obs flux runtime](images/how-to-bake-an-ortelius-pi/part03/31-gimlet-obs-flux-runtime.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/31-gimlet-obs-flux-runtime.png" alt="gimlet obs flux runtime"/>
+</div>
+<p></p>
 
 ### Fluxcd
 
@@ -195,12 +211,20 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 #### VS Code Extension
 
 The VS Code extension allows you to get into the guts of your Fluxcd deployment and configuration from within VS Code.
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/24-fluxcd-vscode-clusters.png" alt="fluxcd vscode clusters"/>
+</div>
+<p></p>
 
-![fluxcd vscode clusters](images/how-to-bake-an-ortelius-pi/part03/24-fluxcd-vscode-clusters.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/32-fluxcd-vscode-sources.png" alt="fluxcd vscode sources"/>
+</div>
+<p></p>
 
-![fluxcd vscode sources](images/how-to-bake-an-ortelius-pi/part03/32-fluxcd-vscode-sources.png)
-
-![fluxcd vscode workloads](images/how-to-bake-an-ortelius-pi/part03/33-fluxcd-vscode-workloads.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/33-fluxcd-vscode-workloads.png" alt="fluxcd vscode workloads"/>
+</div>
+<p></p>
 
 #### Flux CRD's
 
@@ -210,9 +234,12 @@ Lets take a look at the Flux CRD's.
 `kubectl get crds | grep flux`
 ```
 
-![fluxcd crds](images/how-to-bake-an-ortelius-pi/part03/25-fluxcd-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/25-fluxcd-crds.png" alt="fluxcd crds"/>
+</div>
+<p></p>
 
-### Gimlet Installation Self-Hosted
+### Gimlet Installation
 
 #### Prerequisites
 
@@ -233,7 +260,10 @@ gimlet --version
 - `FYI` please read this [On the command line](https://gimlet.io/docs/environment-settings/component-updates)
 - We will be spending all of our time in the `gitops-<your-environment>-infra` repo to deploy our Kubernetes infrastructure with Gimlet
 
-![gimlet infra](images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png" alt="gimlet infra"/>
+</div>
+<p></p>
 
 #### Install Gimlet
 
@@ -252,13 +282,19 @@ kubectl port-forward svc/gimlet 9000:9000
 
 - Login with Github
 
-![gimlet login](images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png" alt="gimlet login"/>
+</div>
+<p></p>
 
 #### Connect your repositories
 
 - Only import your application repositories here and not anything to do with infrastructure
 
-![gimlet repos](images/how-to-bake-an-ortelius-pi/part03/15-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/15-gimlet-repos.png" alt="gimlet repos"/>
+</div>
+<p></p>
 
 #### Connect you cluster
 
@@ -295,25 +331,40 @@ kubectl get pods
 
 - Go to [Github.com](https://github.com/) and click on your profile in the top right hand corner of your browser tab
 
-![github settings](images/how-to-bake-an-ortelius-pi/part03/16-github-settings.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/16-github-settings.png" alt="github settings"/>
+</div>
+<p></p>
 
 - Scroll down until the left hand coloumn shows `Applications` under the title `Integrations`
 
-![github application](images/how-to-bake-an-ortelius-pi/part03/17-github-application.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/17-github-application.png" alt="github application"/>
+</div>
+<p></p>
 
 - You should see the Gimlet application installed
 - `!!!WARNING!!!`Whatever you do don't just delete this app like I did and get yourself into an account mess
 
-![github gimlet app](images/how-to-bake-an-ortelius-pi/part03/18-github-gimlet-app.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/18-github-gimlet-app.png" alt="github gimlet app"/>
+</div>
+<p></p>
 
 #### Github Gimlet repo check
 
 - Click on repositories at the top left of the screen
-![github gimlet repos](images/how-to-bake-an-ortelius-pi/part03/19-github-gimlet-repos-button.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/19-github-gimlet-repos-button.png" alt="github gimlet repos button"/>
+</div>
+<p></p>
 
 - Then type `gitops-` in the search bar and you should see two repos pop up
 
-![github gimlet repos](images/how-to-bake-an-ortelius-pi/part03/20-github-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/20-github-gimlet-repos.png" alt="github gimlet repos"/>
+</div>
+<p></p>
 
 - You should see `gitops-<your-environment>-infra` and `gitops-<your-environment>-apps`
 - You will notice that this repo is private thus no one can see any sensitive information such as secrets
@@ -322,16 +373,21 @@ kubectl get pods
 
 #### Gimlet Gitops Infra
 
-- Once we have added a `helm-repositories` config and a `helm-release` config with our values and then perform a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
-- Currently I am using the `manifest folder` for manual applies
+- Once we have added configuration in `helm-repositories` and `helm-release` and performed a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
 
-![gimlet infra repo](images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repos"/>
+</div>
+<p></p>
 
 #### Gimlet Gitops Apps
 
-- Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp`
+- Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp` if you can't wait for the blog post
 
-![gimlet apps repo](images/how-to-bake-an-ortelius-pi/part03/23-gimlet-apps-repo.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/23-gimlet-apps-repo.png" alt="gimlet apps repo"/>
+</div>
+<p></p>
 
 ```shell
 git clone https://github.com/<your-profile>/gitops-<your-environment>-infra.git
@@ -343,7 +399,10 @@ git clone https://github.com/<your-profile>/gitops-<your-environment>-apps.git
 
 - On your local machine open your IDE and navigate to your cloned infrastructure repo
 
-![github gimlet repos](images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png" alt="gimlet infra"/>
+</div>
+<p></p>
 
 ### Gimlet GitOps Infrastructure
 
@@ -625,7 +684,10 @@ kubectl config set-context --current --namespace=kube-system
 kubectl get pods -n kube-system
 ```
 
-![csi nfs driver storage pods](images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png" alt="csi nfs driver pods"/>
+</div>
+<p></p>
 
 - Kubectl show me the Storage Class
 
@@ -633,7 +695,10 @@ kubectl get pods -n kube-system
 kubectl get sc --all-namespaces
 ```
 
-![csi nfs driver storage class](images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png" alt="csi nfs driver storage class"/>
+</div>
+<p></p>
 
 - From CSI NFS Driver version v4.8.0 you no longer have to manually set the default Storage Class as there is an annotation provided
 
@@ -2139,9 +2204,12 @@ kubectl config set-context --current --namespace=kube-system
 kubectl get pods -n kube-system | grep cert
 ```
 
-![cert manager pods](images/how-to-bake-an-ortelius-pi/part03/34-cert-manager-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/34-cert-manager-pods.png" alt="cert manager pods"/>
+</div>
+<p></p>
 
-- Great we now have infrastructure for managing certificates!
+Great we now have infrastructure for managing certificates!
 
 ### Metallb load-balancer for bare metal Kubernetes
 
@@ -2603,7 +2671,10 @@ kubectl config set-context --current --namespace=infrastructure
 kubectl get pods -n infrastructure
 ```
 
-![metallb pods](images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png" alt="metallb pods"/>
+</div>
+<p></p>
 
 - Now lets enable [L2 Advertisement](https://metallb.universe.tf/troubleshooting/) and setup our IP pool
 - Create `metallb.yaml` in the `manifest folder` and paste the YAML below into `metallb.yaml` and run `kubectl apply -f metallb.yaml`
@@ -2634,7 +2705,10 @@ spec:
 kubectl get crds | grep metallb
 ```
 
-![metallb crds](images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png" alt="metallb crds"/>
+</div>
+<p></p>
 
 - Kubectl show me the ip address pools for Metallb
 
@@ -2642,7 +2716,10 @@ kubectl get crds | grep metallb
 kubectl get ipaddresspools.metallb.io -n infrastructure
 ```
 
-![metallb ip pools](images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb crds"/>
+</div>
+<p></p>
 
 Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy and which Traefik Proxy can bind to.
 
@@ -3774,7 +3851,10 @@ kubectl config set-context --current --namespace=infrastructure
 kubectl get pods -n infrastructure
 ```
 
-![traefik pods](images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png" alt="traefik pods"/>
+</div>
+<p></p>
 
 - Kubectl show me all CRDs for Traefik
 
@@ -3782,7 +3862,10 @@ kubectl get pods -n infrastructure
 kubectl get crds | grep traefik
 ```
 
-![traefik pod](images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png" alt="traefik crds"/>
+</div>
+<p></p>
 
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
 - Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
@@ -3826,7 +3909,10 @@ kubectl get ingressroutes.traefik.io -n infrastructure
 kubectl get svc -n infrastructure
 ```
 
-![traefik service](images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png" alt="traefik service"/>
+</div>
+<p></p>
 
 - Here is a view of the services for the `infrastructure` namespace
 
@@ -3869,7 +3955,10 @@ If you would like to dig deeper into Traefiks API capabilities please go to the 
 - [Traefik Hub](https://traefik.io/traefik-hub/)
 - Watch [Upgrade Traefik Proxy to API Gateway and API Management in Seconds](https://youtu.be/zriUO5YPgFg) on YouTube
 
-![traefik dashboard](images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png" alt="traefik dashboard"/>
+</div>
+<p></p>
 
 ### Ortelius The Ultimate Evidence Store
 
@@ -3883,21 +3972,9 @@ Well done for making it this far! We have made it to the point where we can depl
 
 Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
 
-- `ms` stands for microservice
-
-![ortelius microservices](images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
-
 #### Ortelius Microservice GitHub repos
 
-- [ms-dep-pkg-cud](https://github.com/ortelius/ms-dep-pkg-cud)
-- [ms-textfile-crud](https://github.com/ortelius/ms-textfile-crud)
-- [ms-dep-pkg-r](https://github.com/ortelius/ms-dep-pkg-r)
-- [ms-compitem-crud](https://github.com/ortelius/ms-compitem-crud)
-- [ms-validate-user](https://github.com/ortelius/ms-validate-user)
-- [ms-postgres](https://github.com/ortelius/ms-postgres)
-- [ms-sbom-export](https://github.com/ortelius/ms-sbom-export)
-- [ms-scorecard](https://github.com/ortelius/ms-scorecard)
-- [scec-nginx](https://github.com/ortelius/scec-nginx)
+You can find all the Ortelius Microservices [here](https://github.com/ortelius) on GitHub
 
 #### Helm-Repository | Ortelius
 
@@ -3997,14 +4074,22 @@ kubectl config set-context --current --namespace=infrastructure
 - Kubectl show me the pods for Ortelius
 
 ```shell
-kubectl get pods -n infrastructure
+kubectl get pods -n infrastructure | grep ms
 ```
 
-![ortelius microservices](images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
+- `ms` stands for microservice
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices"/>
+</div>
+<p></p>
 
 You should now be able to reach the Ortelius frontend in your browser using the domain name you chose for example mine was `http://ortelius.pangarabbit.com` and see the login screen as in the graphic. You will get a certificate error but just allow access for now until we sort out the certificate with Cloudflare.
 
-![ortelius frontend](images/how-to-bake-an-ortelius-pi/part03/12-ortelius-frontend.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/12-ortelius-frontend.png" alt="ortelius frontend"/>
+</div>
+<p></p>
 
 ### Conclusion
 
@@ -4012,6 +4097,24 @@ By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cer
 
 Happy alien hunting.......
 
-<img src="images/how-to-bake-an-ortelius-pi/part03/13-ortelius-logo.svg" alt="ortelius-logo" width="600">
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 Disclaimer: Any brands I mention in this blog post series are not monetised
