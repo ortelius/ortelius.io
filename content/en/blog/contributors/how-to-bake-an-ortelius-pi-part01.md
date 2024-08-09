@@ -18,14 +18,18 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 
 ### Roadmap
 
-`hardware --> networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> secret store --> zerotier --> everything else`
+`hardware --> networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### My Home Setup
 
 - 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply)
 - Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
 
-![raspberry-pi-4b](images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="raspberry-pi" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -36,8 +40,6 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 <strong>or</strong>
 
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
-
--------------------------------------------------------------------------------------------------------------
 
 - 1X Screen HDMI
 - 1X Keyboard USB
@@ -124,13 +126,11 @@ usb-storage.quirks=05dc:a838:u
 usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=serial0,115200 dwc_otg.lpm_enable=0 console=tty1 root=LABEL=writable rootfstype=ext4 rootwait fixrtc quiet splash
 ```
 
----------------------------------------------------------------------------------------------------
-
 ### Using the Raspberry Pi Imager
 
 - Repeat these steps for each SD Card or USB flash stick
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
-- Chose `CHOOSE DEVICE`
+- `CHOOSE DEVICE`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -138,16 +138,12 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <p></p>
 <br>
 
-#### Choose Device
-
 <strong>Choose:</strong> `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
-
-#### Choose OS
 
 <strong>Choose:</strong> `Other general-purpose OS`
 <div class="col-left">
@@ -177,10 +173,10 @@ Note: This will look different on your machine especially if you are using eithe
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-- Click Next
 <p></p>
-
 <br>
+
+- `Next`
 
 Use OS Customization by clicking: `EDIT SETTINGS`
 <p></p>
@@ -190,9 +186,12 @@ Use OS Customization by clicking: `EDIT SETTINGS`
 <p></p>
 <br>
 
-Fill in the required info according to your specifications. Remember to change the:
-`HOSTNAMES` `pi01` | `pi02` | `pi03`
+Fill in the required info according to your specifications.
+
+Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
+
 (You can use whatever hostnames make sense to you)
+
 <p></p>
 <br>
 
