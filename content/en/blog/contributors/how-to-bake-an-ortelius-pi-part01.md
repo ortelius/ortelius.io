@@ -44,8 +44,6 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 <p></p>
 <br>
 
----
-
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 - Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
 - I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi

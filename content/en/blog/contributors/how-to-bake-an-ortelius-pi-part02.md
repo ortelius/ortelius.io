@@ -173,8 +173,6 @@ max-inflight-requests 256
 - NextDNS will instantly auto refresh all your NextDNS agents with any configuration changes
 - Great DNS is done!
 
----
-
 ### NFS Prep
 
 - [Synology](https://www.synology.com/)
@@ -281,8 +279,6 @@ max-inflight-requests 256
 - You would need to change it to your network subnet which you can get from your DHCP configuration
 
 - Congrats you just configured the Synology for NFS!
-
----
 
 ### OS Prep
 
