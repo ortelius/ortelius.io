@@ -10,6 +10,7 @@ author: Sacha Wharton
 </div>
 <p></p>
 
+- [Introduction](#introduction)
 - [Roadmap](#roadmap)
 - [My Home Setup](#my-home-setup)
 - [NFS Storage](#nfs-storage)
@@ -22,7 +23,7 @@ author: Sacha Wharton
 - [Conclusion](#conclusion)
 - [Next Steps](#next-steps)
 
-#### Introduction
+### Introduction
 
 I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts.
 
