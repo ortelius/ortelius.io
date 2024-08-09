@@ -1,0 +1,127 @@
+repo_name: sachajw/ortelius.io
+report_id: ff60a219c6cea1a1b3b88dcffd55e6ce
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T18:47:55+00:00'
+requested_by: sachajw
+provider: github
+branch: main
+detected_tools_count: 9
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/sachajw/ortelius.io
+  detection_source: Repo Metadata
+- name: Autoprefixer
+  description: PostCSS plugin to parse CSS and add vendor prefixes to CSS rules
+  website_url: https://github.com/postcss/autoprefixer
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/2202/72d087642cfce6fef6f2dabec5bf49e8_400x400.png
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Aju100
+  last_updated_on: 2022-02-03 16:33:46.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/sachajw/ortelius.io
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/.github/workflows/auto-sync-fork.yml
+  detection_source: ".github/workflows/auto-sync-fork.yml"
+  last_updated_by: Sacha Wharton
+  last_updated_on: 2023-05-19 10:50:42.000000000 Z
+- name: Yarn
+  description: A new package manager for JavaScript
+  website_url: https://yarnpkg.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/5848/44mC-kJ3.jpg
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/yarn.lock
+  detection_source: yarn.lock
+  last_updated_by: Steve Taylor
+  last_updated_on: 2023-03-01 17:31:13.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Owen Bowers Adams
+  last_updated_on: 2021-01-13 22:33:51.000000000 Z
+- name: Netlify
+  description: Build, deploy and host your static site or app with a drag and drop
+    interface and automatic delpoys from GitHub or Bitbucket
+  website_url: https://www.netlify.com/
+  open_source: false
+  hosted_saas: true
+  category: Application Utilities
+  sub_category: Static Web Hosting
+  image_url: https://img.stackshare.io/service/2748/default_5dfbb146cf22182bca88c7d07f2515a5888fc12a.jpg
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/netlify.toml
+  detection_source: netlify.toml
+  last_updated_by: Steve Taylor
+  last_updated_on: 2023-03-02 16:01:05.000000000 Z
+- name: postcss
+  description: Tool for transforming styles with JS plugins
+  package_url: https://www.npmjs.com/postcss
+  version: 8.4.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16012/default_7a88bebb451873cc63bd99007de5bd3bb8ef85de.png
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Steve Taylor
+  last_updated_on: 2023-03-01 18:07:50.000000000 Z
+  vulnerabilities:
+  - name: PostCSS line return parsing error
+    cve_id: CVE-2023-44270
+    cve_url: https://github.com/advisories/GHSA-7fh5-64p2-3v2j
+    detected_date: Oct 4
+    severity: moderate
+    first_patched: 8.4.31
+- name: postcss-cli
+  description: CLI for PostCSS
+  package_url: https://www.npmjs.com/postcss-cli
+  version: 9.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16326/default_97104dc50154593d2dde1d791400955934c9c715.png
+  detection_source_url: https://github.com/sachajw/ortelius.io/blob/main/yarn.lock
+  detection_source: package.json
+  last_updated_by: Steve Taylor
+  last_updated_on: 2023-03-01 18:07:50.000000000 Z
