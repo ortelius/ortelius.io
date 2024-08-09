@@ -51,46 +51,76 @@ Cloudflare have kindly provided a free plan which we will use so the first thing
 
 - Click on `Websites`
 
-![01 cf websites button](images/how-to-bake-an-ortelius-pi/part04/01-cf-websites-button.png)
-
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/01-cf-websites-button.png" alt="cf websites button"/>
+</div>
+<p></p>
 
 - Click on `Add a site`
-![02 cf add site button](images/how-to-bake-an-ortelius-pi/part04/02-cf-add-site-button.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/02-cf-add-site-button.png" alt="cf add site button"/>
+</div>
+<p></p>
 
 - Click on `register a new domain`
 
-![03 cf register new domain](images/how-to-bake-an-ortelius-pi/part04/03-cf-register-new-domain.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/03-cf-register-new-domain.png" alt="cf register new domain"/>
+</div>
+<p></p>
 
 - Click in the `Search for a domain name` box and find a domain
 
-![04 cf search domain](images/how-to-bake-an-ortelius-pi/part04/04-cf-search-domain.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/04-cf-search-domain.png" alt="cf search domain"/>
+</div>
+<p></p>
 
 - Cloudflare will tell you if your domain is available. Unfortunately my cats name `mottles.com` was not available. She will not be impressed
 - Pick your domain and brandish your credit card
 
-![05 cf mottles domain](images/how-to-bake-an-ortelius-pi/part04/05-cf-mottles-domain.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/05-cf-mottles-domain.png" alt="cf mottles domain"/>
+</div>
+<p></p>
 
 - At the end of the process when you get back to `Websites` you should see your new domain registered
 - Here you can see my domain `pangarabbit.com`
 - Click on our new domain and head over to `DNS`
 
-![06 cf new domain](images/how-to-bake-an-ortelius-pi/part04/06-cf-new-domain.png)
-![07 cf dns button](images/how-to-bake-an-ortelius-pi/part04/07-cf-dns-button.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/06-cf-new-domain.png" alt="cf new domain"/>
+</div>
+<p></p>
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/07-cf-dns-button.png" alt="cf dns domain"/>
+</div>
+<p></p>
 
 - You should have 2 DNS A records like below | `* is for wildcard` and the domain apex `pangarabbit.com`
 - The domain apex record should be there but you might have to add the wildcard if memory serves me correctly
 
-![08 cf a records](images/how-to-bake-an-ortelius-pi/part04/08-cf-a-records.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/08-cf-a-records.png" alt="cf a records"/>
+</div>
+<p></p>
 
 #### SSL/TLS
 
 - Lets head over to `SSL/TLS` now
 
-![09 cf ssl tls button](images/how-to-bake-an-ortelius-pi/part04/09-cf-ssl-tls-button.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/09-cf-ssl-tls-button.png" alt="cf ssl tls button"/>
+</div>
+<p></p>
 
 - You will be faced with the following screen and you want to have `Full (strict)` enabled
 
-![10 cf ssl tls](images/how-to-bake-an-ortelius-pi/part04/10-cf-ssl-tls.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/10-cf-ssl-tls.png" alt="cf ssl tls"/>
+</div>
+<p></p>
 
 - Below are some caveats to take note of which are taken from that little `Help` button
 
@@ -103,35 +133,64 @@ Cloudflare strongly recommends using Full or Full (strict) modes to prevent mali
 
 - I turned this on
 
-![11 cf ssl tls recommender](images/how-to-bake-an-ortelius-pi/part04/11-cf-ssl-tls-recommender.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/11-cf-ssl-tls-recommender.png" alt="cf ssl tls recommender"/>
+</div>
+<p></p>
 
 - Clicking on `Edge Certificates` you will see that the kind folks at Cloudflare have provided you with a certificate for free also known as `Universal SSL`
 
 Attention: Let's Encrypt's chain of trust will be changing on September 2024. Universal SSL certificates will be automatically switched to a more compatible certificate authority. Review our [documentation](https://developers.cloudflare.com/ssl/reference/migration-guides/lets-encrypt-chain/#lets-encrypt-chain-update) for details and to understand the impacts on other certificate types.
 
-![12 cf edge certificates button](images/how-to-bake-an-ortelius-pi/part04/12-cf-edge-certificates-button.png)
-![13 cf edge certificates button](images/how-to-bake-an-ortelius-pi/part04/13-cf-edge-certificates.png)
-![14 cf edge certificates note](images/how-to-bake-an-ortelius-pi/part04/14-cf-edge-certificates-note.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/12-cf-edge-certificates-button.png" alt="cf edge certificates button"/>
+</div>
+<p></p>
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/13-cf-edge-certificates.png" alt="cf edge certificates"/>
+</div>
+<p></p>
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/14-cf-edge-certificates-note.png" alt="cf edge certificates note"/>
+</div>
+<p></p>
 
 - Enable `Always Use HTTPS`
 
-![15 cf edge certificates https](images/how-to-bake-an-ortelius-pi/part04/15-cf-edge-certificates-https.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/15-cf-edge-certificates-https.png" alt="cf edge certificates https"/>
+</div>
+<p></p>
 
 - I set `Minimum TLS Version` to `TLS 1.3` for the best security
 
-![19 cf edge certificates tls version ](images/how-to-bake-an-ortelius-pi/part04/19-cf-edge-certificates-tls-version.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/19-cf-edge-certificates-tls-version.png" alt="cf edge certificates tls version"/>
+</div>
+<p></p>
 
 - I enabled `Opportunistic Encryption`
 
-![16 cf edge certificates encryption ](images/how-to-bake-an-ortelius-pi/part04/16-cf-edge-certificates-encryption.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/16-cf-edge-certificates-encryption.png" alt="cf edge certificates encryption"/>
+</div>
+<p></p>
 
 - I turned on `TLS 1.3` for the best security
 
-![17 cf edge certificates tls 1.3 ](images/how-to-bake-an-ortelius-pi/part04/17-cf-edge-certificates-tls-1-3.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/17-cf-edge-certificates-tls-1-3.png" alt="cf edge certificates tls 1.3 encryption"/>
+</div>
+<p></p>
 
 - I turned on `Automatic HTTPS Rewrites`
 
-![18 cf edge certificates https rewrites ](images/how-to-bake-an-ortelius-pi/part04/18-cf-edge-certificates-https-rewrites.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/18-cf-edge-certificates-https-rewrites.png" alt="cf edge certificates https rewrites"/>
+</div>
+<p></p>
 
 Great we should have a functional certificate which will be auto renewed and we can use Traefik as the single point for secure connections.
 
@@ -174,7 +233,10 @@ kubectl get certificates -owide -n infrastructure
 
 - Mine is called `wildcard-pangarabbit-com` but we are are interested in the `SECRET`
 
-![20 k8s certificate](images/how-to-bake-an-ortelius-pi/part04/20-k8s-certificate.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/20-k8s-certificate.png" alt="k8s certificate"/>
+</div>
+<p></p>
 
 - Below I am showing the `ingressRoute` for the dashboard and you can see I only have `websecure` enabled now
 - I have added the `tls` configuration which matches `SECRET` as in the above image
@@ -232,7 +294,10 @@ kubectl get certificates -owide -n infrastructure
 - In the following image we can see that our services have green shields to indicate that they are configured with `TLS`
 - To access the Traefik dashboard the URL is `traefik.pangarabbit.com`
 
-![21 traefik services tls](images/how-to-bake-an-ortelius-pi/part04/21-traefik-services-tls.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part04/21-traefik-services-tls.png" alt="traefik services tls"/>
+</div>
+<p></p>
 
 All we have done now is secure the Traefik dashboard but how would we do it for other workloads. Lets look at a few examples.
 
@@ -297,6 +362,24 @@ In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncry
 
 Happy alien hunting.......
 
-<img src="images/how-to-bake-an-ortelius-pi/part03/13-ortelius-logo.svg" alt="ortelius-logo" width="600">
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 Disclaimer: Any brands I mention in this blog post series are not monetised

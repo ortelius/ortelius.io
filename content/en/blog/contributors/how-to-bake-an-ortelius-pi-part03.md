@@ -77,8 +77,6 @@ In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deplo
 
 ### Roadmap
 
-I have tried to put things in a logical order for deployment like this:
-
 `storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Kubernetes
