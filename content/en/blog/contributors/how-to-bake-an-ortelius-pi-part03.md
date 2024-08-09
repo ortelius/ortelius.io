@@ -37,7 +37,7 @@ author: Sacha Wharton
   - [Gimlet Gitops Apps](#gimlet-gitops-apps)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
   - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-- [Gimlet Kubernetes CSI NFS Driver deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+- [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
@@ -416,7 +416,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
 
-### Gimlet Kubernetes CSI NFS Driver deployment
+### Gimlet Kubernetes CSI NFS Driver Deployment
 
 #### Helm-Repository | CSI NFS Driver
 
