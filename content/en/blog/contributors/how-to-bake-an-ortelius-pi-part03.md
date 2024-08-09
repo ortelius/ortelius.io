@@ -5,9 +5,73 @@ linkTitle: "How to Bake an Ortelius Pi Part 3 | The GitOps Configuration"
 author: Sacha Wharton
 ---
 
+<!-- <div class="col-center">
+<img src="/images/orteliuspi-part3.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p> -->
+
+- [Introduction](#introduction)
+- [Roadmap](#roadmap)
+- [Kubernetes](#kubernetes)
+  - [CRDs](#crds)
+  - [Context and Namespace Switching](#context-and-namespace-switching)
+- [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
+- [Gimlet](#gimlet)
+  - [Gimlet Repostories](#gimlet-repostories)
+  - [Gimlet Environments](#gimlet-environments)
+  - [Gimlet Environment Config](#gimlet-environment-config)
+  - [Gimlet Observability](#gimlet-observability)
+- [Fluxcd](#fluxcd)
+  - [VS Code Extension](#vs-code-extension)
+  - [Flux CRD's](#flux-crds)
+- [Gimlet Installation Self-Hosted](#gimlet-installation-self-hosted)
+  - [Prerequisites](#prerequisites)
+  - [Gimlet on the command line](#gimlet-on-the-command-line)
+  - [Install Gimlet](#install-gimlet)
+  - [Connect your repositories](#connect-your-repositories)
+  - [Connect you cluster](#connect-you-cluster)
+  - [K8s check](#k8s-check)
+  - [Github check](#github-check)
+  - [Github Gimlet repo check](#github-gimlet-repo-check)
+  - [Gimlet Gitops Infra](#gimlet-gitops-infra)
+  - [Gimlet Gitops Apps](#gimlet-gitops-apps)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
+  - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
+- [Gimlet Kubernetes CSI NFS Driver deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
+  - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
+  - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
+  - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
+  - [Kubernetes Cert Manager](#kubernetes-cert-manager)
+- [Gimlet | Cert Manager](#gimlet--cert-manager)
+  - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
+  - [Helm-Release | Cert Manager](#helm-release--cert-manager)
+  - [FYI | Helm Chart configurations that were amended for Cert Manager](#fyi--helm-chart-configurations-that-were-amended-for-cert-manager)
+  - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
+  - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
+- [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
+  - [Helm-Repository | Metallb](#helm-repository--metallb)
+  - [Helm-Release | Metallb](#helm-release--metallb)
+  - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
+  - [Kubernetes check | Metallb](#kubernetes-check--metallb)
+- [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
+  - [Helm-Repository | Traefik](#helm-repository--traefik)
+  - [Helm-Release | Traefik](#helm-release--traefik)
+  - [FYI | Helm Chart configurations that were amended for Traefik](#fyi--helm-chart-configurations-that-were-amended-for-traefik)
+  - [Manifest Folder | Traefik](#manifest-folder--traefik)
+  - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
+  - [Further reading | Traefik](#further-reading--traefik)
+- [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
+  - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
+  - [Helm-Repository | Ortelius](#helm-repository--ortelius)
+  - [Helm-Release | Ortelius](#helm-release--ortelius)
+  - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
+  - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
+- [Conclusion](#conclusion)
+
 ### Introduction
 
-In [part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-configuration/), of this series we deployed DHCP, DNS, NFS with a [Synology NAS](https://www.synology.com/) and deployed [MicroK8s](https://microk8s.io/) in HA mode.
+In [part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-configuration/), of this series we deployed DHCP, DNS, NFS with a Synology NAS and deployed MicroK8s in HA mode.
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
@@ -15,7 +79,7 @@ In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deplo
 
 I have tried to put things in a logical order for deployment like this:
 
-`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> secret store --> zerotier --> everything else`
+`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Kubernetes
 

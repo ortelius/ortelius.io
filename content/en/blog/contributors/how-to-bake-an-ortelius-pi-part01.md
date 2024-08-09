@@ -4,11 +4,22 @@ title: "How to Bake an Ortelius Pi Part 1 | The Hardware"
 linkTitle: "How to Bake an Ortelius Pi Part 1 | The Hardware"
 author: Sacha Wharton
 ---
-
 <div class="col-center">
 <img src="/images/orteliuspi-part1.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
+
+- [Roadmap](#roadmap)
+- [My Home Setup](#my-home-setup)
+- [NFS Storage](#nfs-storage)
+- [Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation](#raspberry-pi-imaging-utility-for-the-ubuntu-2204-lts-x64-os-installation)
+- [Preparing the OS for installation](#preparing-the-os-for-installation)
+  - [USB 3 flash drives](#usb-3-flash-drives)
+  - [Example from configuring my Pi to use USB flash sticks](#example-from-configuring-my-pi-to-use-usb-flash-sticks)
+- [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
+  - [Choose Storage](#choose-storage)
+- [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 #### Introduction
 
@@ -31,7 +42,7 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 <p></p>
 <br>
 
--------------------------------------------------------------------------------------------------------------
+---
 
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 - Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking

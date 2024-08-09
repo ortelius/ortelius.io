@@ -4,6 +4,29 @@ title: "How to Bake an Ortelius Pi Part 2 | The Preparation"
 linkTitle: "How to Bake an Ortelius Pi Part 2 | The Preparation"
 author: Sacha Wharton
 ---
+<div class="col-center">
+<img src="/images/orteliuspi-part2.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+
+- [Introduction](#introduction)
+- [Roadmap](#roadmap)
+- [IP Addresses and DHCP](#ip-addresses-and-dhcp)
+- [DNS](#dns)
+  - [Local.gd](#localgd)
+  - [NextDNS](#nextdns)
+  - [Take note](#take-note)
+- [NFS Prep](#nfs-prep)
+  - [Enable NFS on the Synology](#enable-nfs-on-the-synology)
+  - [Configure Shared Folder](#configure-shared-folder)
+- [OS Prep](#os-prep)
+  - [Pis | Ubuntu Server 22.04.4 LTS](#pis--ubuntu-server-22044-lts)
+  - [Kubectl | Your machine](#kubectl--your-machine)
+  - [Helm | Your machine](#helm--your-machine)
+- [MicroK8s Prep](#microk8s-prep)
+  - [Microk8s Installation](#microk8s-installation)
+  - [Create highly available 3 node cluster with MicroK8s](#create-highly-available-3-node-cluster-with-microk8s)
+- [Conclusion](#conclusion)
 
 ### Introduction
 
@@ -20,22 +43,34 @@ We need to give the Pis a home address so that they are contactable and this is 
 - Login to your home router with your browser and look for your DHCP configuration
 - Mine is `Network` --> `DHCP Server`
 
-![dhcp network](/images/how-to-bake-an-ortelius-pi/part02/18-dhcp-network.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/18-dhcp-network-button.png" alt="18-dhcp-network-button" />
+</div>
+<p></p>
 
-![dhcp server](/images/how-to-bake-an-ortelius-pi/part02/19-dhcp-server.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/19-dhcp-server-button.png" alt="19-dhcp-server-button"  />
+</div>
+<p></p>
 
 - Here you will see the IP pool range that your router is handing out to your device on your home network
 - I don't want the entire range to be handed out as I need at least two static IP's to be availble for the Metallb load balancer which will run in Kubernetes and one for the Synology NAS.
 
-![dhcp range](/images/how-to-bake-an-ortelius-pi/part02/20-dhcp-range.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/20-dhcp-server-range.png" alt="20-dhcp-server-range" height="300px" width="650px" />
+</div>
+<p></p>
 
 - My Pi's have the following IPs which I have reserved with their mac addresses
 - You can get the mac addresses from the DHCP list of IPs handed out to your Pis
 - Reserving an IP means you tell DHCP to always give these devices the same IP and never to any other device so in a sense making sure they stay static
 
-![dhcp reservations](/images/how-to-bake-an-ortelius-pi/part02/21-dhcp-reservations.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/21-dhcp-server-reservation.png" alt="21-dhcp-server-reservation" height="300px" width="650px" />
+</div>
+<p></p>
 
-----
+---
 
 ### DNS
 
@@ -64,19 +99,15 @@ xrpl.local.gd.                      86400 IN A 127.0.0.10.0.1
 - Edit localhosts on Linux and Mac here with sudo rights `sudo vi /etc/hosts`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts`
 
-----
-
 #### NextDNS
 
 For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS its complete protection for all your devices no matter where you go in the world for all your devices including your Pi MicroK8s nodes. It will use `127.0.0.1:53` to resolve your local IPs but to do that we need to do some configuration by logging into the NextDNS portal and installing the cli.
 
-#### Disclaimer
+#### Take note
 
 NextDNS is free to a certain amount of DNS queries once you reach that limit resolution stops. Its inexpensive and totally worth it.
 
-----
-
-- Think of a domain name for your environment - mine is pangarabbit.com
+- Think of a domain name for your environment - mine is `pangarabbit.com`
 - Go to the NextDNS Wiki [here](https://github.com/nextdns/nextdns/wiki)
 - Install the cli on each Pi and on your NAS so that you can SSH into your NAS and install NextDNS
 - Here is a doc on how to configure [SSH](https://kb.synology.com/en-id/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet) for a Synology NAS
@@ -114,22 +145,34 @@ max-inflight-requests 256
 - Run `sudo nextdns status` to check the service status
 - Then in your NextDNS portal go to `Settings`
 
-![nextdns settings](/images/how-to-bake-an-ortelius-pi/part02/15-dns-settings.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/15-dns-settings.png" alt="nextdns settings"/>
+</div>
+<p></p>
 
 - Then scroll down to `Rewrites`
 
-![nextdns rewrites](/images/how-to-bake-an-ortelius-pi/part02/16-dns-rewrites.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/16-dns-rewrites.png" alt="nextdns rewrites"  />
+</div>
+<p></p>
 
 - And add your private network DNS records like in this example for the Pis and your NAS
 
-![nextdns records](/images/how-to-bake-an-ortelius-pi/part02/17-dns-records.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/17-dns-records.png" alt="nextdns records" />
+</div>
+<p></p>
 
-![nextdns record nas](/images/how-to-bake-an-ortelius-pi/part02/22-dns-record-nas.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/22-dns-record-nas.png" alt="nextdns records nas" />
+</div>
+<p></p>
 
 - NextDNS will instantly auto refresh all your NextDNS agents with any configuration changes
 - Great DNS is done!
 
-----
+---
 
 ### NFS Prep
 
@@ -138,33 +181,50 @@ max-inflight-requests 256
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - I am using a `Synology DS413j with DSM 6.2.4-25556 Update 7` so the following steps will be inline with my Synology
 
-----
-
 #### Enable NFS on the Synology
 
 - Login to the Synology and go to `File Services`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/01-syno-file-services-icon.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/01-syno-file-services-icon.png" alt="synology file services" />
+</div>
+<p></p>
 
 - On the `SMB/AFP/NFS` tab and scroll until you see `NFS` and `enable NFS and enable NFSv4 support`
 
-![synology nfs services](/images/how-to-bake-an-ortelius-pi/part02/02-syno-nfs-enable-tab.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/02-syno-nfs-enable-tab.png" alt="synology nfs services" />
+</div>
+<p></p>
+<br>
 
-![synology nfs services](/images/how-to-bake-an-ortelius-pi/part02/03-syno-nfs-enable.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/03-syno-nfs-enable.png" alt="synology nfs services" />
+</div>
+<p></p>
 
 #### Configure Shared Folder
 
 - Go to `File Sharing`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/04-syno-file-sharing-icon.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/04-syno-file-sharing-icon.png" alt="synology file services" />
+</div>
+<p></p>
 
 - Click `Create`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/05-syno-file-sharing-create.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/05-syno-file-sharing-create.png" alt="synology file services" />
+</div>
+<p></p>
 
 - Create a name for your folder share, I used `Pi8s`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/06-syno-file-sharing-next.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/07-syno-file-sharing-confirm.png" alt="synology file services" height="300px" width="500px"/>
+</div>
+<p></p>
 
 - Skip encryption
 - Apply your config
@@ -173,34 +233,55 @@ max-inflight-requests 256
 
 - Right click your newly created `Shared Folder` and select `Edit`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/08-syno-file-share-edit.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/08-syno-file-share-edit.png" alt="synology file services" height="200px" width="400px"/>
+</div>
+<p></p>
 
 - Select `Permissions` tab
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/09-syno-file-share-permissions.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/09-syno-file-share-permissions.png" alt="synology file services" />
+</div>
+<p></p>
 
 - Select `Local users`drop down and give the  `admin` `Read/Write` permissions by checking the box
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/10-syno-file-share-local-users.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/10-syno-file-share-local-users.png" alt="synology file services" />
+</div>
+<p></p>
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/11-syno-file-share-admin.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/11-syno-file-share-admin.png" alt="synology file services" />
+</div>
+<p></p>
 
 - Select `NFS Permissions` and then `Create`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/12-syno-file-share-nfs-permissions.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/12-syno-file-share-nfs-permissions.png" alt="synology file services" />
+</div>
+<p></p>
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/13-syno-file-share-nfs-create.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/13-syno-file-share-nfs-create.png" alt="synology file services" />
+</div>
+<p></p>
 
 - Configure like this then click `OK`
 
-![synology file services](/images/how-to-bake-an-ortelius-pi/part02/14-syno-file-share-nfs-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part02/14-syno-file-share-nfs-config.png" alt="synology file services"  height="200px" width="400px"/>
+</div>
+<p></p>
 
 - This `192.168.0.0/24` indicates that only the devices on this subnet can access NFS
 - You would need to change it to your network subnet which you can get from your DHCP configuration
 
 - Congrats you just configured the Synology for NFS!
 
-----
+---
 
 ### OS Prep
 
@@ -236,6 +317,7 @@ max-inflight-requests 256
 - Please find the MicroK8s command reference [here](https://microk8s.io/docs/command-reference)
 
 #### Microk8s Installation
+
 - SSH into each Pi and configure the Pi BIOS `sudo vi /boot/firmware/cmdline.txt` and add the following `cgroup_enable=memory cgroup_memory=1`
 - Below is the config from my Pi as an example
 
@@ -340,5 +422,29 @@ Well done you have now setup your Microk8s Kubernetes cluster with DHCP, DNS and
 ### Conclusion
 
 By this stage you should have three Pi's each with MicroK8s in an HA configuration and a Synology ready with NFS for centralised storage. Stay tuned for Part 3 where we will use GitOps using [Gimlet](https://gimlet.io/) as the UI to [Fluxcd](https://fluxcd.io/) to deploy the following [CSI Driver NFS](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, [Cert Manager](https://cert-manager.io/), [MetalLB Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) and [Ortelius](https://ortelius.io/).
+
+[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
+
+<strong>Disclaimer</strong>: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 Disclaimer: Any brands I mention in this blog post series are not monetised
