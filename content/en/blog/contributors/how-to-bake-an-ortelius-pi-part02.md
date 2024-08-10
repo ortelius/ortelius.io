@@ -172,7 +172,8 @@ max-inflight-requests 256
 <p></p>
 
 - NextDNS will instantly auto refresh all your NextDNS agents with any configuration changes
-- Great DNS is done!
+
+Great DNS is done!
 
 ### NFS Prep
 
