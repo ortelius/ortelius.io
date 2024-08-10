@@ -107,7 +107,7 @@ For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS its comple
 
 #### Take note
 
-NextDNS is free to a certain amount of DNS queries once you reach that limit resolution stops. Its inexpensive and totally worth it.
+NextDNS is free up to `300,000 queries/month`, once you reach that limit resolution stops.
 
 - Think of a domain name for your environment - mine is `pangarabbit.com`
 - Go to the NextDNS Wiki [here](https://github.com/nextdns/nextdns/wiki)
