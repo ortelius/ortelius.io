@@ -723,6 +723,40 @@ kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations
 kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 ```
 
+Now you will be able to edit any `values` where you see the `Storage Class` configuration whether its an infrastructure deployment or an application deployment and have Kubernetes take care of centralising the storage on the NFS server in this case the Synology NAS.
+
+Here are some examples.
+
+- Traefik
+
+```yaml
+    persistence:
+      # -- Enable persistence using Persistent Volume Claims
+      # ref: http://kubernetes.io/docs/user-guide/persistent-volumes/
+      # It can be used to store TLS certificates, see `storage` in certResolvers
+      enabled: true
+      name: data
+      #  existingClaim: ""
+      accessMode: ReadWriteOnce
+      size: 128Mi
+      storageClass: "nfs-csi-default"
+      # volumeName: ""
+      path: /data
+      annotations: {}
+      # -- Only mount a subpath of the Volume into the pod
+      # subPath: ""
+```
+
+- Netdata
+
+```yaml
+        persistence:
+          enabled: true
+          ## Set '-' as the storageclass to get a volume from the default storage class.
+          storageclass: "-"
+          volumesize: 1Gi
+```
+
 Great we now have Kubernetes managing NFS volume mounts dynamically!
 
 #### Kubernetes Cert Manager
