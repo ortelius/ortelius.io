@@ -5,19 +5,23 @@ linkTitle: "How to Bake an Ortelius Pi Part 1 | The Hardware"
 author: Sacha Wharton
 ---
 
-- [How to bake an Ortelius Pi Part 1 | The Hardware](#how-to-bake-an-ortelius-pi-part-1--the-hardware)
-  - [Introduction](#introduction)
-  - [Roadmap](#roadmap)
-  - [My Home Setup](#my-home-setup)
-  - [NFS Storage](#nfs-storage)
-  - [Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation](#raspberry-pi-imaging-utility-for-the-ubuntu-2204-lts-x64-os-installation)
-  - [Preparing the OS for installation](#preparing-the-os-for-installation)
-    - [USB 3 flash drives](#usb-3-flash-drives)
-    - [Example from configuring my Pi to use USB flash sticks](#example-from-configuring-my-pi-to-use-usb-flash-sticks)
-  - [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
-  - [Conclusion](#conclusion)
+<div class="col-center">
+<img src="/images/orteliuspi-part1.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
 
-## How to bake an Ortelius Pi Part 1 | The Hardware
+- [Introduction](#introduction)
+- [Roadmap](#roadmap)
+- [My Home Setup](#my-home-setup)
+- [NFS Storage](#nfs-storage)
+- [Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation](#raspberry-pi-imaging-utility-for-the-ubuntu-2204-lts-x64-os-installation)
+- [Preparing the OS for installation](#preparing-the-os-for-installation)
+  - [USB 3 flash drives](#usb-3-flash-drives)
+  - [Example from configuring my Pi to use USB flash sticks](#example-from-configuring-my-pi-to-use-usb-flash-sticks)
+- [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
+  - [Choose Storage](#choose-storage)
+- [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -27,26 +31,26 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 
 ### Roadmap
 
-`hardware --> networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> secret store --> ZeroTier --> everything else`
+`hardware --> networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### My Home Setup
 
 - 3X [Raspberry Pi4 Model B 8GB Red/White Official Case Essentials Kit Boxed White Power Supply](https://www.pishop.co.za/store/custom-kits/raspberry-pi4-model-b-8gb-redwhite-official-case-essentials-kit-boxed-white-power-supply)
 - Please go to this link for the full hardware specs [Raspberry Pi 4 B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/)
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png)
-
-----
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/raspberry-pi-4b.png" alt="raspberry-pi" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 - Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
 - I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi
 
-`OR`
+<strong>or</strong>
 
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
-
-----
 
 - 1X Screen HDMI
 - 1X Keyboard USB
@@ -85,7 +89,11 @@ If you use USB flash drives you will need to do the following as mentioned in th
 - Raspi-Config allows you to configure your Pis hardware without having to fiddle with `/boot/firmware/cmdline.txt`
 - Run Raspi-Config like this `sudo raspi-config` and you will get a screen like this
 
-![raspi-config](/images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/12-raspi-config.png" alt="raspberry-config" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 - Use Raspi-Config to configure boot order, enable or disable read-only filesystem and many other tweaks
 - I found it much easier just to use the right microSD Card and skip all this but it was still a good learning curve
@@ -129,61 +137,96 @@ usb-storage.quirks=05dc:a838:u
 usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=serial0,115200 dwc_otg.lpm_enable=0 console=tty1 root=LABEL=writable rootfstype=ext4 rootwait fixrtc quiet splash
 ```
 
-----
-
 ### Using the Raspberry Pi Imager
 
 - Repeat these steps for each SD Card or USB flash stick
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
-- Chose `CHOOSE DEVICE`
+- `CHOOSE DEVICE`
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-- Choose `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+<strong>Choose:</strong> `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png)
+<strong>Choose:</strong> `Other general-purpose OS`
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-- Choose `OS`
-- Choose `Other general-purpose OS`
+<strong>Choose:</strong> `Ubuntu`
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png)
+<strong>Choose:</strong> `Ubuntu Server 22.04.4 LTS (64-bit)`
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/04-choose-ubuntu-server-22-04-4-lts-x64.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-- Choose `Ubuntu`
+#### Choose Storage
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png)
+Note: This will look different on your machine especially if you are using either SD Card or USB flash drive
 
-- Choose `Ubuntu Server 22.04.4 LTS (64-bit)`
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/04-choose-ubuntu-server-22-04-4-lts-x64.png)
+- `Next`
 
-- Choose Storage
-- This will look different on your machine especially if you are using either SD Card or USB flash drive
+Use OS Customization by clicking: `EDIT SETTINGS`
+<p></p>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/07-use-os-customisation.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png)
+Fill in the required info according to your specifications.
 
-- Click Next
+Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/06-click-next.png)
+(You can use whatever hostnames make sense to you)
 
-- Use OS Customisation by clicking on `EDIT SETTINGS`
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/07-use-os-customisation.png)
-
-- Fill in the required info according to your specifications
-- Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` (You can use whatever hostnames make sense to you)
-
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png)
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<p></p>
+</div>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
-- Generate the keys in the home folder so on Mac its `/Users/<your username>/.ssh`
+- Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
+- Generate the keys in the home folder at this location `C:\Users\username\.ssh` if you are using Windows
 
 ```shell
 ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
 ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
 ```
 
-- Then you will end up with two files - One will be the private key which you never ever share and the other will be the public key with a bunch of scrambled numbers and text. You then copy all the scrambled numbers and text and paste the same public key each time on the line under `Allow public-key authentication only` for each Pi
+- Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
+- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
 - This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
 - Then add this config to `.ssh/config`
 
@@ -207,19 +250,57 @@ Host pi03.yourdomain.com
  User <your user>
 ```
 
-- You can also reference this how to from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
-- Check the boxes that make sense to you
+- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/10-options.png)
+<strong>Check:</strong> `all boxes specific to your needs.`
+<p></p>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-- Click `YES` to apply the OS customisation settings
+<strong>Click:</strong> `YES to apply the OS customisation settings`
+<p></p>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
-![raspberry-pi-4b](/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png)
-
-- Rinse and repeat 3 times
+<strong>Rinse and repeat for each SD Card or USB flash stick. </strong>
+<p></p>
+<br>
 
 ### Conclusion
 
 By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS each configured for SSH with a password or preferably a SSH private key and public key. Stay tuned for part 2 where we will dive into DHCP, NextDNS, NFS and install MicroK8s.
 
-Disclaimer: Any brands I mention in this blog post series are not monetized
+### Next Steps
+
+[How to Bake on Ortelius Pi - Part 2 The Preparation](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+
+[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
+
+<strong> Disclaimer: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
+
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}

@@ -1,83 +1,83 @@
 ---
-date: 2024-04-05
-title: "How to Bake an Ortelius Pi Part 3 | The Hardware"
-linkTitle: "How to Bake an Ortelius Pi Part 3 | The Hardware"
+date: 2024-08-08
+title: "How to Bake an Ortelius Pi Part 3 | The GitOps Configuration"
+linkTitle: "How to Bake an Ortelius Pi Part 3 | The GitOps Configuration"
 author: Sacha Wharton
 ---
 
-- [How to bake an Ortelius Pi Part 3 | The GitOps Configuration](#how-to-bake-an-ortelius-pi-part-3--the-gitops-configuration)
-  - [Introduction](#introduction)
-  - [Roadmap](#roadmap)
-  - [Kubernetes](#kubernetes)
-    - [CRDs](#crds)
-    - [Context and Namespace Switching](#context-and-namespace-switching)
-  - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
-  - [Gimlet](#gimlet)
-    - [Gimlet Repostories](#gimlet-repostories)
-    - [Gimlet Environments](#gimlet-environments)
-    - [Gimlet Environment Config](#gimlet-environment-config)
-    - [Gimlet Observability](#gimlet-observability)
-  - [Fluxcd](#fluxcd)
-    - [VS Code Extension](#vs-code-extension)
-    - [Flux CRD's](#flux-crds)
-  - [Gimlet Installation Self-Hosted](#gimlet-installation-self-hosted)
-    - [Prerequisites](#prerequisites)
-    - [Gimlet on the command line](#gimlet-on-the-command-line)
-    - [Install Gimlet](#install-gimlet)
-    - [Connect your repositories](#connect-your-repositories)
-    - [Connect you cluster](#connect-you-cluster)
-    - [K8s check](#k8s-check)
-    - [Github check](#github-check)
-    - [Github Gimlet repo check](#github-gimlet-repo-check)
-    - [Gimlet Gitops Infra](#gimlet-gitops-infra)
-    - [Gimlet Gitops Apps](#gimlet-gitops-apps)
-  - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
-    - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-  - [Gimlet Kubernetes CSI NFS Driver deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
-    - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
-    - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
-    - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
-    - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
-    - [Kubernetes Cert Manager](#kubernetes-cert-manager)
-  - [Gimlet | Cert Manager](#gimlet--cert-manager)
-    - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
-    - [Helm-Release | Cert Manager](#helm-release--cert-manager)
-    - [FYI | Helm Chart configurations that were amended for Cert Manager](#fyi--helm-chart-configurations-that-were-amended-for-cert-manager)
-    - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
-    - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
-  - [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
-    - [Helm-Repository | Metallb](#helm-repository--metallb)
-    - [Helm-Release | Metallb](#helm-release--metallb)
-    - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
-    - [Kubernetes check | Metallb](#kubernetes-check--metallb)
-  - [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
-    - [Helm-Repository | Traefik](#helm-repository--traefik)
-    - [Helm-Release | Traefik](#helm-release--traefik)
-    - [FYI | Helm Chart configurations that were amended for Traefik](#fyi--helm-chart-configurations-that-were-amended-for-traefik)
-    - [Manifest Folder | Traefik](#manifest-folder--traefik)
-    - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
-    - [Further reading | Traefik](#further-reading--traefik)
-  - [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
-    - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
-    - [Helm-Repository | Ortelius](#helm-repository--ortelius)
-    - [Helm-Release | Ortelius](#helm-release--ortelius)
-    - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
-    - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
-  - [Conclusion](#conclusion)
+<!-- <div class="col-center">
+<img src="/images/orteliuspi-part3.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+</div>
+<p></p> -->
 
-## How to bake an Ortelius Pi Part 3 | The GitOps Configuration
+- [Introduction](#introduction)
+- [Roadmap](#roadmap)
+- [Kubernetes](#kubernetes)
+  - [CRDs](#crds)
+  - [Context and Namespace Switching](#context-and-namespace-switching)
+- [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
+- [Gimlet](#gimlet)
+  - [Gimlet Repostories](#gimlet-repostories)
+  - [Gimlet Environments](#gimlet-environments)
+  - [Gimlet Environment Config](#gimlet-environment-config)
+  - [Gimlet Observability](#gimlet-observability)
+- [Fluxcd](#fluxcd)
+  - [VS Code Extension](#vs-code-extension)
+  - [Flux CRD's](#flux-crds)
+- [Gimlet Installation](#gimlet-installation)
+  - [Prerequisites](#prerequisites)
+  - [Gimlet on the command line](#gimlet-on-the-command-line)
+  - [Install Gimlet](#install-gimlet)
+  - [Connect your repositories](#connect-your-repositories)
+  - [Connect you cluster](#connect-you-cluster)
+  - [K8s check](#k8s-check)
+  - [Github check](#github-check)
+  - [Github Gimlet repo check](#github-gimlet-repo-check)
+  - [Gimlet Gitops Infra](#gimlet-gitops-infra)
+  - [Gimlet Gitops Apps](#gimlet-gitops-apps)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
+  - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
+- [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
+  - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
+  - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
+  - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
+  - [Kubernetes Cert Manager](#kubernetes-cert-manager)
+- [Gimlet | Cert Manager](#gimlet--cert-manager)
+  - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
+  - [Helm-Release | Cert Manager](#helm-release--cert-manager)
+  - [FYI | Helm Chart configurations that were amended for Cert Manager](#fyi--helm-chart-configurations-that-were-amended-for-cert-manager)
+  - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
+  - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
+- [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
+  - [Helm-Repository | Metallb](#helm-repository--metallb)
+  - [Helm-Release | Metallb](#helm-release--metallb)
+  - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
+  - [Kubernetes check | Metallb](#kubernetes-check--metallb)
+- [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
+  - [Helm-Repository | Traefik](#helm-repository--traefik)
+  - [Helm-Release | Traefik](#helm-release--traefik)
+  - [FYI | Helm Chart configurations that were amended for Traefik](#fyi--helm-chart-configurations-that-were-amended-for-traefik)
+  - [Manifest Folder | Traefik](#manifest-folder--traefik)
+  - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
+  - [Further reading | Traefik](#further-reading--traefik)
+- [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
+  - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
+  - [Helm-Repository | Ortelius](#helm-repository--ortelius)
+  - [Helm-Release | Ortelius](#helm-release--ortelius)
+  - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
+  - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
+- [Conclusion](#conclusion)
 
 ### Introduction
 
-In [part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-configuration/), of this series we deployed DHCP, DNS, NFS with a [Synology NAS](https://www.synology.com/) and deployed [MicroK8s](https://microk8s.io/) in HA mode.
+In [part 2](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-2-the-configuration/), of this series we deployed DHCP, DNS, NFS with a Synology NAS and deployed MicroK8s in HA mode.
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
 ### Roadmap
 
-I have tried to put things in a logical order for deployment like this:
-
-`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> secret store --> ZeroTier --> everything else`
+`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Kubernetes
 
@@ -156,48 +156,73 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 
 - When the Gimlet dashboard loads you will be met with the repostories section which is where you import your `application` repos to be managed by the GitOps process
 
-![gimlet repos](/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png" alt="gimlet repos"/>
+</div>
+<p></p>
 
 #### Gimlet Environments
 
 - Environments are the representation of your journey to getting your applications to the end user such as dev, staging and production
 
-![gimlet environments](/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environment"/>
+</div>
+<p></p>
+
 
 #### Gimlet Environment Config
 
 - These are pre baked in environment configs which can be turned on and off with a toggle
-![gimlet environment configs](/images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png" alt="gimlet environment config"/>
+</div>
+<p></p>
 
 #### Gimlet Observability
 
 - This is where you can cycle through different elements of the GitOps process and get feedback on deployments
 - Click on the environment name at the bottom left of the interface
 
-![gimlet obs gitops](/images/how-to-bake-an-ortelius-pi/part03/30-gimlet-obs-gitops.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/30-gimlet-obs-gitops.png" alt="gimlet obs gitops"/>
+</div>
+<p></p>
 
 - The `Flux Runtime` shows you exactly what Flux is chewing on and gives the operator visuals into whats going on in the environment
-- Click on logs to get logs
-- Click describe to run a `kubectl describe`
+- Click on `Logs` to get logs
+- Click `Describe` to run a `kubectl describe`
 
-![gimlet obs flux runtime](/images/how-to-bake-an-ortelius-pi/part03/31-gimlet-obs-flux-runtime.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/31-gimlet-obs-flux-runtime.png" alt="gimlet obs flux runtime"/>
+</div>
+<p></p>
 
 ### Fluxcd
 
 - [Documentation](https://fluxcd.io/flux/)
 - [Flux CLI](https://fluxcd.io/flux/cmd/)
+- [Flux Troubleshooting Cheatsheet](https://fluxcd.io/flux/cheatsheets/troubleshooting/)
 - [Flux Ecosystem](https://fluxcd.io/ecosystem/#flux-uis--guis)
 - [VS Code extension](https://marketplace.visualstudio.com/items?itemName=Weaveworks.vscode-gitops-tools)
 
 #### VS Code Extension
 
 The VS Code extension allows you to get into the guts of your Fluxcd deployment and configuration from within VS Code.
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/24-fluxcd-vscode-clusters.png" alt="fluxcd vscode clusters"/>
+</div>
+<p></p>
 
-![fluxcd vscode clusters](/images/how-to-bake-an-ortelius-pi/part03/24-fluxcd-vscode-clusters.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/32-fluxcd-vscode-sources.png" alt="fluxcd vscode sources"/>
+</div>
+<p></p>
 
-![fluxcd vscode sources](/images/how-to-bake-an-ortelius-pi/part03/32-fluxcd-vscode-sources.png)
-
-![fluxcd vscode workloads](/images/how-to-bake-an-ortelius-pi/part03/33-fluxcd-vscode-workloads.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/33-fluxcd-vscode-workloads.png" alt="fluxcd vscode workloads"/>
+</div>
+<p></p>
 
 #### Flux CRD's
 
@@ -207,9 +232,12 @@ Lets take a look at the Flux CRD's.
 `kubectl get crds | grep flux`
 ```
 
-![fluxcd crds](/images/how-to-bake-an-ortelius-pi/part03/25-fluxcd-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/25-fluxcd-crds.png" alt="fluxcd crds"/>
+</div>
+<p></p>
 
-### Gimlet Installation Self-Hosted
+### Gimlet Installation
 
 #### Prerequisites
 
@@ -230,7 +258,10 @@ gimlet --version
 - `FYI` please read this [On the command line](https://gimlet.io/docs/environment-settings/component-updates)
 - We will be spending all of our time in the `gitops-<your-environment>-infra` repo to deploy our Kubernetes infrastructure with Gimlet
 
-![gimlet infra](/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png" alt="gimlet infra"/>
+</div>
+<p></p>
 
 #### Install Gimlet
 
@@ -249,13 +280,19 @@ kubectl port-forward svc/gimlet 9000:9000
 
 - Login with Github
 
-![gimlet login](/images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png" alt="gimlet login"/>
+</div>
+<p></p>
 
 #### Connect your repositories
 
 - Only import your application repositories here and not anything to do with infrastructure
 
-![gimlet repos](/images/how-to-bake-an-ortelius-pi/part03/15-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/15-gimlet-repos.png" alt="gimlet repos"/>
+</div>
+<p></p>
 
 #### Connect you cluster
 
@@ -292,25 +329,40 @@ kubectl get pods
 
 - Go to [Github.com](https://github.com/) and click on your profile in the top right hand corner of your browser tab
 
-![github settings](/images/how-to-bake-an-ortelius-pi/part03/16-github-settings.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/16-github-settings.png" alt="github settings"/>
+</div>
+<p></p>
 
 - Scroll down until the left hand coloumn shows `Applications` under the title `Integrations`
 
-![github application](/images/how-to-bake-an-ortelius-pi/part03/17-github-application.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/17-github-application.png" alt="github application"/>
+</div>
+<p></p>
 
 - You should see the Gimlet application installed
 - `!!!WARNING!!!`Whatever you do don't just delete this app like I did and get yourself into an account mess
 
-![github gimlet app](/images/how-to-bake-an-ortelius-pi/part03/18-github-gimlet-app.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/18-github-gimlet-app.png" alt="github gimlet app"/>
+</div>
+<p></p>
 
 #### Github Gimlet repo check
 
 - Click on repositories at the top left of the screen
-![github gimlet repos](/images/how-to-bake-an-ortelius-pi/part03/19-github-gimlet-repos-button.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/19-github-gimlet-repos-button.png" alt="github gimlet repos button"/>
+</div>
+<p></p>
 
 - Then type `gitops-` in the search bar and you should see two repos pop up
 
-![github gimlet repos](/images/how-to-bake-an-ortelius-pi/part03/20-github-gimlet-repos.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/20-github-gimlet-repos.png" alt="github gimlet repos"/>
+</div>
+<p></p>
 
 - You should see `gitops-<your-environment>-infra` and `gitops-<your-environment>-apps`
 - You will notice that this repo is private thus no one can see any sensitive information such as secrets
@@ -319,16 +371,21 @@ kubectl get pods
 
 #### Gimlet Gitops Infra
 
-- Once we have added a `helm-repositories` config and a `helm-release` config with our values and then perform a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
-- Currently I am using the `manifest folder` for manual applies
+- Once we have added configuration in `helm-repositories` and `helm-release` and performed a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
 
-![gimlet infra repo](/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repos"/>
+</div>
+<p></p>
 
 #### Gimlet Gitops Apps
 
-- Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp`
+- Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp` if you can't wait for the blog post
 
-![gimlet apps repo](/images/how-to-bake-an-ortelius-pi/part03/23-gimlet-apps-repo.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/23-gimlet-apps-repo.png" alt="gimlet apps repo"/>
+</div>
+<p></p>
 
 ```shell
 git clone https://github.com/<your-profile>/gitops-<your-environment>-infra.git
@@ -340,7 +397,10 @@ git clone https://github.com/<your-profile>/gitops-<your-environment>-apps.git
 
 - On your local machine open your IDE and navigate to your cloned infrastructure repo
 
-![github gimlet repos](/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/21-gimlet-infra.png" alt="gimlet infra"/>
+</div>
+<p></p>
 
 ### Gimlet GitOps Infrastructure
 
@@ -356,7 +416,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
 
-### Gimlet Kubernetes CSI NFS Driver deployment
+### Gimlet Kubernetes CSI NFS Driver Deployment
 
 #### Helm-Repository | CSI NFS Driver
 
@@ -622,7 +682,10 @@ kubectl config set-context --current --namespace=kube-system
 kubectl get pods -n kube-system
 ```
 
-![csi nfs driver storage pods](/images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/01-csi-nfs-driver-pods.png" alt="csi nfs driver pods"/>
+</div>
+<p></p>
 
 - Kubectl show me the Storage Class
 
@@ -630,7 +693,10 @@ kubectl get pods -n kube-system
 kubectl get sc --all-namespaces
 ```
 
-![csi nfs driver storage class](/images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/02-csi-nfs-driver-storage-class.png" alt="csi nfs driver storage class"/>
+</div>
+<p></p>
 
 - From CSI NFS Driver version v4.8.0 you no longer have to manually set the default Storage Class as there is an annotation provided
 
@@ -2136,9 +2202,12 @@ kubectl config set-context --current --namespace=kube-system
 kubectl get pods -n kube-system | grep cert
 ```
 
-![cert manager pods](/images/how-to-bake-an-ortelius-pi/part03/34-cert-manager-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/34-cert-manager-pods.png" alt="cert manager pods"/>
+</div>
+<p></p>
 
-- Great we now have infrastructure for managing certificates!
+Great we now have infrastructure for managing certificates!
 
 ### Metallb load-balancer for bare metal Kubernetes
 
@@ -2600,7 +2669,10 @@ kubectl config set-context --current --namespace=infrastructure
 kubectl get pods -n infrastructure
 ```
 
-![metallb pods](/images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/03-metallb-pods.png" alt="metallb pods"/>
+</div>
+<p></p>
 
 - Now lets enable [L2 Advertisement](https://metallb.universe.tf/troubleshooting/) and setup our IP pool
 - Create `metallb.yaml` in the `manifest folder` and paste the YAML below into `metallb.yaml` and run `kubectl apply -f metallb.yaml`
@@ -2631,7 +2703,10 @@ spec:
 kubectl get crds | grep metallb
 ```
 
-![metallb crds](/images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/04-metallb-crds.png" alt="metallb crds"/>
+</div>
+<p></p>
 
 - Kubectl show me the ip address pools for Metallb
 
@@ -2639,7 +2714,10 @@ kubectl get crds | grep metallb
 kubectl get ipaddresspools.metallb.io -n infrastructure
 ```
 
-![metallb ip pools](/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb crds"/>
+</div>
+<p></p>
 
 Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy and which Traefik Proxy can bind to.
 
@@ -2677,7 +2755,7 @@ spec:
 
 #### Helm-Release | Traefik
 
-- Lets create a Helm release for Metallb
+- Lets create a Helm release for Traefik
 - A Helm release is an instance of a Helm chart running in a Kubernetes cluster
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `traefik.yaml` in the `helm-releases` directory and paste the following YAML
@@ -3771,7 +3849,10 @@ kubectl config set-context --current --namespace=infrastructure
 kubectl get pods -n infrastructure
 ```
 
-![traefik pods](/images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/06-traefik-pods.png" alt="traefik pods"/>
+</div>
+<p></p>
 
 - Kubectl show me all CRDs for Traefik
 
@@ -3779,7 +3860,10 @@ kubectl get pods -n infrastructure
 kubectl get crds | grep traefik
 ```
 
-![traefik pod](/images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/07-traefik-crds.png" alt="traefik crds"/>
+</div>
+<p></p>
 
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
 - Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
@@ -3788,10 +3872,9 @@ kubectl get crds | grep traefik
 - From here on if we want to access our Microservice frontends we will need to create an `IngressRoute` for each one
 - If its infrastructure create it in the `infrastructure` namespace
 - If its an application create it in the namespace the application lives in
-- Here is an example of an `IngressRoute` for the Traefik Dashboard
 - Remember that the services piece will be different for your applications and should point to the service created in Kubernetes for the application
-- Use the Ortelius `IngressRoute` as an example otherwise hit the Traefik docs
 - `TraefikService` is a service unique to Traefik and is never exposed
+- Here is an `example` of an `IngressRoute` for the Traefik Dashboard
 
 ```yaml
 apiVersion: traefik.io/v1alpha1
@@ -3816,7 +3899,11 @@ spec:
 kubectl get ingressroutes.traefik.io -n infrastructure
 ```
 
-![traefik pod](/images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png)
+![traefik pod](images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png" alt="traefik ingressroute dashboard"/>
+</div>
+<p></p>
 
 - Kubectl show me that the Traefik service has claimed our Metallb single ip address
 
@@ -3824,7 +3911,10 @@ kubectl get ingressroutes.traefik.io -n infrastructure
 kubectl get svc -n infrastructure
 ```
 
-![traefik service](/images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/09-traefik-service.png" alt="traefik service"/>
+</div>
+<p></p>
 
 - Here is a view of the services for the `infrastructure` namespace
 
@@ -3867,7 +3957,10 @@ If you would like to dig deeper into Traefiks API capabilities please go to the 
 - [Traefik Hub](https://traefik.io/traefik-hub/)
 - Watch [Upgrade Traefik Proxy to API Gateway and API Management in Seconds](https://youtu.be/zriUO5YPgFg) on YouTube
 
-![traefik dashboard](/images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png)
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/10-traefik-dashboard.png" alt="traefik dashboard"/>
+</div>
+<p></p>
 
 ### Ortelius The Ultimate Evidence Store
 
@@ -3881,21 +3974,9 @@ Well done for making it this far! We have made it to the point where we can depl
 
 Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
 
-- `ms` stands for microservice
-
-![ortelius microservices](/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
-
 #### Ortelius Microservice GitHub repos
 
-- [ms-dep-pkg-cud](https://github.com/ortelius/ms-dep-pkg-cud)
-- [ms-textfile-crud](https://github.com/ortelius/ms-textfile-crud)
-- [ms-dep-pkg-r](https://github.com/ortelius/ms-dep-pkg-r)
-- [ms-compitem-crud](https://github.com/ortelius/ms-compitem-crud)
-- [ms-validate-user](https://github.com/ortelius/ms-validate-user)
-- [ms-postgres](https://github.com/ortelius/ms-postgres)
-- [ms-sbom-export](https://github.com/ortelius/ms-sbom-export)
-- [ms-scorecard](https://github.com/ortelius/ms-scorecard)
-- [scec-nginx](https://github.com/ortelius/scec-nginx)
+You can find all the Ortelius Microservices [here](https://github.com/ortelius) on GitHub
 
 #### Helm-Repository | Ortelius
 
@@ -3995,52 +4076,47 @@ kubectl config set-context --current --namespace=infrastructure
 - Kubectl show me the pods for Ortelius
 
 ```shell
-kubectl get pods -n infrastructure
+kubectl get pods -n infrastructure | grep ms
 ```
 
-![ortelius microservices](/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png)
+- `ms` stands for microservice
 
-- Now we will deploy a Traefik ingress route for Ortelius by applying the following YAML
-- Create a YAML file in the `manifests directory` called `ortelius.yaml`, and paste the following YAML in `ortelius.yaml` then run `kubectl apply -f ortelius.yaml`
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
-  labels:
-    app: ms-nginx
-  name: ms-nginx-traefik
-  namespace: infrastructure
-spec:
-  ingressClassName: k3d
-  rules:
-  - http:
-      paths:
-      - backend:
-          service:
-            name: ms-nginx
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
-status:
-  loadBalancer: {}
-```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/11-ortelius-microservices.png" alt="ortelius microservices"/>
+</div>
+<p></p>
 
 You should now be able to reach the Ortelius frontend in your browser using the domain name you chose for example mine was `http://ortelius.pangarabbit.com` and see the login screen as in the graphic. You will get a certificate error but just allow access for now until we sort out the certificate with Cloudflare.
 
-![ortelius frontend](/images/how-to-bake-an-ortelius-pi/part03/12-ortelius-frontend.png)
-
-Happy alien hunting.......
-
-<img src="images/how-to-bake-an-ortelius-pi/part03/13-ortelius-logo.svg" alt="ortelius-logo" width="600">
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/12-ortelius-frontend.png" alt="ortelius frontend"/>
+</div>
+<p></p>
 
 ### Conclusion
 
 By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running. Stay tuned for Part 4 where we unleash LetsEncrypt with Cloudflare for automatic certificate renewal to provide certificate and TLS services.
 
-Yes there is more extraterrestrial life in a cloud deployment near you........
+Happy alien hunting.......
 
-Disclaimer: Any brands I mention in this blog post series are not monetized
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+Disclaimer: Any brands I mention in this blog post series are not monetised
