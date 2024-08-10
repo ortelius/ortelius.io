@@ -3931,27 +3931,27 @@ kubectl get svc -n infrastructure
 - Here is a view of the services for the `infrastructure` namespace
 
 ```text
-NAME                                  	TYPE           	CLUSTER-IP       	EXTERNAL-IP     	PORT(S)                      AGE
-cert-manager                          	ClusterIP      	10.152.183.37	<none>          	9402/TCP	5d1h
-cert-manager-webhook                  	ClusterIP      	10.152.183.90	<none>          	443/TCP	5d1h
-external-secrets-controller-webhook   	ClusterIP      	10.152.183.141	<none>          	443/TCP	6d7h
-gimlet-agent                          	ClusterIP      	10.152.183.103	<none>          	80/TCP	7d1h
-image-builder                         	ClusterIP      	10.152.183.247	<none>          	9000/TCP	7d1h
-localstack                            	NodePort       	10.152.183.166	<none>          	4566:31566/TCP,4510:30519/TCP,4511:30385/TCP,4512:31571/TCP,4513:31900/TCP,4514:30675/TCP,4515:31564/TCP,4516:32556/TCP,4517:32025/TCP,4518:31320/TCP,4519:31642/TCP,4520:31655/TCP,4521:30246/TCP,4522:31741/TCP,4523:30728/TCP,4524:32385/TCP,4525:30533/TCP,4526:30722/TCP,4527:32290/TCP,4528:32541/TCP,4529:30146/TCP,4530:32489/TCP,4531:31950/TCP,4532:30786/TCP,4533:32477/TCP,4534:31403/TCP,4535:30868/TCP,4536:31489/TCP,4537:32623/TCP,4538:31764/TCP,4539:31650/TCP,4540:31094/TCP,4541:31456/TCP,4542:32746/TCP,4543:32402/TCP,4544:31807/TCP,4545:31245/TCP,4546:31154/TCP,4547:31639/TCP,4548:31716/TCP,4549:30928/TCP,4550:30408/TCP,4551:31849/TCP,4552:30100/TCP,4553:31715/TCP,4554:30729/TCP,4555:32343/TCP,4556:30110/TCP,4557:31042/TCP,4558:31806/TCP,4559:30239/TCP	3d18h
-metallb-webhook-service               	ClusterIP      	10.152.183.136	<none>          	443/TCP	3d8h
-ms-compitem-crud                      	NodePort       	10.152.183.88	<none>          	80:30149/TCP	2d2h
-ms-dep-pkg-cud                        	NodePort       	10.152.183.151	<none>          	80:32165/TCP	2d2h
-ms-dep-pkg-r                          	NodePort       	10.152.183.36	<none>          	80:30377/TCP	2d2h
-ms-general                            	NodePort       	10.152.183.225	<none>          	8080:31066/TCP	2d2h
-ms-nginx                              	NodePort       	10.152.183.100	<none>          	80:30493/TCP,443:32727/TCP	2d2h
-ms-scorecard                          	NodePort       	10.152.183.80	<none>          	80:31522/TCP	2d2h
-ms-textfile-crud                      	NodePort       	10.152.183.237	<none>          	80:32707/TCP	2d2h
-ms-ui                                 	NodePort       	10.152.183.99	<none>          	8080:31941/TCP	2d2h
-ms-validate-user                      	NodePort       	10.152.183.61	<none>          	80:32446/TCP	2d2h
-nats                                  	ClusterIP      	10.152.183.98	<none>          	4222/TCP	3d18h
-nats-headless                         	ClusterIP      	None             	<none>          	4222/TCP,8222/TCP	3d18h
-netdata                               	ClusterIP      	10.152.183.110	<none>          	19999/TCP	3d18h
-traefik                               	LoadBalancer   	10.152.183.135	192.168.0.151	80:31662/TCP,443:30850/TCP	4d19h
+NAME                                  	TYPE           	CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
+cert-manager                          	ClusterIP      	10.152.183.37	 <none>          9402/TCP	5d1h
+cert-manager-webhook                  	ClusterIP      	10.152.183.90	 <none>          443/TCP	5d1h
+external-secrets-controller-webhook   	ClusterIP      	10.152.183.141 <none>          443/TCP	6d7h
+gimlet-agent                          	ClusterIP      	10.152.183.103 <none>          80/TCP	7d1h
+image-builder                         	ClusterIP      	10.152.183.247 <none>          9000/TCP	7d1h
+localstack                            	NodePort       	10.152.183.166 <none>          4566:31566/TCP,4510:30519/TCP,4511:30385/TCP,4512:31571/TCP,4513:31900/TCP,4514:30675/TCP,4515:31564/TCP,4516:32556/TCP,4517:32025/TCP,4518:31320/TCP,4519:31642/TCP,4520:31655/TCP,4521:30246/TCP,4522:31741/TCP,4523:30728/TCP,4524:32385/TCP,4525:30533/TCP,4526:30722/TCP,4527:32290/TCP,4528:32541/TCP,4529:30146/TCP,4530:32489/TCP,4531:31950/TCP,4532:30786/TCP,4533:32477/TCP,4534:31403/TCP,4535:30868/TCP,4536:31489/TCP,4537:32623/TCP,4538:31764/TCP,4539:31650/TCP,4540:31094/TCP,4541:31456/TCP,4542:32746/TCP,4543:32402/TCP,4544:31807/TCP,4545:31245/TCP,4546:31154/TCP,4547:31639/TCP,4548:31716/TCP,4549:30928/TCP,4550:30408/TCP,4551:31849/TCP,4552:30100/TCP,4553:31715/TCP,4554:30729/TCP,4555:32343/TCP,4556:30110/TCP,4557:31042/TCP,4558:31806/TCP,4559:30239/TCP	3d18h
+metallb-webhook-service               	ClusterIP      	10.152.183.136 <none>          	443/TCP	3d8h
+ms-compitem-crud                      	NodePort       	10.152.183.88	 <none>          	80:30149/TCP	2d2h
+ms-dep-pkg-cud                        	NodePort       	10.152.183.151 <none>          	80:32165/TCP	2d2h
+ms-dep-pkg-r                          	NodePort       	10.152.183.36	 <none>          	80:30377/TCP	2d2h
+ms-general                            	NodePort       	10.152.183.225 <none>          	8080:31066/TCP	2d2h
+ms-nginx                              	NodePort       	10.152.183.100 <none>          	80:30493/TCP,443:32727/TCP	2d2h
+ms-scorecard                          	NodePort       	10.152.183.80	 <none>          	80:31522/TCP	2d2h
+ms-textfile-crud                      	NodePort       	10.152.183.237 <none>          	80:32707/TCP	2d2h
+ms-ui                                 	NodePort       	10.152.183.99	 <none>          	8080:31941/TCP	2d2h
+ms-validate-user                      	NodePort       	10.152.183.61	 <none>          	80:32446/TCP	2d2h
+nats                                  	ClusterIP      	10.152.183.98	 <none>          	4222/TCP	3d18h
+nats-headless                         	ClusterIP      	None           <none>          	4222/TCP,8222/TCP	3d18h
+netdata                               	ClusterIP      	10.152.183.110 <none>          	19999/TCP	3d18h
+traefik                               	LoadBalancer   	10.152.183.135 192.168.0.151	  80:31662/TCP,443:30850/TCP	4d19h
 ```
 
 Brilliant our Traefik Proxy has claimed the ip.
