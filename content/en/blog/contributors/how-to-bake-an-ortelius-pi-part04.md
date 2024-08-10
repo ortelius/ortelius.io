@@ -358,7 +358,7 @@ All we have done now is secure the Traefik dashboard but how would we do it for 
 
 ### Conclusion
 
-In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. From my experience the crucial configuration change for any workloads to access the frontend securely was to enable the ingress and to change the `ingressClassName` to `traefik` in the Helm Release values.
+In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. From my experience the crucial configuration change for any workloads to access the frontend securely was to enable the `ingress` and to change the `ingressClassName` to `traefik` in the Helm Release values.
 
 Happy alien hunting.......
 
