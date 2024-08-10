@@ -44,11 +44,12 @@ Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 
 <p></p>
 <br>
 
-- Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
-- I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi
+Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking. I can also recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi.
 
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
+
 <strong>or</strong>
+
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
 
 - 1X Screen HDMI
