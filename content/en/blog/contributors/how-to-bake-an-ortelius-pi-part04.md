@@ -30,8 +30,6 @@ In part 4 we will setup [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEn
 
 ### Roadmap
 
-I have tried to put things in a logical order for deployment like this:
-
 `cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Cloudflare | Connectivity Cloud
@@ -140,7 +138,7 @@ Cloudflare strongly recommends using Full or Full (strict) modes to prevent mali
 
 - Clicking on `Edge Certificates` you will see that the kind folks at Cloudflare have provided you with a certificate for free also known as `Universal SSL`
 
-Attention: Let's Encrypt's chain of trust will be changing on September 2024. Universal SSL certificates will be automatically switched to a more compatible certificate authority. Review our [documentation](https://developers.cloudflare.com/ssl/reference/migration-guides/lets-encrypt-chain/#lets-encrypt-chain-update) for details and to understand the impacts on other certificate types.
+<strong>Attention:</strong> Let's Encrypt's chain of trust will be changing on September 2024. Universal SSL certificates will be automatically switched to a more compatible certificate authority. Review our [documentation](https://developers.cloudflare.com/ssl/reference/migration-guides/lets-encrypt-chain/#lets-encrypt-chain-update) for details and to understand the impacts on other certificate types.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part04/12-cf-edge-certificates-button.png" alt="cf edge certificates button"/>
@@ -192,7 +190,7 @@ Attention: Let's Encrypt's chain of trust will be changing on September 2024. Un
 </div>
 <p></p>
 
-Great we should have a functional certificate which will be auto renewed and we can use Traefik as the single point for secure connections.
+Great we should have a functional certificate which will be auto renewed and we can use Traefik as the single point of entry for secure connections.
 
 ### Traefik
 
