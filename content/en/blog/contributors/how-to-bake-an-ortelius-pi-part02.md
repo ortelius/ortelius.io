@@ -28,6 +28,7 @@ author: Sacha Wharton
   - [Microk8s Installation](#microk8s-installation)
   - [Create highly available 3 node cluster with MicroK8s](#create-highly-available-3-node-cluster-with-microk8s)
 - [Conclusion](#conclusion)
+  - [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -420,9 +421,10 @@ Well done you have now setup your Microk8s Kubernetes cluster with DHCP, DNS and
 
 By this stage you should have three Pi's each with MicroK8s in an HA configuration and a Synology ready with NFS for centralised storage. Stay tuned for Part 3 where we will use GitOps using [Gimlet](https://gimlet.io/) as the UI to [Fluxcd](https://fluxcd.io/) to deploy the following [CSI Driver NFS](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes, [Cert Manager](https://cert-manager.io/), [MetalLB Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) and [Ortelius](https://ortelius.io/).
 
-[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
+#### Next Steps
 
-<strong>Disclaimer</strong>: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
+[How to Bake an Ortelius Pi | Part 3 | The GitOps Configuration](https://ortelius.io/blog/2024/08/08/how-to-bake-an-ortelius-pi-part-3-the-gitops-configuration/)
+
 
 {{< blocks/section color=white >}}
 
@@ -443,5 +445,3 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-Disclaimer: Any brands I mention in this blog post series are not monetised

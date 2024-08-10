@@ -69,6 +69,7 @@ author: Sacha Wharton
   - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
   - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
 - [Conclusion](#conclusion)
+  - [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -3905,7 +3906,6 @@ The `IngressRoute` for the Traefik Dashboard is created from this configuration 
 kubectl get ingressroutes.traefik.io -n infrastructure
 ```
 
-![traefik pod](images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png)
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png" alt="traefik ingressroute dashboard"/>
 </div>
@@ -4105,6 +4105,10 @@ By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cer
 
 Happy alien hunting.......
 
+#### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/)
+
 {{< blocks/section color=white >}}
 
 <h2 class="text-left">Meet the Author</h2>
@@ -4124,5 +4128,3 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-Disclaimer: Any brands I mention in this blog post series are not monetised

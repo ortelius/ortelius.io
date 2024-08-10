@@ -1,5 +1,5 @@
 ---
-date: 2024-08-08
+date: 2024-08-10
 title: "How to Bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik"
 linkTitle: "How to Bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik"
 author: Sacha Wharton
@@ -381,5 +381,3 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-Disclaimer: Any brands I mention in this blog post series are not monetised
