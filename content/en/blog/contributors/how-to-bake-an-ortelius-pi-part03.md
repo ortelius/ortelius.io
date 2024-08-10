@@ -274,6 +274,7 @@ gimlet --version
 - We will be using this easy to deploy one-liner for now
 - Whether you use the cloud or the self-hosted version the interface is the same
 - You won't need to port forward to the UI if you use cloud hosted as the Gimlet folks do the hard work for you
+- As a hint you could enable the `ingress` and set the `ingressClass` to `traefik` and access the interface from your local network e.g. `gimlet.pangarabbit.com` thus negating port forwarding
 
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/gimlet-io/gimlet/main/deploy/gimlet.yaml
@@ -3983,7 +3984,7 @@ Well done for making it this far! We have made it to the point where we can depl
 - Ortelius docs [here](https://docs.ortelius.io/guides/)
 - Ortelius Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 
-Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
+The Microservice we are most interested in is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
 
 #### Ortelius Microservice GitHub repos
 
