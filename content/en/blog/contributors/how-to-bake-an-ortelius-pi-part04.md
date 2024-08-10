@@ -362,6 +362,10 @@ In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncry
 
 Happy alien hunting.......
 
+<!-- #### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+
 {{< blocks/section color=white >}}
 
 <h2 class="text-left">Meet the Author</h2>
