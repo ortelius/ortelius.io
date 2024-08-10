@@ -77,6 +77,8 @@ In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
+I have included the full `values.yaml` configuration from the provider to provide an educational element from the early career start to the seasoned engineer. In contrast to this you could just provide your changes thus making less lines of code and a whole lot less scrolling.
+
 ### Roadmap
 
 `storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
@@ -85,7 +87,7 @@ In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deplo
 
 #### CRDs
 
-[CRDs](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) are custom resources created in our Kubernetes cluster that add additional functionality and most of the infrastructure components you will be deploying will create CRDs in your Kubernetes cluster.
+[CRDs](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) are custom resources created in our Kubernetes cluster that add additional functionality and most of the `infrastructure` components you will be deploying will create CRDs in your Kubernetes cluster.
 
 ```shell
 kubectl get crds --all-namespaces
@@ -210,7 +212,8 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 
 #### VS Code Extension
 
-The VS Code extension allows you to get into the guts of your Fluxcd deployment and configuration from within VS Code.
+The VS Code extension allows you to get into the guts of your Fluxcd deployment, Fluxcd configuration and Fluxcd troubleshooting from within VS Code.
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/24-fluxcd-vscode-clusters.png" alt="fluxcd vscode clusters"/>
 </div>
@@ -269,6 +272,9 @@ gimlet --version
 
 - Explore more involved installations of Gimlet [here](https://github.com/gimlet-io/gimlet/tree/main/examples)
 - We will be using this easy to deploy one-liner for now
+- Whether you use the cloud or the self-hosted version the interface is the same
+- You won't need to port forward to the UI if you use cloud hosted as the Gimlet folks do the hard work for you
+- As a hint you could enable the `ingress` and set the `ingressClass` to `traefik` and access the interface from your local network e.g. `gimlet.pangarabbit.com` thus negating port forwarding
 
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/gimlet-io/gimlet/main/deploy/gimlet.yaml
@@ -3978,7 +3984,7 @@ Well done for making it this far! We have made it to the point where we can depl
 - Ortelius docs [here](https://docs.ortelius.io/guides/)
 - Ortelius Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/ortelius/ortelius)
 
-Ortelius currently consists of the following Microservices. The one we are most interested in at this point is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
+The Microservice we are most interested in is `ms-nginx` which is the gateway to all the backing microservices for Ortelius. We are going to deploy Ortelius using Gimlet and Fluxcd then configure Traefik to send requests to `ms-nginx` which should allow us to load the Ortelius frontend.
 
 #### Ortelius Microservice GitHub repos
 
@@ -4019,7 +4025,7 @@ metadata:
   namespace: infrastructure
 spec:
   interval: 60m
-  timeout: 10m # Helps to mitigate "Context deadline exceeded"  https://fluxcd.io/flux/components/helm/helmreleases/#timeout
+  timeout: 10m
   releaseName: ortelius
   chart:
     spec:
@@ -4101,7 +4107,7 @@ You should now be able to reach the Ortelius frontend in your browser using the 
 
 ### Conclusion
 
-By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running. Stay tuned for Part 4 where we unleash LetsEncrypt with Cloudflare for automatic certificate renewal to provide certificate and TLS services.
+By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running. Stay tuned for Part 4 where we unleash Cloudflare, LetsEncrypt with Traefik for automatic certificate renewal to provide secure services behind a single entrypoint.
 
 Happy alien hunting.......
 
