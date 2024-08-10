@@ -109,7 +109,7 @@ For DNS I use [NextDNS](https://nextdns.io/) but this is not just DNS its comple
 
 NextDNS is free up to `300,000 queries/month`, once you reach that limit resolution stops.
 
-- Think of a domain name for your environment - mine is `pangarabbit.com`
+- Think of a domain name for your environment mine is `pangarabbit.com`
 - Go to the NextDNS Wiki [here](https://github.com/nextdns/nextdns/wiki)
 - Install the cli on each Pi and on your NAS so that you can SSH into your NAS and install NextDNS
 - Here is a doc on how to configure [SSH](https://kb.synology.com/en-id/DSM/tutorial/How_to_login_to_DSM_with_root_permission_via_SSH_Telnet) for a Synology NAS
