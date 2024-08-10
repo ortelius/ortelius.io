@@ -27,7 +27,7 @@ author: Sacha Wharton
 
 I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts.
 
-Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa where we are experiencing some of the worst electricity outages in years thus we need to share electricity by taking turns through rotational blocks of time commonly know to locals as Load Shedding. We use an app like this one [Load Shedding App](https://play.google.com/store/apps/details?id=com.abisoft.loadsheddingnotifier&hl=en_ZA&gl=US) to inform ourselves when the next bout of load shedding will be hitting our area. Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
+Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
 
 ### Roadmap
 
@@ -44,9 +44,9 @@ Why Raspberry Pis you ask, well first of all I live in Cape Town South Africa wh
 <p></p>
 <br>
 
+Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking. I can also recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi.
+
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
-- Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards#section-quick-list) from Toms Hardware for microSD card benchmarking
-- I can recommend [Jeff Geerling](https://www.youtube.com/@JeffGeerling) for all things Raspberry Pi
 
 <strong>or</strong>
 
