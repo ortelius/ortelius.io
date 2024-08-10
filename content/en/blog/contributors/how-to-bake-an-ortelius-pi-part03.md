@@ -60,6 +60,7 @@ author: Sacha Wharton
   - [FYI | Helm Chart configurations that were amended for Traefik](#fyi--helm-chart-configurations-that-were-amended-for-traefik)
   - [Manifest Folder | Traefik](#manifest-folder--traefik)
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
+  - [Traefik Dashboard](#traefik-dashboard)
   - [Further reading | Traefik](#further-reading--traefik)
 - [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
   - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
@@ -68,6 +69,7 @@ author: Sacha Wharton
   - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
   - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -3865,32 +3867,37 @@ kubectl get crds | grep traefik
 </div>
 <p></p>
 
+#### Traefik Dashboard
+
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
 - Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
-- [TLD = Top Level Domain](https://en.wikipedia.org/wiki/Top-level_domain)
-- From here on if we want to access our Microservice frontends we will need to create an `IngressRoute` for each one
-- If its infrastructure create it in the `infrastructure` namespace
-- If its an application create it in the namespace the application lives in
-- Remember that the services piece will be different for your applications and should point to the service created in Kubernetes for the application
-- `TraefikService` is a service unique to Traefik and is never exposed
-- Here is an `example` of an `IngressRoute` for the Traefik Dashboard
+- Remember to note that all things infrastructure are created in the `infrastructure` namespace
+
+The `IngressRoute` for the Traefik Dashboard is created from this configuration in the Traefik Helm Chart values
 
 ```yaml
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: dashboard
-  namespace: infrastructure
-spec:
-  entryPoints:
-    - websecure
-  routes:
-    - match: Host(`traefik.yourdomain.com`) # The FQDN to access the Traefik dashboard e.g. traefik.pangarabbit.com
-      kind: Rule
-      services:
-        - name: api@internal
-          kind: TraefikService
+    ingressRoute:
+      dashboard:
+        # -- Create an IngressRoute for the dashboard
+        enabled: true
+        # -- Additional ingressRoute annotations (e.g. for kubernetes.io/ingress.class)
+        annotations: {}
+        # -- Additional ingressRoute labels (e.g. for filtering IngressRoute by custom labels)
+        labels: {}
+        # -- The router match rule used for the dashboard ingressRoute
+        matchRule: Host(`traefik.pangarabbit.com`) #PathPrefix(`/dashboard`) || PathPrefix(`/api`)
+        # -- Specify the allowed entrypoints to use for the dashboard ingress route, (e.g. traefik, web, websecure).
+        # By default, it's using traefik entrypoint, which is not exposed.
+        # /!\ Do not expose your dashboard without any protection over the internet /!\
+        entryPoints: ["websecure"]
+        # -- Additional ingressRoute middlewares (e.g. for authentication)
+        middlewares: []
+        # -- TLS options (e.g. secret containing certificate)
+        tls:
+          default:
+            defaultCertificate:
+              secretName: wildcard-pangarabbit-com-tls
 ```
 
 - Kubectl show me the Traefik ingress routes
@@ -3899,7 +3906,6 @@ spec:
 kubectl get ingressroutes.traefik.io -n infrastructure
 ```
 
-![traefik pod](images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png)
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/08-traefik-ingressroute-dashboard.png" alt="traefik ingressroute dashboard"/>
 </div>
@@ -4099,6 +4105,10 @@ By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cer
 
 Happy alien hunting.......
 
+### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/)
+
 {{< blocks/section color=white >}}
 
 <h2 class="text-left">Meet the Author</h2>
@@ -4118,5 +4128,3 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-Disclaimer: Any brands I mention in this blog post series are not monetised

@@ -1,7 +1,7 @@
 ---
-date: 2024-08-08
-title: "How to Bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik"
-linkTitle: "How to Bake an Ortelius Pi Part 4 | Cloudflare, Certificates and Traefik"
+date: 2024-08-10
+title: "How to Bake an Ortelius Pi Part 4 | Cloudflare Certificates and Traefik"
+linkTitle: "How to Bake an Ortelius Pi Part 4 | Cloudflare Certificates and Traefik"
 author: Sacha Wharton
 ---
 
@@ -358,9 +358,13 @@ All we have done now is secure the Traefik dashboard but how would we do it for 
 
 ### Conclusion
 
-In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. From my experience the crucial configuration change for any workloads to access the frontend securely was to enable the ingress and to change the `ingressClassName` to `traefik` in the Helm Release values.
+In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. From my experience the crucial configuration change for any workloads to access the frontend securely was to enable the `ingress` and to change the `ingressClassName` to `traefik` in the Helm Release values.
 
 Happy alien hunting.......
+
+<!-- ### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
 
 {{< blocks/section color=white >}}
 
@@ -381,5 +385,3 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-Disclaimer: Any brands I mention in this blog post series are not monetised

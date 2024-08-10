@@ -278,12 +278,7 @@ By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS eac
 
 ### Next Steps
 
-[How to Bake on Ortelius Pi - Part 2 The Preparation](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
-
-[How to Bake an Ortelius Pi - Part 3 The Configuration](https://ortelius.io/blog/2024/04/09/how-to-bake-an-ortelius-pi-part-3-the-configuration/)
-
-<strong> Disclaimer: Any brands I mention in this blog post series are not monetized. This is my home setup!</strong>
-
+[How to Bake on Ortelius Pi | Part 2 | The Preparation](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
 
 {{< blocks/section color=white >}}
 
