@@ -12,7 +12,7 @@ enableRobotsTXT = true
 disableBrowserError = true
 enableSourceMap = false
 
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 ignoreFiles = [ "(?:^|/)OWNERS$", "README[-]+[a-z]*\\.md", "^node_modules$", "content/en/docs/doc-contributor-tools" ]
 
