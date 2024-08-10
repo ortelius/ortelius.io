@@ -723,7 +723,7 @@ kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations
 kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 ```
 
-- Great we now have Kubernetes managing NFS volume mounts dynamically!
+Great we now have Kubernetes managing NFS volume mounts dynamically!
 
 #### Kubernetes Cert Manager
 
