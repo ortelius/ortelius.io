@@ -4025,7 +4025,7 @@ metadata:
   namespace: infrastructure
 spec:
   interval: 60m
-  timeout: 10m # Helps to mitigate "Context deadline exceeded"  https://fluxcd.io/flux/components/helm/helmreleases/#timeout
+  timeout: 10m
   releaseName: ortelius
   chart:
     spec:
@@ -4107,7 +4107,7 @@ You should now be able to reach the Ortelius frontend in your browser using the 
 
 ### Conclusion
 
-By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running. Stay tuned for Part 4 where we unleash LetsEncrypt with Cloudflare for automatic certificate renewal to provide certificate and TLS services.
+By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running. Stay tuned for Part 4 where we unleash Cloudflare, LetsEncrypt with Traefik for automatic certificate renewal to provide secure services behind a single entrypoint.
 
 Happy alien hunting.......
 
