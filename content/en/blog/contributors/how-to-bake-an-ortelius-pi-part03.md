@@ -723,7 +723,7 @@ kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations
 kubectl -n kube-system patch storageclass nfs-csi -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
 ```
 
-Now you will be able to edit any `values` where you see the `Storage Class` configuration whether its an infrastructure deployment or an application deployment and have Kubernetes take care of centralising the storage on the NFS server in this case the Synology NAS.
+Now you will be able to edit any values where you see the `Storage Class` value whether its an infrastructure deployment or an application deployment and have Kubernetes take care of centralising the storage on the NFS server in this case the Synology NAS.
 
 Here are some examples.
 
