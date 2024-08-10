@@ -46,7 +46,6 @@ Cloudflare have kindly provided a free plan which we will use so the first thing
 #### Buying a domain name
 
 - Now we need a dns domain so if you don't have one you will need to buy one which you can do through Cloudflare.
-
 - Click on `Websites`
 
 <div class="col-left">
