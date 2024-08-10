@@ -69,7 +69,7 @@ author: Sacha Wharton
   - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
   - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
 - [Conclusion](#conclusion)
-  - [Next Steps](#next-steps)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -4105,7 +4105,7 @@ By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cer
 
 Happy alien hunting.......
 
-#### Next Steps
+### Next Steps
 
 [How to Bake an Ortelius Pi | Part 4 | Cloudflare Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/)
 
