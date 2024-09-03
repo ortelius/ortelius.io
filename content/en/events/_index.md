@@ -7,40 +7,39 @@ menu:
    weight: 100
 ---
 
+
+
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
-<div class="col-center">
-<h2 class="col-center">SecureChainCon Available On Demand</h2>
-<br>
 
-<img src="/images/socialnetworkingtile.png" alt="SecureChainCon2024" height="300px" width="500px" />
+
+<h2>Community Meetings</h2>
+<hr>
+
+<div>
+<img src="/images/beer.png" alt="community meetings" height="250px" width="500px" />
+<p></p>
 </div>
-<br>
-Watch SecureChainCon, the ultimate online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures. Topics of sessions and workshops, presented by expert practitioners, include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows. 
 
-[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
+Attend a meeting to keep up to date, or to get started as a contributor. We look forward to your help and input on the Ortelius project:
+
+- **Ortelius and Emporous General Community Meeting** – this monthly meeting is an ‘all hands’ meeting giving the everyone an opportunity to share their progress. This is a good meeting for new contributors to meet the teams and hear what's up. 
+- **Ortelius and Emporous Architecture Meeting** – This group is driven to help define the future roadmap of Ortelius and Emporous including a global evidence store for sharing security profiles, SBOMs, open-source libraries, with historical data.  
+- **Ortelius Outreach Meeting** – This group helps drive adoption and messaging of the Ortelius platform.
+- **Emporous Community Meeting** - This meeting focuses on the Emporous Universal Object Reference, the backend to Ortelius. 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div class="col-center">
-<h2 class="col-center">Caroline Wong - Keynote Speaker</h2>
-<br>
-
-<img src="/images/carolinewong.png" alt="Caroline Wong"  height="200px" width="200px"/>
+<h2>Meeting Calendar</h2>
+<hr>
+<div>
+<iframe src="https://calendar.google.com/calendar/embed?src=orteliusopensource%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
-
-Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
-Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of ‘offensive’ strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies.
-
-Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
-
-[Learn More](https://ortelius.io/blog/2024/05/24/securechaincon-2024/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
 
 
 {{< blocks/section color="primary" >}}
@@ -79,38 +78,6 @@ cdCon is the annual event hosted by the Continuous Delivery Foundation that brin
 
 
 {{< blocks/section color="white" >}}
-{{< blocks/feature_dual >}}
-
-
-<h2>Community Meetings</h2>
-<hr>
-
-<div>
-<img src="/images/beer.png" alt="community meetings" height="250px" width="500px" />
-<p></p>
-</div>
-
-Attend a meeting to keep up to date, or to get started as a contributor. We look forward to your help and input on the Ortelius project:
-
-- **Ortelius and Emporous General Community Meeting** – this monthly meeting is an ‘all hands’ meeting giving the everyone an opportunity to share their progress. This is a good meeting for new contributors to meet the teams and hear what's up. 
-- **Ortelius and Emporous Architecture Meeting** – This group is driven to help define the future roadmap of Ortelius and Emporous including a global evidence store for sharing security profiles, SBOMs, open-source libraries, with historical data.  
-- **Ortelius Outreach Meeting** – This group helps drive adoption and messaging of the Ortelius platform.
-- **Emporous Community Meeting** - This meeting focuses on the Emporous Universal Object Reference, the backend to Ortelius. 
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<h2>Meeting Calendar</h2>
-<hr>
-<div>
-<iframe src="https://calendar.google.com/calendar/embed?src=orteliusopensource%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color="primary" >}}
 
 {{< blocks/feature_dual >}}
 <h2>On-Demand</h2>
@@ -160,7 +127,7 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 
 {{< /blocks/section >}}
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="primary" >}}
 <div class="col-12">
 <h2>Zoom Background Images</h2>
 <hr>
@@ -197,3 +164,5 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
+
+
