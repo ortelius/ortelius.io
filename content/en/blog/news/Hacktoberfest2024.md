@@ -21,7 +21,7 @@ Everyone is invited to participate regardless of your expertise level or knowled
 3) Join the [Ortelius Discord Channel.](https://discord.com/invite/ZtXU74x) 
 4) Check-out the [Become an Ortelius Contributor page](https://ortelius.io/contributor/) for help in getting started with the Ortelius team.
 5) Read the [Become a Contributor Blog](https://ortelius.io/blog/2023/04/10/getting-started-as-an-ortelius-open-source-contributor/) for help on creating your first pull request. 
-6) Learn to [submit a blog.](https://ortelius.io/blog/2023/03/08/how-to-submit-blogs-to-ortelius/)
+6) Learn to [submit a blog.](https://ortelius.io/blog/2024/09/11/ortelius-is-looking-for-a-few-good-blogs/)
 7) Meet the team by joining a meeting: 
 
 <div>
