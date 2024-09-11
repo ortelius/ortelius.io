@@ -1,7 +1,7 @@
 ---
-date: 2023-03-08
-title: "How to Submit Blogs to Ortelius"
-summary: How to Submit Blogs to Ortelius
+date: 2024-09-11
+title: "Ortelius is Looking For a Few Good Blogs"
+summary: Ortelius is Looking For a Few Good Blogs
 author: Tracy Ragan
 ---
 
@@ -9,9 +9,31 @@ author: Tracy Ragan
 
 ## You Have Something to Say - Share It
 
-In the process of building the Ortelius open-source community, I've learned to important facts. First, everyone has something to share regardless of their experience or background. Second, sharing our thoughts and expertise is an important part of the open-source community. Each year, the Ortelius Committer Community holds a winter/spring BlogAThon giving everyone an opportunity to share.
+In the process of building the Ortelius open-source community, we've learned two important facts. First, everyone has something to share regardless of their experience or background. Second, sharing thoughts and expertise is an important part of the open-source community. Ortelius welcomes bloggers of all kinds. Here is the current Blog topics:
 
-To that end, every year I am asked, "how do I submit a blog?"
+
+| Month| Topic |
+|-------|----------|
+|October 24|What Data is Important to Measure in the DevSecOps Pipeline? Can qualify for [Hactoberfest](/blog/2024/09/11/hacktoberfest-2024/) |
+|November 24|Understanding and Mitigating Vulnerabilities|
+|December 24|Future Directions for Continuous Security Intelligence|
+|January 25|How can AI & ML improve DevSecOps workflows?|
+|February 25|How do you track and report security compliance|
+|March 25|Understanding SBOM and their Uses|
+|April 25|Understanding how to comply with Government SBOM Requirements|
+|May 25 |Using Mitre Attack for Threat Modeling|
+|June 25|Understanding Secure Software Development Framework|
+|July 25|Open to all Blogs (any topic of your choosing)|
+|August 25|Anything on Observability (Logs, Metrics, Trace) |
+|September 25|What OpenSSF Security Tooling should be the DevOps Pipeline?|
+|October 25|Open Source Vulnerability Management and FINOS|
+
+Submit your blog by the second week of the month to meet the publish deadline for that month. So, if you are submitting for October, have your blog submitted by October 15th. 
+
+## How to Submit a blog?"
+
+Submitting a blog is easy, once you have chosen your topic. Here are some tips. 
+
 
 ## What Gets Your Attention?
 
