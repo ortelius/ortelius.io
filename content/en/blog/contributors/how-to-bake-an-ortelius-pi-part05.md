@@ -1597,6 +1597,7 @@ mkdir /var/jenkins_home/backup
 - Add `/var/jenkins_home/backup` as the `Backup Directory`
 - If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
 - If you don't like that idea go and make your own cron [here](https://crontab.guru/)
+-
 
 
 
