@@ -16,7 +16,8 @@ author: Sacha Wharton
   - [Deploy Jenkins](#deploy-jenkins)
   - [Helm-Repository | Jenkins](#helm-repository--jenkins)
   - [Helm-Release | Jenkins](#helm-release--jenkins)
-  - [Fluxcd is doing the following under the hood | Ortelius](#fluxcd-is-doing-the-following-under-the-hood--ortelius)
+  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Fluxcd is doing the following under the hood | Jenkins](#fluxcd-is-doing-the-following-under-the-hood--jenkins)
   - [Kubernetes check | Ortelius](#kubernetes-check--ortelius)
 
 ### Introduction
@@ -76,7 +77,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `jenkins.yaml` in the helm-releases directory and paste the following YAML
 
-FYI | Helm Chart configurations that you need to amend for your environment | These are snippets from the Helm Chart
+#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
 
 ```yaml
 # -- Ingress annotations
@@ -1492,24 +1493,18 @@ spec:
           tag: "1.11.0"
 ```
 
-#### Fluxcd is doing the following under the hood | Ortelius
+#### Fluxcd is doing the following under the hood | Jenkins
 
 - Helm repo add
 
 ```shell
-helm repo add ortelius https://ortelius.github.io/ortelius-charts/ --force-update
+helm repo add jenkins https://charts.jenkins.io --force-update
 ```
 
-- Helm install Ortelius
+- Helm install Jenkins
 
 ```shell
-helm upgrade --install ortelius ortelius/ortelius \
-  --set ms-general.dbpass=postgres \
-  --set global.postgresql.enabled=true \
-  --set global.nginxController.enabled=true \
-  --set ms-nginx.ingress.type=k3d \
-  --set ms-nginx.ingress.dnsname=<your domain name goes here> \
-  --version "${ORTELIUS_VERSION}" --namespace ortelius
+helm install [RELEASE_NAME] jenkins/jenkins [flags]
 ```
 
 #### Kubernetes check | Ortelius
