@@ -4113,7 +4113,7 @@ helm upgrade --install ortelius ortelius/ortelius \
 
 #### Kubernetes check | Ortelius
 
-- Kubectl switch to the Ortelius namespace
+- Kubectl switch to the infrastructure namespace
 
 ```shell
 kubectl config set-context --current --namespace=infrastructure
