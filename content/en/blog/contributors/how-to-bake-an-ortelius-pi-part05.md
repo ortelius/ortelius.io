@@ -76,6 +76,44 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `jenkins.yaml` in the helm-releases directory and paste the following YAML
 
+FYI | Helm Chart configurations that you need to amend for your environment | These are snippets from the Helm Chart
+
+```yaml
+        # -- Ingress annotations
+        annotations:
+          kubernetes.io/ingress.class: traefik # Only change this if you are not using Traefik
+          # kubernetes.io/tls-acme: "true"
+        # For Kubernetes >= 1.18 you should specify the ingress-controller via the field ingressClassName
+        # See https://kubernetes.io/blog/2020/04/02/improvements-to-the-ingress-api-in-kubernetes-1.18/#specifying-the-class-of-an-ingress
+        # ingressClassName: nginx
+
+        # Set this path to jenkinsUriPrefix above or use annotations to rewrite path
+        # -- Ingress path
+        path:
+
+        # configures the hostname e.g. jenkins.example.com
+        # -- Ingress hostname
+        hostName: jenkins.pangarabbit.com # Update this to your domain name
+
+    persistence:
+      # -- Enable the use of a Jenkins PVC
+      enabled: true
+
+      # A manually managed Persistent Volume and Claim
+      # Requires persistence.enabled: true
+      # If defined, PVC must be created manually before volume will be bound
+      # -- Provide the name of a PVC
+      existingClaim:
+
+      # jenkins data Persistent Volume Storage Class
+      # If defined, storageClassName: <storageClass>
+      # If set to "-", storageClassName: "", which disables dynamic provisioning
+      # If undefined (the default) or set to null, no storageClassName spec is
+      #   set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS & OpenStack)
+      # -- Storage class for the PVC
+      storageClass: nfs-csi-default # Amend this to match the default storage class in your environment
+      # -- Annotations for the PVC
+```
 ```yaml
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
