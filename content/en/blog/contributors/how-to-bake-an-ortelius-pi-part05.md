@@ -1594,17 +1594,25 @@ mkdir /var/jenkins_home/backup
 ```
 
 - If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored there and you can make backups of them to this directory
-- Add `/var/jenkins_home/backup` as the `Backup Directory`
-- If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
-- If you don't like that idea go and make your own cron [here](https://crontab.guru/)
--
+- To see which PVC your Jenkins POD has mounted run this command
 
+```shell
+kubectl get pvc | grep jenkins
+```
 
+- For example mine was this
 
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/02-jenkins-frontend.png" alt="jenkins frontend"/>
+</div>
+<p></p>
 
+- You should see the `backup` directory you created in there if you go take a look on your NFS storage server
 - Click `Manage Jenkins`
 - Click `System`
 - Scroll down until you see `ThinBackup Configuration` and fill in the following
-
-```shell
-#Backup Directory
+- Add `/var/jenkins_home/backup` as the `Backup Directory`
+- If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
+- If you don't like that idea go and make your own cron [here](https://crontab.guru/)
+- Click on the `?` for more information about the checkboxes
+- Click `Save`
