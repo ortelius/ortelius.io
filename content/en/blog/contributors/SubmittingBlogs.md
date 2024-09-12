@@ -30,7 +30,7 @@ In the process of building the Ortelius open-source community, we've learned two
 
 Submit your blog by the second week of the month to meet the publish deadline for that month. So, if you are submitting for October, have your blog submitted by October 15th. 
 
-## How to Submit a blog?"
+## How to Submit a blog?
 
 Submitting a blog is easy, once you have chosen your topic. Here are some tips. 
 
