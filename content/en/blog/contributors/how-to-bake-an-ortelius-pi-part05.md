@@ -20,7 +20,10 @@ author: Sacha Wharton
   - [Fluxcd is doing the following under the hood | Jenkins](#fluxcd-is-doing-the-following-under-the-hood--jenkins)
   - [Kubernetes check | Jenkins](#kubernetes-check--jenkins)
   - [How do we login?](#how-do-we-login)
-  - [](#)
+  - [Jenkins admin password change](#jenkins-admin-password-change)
+  - [Jenkins GitHub Setup](#jenkins-github-setup)
+  - [Jenkins Agent Setup](#jenkins-agent-setup)
+  - [Jenkins Backup Setup](#jenkins-backup-setup)
 
 ### Introduction
 
@@ -97,6 +100,10 @@ path:
 # -- Ingress hostname
 hostName: jenkins.pangarabbit.com # Update this to your domain name
 
+##RECOMMENDED##
+########################################################################################################################
+#If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server# #configuration files will be stored on your NFS server thus preserving your Jenkins configuration                      #
+########################################################################################################################
 persistence:
   # -- Enable the use of a Jenkins PVC
   enabled: true
@@ -1537,7 +1544,7 @@ If everything went well you should be able to access the Jenkins frontend with y
 
 #### How do we login?
 
-- By default the username is `admin` and the password is Base64 encoded.
+- By default the username is `admin` and the password is base64 encoded.
 - Open your terminal and run the following command but make sure you have switched to the `infrastructure` namespace first.
 
 ```shell
@@ -1551,6 +1558,50 @@ kubectl get secret jenkins -o jsonpath=$jsonpath
 U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 ```
 
-- Head over to this [url](https://www.base64decode.org/) to decode the Base64 string to reveal your password and login.
+- Head over to this [url](https://www.base64decode.org/) to decode the base64 string to reveal your password and login.
 
-####
+#### Jenkins admin password change
+
+- Click `Jenkins Admin` drop down in the top right hand corner of the GUI
+- Click `Configure`
+- Scroll down until you see the `Password` section
+- Change your password and `Save`
+
+#### Jenkins GitHub Setup
+
+- Click `Manage Jenkins` in the left hand menu
+- Click `Plugins`
+- Check that you see the following Plugins installed if not install `GitHub API Plugin`, `GitHub Branch Source Plugin`, `GitHub Plugin`
+
+#### Jenkins Agent Setup
+
+- Click `Manage Jenkins` in the left hand menu
+- Click `Clouds`
+- Click `kubernetes`
+
+#### Jenkins Backup Setup
+
+- Click `Manage Jenkins` in the left hand menu
+- Click `Plugins`
+- Check that you see the following Plugin installed if not install `ThinBackups`
+- Open your terminal and lets exec onto the Jenkins pod
+
+```shell
+# Exec onto the pod
+kubectl exec -it jenkins-0  -- /bin/bash
+# Create a backup folder for ThinBackup
+mkdir /var/jenkins_home/backup
+```
+
+- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored there and you can make backups of them to this directory
+-
+
+
+
+
+- Click `Manage Jenkins`
+- Click `System`
+- Scroll down until you see `ThinBackup Configuration` and fill in the following
+
+```shell
+#Backup Directory
