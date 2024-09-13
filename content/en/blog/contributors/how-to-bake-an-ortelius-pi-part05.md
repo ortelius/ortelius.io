@@ -626,7 +626,7 @@ spec:
       #   renew: 60               # optional
 
       # -- Name of default cloud configuration.
-      cloudName: "kubernetes"
+      cloudName: "PangaRabbit K8s"
 
       # Below is the implementation of Jenkins Configuration as Code. Add a key under configScripts for each configuration area,
       # where each corresponds to a plugin or section of the UI. Each key (prior to | character) is just a label, and can be any value.
@@ -1311,45 +1311,148 @@ spec:
       # controller.JCasC.defaultConfig: true
       # Best reference is https://<jenkins_url>/configuration-as-code/reference#Cloud-kubernetes. The example below creates a python pod template.
       # -- Configures extra pod templates for the default kubernetes cloud
-      podTemplates: {}
-      #  python: |
-      #    - name: python
-      #      label: jenkins-python
-      #      serviceAccount: jenkins
-      #      containers:
-      #        - name: python
-      #          image: python:3
-      #          command: "/bin/sh -c"
-      #          args: "cat"
-      #          ttyEnabled: true
-      #          privileged: true
-      #          resourceRequestCpu: "400m"
-      #          resourceRequestMemory: "512Mi"
-      #          resourceLimitCpu: "1"
-      #          resourceLimitMemory: "1024Mi"
-
+      podTemplates:
+        python2-template: |
+          - name: python2-template
+            label: python2-template
+            serviceAccount: jenkins
+            containers:
+              - name: python
+                image: python:2
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        python3-template: |
+          - name: python3-template
+            label: python3-template
+            serviceAccount: jenkins
+            containers:
+              - name: python
+                image: python:3
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk8-template: |
+          - name: mavenjdk8-template
+            label: mavenjdk8-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:latest
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk11-template: |
+          - name: mavenjdk11-template
+            label: mavenjdk11-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk11
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk17-template: |
+          - name: mavenjdk17-template
+            label: mavenjdk17-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk17
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk21-template: |
+          - name: mavenjdk21-template
+            label: mavenjdk21-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk21
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
     # Inherits all values from `agent` so you only need to specify values which differ
     # -- Configure additional
-    additionalAgents: {}
-    #  maven:
-    #    podName: maven
-    #    customJenkinsLabels: maven
-    #    # An example of overriding the jnlp container
-    #    # sideContainerName: jnlp
-    #    image:
-    #      repository: jenkins/jnlp-agent-maven
-    #      tag: latest
-    #  python:
-    #    podName: python
-    #    customJenkinsLabels: python
-    #    sideContainerName: python
-    #    image:
-    #      repository: python
-    #      tag: "3"
-    #    command: "/bin/sh -c"
-    #    args: "cat"
-    #    TTYEnabled: true
-
+    additionalAgents:
+      mavenjdk8:
+        podName: mavenjdk8
+        customJenkinsLabels: mavenjdk8
+        sideContainerName: mavenjdk8
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest
+      mavenjdk11:
+        podName: mavenjdk11
+        customJenkinsLabels: mavenjdk11
+        sideContainerName: mavenjdk11
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk11
+      mavenjdk17:
+        podName: mavenjdk17
+        customJenkinsLabels: mavenjdk17
+        sideContainerName: mavenjdk17
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk17
+      mavenjdk21:
+        podName: mavenjdk21
+        customJenkinsLabels: mavenjdk21
+        sideContainerName: mavenjdk21
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk21
+      python2:
+        podName: python2
+        customJenkinsLabels: python2
+        sideContainerName: python2
+        image:
+          repository: python
+          tag: "2"
+        command: "/bin/sh -c"
+        args: "cat"
+        TTYEnabled: true
+      python3:
+        podName: python3
+        customJenkinsLabels: python3
+        sideContainerName: python3
+        image:
+          repository: python
+          tag: "3"
+        command: "/bin/sh -c"
+        args: "cat"
+        TTYEnabled: true
     # Here you can add additional clouds
     # They inherit all values from the default cloud (including the main agent), so
     # you only need to specify values which differ. If you want to override
