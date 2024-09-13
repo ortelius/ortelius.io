@@ -1840,10 +1840,16 @@ Agents and agent templates are managed inside your Helm Chart. If you add them t
 ```
 
 You can view your pod templates by following these steps.
+
 - Click `Manage Jenkins` in the left hand menu
 - Click `Clouds`
 - Click the name of your cloud, mine is `PangaRabbit K8s`
 - Click `Pod Templates`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/.png" alt="jenkins pod templates"/>
+</div>
+<p></p>
 
 #### Jenkins Backup Setup
 
@@ -1873,12 +1879,12 @@ kubectl get pvc | grep jenkins
 </div>
 <p></p>
 
-- You should see the `backup` directory you created in there if you go take a look on your NFS storage server
+- You should see the `backup` directory you created on your NFS storage server
 - Click `Manage Jenkins`
 - Click `System`
 - Scroll down until you see `ThinBackup Configuration` and fill in the following
 - Add `/var/jenkins_home/backup` as the `Backup Directory`
 - If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
-- If you don't like that idea go and make your own cron [here](https://crontab.guru/)
+- If you don't like that idea you can make your own cron [here](https://crontab.guru/)
 - Click on the `?` for more information about the checkboxes
 - Click `Save`
