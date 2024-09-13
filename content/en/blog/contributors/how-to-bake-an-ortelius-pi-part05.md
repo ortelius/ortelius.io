@@ -14,6 +14,7 @@ author: Sacha Wharton
 - [Roadmap](#roadmap)
 - [Jenkins](#jenkins)
   - [Deploy Jenkins](#deploy-jenkins)
+  - [Plugins](#plugins)
   - [Helm-Repository | Jenkins](#helm-repository--jenkins)
   - [Helm-Release | Jenkins](#helm-release--jenkins)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
@@ -55,6 +56,11 @@ Right lets get stuck in and deploy Jenkins using Gimlet, Fluxcd, Helm and a spri
 - Jenkins on GitHub [here](https://github.com/jenkinsci/)
 - Jenkins docs [here](https://www.jenkins.io/doc)
 - Jenkins Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
+- Jenkins Plugins [here](https://www.jenkins.io/plugins/)
+
+#### Plugins
+
+Jenkins plugins are add-ons that extend the core functionality of Jenkins. Plugins allow Jenkins to integrate with various tools, languages, and services that you may use in your development pipeline. Plugins can be added through the GUI without being affected by Fluxcd's drift detection.
 
 #### Helm-Repository | Jenkins
 
@@ -1678,9 +1684,166 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 #### Jenkins Agent Setup
 
+Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish. You will see this happening in Gimlet under Helm Releases.
+
+```yaml
+      # Below is the implementation of custom pod templates for the default configured kubernetes cloud.
+      # Add a key under podTemplates for each pod template. Each key (prior to | character) is just a label, and can be any value.
+      # Keys are only used to give the pod template a meaningful name. The only restriction is they may only contain RFC 1123 \ DNS label
+      # characters: lowercase letters, numbers, and hyphens. Each pod template can contain multiple containers.
+      # For this pod templates configuration to be loaded, the following values must be set:
+      # controller.JCasC.defaultConfig: true
+      # Best reference is https://<jenkins_url>/configuration-as-code/reference#Cloud-kubernetes. The example below creates a python pod template.
+      # -- Configures extra pod templates for the default kubernetes cloud
+      podTemplates:
+        python2-template: |
+          - name: python2-template
+            label: python2-template
+            serviceAccount: jenkins
+            containers:
+              - name: python
+                image: python:2
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        python3-template: |
+          - name: python3-template
+            label: python3-template
+            serviceAccount: jenkins
+            containers:
+              - name: python
+                image: python:3
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk8-template: |
+          - name: mavenjdk8-template
+            label: mavenjdk8-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:latest
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk11-template: |
+          - name: mavenjdk11-template
+            label: mavenjdk11-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk11
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk17-template: |
+          - name: mavenjdk17-template
+            label: mavenjdk17-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk17
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+        mavenjdk21-template: |
+          - name: mavenjdk21-template
+            label: mavenjdk21-template
+            serviceAccount: jenkins
+            containers:
+              - name: maven
+                image: maven:jdk21
+                command: "/bin/sh -c"
+                args: "cat"
+                ttyEnabled: true
+                privileged: true
+                resourceRequestCpu: "400m"
+                resourceRequestMemory: "512Mi"
+                resourceLimitCpu: "1"
+                resourceLimitMemory: "1024Mi"
+    # Inherits all values from `agent` so you only need to specify values which differ
+    # -- Configure additional
+    additionalAgents:
+      mavenjdk8:
+        podName: mavenjdk8
+        customJenkinsLabels: mavenjdk8
+        sideContainerName: mavenjdk8
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest
+      mavenjdk11:
+        podName: mavenjdk11
+        customJenkinsLabels: mavenjdk11
+        sideContainerName: mavenjdk11
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk11
+      mavenjdk17:
+        podName: mavenjdk17
+        customJenkinsLabels: mavenjdk17
+        sideContainerName: mavenjdk17
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk17
+      mavenjdk21:
+        podName: mavenjdk21
+        customJenkinsLabels: mavenjdk21
+        sideContainerName: mavenjdk21
+        image:
+          repository: jenkins/jnlp-agent-maven
+          tag: latest-jdk21
+      python2:
+        podName: python2
+        customJenkinsLabels: python2
+        sideContainerName: python2
+        image:
+          repository: python
+          tag: "2"
+        command: "/bin/sh -c"
+        args: "cat"
+        TTYEnabled: true
+      python3:
+        podName: python3
+        customJenkinsLabels: python3
+        sideContainerName: python3
+        image:
+          repository: python
+          tag: "3"
+        command: "/bin/sh -c"
+        args: "cat"
+        TTYEnabled: true
+```
+
+You can view your pod templates by following these steps.
 - Click `Manage Jenkins` in the left hand menu
 - Click `Clouds`
-- Click `kubernetes`
+- Click the name of your cloud, mine is `PangaRabbit K8s`
+- Click `Pod Templates`
 
 #### Jenkins Backup Setup
 
