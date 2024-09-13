@@ -1875,7 +1875,7 @@ kubectl get pvc | grep jenkins
 - For example mine was this
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/02-jenkins-frontend.png" alt="jenkins frontend"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/02-jenkins-frontend.png" alt="jenkins pvc"/>
 </div>
 <p></p>
 
