@@ -1,7 +1,7 @@
 ---
 date: 2024-08-10
-title: "How to Bake an Ortelius Pi Part 5 | Ortelius marries Jenkins"
-linkTitle: "How to Bake an Ortelius Pi Part 5 | Ortelius marries Jenkins"
+title: "How to Bake an Ortelius Pi Part 5 | Ortelius Marries Jenkins"
+linkTitle: "How to Bake an Ortelius Pi Part 5 | Ortelius Marries Jenkins"
 author: Sacha Wharton
 ---
 
@@ -25,6 +25,7 @@ author: Sacha Wharton
   - [Jenkins GitHub Setup](#jenkins-github-setup)
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
+  - [Creating a Multibranch Pipeline](#creating-a-multibranch-pipeline)
 
 ### Introduction
 
@@ -1645,7 +1646,8 @@ kubectl get pods -n infrastructure | grep jenkins
 </div>
 <p></p>
 
-If everything went well you should be able to access the Jenkins frontend with your domain name for example mine is `https://jenkins.pangarabbit.com`
+If everything went well you should be able to access the Jenkins frontend with your domain name for example mine is
+`https://jenkins.pangarabbit.com`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/02-jenkins-frontend.png" alt="jenkins frontend"/>
@@ -1668,7 +1670,7 @@ kubectl get secret jenkins -o jsonpath=$jsonpath
 U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 ```
 
-- Head over to this [url](https://www.base64decode.org/) to decode the base64 string to reveal your password and login.
+- Head over to this [URL](https://www.base64decode.org/) to decode the base64 string to reveal your password and login.
 
 #### Jenkins admin password change
 
@@ -1715,6 +1717,73 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-github.png" alt="jenkins plugins github"/>
+</div>
+<p></p>
+
+- Go to GitHub and create a repository called `ortelius-jenkins-demo-app`
+- Now we need to create a PAT (personal access token) for Jenkins to use to access your repos
+- Click on your profile in the top right hand corner of the browser and select `settings`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/18-gh-settings.png" alt="gh settings"/>
+</div>
+<p></p>
+
+- Scroll down a bit and click on `Developer Settings`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/19-gh-developer-settings.png" alt="gh developer settings"/>
+</div>
+<p></p>
+
+- Drop down `Personal Access Tokens`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/20-gh-pat.png" alt="gh pat"/>
+</div>
+<p></p>
+
+- Click on `Tokens (classic)`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/21-gh-tokens-classic.png" alt="gh tokens classic"/>
+</div>
+<p></p>
+
+- Give it a meaningful name and assign the following permissions
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/22-gh-pat-repo.png" alt="gh pat repo"/>
+</div>
+<p></p>
+
+- Record the key safely in a password manager such as [Bitwarden](https://bitwarden.com/) as you will only get one chance to do so
+- Go back to Jenkins to add the PAT to your Jenkins credentials
+- Click on `Manage Jenkins`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/06-jenkins-manage.png" alt="jenkins manage"/>
+</div>
+<p></p>
+
+- Click on `Credentials`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/23-jenkins-credentials.png" alt="jenkins credentials"/>
+</div>
+<p></p>
+
+- Select `Global credentials` and click on `Add Credentials`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/24-jenkins-credentials-gh-pat.png" alt="jenkins credentials gh pat"/>
+</div>
+<p></p>
+
+- Select `Dashboard` in the top left of your browser
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/25-jenkins-dashboard.png" alt="jenkins dashboard"/>
 </div>
 <p></p>
 
@@ -1932,7 +2001,7 @@ kubectl exec -it jenkins-0  -- /bin/bash
 mkdir /var/jenkins_home/backup
 ```
 
-- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored there and you can make backups to this directory
+- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored here and you can make backups to the `backup` directory
 - To see which PVC your Jenkins POD has mounted run this command
 
 ```shell
@@ -1983,11 +2052,126 @@ kubectl get pvc | grep jenkins
 <p></p>
 
 - If you don't like that idea you can make your own cron [here](https://crontab.guru/)
-- Click on the `?` for more information about the checkboxes
+- Go through the rest of the settings and click on the `?` for more information about the checkboxes
 - Click `Save`
-- You should see backups appearing in your `backup` directory
+- You should see backups appearing in your `backup` directory on your NFS storage server at midnight if you used the cron above
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
 </div>
 <p></p>
+
+#### Creating a Multibranch Pipeline
+
+- Open a terminal and create a new Kubernetes namespace called app
+
+```shell
+kubectl create ns app
+```
+
+- Back in Jenkins click on `New Item`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/26-jenkins-new-item.png" alt="jenkins new item"/>
+</div>
+<p></p>
+
+- Give it a name `ortelius-jenkins-demo-app`
+- Select `Multibranch Pipeline`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/27-jenkins-multibranch-pipeline.png" alt="jenkins multibranch pipeline"/>
+</div>
+<p></p>
+
+- Configure the `Multibranch Pipeline` as follows
+- Ignore the Jenkings `Shared Library` configuration
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/28-jenkins-multibranch-pipeline-configuration.png" alt="jenkins multibranch pipeline-configuration"/>
+</div>
+<p></p>
+
+- Create the following `Jenkinsfile` in the GitHub repo your created and push it to your GitHub repo
+- A `Jenkinsfile` is the logic to instruct Jenkins what to do
+- This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+
+```groovy
+pipeline {
+    environment {
+        DHUSER = "admin" //Default Ortelius username
+        DHPASS = "admin" //Default Ortelius password
+        DHORG = "<organisation>" //Replace with your organisation
+        DHPROJECT = "ortelius-jenkins-demo-app" //Replace with your GitHub project name
+        DOCKERREPO = "<username>/hello-world" //Replace with your DockerHub repo username
+        DHURL = "https://ortelius.pangarabbit.com" //Replace with whatever you used to access the Ortelius frontend
+    }
+
+    agent {
+        kubernetes {
+            cloud 'PangaRabbit K8s' //Replace with your Cloud
+            defaultContainer 'python3' //Container default
+            inheritFrom 'python3' //Inherit from a template
+            namespace 'app' //The Kubernetes namespace you would like to deploy the app to
+        }
+    }
+
+    stages {
+        stage('Setup') {
+            steps {
+                sh '''
+            pip install ortelius-cli
+            git clone https://github.com/dstar55/docker-hello-world-spring-boot
+            cd docker-hello-world-spring-boot
+            dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
+        '''
+            }
+        }
+        stage('Build and push image') {
+            steps {
+                sh '''
+            source ${WORKSPACE}/dhenv.sh
+            docker build --tag ${DOCKERREPO}:${IMAGE_TAG} .
+            docker push ${DOCKERREPO}:${IMAGE_TAG}
+
+            # This line determines the docker digest for the image
+            echo export DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' ${DOCKERREPO}:${IMAGE_TAG} | cut -d: -f2 | cut -c-12) >> ${WORKSPACE}/dhenv.sh
+        '''
+            }
+        }
+        stage('Capture SBOM') {
+            steps {
+                sh '''
+            source ${WORKSPACE}/dhenv.sh
+            # install Syft
+            curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b .
+
+            # create the SBOM
+            ./syft packages ${DOCKERREPO}:${IMAGE_TAG} --scope all-layers -o cyclonedx-json > ${WORKSPACE}/cyclonedx.json
+
+            # display the SBOM
+            cat ${WORKSPACE}/cyclonedx.json
+        '''
+            }
+        }
+        stage('Create Component with Build Data and SBOM') {
+            steps {
+                sh '''
+            source ${WORKSPACE}/dhenv.sh
+            dh updatecomp --rsp component.toml --deppkg "cyclonedx@${WORKSPACE}/cyclonedx.json"
+        '''
+            }
+        }
+    }
+}
+```
+
+- Send your changes to your GitHub repo by navigating to your repo in your terminal
+
+```shell
+git add .
+git commit -m "Add Jenkinsfile"
+git push
+```
+
+-
