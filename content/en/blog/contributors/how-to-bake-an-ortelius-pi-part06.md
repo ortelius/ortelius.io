@@ -269,13 +269,9 @@ spec:
       - name: GATEWAY_LISTEN
         value: "0.0.0.0:4566"
       - name: LOCALSTACK_API_KEY
-        value: "3aAxEvoaA3"
+        value: "<your api key"
       - name: LOCALSTACK_AUTH_TOKEN
-        value: "ls-biRatuWA-jUTi-BeQA-CeQE-nolu40093f8f"
-      - name: ACTIVATE_PRO
-        value: "0"
-      - name: LOG_LICENSE_ISSUES
-        value: "1"
+        value: "your auth token"
     ##   - name: SERVICES
     ##     value: "serverless,sqs,es"
     livenessProbe:
