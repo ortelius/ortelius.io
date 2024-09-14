@@ -23,6 +23,7 @@ author: Sacha Wharton
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
 - [Traefik](#traefik)
 - [Configuring the AWS and the Localstack awslocal cli](#configuring-the-aws-and-the-localstack-awslocal-cli)
+- [Localstack Tools](#localstack-tools)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -655,6 +656,47 @@ aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile l
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part06/04-s3-list-aws.png" alt="s3 list aws"/>
+</div>
+<p></p>
+
+### Localstack Tools
+
+You can find LocalStack tools [here](https://docs.localstack.cloud/user-guide/tools/). One of these tools, **LocalStack Desktop**, provides a GUI that allows you to view and manage your LocalStack resources and services on your local machine. It also lets you add custom endpoints that you've created.
+
+To get LocalStack Desktop, sign up for LocalStack through your browser, where you'll have access to the LocalStack portal. From there, you can manage everything related to your LocalStack setup, including viewing instances and adding custom endpoints.
+
+You can access the LocalStack portal at this URL: `https://app.localstack.cloud/dashboard`. Once inside, look for the **LocalStack Desktop** menu item.
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/06-localstack-desktop.png" alt="localstack desktop"/>
+</div>
+<p></p>
+
+- Localstack custom endpoint in the browser
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/07-localstack-custom-endpoint-browser.png" alt="localstack custom endpoint browser"/>
+</div>
+<p></p>
+
+- Localstack custom endpoint in Localstack Desktop
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/08-localstack-custom-endpoint-desktop.png" alt="localstack custom endpoint desktop"/>
+</div>
+<p></p>
+
+- Localstack services in the browser
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/09-localstack-services-browser.png" alt="localstack services browser"/>
+</div>
+<p></p>
+
+- Localstack services in Localstack Desktop
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/10-localstack-services-desktop.png" alt="localstack services desktop"/>
 </div>
 <p></p>
 
