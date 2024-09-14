@@ -2088,7 +2088,14 @@ kubectl create ns app
 - Ignore the Jenkings `Shared Library` configuration
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/28-jenkins-multibranch-pipeline-configuration.png" alt="jenkins multibranch pipeline-configuration"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/28-jenkins-multibranch-pipeline-configuration.png" alt="jenkins multibranch pipeline configuration"/>
+</div>
+<p></p>
+
+- Don't forget to hit that `Save` button
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/29-jenkins-multibranch-pipeline-save.png" alt="jenkins multibranch pipeline save"/>
 </div>
 <p></p>
 
