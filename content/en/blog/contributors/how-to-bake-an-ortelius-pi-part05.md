@@ -14,7 +14,9 @@ author: Sacha Wharton
 - [Roadmap](#roadmap)
 - [Jenkins](#jenkins)
   - [Deploy Jenkins](#deploy-jenkins)
+  - [References](#references)
   - [Plugins](#plugins)
+- [Gimlet and Fluxcd](#gimlet-and-fluxcd)
   - [Helm-Repository | Jenkins](#helm-repository--jenkins)
   - [Helm-Release | Jenkins](#helm-release--jenkins)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
@@ -35,7 +37,7 @@ In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncry
 
 ### Roadmap
 
-`observability --> secret store --> zerotier --> everything else`
+`cicd --> observability --> secret store --> zerotier --> everything else`
 
 ### Jenkins
 
@@ -61,9 +63,19 @@ Right lets get stuck in and deploy Jenkins using Gimlet, Fluxcd, Helm and a spri
 - Jenkins Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
 - Jenkins Plugins [here](https://www.jenkins.io/plugins/)
 
+#### References
+
+- [Gimlet](https://gimlet.io/)
+- [Fluxcd](https://fluxcd.io/)
+
 #### Plugins
 
 Jenkins plugins are add-ons that extend the core functionality of Jenkins. Plugins allow Jenkins to integrate with various tools, languages, and services that you may use in your development pipeline. Plugins can be added through the GUI without being affected by Fluxcd's drift detection.
+
+### Gimlet and Fluxcd
+
+- Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
+- We there powers combined we will deploy Jenkins
 
 #### Helm-Repository | Jenkins
 
@@ -1791,7 +1803,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 #### Jenkins Agent Setup
 
-Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish so thats why store we our config in our Helm Chart which honours the GitOps methodology where your repo is the source of truth. You will see this happening in Gimlet under Helm Releases.
+Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish so thats why we store our config in our Helm Chart which honours the GitOps methodology where your repo is the source of truth. You will see this happening in Gimlet under Helm Releases.
 
 ```yaml
       # Below is the implementation of custom pod templates for the default configured kubernetes cloud.
@@ -2010,6 +2022,8 @@ mkdir /var/jenkins_home/backup
 kubectl get pvc | grep jenkins
 ```
 
+- When you navigate to your NFS server share you will see the `pvc` name that was created for Jenkins
+- The name we want is under `VOLUME`
 - For example mine was this
 
 <div class="col-left">
@@ -2057,6 +2071,7 @@ kubectl get pvc | grep jenkins
 - Go through the rest of the settings and click on the `?` for more information about the checkboxes
 - Click `Save`
 - You should see backups appearing in your `backup` directory on your NFS storage server at midnight if you used the cron above
+- Jenkins coventienly zips the backup set to save storage space
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
@@ -2220,7 +2235,7 @@ kubectl get pod -n app
 <p></p>
 
 - Here is a snippet of the build log from my Jenkins server
-- You can see Jenkins going through the configuration in your `Jenkinsfile`
+- You can see Jenkins stepping through the configuration in your `Jenkinsfile`
 
 ```shell
 Created Pod: PangaRabbit K8s app/ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt
@@ -2328,6 +2343,6 @@ Commit message: "🛠 NEW: jenkins pod templates"
 
 ### Conclusion
 
-Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins.
+Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins. At this time of writing we are fixing the SBOM and Scorecard microservices to work with ARM architecture that is used on the Pi 4 to make them backward compatible.
 
 Happy alien hunting.....
