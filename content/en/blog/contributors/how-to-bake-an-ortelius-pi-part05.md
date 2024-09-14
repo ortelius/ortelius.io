@@ -1672,15 +1672,50 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 #### Jenkins admin password change
 
 - Click `Jenkins Admin` drop down in the top right hand corner of the GUI
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/03-jenkins-admin.png" alt="jenkins admin"/>
+</div>
+<p></p>
+
 - Click `Configure`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/04-jenkins-configure.png" alt="jenkins configure"/>
+</div>
+<p></p>
+
 - Scroll down until you see the `Password` section
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/05-jenkins-password.png" alt="jenkins password"/>
+</div>
+<p></p>
+
 - Change your password and `Save`
 
 #### Jenkins GitHub Setup
 
 - Click `Manage Jenkins` in the left hand menu
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/06-jenkins-manage.png" alt="jenkins manage"/>
+</div>
+<p></p>
+
 - Click `Plugins`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/07-jenkins-plugins.png" alt="jenkins plugins"/>
+</div>
+<p></p>
+
 - Check that you see the following Plugins installed if not install `GitHub API Plugin`, `GitHub Branch Source Plugin`, `GitHub Plugin`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-github.png" alt="jenkins plugins github"/>
+</div>
+<p></p>
 
 #### Jenkins Agent Setup
 
@@ -1854,8 +1889,27 @@ You can view your pod templates by following these steps.
 #### Jenkins Backup Setup
 
 - Click `Manage Jenkins` in the left hand menu
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/06-jenkins-manage.png" alt="jenkins manage"/>
+</div>
+<p></p>
+
 - Click `Plugins`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/07-jenkins-plugins.png" alt="jenkins plugins"/>
+</div>
+<p></p>
+
 - Check that you see the following Plugin installed if not install `ThinBackups`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-thinbackup.png" alt="jenkins plugins thinbackup"/>
+</div>
+<p></p>
+
+
 - Open your terminal and lets exec onto the Jenkins pod
 
 ```shell
@@ -1875,13 +1929,32 @@ kubectl get pvc | grep jenkins
 - For example mine was this
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/02-jenkins-frontend.png" alt="jenkins pvc"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/10-jenkins-pvc.png" alt="jenkins pvc"/>
 </div>
 <p></p>
 
 - You should see the `backup` directory you created on your NFS storage server
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/11-jenkins-backup-directory-nfs.png" alt="jenkins backup directory nfs"/>
+</div>
+<p></p>
+
 - Click `Manage Jenkins`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/06-jenkins-manage.png" alt="jenkins manage"/>
+</div>
+<p></p>
+
 - Click `System`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/-jenkins-system.png" alt="jenkins system"/>
+</div>
+<p></p>
+
+
 - Scroll down until you see `ThinBackup Configuration` and fill in the following
 - Add `/var/jenkins_home/backup` as the `Backup Directory`
 - If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
