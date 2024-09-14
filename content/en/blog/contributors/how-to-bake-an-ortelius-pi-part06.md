@@ -15,20 +15,21 @@ author: Sacha Wharton
 - [Localstack](#localstack)
   - [Deploy Localstack](#deploy-localstack)
   - [References](#references)
-- [Gimlet and Fluxcd](#gimlet-and-fluxcd)
+  - [Gimlet and Fluxcd](#gimlet-and-fluxcd)
   - [Helm-Repository | Localstack](#helm-repository--localstack)
   - [Helm-Release | Localstack](#helm-release--localstack)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
 - [Traefik](#traefik)
+- [Configuring the AWS and the Localstack awslocal cli](#configuring-the-aws-and-the-localstack-awslocal-cli)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
 In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
 
-In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
+In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli or the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
 ### Roadmap
 
@@ -54,15 +55,13 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Localstack applications [here](https://docs.localstack.cloud/applications/)
 - Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
-- Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
-- Please install the AWS cli [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 #### References
 
 - [Gimlet](https://gimlet.io/)
 - [Fluxcd](https://fluxcd.io/)
 
-### Gimlet and Fluxcd
+#### Gimlet and Fluxcd
 
 - Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
 - With there powers combined we will deploy LocalStack
@@ -441,6 +440,14 @@ spec:
     # priorityClassName: ""
 ```
 
+- Lets git it
+
+```shell
+git add .
+git commit -m "localstack deploy"
+git push
+```
+
 #### Fluxcd is doing the following under the hood | Localstack
 
 - Helm repo add
@@ -480,7 +487,6 @@ kubectl get pods -n infrastructure | grep localstack
 
 - Open your Traefik Helm Chart from the `helm-releases` directory for your infrastructure repo that Gimlet created
 - For example mine is `gitops-pangarabbit-dev-infra/helm-releases`
-- Add the Localstack `EntryPoint` under the `websecure` endpoint and push your changes
 
 ```yaml
       localstack:
@@ -496,6 +502,14 @@ kubectl get pods -n infrastructure | grep localstack
         # targetPort: 80
         ## -- The port protocol (TCP/UDP)
         protocol: TCP
+```
+
+- Lets git it
+
+```shell
+git add .
+git commit -m "traefik localstack entrypoint"
+git push
 ```
 
 - Navigate to the `traefik-dynamic-config.yaml` file in the `manifests/` directory and add the `IngressRoute` for Localstack and push your changes
@@ -520,8 +534,17 @@ spec:
           port: 4566
 ```
 
+- Lets git it
+
+```shell
+git add .
+git commit -m "traefik localstack ingressroute"
+git push
+```
+
 - Don't forget to add a dns record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
+- Open our terminal and use curl to test the Localstack endpoint
 
 ```shell
  curl -vvv http://localstack.pangarabbit.com:4566
@@ -550,19 +573,97 @@ spec:
 * Connection #0 to host localstack.pangarabbit.com left intact
 ```
 
+### Configuring the AWS and the Localstack awslocal cli
+
+- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal` or the AWS cli
+- To make our lives less painful switching profiles install Granted created by Commonfate
+- Use the Granted `getting started` doc [here](https://docs.commonfate.io/granted/getting-started)
+- Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
+- For more information on installation and configuring the AWS cli go [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- Create fictitious credentials in `.aws/credentials` for Localstack
+
 ```shell
-aws s3api create-buckets ortelius-bucket --endpoint https://localstack.pangarabbit.com --profile localstack-pangarabbit
+[base]
+aws_access_key_id=fake
+aws_secret_access_key=fake
 ```
+
+- Create a profile in `.aws/config`
+
+```shell
+[profile localstack]
+endpoint_url       = https://localstack.pangarabbit.com:4566 # Replace with your endpoint domain name
+services           = localstack
+region             = us-east-1
+output             = yaml
+cli_history        = enabled
+cli_pager          = bat
+credential_process = granted credential-process --profile=localstack
+
+[services localstack]
+s3               =
+endpoint_url     = https://localstack.pangarabbit.com:4566 # Replace with your endpoint domain name
+addressing_style = path
+```
+
+- Install Granted for your OS flavour
+- Test that Granted was installed correctly
+
+```shell
+granted -v
+```
+
+- Assume your first role [here](https://docs.commonfate.io/granted/usage/assuming-roles)
+- You role name will be `localstack`
+- After completing the first time setup you should be able to just type `assume` on the command line and a selection will pop up
+
+```shell
+assume
+```
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/02-assume.png" alt="assume"/>
+</div>
+<p></p>
+
+- S3 bucket creation
+
+```shell
+aws s3api create-bucket --bucket ortelius-bucket-aws --endpoint https://localstack.pangarabbit.com
+```
+
+```shell
+awslocal s3api create-bucket --bucket ortelius-bucket-awslocal --endpoint https://localstack.pangarabbit.com
+```
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/03-s3-create-bucket.png" alt="s3 create bucket"/>
+</div>
+<p></p>
+
+- Lets list s3 buckets with `awslocal`
+
+```shell
+awslocal s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile localstack-pangarabbit
+```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/05-s3-list-awslocal.png" alt="s3 list awslocal"/>
+</div>
+<p></p>
+
+- Lets list s3 buckets with `aws`
 
 ```shell
 aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile localstack-pangarabbit
 ```
 
-- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal`
--
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/04-s3-list-aws.png" alt="s3 list aws"/>
+</div>
+<p></p>
 
 ### Conclusion
 
-Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoints through Traefik.
+You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoint through Traefik.
 
 Happy alien hunting.....
