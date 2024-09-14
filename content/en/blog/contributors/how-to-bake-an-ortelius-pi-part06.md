@@ -556,7 +556,7 @@ git push
  curl -vvv https://localstack.pangarabbit.com
 ```
 
-- The output below shows you the endpoint is alive and well
+- The output below shows you the endpoint is alive and well and secure
 
 ```shell
 * Host localstack.pangarabbit.com:443 was resolved.
