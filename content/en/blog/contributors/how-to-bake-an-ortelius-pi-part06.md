@@ -13,11 +13,19 @@ author: Sacha Wharton
 - [Introduction](#introduction)
 - [Roadmap](#roadmap)
 - [LocalStack](#localstack)
+  - [Deploy LocalStack](#deploy-localstack)
+  - [References](#references)
+- [Gimlet and Fluxcd](#gimlet-and-fluxcd)
+  - [Helm-Repository | LocalStack](#helm-repository--localstack)
+  - [Helm-Release | LocalStack](#helm-release--localstack)
+  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
-In Part 5 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. In Part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
+In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
+
+In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). This will give us our very own cloud dev environment at home without all cash burning worries and security headaches.
 
 ### Roadmap
 
@@ -25,7 +33,408 @@ In Part 5 we configured a certificate for our domain using Cloudflare, LetsEncry
 
 ### LocalStack
 
-Jenkins is an open-source automation server that helps developers build, test, and deploy their software reliably and efficiently. It's widely known for its role in continuous integration (CI) and continuous delivery (CD), allowing teams to automate tasks, improve workflows, and streamline software development pipelines.
+In today's cloud-centric world, developing and testing applications that rely on cloud services often presents unique challenges. Developers typically need access to various cloud environments like AWS to test their code. However, setting up and managing these cloud environments can be cumbersome, costly, and time-consuming, especially for frequent testing or when multiple cloud services are involved.
+
+Enter LocalStack, a powerful tool that provides a fully functional local cloud environment. LocalStack emulates the core AWS services, such as S3, Lambda, DynamoDB, and many others, enabling developers to run and test their cloud applications directly on their local machines without needing an active AWS account or network access.
+
+#### Deploy LocalStack
+
+Right lets get stuck in and deploy LocalStack using Gimlet, Fluxcd, Helm and a sprig of GitOps.
+
+- Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+- Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
+- LocalStack on GitHub [here](https://github.com/localstack/)
+- LocalStack docs [here](https://www.jenkins.io/doc)
+- LocalStack integrations [here](https://docs.localstack.cloud/integrations/)
+- LocalStack academy [here](https://docs.localstack.cloud/academy/)
+- LocalStack tutorials [here](https://docs.localstack.cloud/tutorials/)
+- LocalStack applications [here](https://docs.localstack.cloud/applications/)
+- LocalStack Extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
+- LocalStack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
+
+#### References
+
+- [Gimlet](https://gimlet.io/)
+- [Fluxcd](https://fluxcd.io/)
+
+### Gimlet and Fluxcd
+
+- Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
+- With there powers combined we will deploy LocalStack
+
+#### Helm-Repository | LocalStack
+
+- Lets add the LocalStack Helm repository
+- A Helm repository is a collection of Helm charts that are made available for download and installation
+- Helm repositories serve as centralised locations where Helm charts can be stored, shared, and managed
+- Create a file called `localstack.yaml` in the helm-repositories directory and paste the following YAML
+
+```yaml
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: localstack
+  namespace: infrastructure
+spec:
+  interval: 60m
+  url: https://localstack.github.io/helm-charts
+```
+
+#### Helm-Release | LocalStack
+
+- Lets create a Helm release for LocalStack
+- A Helm release is an instance of a Helm chart running in a Kubernetes cluster
+- Each release is a deployment of a particular version of a chart with a specific configuration
+- Create a file called `localstack.yaml` in the helm-releases directory and paste the following YAML
+
+#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+
+```yaml
+    image:
+      repository: localstack/localstack # Replace this with localstack/localstack-pro if you have a subscription
+      tag: "latest"
+      pullPolicy: IfNotPresent
+```
+
+```yaml
+    replicaCount: 3
+```
+
+```yaml
+    mountDind:
+      enabled: true
+      forceTLS: true
+      image: "docker:20.10-dind"
+```
+
+```yaml
+    extraEnvVars:
+      - name: GATEWAY_LISTEN
+        value: "0.0.0.0:4566"
+      - name: LOCALSTACK_API_KEY
+        value: "<your api key"
+      - name: LOCALSTACK_AUTH_TOKEN
+        value: "<your auth token>"
+```
+
+```yaml
+    ingress:
+      enabled: true
+      annotations: {}
+      ## @param ingress.ingressClassName Set the name of the class to use
+      ##
+      ingressClassName: "traefik" # Only replace this if you are not using Traefik
+      hosts:
+        - host: localstack.pangarabbit.com # Replace with your domain
+```
+
+```yaml
+    persistence:
+      ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+      ##
+      enabled: true # Set to false to disable persistent volumes
+      ## @param persistence.storageClass Persistent Volume storage class
+      ## If defined, storageClassName: <storageClass>
+      ## If set to "-", storageClassName: "", which disables dynamic provisioning
+      ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
+      ##
+      storageClass: "nfs-csi-default" # Replace with your storage class
+      ## @param persistence.accessModes [array] Persistent Volume access modes
+      ##
+      accessModes:
+        - ReadWriteOnce
+      ## @param persistence.size Persistent Volume size
+      ##
+      size: 8Gi
+```
+
+```yaml
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: localstack
+  namespace: infrastructure
+spec:
+  interval: 60m
+  releaseName: localstack
+  chart:
+    spec:
+      chart: localstack
+      version: 0.6.16
+      sourceRef:
+        kind: HelmRepository
+        name: localstack
+      interval: 10m
+  values:
+    # Default values for LocalStack
+    # Declare variables to be passed into your templates
+
+    replicaCount: 3
+
+    ## @param updateStrategy.type deployment strategy type
+    ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
+    ## NOTE: Set it to `Recreate` if you use a PV that cannot be mounted on multiple pods
+    ##
+    updateStrategy:
+      type: RollingUpdate
+
+    image:
+      repository: localstack/localstack-pro
+      tag: "latest"
+      pullPolicy: IfNotPresent
+
+    imagePullSecrets: []
+    nameOverride: ""
+    fullnameOverride: ""
+
+    ## @param extraDeploy Extra objects to deploy (value evaluated as a template)
+    ##
+    extraDeploy: []
+
+    ## Add additional annotations to every resource
+    extraAnnotations: {}
+
+    serviceAccount:
+      # Specifies whether a service account should be created
+      create: true
+      # Annotations to add to the service account
+      annotations: {}
+      # The name of the service account to use.
+      # If not set and create is true, a name is generated using the fullname template
+      name: ""
+
+    role:
+      # Specifies whether a role & rolebinding with pods / * permissions should be created for the service account
+      # Necessary for kubernetes lambda executor
+      create: true
+      # Annotations to add to the role and rolebinding
+      annotations: {}
+      # The name of the role and rolebinding to use.
+      # If not set and create is true, a name is generated using the fullname template
+      name: ""
+
+    podLabels: {}
+
+    podAnnotations: {}
+
+    podSecurityContext:
+      {}
+      # fsGroup: 2000
+
+    securityContext:
+      {}
+      # capabilities:
+      #   drop:
+      #   - ALL
+      # readOnlyRootFilesystem: true
+      # runAsNonRoot: true
+      # runAsUser: 1000
+
+    debug: false
+
+    ## @param command Allows you to set an arbitrary command on startup (instead of the default entrypoint script)
+    ##
+    command: []
+
+    ## @param dnsPolicy Allows you to set the Pod dnsPolicy.
+    ## The default is actually ClusterFirst. Uncomment this to avoid a circular DNS path that will
+    ## cause the LocalStack instance to crash.
+    ## Ref: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy
+    # dnsPolicy: "Default"
+
+    startServices: ""
+    # Comma-separated list of AWS CLI service names which are the only ones allowed to be used (other services will then by default be prevented from being loaded).
+
+    # kinesisErrorProbability: 0.0
+
+    # lambdaExecutor: ""
+
+    # This will enable the Docker daemon binding and allow
+    # Localstack to provide Lambdas and other AWS services
+    # who got container runtime dependencies
+    mountDind:
+      enabled: true
+      forceTLS: true
+      image: "docker:20.10-dind"
+
+    ## All the parameters from the configuation can be added using extraEnvVars.
+    ## Ref. https://docs.localstack.cloud/references/configuration/
+    extraEnvVars:
+      - name: GATEWAY_LISTEN
+        value: "0.0.0.0:4566"
+      - name: LOCALSTACK_API_KEY
+        value: "3aAxEvoaA3"
+      - name: LOCALSTACK_AUTH_TOKEN
+        value: "ls-biRatuWA-jUTi-BeQA-CeQE-nolu40093f8f"
+      - name: ACTIVATE_PRO
+        value: "0"
+      - name: LOG_LICENSE_ISSUES
+        value: "1"
+    ##   - name: SERVICES
+    ##     value: "serverless,sqs,es"
+    livenessProbe:
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      timeoutSeconds: 1
+      successThreshold: 1
+      failureThreshold: 3
+    readinessProbe:
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      timeoutSeconds: 1
+      successThreshold: 1
+      failureThreshold: 3
+
+    service:
+      type: ClusterIP
+      annotations:
+      ipFamilies: []
+      ipFamilyPolicy: ""
+      externalTrafficPolicy: ""
+      edgeService:
+        name: edge
+        targetPort: 4566
+        nodePort: 31566
+      externalServicePorts:
+        start: 4510
+        end: 4560
+        ## @param service.externalServicePorts.nodePortStart specifies the starting node ports the serviceports are mapped to
+        ##   has to be in the node port range configured. See https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
+        # nodePortStart: 31510
+      ## @param service.dnsService Enables or disables the exposure of the LocalStack DNS
+      ##
+      dnsService: false
+      ## @param service.clusterIP sets a static clusterIP. This is useful alongside the LocalStack DNS setup
+      ##   see https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/#configuration-of-stub-domain-and-upstream-nameserver-using-coredns for an example of DNS delegation in Coredns
+      ##
+      clusterIP: ""
+
+    ingress:
+      enabled: true
+      annotations: {}
+      ## @param ingress.ingressClassName Set the name of the class to use
+      ##
+      ingressClassName: "traefik"
+      hosts:
+        - host: localstack.pangarabbit.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+      # tls:
+      #   - secretName: wildcard-pangarabbit-com-tls
+      #     hosts:
+      #       - localstack.pangarabbit.com
+
+    persistence:
+      ## @param persistence.enabled Enable persistence using Persistent Volume Claims
+      ##
+      enabled: true
+      ## @param persistence.storageClass Persistent Volume storage class
+      ## If defined, storageClassName: <storageClass>
+      ## If set to "-", storageClassName: "", which disables dynamic provisioning
+      ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
+      ##
+      storageClass: "nfs-csi-default"
+      ## @param persistence.accessModes [array] Persistent Volume access modes
+      ##
+      accessModes:
+        - ReadWriteOnce
+      ## @param persistence.size Persistent Volume size
+      ##
+      size: 8Gi
+      ## @param persistence.dataSource Custom PVC data source
+      ##
+      dataSource: {}
+      ## @param persistence.existingClaim The name of an existing PVC to use for persistence
+      ##
+      existingClaim: ""
+      ## @param persistence.subPath The name of a volume's sub path to mount for persistence
+      ##
+      subPath: ""
+      ## @param persistence.annotations Annotations to be added to PVC
+      ##
+      annotations: {}
+
+    resources:
+      {}
+      # We usually recommend not to specify default resources and to leave this as a conscious
+      # choice for the user. This also increases chances charts run on environments with little
+      # resources, such as Minikube. If you do want to specify resources, uncomment the following
+      # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+      # limits:
+      #   cpu: 100m
+      #   memory: 128Mi
+      # requests:
+      #   cpu: 100m
+      #   memory: 128Mi
+
+    # All settings inside the lambda values section are only applicable to the new v2 lambda provider
+    lambda:
+      # The lambda runtime executor.
+      # Depending on the value, LocalStack will execute lambdas either in docker containers or in kubernetes pods
+      # The value "kubernetes" depends on the service account and pod role being activated
+      executor: "docker"
+      # Image prefix for the kubernetes lambda images. The images will have to be pushed to that repository.
+      # Only applicable when executor is set to "kubernetes"
+      # Example: python3.9 runtime -> localstack/lambda-python:3.9
+      image_prefix: "localstack/lambda-"
+      # Timeout for spawning new lambda execution environments.
+      # After that timeout, the environment (in essence pod/docker container) will be killed and restarted
+      # Increase if spawning pods / docker containers takes longer in your environment
+      environment_timeout: 60
+      # Labels which will be assigned to the kubernetes pods spawned by the kubernetes executor.
+      # They will be set on all spawned pods.
+      # Only applicable when executor is set to "kubernetes"
+      labels: {}
+      # labels:
+      #   label1: value1
+      #   label2: value2
+      #   label3: value3
+      #
+      # Security context to be set on the kubernetes pods spawned by the kubernetes executor.
+      # It will be set on all spawned pods.
+      # Only applicable when executor is set to "kubernetes"
+      security_context: {}
+      # security_context:
+      #   runAsUser: 1000
+      #   fsGroup: 1000
+      #   label3: value3
+
+    nodeSelector: {}
+
+    tolerations: []
+
+    affinity: {}
+
+    # Mount /etc/localstack/init/ready.d to run startup scripts with
+    # {{ template "localstack.fullname" . }}-init-scripts-config configMap
+    enableStartupScripts: false
+
+    # Add startup scripts content used by {{ template "localstack.fullname" . }}-init-scripts-config configMap
+    # to run at localstack startup
+    # startupScriptContent: |
+    # awslocal s3 mb s3://testbucket
+    # awslocal sqs create-queue --queue-name test-queue
+    startupScriptContent: ""
+
+    # @param volumes Extra volumes to mount
+    volumes: []
+    #  - hostPath:
+    #      path: <HOST_PATH>
+    #    name: <VOLUME_NAME>
+
+    # @param volumeMounts Extra volumes to mount
+    volumeMounts: []
+    #  - name: <VOLUME_NAME>
+    #    mountPath: <CONTAINER_PATH>
+    #    readOnly: true
+
+    ## @param priorityClassName Allows you to set the priorityClassName for the pod
+    ## The default is not to set any priorityClassName
+    # priorityClassName: ""
+```
 
 
 ### Conclusion
