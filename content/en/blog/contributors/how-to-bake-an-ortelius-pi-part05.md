@@ -75,7 +75,7 @@ Jenkins plugins are add-ons that extend the core functionality of Jenkins. Plugi
 ### Gimlet and Fluxcd
 
 - Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
-- We there powers combined we will deploy Jenkins
+- With there powers combined we will deploy Jenkins
 
 #### Helm-Repository | Jenkins
 
