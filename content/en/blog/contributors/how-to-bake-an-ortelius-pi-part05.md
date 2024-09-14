@@ -31,7 +31,7 @@ author: Sacha Wharton
 
 ### Introduction
 
-In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. In Part 5 we will deploy Jenkins on our Kubernetes cluster and configure integration with Ortelius and GitHub. We will then build a demo application and have Ortelius record it.
+In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. In Part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
 
 ### Roadmap
 
