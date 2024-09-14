@@ -1950,14 +1950,26 @@ kubectl get pvc | grep jenkins
 - Click `System`
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/-jenkins-system.png" alt="jenkins system"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/12-jenkins-system.png" alt="jenkins system"/>
 </div>
 <p></p>
 
 
 - Scroll down until you see `ThinBackup Configuration` and fill in the following
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/12-jenkins-system.png" alt="jenkins system"/>
+</div>
+<p></p>
+
 - Add `/var/jenkins_home/backup` as the `Backup Directory`
 - If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/13-jenkins-thinbackup-configuration-directory-cron.png" alt="jenkins thinbackup configuration directory cron"/>
+</div>
+<p></p>
+
 - If you don't like that idea you can make your own cron [here](https://crontab.guru/)
 - Click on the `?` for more information about the checkboxes
 - Click `Save`
