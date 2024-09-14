@@ -2343,6 +2343,6 @@ Commit message: "🛠 NEW: jenkins pod templates"
 
 ### Conclusion
 
-Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins. At this time of writing we are fixing the SBOM and Scorecard microservices to work with ARM architecture that is used on the Pi 4 to make them backward compatible.
+Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins. At this time of writing we are fixing the SBOM and Scorecard microservices to work with ARM architecture that is used on the Pi 4 to make them backward compatible. Hence if you are using that architecture you can't record your SBOM and Scorecard info.
 
 Happy alien hunting.....
