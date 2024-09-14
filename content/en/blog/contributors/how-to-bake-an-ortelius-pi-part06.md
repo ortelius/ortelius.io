@@ -23,6 +23,7 @@ author: Sacha Wharton
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
 - [Traefik](#traefik)
 - [Configuring the AWS and the Localstack awslocal cli](#configuring-the-aws-and-the-localstack-awslocal-cli)
+  - [Localstack Tools](#localstack-tools)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -655,6 +656,17 @@ aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile l
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part06/04-s3-list-aws.png" alt="s3 list aws"/>
+</div>
+<p></p>
+
+#### Localstack Tools
+
+Localstack tools can be found [here](https://docs.localstack.cloud/user-guide/tools/). One of those tools Localstack Desktop allows you to use a GUI to see your Localstack resources and services on your local machine and allows you to add your custom endpoint that you just created. It can be downloaded by signing up with Localstack in your browser where you can manage all things Localstack through the portal. Here you will be able to also see all your Localstack instances and add the custom endpoint we created.
+
+The URL for the Localstack portal looks like this: `https://app.localstack.cloud/dashboard`. You will the `Localstack Desktop` menu item here:
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/06-localstack-desktop.png" alt="localstack desktop"/>
 </div>
 <p></p>
 
