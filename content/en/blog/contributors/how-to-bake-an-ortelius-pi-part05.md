@@ -1674,6 +1674,10 @@ If everything went well you should be able to access the Jenkins frontend with y
 - Open your terminal and run the following command but make sure you have switched to the `infrastructure` namespace first.
 
 ```shell
+# Switch to the infrastructure namespace
+kubectl config set-context --current --namespace=infrastructure
+
+# Get the Jenkins admin password
 jsonpath="{.data.jenkins-admin-password}"
 kubectl get secret jenkins -o jsonpath=$jsonpath
 ```
