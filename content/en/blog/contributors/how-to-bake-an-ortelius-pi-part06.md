@@ -540,34 +540,69 @@ git commit -m "traefik localstack ingressroute"
 git push
 ```
 
+- You should see the Localstack endpoint represented on your Traefik dashboard
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/11-traefik-localstack-endpoint.png" alt="traefik localstack endpoint"/>
+</div>
+<p></p>
+
 - Don't forget to add a dns record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
 - Open our terminal and use curl to test the Localstack endpoint
 - You don't need the `:4566` port at the end of the url as Traefik takes care of that when we created the `IngressRoute`
 
 ```shell
- curl -vvv http://localstack.pangarabbit.com
+ curl -vvv https://localstack.pangarabbit.com
 ```
 
-- The output below shows you the endpoint is alive and well
+- The output below shows you the endpoint is alive and well and secure
 
 ```shell
-* Host localstack.pangarabbit.com:4566 was resolved.
+* Host localstack.pangarabbit.com:443 was resolved.
 * IPv6: (none)
 * IPv4: 192.168.0.151
-*   Trying 192.168.0.151:4566...
-* Connected to localstack.pangarabbit.com (192.168.0.151) port 4566
-> GET / HTTP/1.1
-> Host: localstack.pangarabbit.com:4566
+*   Trying 192.168.0.151:443...
+* Connected to localstack.pangarabbit.com (192.168.0.151) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=pangarabbit.com
+*  start date: Aug  1 16:47:29 2024 GMT
+*  expire date: Oct 30 16:47:28 2024 GMT
+*  subjectAltName: host "localstack.pangarabbit.com" matched cert's "*.pangarabbit.com"
+*  issuer: C=US; O=Let's Encrypt; CN=R10
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://localstack.pangarabbit.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: localstack.pangarabbit.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: localstack.pangarabbit.com
 > User-Agent: curl/8.7.1
 > Accept: */*
 >
 * Request completely sent off
-< HTTP/1.1 200 OK
-< Content-Length: 0
-< Content-Type: text/plain; charset=utf-8
-< Date: Sat, 14 Sep 2024 17:15:03 GMT
-< Server: TwistedWeb/24.3.0
+< HTTP/2 200
+< alt-svc: h3=":8443"; ma=2592000
+< content-type: text/plain; charset=utf-8
+< date: Sat, 14 Sep 2024 20:00:22 GMT
+< server: TwistedWeb/24.3.0
+< content-length: 0
 <
 * Connection #0 to host localstack.pangarabbit.com left intact
 ```
