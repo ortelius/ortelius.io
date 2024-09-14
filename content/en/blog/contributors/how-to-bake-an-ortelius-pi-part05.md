@@ -107,9 +107,10 @@ path:
 hostName: jenkins.pangarabbit.com # Update this to your domain name
 
 ##RECOMMENDED##
-########################################################################################################################
-#If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server# #configuration files will be stored on your NFS server thus preserving your Jenkins configuration                      #
-########################################################################################################################
+##########################################################################################################################
+# If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server #
+# configuration files will be stored on your NFS server thus preserving your Jenkins configuration                       #
+##########################################################################################################################
 persistence:
   # -- Enable the use of a Jenkins PVC
   enabled: true
@@ -1984,3 +1985,9 @@ kubectl get pvc | grep jenkins
 - If you don't like that idea you can make your own cron [here](https://crontab.guru/)
 - Click on the `?` for more information about the checkboxes
 - Click `Save`
+- You should see backups appearing in your `backup` directory
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
+</div>
+<p></p>
