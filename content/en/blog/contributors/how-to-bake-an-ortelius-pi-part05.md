@@ -1719,7 +1719,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 #### Jenkins Agent Setup
 
-Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish. You will see this happening in Gimlet under Helm Releases.
+Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish so thats why store we our config in our Helm Chart which honours the GitOps methodology where your repo is the source of truth. You will see this happening in Gimlet under Helm Releases.
 
 ```yaml
       # Below is the implementation of custom pod templates for the default configured kubernetes cloud.
@@ -1877,12 +1877,24 @@ Agents and agent templates are managed inside your Helm Chart. If you add them t
 You can view your pod templates by following these steps.
 
 - Click `Manage Jenkins` in the left hand menu
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/06-jenkins-manage.png" alt="jenkins manage"/>
+</div>
+<p></p>
+
 - Click `Clouds`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/16-jenkins-clouds.png" alt="jenkins clouds"/>
+</div>
+<p></p>
+
 - Click the name of your cloud, mine is `PangaRabbit K8s`
 - Click `Pod Templates`
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/.png" alt="jenkins pod templates"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/15-jenkins-pod-templates.png" alt="jenkins pod templates"/>
 </div>
 <p></p>
 
@@ -1905,7 +1917,7 @@ You can view your pod templates by following these steps.
 - Check that you see the following Plugin installed if not install `ThinBackups`
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-thinbackup.png" alt="jenkins plugins thinbackup"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/09-jenkins-plugins-thinbackup.png" alt="jenkins plugins thinbackup"/>
 </div>
 <p></p>
 
@@ -1919,7 +1931,7 @@ kubectl exec -it jenkins-0  -- /bin/bash
 mkdir /var/jenkins_home/backup
 ```
 
-- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored there and you can make backups of them to this directory
+- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored there and you can make backups to this directory
 - To see which PVC your Jenkins POD has mounted run this command
 
 ```shell
@@ -1954,11 +1966,10 @@ kubectl get pvc | grep jenkins
 </div>
 <p></p>
 
-
 - Scroll down until you see `ThinBackup Configuration` and fill in the following
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/12-jenkins-system.png" alt="jenkins system"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/13-jenkins-thinbackup-configuration.png" alt="jenkins thinbackup configuration"/>
 </div>
 <p></p>
 
@@ -1966,7 +1977,7 @@ kubectl get pvc | grep jenkins
 - If you would like to backup your files once everyday at midnight use this cron `H 12 * * 0-6`
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part05/13-jenkins-thinbackup-configuration-directory-cron.png" alt="jenkins thinbackup configuration directory cron"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part05/14-jenkins-thinbackup-configuration-directory-cron.png" alt="jenkins thinbackup configuration directory cron"/>
 </div>
 <p></p>
 
