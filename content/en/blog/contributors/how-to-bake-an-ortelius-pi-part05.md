@@ -26,6 +26,8 @@ author: Sacha Wharton
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
   - [Creating a Multibranch Pipeline](#creating-a-multibranch-pipeline)
+  - [Jenkins meets Ortelius](#jenkins-meets-ortelius)
+- [Conclusion](#conclusion)
 
 ### Introduction
 
@@ -2099,6 +2101,8 @@ kubectl create ns app
 </div>
 <p></p>
 
+#### Jenkins meets Ortelius
+
 - Create the following `Jenkinsfile` in the GitHub repo your created and push it to your GitHub repo
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
@@ -2181,4 +2185,149 @@ git commit -m "Add Jenkinsfile"
 git push
 ```
 
--
+- Go back to Jenkins and select the `Multibranch Pipeline` you just created
+- Select `Main` or whatever name appears there
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/30-jenkins-multibranch-pipeline-main.png" alt="jenkins multibranch pipeline main"/>
+</div>
+<p></p>
+
+- Select `Build Now`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/31-jenkins-multibranch-pipeline-build-now.png" alt="jenkins multibranch pipeline build now"/>
+</div>
+<p></p>
+
+- A build job will begin and you can see the build log by clicking on the `circle` with the `cross` inside
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/32-jenkins-multibranch-pipeline-build-job.png" alt="jenkins multibranch pipeline build job"/>
+</div>
+<p></p>
+
+- Open your terminal and run the following command
+- This will show you the Python agent pod running which will build your Python app
+- Don't worry if there are some hiccups with the pod getting going we have limited resources
+
+```shell
+kubectl get pod -n app
+```
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/33-jenkins-multibranch-pipeline-build-pod.png" alt="jenkins multibranch pipeline build pod"/>
+</div>
+<p></p>
+
+- Here is a snippet of the build log from my Jenkins server
+- You can see Jenkins going through the configuration in your `Jenkinsfile`
+
+```shell
+Created Pod: PangaRabbit K8s app/ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt
+Agent ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt is provisioned from template ortelius-jenkins-demo-app_main_51-9gxfn-qzrgj
+---
+apiVersion: "v1"
+kind: "Pod"
+metadata:
+  annotations:
+    kubernetes.jenkins.io/last-refresh: "1726324871013"
+    buildUrl: "http://jenkins.infrastructure.svc.cluster.local:8080/job/ortelius-jenkins-demo-app/job/main/51/"
+    runUrl: "job/ortelius-jenkins-demo-app/job/main/51/"
+  labels:
+    jenkins/jenkins-jenkins-agent: "true"
+    jenkins/label-digest: "fadc57588f0db543f93173def36c3565d0dfcc52"
+    jenkins/label: "ortelius-jenkins-demo-app_main_51-9gxfn"
+    kubernetes.jenkins.io/controller: "http___jenkins_infrastructure_svc_cluster_local_8080x"
+  name: "ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt"
+  namespace: "app"
+spec:
+  containers:
+  - args:
+    - "cat"
+    command:
+    - "/bin/sh"
+    - "-c"
+    env:
+    - name: "JENKINS_URL"
+      value: "http://jenkins.infrastructure.svc.cluster.local:8080/"
+    image: "python:3"
+    imagePullPolicy: "IfNotPresent"
+    name: "python3"
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "512m"
+      requests:
+        memory: "512Mi"
+        cpu: "512m"
+    tty: true
+    volumeMounts:
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+    workingDir: "/home/jenkins/agent"
+  - env:
+    - name: "JENKINS_SECRET"
+      value: "********"
+    - name: "JENKINS_TUNNEL"
+      value: "jenkins-agent.infrastructure.svc.cluster.local:50000"
+    - name: "JENKINS_AGENT_NAME"
+      value: "ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt"
+    - name: "REMOTING_OPTS"
+      value: "-noReconnectAfter 1d"
+    - name: "JENKINS_NAME"
+      value: "ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt"
+    - name: "JENKINS_AGENT_WORKDIR"
+      value: "/home/jenkins/agent"
+    - name: "JENKINS_URL"
+      value: "http://jenkins.infrastructure.svc.cluster.local:8080/"
+    image: "jenkins/inbound-agent:3261.v9c670a_4748a_9-2"
+    name: "jnlp"
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
+    volumeMounts:
+    - mountPath: "/home/jenkins/agent"
+      name: "workspace-volume"
+      readOnly: false
+  nodeSelector:
+    kubernetes.io/os: "linux"
+  restartPolicy: "Never"
+  serviceAccountName: "default"
+  volumes:
+  - emptyDir:
+      medium: ""
+    name: "workspace-volume"
+
+Running on ortelius-jenkins-demo-app-main-51-9gxfn-qzrgj-2hnmt in /home/jenkins/agent/workspace/ortelius-jenkins-demo-app_main
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential gh-pangarabbit-jenkins
+Cloning the remote Git repository
+Cloning with configured refspecs honoured and without tags
+Cloning repository https://github.com/sachajw/ortelius-jenkins-demo-app.git
+ > git init /home/jenkins/agent/workspace/ortelius-jenkins-demo-app_main # timeout=10
+Fetching upstream changes from https://github.com/sachajw/ortelius-jenkins-demo-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_ASKPASS to set credentials
+ > git fetch --no-tags --force --progress -- https://github.com/sachajw/ortelius-jenkins-demo-app.git +refs/heads/main:refs/remotes/origin/main # timeout=10
+ > git config remote.origin.url https://github.com/sachajw/ortelius-jenkins-demo-app.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/main:refs/remotes/origin/main # timeout=10
+Avoid second fetch
+Checking out Revision 3d51ff295a43b243bd1ba65602a000b93522af9e (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3d51ff295a43b243bd1ba65602a000b93522af9e # timeout=10
+Commit message: "🛠 NEW: jenkins pod templates"
+ > git rev-list --no-walk 3d51ff295a43b243bd1ba65602a000b93522af9e # timeout=10
+```
+
+### Conclusion
+
+Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins.
+
+Happy alien hunting.....
