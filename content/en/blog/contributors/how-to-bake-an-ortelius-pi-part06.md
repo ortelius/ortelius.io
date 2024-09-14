@@ -543,7 +543,7 @@ git push
 - Don't forget to add a dns record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
 - Open our terminal and use curl to test the Localstack endpoint
-- You don't need the `:4566` port at the end of the url as Traefik takes care of that when we create the `IngressRoute`
+- You don't need the `:4566` port at the end of the url as Traefik takes care of that when we created the `IngressRoute`
 
 ```shell
  curl -vvv http://localstack.pangarabbit.com
