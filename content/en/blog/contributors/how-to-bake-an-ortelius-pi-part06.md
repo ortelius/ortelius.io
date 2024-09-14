@@ -55,7 +55,7 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
 - Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
-- Please install the AWS cli [here]()
+- Please install the AWS cli [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 #### References
 
