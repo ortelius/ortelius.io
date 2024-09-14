@@ -1627,6 +1627,14 @@ spec:
           tag: "1.11.0"
 ```
 
+- Lets git it
+
+```shell
+git add .
+git commit -m "deploy jenkins"
+git push
+```
+
 #### Fluxcd is doing the following under the hood | Jenkins
 
 - Helm repo add
@@ -2196,7 +2204,7 @@ pipeline {
 }
 ```
 
-- Send your changes to your GitHub repo by navigating to your repo in your terminal
+- Lets git it
 
 ```shell
 git add .
