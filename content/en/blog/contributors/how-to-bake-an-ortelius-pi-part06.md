@@ -12,45 +12,50 @@ author: Sacha Wharton
 
 - [Introduction](#introduction)
 - [Roadmap](#roadmap)
-- [LocalStack](#localstack)
-  - [Deploy LocalStack](#deploy-localstack)
+- [Localstack](#localstack)
+  - [Deploy Localstack](#deploy-localstack)
   - [References](#references)
 - [Gimlet and Fluxcd](#gimlet-and-fluxcd)
-  - [Helm-Repository | LocalStack](#helm-repository--localstack)
-  - [Helm-Release | LocalStack](#helm-release--localstack)
+  - [Helm-Repository | Localstack](#helm-repository--localstack)
+  - [Helm-Release | Localstack](#helm-release--localstack)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
+  - [Kubernetes check | Localstack](#kubernetes-check--localstack)
+- [Traefik](#traefik)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
 In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
 
-In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). This will give us our very own cloud dev environment at home without all cash burning worries and security headaches.
+In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
 ### Roadmap
 
 `localstack --> observability --> secret store --> zerotier --> everything else`
 
-### LocalStack
+### Localstack
 
 In today's cloud-centric world, developing and testing applications that rely on cloud services often presents unique challenges. Developers typically need access to various cloud environments like AWS to test their code. However, setting up and managing these cloud environments can be cumbersome, costly, and time-consuming, especially for frequent testing or when multiple cloud services are involved.
 
 Enter LocalStack, a powerful tool that provides a fully functional local cloud environment. LocalStack emulates the core AWS services, such as S3, Lambda, DynamoDB, and many others, enabling developers to run and test their cloud applications directly on their local machines without needing an active AWS account or network access.
 
-#### Deploy LocalStack
+#### Deploy Localstack
 
-Right lets get stuck in and deploy LocalStack using Gimlet, Fluxcd, Helm and a sprig of GitOps.
+Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sprig of GitOps.
 
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
-- LocalStack on GitHub [here](https://github.com/localstack/)
-- LocalStack docs [here](https://www.jenkins.io/doc)
-- LocalStack integrations [here](https://docs.localstack.cloud/integrations/)
-- LocalStack academy [here](https://docs.localstack.cloud/academy/)
-- LocalStack tutorials [here](https://docs.localstack.cloud/tutorials/)
-- LocalStack applications [here](https://docs.localstack.cloud/applications/)
-- LocalStack Extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
-- LocalStack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
+- Localstack on GitHub [here](https://github.com/localstack/)
+- Localstack docs [here](https://www.jenkins.io/doc)
+- Localstack integrations [here](https://docs.localstack.cloud/integrations/)
+- Localstack academy [here](https://docs.localstack.cloud/academy/)
+- Localstack tutorials [here](https://docs.localstack.cloud/tutorials/)
+- Localstack applications [here](https://docs.localstack.cloud/applications/)
+- Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
+- Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
+- Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
+- Please install the AWS cli [here]()
 
 #### References
 
@@ -62,9 +67,9 @@ Right lets get stuck in and deploy LocalStack using Gimlet, Fluxcd, Helm and a s
 - Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
 - With there powers combined we will deploy LocalStack
 
-#### Helm-Repository | LocalStack
+#### Helm-Repository | Localstack
 
-- Lets add the LocalStack Helm repository
+- Lets add the Localstack Helm repository
 - A Helm repository is a collection of Helm charts that are made available for download and installation
 - Helm repositories serve as centralised locations where Helm charts can be stored, shared, and managed
 - Create a file called `localstack.yaml` in the helm-repositories directory and paste the following YAML
@@ -81,7 +86,7 @@ spec:
   url: https://localstack.github.io/helm-charts
 ```
 
-#### Helm-Release | LocalStack
+#### Helm-Release | Localstack
 
 - Lets create a Helm release for LocalStack
 - A Helm release is an instance of a Helm chart running in a Kubernetes cluster
@@ -436,6 +441,125 @@ spec:
     # priorityClassName: ""
 ```
 
+#### Fluxcd is doing the following under the hood | Localstack
+
+- Helm repo add
+
+```shell
+helm repo add localstack-charts https://localstack.github.io/helm-charts --force-update
+```
+
+- Helm install localstack
+
+```shell
+helm install localstack localstack-charts/localstack
+```
+
+#### Kubernetes check | Localstack
+
+- Kubectl switch to the infrastructure namespace
+
+```shell
+kubectl config set-context --current --namespace=infrastructure
+```
+
+- Kubectl show me the pods for Localstack
+
+```shell
+kubectl get pods -n infrastructure | grep localstack
+```
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/01-localstack-pods.png" alt="localstack pods"/>
+</div>
+<p></p>
+
+- Now that we have deployed Localstack we will move to expose the Localstack endpoints with Traefik
+
+### Traefik
+
+- Open your Traefik Helm Chart from the `helm-releases` directory for your infrastructure repo that Gimlet created
+- For example mine is `gitops-pangarabbit-dev-infra/helm-releases`
+- Add the Localstack `EntryPoint` under the `websecure` endpoint and push your changes
+
+```yaml
+      localstack:
+        ## -- Enable this entrypoint as a default entrypoint. When a service doesn't explicitly set an entrypoint it will only use this entrypoint.
+        # asDefault: true
+        port: 4566
+        # hostPort: 4566
+        containerPort: 4566
+        expose:
+          default: true
+        exposedPort: 4566
+        ## -- Different target traefik port on the cluster, useful for IP type LB
+        # targetPort: 80
+        ## -- The port protocol (TCP/UDP)
+        protocol: TCP
+```
+
+- Navigate to the `traefik-dynamic-config.yaml` file in the `manifests/` directory and add the `IngressRoute` for Localstack and push your changes
+
+```yaml
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: localstack
+  namespace: infrastructure
+spec:
+  entryPoints:
+    - localstack
+  routes:
+    - match: Host("localstack.pangarabbit.com") # Replace this with your domain
+      kind: Rule
+      services:
+        - name: localstack
+          namespace: infrastructure
+          kind: Service
+          port: 4566
+```
+
+- Don't forget to add a dns record for the Localstack domain name you used
+- If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
+
+```shell
+ curl -vvv http://localstack.pangarabbit.com:4566
+```
+
+- The output below shows you the endpoint is alive and well
+
+```shell
+* Host localstack.pangarabbit.com:4566 was resolved.
+* IPv6: (none)
+* IPv4: 192.168.0.151
+*   Trying 192.168.0.151:4566...
+* Connected to localstack.pangarabbit.com (192.168.0.151) port 4566
+> GET / HTTP/1.1
+> Host: localstack.pangarabbit.com:4566
+> User-Agent: curl/8.7.1
+> Accept: */*
+>
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Content-Length: 0
+< Content-Type: text/plain; charset=utf-8
+< Date: Sat, 14 Sep 2024 17:15:03 GMT
+< Server: TwistedWeb/24.3.0
+<
+* Connection #0 to host localstack.pangarabbit.com left intact
+```
+
+```shell
+aws s3api create-buckets ortelius-bucket --endpoint https://localstack.pangarabbit.com --profile localstack-pangarabbit
+```
+
+```shell
+aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile localstack-pangarabbit
+```
+
+- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal`
+-
 
 ### Conclusion
 
