@@ -484,6 +484,7 @@ kubectl get pods -n infrastructure | grep localstack
 
 - Open your Traefik Helm Chart from the `helm-releases` directory for your infrastructure repo that Gimlet created
 - For example mine is `gitops-pangarabbit-dev-infra/helm-releases`
+- Add the following entrypoint after the `websecure` entrypoint in your `traefik.yaml` `helm-releases` file
 
 ```yaml
       localstack:
@@ -542,9 +543,10 @@ git push
 - Don't forget to add a dns record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
 - Open our terminal and use curl to test the Localstack endpoint
+- You don't need the `:4566` port at the end of the url as Traefik takes care of that when we create the `IngressRoute`
 
 ```shell
- curl -vvv http://localstack.pangarabbit.com:4566
+ curl -vvv http://localstack.pangarabbit.com
 ```
 
 - The output below shows you the endpoint is alive and well
