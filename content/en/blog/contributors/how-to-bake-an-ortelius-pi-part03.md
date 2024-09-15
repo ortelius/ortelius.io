@@ -35,29 +35,27 @@ author: Sacha Wharton
   - [Gimlet Gitops Infra](#gimlet-gitops-infra)
   - [Gimlet Gitops Applications](#gimlet-gitops-applications)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
-  - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-  - [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Kubernetes CSI NFS Driver Deployment](#kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
-  - [Kubernetes Cert Manager](#kubernetes-cert-manager)
-- [Gimlet | Cert Manager](#gimlet--cert-manager)
+  - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
   - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
   - [Helm-Release | Cert Manager](#helm-release--cert-manager)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
   - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
-- [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
+  - [Metallb Load-Balancer For Bare Metal Kubernetes Deployment](#metallb-load-balancer-for-bare-metal-kubernetes-deployment)
   - [Helm-Repository | Metallb](#helm-repository--metallb)
   - [Helm-Release | Metallb](#helm-release--metallb)
   - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
   - [Kubernetes check | Metallb](#kubernetes-check--metallb)
-- [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
+  - [Traefik the Cloud Native Proxy Deployment](#traefik-the-cloud-native-proxy-deployment)
   - [Helm-Repository | Traefik](#helm-repository--traefik)
   - [Helm-Release | Traefik](#helm-release--traefik)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment-1)
-  - [Manifest Folder | Traefik](#manifest-folder--traefik)
+  - [Gimlet Manifest Folder | Traefik](#gimlet-manifest-folder--traefik)
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
   - [Traefik Dashboard](#traefik-dashboard)
   - [Further reading | Traefik](#further-reading--traefik)
@@ -412,7 +410,7 @@ git clone https://github.com/<your-profile>/gitops-<your-environment>-apps.git
 
 ### Gimlet GitOps Infrastructure
 
-#### Kubernetes CSI NFS Driver
+#### Kubernetes CSI NFS Driver Deployment
 
 With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to our pods using the Synology NAS as the central storage server.
 
@@ -423,8 +421,6 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
-
-#### Gimlet Kubernetes CSI NFS Driver Deployment
 
 #### Helm-Repository | CSI NFS Driver
 
@@ -759,7 +755,7 @@ Here are some examples.
 
 Great we now have Kubernetes managing NFS volume mounts dynamically!
 
-#### Kubernetes Cert Manager
+#### Kubernetes Cert Manager Deployment
 
 With [Cert Manager](https://cert-manager.io/) we will manage all our certificate needs.
 
@@ -768,8 +764,6 @@ With [Cert Manager](https://cert-manager.io/) we will manage all our certificate
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
 - Helm Chart reference [here](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
 - [What Is SSL? How Do SSL Certificates Work?](https://dzone.com/articles/what-is-ssl-how-do-ssl-certificates-work)
-
-### Gimlet | Cert Manager
 
 #### Helm-Repository | Cert Manager
 
@@ -2251,7 +2245,7 @@ kubectl get pods -n kube-system | grep cert
 
 Great we now have infrastructure for managing certificates!
 
-### Metallb load-balancer for bare metal Kubernetes
+#### Metallb Load-Balancer For Bare Metal Kubernetes Deployment
 
 With Metallb we will setup a unique IP address on our home network to expose the Microservices running in our Kubernetes cluster. A public cloud provider would give you this during the deployment of your Kubernetes cluster but since we are the cloud we need to provide it and thats where [Metallb](https://metallb.universe.tf/) comes in.
 
@@ -2750,7 +2744,7 @@ kubectl get crds | grep metallb
 </div>
 <p></p>
 
-- Kubectl show me the ip address pools for Metallb
+- Kubectl show me the IP address pools for Metallb
 
 ```shell
 kubectl get ipaddresspools.metallb.io -n infrastructure
@@ -2763,7 +2757,7 @@ kubectl get ipaddresspools.metallb.io -n infrastructure
 
 Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy and which Traefik Proxy can bind to.
 
-### Traefik the Cloud Native Proxy
+#### Traefik the Cloud Native Proxy Deployment
 
 With [Traefik Proxy](https://traefik.io/) we can now direct traffic destined for our Microservices into the Kubernetes cluster and protect our endpoints using a combination of entrypoints, routers, services, providers and middlewares.
 
@@ -3800,7 +3794,7 @@ spec:
       sendlogs:
 ```
 
-#### Manifest Folder | Traefik
+#### Gimlet Manifest Folder | Traefik
 
 - The folks at Traefik put this nice piece of logic in the Helm Chart that allows you to create a config file which is dynamically monitored by Traefik
 - I am using this to manage the Lets Encrypt certicate renewal in conjunction with Cloudflare
@@ -3910,7 +3904,7 @@ kubectl get crds | grep traefik
 #### Traefik Dashboard
 
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
-- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
+- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private IP` and `traefik.yourdomain.tld` e.g. `traefik.pangarabbit.com`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
 - Remember to note that all things infrastructure are created in the `infrastructure` namespace
 
@@ -3951,7 +3945,7 @@ kubectl get ingressroutes.traefik.io -n infrastructure
 </div>
 <p></p>
 
-- Kubectl show me that the Traefik service has claimed our Metallb single ip address
+- Kubectl show me that the Traefik service has claimed our Metallb single IP address
 
 ```shell
 kubectl get svc -n infrastructure
@@ -3988,9 +3982,9 @@ netdata                                 ClusterIP    10.152.183.110 <none>      
 traefik                                 LoadBalancer 10.152.183.135 192.168.0.151 80:31662/TCP,443:30850/TCP  4d19h
 ```
 
-Brilliant our Traefik Proxy has claimed the ip.
+Brilliant our Traefik Proxy has claimed the IP.
 
-What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb ip` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
+What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb IP` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
 
 Hopefully you should be able to access your dashboard at the FQDN e.g. `traefik.pangarabbit.com`
 
