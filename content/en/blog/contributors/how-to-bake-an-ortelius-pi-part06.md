@@ -11,32 +11,28 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
-- [Localstack](#localstack)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
+  - [Localstack](#localstack)
   - [Deploy Localstack](#deploy-localstack)
-  - [References](#references)
-  - [Gimlet and Fluxcd](#gimlet-and-fluxcd)
   - [Helm-Repository | Localstack](#helm-repository--localstack)
   - [Helm-Release | Localstack](#helm-release--localstack)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
-- [Traefik](#traefik)
-- [Configuring the AWS and the Localstack awslocal cli](#configuring-the-aws-and-the-localstack-awslocal-cli)
+  - [Traefik](#traefik)
+- [AWS and Localstack CLI Configuration](#aws-and-localstack-cli-configuration)
 - [Localstack Tools](#localstack-tools)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
-In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
+In [Part 5](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/) we deployed [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configured integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/) and built a demo application to demonstrate Ortelius's ability to record it.
 
-In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli or the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
+In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
-### Roadmap
+### Gimlet GitOps Infrastructure
 
-`localstack --> observability --> secret store --> zerotier --> everything else`
-
-### Localstack
+#### Localstack
 
 In today's cloud-centric world, developing and testing applications that rely on cloud services often presents unique challenges. Developers typically need access to various cloud environments like AWS to test their code. However, setting up and managing these cloud environments can be cumbersome, costly, and time-consuming, especially for frequent testing or when multiple cloud services are involved.
 
@@ -56,16 +52,6 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Localstack applications [here](https://docs.localstack.cloud/applications/)
 - Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
-
-#### References
-
-- [Gimlet](https://gimlet.io/)
-- [Fluxcd](https://fluxcd.io/)
-
-#### Gimlet and Fluxcd
-
-- Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
-- With there powers combined we will deploy LocalStack
 
 #### Helm-Repository | Localstack
 
@@ -167,7 +153,7 @@ spec:
   chart:
     spec:
       chart: localstack
-      version: 0.6.16
+      version: 0.6.16 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: localstack
@@ -480,7 +466,7 @@ kubectl get pods -n infrastructure | grep localstack
 
 - Now that we have deployed Localstack we will move to expose the Localstack endpoints with Traefik
 
-### Traefik
+#### Traefik
 
 - Open your Traefik Helm Chart from the `helm-releases` directory for your infrastructure repo that Gimlet created
 - For example mine is `gitops-pangarabbit-dev-infra/helm-releases`
@@ -547,7 +533,7 @@ git push
 </div>
 <p></p>
 
-- Don't forget to add a dns record for the Localstack domain name you used
+- Don't forget to add a DNS record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
 - Open our terminal and use curl to test the Localstack endpoint
 - You don't need the `:4566` port at the end of the url as Traefik takes care of that when we created the `IngressRoute`
@@ -607,9 +593,9 @@ git push
 * Connection #0 to host localstack.pangarabbit.com left intact
 ```
 
-### Configuring the AWS and the Localstack awslocal cli
+### AWS and Localstack CLI Configuration
 
-- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal` or the AWS cli
+- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal` and the AWS cli
 - To make our lives less painful switching profiles install Granted created by Commonfate
 - Use the Granted `getting started` doc [here](https://docs.commonfate.io/granted/getting-started)
 - Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
@@ -640,7 +626,7 @@ endpoint_url     = https://localstack.pangarabbit.com:4566 # Replace with your e
 addressing_style = path
 ```
 
-- Install Granted for your OS flavour
+- Install [Granted]((https://docs.commonfate.io/granted/getting-started)) for your OS flavour
 - Test that Granted was installed correctly
 
 ```shell
@@ -698,9 +684,9 @@ aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile l
 
 ### Localstack Tools
 
-You can find LocalStack tools [here](https://docs.localstack.cloud/user-guide/tools/). One of these tools, **LocalStack Desktop**, provides a GUI that allows you to view and manage your LocalStack resources and services on your local machine. It also lets you add custom endpoints that you've created.
+You can find LocalStack tools [here](https://docs.localstack.cloud/user-guide/tools/). One of these tools, **Localstack Desktop**, provides a GUI that allows you to view and manage your Localstack resources and services on your local machine. It also lets you add custom endpoints that you've created.
 
-To get LocalStack Desktop, sign up for LocalStack through your browser, where you'll have access to the LocalStack portal. From there, you can manage everything related to your LocalStack setup, including viewing instances and adding custom endpoints.
+To get Localstack Desktop, [sign up for Localstack](https://app.localstack.cloud/sign-up) with your browser, where you'll have access to the Localstack portal. From there, you can manage everything related to your Localstack setup, including viewing instances and adding custom endpoints.
 
 You can access the LocalStack portal at this URL: `https://app.localstack.cloud/dashboard`. Once inside, look for the **LocalStack Desktop** menu item.
 
@@ -742,3 +728,27 @@ You can access the LocalStack portal at this URL: `https://app.localstack.cloud/
 You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoint through Traefik.
 
 Happy alien hunting.....
+
+<!-- ### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://linktr.ee/sachawharton)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}

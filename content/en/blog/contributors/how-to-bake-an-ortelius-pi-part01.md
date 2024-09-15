@@ -11,7 +11,6 @@ author: Sacha Wharton
 <p></p>
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [My Home Setup](#my-home-setup)
 - [NFS Storage](#nfs-storage)
 - [Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation](#raspberry-pi-imaging-utility-for-the-ubuntu-2204-lts-x64-os-installation)
@@ -28,10 +27,6 @@ author: Sacha Wharton
 I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts.
 
 Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
-
-### Roadmap
-
-`hardware --> networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### My Home Setup
 
@@ -68,7 +63,7 @@ Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-
 
 ### Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation
 
-The imaging utility will be used install Ubuntu onto your SD Card or USB flash drive.
+The imaging utility will be used to install Ubuntu onto your SD Card or USB flash drive.
 
 - [Raspberry Pi imaging Utility](https://www.raspberrypi.com/software/)
 - [Ubuntu Server 22.04 LTS x64 for Raspberry Pi](https://ubuntu.com/download/raspberry-pi)
@@ -288,7 +283,7 @@ By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS eac
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}

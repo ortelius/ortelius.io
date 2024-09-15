@@ -11,13 +11,12 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Kubernetes](#kubernetes)
   - [CRDs](#crds)
   - [Context and Namespace Switching](#context-and-namespace-switching)
 - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
 - [Gimlet](#gimlet)
-  - [Gimlet Repostories](#gimlet-repostories)
+  - [Gimlet Application Repostories](#gimlet-application-repostories)
   - [Gimlet Environments](#gimlet-environments)
   - [Gimlet Environment Config](#gimlet-environment-config)
   - [Gimlet Observability](#gimlet-observability)
@@ -34,35 +33,33 @@ author: Sacha Wharton
   - [Github check](#github-check)
   - [Github Gimlet repo check](#github-gimlet-repo-check)
   - [Gimlet Gitops Infra](#gimlet-gitops-infra)
-  - [Gimlet Gitops Apps](#gimlet-gitops-apps)
+  - [Gimlet Gitops Applications](#gimlet-gitops-applications)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
-  - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-- [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Kubernetes CSI NFS Driver Deployment](#kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
-  - [Kubernetes Cert Manager](#kubernetes-cert-manager)
-- [Gimlet | Cert Manager](#gimlet--cert-manager)
+  - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
   - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
   - [Helm-Release | Cert Manager](#helm-release--cert-manager)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
   - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
-- [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
+  - [Metallb Load-Balancer For Bare Metal Kubernetes Deployment](#metallb-load-balancer-for-bare-metal-kubernetes-deployment)
   - [Helm-Repository | Metallb](#helm-repository--metallb)
   - [Helm-Release | Metallb](#helm-release--metallb)
   - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
   - [Kubernetes check | Metallb](#kubernetes-check--metallb)
-- [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
+  - [Traefik the Cloud Native Proxy Deployment](#traefik-the-cloud-native-proxy-deployment)
   - [Helm-Repository | Traefik](#helm-repository--traefik)
   - [Helm-Release | Traefik](#helm-release--traefik)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment-1)
-  - [Manifest Folder | Traefik](#manifest-folder--traefik)
+  - [Gimlet Manifest Folder | Traefik](#gimlet-manifest-folder--traefik)
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
   - [Traefik Dashboard](#traefik-dashboard)
   - [Further reading | Traefik](#further-reading--traefik)
-- [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
+  - [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
   - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
   - [Helm-Repository | Ortelius](#helm-repository--ortelius)
   - [Helm-Release | Ortelius](#helm-release--ortelius)
@@ -77,11 +74,7 @@ In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
-I have included the full `values.yaml` configuration from the provider to provide an educational element from the early career start to the seasoned engineer. In contrast to this you could just provide your changes thus making less lines of code and a whole lot less scrolling.
-
-### Roadmap
-
-`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
+I have included the full Helm Chart `values.yaml` configuration from the provider to provide an educational element. In contrast to this I could just show the changes thus making less lines of code and a whole lot less scrolling but I wanted to give a full picture of the configuration and layout the application like a block of clay that you will shape to suit your needs.
 
 ### Kubernetes
 
@@ -156,12 +149,12 @@ Gimlet uses the concepts of Kubernetes infrastructure and Kubernetes application
 
 Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) and [Cloud hosted](https://app.gimlet.io). I am using Cloud hosted due to the very generous humans at Gimlet.
 
-#### Gimlet Repostories
+#### Gimlet Application Repostories
 
 - When the Gimlet dashboard loads you will be met with the repostories section which is where you import your `application` repos to be managed by the GitOps process
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png" alt="gimlet repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-app-repos.png" alt="gimlet app repos"/>
 </div>
 <p></p>
 
@@ -170,10 +163,9 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 - Environments are the representation of your journey to getting your applications to the end user such as dev, staging and production
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environment"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environments"/>
 </div>
 <p></p>
-
 
 #### Gimlet Environment Config
 
@@ -202,7 +194,13 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 </div>
 <p></p>
 
+As you can see Gimlet is the human friendly inteface into the inner workings of Fluxcd our GitOps Operator. The Gimlet team have done a fantastic job to make this possible. Please go and check out [Gimlet](https://gimlet.io)
+
 ### Fluxcd
+
+[FluxCD](https://fluxcd.io/) is a powerful, open-source GitOps tool designed to automate the continuous delivery (CD) of applications in Kubernetes. It enables a Git-centric approach to deploying and managing Kubernetes clusters, where the desired state of the system is defined in version-controlled repositories (like Git), and Flux ensures that the cluster always stays in sync with this state.
+
+By automating the reconciliation of cluster state with the contents of your Git repository, Flux simplifies deployment workflows, improves reliability, and brings better control over application releases. Whether you're scaling microservices, rolling out updates, or managing infrastructure, FluxCD empowers teams to manage Kubernetes environments with increased confidence and efficiency.
 
 - [Documentation](https://fluxcd.io/flux/)
 - [Flux CLI](https://fluxcd.io/flux/cmd/)
@@ -386,7 +384,7 @@ kubectl get pods
 </div>
 <p></p>
 
-#### Gimlet Gitops Apps
+#### Gimlet Gitops Applications
 
 - Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp` if you can't wait for the blog post
 
@@ -412,7 +410,7 @@ git clone https://github.com/<your-profile>/gitops-<your-environment>-apps.git
 
 ### Gimlet GitOps Infrastructure
 
-#### Kubernetes CSI NFS Driver
+#### Kubernetes CSI NFS Driver Deployment
 
 With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to our pods using the Synology NAS as the central storage server.
 
@@ -423,8 +421,6 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
-
-### Gimlet Kubernetes CSI NFS Driver Deployment
 
 #### Helm-Repository | CSI NFS Driver
 
@@ -458,19 +454,18 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: csi-driver-nfs
-  namespace: kube-system # To be installed in the kube-system namespace as required by the csi-driver-nfs
+  namespace: kube-system
 spec:
   interval: 60m
-  releaseName: csi-driver-nfs # Helm Chart release name
+  releaseName: csi-driver-nfs
   chart:
     spec:
-      chart: csi-driver-nfs # Name of the Helm Chart
-      version: v4.8.0 # Version of the csi-driver-nfs | If a new version comes out simply update here
+      chart: csi-driver-nfs
+      version: v4.9.0 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
       interval: 10m
-  # values: your values go here to override the default values
   values:
     customLabels: {}
     image:
@@ -518,11 +513,12 @@ spec:
       enableInlineVolume: false
       propagateHostMountOptions: false
 
-      kubeletDir: /var/snap/microk8s/common/var/lib/kubelet # This path is specific to MicroK8s as per the documentation
+    kubeletDir: "/var/snap/microk8s/common/var/lib/kubelet"
+    #kubeletDir: "/var/lib/kubelet"
 
     controller:
       name: csi-nfs-controller
-      replicas: 3 # Change amount of replicas
+      replicas: 3
       strategyType: Recreate
       runOnMaster: false
       runOnControlPlane: false
@@ -634,19 +630,19 @@ spec:
       annotations:
         storageclass.kubernetes.io/is-default-class: "true"
       provisioner: nfs.csi.k8s.io
-      reclaimPolicy: Delete # PersistentVolumes can have various reclaim policies, including "Retain", "Recycle", and "Delete"
-                            # Kubernetes docs https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/
       parameters:
         server: 192.168.0.152 # Replace with your nfs server ip or FQDN
         share: /volume4/pi8s/ # Replace with your nfs volume share
-        #subDir:
+        subDir:
         mountPermissions: "0"
         # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
         # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
         # csi.storage.k8s.io/provisioner-secret-namespace: "kube-system"
-        csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+        #csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+        #onDelete: retain
       allowVolumeExpansion: true
-      volumeBindingMode: WaitForFirstConsumer # Default value is Delete
+      reclaimPolicy: Delete # Default value is Delete
+      volumeBindingMode: Immediate
       mountOptions: # Volume mount options for the storage class can be set here
         - nfsvers=4
 ```
@@ -759,7 +755,7 @@ Here are some examples.
 
 Great we now have Kubernetes managing NFS volume mounts dynamically!
 
-#### Kubernetes Cert Manager
+#### Kubernetes Cert Manager Deployment
 
 With [Cert Manager](https://cert-manager.io/) we will manage all our certificate needs.
 
@@ -768,8 +764,6 @@ With [Cert Manager](https://cert-manager.io/) we will manage all our certificate
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
 - Helm Chart reference [here](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
 - [What Is SSL? How Do SSL Certificates Work?](https://dzone.com/articles/what-is-ssl-how-do-ssl-certificates-work)
-
-### Gimlet | Cert Manager
 
 #### Helm-Repository | Cert Manager
 
@@ -852,7 +846,7 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      version: v1.15.1
+      version: v1.15.1 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: external
@@ -2251,7 +2245,7 @@ kubectl get pods -n kube-system | grep cert
 
 Great we now have infrastructure for managing certificates!
 
-### Metallb load-balancer for bare metal Kubernetes
+#### Metallb Load-Balancer For Bare Metal Kubernetes Deployment
 
 With Metallb we will setup a unique IP address on our home network to expose the Microservices running in our Kubernetes cluster. A public cloud provider would give you this during the deployment of your Kubernetes cluster but since we are the cloud we need to provide it and thats where [Metallb](https://metallb.universe.tf/) comes in.
 
@@ -2300,7 +2294,7 @@ spec:
   chart:
     spec:
       chart: metallb
-      version: v0.14.8
+      version: v0.14.8 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: metallb
@@ -2750,7 +2744,7 @@ kubectl get crds | grep metallb
 </div>
 <p></p>
 
-- Kubectl show me the ip address pools for Metallb
+- Kubectl show me the IP address pools for Metallb
 
 ```shell
 kubectl get ipaddresspools.metallb.io -n infrastructure
@@ -2763,7 +2757,7 @@ kubectl get ipaddresspools.metallb.io -n infrastructure
 
 Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy and which Traefik Proxy can bind to.
 
-### Traefik the Cloud Native Proxy
+#### Traefik the Cloud Native Proxy Deployment
 
 With [Traefik Proxy](https://traefik.io/) we can now direct traffic destined for our Microservices into the Kubernetes cluster and protect our endpoints using a combination of entrypoints, routers, services, providers and middlewares.
 
@@ -2872,7 +2866,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 30.0.0
+      version: 31.0.0 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: traefik
@@ -3800,7 +3794,7 @@ spec:
       sendlogs:
 ```
 
-#### Manifest Folder | Traefik
+#### Gimlet Manifest Folder | Traefik
 
 - The folks at Traefik put this nice piece of logic in the Helm Chart that allows you to create a config file which is dynamically monitored by Traefik
 - I am using this to manage the Lets Encrypt certicate renewal in conjunction with Cloudflare
@@ -3910,7 +3904,7 @@ kubectl get crds | grep traefik
 #### Traefik Dashboard
 
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
-- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
+- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private IP` and `traefik.yourdomain.tld` e.g. `traefik.pangarabbit.com`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
 - Remember to note that all things infrastructure are created in the `infrastructure` namespace
 
@@ -3951,7 +3945,7 @@ kubectl get ingressroutes.traefik.io -n infrastructure
 </div>
 <p></p>
 
-- Kubectl show me that the Traefik service has claimed our Metallb single ip address
+- Kubectl show me that the Traefik service has claimed our Metallb single IP address
 
 ```shell
 kubectl get svc -n infrastructure
@@ -3988,9 +3982,9 @@ netdata                                 ClusterIP    10.152.183.110 <none>      
 traefik                                 LoadBalancer 10.152.183.135 192.168.0.151 80:31662/TCP,443:30850/TCP  4d19h
 ```
 
-Brilliant our Traefik Proxy has claimed the ip.
+Brilliant our Traefik Proxy has claimed the IP.
 
-What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb ip` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
+What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb IP` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
 
 Hopefully you should be able to access your dashboard at the FQDN e.g. `traefik.pangarabbit.com`
 
@@ -4008,7 +4002,7 @@ If you would like to dig deeper into Traefiks API capabilities please go to the 
 </div>
 <p></p>
 
-### Ortelius The Ultimate Evidence Store
+#### Ortelius The Ultimate Evidence Store
 
 Well done for making it this far! We have made it to the point where we can deploy Ortelius into our Kubernetes cluster and configure Ortelius to be accessed through Traefik Proxy.
 
@@ -4064,7 +4058,7 @@ spec:
   chart:
     spec:
       chart: ortelius
-      version: v10.0.4533
+      version: v10.0.4533 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: ortelius
@@ -4157,7 +4151,7 @@ Happy alien hunting.......
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
