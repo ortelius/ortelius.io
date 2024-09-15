@@ -26,9 +26,9 @@ author: Sacha Wharton
 
 ### Introduction
 
-In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
+In [Part 5](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/) we deployed [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configured integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/) and built a demo application to demonstrate Ortelius's ability to record it.
 
-In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli or the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
+In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
 ### Gimlet GitOps Infrastructure
 

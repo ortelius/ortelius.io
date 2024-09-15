@@ -74,7 +74,7 @@ In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
-I have included the full `values.yaml` configuration from the provider to provide an educational element. In contrast to this I could just show the changes thus making less lines of code and a whole lot less scrolling but I wanted to give a full picture of the configuration.
+I have included the full Helm Chart `values.yaml` configuration from the provider to provide an educational element. In contrast to this I could just show the changes thus making less lines of code and a whole lot less scrolling but I wanted to give a full picture of the configuration and layout the application like a block of clay that you will shape to suit your needs.
 
 ### Kubernetes
 
