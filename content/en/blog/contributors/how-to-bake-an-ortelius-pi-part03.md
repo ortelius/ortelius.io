@@ -16,7 +16,7 @@ author: Sacha Wharton
   - [Context and Namespace Switching](#context-and-namespace-switching)
 - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
 - [Gimlet](#gimlet)
-  - [Gimlet Repostories](#gimlet-repostories)
+  - [Gimlet Application Repostories](#gimlet-application-repostories)
   - [Gimlet Environments](#gimlet-environments)
   - [Gimlet Environment Config](#gimlet-environment-config)
   - [Gimlet Observability](#gimlet-observability)
@@ -151,12 +151,12 @@ Gimlet uses the concepts of Kubernetes infrastructure and Kubernetes application
 
 Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) and [Cloud hosted](https://app.gimlet.io). I am using Cloud hosted due to the very generous humans at Gimlet.
 
-#### Gimlet Repostories
+#### Gimlet Application Repostories
 
 - When the Gimlet dashboard loads you will be met with the repostories section which is where you import your `application` repos to be managed by the GitOps process
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png" alt="gimlet repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-app-repos.png" alt="gimlet app repos"/>
 </div>
 <p></p>
 
@@ -165,10 +165,9 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 - Environments are the representation of your journey to getting your applications to the end user such as dev, staging and production
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environment"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environments"/>
 </div>
 <p></p>
-
 
 #### Gimlet Environment Config
 
@@ -197,7 +196,13 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 </div>
 <p></p>
 
+As you can see Gimlet is the human friendly inteface into the inner workings of Fluxcd our GitOps Operator. The Gimlet team have done a fantastic job to make this possible. Please go and check out [Gimlet](https://gimlet.io)
+
 ### Fluxcd
+
+[FluxCD](https://fluxcd.io/) is a powerful, open-source GitOps tool designed to automate the continuous delivery (CD) of applications in Kubernetes. It enables a Git-centric approach to deploying and managing Kubernetes clusters, where the desired state of the system is defined in version-controlled repositories (like Git), and Flux ensures that the cluster always stays in sync with this state.
+
+By automating the reconciliation of cluster state with the contents of your Git repository, Flux simplifies deployment workflows, improves reliability, and brings better control over application releases. Whether you're scaling microservices, rolling out updates, or managing infrastructure, FluxCD empowers teams to manage Kubernetes environments with increased confidence and efficiency.
 
 - [Documentation](https://fluxcd.io/flux/)
 - [Flux CLI](https://fluxcd.io/flux/cmd/)
