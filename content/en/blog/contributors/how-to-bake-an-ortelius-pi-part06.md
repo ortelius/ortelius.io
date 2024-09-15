@@ -742,3 +742,27 @@ You can access the LocalStack portal at this URL: `https://app.localstack.cloud/
 You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoint through Traefik.
 
 Happy alien hunting.....
+
+<!-- ### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}

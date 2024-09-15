@@ -2358,3 +2358,27 @@ Commit message: "🛠 NEW: jenkins pod templates"
 Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used in an Enterprise environment to record SBOMS in a CI tool such as Jenkins. At this time of writing we are fixing the SBOM and Scorecard microservices to work with ARM architecture that is used on the Pi 4 to make them backward compatible. Hence if you are using that architecture you can't record your SBOM and Scorecard info.
 
 Happy alien hunting.....
+
+<!-- ### Next Steps
+
+[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Author</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
+- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
