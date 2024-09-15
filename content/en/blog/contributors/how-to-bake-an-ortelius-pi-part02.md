@@ -435,7 +435,7 @@ By this stage you should have three Pi's each with MicroK8s in an HA configurati
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}

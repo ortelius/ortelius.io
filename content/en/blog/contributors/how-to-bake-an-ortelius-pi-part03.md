@@ -4157,7 +4157,7 @@ Happy alien hunting.......
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}

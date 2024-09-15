@@ -288,7 +288,7 @@ By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS eac
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
