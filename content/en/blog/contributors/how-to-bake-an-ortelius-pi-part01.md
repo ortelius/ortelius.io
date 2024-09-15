@@ -68,7 +68,7 @@ Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-
 
 ### Raspberry Pi Imaging Utility for the Ubuntu 22.04 LTS x64 OS installation
 
-The imaging utility will be used install Ubuntu onto your SD Card or USB flash drive.
+The imaging utility will be used to install Ubuntu onto your SD Card or USB flash drive.
 
 - [Raspberry Pi imaging Utility](https://www.raspberrypi.com/software/)
 - [Ubuntu Server 22.04 LTS x64 for Raspberry Pi](https://ubuntu.com/download/raspberry-pi)
