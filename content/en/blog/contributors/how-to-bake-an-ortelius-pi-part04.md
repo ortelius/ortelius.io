@@ -11,7 +11,6 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Cloudflare | Connectivity Cloud](#cloudflare--connectivity-cloud)
   - [Buying a domain name](#buying-a-domain-name)
   - [SSL/TLS](#ssltls)
@@ -27,10 +26,6 @@ author: Sacha Wharton
 In [part 3](https://ortelius.io/blog/2024/08/08/how-to-bake-an-ortelius-pi-part-3-the-gitops-configuration/), of this series we used the [GitOps Methodology](https://opengitops.dev/) to deploy the [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
 In part 4 we will setup [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io) to secure incoming requests with certificates.
-
-### Roadmap
-
-`cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Cloudflare | Connectivity Cloud
 

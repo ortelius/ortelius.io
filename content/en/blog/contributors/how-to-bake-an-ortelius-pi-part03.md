@@ -11,7 +11,6 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Kubernetes](#kubernetes)
   - [CRDs](#crds)
   - [Context and Namespace Switching](#context-and-namespace-switching)
@@ -78,10 +77,6 @@ In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
 I have included the full `values.yaml` configuration from the provider to provide an educational element from the early career start to the seasoned engineer. In contrast to this you could just provide your changes thus making less lines of code and a whole lot less scrolling.
-
-### Roadmap
-
-`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Kubernetes
 

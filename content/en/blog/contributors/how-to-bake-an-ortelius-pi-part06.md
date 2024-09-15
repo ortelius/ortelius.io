@@ -11,7 +11,6 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Localstack](#localstack)
   - [Deploy Localstack](#deploy-localstack)
   - [References](#references)
@@ -31,10 +30,6 @@ author: Sacha Wharton
 In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integration with Ortelius and GitHub and built a demo application to demonstrate Ortelius's ability to record it.
 
 In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli or the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
-
-### Roadmap
-
-`localstack --> observability --> secret store --> zerotier --> everything else`
 
 ### Localstack
 

@@ -11,7 +11,6 @@ author: Sacha Wharton
 <p></p>
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [IP Addresses and DHCP](#ip-addresses-and-dhcp)
 - [DNS](#dns)
   - [Local.gd](#localgd)
@@ -33,10 +32,6 @@ author: Sacha Wharton
 ### Introduction
 
 In [part 1](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/), of this series we installed Ubuntu Server 22.04.4 LTS on our Raspberry Pis. In Part 2 we will prepare our three Pis for DHCP, DNS, NFS (Network File System) storage with a [Synology NAS](https://www.synology.com/) and install [MicroK8s](https://microk8s.io/).
-
-### Roadmap
-
-`networking --> orchestrator --> storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> ZeroTier --> everything else`
 
 ### IP Addresses and DHCP
 
