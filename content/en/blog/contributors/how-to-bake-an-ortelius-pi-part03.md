@@ -33,10 +33,10 @@ author: Sacha Wharton
   - [Github check](#github-check)
   - [Github Gimlet repo check](#github-gimlet-repo-check)
   - [Gimlet Gitops Infra](#gimlet-gitops-infra)
-  - [Gimlet Gitops Apps](#gimlet-gitops-apps)
+  - [Gimlet Gitops Applications](#gimlet-gitops-applications)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
   - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-- [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
@@ -386,7 +386,7 @@ kubectl get pods
 </div>
 <p></p>
 
-#### Gimlet Gitops Apps
+#### Gimlet Gitops Applications
 
 - Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp` if you can't wait for the blog post
 
@@ -424,7 +424,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
 
-### Gimlet Kubernetes CSI NFS Driver Deployment
+#### Gimlet Kubernetes CSI NFS Driver Deployment
 
 #### Helm-Repository | CSI NFS Driver
 
@@ -458,19 +458,18 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: csi-driver-nfs
-  namespace: kube-system # To be installed in the kube-system namespace as required by the csi-driver-nfs
+  namespace: kube-system
 spec:
   interval: 60m
-  releaseName: csi-driver-nfs # Helm Chart release name
+  releaseName: csi-driver-nfs
   chart:
     spec:
-      chart: csi-driver-nfs # Name of the Helm Chart
-      version: v4.8.0 # Version of the csi-driver-nfs | If a new version comes out simply update here
+      chart: csi-driver-nfs
+      version: v4.9.0
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
       interval: 10m
-  # values: your values go here to override the default values
   values:
     customLabels: {}
     image:
@@ -518,11 +517,12 @@ spec:
       enableInlineVolume: false
       propagateHostMountOptions: false
 
-      kubeletDir: /var/snap/microk8s/common/var/lib/kubelet # This path is specific to MicroK8s as per the documentation
+    kubeletDir: "/var/snap/microk8s/common/var/lib/kubelet"
+    #kubeletDir: "/var/lib/kubelet"
 
     controller:
       name: csi-nfs-controller
-      replicas: 3 # Change amount of replicas
+      replicas: 3
       strategyType: Recreate
       runOnMaster: false
       runOnControlPlane: false
@@ -634,19 +634,19 @@ spec:
       annotations:
         storageclass.kubernetes.io/is-default-class: "true"
       provisioner: nfs.csi.k8s.io
-      reclaimPolicy: Delete # PersistentVolumes can have various reclaim policies, including "Retain", "Recycle", and "Delete"
-                            # Kubernetes docs https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/
       parameters:
         server: 192.168.0.152 # Replace with your nfs server ip or FQDN
         share: /volume4/pi8s/ # Replace with your nfs volume share
-        #subDir:
+        subDir:
         mountPermissions: "0"
         # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
         # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
         # csi.storage.k8s.io/provisioner-secret-namespace: "kube-system"
-        csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+        #csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+        #onDelete: retain
       allowVolumeExpansion: true
-      volumeBindingMode: WaitForFirstConsumer # Default value is Delete
+      reclaimPolicy: Delete # Default value is Delete
+      volumeBindingMode: Immediate
       mountOptions: # Volume mount options for the storage class can be set here
         - nfsvers=4
 ```
