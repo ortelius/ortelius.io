@@ -12,10 +12,9 @@ author: Sacha Wharton
 
 - [Introduction](#introduction)
 - [Jenkins](#jenkins)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
   - [Deploy Jenkins](#deploy-jenkins)
-  - [References](#references)
   - [Plugins](#plugins)
-- [Gimlet and Fluxcd](#gimlet-and-fluxcd)
   - [Helm-Repository | Jenkins](#helm-repository--jenkins)
   - [Helm-Release | Jenkins](#helm-release--jenkins)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
@@ -29,14 +28,15 @@ author: Sacha Wharton
   - [Creating a Multibranch Pipeline](#creating-a-multibranch-pipeline)
   - [Jenkins meets Ortelius](#jenkins-meets-ortelius)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
-In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. In Part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
+In Part 4 we configured a certificate for our domain using [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io/). In Part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
 
 ### Jenkins
 
-Jenkins is an open-source automation server that helps developers build, test, and deploy their software reliably and efficiently. It's widely known for its role in continuous integration (CI) and continuous delivery (CD), allowing teams to automate tasks, improve workflows, and streamline software development pipelines.
+[Jenkins](https://www.jenkins.io/) is an open-source automation server that helps developers build, test, and deploy their software reliably and efficiently. It's widely known for its role in continuous integration (CI) and continuous delivery (CD), allowing teams to automate tasks, improve workflows, and streamline software development pipelines.
 
 Below we can see a typical architecture that you might find in the wild.
 
@@ -46,6 +46,8 @@ Below we can see a typical architecture that you might find in the wild.
 <p></p>
 
 Connecting a Jenkins master and agent involves setting up the Jenkins master server to distribute tasks to agents for execution. Jenkins agents help offload work from the master, allowing for parallel execution of jobs, and can be set up to handle specific tasks such as building on different platforms or environments. You can either use SSH, Java Web Start (JNLP), or a custom agent setup for communication.
+
+### Gimlet GitOps Infrastructure
 
 #### Deploy Jenkins
 
@@ -58,19 +60,9 @@ Right lets get stuck in and deploy Jenkins using Gimlet, Fluxcd, Helm and a spri
 - Jenkins Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
 - Jenkins Plugins [here](https://www.jenkins.io/plugins/)
 
-#### References
-
-- [Gimlet](https://gimlet.io/)
-- [Fluxcd](https://fluxcd.io/)
-
 #### Plugins
 
 Jenkins plugins are add-ons that extend the core functionality of Jenkins. Plugins allow Jenkins to integrate with various tools, languages, and services that you may use in your development pipeline. Plugins can be added through the GUI without being affected by Fluxcd's drift detection.
-
-### Gimlet and Fluxcd
-
-- Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
-- With there powers combined we will deploy Jenkins
 
 #### Helm-Repository | Jenkins
 
@@ -152,7 +144,7 @@ spec:
   chart:
     spec:
       chart: jenkins
-      version: v5.5.14
+      version: v5.5.14 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: jenkins
@@ -2012,7 +2004,6 @@ You can view your pod templates by following these steps.
 </div>
 <p></p>
 
-
 - Open your terminal and lets exec onto the Jenkins pod
 
 ```shell
@@ -2078,7 +2069,7 @@ kubectl get pvc | grep jenkins
 - Go through the rest of the settings and click on the `?` for more information about the checkboxes
 - Click `Save`
 - You should see backups appearing in your `backup` directory on your NFS storage server at midnight if you used the cron above
-- Jenkins coventienly zips the backup set to save storage space
+- Jenkins coveniently zips the backup set to save storage space
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
@@ -2109,7 +2100,7 @@ kubectl create ns app
 <p></p>
 
 - Configure the `Multibranch Pipeline` as follows
-- Ignore the Jenkings `Shared Library` configuration
+- Ignore the Jenkins `Shared Library` configuration
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/28-jenkins-multibranch-pipeline-configuration.png" alt="jenkins multibranch pipeline configuration"/>
@@ -2354,9 +2345,9 @@ Hopefully you got this far and I did not forget some crucial configuration or st
 
 Happy alien hunting.....
 
-<!-- ### Next Steps
+### Next Steps
 
-[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 6 | Cloud Dev At Home With Localstack](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/)
 
 {{< blocks/section color=white >}}
 

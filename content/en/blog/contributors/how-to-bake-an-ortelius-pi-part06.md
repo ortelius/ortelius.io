@@ -11,10 +11,9 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Localstack](#localstack)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
+  - [Localstack](#localstack)
   - [Deploy Localstack](#deploy-localstack)
-  - [References](#references)
-  - [Gimlet and Fluxcd](#gimlet-and-fluxcd)
   - [Helm-Repository | Localstack](#helm-repository--localstack)
   - [Helm-Release | Localstack](#helm-release--localstack)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
@@ -31,7 +30,9 @@ In Part 5 we deployed Jenkins on our Kubernetes cluster and configured integrati
 
 In Part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli or the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
-### Localstack
+### Gimlet GitOps Infrastructure
+
+#### Localstack
 
 In today's cloud-centric world, developing and testing applications that rely on cloud services often presents unique challenges. Developers typically need access to various cloud environments like AWS to test their code. However, setting up and managing these cloud environments can be cumbersome, costly, and time-consuming, especially for frequent testing or when multiple cloud services are involved.
 
@@ -51,16 +52,6 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Localstack applications [here](https://docs.localstack.cloud/applications/)
 - Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
-
-#### References
-
-- [Gimlet](https://gimlet.io/)
-- [Fluxcd](https://fluxcd.io/)
-
-#### Gimlet and Fluxcd
-
-- Remember we are using Gimlet as the UI for Fluxcd and Fluxcd is performing the GitOps role under the hood
-- With there powers combined we will deploy LocalStack
 
 #### Helm-Repository | Localstack
 
@@ -162,7 +153,7 @@ spec:
   chart:
     spec:
       chart: localstack
-      version: 0.6.16
+      version: 0.6.16 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: localstack

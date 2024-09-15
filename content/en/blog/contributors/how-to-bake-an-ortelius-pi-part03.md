@@ -59,7 +59,7 @@ author: Sacha Wharton
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
   - [Traefik Dashboard](#traefik-dashboard)
   - [Further reading | Traefik](#further-reading--traefik)
-- [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
+  - [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
   - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
   - [Helm-Repository | Ortelius](#helm-repository--ortelius)
   - [Helm-Release | Ortelius](#helm-release--ortelius)
@@ -461,7 +461,7 @@ spec:
   chart:
     spec:
       chart: csi-driver-nfs
-      version: v4.9.0
+      version: v4.9.0 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
@@ -846,7 +846,7 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      version: v1.15.1
+      version: v1.15.1 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: external
@@ -2294,7 +2294,7 @@ spec:
   chart:
     spec:
       chart: metallb
-      version: v0.14.8
+      version: v0.14.8 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: metallb
@@ -2866,7 +2866,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 30.0.0
+      version: 31.0.0 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: traefik
@@ -4002,7 +4002,7 @@ If you would like to dig deeper into Traefiks API capabilities please go to the 
 </div>
 <p></p>
 
-### Ortelius The Ultimate Evidence Store
+#### Ortelius The Ultimate Evidence Store
 
 Well done for making it this far! We have made it to the point where we can deploy Ortelius into our Kubernetes cluster and configure Ortelius to be accessed through Traefik Proxy.
 
@@ -4058,7 +4058,7 @@ spec:
   chart:
     spec:
       chart: ortelius
-      version: v10.0.4533
+      version: v10.0.4533 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: ortelius
