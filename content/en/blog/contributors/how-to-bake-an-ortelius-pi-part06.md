@@ -19,8 +19,8 @@ author: Sacha Wharton
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
-- [Traefik](#traefik)
-- [Configuring the AWS and the Localstack awslocal cli](#configuring-the-aws-and-the-localstack-awslocal-cli)
+  - [Traefik](#traefik)
+- [AWS and Localstack CLI Configuration](#aws-and-localstack-cli-configuration)
 - [Localstack Tools](#localstack-tools)
 - [Conclusion](#conclusion)
 
@@ -466,7 +466,7 @@ kubectl get pods -n infrastructure | grep localstack
 
 - Now that we have deployed Localstack we will move to expose the Localstack endpoints with Traefik
 
-### Traefik
+#### Traefik
 
 - Open your Traefik Helm Chart from the `helm-releases` directory for your infrastructure repo that Gimlet created
 - For example mine is `gitops-pangarabbit-dev-infra/helm-releases`
@@ -533,7 +533,7 @@ git push
 </div>
 <p></p>
 
-- Don't forget to add a dns record for the Localstack domain name you used
+- Don't forget to add a DNS record for the Localstack domain name you used
 - If everything went well you should be able to curl the Localstack endpoint with the domain name that you chose for example mine is `https://localstack.pangarabbit.com`
 - Open our terminal and use curl to test the Localstack endpoint
 - You don't need the `:4566` port at the end of the url as Traefik takes care of that when we created the `IngressRoute`
@@ -593,9 +593,9 @@ git push
 * Connection #0 to host localstack.pangarabbit.com left intact
 ```
 
-### Configuring the AWS and the Localstack awslocal cli
+### AWS and Localstack CLI Configuration
 
-- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal` or the AWS cli
+- Lets test to see if we can create a S3 bucket using the Localstack AWS wrapper command line tool called `awslocal` and the AWS cli
 - To make our lives less painful switching profiles install Granted created by Commonfate
 - Use the Granted `getting started` doc [here](https://docs.commonfate.io/granted/getting-started)
 - Please install the Localstack AWS cli wrapper tool [here](https://docs.localstack.cloud/user-guide/integrations/aws-cli/)
@@ -626,7 +626,7 @@ endpoint_url     = https://localstack.pangarabbit.com:4566 # Replace with your e
 addressing_style = path
 ```
 
-- Install Granted for your OS flavour
+- Install [Granted]((https://docs.commonfate.io/granted/getting-started)) for your OS flavour
 - Test that Granted was installed correctly
 
 ```shell
@@ -684,9 +684,9 @@ aws s3api list-buckets --endpoint https://localstack.pangarabbit.com --profile l
 
 ### Localstack Tools
 
-You can find LocalStack tools [here](https://docs.localstack.cloud/user-guide/tools/). One of these tools, **LocalStack Desktop**, provides a GUI that allows you to view and manage your LocalStack resources and services on your local machine. It also lets you add custom endpoints that you've created.
+You can find LocalStack tools [here](https://docs.localstack.cloud/user-guide/tools/). One of these tools, **Localstack Desktop**, provides a GUI that allows you to view and manage your Localstack resources and services on your local machine. It also lets you add custom endpoints that you've created.
 
-To get LocalStack Desktop, sign up for LocalStack through your browser, where you'll have access to the LocalStack portal. From there, you can manage everything related to your LocalStack setup, including viewing instances and adding custom endpoints.
+To get Localstack Desktop, [sign up for Localstack](https://app.localstack.cloud/sign-up) with your browser, where you'll have access to the Localstack portal. From there, you can manage everything related to your Localstack setup, including viewing instances and adding custom endpoints.
 
 You can access the LocalStack portal at this URL: `https://app.localstack.cloud/dashboard`. Once inside, look for the **LocalStack Desktop** menu item.
 
