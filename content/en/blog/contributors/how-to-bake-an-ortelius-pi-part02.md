@@ -275,7 +275,7 @@ Great DNS is done!
 - This `192.168.0.0/24` indicates that only the devices on this subnet can access NFS
 - Replace `192.168.0.0/24` with your network subnet which you can get from your DHCP configuration
 
-- Congrats you just configured the Synology for NFS!
+Congrats you just configured the Synology for NFS!
 
 ### OS Prep
 
