@@ -297,10 +297,10 @@ kubectl port-forward svc/gimlet 9000:9000
 <img src="/images/how-to-bake-an-ortelius-pi/part03/35-gimlet-admin-ui.png" alt="gimlet admin key login"/>
 </div>
 
-- For finding the admin key, type this command in the terminal
+- To Find the admin key, type this command in the terminal
 
 ```shell
-$ kubectl logs deploy/gimlet | grep "Admin auth key"
+kubectl logs deploy/gimlet | grep "Admin auth key"
 time="2023-07-14T14:28:59Z" level=info msg="Admin auth key: 1c04722af2e830c319e590xxxxxxxx" file="[dashboard.go:55]"
 ```
 
