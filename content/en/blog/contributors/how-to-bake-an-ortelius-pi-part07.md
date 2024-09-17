@@ -1,7 +1,7 @@
 ---
 date: 2024-08-10
-title: "How to Bake an Ortelius Pi Part 6 | Cloud Dev At Home With Localstack"
-linkTitle: "How to Bake an Ortelius Pi Part 6 | Cloud Dev At Home With Localstack"
+title: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
+linkTitle: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
 author: Sacha Wharton
 ---
 
@@ -13,11 +13,11 @@ author: Sacha Wharton
 - [Introduction](#introduction)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
   - [Localstack](#localstack)
-  - [Deploy Localstack](#deploy-localstack)
-  - [Helm-Repository | Loc](#helm-repository--loc)
+  - [Deploy Netdata](#deploy-netdata)
+  - [Helm-Repository | Netdata](#helm-repository--netdata)
   - [Helm-Release | Netdata](#helm-release--netdata)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
-  - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
+  - [Fluxcd is doing the following under the hood | Netdata](#fluxcd-is-doing-the-following-under-the-hood--netdata)
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
 - [Conclusion](#conclusion)
 
@@ -25,18 +25,19 @@ author: Sacha Wharton
 
 In Part 6 we deployed [LocalStack](https://www.localstack.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
+In part 7 we will deploy [Netdata](https://www.netdata.cloud/)
+
 ### Gimlet GitOps Infrastructure
 
+#### Netdata
 
-#### Localstack
-
-In today's cloud-centric world, developing and testing applications that rely on cloud services often presents unique challenges. Developers typically need access to various cloud environments like AWS to test their code. However, setting up and managing these cloud environments can be cumbersome, costly, and time-consuming, especially for frequent testing or when multiple cloud services are involved.
-
-Enter LocalStack, a powerful tool that provides a fully functional local cloud environment. LocalStack emulates the core AWS services, such as S3, Lambda, DynamoDB, and many others, enabling developers to run and test their cloud applications directly on their local machines without needing an active AWS account or network access.
+- [Learn Netdata](https://learn.netdata.cloud/)
+- [Netdata Docs](https://learn.netdata.cloud/docs/deployment-guides)
+- [Netdata Agents](https://learn.netdata.cloud/docs/netdata-agent/)
 
 #### Deploy Netdata
 
-Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sprig of GitOps.
+Right lets get stuck in and deploy Netdata using Gimlet, Fluxcd, Helm and a sprig of GitOps.
 
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
@@ -57,7 +58,7 @@ metadata:
   namespace: infrastructure
 spec:
   interval: 60m
-  url: https://localstack.github.io/helm-charts
+  url: https://netdata.github.io/helmchart/
 ```
 
 #### Helm-Release | Netdata
@@ -647,22 +648,22 @@ spec:
 
 ```shell
 git add .
-git commit -m "localstack deploy"
+git commit -m "netdata deploy"
 git push
 ```
 
-#### Fluxcd is doing the following under the hood | Localstack
+#### Fluxcd is doing the following under the hood | Netdata
 
 - Helm repo add
 
 ```shell
-helm repo add localstack-charts https://localstack.github.io/helm-charts --force-update
+helm repo add netdata https://netdata.github.io/helmchart/ --force-update
 ```
 
 - Helm install localstack
 
 ```shell
-helm install localstack localstack-charts/localstack
+helm install netdata
 ```
 
 #### Kubernetes check | Localstack
