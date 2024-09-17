@@ -170,6 +170,7 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 #### Gimlet Environment Config
 
 - These are pre baked in environment configs which can be turned on and off with a toggle
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png" alt="gimlet environment config"/>
 </div>
@@ -289,7 +290,19 @@ kubectl port-forward svc/gimlet 9000:9000
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png" alt="gimlet login"/>
 </div>
-<p></p>
+
+- Or you will get a screen like this to login with `admin key`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/35-gimlet-admin-ui.png" alt="gimlet admin key login"/>
+</div>
+
+- To Find the admin key, type this command in the terminal
+
+```shell
+kubectl logs deploy/gimlet | grep "Admin auth key"
+time="2023-07-14T14:28:59Z" level=info msg="Admin auth key: 1c04722af2e830c319e590xxxxxxxx" file="[dashboard.go:55]"
+```
 
 #### Connect your repositories
 

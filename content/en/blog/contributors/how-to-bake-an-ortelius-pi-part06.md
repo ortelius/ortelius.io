@@ -23,6 +23,7 @@ author: Sacha Wharton
 - [AWS and Localstack CLI Configuration](#aws-and-localstack-cli-configuration)
 - [Localstack Tools](#localstack-tools)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -729,9 +730,9 @@ You now have a local working cloud to develop against, test applications and lea
 
 Happy alien hunting.....
 
-<!-- ### Next Steps
+### Next Steps
 
-[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 7 | Observability with Netdata](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-7-observability-with-Netdata/)
 
 {{< blocks/section color=white >}}
 
