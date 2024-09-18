@@ -18,19 +18,19 @@ author: Sacha Wharton
   - [Helm-Release | Netdata](#helm-release--netdata)
   - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
   - [Fluxcd is doing the following under the hood | Netdata](#fluxcd-is-doing-the-following-under-the-hood--netdata)
-  - [Kubernetes check | Localstack](#kubernetes-check--localstack)
+  - [Kubernetes check | Netdata](#kubernetes-check--netdata)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
-In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/) we deployed [LocalStack](https://www.localstack.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
+In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Netdata](https://www.Netdata.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Netdata wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
-In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observability solution of choice. Why did i go with Netdata? I will list a few points as follows:
+In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observability solution of choice. Netdata for me is like having your Observability multilayered cake and eating it. Why did i go with Netdata? I will list a few points as follows:
 
 - With Netdata I don't have to learn a whole new language just to get the metrics, graphs and visuals I need to have visibility into my Cloud environment
 - I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
-- Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speak lightweight to me
-- Netdata has very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option and at $90 a year thats darn good for a South African with a weak currency
+- Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
+- Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option and at $90 a year thats darn good for a South African with a weak currency
 -
 
 ### Gimlet GitOps Infrastructure
@@ -69,7 +69,7 @@ spec:
 
 #### Helm-Release | Netdata
 
-- Lets create a Helm release for LocalStack
+- Lets create a Helm release for Netdata
 - A Helm release is an instance of a Helm chart running in a Kubernetes cluster
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `netdata.yaml` in the helm-releases directory and paste the following YAML
@@ -666,13 +666,13 @@ git push
 helm repo add netdata https://netdata.github.io/helmchart/ --force-update
 ```
 
-- Helm install localstack
+- Helm install Netdata
 
 ```shell
 helm install netdata
 ```
 
-#### Kubernetes check | Localstack
+#### Kubernetes check | Netdata
 
 - Kubectl switch to the infrastructure namespace
 
@@ -680,22 +680,22 @@ helm install netdata
 kubectl config set-context --current --namespace=infrastructure
 ```
 
-- Kubectl show me the pods for Localstack
+- Kubectl show me the pods for Netdata
 
 ```shell
-kubectl get pods -n infrastructure | grep localstack
+kubectl get pods -n infrastructure | grep netdata
 ```
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part06/01-localstack-pods.png" alt="localstack pods"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part06/01-netdata-pods.png" alt="netdata pods"/>
 </div>
 <p></p>
 
-- Now that we have deployed Localstack we will move to expose the Localstack endpoints with Traefik
+- The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your deployments
 
 ### Conclusion
 
-You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoint through Traefik.
+You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and publish the endpoint through Traefik.
 
 Happy alien hunting.....
 
