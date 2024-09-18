@@ -12,7 +12,7 @@ author: Sacha Wharton
 
 - [Introduction](#introduction)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
-  - [Localstack](#localstack)
+  - [Netdata](#netdata)
   - [Deploy Netdata](#deploy-netdata)
   - [Helm-Repository | Netdata](#helm-repository--netdata)
   - [Helm-Release | Netdata](#helm-release--netdata)
@@ -23,9 +23,15 @@ author: Sacha Wharton
 
 ### Introduction
 
-In Part 6 we deployed [LocalStack](https://www.localstack.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
+In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/) we deployed [LocalStack](https://www.localstack.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
-In part 7 we will deploy [Netdata](https://www.netdata.cloud/)
+In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observability solution of choice. Why did i go with Netdata? I will list a few points as follows:
+
+- With Netdata I don't have to learn a whole new language just to get the metrics, graphs and visuals I need to have visibility into my Cloud environment
+- I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
+- Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speak lightweight to me
+- Netdata has very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option and at $90 a year thats darn good for a South African with a weak currency
+-
 
 ### Gimlet GitOps Infrastructure
 
