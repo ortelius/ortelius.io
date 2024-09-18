@@ -31,7 +31,9 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observabil
 - I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
 - Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
 - Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option and at $90 a year thats darn good for a South African with a weak currency
--
+- None of my data is ever stored at Netdata
+- No insane egress/ingress data bills for all my Observability data from a cloud provider
+
 
 ### Gimlet GitOps Infrastructure
 
@@ -687,7 +689,7 @@ kubectl get pods -n infrastructure | grep netdata
 ```
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part06/01-netdata-pods.png" alt="netdata pods"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part07/01-netdata-pods.png" alt="netdata pods"/>
 </div>
 <p></p>
 
