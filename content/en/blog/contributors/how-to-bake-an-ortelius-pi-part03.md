@@ -434,6 +434,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
+- [Basic NFS Security - NFS, no_root_squash and SUID](https://www.thegeekdiary.com/basic-nfs-security-nfs-no_root_squash-and-suid/)
 
 #### Helm-Repository | CSI NFS Driver
 
