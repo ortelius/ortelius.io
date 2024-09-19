@@ -30,7 +30,7 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observabil
 - With Netdata I don't have to learn a whole new language just to get the metrics, graphs and visuals I need to have visibility into my Cloud environment
 - I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
 - Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
-- Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option at $90 a year
+- Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option
 - None of my data is ever stored at Netdata
 - No insane egress/ingress data bills for all my Observability data for a cloud provider
 
@@ -720,6 +720,7 @@ kubectl config set-context --current --namespace=infrastructure
 ```
 
 - Kubectl show me the pods for Netdata
+- The netdata-parent is the one I am troubleshooting the NFS permissions for hence the `CrashLoopBackOff`
 
 ```shell
 kubectl get pods -n infrastructure | grep netdata
@@ -745,7 +746,7 @@ Happy alien hunting.....
 
 <!-- ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 8 | Architecture So Far](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
 
 {{< blocks/section color=white >}}
 
