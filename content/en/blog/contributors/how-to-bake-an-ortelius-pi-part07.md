@@ -691,7 +691,7 @@ kubectl get pods -n infrastructure | grep netdata
 </div>
 <p></p>
 
-- The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your deployments
+- The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your infrastructure
 
 ### Conclusion
 
