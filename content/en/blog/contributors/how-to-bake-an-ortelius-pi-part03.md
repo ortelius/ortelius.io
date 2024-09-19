@@ -695,7 +695,7 @@ spec:
       volumeBindingMode: Immediate
       allowVolumeExpansion: true
       mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4 # I am telling you it NFS version 4, cross my fingers
+        - nfsvers=4 # Its NFS version 4, cross my fingers
         - hard # Keep trying to connect, don't give up
 
 ```
