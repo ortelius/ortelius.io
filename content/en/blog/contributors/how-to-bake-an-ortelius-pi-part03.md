@@ -44,7 +44,7 @@ author: Sacha Wharton
   - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
   - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
   - [Helm-Release | Cert Manager](#helm-release--cert-manager)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
   - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
   - [Metallb Load-Balancer For Bare Metal Kubernetes Deployment](#metallb-load-balancer-for-bare-metal-kubernetes-deployment)
@@ -55,7 +55,7 @@ author: Sacha Wharton
   - [Traefik the Cloud Native Proxy Deployment](#traefik-the-cloud-native-proxy-deployment)
   - [Helm-Repository | Traefik](#helm-repository--traefik)
   - [Helm-Release | Traefik](#helm-release--traefik)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment-1)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights-1)
   - [Gimlet Manifest Folder | Traefik](#gimlet-manifest-folder--traefik)
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
   - [Traefik Dashboard](#traefik-dashboard)
@@ -695,7 +695,7 @@ spec:
       volumeBindingMode: Immediate
       allowVolumeExpansion: true
       mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4 # I am telling you it NFS version 4, cross my fingers
+        - nfsvers=4 # Its NFS version 4, cross my fingers
         - hard # Keep trying to connect, don't give up
 
 ```
@@ -933,7 +933,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `certman.yaml` in the `helm-releases` directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 - You may want to edit these to suit your environment
 
@@ -2938,7 +2938,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `traefik.yaml` in the `helm-releases` directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 - You may want to edit these to suit your environment
 

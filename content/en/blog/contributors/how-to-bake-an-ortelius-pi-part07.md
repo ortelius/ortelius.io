@@ -16,24 +16,23 @@ author: Sacha Wharton
   - [Deploy Netdata](#deploy-netdata)
   - [Helm-Repository | Netdata](#helm-repository--netdata)
   - [Helm-Release | Netdata](#helm-release--netdata)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Netdata](#fluxcd-is-doing-the-following-under-the-hood--netdata)
   - [Kubernetes check | Netdata](#kubernetes-check--netdata)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
-In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Netdata](https://www.Netdata.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Netdata wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
+In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Netdata](https://www.Netdata.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
 In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observability solution of choice. Netdata for me is like having your Observability multilayered cake and eating it. Why did i go with Netdata? I will list a few points as follows:
 
 - With Netdata I don't have to learn a whole new language just to get the metrics, graphs and visuals I need to have visibility into my Cloud environment
 - I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
 - Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
-- Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option and at $90 a year thats darn good for a South African with a weak currency
+- Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option
 - None of my data is ever stored at Netdata
 - No insane egress/ingress data bills for all my Observability data for a cloud provider
-
 
 ### Gimlet GitOps Infrastructure
 
@@ -76,34 +75,72 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `netdata.yaml` in the helm-releases directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 ```yaml
-
+ingress:
+  enabled: true
+  annotations:
+    # kubernetes.io/ingress.class: traefik
+    kubernetes.io/tls-acme: "true"
+  path: /
+  pathType: Prefix
+  hosts:
+    - netdata.pangarabbit.com
+  ## whole spec is going to be included into ingress spec.
+  ## if you intend to use ingressClassName declaration, remove ingress.class from annotations
+  spec:
+    ingressClassName: traefik
+  # tls:
+  #   - secretName: wilcard-pangarabbit-com-tls
+  #     hosts:
+  #       - netdata.pangarabbit.com
 ```
 
 ```yaml
-
+# parent
+database:
+  persistence: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 5Gi
+alarms:
+  persistence: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 1Gi
 ```
 
 ```yaml
-
+# k8s state
+persistence:
+  enabled: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 1Gi
 ```
 
 ```yaml
-
+# enabling anamolie detection with machine learning for parent and child
+configs:
+  netdata:
+    enabled: true
+    path: /etc/netdata/netdata.conf
+    data: |
+      [ml]
+        enabled = yes
 ```
 
 ```yaml
-
+# claiming your room with the netdata agent for parent and child
+ claiming:
+   enabled: true
+   token: "" # Replace with your token
+   rooms: "" # Replace with your room id
+   url: "https://api.netdata.cloud"
 ```
 
 ```yaml
-
-```
-
-```yaml
----
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
@@ -116,7 +153,7 @@ spec:
   chart:
     spec:
       chart: netdata
-      version: 3.7.100
+      version: 3.7.100 # Upgrade Netdata here by changing the version
       sourceRef:
         kind: HelmRepository
         name: netdata
@@ -356,8 +393,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -494,8 +531,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts:
@@ -642,8 +679,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -683,6 +720,7 @@ kubectl config set-context --current --namespace=infrastructure
 ```
 
 - Kubectl show me the pods for Netdata
+- The netdata-parent is the one I am troubleshooting the NFS permissions for hence the `CrashLoopBackOff`
 
 ```shell
 kubectl get pods -n infrastructure | grep netdata
@@ -693,7 +731,12 @@ kubectl get pods -n infrastructure | grep netdata
 </div>
 <p></p>
 
-- The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your deployments
+- The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your infrastructure
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/02-netdata-metrics.png" alt="netdata pods"/>
+</div>
+<p></p>
 
 ### Conclusion
 
@@ -703,7 +746,7 @@ Happy alien hunting.....
 
 <!-- ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 8 | Architecture So Far](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
 
 {{< blocks/section color=white >}}
 
