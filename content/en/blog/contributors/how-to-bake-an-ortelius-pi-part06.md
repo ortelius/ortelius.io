@@ -465,7 +465,18 @@ kubectl get pods -n infrastructure | grep localstack
 </div>
 <p></p>
 
-- Now that we have deployed Localstack we will move to expose the Localstack endpoints with Traefik
+- Kubectl show me the persistent claims
+
+```shell
+kubectl get pvc | grep localstack
+```
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part06/12-localstack-pvc.png" alt="localstack pvc"/>
+</div>
+<p></p>
+
+- Now that we have deployed Localstack we will expose the Localstack endpoints with Traefik
 
 #### Traefik
 
