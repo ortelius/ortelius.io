@@ -25,14 +25,16 @@ author: Sacha Wharton
 
 In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Netdata](https://www.Netdata.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
-In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observability solution of choice. Netdata for me is like having your Observability multilayered cake and eating it. Why did i go with Netdata? I will list a few points as follows:
+In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observability solution of choice. Netdata for me is like having your Observability multilayered cake and eating it. Why did I go with Netdata? I will list a few points as follows:
 
 - With Netdata I don't have to learn a whole new language just to get the metrics, graphs and visuals I need to have visibility into my Cloud environment
-- I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time) at the click of a button
+- I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time, every second for every metric) at the click of a button
+- Rapid time to value
+- Alerts and Ai for troubleshooting
 - Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
 - Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option
 - None of my data is ever stored at Netdata
-- No insane egress/ingress data bills for all my Observability data for a cloud provider
+- No insane egress, scalability, storage data costs from a cloud provider
 
 ### Gimlet GitOps Infrastructure
 
@@ -41,6 +43,8 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observabil
 - [Learn Netdata](https://learn.netdata.cloud/)
 - [Netdata Docs](https://learn.netdata.cloud/docs/deployment-guides)
 - [Netdata Agents](https://learn.netdata.cloud/docs/netdata-agent/)
+- [Best Practices for DevOps](https://www.netdata.cloud/academy/devops-playbook-best-practices-for-success/)
+- [Infrastructure Monitoring with Netdata Cloud](https://youtu.be/KxmL7qUe6nU)
 
 #### Deploy Netdata
 
@@ -734,13 +738,29 @@ kubectl get pods -n infrastructure | grep netdata
 - The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your infrastructure
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part07/02-netdata-metrics.png" alt="netdata pods"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part07/02-netdata-metrics.png" alt="netdata metrics"/>
 </div>
 <p></p>
 
+- Netdata alerts
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/03-netdata-alerts.png" alt="netdata alerts"/>
+</div>
+<p></p>
+
+- Netdata monitoring checklist
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/04-netdata-monitoring-checklist.png" alt="netdata monitoring checklist"/>
+</div>
+<p></p>
+
+- I got a lot of this information from the fine folks at Netdata in this presentation [Maximise Uptime and Minimise Stress](https://youtu.be/xOJwlU_cYAE)
+
 ### Conclusion
 
-You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
+You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
 
 Happy alien hunting.....
 
