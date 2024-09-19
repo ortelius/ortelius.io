@@ -394,7 +394,7 @@ kubectl get pods
 - Once we have added configuration in `helm-repositories` and `helm-release` and performed a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repo"/>
 </div>
 <p></p>
 
@@ -2894,7 +2894,7 @@ kubectl get ipaddresspools.metallb.io -n infrastructure
 ```
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb crds"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb ip pool"/>
 </div>
 <p></p>
 
