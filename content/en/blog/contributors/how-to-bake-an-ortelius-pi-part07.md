@@ -24,7 +24,7 @@ author: Sacha Wharton
 
 ### Introduction
 
-In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Netdata](https://www.Netdata.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
+In [part 6](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-Netdata/) we deployed [Localstack](https://www.localstack.cloud/) and exposed the endpoints through [Traefik](https://traefik.io/). We used the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets and used [Granted](https://www.granted.dev/) to configure our profiles.
 
 In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observability solution of choice. Netdata for me is like having your Observability multilayered cake and eating it. Why did I go with Netdata? I will list a few points as follows:
 
