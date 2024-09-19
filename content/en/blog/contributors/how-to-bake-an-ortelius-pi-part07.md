@@ -742,10 +742,14 @@ kubectl get pods -n infrastructure | grep netdata
 </div>
 <p></p>
 
+- Netdata alerts
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part07/03-netdata-alerts.png" alt="netdata alerts"/>
 </div>
 <p></p>
+
+- Netdata monitoring checklist
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part07/04-netdata-monitoring-checklist.png" alt="netdata monitoring checklist"/>
@@ -756,7 +760,7 @@ kubectl get pods -n infrastructure | grep netdata
 
 ### Conclusion
 
-You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
+You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
 
 Happy alien hunting.....
 
