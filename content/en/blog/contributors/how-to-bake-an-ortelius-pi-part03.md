@@ -465,7 +465,7 @@ spec:
 
 ##### NFS Architecture
 
-In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on for that service and not affect the entire cluster. Going forward now I will do this for everything I deploy because at the moment I am trying to troubleshoot the netdata-parent pod having grief writing some files to the Synology NAS.
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each service without affecting the entire cluster. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying. Going forward now I will do this for everything I deploy because at the moment I am trying to troubleshoot the netdata-parent pod having grief writing some files to the Synology NAS.
 
 Here is what my persistent volumes's, persistent volume claims's and storage classes look like now:
 
