@@ -38,6 +38,7 @@ author: Sacha Wharton
   - [Kubernetes CSI NFS Driver Deployment](#kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
+    - [NFS Architecture](#nfs-architecture)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
   - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
@@ -462,6 +463,42 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `nfs-csi-driver.yaml` in the `helm-releases` directory and paste the following YAML
 
+##### NFS Architecture
+
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on for that service and not affect the entire cluster. Going forward now I will do this for everything I deploy because at the moment I am trying to troubleshoot the netdata-parent pod having grief writing some files to the Synology NAS.
+
+Here is what my persistent volumes's, persistent volume claims's and storage classes look like now:
+
+```shell
+kubectl get pv,pvc,sc
+
+# Persistent Volumes
+NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                     STORAGECLASS         VOLUMEATTRIBUTESCLASS   REASON   AGE
+persistentvolume/pvc-1ad9b656-be56-4e0a-aa3f-226d47176425   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   nfs-csi-default      <unset>                          16h
+persistentvolume/pvc-7ce5059e-1967-4630-a2c7-2d5b5f1c577a   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    nfs-csi-default      <unset>                          16h
+persistentvolume/pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          16h
+persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          16h
+persistentvolume/pvc-a8250800-82fb-4cd2-8763-74241101459d   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      nfs-csi-default      <unset>                          16h
+persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>                          16h
+
+# Persistent Volume Claims
+NAME                                             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS         VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 16h
+persistentvolumeclaim/localstack                 Bound    pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            nfs-csi-localstack   <unset>                 16h
+persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-1ad9b656-be56-4e0a-aa3f-226d47176425   1Gi        RWO            nfs-csi-default      <unset>                 16h
+persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-a8250800-82fb-4cd2-8763-74241101459d   1Gi        RWO            nfs-csi-default      <unset>                 16h
+persistentvolumeclaim/netdata-parent-database    Bound    pvc-7ce5059e-1967-4630-a2c7-2d5b5f1c577a   5Gi        RWO            nfs-csi-default      <unset>                 16h
+persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 16h
+
+# Storage Classes
+NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+storageclass.storage.k8s.io/nfs-csi-default (default)   nfs.csi.k8s.io   Retain          Immediate           false                  17h
+storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   17h
+storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   17h
+storageclass.storage.k8s.io/nfs-csi-netdata             nfs.csi.k8s.io   Retain          Immediate           true                   17h
+storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   17h
+```
+
 ```yaml
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
@@ -475,7 +512,7 @@ spec:
   chart:
     spec:
       chart: csi-driver-nfs
-      version: v4.9.0 # Simply change the version to upgrade
+      version: v4.9.0
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
@@ -647,18 +684,108 @@ spec:
       parameters:
         server: 192.168.0.152 # Replace with your nfs server ip or FQDN
         share: /volume4/pi8s/ # Replace with your nfs volume share
-        subDir:
+        subDir: default
         mountPermissions: "0"
         # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
         # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
         # csi.storage.k8s.io/provisioner-secret-namespace: "kube-system"
-        #csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
-        #onDelete: retain
-      allowVolumeExpansion: true
-      reclaimPolicy: Delete # Default value is Delete
+        csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+        # onDelete: retain
+      reclaimPolicy: Retain # Default value is Delete
       volumeBindingMode: Immediate
+      allowVolumeExpansion: true
       mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4
+        - nfsvers=4 # I am telling you it NFS version 4, cross my fingers
+        - hard # Keep trying to connect, don't give up
+
+```
+
+- Create a file in your Gimlet GitOps infra repo in `manifest/` called `csi-nfs-storage-classes.yaml` and paste the yaml below
+
+```yaml
+# StorageClass for netdata
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-netdata
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: netdata
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for traefik
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-traefik
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: traefik
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for jenkins
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-jenkins
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: jenkins
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for localstack
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-localstack
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: localstack
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
 ```
 
 - Lets git it

@@ -2006,6 +2006,7 @@ You can view your pod templates by following these steps.
 </div>
 <p></p>
 
+- You don't need to do this as the backup tool will create the directory for you but it is a nice excercise to understand the volume mount process
 - Open your terminal and lets exec onto the Jenkins pod
 
 ```shell
