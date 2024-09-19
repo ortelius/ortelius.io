@@ -700,7 +700,8 @@ spec:
 
 ```
 
-- Create a file in your Gimlet GitOps infra repo in `manifest/` called `csi-nfs-storage-classes.yaml` and paste the yaml below
+- Create a file in your Gimlet GitOps infra repo in `manifests/` called `csi-nfs-storage-classes.yaml` and paste the yaml below
+- Gimlet will pickup any Kubernetes manifests you create in the `manifests` directory and deploy them for you
 
 ```yaml
 # StorageClass for netdata
