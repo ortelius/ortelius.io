@@ -58,7 +58,7 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 #### Netdata Database Engine
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part07/https://user-images.githubusercontent.com/2662304/233838474-d4f8f0b9-61dc-4409-a708-97d403cd153a.png" alt="netdata database engine"/>
+<img src="https://user-images.githubusercontent.com/2662304/233838474-d4f8f0b9-61dc-4409-a708-97d403cd153a.png" alt="netdata database engine"/>
 </div>
 <p></p>
 
