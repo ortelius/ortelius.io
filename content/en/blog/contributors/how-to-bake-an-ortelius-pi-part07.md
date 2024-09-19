@@ -34,7 +34,6 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our observabil
 - None of my data is ever stored at Netdata
 - No insane egress/ingress data bills for all my Observability data for a cloud provider
 
-
 ### Gimlet GitOps Infrastructure
 
 #### Netdata
