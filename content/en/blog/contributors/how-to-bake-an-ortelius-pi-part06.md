@@ -131,7 +131,7 @@ spec:
       ## If set to "-", storageClassName: "", which disables dynamic provisioning
       ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
       ##
-      storageClass: "nfs-csi-default" # Replace with your storage class
+      storageClass: "nfs-csi-localstack" # Replace with your storage class
       ## @param persistence.accessModes [array] Persistent Volume access modes
       ##
       accessModes:
@@ -324,7 +324,7 @@ spec:
       ## If set to "-", storageClassName: "", which disables dynamic provisioning
       ## If undefined (the default) or set to null, no storageClassName spec is set, choosing the default provisioner
       ##
-      storageClass: "nfs-csi-default"
+      storageClass: "nfs-csi-localstack" # Add your storage class here
       ## @param persistence.accessModes [array] Persistent Volume access modes
       ##
       accessModes:

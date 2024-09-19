@@ -130,7 +130,7 @@ persistence:
   # If undefined (the default) or set to null, no storageClassName spec is
   #   set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS & OpenStack)
   # -- Storage class for the PVC
-  storageClass: nfs-csi-default # Amend this to match the default storage class in your environment
+  storageClass: nfs-csi-jenkins # Replace with your storage class
   # -- Annotations for the PVC
 ```
 
@@ -1503,7 +1503,7 @@ spec:
       # If undefined (the default) or set to null, no storageClassName spec is
       #   set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS & OpenStack)
       # -- Storage class for the PVC
-      storageClass: nfs-csi-default
+      storageClass: nfs-csi-jenkins # Replace with your storage class
       # -- Annotations for the PVC
       annotations: {}
       # -- Labels for the PVC

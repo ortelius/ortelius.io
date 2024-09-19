@@ -3781,7 +3781,7 @@ spec:
       #  existingClaim: ""
       accessMode: ReadWriteOnce
       size: 128Mi
-      storageClass: "-"
+      storageClass: "nfs-csi-traefik" # Update with your storage class
       # volumeName: ""
       path: /data
       annotations: {}
@@ -4100,7 +4100,7 @@ kubectl get svc -n infrastructure
 
 - Here is a view of the services for the `infrastructure` namespace
 
-```text
+```shell
 NAME                                    TYPE         CLUSTER-IP     EXTERNAL-IP   PORT(S)                     AGE
 cert-manager                            ClusterIP    10.152.183.37  <none>        9402/TCP                    5d1h
 cert-manager-webhook                    ClusterIP    10.152.183.90  <none>        443/TCP                     5d1h
