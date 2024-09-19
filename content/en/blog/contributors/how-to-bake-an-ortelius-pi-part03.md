@@ -491,11 +491,12 @@ persistentvolumeclaim/netdata-parent-database    Bound    pvc-7ce5059e-1967-4630
 persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 16h
 
 # Storage Classes
-NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   23h
-storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   23h
-storageclass.storage.k8s.io/nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   26m
-storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   23h
+NAME                        PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   23h
+nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   23h
+nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   44m
+nfs-csi-test                nfs.csi.k8s.io   Retain          Immediate           false                  109s
+nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   23h
 ```
 
 ```yaml
@@ -676,14 +677,14 @@ spec:
     # Kubernetes Storage Class documentation https://kubernetes.io/docs/concepts/storage/storage-classes/
     storageClass:
       create: true
-      name: nfs-csi-default
+      name: nfs-csi-test
       annotations:
-        storageclass.kubernetes.io/is-default-class: "true"
+        storageclass.kubernetes.io/is-default-class: "false"
       provisioner: nfs.csi.k8s.io
       parameters:
         server: 192.168.0.152 # Replace with your nfs server ip or FQDN
         share: /volume4/pi8s/ # Replace with your nfs volume share
-        subDir: default
+        subDir: test
         mountPermissions: "0"
         # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
         # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
@@ -694,8 +695,8 @@ spec:
       volumeBindingMode: Immediate
       allowVolumeExpansion: true
       mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4 # Its NFS version 4, cross my fingers
-        - hard # Keep trying to connect, don't give up
+        - nfsvers=4
+        - hard
 
 ```
 
@@ -848,7 +849,7 @@ kubectl get sc --all-namespaces
 
 ```yaml
       annotations:
-        storageclass.kubernetes.io/is-default-class: "true" # Sets this Storage Class as the default
+        storageclass.kubernetes.io/is-default-class: "true" # True for default, false for not the default
 ```
 
 - Manually setting and unsetting the default Storage Class
