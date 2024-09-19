@@ -44,6 +44,7 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 - [Learn Netdata](https://learn.netdata.cloud/)
 - [Netdata Academy](https://www.netdata.cloud/academy/)
 - [Netdata Docs](https://learn.netdata.cloud/docs/deployment-guides)
+- [Netdata Integrations](https://www.netdata.cloud/integrations/data-collection/)
 - [Netdata Agents](https://learn.netdata.cloud/docs/netdata-agent/)
 - [Netdata Daemon Configuration](https://learn.netdata.cloud/docs/netdata-agent/configuration/daemon-configuration#global-section-options)
 - [Netdata Organize Systems, Metrics and Alerts](https://learn.netdata.cloud/docs/netdata-agent/configuration/organize-systems-metrics-and-alerts)
