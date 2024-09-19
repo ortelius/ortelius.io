@@ -878,7 +878,7 @@ Here are some examples.
       #  existingClaim: ""
       accessMode: ReadWriteOnce
       size: 128Mi
-      storageClass: "nfs-csi-default"
+      storageClass: "nfs-csi-traefik"
       # volumeName: ""
       path: /data
       annotations: {}
@@ -892,7 +892,7 @@ Here are some examples.
         persistence:
           enabled: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata"
           volumesize: 1Gi
 ```
 
