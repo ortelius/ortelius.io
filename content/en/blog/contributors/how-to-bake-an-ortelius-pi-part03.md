@@ -492,11 +492,10 @@ persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e
 
 # Storage Classes
 NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-storageclass.storage.k8s.io/nfs-csi-default (default)   nfs.csi.k8s.io   Retain          Immediate           false                  17h
-storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-netdata             nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   17h
+storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   23h
+storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   23h
+storageclass.storage.k8s.io/nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   26m
+storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   23h
 ```
 
 ```yaml
@@ -704,13 +703,14 @@ spec:
 - Gimlet will pickup any Kubernetes manifests you create in the `manifests` directory and deploy them for you
 
 ```yaml
+---
 # StorageClass for netdata
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: nfs-csi-netdata
   annotations:
-    storageclass.kubernetes.io/is-default-class: "false"
+    storageclass.kubernetes.io/is-default-class: "true"
 provisioner: nfs.csi.k8s.io
 parameters:
   server: 192.168.0.152 # Replace with your NFS server IP or FQDN
