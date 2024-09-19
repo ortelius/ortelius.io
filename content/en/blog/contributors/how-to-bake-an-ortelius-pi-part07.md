@@ -288,13 +288,13 @@ spec:
         database:
           persistence: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata" # Add your storage class here
           volumesize: 5Gi
 
         alarms:
           persistence: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata" # Add your storage class here
           volumesize: 1Gi
 
         configs:
@@ -560,9 +560,9 @@ spec:
         dnsPolicy: ClusterFirstWithHostNet
 
         persistence:
-          enabled: false
+          enabled: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata" # Add your storage class here
           volumesize: 1Gi
 
         configs:
