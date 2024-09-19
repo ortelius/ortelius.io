@@ -394,7 +394,7 @@ kubectl get pods
 - Once we have added configuration in `helm-repositories` and `helm-release` and performed a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repo"/>
 </div>
 <p></p>
 
@@ -491,12 +491,12 @@ persistentvolumeclaim/netdata-parent-database    Bound    pvc-7ce5059e-1967-4630
 persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 16h
 
 # Storage Classes
-NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-storageclass.storage.k8s.io/nfs-csi-default (default)   nfs.csi.k8s.io   Retain          Immediate           false                  17h
-storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-netdata             nfs.csi.k8s.io   Retain          Immediate           true                   17h
-storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   17h
+NAME                        PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   23h
+nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   23h
+nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   44m
+nfs-csi-test                nfs.csi.k8s.io   Retain          Immediate           false                  109s
+nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   23h
 ```
 
 ```yaml
@@ -677,14 +677,14 @@ spec:
     # Kubernetes Storage Class documentation https://kubernetes.io/docs/concepts/storage/storage-classes/
     storageClass:
       create: true
-      name: nfs-csi-default
+      name: nfs-csi-test
       annotations:
-        storageclass.kubernetes.io/is-default-class: "true"
+        storageclass.kubernetes.io/is-default-class: "false"
       provisioner: nfs.csi.k8s.io
       parameters:
         server: 192.168.0.152 # Replace with your nfs server ip or FQDN
         share: /volume4/pi8s/ # Replace with your nfs volume share
-        subDir: default
+        subDir: test
         mountPermissions: "0"
         # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
         # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
@@ -695,8 +695,8 @@ spec:
       volumeBindingMode: Immediate
       allowVolumeExpansion: true
       mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4 # Its NFS version 4, cross my fingers
-        - hard # Keep trying to connect, don't give up
+        - nfsvers=4
+        - hard
 
 ```
 
@@ -704,13 +704,14 @@ spec:
 - Gimlet will pickup any Kubernetes manifests you create in the `manifests` directory and deploy them for you
 
 ```yaml
+---
 # StorageClass for netdata
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: nfs-csi-netdata
   annotations:
-    storageclass.kubernetes.io/is-default-class: "false"
+    storageclass.kubernetes.io/is-default-class: "true"
 provisioner: nfs.csi.k8s.io
 parameters:
   server: 192.168.0.152 # Replace with your NFS server IP or FQDN
@@ -848,7 +849,7 @@ kubectl get sc --all-namespaces
 
 ```yaml
       annotations:
-        storageclass.kubernetes.io/is-default-class: "true" # Sets this Storage Class as the default
+        storageclass.kubernetes.io/is-default-class: "true" # True for default, false for not the default
 ```
 
 - Manually setting and unsetting the default Storage Class
@@ -877,7 +878,7 @@ Here are some examples.
       #  existingClaim: ""
       accessMode: ReadWriteOnce
       size: 128Mi
-      storageClass: "nfs-csi-default"
+      storageClass: "nfs-csi-traefik"
       # volumeName: ""
       path: /data
       annotations: {}
@@ -891,7 +892,7 @@ Here are some examples.
         persistence:
           enabled: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata"
           volumesize: 1Gi
 ```
 
@@ -2893,7 +2894,7 @@ kubectl get ipaddresspools.metallb.io -n infrastructure
 ```
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb crds"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb ip pool"/>
 </div>
 <p></p>
 
