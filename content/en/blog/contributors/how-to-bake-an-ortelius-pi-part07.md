@@ -41,10 +41,14 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 #### Netdata
 
 - [Learn Netdata](https://learn.netdata.cloud/)
+- [Netdata Academy](https://www.netdata.cloud/academy/)
 - [Netdata Docs](https://learn.netdata.cloud/docs/deployment-guides)
 - [Netdata Agents](https://learn.netdata.cloud/docs/netdata-agent/)
 - [Best Practices for DevOps](https://www.netdata.cloud/academy/devops-playbook-best-practices-for-success/)
 - [Infrastructure Monitoring with Netdata Cloud](https://youtu.be/KxmL7qUe6nU)
+- [Netdata Helm Chart](https://github.com/netdata/helmchart)
+- [Install Netdata on Kubernetes](https://learn.netdata.cloud/docs/netdata-agent/installation/kubernetes)
+- [Netdata Helm Chart for Kubernetes Deployments](https://learn.netdata.cloud/docs/netdata-agent/installation/kubernetes-helm-chart-reference)
 
 #### Deploy Netdata
 
