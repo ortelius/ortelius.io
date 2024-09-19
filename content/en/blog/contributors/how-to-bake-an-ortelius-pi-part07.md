@@ -103,7 +103,6 @@ spec:
 
 ```yaml
 ---
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
