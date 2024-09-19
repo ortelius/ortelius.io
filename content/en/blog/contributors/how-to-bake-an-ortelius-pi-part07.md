@@ -13,6 +13,7 @@ author: Sacha Wharton
 - [Introduction](#introduction)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
   - [Netdata](#netdata)
+  - [Netdata Database Engine](#netdata-database-engine)
   - [Deploy Netdata](#deploy-netdata)
   - [Helm-Repository | Netdata](#helm-repository--netdata)
   - [Helm-Release | Netdata](#helm-release--netdata)
@@ -44,11 +45,23 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 - [Netdata Academy](https://www.netdata.cloud/academy/)
 - [Netdata Docs](https://learn.netdata.cloud/docs/deployment-guides)
 - [Netdata Agents](https://learn.netdata.cloud/docs/netdata-agent/)
+- [Netdata Daemon Configuration](https://learn.netdata.cloud/docs/netdata-agent/configuration/daemon-configuration#global-section-options)
+- [Netdata Organize Systems, Metrics and Alerts](https://learn.netdata.cloud/docs/netdata-agent/configuration/organize-systems-metrics-and-alerts)
+- [Netdata ML Models and Anomaly Detection](https://learn.netdata.cloud/docs/machine-learning-and-anomaly-detection/ml-models-and-anomaly-detection)
 - [Best Practices for DevOps](https://www.netdata.cloud/academy/devops-playbook-best-practices-for-success/)
 - [Infrastructure Monitoring with Netdata Cloud](https://youtu.be/KxmL7qUe6nU)
+- [Netdata Database Engine](https://github.com/netdata/netdata/tree/master/src/database/engine#readme)
 - [Netdata Helm Chart](https://github.com/netdata/helmchart)
 - [Install Netdata on Kubernetes](https://learn.netdata.cloud/docs/netdata-agent/installation/kubernetes)
 - [Netdata Helm Chart for Kubernetes Deployments](https://learn.netdata.cloud/docs/netdata-agent/installation/kubernetes-helm-chart-reference)
+
+#### Netdata Database Engine
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/https://user-images.githubusercontent.com/2662304/233838474-d4f8f0b9-61dc-4409-a708-97d403cd153a.png" alt="netdata database engine"/>
+</div>
+<p></p>
+
 
 #### Deploy Netdata
 
