@@ -25,6 +25,7 @@ author: Sacha Wharton
   - [Jenkins GitHub Setup](#jenkins-github-setup)
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
+  - [Jenkins Restore](#jenkins-restore)
   - [Creating a Multibranch Pipeline](#creating-a-multibranch-pipeline)
   - [Jenkins meets Ortelius](#jenkins-meets-ortelius)
 - [Conclusion](#conclusion)
@@ -2006,7 +2007,7 @@ You can view your pod templates by following these steps.
 </div>
 <p></p>
 
-- You don't need to do this as the backup tool will create the directory for you but it is a nice excercise to understand the volume mount process
+- You don't need to do this as the backup tool will create the directory for you but it is a nice excercise to understand the volume mount process and to see how it works
 - Open your terminal and lets exec onto the Jenkins pod
 
 ```shell
@@ -2073,6 +2074,10 @@ kubectl get pvc | grep jenkins
 - Click `Save`
 - You should see backups appearing in your `backup` directory on your NFS storage server at midnight if you used the cron above
 - Jenkins coveniently zips the backup set to save storage space
+
+#### Jenkins Restore
+
+I tested a restore by simply deleting all the Jenkins config off the NFS server, unzipped one of the backups and copied the Jenkins config files back then deleted the pod and waited for it to be recreated. It worked a charm, all my data, plugins, config, jobs and secrets were restored. I thought that was pretty neat. The Jenkins pod is simply a looking glass that presents all the Jenkins config in a human readable format. ***FYI make sure you backup your persistent volumes on the NFS server***.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
