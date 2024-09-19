@@ -16,7 +16,7 @@ author: Sacha Wharton
   - [Deploy Netdata](#deploy-netdata)
   - [Helm-Repository | Netdata](#helm-repository--netdata)
   - [Helm-Release | Netdata](#helm-release--netdata)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Netdata](#fluxcd-is-doing-the-following-under-the-hood--netdata)
   - [Kubernetes check | Netdata](#kubernetes-check--netdata)
 - [Conclusion](#conclusion)
@@ -75,7 +75,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `netdata.yaml` in the helm-releases directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 ```yaml
 ingress:

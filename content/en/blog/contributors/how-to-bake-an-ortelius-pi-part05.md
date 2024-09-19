@@ -17,7 +17,7 @@ author: Sacha Wharton
   - [Plugins](#plugins)
   - [Helm-Repository | Jenkins](#helm-repository--jenkins)
   - [Helm-Release | Jenkins](#helm-release--jenkins)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Jenkins](#fluxcd-is-doing-the-following-under-the-hood--jenkins)
   - [Kubernetes check | Jenkins](#kubernetes-check--jenkins)
   - [How do we login?](#how-do-we-login)
@@ -93,7 +93,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `jenkins.yaml` in the helm-releases directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 ```yaml
 # -- Ingress annotations

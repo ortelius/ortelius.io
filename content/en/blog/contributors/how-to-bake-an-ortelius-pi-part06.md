@@ -16,7 +16,7 @@ author: Sacha Wharton
   - [Deploy Localstack](#deploy-localstack)
   - [Helm-Repository | Localstack](#helm-repository--localstack)
   - [Helm-Release | Localstack](#helm-release--localstack)
-  - [FYI | These are Helm Chart configuration snippets that you can modify to suit your environment](#fyi--these-are-helm-chart-configuration-snippets-that-you-can-modify-to-suit-your-environment)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Localstack](#fluxcd-is-doing-the-following-under-the-hood--localstack)
   - [Kubernetes check | Localstack](#kubernetes-check--localstack)
   - [Traefik](#traefik)
@@ -80,7 +80,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `localstack.yaml` in the helm-releases directory and paste the following YAML
 
-#### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
+#### Helm Chart Configuration Highlights
 
 ```yaml
     image:
