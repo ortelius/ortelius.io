@@ -732,6 +732,11 @@ kubectl get pods -n infrastructure | grep netdata
 
 - The eye of Netdata should now be removing the blindfolds and the fog should be clearing on your infrastructure
 
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/02-netdata-metrics.png" alt="netdata pods"/>
+</div>
+<p></p>
+
 ### Conclusion
 
 You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and publish the endpoint through Traefik.
