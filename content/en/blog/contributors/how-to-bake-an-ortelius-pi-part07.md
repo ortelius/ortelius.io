@@ -78,23 +78,66 @@ spec:
 #### FYI | These are Helm Chart configuration snippets that you can modify to suit your environment
 
 ```yaml
-
+ingress:
+  enabled: true
+  annotations:
+    # kubernetes.io/ingress.class: traefik
+    kubernetes.io/tls-acme: "true"
+  path: /
+  pathType: Prefix
+  hosts:
+    - netdata.pangarabbit.com
+  ## whole spec is going to be included into ingress spec.
+  ## if you intend to use ingressClassName declaration, remove ingress.class from annotations
+  spec:
+    ingressClassName: traefik
+  # tls:
+  #   - secretName: wilcard-pangarabbit-com-tls
+  #     hosts:
+  #       - netdata.pangarabbit.com
 ```
 
 ```yaml
-
+# parent
+database:
+  persistence: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 5Gi
+alarms:
+  persistence: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 1Gi
 ```
 
 ```yaml
-
+# k8s state
+persistence:
+  enabled: true
+  ## Set '-' as the storageclass to get a volume from the default storage class.
+  storageclass: "nfs-csi-netdata" # Add your storage class here
+  volumesize: 1Gi
 ```
 
 ```yaml
-
+# enabling anamolie detection with machine learning for parent and child
+configs:
+  netdata:
+    enabled: true
+    path: /etc/netdata/netdata.conf
+    data: |
+      [ml]
+        enabled = yes
 ```
 
 ```yaml
-
+# claiming your room with the netdata agent for parent and child
+ claiming:
+   enabled: true
+   token: "" # Replace with your token
+   rooms: "" # Replace with your room id
+   url: "https://api.netdata.cloud"
 ```
 
 ```yaml
@@ -114,7 +157,7 @@ spec:
   chart:
     spec:
       chart: netdata
-      version: 3.7.100
+      version: 3.7.100 # Upgrade Netdata here by changing the version
       sourceRef:
         kind: HelmRepository
         name: netdata
@@ -354,8 +397,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -492,8 +535,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts:
@@ -640,8 +683,8 @@ spec:
 
         claiming:
           enabled: true
-          token: ""
-          rooms: ""
+          token: "" # Replace with your token
+          rooms: "" # Replace with your id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
