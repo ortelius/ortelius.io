@@ -466,7 +466,7 @@ spec:
 
 ##### NFS Architecture
 
-In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying. Hence I have now modified the initial deployment to create the first storage class as `test`. Going forward now I will do this for everything I deploy because at the moment I am trying to troubleshoot the netdata-parent pod having grief writing some files to the Synology NAS.
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying.
 
 #### Mount Permissions
 
