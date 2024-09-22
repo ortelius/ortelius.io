@@ -38,7 +38,7 @@ author: Sacha Wharton
   - [Kubernetes CSI NFS Driver Deployment](#kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
-    - [NFS Architecture](#nfs-architecture)
+  - [NFS Architecture](#nfs-architecture)
   - [Mount Permissions](#mount-permissions)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
@@ -464,7 +464,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `nfs-csi-driver.yaml` in the `helm-releases` directory and paste the following YAML
 
-##### NFS Architecture
+#### NFS Architecture
 
 In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying.
 
