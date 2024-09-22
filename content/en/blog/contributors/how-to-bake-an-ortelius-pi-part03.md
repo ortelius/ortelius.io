@@ -39,6 +39,7 @@ author: Sacha Wharton
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
     - [NFS Architecture](#nfs-architecture)
+  - [Mount Permissions](#mount-permissions)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
   - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
@@ -465,7 +466,40 @@ spec:
 
 ##### NFS Architecture
 
-In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying. Hence I have now modified the initial deployment to create the first storage class as `test`. Going forward now I will do this for everything I deploy because at the moment I am trying to troubleshoot the netdata-parent pod having grief writing some files to the Synology NAS.
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying.
+
+#### Mount Permissions
+
+1. "0" (Default)
+
+- This disables the automatic permission setting for the volume directory.
+- It means the NFS CSI driver will not attempt to modify the permissions of the directory upon mounting. The permissions will remain as they are on the NFS server.
+- This can be useful if the NFS server already has the desired permissions configured, or if you want to manage permissions manually.
+
+2. "755"
+
+- **Read and execute access for everyone**, and write access only for the owner (rwxr-xr-x).
+- Commonly used for directories where the owner needs write access, but group and others only need to read or execute (e.g., for shared applications or read-only access).
+
+3. "777"
+
+- Full read, write, and execute access for everyone (rwxrwxrwx).
+- This makes the directory fully open to all users. Use with caution, as it can pose security risks if sensitive data is being accessed.
+
+4. "644"
+
+- **Read and write access for the owner**, and read-only access for group and others (rw-r--r--).
+- Useful for files or directories where you want to ensure the owner can modify the files, but others can only view them.
+
+5. "600"
+
+- Read and write access only for the owner (rw-------).
+- This setting is for more secure or sensitive directories where only the owner should have any access, and no permissions are granted to group or others.
+
+6. "700"
+
+- Full access only for the owner (rwx------).
+- The owner has full permissions (read, write, execute), and no permissions are granted to group or others. This is useful for private data that should not be accessible to others.
 
 Here is what my persistent volumes's, persistent volume claims's and storage classes look like now:
 
@@ -474,29 +508,28 @@ kubectl get pv,pvc,sc
 
 # Persistent Volumes
 NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                     STORAGECLASS         VOLUMEATTRIBUTESCLASS   REASON   AGE
-persistentvolume/pvc-1ad9b656-be56-4e0a-aa3f-226d47176425   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   nfs-csi-default      <unset>                          16h
-persistentvolume/pvc-7ce5059e-1967-4630-a2c7-2d5b5f1c577a   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    nfs-csi-default      <unset>                          16h
-persistentvolume/pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          16h
-persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          16h
-persistentvolume/pvc-a8250800-82fb-4cd2-8763-74241101459d   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      nfs-csi-default      <unset>                          16h
-persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>                          16h
+persistentvolume/pvc-25b14167-92ed-4e83-8f99-080cb80aace7   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      nfs-csi-netdata      <unset>                          31m
+persistentvolume/pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          4d6h
+persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          4d6h
+persistentvolume/pvc-c8e1c2db-1141-4d6a-9ca0-58d5b14cc9f7   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    nfs-csi-netdata      <unset>                          31m
+persistentvolume/pvc-d105f31c-a0a1-4598-be51-ce1eaf6d98dd   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   nfs-csi-netdata      <unset>                          31m
+persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>                          4d6h
 
 # Persistent Volume Claims
 NAME                                             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS         VOLUMEATTRIBUTESCLASS   AGE
-persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 16h
-persistentvolumeclaim/localstack                 Bound    pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            nfs-csi-localstack   <unset>                 16h
-persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-1ad9b656-be56-4e0a-aa3f-226d47176425   1Gi        RWO            nfs-csi-default      <unset>                 16h
-persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-a8250800-82fb-4cd2-8763-74241101459d   1Gi        RWO            nfs-csi-default      <unset>                 16h
-persistentvolumeclaim/netdata-parent-database    Bound    pvc-7ce5059e-1967-4630-a2c7-2d5b5f1c577a   5Gi        RWO            nfs-csi-default      <unset>                 16h
-persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 16h
+persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 4d6h
+persistentvolumeclaim/localstack                 Bound    pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            nfs-csi-localstack   <unset>                 4d6h
+persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-d105f31c-a0a1-4598-be51-ce1eaf6d98dd   1Gi        RWO            nfs-csi-netdata      <unset>                 37m
+persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-25b14167-92ed-4e83-8f99-080cb80aace7   1Gi        RWO            nfs-csi-netdata      <unset>                 37m
+persistentvolumeclaim/netdata-parent-database    Bound    pvc-c8e1c2db-1141-4d6a-9ca0-58d5b14cc9f7   5Gi        RWO            nfs-csi-netdata      <unset>                 37m
+persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 4d6h
 
 # Storage Classes
-NAME                        PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   23h
-nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   23h
-nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   44m
-nfs-csi-test                nfs.csi.k8s.io   Retain          Immediate           false                  109s
-nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   23h
+NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
+storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
+storageclass.storage.k8s.io/nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   40m
+storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
 ```
 
 ```yaml
@@ -710,7 +743,7 @@ parameters:
   server: 192.168.0.152 # Replace with your NFS server IP or FQDN
   share: /volume4/pi8s/ # Replace with your NFS volume share
   subDir: netdata
-  mountPermissions: "0"
+  mountPermissions: "700" # The owner has full permissions (read, write, execute), and no permissions are granted to group or others
   csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
