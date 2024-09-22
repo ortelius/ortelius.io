@@ -523,11 +523,11 @@ spec:
       baseRepo: registry.k8s.io
       nfs:
         repository: registry.k8s.io/sig-storage/nfsplugin
-        tag: v4.8.0
+        tag: v4.9.0
         pullPolicy: IfNotPresent
       csiProvisioner:
         repository: registry.k8s.io/sig-storage/csi-provisioner
-        tag: v5.0.1
+        tag: v5.0.2
         pullPolicy: IfNotPresent
       csiSnapshotter:
         repository: registry.k8s.io/sig-storage/csi-snapshotter
@@ -564,8 +564,8 @@ spec:
       enableInlineVolume: false
       propagateHostMountOptions: false
 
+    #kubeletDir: /var/lib/kubelet # default config
     kubeletDir: "/var/snap/microk8s/common/var/lib/kubelet" # Specific for microk8s
-    #kubeletDir: "/var/lib/kubelet" # default config
 
     controller:
       name: csi-nfs-controller
@@ -655,7 +655,7 @@ spec:
       name: snapshot-controller
       priorityClassName: system-cluster-critical
       controller:
-        replicas: 1
+        replicas: 3
       resources:
         limits:
           memory: 300Mi
@@ -672,31 +672,24 @@ spec:
     imagePullSecrets: []
     # - name: "image-pull-secret"
 
-    # Kubernetes Storage Class creation
-    # Kubernetes csi-driver-nfs https://github.com/kubernetes-csi/csi-driver-nfs
-    # Kubernetes Storage Class documentation https://kubernetes.io/docs/concepts/storage/storage-classes/
+    ## StorageClass resource example:
     storageClass:
-      create: true
-      name: nfs-csi-test
-      annotations:
-        storageclass.kubernetes.io/is-default-class: "false"
-      provisioner: nfs.csi.k8s.io
-      parameters:
-        server: 192.168.0.152 # Replace with your nfs server ip or FQDN
-        share: /volume4/pi8s/ # Replace with your nfs volume share
-        subDir: test
-        mountPermissions: "0"
-        # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
-        # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
-        # csi.storage.k8s.io/provisioner-secret-namespace: "kube-system"
-        csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
-        # onDelete: retain
-      reclaimPolicy: Retain # Default value is Delete
-      volumeBindingMode: Immediate
-      allowVolumeExpansion: true
-      mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4
-        - hard
+      create: false
+    #   name: nfs-csi
+    #   annotations:
+    #     storageclass.kubernetes.io/is-default-class: "true"
+    #   parameters:
+    #     server: nfs-server.default.svc.cluster.local
+    #     share: /
+    #     subDir:
+    #     mountPermissions: "0"
+    #     csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
+    #     csi.storage.k8s.io/provisioner-secret-name: "mount-options"
+    #     csi.storage.k8s.io/provisioner-secret-namespace: "default"
+    #   reclaimPolicy: Delete
+    #   volumeBindingMode: Immediate
+    #   mountOptions:
+    #     - nfsvers=4.1
 
 ```
 
