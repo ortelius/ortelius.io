@@ -2,7 +2,7 @@
 date: 2024-08-10
 title: "The FinOps Void"
 linkTitle: "The FinOps Void"
-author: Sacha Wharton
+authors: Sacha Wharton & Brendon Walsh
 ---
 
 <!-- <div class="col-center">
@@ -10,9 +10,9 @@ author: Sacha Wharton
 </div>
 <p></p> -->
 
-A while back, I was contracted to do migrations and conversions of legacy applications into microservices on AWS for a very large financial services company. During this time, there was a lot of learning around how to predict and estimate cost. From an engineer's perspective, there was a gap between what the financial humans expected vs how cloud services ran and how they were billed. One of those challenges was changing the mindset from a CAPEX model to a OPEX model. The questions I always got were “How long would it take?” and “How much would it cost?” and the answer I would always give was” Well it depends?” which I think might have been rather annoying to hear. The financials wanted a fixed cost to stick in the budget, but since cloud was very much based on your consumption chronologically, it was rather difficult to predict, especially if you had no history. So I started poking around the internet looking for tools to help build a bridge with my financial friends and to take the concern off their shoulders to help predict and budget for more finite figures for Cloud spend. I believe we should take time to architect and write the most efficient code possible to reduce the financial investment to procure compute resources.
+A while back, I was contracted to do migrations and conversions of legacy applications into microservices on AWS for a very large financial services company. During this time, there was a lot of learning around how to predict and estimate cost. From an engineer's perspective, there was a gap between what the financial humans expected vs how cloud services ran and how they were billed. One of those challenges was changing the mindset from a CAPEX model to a OPEX model. One of the questions I always got was `How much would it cost?` and the answer I would give was `Well it depends?` which I think might have been rather annoying to hear. The financials wanted a fixed cost to stick in the budget, but since cloud was very much based on your consumption chronologically, it was rather difficult to predict, especially if you had no history. So I started poking around the internet looking for tools to help build a bridge with my financial friends and to take the concern off their shoulders to help predict and budget for more finite figures for Cloud spend.
 
-I did a lot of research, and before I carry on would like to thank all the humans out there who wrote articles and published blogs around this topic. Fast-forwarding a few months, I found many tools to navigate cost and streamline cloud investment. During this discovery process, I came across a few tools such as:
+I did some research, and before I carry on would like to thank all the humans out there who wrote articles and published blogs around this topic. Fast-forwarding a few months, I found many tools to navigate cost and streamline cloud investment. During this discovery process, I came across a few tools such as:
 
 - [BlueArch](https://bluearch.io/)
 - [InfraCost](https://www.infracost.io/)
@@ -62,6 +62,17 @@ Learn More About:
 <div style="position:relative;left:-60%">
 <img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
 </div>
+
+Learn More About:
+- [Bredan Walsh](https://www.linkedin.com/in/brendan-mackin-walsh/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/brendan-walsh.jpg" alt="Brendan Walsh" height="400px" width="400px" />
+</div>
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
