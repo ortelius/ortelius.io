@@ -76,6 +76,9 @@ Learn More About:
 <img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
 </div>
 
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
 Learn More About:
 - [Bredan Walsh](https://www.linkedin.com/in/brendan-mackin-walsh/)
 
