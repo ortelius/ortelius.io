@@ -1,6 +1,6 @@
 ---
 date: 2024-08-10
-title: "The FinOps Void"
+title: "Gleaming The FinOps Void"
 linkTitle: "Gleaming The FinOps Void"
 authors: Sacha Wharton & Brendan Walsh
 ---
@@ -76,9 +76,6 @@ Learn More About:
 <img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
 </div>
 
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
 Learn More About:
 - [Bredan Walsh](https://www.linkedin.com/in/brendan-mackin-walsh/)
 
@@ -88,7 +85,6 @@ Learn More About:
 <div style="position:relative;left:-60%">
 <img src="/images/brendan-walsh.jpg" alt="Brendan Walsh" height="400px" width="400px" />
 </div>
-
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
