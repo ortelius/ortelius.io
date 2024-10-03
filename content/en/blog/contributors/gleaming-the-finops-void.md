@@ -61,7 +61,7 @@ Happy alien hunting.....
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Meet the Authors</h2>
+<h2 class="text-left">Meet the Author</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -74,16 +74,6 @@ Learn More About:
 
 <div style="position:relative;left:-60%">
 <img src="/images/sacha.jpg" alt="Sachawharton" height="400px" width="400px" />
-</div>
-
-Learn More About:
-- [Bredan Walsh](https://www.linkedin.com/in/brendan-mackin-walsh/)
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="position:relative;left:-60%">
-<img src="/images/brendan-walsh.jpg" alt="Brendan Walsh" height="400px" width="400px" />
 </div>
 
 {{< /blocks/feature_dual >}}
