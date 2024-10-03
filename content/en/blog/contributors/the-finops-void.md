@@ -38,7 +38,7 @@ Lets share some real results from running BlueArch in one of our AWS environment
 
 ### Education
 
-The FinOps space is continuously evolving and will become more complex to manage and predict thus we as engineers and financials need tooling and education around this topic. I introduce to you the [FinOps Foundation](https://www.finops.org/) were you can upskill yourself and become a savvy cost aware engineer or a cloud aware savvy financial.
+The FinOps space is continuously evolving and will become more complex to manage and predict thus we as engineers and financials need tooling and education around this topic. I introduce to you the [FinOps Foundation](https://www.finops.org/) where you can upskill yourself and become a savvy cost aware engineer or a cloud aware savvy financial.
 
 ### Conclusion
 
