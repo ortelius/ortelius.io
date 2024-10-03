@@ -28,6 +28,7 @@ I did some research, and before I carry on would like to thank all the humans ou
 - [OpenCost](https://www.opencost.io/)
 
 ### BlueArch
+
 All of them have their merits, but the one I found particularly intriguing was BlueArch. BlueArch is a CLI which integrates into your AWS environment. To give you some background, BlueArch provides a single, intuitive command-line interface for managing multiple AWS accounts and regions. I’ve gone ahead and highlighted a few key points below, as the tool is available for anyone:
 
 - Intelligent EBS Optimization: BlueArch flagged unattached gp2 volumes and upgraded them to gp3 automatically, while simultaneously  identifying underutilized EC2 and RDS instances. It predicts the best IOPS and throughput settings based on historical data, ensuring our storage performance is always top-notch.
