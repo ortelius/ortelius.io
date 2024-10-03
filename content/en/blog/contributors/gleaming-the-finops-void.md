@@ -51,7 +51,7 @@ The FinOps space is continuously evolving and will become more complex to manage
 
 ### Conclusion
 
-I hope you think different about cost and let it shape your thinking, infrastructure and software architecture. And at the same time fostering closer more meaningful relationships with our financials.
+I hope you this helps you think different about cost and let it shape your thinking, infrastructure and software architecture. And at the same time fostering closer more meaningful relationships with our financials.
 
 Happy alien hunting.....
 
