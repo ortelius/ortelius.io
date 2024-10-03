@@ -6,7 +6,7 @@ authors: Sacha Wharton & Brendan Walsh
 ---
 
 <div class="col-center">
-<img src="/images/gleaming-the-finops.png" alt="gleaming-the-finops" height="300px" width="650px" />
+<img src="/static/images/gleaming-the-finops-void.png" alt="gleaming-the-finops-void" height="300px" width="650px" />
 </div>
 <p></p>
 
