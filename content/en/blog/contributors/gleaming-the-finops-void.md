@@ -5,10 +5,10 @@ linkTitle: "Gleaming The FinOps Void"
 authors: Sacha Wharton & Brendan Walsh
 ---
 
-<!-- <div class="col-center">
-<img src="/images/orteliuspi-part3.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<div class="col-center">
+<img src="/images/gleaming-the-finops.png" alt="gleaming-the-finops" height="300px" width="650px" />
 </div>
-<p></p> -->
+<p></p>
 
 - [The Story](#the-story)
 - [BlueArch](#bluearch)
