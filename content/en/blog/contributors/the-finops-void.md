@@ -2,7 +2,7 @@
 date: 2024-08-10
 title: "The FinOps Void"
 linkTitle: "The FinOps Void"
-authors: Sacha Wharton & Brendon Walsh
+authors: Sacha Wharton & Brendan Walsh
 ---
 
 <!-- <div class="col-center">
