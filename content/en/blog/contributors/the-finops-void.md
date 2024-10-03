@@ -10,6 +10,12 @@ authors: Sacha Wharton & Brendon Walsh
 </div>
 <p></p> -->
 
+- [The Story](#the-story)
+- [Education](#education)
+- [Conclusion](#conclusion)
+
+### The Story
+
 A while back, I was contracted to do migrations and conversions of legacy applications into microservices on AWS for a very large financial services company. During this time, there was a lot of learning around how to predict and estimate cost. From an engineer's perspective, there was a gap between what the financial humans expected vs how cloud services ran and how they were billed. One of those challenges was changing the mindset from a CAPEX model to a OPEX model. One of the questions I always got was `How much would it cost?` and the answer I would give was `Well it depends?` which I think might have been rather annoying to hear. The financials wanted a fixed cost to stick in the budget, but since cloud was very much based on your consumption chronologically, it was rather difficult to predict, especially if you had no history. So I started poking around the internet looking for tools to help build a bridge with my financial friends and to take the concern off their shoulders to help predict and budget for more finite figures for Cloud spend.
 
 I did some research, and before I carry on would like to thank all the humans out there who wrote articles and published blogs around this topic. Fast-forwarding a few months, I found many tools to navigate cost and streamline cloud investment. During this discovery process, I came across a few tools such as:
