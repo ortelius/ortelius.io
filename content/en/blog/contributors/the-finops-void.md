@@ -36,9 +36,13 @@ Lets share some real results from running BlueArch in one of our AWS environment
 
 3. In-Cluster Configuration Analysis: Employs eBPF-basedloper platform has been a game-changer. It’s a significant step towards a self-optimizing cloud environment, combining automated remediation, secure self-hosting, and advanced reporting. I’ll keep you updated as we continue to evolve our cloud governance strategy.
 
+### Education
+
+The FinOps space is continuously evolving and will become more complex to manage and predict thus we as engineers and financials need tooling and education around this topic. I introduce to you the [FinOPs Foundation](https://www.finops.org/) were you can upskill yourself and become a savvy cost aware engineer or a cloud aware savvy financial.
+
 ### Conclusion
 
-The FinOps space is continuously evolving and will become more complex to manage and predict thus we need tooling and education around this topic. Whilst we are on the education topic please go to the FinOPs Foundation to learn more.
+I hope you think different about cost and let it shape your thinking, infrastructure and software architecture. And at the same time fostering closer more meaningful relationships with our financials.
 
 Happy alien hunting.....
 
