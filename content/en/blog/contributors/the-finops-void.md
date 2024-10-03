@@ -48,7 +48,7 @@ Happy alien hunting.....
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Meet the Author</h2>
+<h2 class="text-left">Meet the Authors</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
