@@ -1,5 +1,5 @@
 ---
-date: 2024-08-10
+date: 2024-10-10
 title: "Gleaming The FinOps Void"
 linkTitle: "Gleaming The FinOps Void"
 authors: Sacha Wharton & Brendan Walsh
