@@ -14,6 +14,7 @@ author: Sacha Wharton
 - [Kubernetes](#kubernetes)
   - [CRDs](#crds)
   - [Context and Namespace Switching](#context-and-namespace-switching)
+  - [Steps to setup KubeSwitch](#steps-to-setup-kubeswitch)
 - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
 - [Gimlet](#gimlet)
   - [Gimlet Application Repostories](#gimlet-application-repostories)
@@ -39,6 +40,8 @@ author: Sacha Wharton
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
   - [NFS Architecture](#nfs-architecture)
+  - [NFS Observations](#nfs-observations)
+  - [NFS Netdata Observations](#nfs-netdata-observations)
   - [Mount Permissions](#mount-permissions)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
@@ -90,7 +93,7 @@ kubectl get crds --all-namespaces
 
 #### Context and Namespace Switching
 
-All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch.
+All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch. In the below step-by-step I show you how I set mine up.
 
 - [Kubeswitch on Github](https://github.com/danielfoehrKn/kubeswitch)
 - [The case of Kubeswitch](https://danielfoehrkn.medium.com/the-case-of-kubeswitch-aff4b6a04ae7)
@@ -100,35 +103,67 @@ All the context and name space switching can get really tedious so I introduce t
 - Terminal window isolation
 - Advanced search capabilties
 
-- My aliases in `.zshrc`
+#### Steps to setup KubeSwitch
 
-```shell
-alias swns='switcher ns '
-alias swct='switcher set-context '
-alias swlist='switcher list-contexts'
-```
-
-- My Kubeswitch config in `.kube/switch-config.yaml`
+1. Install KubeSwitch [here](https://github.com/danielfoehrKn/kubeswitch/blob/master/docs/installation.md)
+2. Configure KubeSwitch by creating a `switch-config.yaml` file in your home folder in `.kube/switch-config.yaml`
 
 ```yaml
 kind: SwitchConfig
 version: v1alpha1
-kubeconfigName: null
-showPreview: null
+kubeconfigName: "config*"
+showPreview: true
 execShell: null
-refreshIndexAfter: 1h0m0s
+refreshIndexAfter: null
 hooks: []
 kubeconfigStores:
-- id: default
-  kind: filesystem
-  kubeconfigName: null
-  paths:
-  - ~/.kube/config
-  refreshIndexAfter: null
-  required: null
-  showPrefix: null
-  config: null
-  cache: null
+  - kind: filesystem
+    kubeconfigName: "config*"
+    paths:
+      - "~/.kube"
+```
+
+3. Create a folder structure for your many client clusters like this:
+
+```shell
+.kube/config
+.kube/cfg/i1/config-i1
+.kube/cfg/pangarabbit/config-pr
+```
+
+4. Kubeswitch will search `config*` in the `.kube` directory in your home folder so that when I type `switch` on the command line I get a fuzzy search list of my Kubernetes contexts which I can just select from a list:
+
+```shell
+.kube/kind-ortelius                                                                               │                                                                                                   │
+  .kube/kind-kind                                                                                   │                                                                                                   │
+  .kube/docker-desktop                                                                              │                                                                                                   │
+  pangarabbit/microk8s                                                                              │                                                                                                   │
+  i1/microk8s-i1                                                                                    │                                                                                                   │
+  kind-ortelius                                                                                     │                                                                                                   │
+  kind-kind                                                                                         │                                                                                                   │
+  docker-desktop                                                                                    │                                                                                                   │
+  .switch_tmp/microk8s-i1                                                                           │                                                                                                   │
+> .switch_tmp/microk8s
+```
+
+5. My aliases and autocompletion for Kubeswitch in `.zshrc`
+
+```shell
+alias sw='switch'
+alias swclean='switch clean'
+alias swexec='switch exec '
+alias swgardener='switch gardener'
+alias swhelp='switch help'
+alias swhist='switch history'
+alias swhooks='switch hooks'
+alias swlcon='switch list-contexts'
+alias swns='switch namespace '
+alias swscon='switch set-context '
+alias swslcon='switch set-last-context'
+alias swspcon='switch set-previous-context'
+alias swver='switch version'
+# Auto completion for Kubeswitch in zsh shell
+source <(switcher init zsh)
 ```
 
 ### Enter GitOps | Enter Gimlet | Enter Fluxcd
@@ -466,70 +501,205 @@ spec:
 
 #### NFS Architecture
 
-In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster. For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default. Another thing I learnt was that once you deploy your storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying.
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that I could troubleshoot storage classes on an individual bases without affecting the entire cluster.
+
+```shell
+NAME                         PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi-jenkins              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+nfs-csi-localstack           nfs.csi.k8s.io         Retain          Immediate           true                   27d
+nfs-csi-traefik              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   113m
+```
+
+#### NFS Observations
+
+- Once I deployed the storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying the storage class.
+
+#### NFS Netdata Observations
+
+- For Netdata even thou I specified the storage classes in the Helm Chart that Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default.
+
+```shell
+pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   115m
+```
+
+I tried all kinds of NFS hacks and configurations using the `CSI NFS Driver` to get the Netdata parent to persist data to the Synology DS413j NFS share at `192.168.0.152/pi8s/netdata` to work but I failed. It would read/write perfectly for a while then it would die after a period of time with being unable to `chown (change ownership)`. Oddly the persistence for `K8s state` was fine.
+
+It might seem a bit mad to show the log file but this is a good illustration of challenges you can face with infrastructure. From my investigations the `201:201` represents the entity `netdata` which cannot `chown (change ownership)`
+
+```shell
+# Logs from the netdata-parent pod
+kubectl logs netdata-parent-97687dd89-x7wz9
+2024/10/16 09:07:53.0718: [    1]:  WARNING:       mongoc: Falling back to malloc for counters.
+time=2024-10-16T09:07:53.721+00:00 comm=netdata source=daemon level=info errno="2, No such file or directory" tid=1  msg="CONFIG: cannot load cloud config '/var/lib/netdata/cloud.d/cloud.conf'. Running with internal defaults."
+time=2024-10-16T09:07:53.721+00:00 comm=netdata source=daemon level=error errno="2, No such file or directory" tid=1  msg="Ignoring host prefix '/host': path '/host/proc' failed to statfs()"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="Netdata agent version 'v1.47.4' is starting"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="IEEE754: system is using IEEE754 DOUBLE PRECISION values"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="TIMEZONE: using the contents of /etc/timezone"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="TIMEZONE: fixed as 'Etc/UTC'"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: next: initialize signals"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize signals - next: initialize static threads"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize static threads - next: initialize web server"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize web server - next: initialize ML"
+time=2024-10-16T09:07:54.106+00:00 comm=netdata source=daemon level=info tid=1  msg="ml database version is 2 (no migration needed)"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in     427 ms, initialize ML - next: initialize h2o server"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize h2o server - next: set resource limits"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="resources control: allowed file descriptors: soft = 65536, max = 65536"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, set resource limits - next: become daemon"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Out-Of-Memory (OOM) score is already set to the wanted value 1000"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Adjusted netdata scheduling policy to batch (3), with priority 0."
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Running with process scheduling policy 'batch', nice level 19"
+time=2024-10-16T09:07:54.164+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata' to 201:201"
+time=2024-10-16T09:07:54.164+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db-wal' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db-shm' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db-wal' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db-shm' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db-wal' to 201:201"
+time=2024-10-16T09:07:54.168+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db-shm' to 201:201"
+time=2024-10-16T09:07:54.168+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/datafile-1-0000000001.ndf' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njf' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/datafile-1-0000000002.ndf' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000002.njf' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine-tier1' to 201:201"
+time=2024-10-16T09:07:54.171+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine-tier2' to 201:201"
+time=2024-10-16T09:07:54.172+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata' to 201:201"
+time=2024-10-16T09:07:54.173+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/netdata_random_session_id' to 201:201"
+time=2024-10-16T09:07:54.173+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/netdata.api.key' to 201:201"
+time=2024-10-16T09:07:54.174+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/.agent_crash' to 201:201"
+time=2024-10-16T09:07:54.174+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata/lock' to 201:201"
+time=2024-10-16T09:07:54.175+00:00 comm=netdata source=daemon level=error errno="2, No such file or directory" tid=1  msg="Cannot chown directory '/var/lib/netdata/cloud.d' to 201:201"
+time=2024-10-16T09:07:54.175+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata/registry' to 201:201"
+time=2024-10-16T09:07:54.176+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/registry/netdata.public.unique.id' to 201:201"
+time=2024-10-16T09:07:54.177+00:00 comm=netdata source=collector level=error errno="13, Permission denied" tid=1  msg="Runtime directory '/var/cache/netdata' is not writable, falling back to '/tmp'"
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info errno="17, File exists" tid=1  msg="netdata started on pid 1."
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in      28 ms, become daemon - next: initialize threads after fork"
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize threads after fork - next: initialize registry"
+time=2024-10-16T09:07:54.183+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       2 ms, initialize registry - next: collecting system info"
+time=2024-10-16T09:07:55.345+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in    1162 ms, collecting system info - next: initialize RRD structures"
+time=2024-10-16T09:07:55.347+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database /var/cache/netdata/netdata-meta.db initialization"
+time=2024-10-16T09:07:55.388+00:00 comm=netdata source=daemon level=info tid=1  msg="metadata database version is 18 (no migration needed)"
+time=2024-10-16T09:07:55.621+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database initialization completed"
+time=2024-10-16T09:07:55.623+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database /var/cache/netdata/context-meta.db initialization"
+time=2024-10-16T09:07:55.664+00:00 comm=netdata source=daemon level=info tid=1  msg="context database version is 1 (no migration needed)"
+time=2024-10-16T09:07:55.723+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: found 5 files in path /var/cache/netdata/dbengine"
+time=2024-10-16T09:07:55.723+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: loading 2 data/journal of tier 0..."
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: found 0 files in path /var/cache/netdata/dbengine-tier1"
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: data files not found, creating in path \"/var/cache/netdata/dbengine-tier1\"."
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: found 0 files in path /var/cache/netdata/dbengine-tier2"
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: data files not found, creating in path \"/var/cache/netdata/dbengine-tier2\"."
+time=2024-10-16T09:07:55.726+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: created data file \"/var/cache/netdata/dbengine-tier2/datafile-1-0000000001.ndf\"."
+time=2024-10-16T09:07:55.726+00:00 comm=netdata source=daemon level=error tid=165 thread=DBENGINIT[0] msg="Invalid file /var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2. Not the expected size"
+time=2024-10-16T09:07:55.728+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: created journal file \"/var/cache/netdata/dbengine-tier2/journalfile-1-0000000001.njf\"."
+time=2024-10-16T09:07:55.728+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: populating retention to MRG from 1 journal files of tier 2, using 1 threads..."
+time=2024-10-16T09:07:55.819+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: created data file \"/var/cache/netdata/dbengine-tier1/datafile-1-0000000001.ndf\"."
+time=2024-10-16T09:07:55.821+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: created journal file \"/var/cache/netdata/dbengine-tier1/journalfile-1-0000000001.njf\"."
+time=2024-10-16T09:07:55.821+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: populating retention to MRG from 1 journal files of tier 1, using 1 threads..."
+time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: indexing file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2': extents 1098, metrics 28994, pages 70272"
+time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=error errno="1, Operation not permitted" tid=165 thread=DBENGINIT[0] msg="Cannot create/open file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2'."
+```
+
+I tried a different approach for the Netdata parent I moved away from the CSI NFS Driver and used the `Hostpath Storage` approach starting from `Customized directory used for PersistentVolume` method which can be found [here](https://microk8s.io/docs/addon-hostpath-storage)
+
+My configuration for Netdata persistence looks like the following now which I thought had fixed the issue but then after a period of time the dreaded `chown` error returned. In the below content I have left the CSI NFS Driver configuration for Netdata to show both methods.
+
+```yaml
+# netdata-manifest.yaml which is stored in the Gimlet directory manifests
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: pi8s-nfs-netdata
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: microk8s.io/hostpath
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+reclaimPolicy: Retain
+parameters:
+  pvDir: "/mnt/pi8s/netdata"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pi8s-netdata-pvc
+  namespace: infrastructure
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: "pi8s-nfs-netdata"
+```
 
 #### Mount Permissions
 
-1. "0" (Default)
+1. `0 (Default)`
 
-- This disables the automatic permission setting for the volume directory.
+- **This disables the automatic permission setting for the volume directory.**
 - It means the NFS CSI driver will not attempt to modify the permissions of the directory upon mounting. The permissions will remain as they are on the NFS server.
 - This can be useful if the NFS server already has the desired permissions configured, or if you want to manage permissions manually.
 
-2. "755"
+2. `755`
 
 - **Read and execute access for everyone**, and write access only for the owner (rwxr-xr-x).
 - Commonly used for directories where the owner needs write access, but group and others only need to read or execute (e.g., for shared applications or read-only access).
 
-3. "777"
+3. `777`
 
-- Full read, write, and execute access for everyone (rwxrwxrwx).
+- **Full read, write, and execute access for everyone (rwxrwxrwx).**
 - This makes the directory fully open to all users. Use with caution, as it can pose security risks if sensitive data is being accessed.
 
-4. "644"
+4. `644`
 
 - **Read and write access for the owner**, and read-only access for group and others (rw-r--r--).
 - Useful for files or directories where you want to ensure the owner can modify the files, but others can only view them.
 
-5. "600"
+5. `600`
 
-- Read and write access only for the owner (rw-------).
+- **Read and write access only for the owner (rw-------).**
 - This setting is for more secure or sensitive directories where only the owner should have any access, and no permissions are granted to group or others.
 
-6. "700"
+6. `700`
 
-- Full access only for the owner (rwx------).
+- **Full access only for the owner (rwx------).**
 - The owner has full permissions (read, write, execute), and no permissions are granted to group or others. This is useful for private data that should not be accessible to others.
 
-Here is what my persistent volumes's, persistent volume claims's and storage classes look like now:
+Here is what my persistent volumes, persistent volume claims and storage classes look like now:
 
 ```shell
 kubectl get pv,pvc,sc
 
 # Persistent Volumes
 NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                     STORAGECLASS         VOLUMEATTRIBUTESCLASS   REASON   AGE
-persistentvolume/pvc-25b14167-92ed-4e83-8f99-080cb80aace7   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      nfs-csi-netdata      <unset>                          31m
-persistentvolume/pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          4d6h
-persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          4d6h
-persistentvolume/pvc-c8e1c2db-1141-4d6a-9ca0-58d5b14cc9f7   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    nfs-csi-netdata      <unset>                          31m
-persistentvolume/pvc-d105f31c-a0a1-4598-be51-ce1eaf6d98dd   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   nfs-csi-netdata      <unset>                          31m
-persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>                          4d6h
+persistentvolume/pvc-081130cf-1a18-466f-a970-e518dcc4e6e3   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-142f3b3c-cddd-4ba7-80a4-c43f28f8cf18   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-43ff5e15-c055-4258-97f5-fa2e6b7768fd   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          3d12h
+persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          27d
+persistentvolume/pvc-cb68ce51-ac01-44ce-992e-60e638cdafd7   10Gi       RWX            Retain           Bound    infrastructure/pi8s-netdata-pvc           pi8s-nfs-netdata     <unset>                          56m
+persistentvolume/pvc-e4b42d10-b4d2-4996-906f-4f868006ac4c   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>
 
 # Persistent Volume Claims
 NAME                                             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS         VOLUMEATTRIBUTESCLASS   AGE
-persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 4d6h
-persistentvolumeclaim/localstack                 Bound    pvc-800421ce-07f0-4b9e-a855-f0f7be606691   8Gi        RWO            nfs-csi-localstack   <unset>                 4d6h
-persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-d105f31c-a0a1-4598-be51-ce1eaf6d98dd   1Gi        RWO            nfs-csi-netdata      <unset>                 37m
-persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-25b14167-92ed-4e83-8f99-080cb80aace7   1Gi        RWO            nfs-csi-netdata      <unset>                 37m
-persistentvolumeclaim/netdata-parent-database    Bound    pvc-c8e1c2db-1141-4d6a-9ca0-58d5b14cc9f7   5Gi        RWO            nfs-csi-netdata      <unset>                 37m
-persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 4d6h
+persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 27d
+persistentvolumeclaim/localstack                 Bound    pvc-43ff5e15-c055-4258-97f5-fa2e6b7768fd   8Gi        RWO            nfs-csi-localstack   <unset>                 3d12h
+persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-e4b42d10-b4d2-4996-906f-4f868006ac4c   1Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-081130cf-1a18-466f-a970-e518dcc4e6e3   1Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/netdata-parent-database    Bound    pvc-142f3b3c-cddd-4ba7-80a4-c43f28f8cf18   5Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/pi8s-netdata-pvc           Bound    pvc-cb68ce51-ac01-44ce-992e-60e638cdafd7   10Gi       RWX            pi8s-nfs-netdata     <unset>                 56m
+persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 27d
 
 # Storage Classes
-NAME                                                    PROVISIONER      RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
-storageclass.storage.k8s.io/nfs-csi-jenkins             nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
-storageclass.storage.k8s.io/nfs-csi-localstack          nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
-storageclass.storage.k8s.io/nfs-csi-netdata (default)   nfs.csi.k8s.io   Retain          Immediate           true                   40m
-storageclass.storage.k8s.io/nfs-csi-traefik             nfs.csi.k8s.io   Retain          Immediate           true                   4d7h
+NAME                                                     PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+storageclass.storage.k8s.io/nfs-csi-jenkins              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/nfs-csi-localstack           nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/nfs-csi-traefik              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   86m
 ```
 
 ```yaml
@@ -731,7 +901,7 @@ spec:
 
 ```yaml
 ---
-# StorageClass for netdata
+# StorageClass for netdata which I am leaving here as an example for configuring netdata using the CSI driver
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -863,6 +1033,7 @@ kubectl get pods -n kube-system
 - Kubectl show me the Storage Class
 
 ```shell
+# In this image the Netdata storage class is being deployed using the CSI NFS Driver
 kubectl get sc --all-namespaces
 ```
 

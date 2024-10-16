@@ -124,12 +124,20 @@ ingress:
 database:
   persistence: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 5Gi
 alarms:
   persistence: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 1Gi
 ```
 
@@ -138,12 +146,16 @@ alarms:
 persistence:
   enabled: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 1Gi
 ```
 
 ```yaml
-# enabling anamolie detection with machine learning for parent and child
+# enabling anomaly detection with machine learning for parent and child
 configs:
   netdata:
     enabled: true
@@ -175,14 +187,14 @@ spec:
   chart:
     spec:
       chart: netdata
-      version: 3.7.100 # Upgrade Netdata here by changing the version
+      version: 3.7.107
       sourceRef:
         kind: HelmRepository
         name: netdata
       interval: 10m
   values:
     valuesObject:
-      replicaCount: 1
+      replicaCount: 3
       deploymentStrategy:
         type: Recreate
 
@@ -331,13 +343,14 @@ spec:
           # DO_NOT_TRACK: 1
 
         envFrom:
-          []
+          #[]
           ## E.g. to read Netdata Cloud claim token from an existing secret "netdata" set this to:
           # - secretRef:
           #     name: netdata
           ## And create it with: kubectl create secret generic netdata --from-literal="NETDATA_CLAIM_TOKEN=<token>"
           ## Also ensure that claim.token is empty
-
+          #- secretRef:
+          #    name: smbcreds
         podLabels: {}
 
         podAnnotations: {}
@@ -347,13 +360,13 @@ spec:
         database:
           persistence: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "nfs-csi-netdata" # Add your storage class here
+          storageclass: "pi8s-nfs-netdata"
           volumesize: 5Gi
 
         alarms:
           persistence: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "nfs-csi-netdata" # Add your storage class here
+          storageclass: "pi8s-nfs-netdata"
           volumesize: 1Gi
 
         configs:
@@ -365,7 +378,6 @@ spec:
                 hostname = netdata-parent
               [db]
                 mode = dbengine
-
               [plugins]
                 cgroups = no
                 tc = no
@@ -415,13 +427,20 @@ spec:
 
         claiming:
           enabled: true
-          token: "" # Replace with your token
-          rooms: "" # Replace with your room id
+          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
+          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
+          #- name: pi8s-netdata-volume
+          #  mountPath: "/mnt/pi8s"
+          #  readOnly: false
+          #  mountPropagation: HostToContainer
 
         extraVolumes: []
+          # - name: pi8s-netdata-volume
+          #   persistentVolumeClaim:
+          #     claimName: pi8s-netdata-pvc
 
       child:
         enabled: true
@@ -493,9 +512,28 @@ spec:
               [db]
                 mode = ram
               [health]
-                enabled = no
+                enabled = yes
               [ml]
                 enabled = yes
+                # maximum num samples to train = 21600
+                # minimum num samples to train = 900
+                # train every = 3h
+                # number of models per dimension = 18
+                # dbengine anomaly rate every = 30
+                # num samples to diff = 1
+                # num samples to smooth = 3
+                # num samples to lag = 5
+                # random sampling ratio = 0.2
+                # maximum number of k-means iterations = 1000
+                # dimension anomaly score threshold = 0.99
+                # host anomaly rate threshold = 1.0
+                # anomaly detection grouping method = average
+                # anomaly detection grouping duration = 5m
+                # hosts to skip from training = !*
+                # charts to skip from training = netdata.*
+                # dimension anomaly rate suppression window = 15m
+                # dimension anomaly rate suppression threshold = 450
+                # delete models older than = 7d
           stream:
             enabled: true
             path: /etc/netdata/stream.conf
@@ -544,34 +582,33 @@ spec:
           # DO_NOT_TRACK: 1
 
         envFrom:
-          []
+          #[]
           ## E.g. to read Netdata Cloud claim token from an existing secret "netdata" set this to:
           # - secretRef:
           #     name: netdata
           ## And create it with: kubectl create secret generic netdata --from-literal="NETDATA_CLAIM_TOKEN=<token>"
           ## Also ensure that claim.token is empty
+          #- secretRef:
+          #    name: smbcreds
 
         claiming:
           enabled: true
-          token: "" # Replace with your token
-          rooms: "" # Replace with your room id
+          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
+          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
           url: "https://api.netdata.cloud"
 
-        extraVolumeMounts:
-          []
-          ## Additional volume mounts for netdata child
-          ## E.g to mount all disks under / to be monitored via the diskspace plugin
-          # - name: root
-          #   mountPath: /host
-          #   readOnly: true
-          #   mountPropagation: HostToContainer
-        extraVolumes:
-          []
-          ## Additional volumes for netdata child
-          ## E.g to mount all disks under / to be monitored via the diskspace plugin
-          # - name: root
-          #   hostPath:
-          #     path: /
+        extraVolumeMounts: []
+          # - name: pi8s-netdata-volume
+          #   mountPath: /mnt/pi8s
+          #- name: pi8s-netdata-volume
+          #  mountPath: "/mnt/pi8s"
+          #  readOnly: false
+          #  mountPropagation: HostToContainer
+
+        extraVolumes: []
+          # - name: pi8s-netdata-volume
+          #   persistentVolumeClaim:
+          #     claimName: pi8s-netdata-pvc
 
       k8sState:
         enabled: true
@@ -621,7 +658,7 @@ spec:
         persistence:
           enabled: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "nfs-csi-netdata" # Add your storage class here
+          storageclass: "pi8s-nfs-netdata"
           volumesize: 1Gi
 
         configs:
@@ -634,9 +671,28 @@ spec:
               [db]
                 mode = ram
               [health]
-                enabled = no
+                enabled = yes
               [ml]
                 enabled = yes
+                # maximum num samples to train = 21600
+                # minimum num samples to train = 900
+                # train every = 3h
+                # number of models per dimension = 18
+                # dbengine anomaly rate every = 30
+                # num samples to diff = 1
+                # num samples to smooth = 3
+                # num samples to lag = 5
+                # random sampling ratio = 0.2
+                # maximum number of k-means iterations = 1000
+                # dimension anomaly score threshold = 0.99
+                # host anomaly rate threshold = 1.0
+                # anomaly detection grouping method = average
+                # anomaly detection grouping duration = 5m
+                # hosts to skip from training = !*
+                # charts to skip from training = netdata.*
+                # dimension anomaly rate suppression window = 15m
+                # dimension anomaly rate suppression threshold = 450
+                # delete models older than = 7d
               [plugins]
                 timex = no
                 checks = no
@@ -692,23 +748,33 @@ spec:
           # DO_NOT_TRACK: 1
 
         envFrom:
-          []
+          #[]
           ## E.g. to read Netdata Cloud claim token from an existing secret "netdata" set this to:
           # - secretRef:
           #     name: netdata
           ## And create it with: kubectl create secret generic netdata --from-literal="NETDATA_CLAIM_TOKEN=<token>"
           ## Also ensure that claim.token is empty
+          #- secretRef:
+          #    name: smbcreds
 
         claiming:
           enabled: true
-          token: "" # Replace with your token
-          rooms: "" # Replace with your id
+          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
+          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
+          # - name: pi8s-netdata-volume
+          #   mountPath: /mnt/pi8s
+          #- name: pi8s-netdata-volume
+          #  mountPath: "/mnt/pi8s"
+          #  readOnly: false
+          #  mountPropagation: HostToContainer
 
         extraVolumes: []
-
+          # - name: pi8s-netdata-volume
+          #   persistentVolumeClaim:
+          #     claimName: pi8s-netdata-pvc
 ```
 
 - Lets git it
