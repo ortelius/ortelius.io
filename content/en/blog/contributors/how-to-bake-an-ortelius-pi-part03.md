@@ -166,7 +166,6 @@ alias swver='switch version'
 source <(switcher init zsh)
 ```
 
-
 ### Enter GitOps | Enter Gimlet | Enter Fluxcd
 
 I wanted to find a process for repeatable deployments, and to incorporate drift detection for Kubernetes infrastructure and applications but I was finding it heavy going to use the default values from the providers Helm Chart and then trying to override those with my own values. I couldn't get that to work without some hellish complicated setup until I found Gimlet and Fluxcd which allowed for a single human to have a simple repeatable process.
