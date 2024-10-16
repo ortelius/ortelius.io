@@ -93,7 +93,7 @@ kubectl get crds --all-namespaces
 
 #### Context and Namespace Switching
 
-All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch.
+All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch. In the below step-by-step I show you how I set mine up.
 
 - [Kubeswitch on Github](https://github.com/danielfoehrKn/kubeswitch)
 - [The case of Kubeswitch](https://danielfoehrkn.medium.com/the-case-of-kubeswitch-aff4b6a04ae7)
