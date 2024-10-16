@@ -14,6 +14,7 @@ author: Sacha Wharton
 - [Kubernetes](#kubernetes)
   - [CRDs](#crds)
   - [Context and Namespace Switching](#context-and-namespace-switching)
+  - [Steps to setup KubeSwitch](#steps-to-setup-kubeswitch)
 - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
 - [Gimlet](#gimlet)
   - [Gimlet Application Repostories](#gimlet-application-repostories)
@@ -102,36 +103,70 @@ All the context and name space switching can get really tedious so I introduce t
 - Terminal window isolation
 - Advanced search capabilties
 
-- My aliases in `.zshrc`
+#### Steps to setup KubeSwitch
 
-```shell
-alias swns='switcher ns '
-alias swct='switcher set-context '
-alias swlist='switcher list-contexts'
-```
-
-- My Kubeswitch config in `.kube/switch-config.yaml`
+1. Install KubeSwitch [here](https://github.com/danielfoehrKn/kubeswitch/blob/master/docs/installation.md)
+2. Configure KubeSwitch
 
 ```yaml
+# This my Kubeswitch config in `.kube/switch-config.yaml`
 kind: SwitchConfig
 version: v1alpha1
-kubeconfigName: null
-showPreview: null
+kubeconfigName: "config*"
+showPreview: true
 execShell: null
-refreshIndexAfter: 1h0m0s
+refreshIndexAfter: null
 hooks: []
 kubeconfigStores:
-- id: default
-  kind: filesystem
-  kubeconfigName: null
-  paths:
-  - ~/.kube/config
-  refreshIndexAfter: null
-  required: null
-  showPrefix: null
-  config: null
-  cache: null
+  - kind: filesystem
+    kubeconfigName: "config*"
+    paths:
+      - "~/.kube"
 ```
+
+3. Create a folder structure for your many client cluster. Mine is like this:
+
+```shell
+.kube/config
+.kube/cfg/i1/config-i1
+.kube/cfg/pangarabbit/config-pr
+```
+
+4. The Kubeswitch config will search `config*` which as in config wildcard name in the `.kube` directory in your home folder so that when I type `switch` on the command line i get a fuzzy search list like this:
+
+```shell
+.kube/kind-ortelius                                                                               │                                                                                                   │
+  .kube/kind-kind                                                                                   │                                                                                                   │
+  .kube/docker-desktop                                                                              │                                                                                                   │
+  pangarabbit/microk8s                                                                              │                                                                                                   │
+  i1/microk8s-i1                                                                                    │                                                                                                   │
+  kind-ortelius                                                                                     │                                                                                                   │
+  kind-kind                                                                                         │                                                                                                   │
+  docker-desktop                                                                                    │                                                                                                   │
+  .switch_tmp/microk8s-i1                                                                           │                                                                                                   │
+> .switch_tmp/microk8s
+```
+
+5. My aliases in `.zshrc`
+
+```shell
+alias sw='switch'
+alias swclean='switch clean'
+alias swexec='switch exec '
+alias swgardener='switch gardener'
+alias swhelp='switch help'
+alias swhist='switch history'
+alias swhooks='switch hooks'
+alias swlcon='switch list-contexts'
+alias swns='switch namespace '
+alias swscon='switch set-context '
+alias swslcon='switch set-last-context'
+alias swspcon='switch set-previous-context'
+alias swver='switch version'
+# Auto completion for Kubeswitch in zsh shell
+source <(switcher init zsh)
+```
+
 
 ### Enter GitOps | Enter Gimlet | Enter Fluxcd
 
@@ -468,7 +503,7 @@ spec:
 
 #### NFS Architecture
 
-In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that when I hit strange NFS anamolies I can debug them on an individual bases for each storage class without affecting the entire cluster.
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that I could troubleshoot storage classes on an individual bases without affecting the entire cluster.
 
 ```shell
 NAME                         PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
@@ -480,11 +515,11 @@ pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate   
 
 #### NFS Observations
 
-- Once I deployed the storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying.
+- Once I deployed the storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying the storage class.
 
 #### NFS Netdata Observations
 
-- For Netdata even thou I specified the storage classes in the Helm Chart Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default.
+- For Netdata even thou I specified the storage classes in the Helm Chart that Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default.
 
 ```shell
 pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   115m
