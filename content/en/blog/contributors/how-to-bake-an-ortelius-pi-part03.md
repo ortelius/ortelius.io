@@ -132,7 +132,7 @@ kubeconfigStores:
 .kube/cfg/pangarabbit/config-pr
 ```
 
-4. The Kubeswitch config will search `config*` which as in config wildcard name in the `.kube` directory in your home folder so that when I type `switch` on the command line i get a fuzzy search list like this:
+1. The Kubeswitch config will search `config*` as in `config wildcard name` in the `.kube` directory in your home folder so that when I type `switch` on the command line I get a fuzzy search list of my Kubernetes contexts which I can just select from a list:
 
 ```shell
 .kube/kind-ortelius                                                                               │                                                                                                   │
