@@ -106,10 +106,9 @@ All the context and name space switching can get really tedious so I introduce t
 #### Steps to setup KubeSwitch
 
 1. Install KubeSwitch [here](https://github.com/danielfoehrKn/kubeswitch/blob/master/docs/installation.md)
-2. Configure KubeSwitch
+2. Configure KubeSwitch by creating a `switch-config.yaml` file in your home folder in `.kube/switch-config.yaml`
 
 ```yaml
-# This my Kubeswitch config in `.kube/switch-config.yaml`
 kind: SwitchConfig
 version: v1alpha1
 kubeconfigName: "config*"
@@ -124,7 +123,7 @@ kubeconfigStores:
       - "~/.kube"
 ```
 
-3. Create a folder structure for your many client cluster. Mine is like this:
+3. Create a folder structure for your many client clusters like this:
 
 ```shell
 .kube/config
@@ -132,7 +131,7 @@ kubeconfigStores:
 .kube/cfg/pangarabbit/config-pr
 ```
 
-1. The Kubeswitch config will search `config*` as in `config wildcard name` in the `.kube` directory in your home folder so that when I type `switch` on the command line I get a fuzzy search list of my Kubernetes contexts which I can just select from a list:
+4. Kubeswitch will search `config*` in the `.kube` directory in your home folder so that when I type `switch` on the command line I get a fuzzy search list of my Kubernetes contexts which I can just select from a list:
 
 ```shell
 .kube/kind-ortelius                                                                               │                                                                                                   │
@@ -147,7 +146,7 @@ kubeconfigStores:
 > .switch_tmp/microk8s
 ```
 
-5. My aliases in `.zshrc`
+5. My aliases and autocompletion for Kubeswitch in `.zshrc`
 
 ```shell
 alias sw='switch'
