@@ -492,7 +492,7 @@ pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate   
 
 I tried all kinds of NFS hacks and configurations using the `CSI NFS Driver` to get the Netdata parent to persist data to the Synology DS413j NFS share at `192.168.0.152/pi8s/netdata` to work but I failed. It would read/write perfectly for a while then it would die after a period of time with being unable to `chown (change ownership)`. Oddly the persistence for `K8s state` was fine.
 
-It might seem a bit mad to show the long log file but this is a good illustration of challenges you can face with infrastructure. From my investigations the `201:201` represents the entity `netdata` which cannot `chown (change ownership)`
+It might seem a bit mad to show the log file but this is a good illustration of challenges you can face with infrastructure. From my investigations the `201:201` represents the entity `netdata` which cannot `chown (change ownership)`
 
 ```shell
 # Logs from the netdata-parent pod
@@ -570,7 +570,7 @@ time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=info tid=165
 time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=error errno="1, Operation not permitted" tid=165 thread=DBENGINIT[0] msg="Cannot create/open file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2'."
 ```
 
-I tried a different approach for the Netdata parent using the `Hostpath Storage` and using the `Customized directory used for PersistenVolume` method which can be found [here](https://microk8s.io/docs/addon-hostpath-storage)
+I tried a different approach for the Netdata parent I moved away from the CSI NFS Driver and used the `Hostpath Storage` approach starting from `Customized directory used for PersistentVolume` method which can be found [here](https://microk8s.io/docs/addon-hostpath-storage)
 
 My configuration for Netdata persistence looks like the following now which I thought had fixed the issue but then after a period of time the dreaded `chown` error returned. In the below content I have left the CSI NFS Driver configuration for Netdata to show both methods.
 

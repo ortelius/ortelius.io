@@ -124,12 +124,20 @@ ingress:
 database:
   persistence: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 5Gi
 alarms:
   persistence: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 1Gi
 ```
 
@@ -138,7 +146,11 @@ alarms:
 persistence:
   enabled: true
   ## Set '-' as the storageclass to get a volume from the default storage class.
+  ## Comment out one of the storage classes as you can only have one
+  ## Using the NFS CSI Driver
   storageclass: "nfs-csi-netdata" # Add your storage class here
+  ## Using the Hostpath Storage
+  storageclass: "pi8s-nfs-netdata" # Add your storage class here
   volumesize: 1Gi
 ```
 
