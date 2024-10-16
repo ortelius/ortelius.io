@@ -155,7 +155,7 @@ persistence:
 ```
 
 ```yaml
-# enabling anamoly detection with machine learning for parent and child
+# enabling anomaly detection with machine learning for parent and child
 configs:
   netdata:
     enabled: true
