@@ -20,6 +20,7 @@ author: Sacha Wharton
   - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Netdata](#fluxcd-is-doing-the-following-under-the-hood--netdata)
   - [Kubernetes check | Netdata](#kubernetes-check--netdata)
+  - [How to add additional nodes in Netdata](#how-to-add-additional-nodes-in-netdata)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -32,7 +33,7 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 - I get instant metrics and graphs straight out of the box all in `real-time` (yes real real-time, every second for every metric) at the click of a button
 - Rapid time to value
 - Alerts and Ai for troubleshooting
-- Netdata is super lightweight - Its running on 3 Pi 4B's and a old Synology NAS as the centralised storage. That speaks lightweight to me
+- Netdata is super lightweight - Its running on 3 Pi 4B's, 3 Pi 5's and a old Synology NAS as the centralised storage. That speaks lightweight to me
 - Netdata has a very generous [free tier](https://www.netdata.cloud/pricing/) which I used for a while before signing up for the `Homelab` option
 - None of my data is ever stored at Netdata
 - No insane egress, scalability, storage data costs from a cloud provider
@@ -841,6 +842,64 @@ kubectl get pods -n infrastructure | grep netdata
 <p></p>
 
 - I got a lot of this information from the fine folks at Netdata in this presentation [Maximise Uptime and Minimise Stress](https://youtu.be/xOJwlU_cYAE)
+
+#### How to add additional nodes in Netdata
+
+- In the top left corner of your screen go to `Connect Nodes`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/05-netdata-connect-nodes.png" alt="netdata connect nodes"/>
+</div>
+<p></p>
+
+- On the right hand side of your screen select `Kubernetes (Helm)`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/06-netdata-existing-cluster.png" alt="netdata existing cluster"/>
+</div>
+<p></p>
+
+- Copy the provided code to `override.yaml` which will be pre-populated with your token data
+
+```yaml
+image:
+  tag: stable
+
+restarter:
+  enabled: true
+
+parent:
+  claiming:
+    enabled: true
+    token:
+    rooms:
+
+child:
+  claiming:
+    enabled: true
+    token:
+    rooms:
+```
+
+- On the command line use Helm to install Netdata on your Kubernetes cluster
+- For a new installation use helm install
+- For an existing cluster add the content below to your override.yaml and then run
+
+```shell
+helm upgrade -f override.yml netdata netdata/netdata
+```
+
+- Your new nodes will start appearing in Netdata console after a little time
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/07-netdata-nodes-123.png" alt="netdata node 123"/>
+</div>
+<p></p>
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part07/08-netdata-nodes-456.png" alt="netdata nodes 456"/>
+</div>
+<p></p>
 
 ### Conclusion
 
