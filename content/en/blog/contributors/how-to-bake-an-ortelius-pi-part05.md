@@ -26,6 +26,8 @@ author: Sacha Wharton
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
   - [Jenkins Restore](#jenkins-restore)
+  - [Jenkins and Credentials](#jenkins-and-credentials)
+  - [Jenkins and Discord Notifications](#jenkins-and-discord-notifications)
   - [Creating a Multibranch Pipeline](#creating-a-multibranch-pipeline)
   - [Jenkins meets Ortelius](#jenkins-meets-ortelius)
 - [Conclusion](#conclusion)
@@ -2077,12 +2079,55 @@ kubectl get pvc | grep jenkins
 
 #### Jenkins Restore
 
-I tested a restore by simply deleting all the Jenkins config off the NFS server, unzipped one of the backups and copied the Jenkins config files back then deleted the pod and waited for it to be recreated. It worked a charm, all my data, plugins, config, jobs and secrets were restored. I thought that was pretty neat. The Jenkins pod is simply a looking glass that presents all the Jenkins config in a human readable format. ***FYI make sure you backup your persistent volumes on the NFS server***.
+I tested a restore by simply deleting all the Jenkins config off the NFS server, unzipped one of the backups and copied the Jenkins config files back then deleted the pod and waited for it to be recreated. It worked a charm, all my data, plugins, config, jobs and secrets were restored. I thought that was pretty neat. The Jenkins pod is simply a looking glass that presents all the Jenkins config in a human readable format.
+
+***FYI make sure you backup your persistent volumes on the NFS server***.
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
 </div>
 <p></p>
+
+#### Jenkins and Credentials
+
+#### Jenkins and Discord Notifications
+
+- We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
+- Below is the code snippet that invokes the Discord build notification
+
+```groovy
+    post {
+        always {
+            withCredentials([string(credentialsId: 'pangarabbit-discord-jenkins', variable: 'DISCORD')]) {
+                discordSend description: """
+                                    Result: ${currentBuild.currentResult}
+                                    Service: ${env.JOB_NAME}
+                                    Build Number: [#${env.BUILD_NUMBER}](${env.BUILD_URL})
+                                    Branch: ${env.GIT_BRANCH}
+                                    Commit User: ${env.GIT_COMMIT_USER}
+                                    Duration: ${currentBuild.durationString}
+                                """,
+                                footer: "Wall E love you!",
+                                link: env.BUILD_URL,
+                                result: currentBuild.currentResult,
+                                title: env.JOB_NAME,
+                                webhookURL: DISCORD
+            }
+        }
+    }
+}
+```
+
+- A notification will look like this
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/35-jenkins-discord-notification.png" alt="jenkins discord notification"/>
+</div>
+<p></p>
+
+
+
+
 
 #### Creating a Multibranch Pipeline
 
@@ -2127,71 +2172,137 @@ kubectl create ns app
 - Create the following `Jenkinsfile` in the GitHub repo your created and push it to your GitHub repo
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+- [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf)
 
 ```groovy
 pipeline {
     environment {
-        DHUSER = "admin" //Default Ortelius username
-        DHPASS = "admin" //Default Ortelius password
-        DHORG = "<organisation>" //Replace with your organisation
-        DHPROJECT = "ortelius-jenkins-demo-app" //Replace with your GitHub project name
-        DOCKERREPO = "<username>/hello-world" //Replace with your DockerHub repo username
-        DHURL = "https://ortelius.pangarabbit.com" //Replace with whatever you used to access the Ortelius frontend
+        DOCKERREPO = "quay.io"
+        DHUSER = credentials('dh-pangarabbit')
+        DHPASS = credentials('dh-pangarabbit')
+        DHORG = "pangarabbit"
+        DHPROJECT = "ortelius-jenkins-demo-app"
+        DHURL = "https://ortelius.pangarabbit.com"
+        DISCORD = credentials('pangarabbit-discord-jenkins')
     }
 
     agent {
         kubernetes {
-            cloud 'PangaRabbit K8s' //Replace with your Cloud
-            defaultContainer 'python3' //Container default
-            inheritFrom 'python3' //Inherit from a template
-            namespace 'app' //The Kubernetes namespace you would like to deploy the app to
+            cloud 'PangaRabbit K8s'
+            defaultContainer 'python3'
+            inheritFrom 'python3'
+            namespace 'app'
         }
     }
 
     stages {
-        stage('Setup') {
+        stage('Checkout') {
             steps {
-                sh '''
-            pip install ortelius-cli
-            git clone https://github.com/dstar55/docker-hello-world-spring-boot
-            cd docker-hello-world-spring-boot
-            dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
-        '''
+                container('python3') {
+                    checkout([$class: 'GitSCM',
+                        branches: [[name: '*/main']],
+                        userRemoteConfigs: [[url: 'https://github.com/dstar55/docker-hello-world-spring-boot']]
+                    ])
+                }
             }
         }
-        stage('Build and push image') {
-            steps {
-                sh '''
-            source ${WORKSPACE}/dhenv.sh
-            docker build --tag ${DOCKERREPO}:${IMAGE_TAG} .
-            docker push ${DOCKERREPO}:${IMAGE_TAG}
+        stage('Git Committer') {
+             steps {
+                 container('python3') {
+                     script {
+                   // Mark the directory as safe to prevent Git errors
+                    sh 'git config --global --add safe.directory ${WORKSPACE}'
 
-            # This line determines the docker digest for the image
-            echo export DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' ${DOCKERREPO}:${IMAGE_TAG} | cut -d: -f2 | cut -c-12) >> ${WORKSPACE}/dhenv.sh
-        '''
+                   // Get the user who made the latest commit
+                    env.GIT_COMMIT_USER = sh(
+                        script: "git log -1 --pretty=format:'%an'",
+                        returnStdout: true
+                    ).trim()
+                    }
+                 }
+             }
+        }
+        stage('Setup') {
+            steps {
+                container('python3') {
+                    sh '''
+                        apt-get update && apt-get install -y docker.io
+                        pip install ortelius-cli
+                        git clone https://github.com/dstar55/docker-hello-world-spring-boot
+                        cd docker-hello-world-spring-boot
+                        dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
+                    '''
+                }
+            }
+        }
+        stage('Docker Login') {
+            steps {
+                container('python3') {
+                    sh '''
+                        echo ${DHPASS} | docker login -u ${DHUSER} --password-stdin ${DHURL}
+                    '''
+                }
+            }
+        }
+        stage('Build and Push Image') {
+            steps {
+                container('python3') {
+                    sh '''
+                        . ${WORKSPACE}/dhenv.sh
+                        docker build --tag ${DOCKERREPO}:${IMAGE_TAG} .
+                        docker push ${DOCKERREPO}:${IMAGE_TAG}
+
+                        # This line determines the docker digest for the image
+                        echo export DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' ${DOCKERREPO}:${IMAGE_TAG} | cut -d: -f2 | cut -c-12) >> ${WORKSPACE}/dhenv.sh
+                    '''
+                }
             }
         }
         stage('Capture SBOM') {
             steps {
-                sh '''
-            source ${WORKSPACE}/dhenv.sh
-            # install Syft
-            curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b .
+                container('python3') {
+                    sh '''
+                        . ${WORKSPACE}/dhenv.sh
+                        # install Syft
+                        curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b .
 
-            # create the SBOM
-            ./syft packages ${DOCKERREPO}:${IMAGE_TAG} --scope all-layers -o cyclonedx-json > ${WORKSPACE}/cyclonedx.json
+                        # create the SBOM
+                        ./syft packages ${DOCKERREPO}:${IMAGE_TAG} --scope all-layers -o cyclonedx-json > ${WORKSPACE}/cyclonedx.json
 
-            # display the SBOM
-            cat ${WORKSPACE}/cyclonedx.json
-        '''
+                        # display the SBOM
+                        cat ${WORKSPACE}/cyclonedx.json
+                    '''
+                }
             }
         }
         stage('Create Component with Build Data and SBOM') {
             steps {
-                sh '''
-            source ${WORKSPACE}/dhenv.sh
-            dh updatecomp --rsp component.toml --deppkg "cyclonedx@${WORKSPACE}/cyclonedx.json"
-        '''
+                container('python3') {
+                    sh '''
+                        . ${WORKSPACE}/dhenv.sh
+                        dh updatecomp --rsp component.toml --deppkg "cyclonedx@${WORKSPACE}/cyclonedx.json"
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            withCredentials([string(credentialsId: 'pangarabbit-discord-jenkins', variable: 'DISCORD')]) {
+                discordSend description: """
+                                    Result: ${currentBuild.currentResult}
+                                    Service: ${env.JOB_NAME}
+                                    Build Number: [#${env.BUILD_NUMBER}](${env.BUILD_URL})
+                                    Branch: ${env.GIT_BRANCH}
+                                    Commit User: ${env.GIT_COMMIT_USER}
+                                    Duration: ${currentBuild.durationString}
+                                """,
+                                footer: "Wall E love you!",
+                                link: env.BUILD_URL,
+                                result: currentBuild.currentResult,
+                                title: env.JOB_NAME,
+                                webhookURL: DISCORD
             }
         }
     }
@@ -2235,6 +2346,7 @@ git push
 ```shell
 kubectl get pod -n app
 ```
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/33-jenkins-multibranch-pipeline-build-pod.png" alt="jenkins multibranch pipeline build pod"/>
 </div>
