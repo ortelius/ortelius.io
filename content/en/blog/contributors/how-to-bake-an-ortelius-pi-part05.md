@@ -2093,6 +2093,28 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 #### Jenkins and Discord Notifications
 
 - We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
+- This code sets up the variables to mark the cloned repo as safe and pull in the user of the Git commit
+
+```groovy
+        stage('Git Committer') {
+             steps {
+                 container('python3') {
+                     script {
+                   // Mark the directory as safe to prevent Git errors
+                    sh 'git config --global --add safe.directory ${WORKSPACE}'
+
+                   // Get the user who made the latest commit
+                    env.GIT_COMMIT_USER = sh(
+                        script: "git log -1 --pretty=format:'%an'",
+                        returnStdout: true
+                    ).trim()
+                    }
+                 }
+             }
+        }
+
+```
+
 - Below is the code snippet that invokes the Discord build notification
 
 ```groovy
@@ -2118,7 +2140,7 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 }
 ```
 
-- A notification will look like this
+- A notification will look like this and you can correlate the information with the code above
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/35-jenkins-discord-notification.png" alt="jenkins discord notification"/>
