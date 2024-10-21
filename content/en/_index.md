@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">A Central Evidence Store to Gather Continuous Security Intelligence</h1>
+<h1 class="text-left">A Central Vulnerability Evidence Store for DevSecOps</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -23,9 +23,9 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="margin-top:80px;margin-left:140px">
 
-The mission of the Ortelius community is to expose weak links in the software supply chain by continuously gathering and analyzing software supply chain intelligence introduced across the DevOps pipeline. Generating security insights like SBOMs is not enough to harden your software supply chain. Consumption and analysis of the data is needed to rapidly respond to supply chain threats.
+The Ortelius community is dedicated to strengthening the software supply chain by identifying weak links and continuously analyzing vulnerabilities introduced throughout the DevSecOps pipeline. To effectively manage code-level risks, Software Bill of Materials (SBOM) reports must be actively consumed and scanned for new threats that emerge daily. Simply generating an SBOM isn’t enough—analyzing and acting on the data is essential for a secure supply chain.
 
-IT teams struggle to respond to threats when critical security intelligence is fragmented across tools and managed at the container level. Ortelius gathers and aggregates security and DevOps intelligence, tracking open-source inventory and vulnerabilities at the higher organizational levels including logical applications, runtime environments and organizational domains.
+Many IT teams struggle to respond to security threats due to fragmented intelligence spread across various tools, often managed only at the container level. Ortelius streamlines this process by gathering and aggregating security and DevOps intelligence, tracking open-source inventory and vulnerabilities at higher organizational levels, including logical applications, runtime environments, and entire domains.
 
 With Ortelius, you can easily answer the question, “where is Log4J running?”
 
