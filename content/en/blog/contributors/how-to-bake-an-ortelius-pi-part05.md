@@ -2107,6 +2107,7 @@ pipeline {
 
 #### Jenkins and Discord Notifications
 
+- To use this plugin you will need a Discord server of your own which you can find out how to setup [here](https://discord.com/)
 - We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
 - Go to `Manage Jenkins` --> `Plugins`
 - This code sets up the variables to mark the cloned repo as safe and pull in the user of the Git commit
