@@ -11,13 +11,13 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Kubernetes](#kubernetes)
   - [CRDs](#crds)
   - [Context and Namespace Switching](#context-and-namespace-switching)
+  - [Steps to setup KubeSwitch](#steps-to-setup-kubeswitch)
 - [Enter GitOps | Enter Gimlet | Enter Fluxcd](#enter-gitops--enter-gimlet--enter-fluxcd)
 - [Gimlet](#gimlet)
-  - [Gimlet Repostories](#gimlet-repostories)
+  - [Gimlet Application Repostories](#gimlet-application-repostories)
   - [Gimlet Environments](#gimlet-environments)
   - [Gimlet Environment Config](#gimlet-environment-config)
   - [Gimlet Observability](#gimlet-observability)
@@ -34,35 +34,37 @@ author: Sacha Wharton
   - [Github check](#github-check)
   - [Github Gimlet repo check](#github-gimlet-repo-check)
   - [Gimlet Gitops Infra](#gimlet-gitops-infra)
-  - [Gimlet Gitops Apps](#gimlet-gitops-apps)
+  - [Gimlet Gitops Applications](#gimlet-gitops-applications)
 - [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
-  - [Kubernetes CSI NFS Driver](#kubernetes-csi-nfs-driver)
-- [Gimlet Kubernetes CSI NFS Driver Deployment](#gimlet-kubernetes-csi-nfs-driver-deployment)
+  - [Kubernetes CSI NFS Driver Deployment](#kubernetes-csi-nfs-driver-deployment)
   - [Helm-Repository | CSI NFS Driver](#helm-repository--csi-nfs-driver)
   - [Helm-Release | CSI NFS Driver](#helm-release--csi-nfs-driver)
+  - [NFS Architecture](#nfs-architecture)
+  - [NFS Observations](#nfs-observations)
+  - [NFS Netdata Observations](#nfs-netdata-observations)
+  - [Mount Permissions](#mount-permissions)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
-  - [Kubernetes Cert Manager](#kubernetes-cert-manager)
-- [Gimlet | Cert Manager](#gimlet--cert-manager)
+  - [Kubernetes Cert Manager Deployment](#kubernetes-cert-manager-deployment)
   - [Helm-Repository | Cert Manager](#helm-repository--cert-manager)
   - [Helm-Release | Cert Manager](#helm-release--cert-manager)
-  - [FYI | Helm Chart configurations that were amended for Cert Manager](#fyi--helm-chart-configurations-that-were-amended-for-cert-manager)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights)
   - [Fluxcd is doing the following under the hood | Cert Manager](#fluxcd-is-doing-the-following-under-the-hood--cert-manager)
   - [Kubernetes check | Cert Manager](#kubernetes-check--cert-manager)
-- [Metallb load-balancer for bare metal Kubernetes](#metallb-load-balancer-for-bare-metal-kubernetes)
+  - [Metallb Load-Balancer For Bare Metal Kubernetes Deployment](#metallb-load-balancer-for-bare-metal-kubernetes-deployment)
   - [Helm-Repository | Metallb](#helm-repository--metallb)
   - [Helm-Release | Metallb](#helm-release--metallb)
   - [Fluxcd is doing the following under the hood | Metallb](#fluxcd-is-doing-the-following-under-the-hood--metallb)
   - [Kubernetes check | Metallb](#kubernetes-check--metallb)
-- [Traefik the Cloud Native Proxy](#traefik-the-cloud-native-proxy)
+  - [Traefik the Cloud Native Proxy Deployment](#traefik-the-cloud-native-proxy-deployment)
   - [Helm-Repository | Traefik](#helm-repository--traefik)
   - [Helm-Release | Traefik](#helm-release--traefik)
-  - [FYI | Helm Chart configurations that were amended for Traefik](#fyi--helm-chart-configurations-that-were-amended-for-traefik)
-  - [Manifest Folder | Traefik](#manifest-folder--traefik)
+  - [Helm Chart Configuration Highlights](#helm-chart-configuration-highlights-1)
+  - [Gimlet Manifest Folder | Traefik](#gimlet-manifest-folder--traefik)
   - [Fluxcd is doing the following under the hood | Traefik](#fluxcd-is-doing-the-following-under-the-hood--traefik)
   - [Traefik Dashboard](#traefik-dashboard)
   - [Further reading | Traefik](#further-reading--traefik)
-- [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
+  - [Ortelius The Ultimate Evidence Store](#ortelius-the-ultimate-evidence-store)
   - [Ortelius Microservice GitHub repos](#ortelius-microservice-github-repos)
   - [Helm-Repository | Ortelius](#helm-repository--ortelius)
   - [Helm-Release | Ortelius](#helm-release--ortelius)
@@ -77,11 +79,7 @@ In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
-I have included the full `values.yaml` configuration from the provider to provide an educational element from the early career start to the seasoned engineer. In contrast to this you could just provide your changes thus making less lines of code and a whole lot less scrolling.
-
-### Roadmap
-
-`storage --> certificate store --> load balancer --> proxy/api gateway --> evidence store --> cloudflare --> observability --> secret store --> zerotier --> everything else`
+I have included the full Helm Chart `values.yaml` configuration from the provider to provide an educational element. In contrast to this I could just show the changes thus making less lines of code and a whole lot less scrolling but I wanted to give a full picture of the configuration and layout the application like a block of clay that you will shape to suit your needs.
 
 ### Kubernetes
 
@@ -95,7 +93,7 @@ kubectl get crds --all-namespaces
 
 #### Context and Namespace Switching
 
-All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch.
+All the context and name space switching can get really tedious so I introduce to you a wonderful tool called KubeSwitch. In the below step-by-step I show you how I set mine up.
 
 - [Kubeswitch on Github](https://github.com/danielfoehrKn/kubeswitch)
 - [The case of Kubeswitch](https://danielfoehrkn.medium.com/the-case-of-kubeswitch-aff4b6a04ae7)
@@ -105,35 +103,67 @@ All the context and name space switching can get really tedious so I introduce t
 - Terminal window isolation
 - Advanced search capabilties
 
-- My aliases in `.zshrc`
+#### Steps to setup KubeSwitch
 
-```shell
-alias swns='switcher ns '
-alias swct='switcher set-context '
-alias swlist='switcher list-contexts'
-```
-
-- My Kubeswitch config in `.kube/switch-config.yaml`
+1. Install KubeSwitch [here](https://github.com/danielfoehrKn/kubeswitch/blob/master/docs/installation.md)
+2. Configure KubeSwitch by creating a `switch-config.yaml` file in your home folder in `.kube/switch-config.yaml`
 
 ```yaml
 kind: SwitchConfig
 version: v1alpha1
-kubeconfigName: null
-showPreview: null
+kubeconfigName: "config*"
+showPreview: true
 execShell: null
-refreshIndexAfter: 1h0m0s
+refreshIndexAfter: null
 hooks: []
 kubeconfigStores:
-- id: default
-  kind: filesystem
-  kubeconfigName: null
-  paths:
-  - ~/.kube/config
-  refreshIndexAfter: null
-  required: null
-  showPrefix: null
-  config: null
-  cache: null
+  - kind: filesystem
+    kubeconfigName: "config*"
+    paths:
+      - "~/.kube"
+```
+
+3. Create a folder structure for your many client clusters like this:
+
+```shell
+.kube/config
+.kube/cfg/i1/config-i1
+.kube/cfg/pangarabbit/config-pr
+```
+
+4. Kubeswitch will search `config*` in the `.kube` directory in your home folder so that when I type `switch` on the command line I get a fuzzy search list of my Kubernetes contexts which I can just select from a list:
+
+```shell
+.kube/kind-ortelius                                                                               │                                                                                                   │
+  .kube/kind-kind                                                                                   │                                                                                                   │
+  .kube/docker-desktop                                                                              │                                                                                                   │
+  pangarabbit/microk8s                                                                              │                                                                                                   │
+  i1/microk8s-i1                                                                                    │                                                                                                   │
+  kind-ortelius                                                                                     │                                                                                                   │
+  kind-kind                                                                                         │                                                                                                   │
+  docker-desktop                                                                                    │                                                                                                   │
+  .switch_tmp/microk8s-i1                                                                           │                                                                                                   │
+> .switch_tmp/microk8s
+```
+
+5. My aliases and autocompletion for Kubeswitch in `.zshrc`
+
+```shell
+alias sw='switch'
+alias swclean='switch clean'
+alias swexec='switch exec '
+alias swgardener='switch gardener'
+alias swhelp='switch help'
+alias swhist='switch history'
+alias swhooks='switch hooks'
+alias swlcon='switch list-contexts'
+alias swns='switch namespace '
+alias swscon='switch set-context '
+alias swslcon='switch set-last-context'
+alias swspcon='switch set-previous-context'
+alias swver='switch version'
+# Auto completion for Kubeswitch in zsh shell
+source <(switcher init zsh)
 ```
 
 ### Enter GitOps | Enter Gimlet | Enter Fluxcd
@@ -156,12 +186,12 @@ Gimlet uses the concepts of Kubernetes infrastructure and Kubernetes application
 
 Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) and [Cloud hosted](https://app.gimlet.io). I am using Cloud hosted due to the very generous humans at Gimlet.
 
-#### Gimlet Repostories
+#### Gimlet Application Repostories
 
 - When the Gimlet dashboard loads you will be met with the repostories section which is where you import your `application` repos to be managed by the GitOps process
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-repos.png" alt="gimlet repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/27-gimlet-app-repos.png" alt="gimlet app repos"/>
 </div>
 <p></p>
 
@@ -170,14 +200,14 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 - Environments are the representation of your journey to getting your applications to the end user such as dev, staging and production
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environment"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/28-gimlet-environments.png" alt="gimlet environments"/>
 </div>
 <p></p>
-
 
 #### Gimlet Environment Config
 
 - These are pre baked in environment configs which can be turned on and off with a toggle
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/29-gimlet-environment-config.png" alt="gimlet environment config"/>
 </div>
@@ -202,7 +232,13 @@ Gimlet comes in two flavours [Self-Hosted](https://github.com/gimlet-io/gimlet) 
 </div>
 <p></p>
 
+As you can see Gimlet is the human friendly inteface into the inner workings of Fluxcd our GitOps Operator. The Gimlet team have done a fantastic job to make this possible. Please go and check out [Gimlet](https://gimlet.io)
+
 ### Fluxcd
+
+[FluxCD](https://fluxcd.io/) is a powerful, open-source GitOps tool designed to automate the continuous delivery (CD) of applications in Kubernetes. It enables a Git-centric approach to deploying and managing Kubernetes clusters, where the desired state of the system is defined in version-controlled repositories (like Git), and Flux ensures that the cluster always stays in sync with this state.
+
+By automating the reconciliation of cluster state with the contents of your Git repository, Flux simplifies deployment workflows, improves reliability, and brings better control over application releases. Whether you're scaling microservices, rolling out updates, or managing infrastructure, FluxCD empowers teams to manage Kubernetes environments with increased confidence and efficiency.
 
 - [Documentation](https://fluxcd.io/flux/)
 - [Flux CLI](https://fluxcd.io/flux/cmd/)
@@ -291,7 +327,19 @@ kubectl port-forward svc/gimlet 9000:9000
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part03/14-gimlet-login.png" alt="gimlet login"/>
 </div>
-<p></p>
+
+- Or you will get a screen like this to login with an `admin key`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part03/35-gimlet-admin-ui.png" alt="gimlet admin key login"/>
+</div>
+
+- To find the admin key, type this command in the terminal
+
+```shell
+kubectl logs deploy/gimlet | grep "Admin auth key"
+time="2023-07-14T14:28:59Z" level=info msg="Admin auth key: 1c04722af2e830c319e590xxxxxxxx" file="[dashboard.go:55]"
+```
 
 #### Connect your repositories
 
@@ -382,11 +430,11 @@ kubectl get pods
 - Once we have added configuration in `helm-repositories` and `helm-release` and performed a `git push`, Fluxcd will manage the entire deployment process to the Kubernetes cluster and give feedback as to the status of the deployment in the Gimlet UI
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repos"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/22-gimlet-infra-repo.png" alt="gimlet infra repo"/>
 </div>
 <p></p>
 
-#### Gimlet Gitops Apps
+#### Gimlet Gitops Applications
 
 - Use the Gimlet walkthrough [here](https://gimlet.io/docs/overview/quick-start) to deploy your `firstapp` if you can't wait for the blog post
 
@@ -412,7 +460,7 @@ git clone https://github.com/<your-profile>/gitops-<your-environment>-apps.git
 
 ### Gimlet GitOps Infrastructure
 
-#### Kubernetes CSI NFS Driver
+#### Kubernetes CSI NFS Driver Deployment
 
 With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we will use Kubernetes to dynamically manage the creation and mounting of persistent volumes to our pods using the Synology NAS as the central storage server.
 
@@ -423,8 +471,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
-
-### Gimlet Kubernetes CSI NFS Driver Deployment
+- [Basic NFS Security - NFS, no_root_squash and SUID](https://www.thegeekdiary.com/basic-nfs-security-nfs-no_root_squash-and-suid/)
 
 #### Helm-Repository | CSI NFS Driver
 
@@ -452,36 +499,238 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `nfs-csi-driver.yaml` in the `helm-releases` directory and paste the following YAML
 
+#### NFS Architecture
+
+In my setup I opted to create a storage class for Jenkins, Netdata, Traefik and Localstack so that I could troubleshoot storage classes on an individual bases without affecting the entire cluster.
+
+```shell
+NAME                         PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+nfs-csi-jenkins              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+nfs-csi-localstack           nfs.csi.k8s.io         Retain          Immediate           true                   27d
+nfs-csi-traefik              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   113m
+```
+
+#### NFS Observations
+
+- Once I deployed the storage class config you cannot change the parameters without deleting the original, making your changes and then redeploying the storage class.
+
+#### NFS Netdata Observations
+
+- For Netdata even thou I specified the storage classes in the Helm Chart that Netdata should use it would always use the default storage class so I created a Netdata storage class and made that the default.
+
+```shell
+pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   115m
+```
+
+I tried all kinds of NFS hacks and configurations using the `CSI NFS Driver` to get the Netdata parent to persist data to the Synology DS413j NFS share at `192.168.0.152/pi8s/netdata` to work but I failed. It would read/write perfectly for a while then it would die after a period of time with being unable to `chown (change ownership)`. Oddly the persistence for `K8s state` was fine.
+
+It might seem a bit mad to show the log file but this is a good illustration of challenges you can face with infrastructure. From my investigations the `201:201` represents the entity `netdata` which cannot `chown (change ownership)`
+
+```shell
+# Logs from the netdata-parent pod
+kubectl logs netdata-parent-97687dd89-x7wz9
+2024/10/16 09:07:53.0718: [    1]:  WARNING:       mongoc: Falling back to malloc for counters.
+time=2024-10-16T09:07:53.721+00:00 comm=netdata source=daemon level=info errno="2, No such file or directory" tid=1  msg="CONFIG: cannot load cloud config '/var/lib/netdata/cloud.d/cloud.conf'. Running with internal defaults."
+time=2024-10-16T09:07:53.721+00:00 comm=netdata source=daemon level=error errno="2, No such file or directory" tid=1  msg="Ignoring host prefix '/host': path '/host/proc' failed to statfs()"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="Netdata agent version 'v1.47.4' is starting"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="IEEE754: system is using IEEE754 DOUBLE PRECISION values"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="TIMEZONE: using the contents of /etc/timezone"
+time=2024-10-16T09:07:53.723+00:00 comm=netdata source=daemon level=info tid=1  msg="TIMEZONE: fixed as 'Etc/UTC'"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: next: initialize signals"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize signals - next: initialize static threads"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize static threads - next: initialize web server"
+time=2024-10-16T09:07:53.724+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize web server - next: initialize ML"
+time=2024-10-16T09:07:54.106+00:00 comm=netdata source=daemon level=info tid=1  msg="ml database version is 2 (no migration needed)"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in     427 ms, initialize ML - next: initialize h2o server"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize h2o server - next: set resource limits"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="resources control: allowed file descriptors: soft = 65536, max = 65536"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, set resource limits - next: become daemon"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Out-Of-Memory (OOM) score is already set to the wanted value 1000"
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Adjusted netdata scheduling policy to batch (3), with priority 0."
+time=2024-10-16T09:07:54.152+00:00 comm=netdata source=daemon level=info tid=1  msg="Running with process scheduling policy 'batch', nice level 19"
+time=2024-10-16T09:07:54.164+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata' to 201:201"
+time=2024-10-16T09:07:54.164+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db-wal' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/ml.db-shm' to 201:201"
+time=2024-10-16T09:07:54.166+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db-wal' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/netdata-meta.db-shm' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db' to 201:201"
+time=2024-10-16T09:07:54.167+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db-wal' to 201:201"
+time=2024-10-16T09:07:54.168+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/context-meta.db-shm' to 201:201"
+time=2024-10-16T09:07:54.168+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/datafile-1-0000000001.ndf' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njf' to 201:201"
+time=2024-10-16T09:07:54.169+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/datafile-1-0000000002.ndf' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000002.njf' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2' to 201:201"
+time=2024-10-16T09:07:54.170+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine-tier1' to 201:201"
+time=2024-10-16T09:07:54.171+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/cache/netdata/dbengine-tier2' to 201:201"
+time=2024-10-16T09:07:54.172+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata' to 201:201"
+time=2024-10-16T09:07:54.173+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/netdata_random_session_id' to 201:201"
+time=2024-10-16T09:07:54.173+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/netdata.api.key' to 201:201"
+time=2024-10-16T09:07:54.174+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/.agent_crash' to 201:201"
+time=2024-10-16T09:07:54.174+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata/lock' to 201:201"
+time=2024-10-16T09:07:54.175+00:00 comm=netdata source=daemon level=error errno="2, No such file or directory" tid=1  msg="Cannot chown directory '/var/lib/netdata/cloud.d' to 201:201"
+time=2024-10-16T09:07:54.175+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown directory '/var/lib/netdata/registry' to 201:201"
+time=2024-10-16T09:07:54.176+00:00 comm=netdata source=daemon level=error errno="22, Invalid argument" tid=1  msg="Cannot chown file '/var/lib/netdata/registry/netdata.public.unique.id' to 201:201"
+time=2024-10-16T09:07:54.177+00:00 comm=netdata source=collector level=error errno="13, Permission denied" tid=1  msg="Runtime directory '/var/cache/netdata' is not writable, falling back to '/tmp'"
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info errno="17, File exists" tid=1  msg="netdata started on pid 1."
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in      28 ms, become daemon - next: initialize threads after fork"
+time=2024-10-16T09:07:54.181+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       0 ms, initialize threads after fork - next: initialize registry"
+time=2024-10-16T09:07:54.183+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in       2 ms, initialize registry - next: collecting system info"
+time=2024-10-16T09:07:55.345+00:00 comm=netdata source=daemon level=info tid=1  msg="NETDATA STARTUP: in    1162 ms, collecting system info - next: initialize RRD structures"
+time=2024-10-16T09:07:55.347+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database /var/cache/netdata/netdata-meta.db initialization"
+time=2024-10-16T09:07:55.388+00:00 comm=netdata source=daemon level=info tid=1  msg="metadata database version is 18 (no migration needed)"
+time=2024-10-16T09:07:55.621+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database initialization completed"
+time=2024-10-16T09:07:55.623+00:00 comm=netdata source=daemon level=info tid=1  msg="SQLite database /var/cache/netdata/context-meta.db initialization"
+time=2024-10-16T09:07:55.664+00:00 comm=netdata source=daemon level=info tid=1  msg="context database version is 1 (no migration needed)"
+time=2024-10-16T09:07:55.723+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: found 5 files in path /var/cache/netdata/dbengine"
+time=2024-10-16T09:07:55.723+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: loading 2 data/journal of tier 0..."
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: found 0 files in path /var/cache/netdata/dbengine-tier1"
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: data files not found, creating in path \"/var/cache/netdata/dbengine-tier1\"."
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: found 0 files in path /var/cache/netdata/dbengine-tier2"
+time=2024-10-16T09:07:55.724+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: data files not found, creating in path \"/var/cache/netdata/dbengine-tier2\"."
+time=2024-10-16T09:07:55.726+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: created data file \"/var/cache/netdata/dbengine-tier2/datafile-1-0000000001.ndf\"."
+time=2024-10-16T09:07:55.726+00:00 comm=netdata source=daemon level=error tid=165 thread=DBENGINIT[0] msg="Invalid file /var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2. Not the expected size"
+time=2024-10-16T09:07:55.728+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: created journal file \"/var/cache/netdata/dbengine-tier2/journalfile-1-0000000001.njf\"."
+time=2024-10-16T09:07:55.728+00:00 comm=netdata source=daemon level=info tid=168 thread=DBENGINIT[2] msg="DBENGINE: populating retention to MRG from 1 journal files of tier 2, using 1 threads..."
+time=2024-10-16T09:07:55.819+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: created data file \"/var/cache/netdata/dbengine-tier1/datafile-1-0000000001.ndf\"."
+time=2024-10-16T09:07:55.821+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: created journal file \"/var/cache/netdata/dbengine-tier1/journalfile-1-0000000001.njf\"."
+time=2024-10-16T09:07:55.821+00:00 comm=netdata source=daemon level=info tid=167 thread=DBENGINIT[1] msg="DBENGINE: populating retention to MRG from 1 journal files of tier 1, using 1 threads..."
+time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=info tid=165 thread=DBENGINIT[0] msg="DBENGINE: indexing file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2': extents 1098, metrics 28994, pages 70272"
+time=2024-10-16T09:07:56.273+00:00 comm=netdata source=daemon level=error errno="1, Operation not permitted" tid=165 thread=DBENGINIT[0] msg="Cannot create/open file '/var/cache/netdata/dbengine/journalfile-1-0000000001.njfv2'."
+```
+
+I tried a different approach for the Netdata parent I moved away from the CSI NFS Driver and used the `Hostpath Storage` approach starting from `Customized directory used for PersistentVolume` method which can be found [here](https://microk8s.io/docs/addon-hostpath-storage)
+
+My configuration for Netdata persistence looks like the following now which I thought had fixed the issue but then after a period of time the dreaded `chown` error returned. In the below content I have left the CSI NFS Driver configuration for Netdata to show both methods.
+
+```yaml
+# netdata-manifest.yaml which is stored in the Gimlet directory manifests
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: pi8s-nfs-netdata
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: microk8s.io/hostpath
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+reclaimPolicy: Retain
+parameters:
+  pvDir: "/mnt/pi8s/netdata"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pi8s-netdata-pvc
+  namespace: infrastructure
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: "pi8s-nfs-netdata"
+```
+
+#### Mount Permissions
+
+1. `0 (Default)`
+
+- **This disables the automatic permission setting for the volume directory.**
+- It means the NFS CSI driver will not attempt to modify the permissions of the directory upon mounting. The permissions will remain as they are on the NFS server.
+- This can be useful if the NFS server already has the desired permissions configured, or if you want to manage permissions manually.
+
+2. `755`
+
+- **Read and execute access for everyone**, and write access only for the owner (rwxr-xr-x).
+- Commonly used for directories where the owner needs write access, but group and others only need to read or execute (e.g., for shared applications or read-only access).
+
+3. `777`
+
+- **Full read, write, and execute access for everyone (rwxrwxrwx).**
+- This makes the directory fully open to all users. Use with caution, as it can pose security risks if sensitive data is being accessed.
+
+4. `644`
+
+- **Read and write access for the owner**, and read-only access for group and others (rw-r--r--).
+- Useful for files or directories where you want to ensure the owner can modify the files, but others can only view them.
+
+5. `600`
+
+- **Read and write access only for the owner (rw-------).**
+- This setting is for more secure or sensitive directories where only the owner should have any access, and no permissions are granted to group or others.
+
+6. `700`
+
+- **Full access only for the owner (rwx------).**
+- The owner has full permissions (read, write, execute), and no permissions are granted to group or others. This is useful for private data that should not be accessible to others.
+
+Here is what my persistent volumes, persistent volume claims and storage classes look like now:
+
+```shell
+kubectl get pv,pvc,sc
+
+# Persistent Volumes
+NAME                                                        CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                     STORAGECLASS         VOLUMEATTRIBUTESCLASS   REASON   AGE
+persistentvolume/pvc-081130cf-1a18-466f-a970-e518dcc4e6e3   1Gi        RWO            Retain           Bound    infrastructure/netdata-parent-alarms      pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-142f3b3c-cddd-4ba7-80a4-c43f28f8cf18   5Gi        RWO            Retain           Bound    infrastructure/netdata-parent-database    pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-43ff5e15-c055-4258-97f5-fa2e6b7768fd   8Gi        RWO            Retain           Bound    infrastructure/localstack                 nfs-csi-localstack   <unset>                          3d12h
+persistentvolume/pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            Retain           Bound    infrastructure/jenkins                    nfs-csi-jenkins      <unset>                          27d
+persistentvolume/pvc-cb68ce51-ac01-44ce-992e-60e638cdafd7   10Gi       RWX            Retain           Bound    infrastructure/pi8s-netdata-pvc           pi8s-nfs-netdata     <unset>                          56m
+persistentvolume/pvc-e4b42d10-b4d2-4996-906f-4f868006ac4c   1Gi        RWO            Retain           Bound    infrastructure/netdata-k8s-state-varlib   pi8s-nfs-netdata     <unset>                          65m
+persistentvolume/pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            Retain           Bound    infrastructure/traefik                    nfs-csi-traefik      <unset>
+
+# Persistent Volume Claims
+NAME                                             STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS         VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/jenkins                    Bound    pvc-8543d912-e516-40cd-afde-a4eeaec02fd4   8Gi        RWO            nfs-csi-jenkins      <unset>                 27d
+persistentvolumeclaim/localstack                 Bound    pvc-43ff5e15-c055-4258-97f5-fa2e6b7768fd   8Gi        RWO            nfs-csi-localstack   <unset>                 3d12h
+persistentvolumeclaim/netdata-k8s-state-varlib   Bound    pvc-e4b42d10-b4d2-4996-906f-4f868006ac4c   1Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/netdata-parent-alarms      Bound    pvc-081130cf-1a18-466f-a970-e518dcc4e6e3   1Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/netdata-parent-database    Bound    pvc-142f3b3c-cddd-4ba7-80a4-c43f28f8cf18   5Gi        RWO            pi8s-nfs-netdata     <unset>                 65m
+persistentvolumeclaim/pi8s-netdata-pvc           Bound    pvc-cb68ce51-ac01-44ce-992e-60e638cdafd7   10Gi       RWX            pi8s-nfs-netdata     <unset>                 56m
+persistentvolumeclaim/traefik                    Bound    pvc-e92ddd38-5f02-493e-b5bd-3b7728ab3fd4   128Mi      RWO            nfs-csi-traefik      <unset>                 27d
+
+# Storage Classes
+NAME                                                     PROVISIONER            RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+storageclass.storage.k8s.io/nfs-csi-jenkins              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/nfs-csi-localstack           nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/nfs-csi-traefik              nfs.csi.k8s.io         Retain          Immediate           true                   27d
+storageclass.storage.k8s.io/pi8s-nfs-netdata (default)   microk8s.io/hostpath   Retain          Immediate           true                   86m
+```
+
 ```yaml
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
   name: csi-driver-nfs
-  namespace: kube-system # To be installed in the kube-system namespace as required by the csi-driver-nfs
+  namespace: kube-system
 spec:
   interval: 60m
-  releaseName: csi-driver-nfs # Helm Chart release name
+  releaseName: csi-driver-nfs
   chart:
     spec:
-      chart: csi-driver-nfs # Name of the Helm Chart
-      version: v4.8.0 # Version of the csi-driver-nfs | If a new version comes out simply update here
+      chart: csi-driver-nfs
+      version: v4.9.0
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
       interval: 10m
-  # values: your values go here to override the default values
   values:
     customLabels: {}
     image:
       baseRepo: registry.k8s.io
       nfs:
         repository: registry.k8s.io/sig-storage/nfsplugin
-        tag: v4.8.0
+        tag: v4.9.0
         pullPolicy: IfNotPresent
       csiProvisioner:
         repository: registry.k8s.io/sig-storage/csi-provisioner
-        tag: v5.0.1
+        tag: v5.0.2
         pullPolicy: IfNotPresent
       csiSnapshotter:
         repository: registry.k8s.io/sig-storage/csi-snapshotter
@@ -518,11 +767,12 @@ spec:
       enableInlineVolume: false
       propagateHostMountOptions: false
 
-      kubeletDir: /var/snap/microk8s/common/var/lib/kubelet # This path is specific to MicroK8s as per the documentation
+    #kubeletDir: /var/lib/kubelet # default config
+    kubeletDir: "/var/snap/microk8s/common/var/lib/kubelet" # Specific for microk8s
 
     controller:
       name: csi-nfs-controller
-      replicas: 3 # Change amount of replicas
+      replicas: 3
       strategyType: Recreate
       runOnMaster: false
       runOnControlPlane: false
@@ -608,7 +858,7 @@ spec:
       name: snapshot-controller
       priorityClassName: system-cluster-critical
       controller:
-        replicas: 1
+        replicas: 3
       resources:
         limits:
           memory: 300Mi
@@ -625,30 +875,115 @@ spec:
     imagePullSecrets: []
     # - name: "image-pull-secret"
 
-    # Kubernetes Storage Class creation
-    # Kubernetes csi-driver-nfs https://github.com/kubernetes-csi/csi-driver-nfs
-    # Kubernetes Storage Class documentation https://kubernetes.io/docs/concepts/storage/storage-classes/
+    ## StorageClass resource example:
     storageClass:
-      create: true
-      name: nfs-csi-default
-      annotations:
-        storageclass.kubernetes.io/is-default-class: "true"
-      provisioner: nfs.csi.k8s.io
-      reclaimPolicy: Delete # PersistentVolumes can have various reclaim policies, including "Retain", "Recycle", and "Delete"
-                            # Kubernetes docs https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/
-      parameters:
-        server: 192.168.0.152 # Replace with your nfs server ip or FQDN
-        share: /volume4/pi8s/ # Replace with your nfs volume share
-        #subDir:
-        mountPermissions: "0"
-        # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
-        # csi.storage.k8s.io/provisioner-secret-name: "mount-options"
-        # csi.storage.k8s.io/provisioner-secret-namespace: "kube-system"
-        csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
-      allowVolumeExpansion: true
-      volumeBindingMode: WaitForFirstConsumer # Default value is Delete
-      mountOptions: # Volume mount options for the storage class can be set here
-        - nfsvers=4
+      create: false
+    #   name: nfs-csi
+    #   annotations:
+    #     storageclass.kubernetes.io/is-default-class: "true"
+    #   parameters:
+    #     server: nfs-server.default.svc.cluster.local
+    #     share: /
+    #     subDir:
+    #     mountPermissions: "0"
+    #     csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
+    #     csi.storage.k8s.io/provisioner-secret-name: "mount-options"
+    #     csi.storage.k8s.io/provisioner-secret-namespace: "default"
+    #   reclaimPolicy: Delete
+    #   volumeBindingMode: Immediate
+    #   mountOptions:
+    #     - nfsvers=4.1
+
+```
+
+- Create a file in your Gimlet GitOps infra repo in `manifests/` called `csi-nfs-storage-classes.yaml` and paste the yaml below
+- Gimlet will pickup any Kubernetes manifests you create in the `manifests` directory and deploy them for you
+
+```yaml
+---
+# StorageClass for netdata which I am leaving here as an example for configuring netdata using the CSI driver
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-netdata
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: netdata
+  mountPermissions: "700" # The owner has full permissions (read, write, execute), and no permissions are granted to group or others
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for traefik
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-traefik
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: traefik
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for jenkins
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-jenkins
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: jenkins
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
+---
+# StorageClass for localstack
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi-localstack
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "false"
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.0.152 # Replace with your NFS server IP or FQDN
+  share: /volume4/pi8s/ # Replace with your NFS volume share
+  subDir: localstack
+  mountPermissions: "0"
+  csi.storage.k8s.io/fstype: "nfs4" # Optional parameter for file system type
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+allowVolumeExpansion: true
+mountOptions:
+  - nfsvers=4
+  - hard
 ```
 
 - Lets git it
@@ -698,6 +1033,7 @@ kubectl get pods -n kube-system
 - Kubectl show me the Storage Class
 
 ```shell
+# In this image the Netdata storage class is being deployed using the CSI NFS Driver
 kubectl get sc --all-namespaces
 ```
 
@@ -710,7 +1046,7 @@ kubectl get sc --all-namespaces
 
 ```yaml
       annotations:
-        storageclass.kubernetes.io/is-default-class: "true" # Sets this Storage Class as the default
+        storageclass.kubernetes.io/is-default-class: "true" # True for default, false for not the default
 ```
 
 - Manually setting and unsetting the default Storage Class
@@ -739,7 +1075,7 @@ Here are some examples.
       #  existingClaim: ""
       accessMode: ReadWriteOnce
       size: 128Mi
-      storageClass: "nfs-csi-default"
+      storageClass: "nfs-csi-traefik"
       # volumeName: ""
       path: /data
       annotations: {}
@@ -753,13 +1089,13 @@ Here are some examples.
         persistence:
           enabled: true
           ## Set '-' as the storageclass to get a volume from the default storage class.
-          storageclass: "-"
+          storageclass: "nfs-csi-netdata"
           volumesize: 1Gi
 ```
 
 Great we now have Kubernetes managing NFS volume mounts dynamically!
 
-#### Kubernetes Cert Manager
+#### Kubernetes Cert Manager Deployment
 
 With [Cert Manager](https://cert-manager.io/) we will manage all our certificate needs.
 
@@ -768,8 +1104,6 @@ With [Cert Manager](https://cert-manager.io/) we will manage all our certificate
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
 - Helm Chart reference [here](https://artifacthub.io/packages/helm/cert-manager/cert-manager)
 - [What Is SSL? How Do SSL Certificates Work?](https://dzone.com/articles/what-is-ssl-how-do-ssl-certificates-work)
-
-### Gimlet | Cert Manager
 
 #### Helm-Repository | Cert Manager
 
@@ -797,7 +1131,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `certman.yaml` in the `helm-releases` directory and paste the following YAML
 
-#### FYI | Helm Chart configurations that were amended for Cert Manager
+#### Helm Chart Configuration Highlights
 
 - You may want to edit these to suit your environment
 
@@ -852,7 +1186,7 @@ spec:
   chart:
     spec:
       chart: cert-manager
-      version: v1.15.1
+      version: v1.15.1 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: external
@@ -2251,7 +2585,7 @@ kubectl get pods -n kube-system | grep cert
 
 Great we now have infrastructure for managing certificates!
 
-### Metallb load-balancer for bare metal Kubernetes
+#### Metallb Load-Balancer For Bare Metal Kubernetes Deployment
 
 With Metallb we will setup a unique IP address on our home network to expose the Microservices running in our Kubernetes cluster. A public cloud provider would give you this during the deployment of your Kubernetes cluster but since we are the cloud we need to provide it and thats where [Metallb](https://metallb.universe.tf/) comes in.
 
@@ -2300,7 +2634,7 @@ spec:
   chart:
     spec:
       chart: metallb
-      version: v0.14.8
+      version: v0.14.8 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: metallb
@@ -2750,20 +3084,20 @@ kubectl get crds | grep metallb
 </div>
 <p></p>
 
-- Kubectl show me the ip address pools for Metallb
+- Kubectl show me the IP address pools for Metallb
 
 ```shell
 kubectl get ipaddresspools.metallb.io -n infrastructure
 ```
 
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb crds"/>
+<img src="/images/how-to-bake-an-ortelius-pi/part03/05-metallb-ip-pool.png" alt="metallb ip pool"/>
 </div>
 <p></p>
 
 Epic we have a working load balancer using a single IP address which will act as a gateway into our Kubernetes cluster which we can control with Traefik Proxy and which Traefik Proxy can bind to.
 
-### Traefik the Cloud Native Proxy
+#### Traefik the Cloud Native Proxy Deployment
 
 With [Traefik Proxy](https://traefik.io/) we can now direct traffic destined for our Microservices into the Kubernetes cluster and protect our endpoints using a combination of entrypoints, routers, services, providers and middlewares.
 
@@ -2802,7 +3136,7 @@ spec:
 - Each release is a deployment of a particular version of a chart with a specific configuration
 - Create a file called `traefik.yaml` in the `helm-releases` directory and paste the following YAML
 
-#### FYI | Helm Chart configurations that were amended for Traefik
+#### Helm Chart Configuration Highlights
 
 - You may want to edit these to suit your environment
 
@@ -2872,7 +3206,7 @@ spec:
   chart:
     spec:
       chart: traefik
-      version: 30.0.0
+      version: 31.0.0 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: traefik
@@ -3645,7 +3979,7 @@ spec:
       #  existingClaim: ""
       accessMode: ReadWriteOnce
       size: 128Mi
-      storageClass: "-"
+      storageClass: "nfs-csi-traefik" # Update with your storage class
       # volumeName: ""
       path: /data
       annotations: {}
@@ -3800,7 +4134,7 @@ spec:
       sendlogs:
 ```
 
-#### Manifest Folder | Traefik
+#### Gimlet Manifest Folder | Traefik
 
 - The folks at Traefik put this nice piece of logic in the Helm Chart that allows you to create a config file which is dynamically monitored by Traefik
 - I am using this to manage the Lets Encrypt certicate renewal in conjunction with Cloudflare
@@ -3910,7 +4244,7 @@ kubectl get crds | grep traefik
 #### Traefik Dashboard
 
 - You will need a DNS record created either on your DNS server or in localhosts file to access the dashboard
-- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
+- Edit localhosts on Linux and Mac with sudo rights `sudo vi /etc/hosts` by adding `your private IP` and `traefik.yourdomain.tld` e.g. `traefik.pangarabbit.com`
 - Edit Windows localhosts file here as administrator `windows\System32\drivers\etc\hosts` by adding `your private ip and traefik.yourdomain.your tld` e.g. `traefik.pangarabbit.com`
 - Remember to note that all things infrastructure are created in the `infrastructure` namespace
 
@@ -3951,7 +4285,7 @@ kubectl get ingressroutes.traefik.io -n infrastructure
 </div>
 <p></p>
 
-- Kubectl show me that the Traefik service has claimed our Metallb single ip address
+- Kubectl show me that the Traefik service has claimed our Metallb single IP address
 
 ```shell
 kubectl get svc -n infrastructure
@@ -3964,7 +4298,7 @@ kubectl get svc -n infrastructure
 
 - Here is a view of the services for the `infrastructure` namespace
 
-```text
+```shell
 NAME                                    TYPE         CLUSTER-IP     EXTERNAL-IP   PORT(S)                     AGE
 cert-manager                            ClusterIP    10.152.183.37  <none>        9402/TCP                    5d1h
 cert-manager-webhook                    ClusterIP    10.152.183.90  <none>        443/TCP                     5d1h
@@ -3988,9 +4322,9 @@ netdata                                 ClusterIP    10.152.183.110 <none>      
 traefik                                 LoadBalancer 10.152.183.135 192.168.0.151 80:31662/TCP,443:30850/TCP  4d19h
 ```
 
-Brilliant our Traefik Proxy has claimed the ip.
+Brilliant our Traefik Proxy has claimed the IP.
 
-What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb ip` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
+What you see is the `traefik` service with the `TYPE LoadBalancer` and it has claimed the `Metallb IP` that we assigned. A `CLUSTER-IP` is only accessible inside Kubernetes. So now with Metallb and Traefik we have built a bridge between the outside world and our internal Kubernetes world. Traefik comes with some self discovery magic in the form of [providers](https://doc.traefik.io/traefik/providers/overview/) which allows Traefik to query `provider` APIs to find relevant information about routing and then dynamically update the routes.
 
 Hopefully you should be able to access your dashboard at the FQDN e.g. `traefik.pangarabbit.com`
 
@@ -4008,7 +4342,7 @@ If you would like to dig deeper into Traefiks API capabilities please go to the 
 </div>
 <p></p>
 
-### Ortelius The Ultimate Evidence Store
+#### Ortelius The Ultimate Evidence Store
 
 Well done for making it this far! We have made it to the point where we can deploy Ortelius into our Kubernetes cluster and configure Ortelius to be accessed through Traefik Proxy.
 
@@ -4064,7 +4398,7 @@ spec:
   chart:
     spec:
       chart: ortelius
-      version: v10.0.4533
+      version: v10.0.4533 # Simply change the version to upgrade
       sourceRef:
         kind: HelmRepository
         name: ortelius
@@ -4113,7 +4447,7 @@ helm upgrade --install ortelius ortelius/ortelius \
 
 #### Kubernetes check | Ortelius
 
-- Kubectl switch to the Ortelius namespace
+- Kubectl switch to the infrastructure namespace
 
 ```shell
 kubectl config set-context --current --namespace=infrastructure
@@ -4157,7 +4491,7 @@ Happy alien hunting.......
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}

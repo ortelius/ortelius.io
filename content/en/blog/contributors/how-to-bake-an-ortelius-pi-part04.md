@@ -11,26 +11,23 @@ author: Sacha Wharton
 <p></p> -->
 
 - [Introduction](#introduction)
-- [Roadmap](#roadmap)
 - [Cloudflare | Connectivity Cloud](#cloudflare--connectivity-cloud)
   - [Buying a domain name](#buying-a-domain-name)
   - [SSL/TLS](#ssltls)
-- [Traefik](#traefik)
+- [Gimlet GitOps Infrastructure](#gimlet-gitops-infrastructure)
+  - [Traefik](#traefik)
   - [Helm-Release | Traefik](#helm-release--traefik)
   - [Manifest Folder | Traefik](#manifest-folder--traefik)
-  - [Ortelius](#ortelius)
-  - [Argocd](#argocd)
+  - [Ortelius HTTPS](#ortelius-https)
+  - [Argocd HTTPS](#argocd-https)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
 In [part 3](https://ortelius.io/blog/2024/08/08/how-to-bake-an-ortelius-pi-part-3-the-gitops-configuration/), of this series we used the [GitOps Methodology](https://opengitops.dev/) to deploy the [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
 In part 4 we will setup [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io) to secure incoming requests with certificates.
-
-### Roadmap
-
-`cloudflare --> observability --> secret store --> zerotier --> everything else`
 
 ### Cloudflare | Connectivity Cloud
 
@@ -41,11 +38,11 @@ You might know Cloudflare as a CDN but its so much more than that. Cloudflare is
 - [Learning Centre](https://www.cloudflare.com/en-gb/learning/)
 - [Free Plan](https://www.cloudflare.com/plans/free/)
 
-Cloudflare have kindly provided a free plan which we will use so the first thing you need to do is set up an account for yourself or if you have an account login.
+Cloudflare have kindly provided a free plan which we will use, so the first thing you need to do is set up an account for yourself or if you have an account login.
 
 #### Buying a domain name
 
-- Now we need a dns domain so if you don't have one you will need to buy one which you can do through Cloudflare.
+- Now we need a DNS domain so if you don't have one you will need to buy one which you can do through Cloudflare.
 - Click on `Websites`
 
 <div class="col-left">
@@ -191,7 +188,9 @@ Cloudflare strongly recommends using Full or Full (strict) modes to prevent mali
 
 Great we should have a functional certificate which will be auto renewed and we can use Traefik as the single point of entry for secure connections.
 
-### Traefik
+### Gimlet GitOps Infrastructure
+
+#### Traefik
 
 - [Traefik Helm Chart Examples](https://github.com/traefik/traefik-helm-chart/blob/master/EXAMPLES.md)
 - [Traefik and LetsEncrypt](https://doc.traefik.io/traefik/https/acme/)
@@ -289,7 +288,7 @@ kubectl get certificates -owide -n infrastructure
 ```
 
 - In the following image we can see that our services have green shields to indicate that they are configured with `TLS`
-- To access the Traefik dashboard the URL is `traefik.pangarabbit.com`
+- To access the Traefik dashboard the URL is `traefik.pangarabbit.com` (Access your dashboard at your domain name)
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part04/21-traefik-services-tls.png" alt="traefik services tls"/>
@@ -298,7 +297,7 @@ kubectl get certificates -owide -n infrastructure
 
 All we have done now is secure the Traefik dashboard but how would we do it for other workloads. Lets look at a few examples.
 
-#### Ortelius
+#### Ortelius HTTPS
 
 - For Ortelius we had to use the `k3d` type to make it Traefik aware
 - Now when requests arrive at Traefiks front door Traefik is aware of Ortelius and can send requests to `ms-nginx` microservice and gain access to the Ortelius backend
@@ -313,7 +312,7 @@ All we have done now is secure the Traefik dashboard but how would we do it for 
                                           # The URL that will go in your browser to access the Ortelius frontend
 ```
 
-#### Argocd
+#### Argocd HTTPS
 
 - For Argocd I had to edit the `ingressClassName` to make it Traefik aware and also enable `TLS`
 
@@ -359,9 +358,9 @@ In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncry
 
 Happy alien hunting.......
 
-<!-- ### Next Steps
+### Next Steps
 
-[How to Bake an Ortelius Pi | Part 4 | Cloudflare, Certificates and Traefik](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 5 | Ortelius Marries Jenkins](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/)
 
 {{< blocks/section color=white >}}
 
@@ -371,7 +370,7 @@ Happy alien hunting.......
 {{< blocks/feature_dual >}}
 
 Learn More About:
-- [Sacha Wharton](https://www.linkedin.com/in/sachawharton/)
+- [Sacha Wharton](https://linktr.ee/sachawharton)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
