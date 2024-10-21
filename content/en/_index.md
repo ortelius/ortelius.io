@@ -49,7 +49,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2024HolidayParty.png" alt="Holiday Party" height="400px" width="589px" />
+<img src="/images/2024HolidayPartyBanner.png" alt="Holiday Party" height="400px" width="589px" />
 </div>
 
 {{< blocks/feature_dual >}}
