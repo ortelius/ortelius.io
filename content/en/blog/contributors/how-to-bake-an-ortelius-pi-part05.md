@@ -2090,9 +2090,25 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 
 #### Jenkins and Credentials
 
+- Jenkins gives you ways to mask your secrets being displayed in pipeline builds and jobs
+- Jenkins allows you to set credentials at different levels which is described in greater detail [here](https://www.jenkins.io/doc/book/using/using-credentials/)
+- In this case we are setting credentails at the `Global` level which can be referenced by the pipeline securely
+- Go to `Manage Jenkins` --> `Credentials` --> `Global` --> `Add Credentials` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins with `https://<your jenkins server>/restart`
+- They can be used in your Jenkins pipeline configuration file to call the `ID` of the secret like this
+
+```groovy
+pipeline {
+    environment {
+        DHUSER = credentials('dh-pangarabbit')
+        DHPASS = credentials('dh-pangarabbit')
+        DISCORD = credentials('pangarabbit-discord-jenkins')
+    }
+```
+
 #### Jenkins and Discord Notifications
 
 - We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
+- Go to `Manage Jenkins` --> `Plugins`
 - This code sets up the variables to mark the cloned repo as safe and pull in the user of the Git commit
 
 ```groovy
@@ -2140,16 +2156,12 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 }
 ```
 
-- A notification will look like this and you can correlate the information with the code above
+- A notification will look like this and you can correlate the information sent with the code above
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/35-jenkins-discord-notification.png" alt="jenkins discord notification"/>
 </div>
 <p></p>
-
-
-
-
 
 #### Creating a Multibranch Pipeline
 
