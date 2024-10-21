@@ -2204,10 +2204,10 @@ kubectl create ns app
 
 #### Jenkins meets Ortelius
 
-- Create the following `Jenkinsfile` in the GitHub repo your created and push it to your GitHub repo
+- Create the following `Jenkinsfile` in the GitHub repo you created and push it to your GitHub repo
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
-- [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf)
+- [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
 
 ```groovy
 pipeline {
