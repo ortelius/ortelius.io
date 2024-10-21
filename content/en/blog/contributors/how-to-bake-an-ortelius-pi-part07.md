@@ -428,8 +428,8 @@ spec:
 
         claiming:
           enabled: true
-          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
-          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -594,8 +594,8 @@ spec:
 
         claiming:
           enabled: true
-          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
-          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -760,8 +760,8 @@ spec:
 
         claiming:
           enabled: true
-          token: "JqNd4n_mdqKX4GJi6maSnYlce1YvobDMx-SAY90vtNk3bJ2vG4enSl2HiUsYnOVOR9ADV1V9CBdK0dPsLU8JHBPXd8dRcskB1o0G6eLL7pBwUM_kfqESC6OuApzoSSO3-DWjCXc"
-          rooms: "8cdb36d1-3343-4832-8ac6-a3a8297fe826"
+          token: "" # Replace with your token
+          rooms: "" # Replace with your room id
           url: "https://api.netdata.cloud"
 
         extraVolumeMounts: []
@@ -871,14 +871,14 @@ restarter:
 parent:
   claiming:
     enabled: true
-    token:
-    rooms:
+    token: # Replace with your token
+    rooms: # Replace with your room id
 
 child:
   claiming:
     enabled: true
-    token:
-    rooms:
+    token: # Replace with your token
+    rooms: # Replace with your room id
 ```
 
 - On the command line use Helm to install Netdata on your Kubernetes cluster
