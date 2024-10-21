@@ -2094,6 +2094,12 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 - Jenkins allows you to set credentials at different levels which is described in greater detail [here](https://www.jenkins.io/doc/book/using/using-credentials/)
 - In this case we are setting credentails at the `Global` level which can be referenced by the pipeline securely
 - Go to `Manage Jenkins` --> `Credentials` --> `Global` --> `Add Credentials` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins with `https://<your jenkins server>/restart`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/36-jenkins-plugin-discord-notifier.png" alt="jenkins plugin discord notifier"/>
+</div>
+<p></p>
+
 - They can be used in your Jenkins pipeline configuration file to call the `ID` of the secret like this
 
 ```groovy
