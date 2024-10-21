@@ -36,7 +36,7 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/feature_dual >}}
 <div style="text-align:center;width:100%">
-<img src="/images/Ortelius-concept.png" alt="Ortelius Evidence Store" />
+<img src="/images/Ortelius-concept.png" alt="Ortelius Vulnerability Evidence Store" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -44,53 +44,49 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 {{< blocks/section color=white >}}
 
-<h1 class="text-center">View SecureChainCon 2024 - On Demand </h1>
+<h1 class="text-center">Join the Ortelius Holiday Gathering December 11th, 20024 </h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/supplychainbanner.png" alt="SecureChainCon" height="400px" width="589px" />
+<img src="/images/2024HolidayParty.png" alt="Holiday Party" height="400px" width="589px" />
 </div>
 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">SecureChainCon Now Available on YouTube</h2>
+<h2 class="text-center">Time to Celebrate our Committers</h2>
 </div>
 
 
-<div style="margin-top:80px;margin-left:140px">
-Watch SecureChainCon 2024, the online conference designed to foster knowledge sharing, and explore the challenges of implementing software supply chain security practices into fragmented, decoupled architectures.</strong> Topics of sessions and workshops presented by expert practitioners include forensic gathering, open-source tooling, and real-world use cases for integrating security into DevOps workflows.
+<div style="margin-top:10px;margin-left:140px">
+Join us on Wednesday, December 11th, 2024 for our annual holiday gathering.
 
-Why You Should Watch:
-- Hear presentations by expert practitioners
-- Learn about supply chain security in decoupled architectures.
-- Explore use cases from leading companies with their latest innovations and gain insights into the future direction of software supply chain management.
+Why You Should Attend:
+
+- Show your support for our dedicated Committers.
+- Learn how to gather SBOM data via the CI/CD Pipeline.
+- See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
 
 
-[View Playlist](https://www.youtube.com/watch?v=XKFAQWmV7JQ&list=PLjQ1l9KZoIQ0a8WaK2M2uvRxDOBI3ZRGP)
+<div style="font-size:1.5em">
+
+[Register](https://us02web.zoom.us/webinar/register/WN_goeVVZm5Q9KIkROQp574Qw) 
+</div>
 </div>
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Keynote </h2>
+<h2 class="text-center">Agenda </h2>
 </div>
 
-<div style="text-align:left;width:100%;margin-top:80px">
-</div>
-<div class="col-center">
-<img src="/images/carolinewong.png" alt="Caroline Wong" height="300px" width="300px" />
-</div>
+8:30-9:30 Beer and Donuts
+Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
 
-Caroline Wong presents: Fortifying the Fortress: Exploring Offensive and Defensive Strategies in Cybersecurity
-
- Understanding cybersecurity requires first an understanding of how to defend against the various types of common cyberattacks from nefarious code being introduced into the software supply chain to penetration attacks and network breaches. But building a strong defense system will not be enough. Organizations will need to start thinking of ‘offensive’ strategies to complete the picture. Join Caroline Wong as she breaks down implementing defensive techniques supported by offensive strategies.
-
-Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of cybersecurity leadership, including practitioner, product, and consulting roles. Caroline authored the popular textbook, Security Metrics: A Beginner’s Guide. She teachers cybersecurity courses on LinkedIn Learning and hosts the Humans of InfoSec podcast.
-
-[Learn More](https://ortelius.io/blog/2024/05/24/securechaincon-2024/)
+9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management
+Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. 
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -125,9 +121,9 @@ Caroline Wong is the Chief Strategy Officer at Cobalt.io. She has 15+ years of c
 
 {{% blocks/table_center %}}
 
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | 
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-cyclonedx-syft/) | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Swagger](https://docs.ortelius.io/guides/userguide/integrations/swagger/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Dora Metrics](https://docs.ortelius.io/guides/userguide/integrations/dora/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Deployment Engines](https://docs.ortelius.io/guides/userguide/integrations/intro-to-deployment-integrations/)</p> | <i class="fas fa-3x fa-check-square"></i>  |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Swagger](https://docs.ortelius.io/guides/userguide/integrations/swagger/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> | <i class="fas fa-3x fa-check-square"></i> | 
 
 
 {{% /blocks/table_center %}}
