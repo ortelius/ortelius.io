@@ -2373,7 +2373,7 @@ pipeline {
                                     Commit User: ${env.GIT_COMMIT_USER}
                                     Duration: ${currentBuild.durationString}
                                 """,
-                                footer: "Wall E love you!",
+                                footer: "WallE love you!",
                                 link: env.BUILD_URL,
                                 result: currentBuild.currentResult,
                                 title: env.JOB_NAME,
