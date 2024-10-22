@@ -1792,13 +1792,22 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 <p></p>
 
 - Select `Global credentials` and click on `Add Credentials`
+- Select `Secret text` and create an `ID` that will be used to reference the credentials in your Jenkins pipeline file
+- Paste you Github PAT in the `Secret` field and when you are ready select `Create`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/39-jenkins-credentials-gh-pat-secret-text.png" alt="jenkins credentials gh pat secret text"/>
+</div>
+<p></p>
+
+- Once created the credential will look like this example
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/24-jenkins-credentials-gh-pat.png" alt="jenkins credentials gh pat"/>
 </div>
 <p></p>
 
-- Select `Dashboard` in the top left of your browser
+- Select `Dashboard` in the top left of your browser to back to the home page
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/25-jenkins-dashboard.png" alt="jenkins dashboard"/>
