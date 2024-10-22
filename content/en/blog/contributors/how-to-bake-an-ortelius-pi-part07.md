@@ -64,7 +64,6 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 </div>
 <p></p>
 
-
 #### Deploy Netdata
 
 Right lets get stuck in and deploy Netdata using Gimlet, Fluxcd, Helm and a sprig of GitOps.
