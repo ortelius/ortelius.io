@@ -2263,10 +2263,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 container('python3') {
-                    checkout([$class: 'GitSCM',
-                        branches: [[name: '*/main']],
-                        userRemoteConfigs: [[url: 'https://github.com/dstar55/docker-hello-world-spring-boot']]
-                    ])
+                    withCredentials([string(credentialsId: 'gh-walle', variable: 'GITHUB_PAT')]) {
+                        sh 'git clone https://${GITHUB_PAT}@github.com/dstar55/docker-hello-world-spring-boot.git'
+                    }
                 }
             }
         }
