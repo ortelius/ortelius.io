@@ -1,5 +1,5 @@
 ---
-date: 2024-08-10
+date: 2024-10-22
 title: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
 linkTitle: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
 author: Sacha Wharton
@@ -63,7 +63,6 @@ In part 7 we will deploy [Netdata](https://www.netdata.cloud/) as our Observabil
 <img src="https://user-images.githubusercontent.com/2662304/233838474-d4f8f0b9-61dc-4409-a708-97d403cd153a.png" alt="netdata database engine"/>
 </div>
 <p></p>
-
 
 #### Deploy Netdata
 
@@ -902,6 +901,8 @@ helm upgrade -f override.yml netdata netdata/netdata
 <p></p>
 
 ### Conclusion
+
+***FYI make sure you backup your persistent volumes on the NFS server***.
 
 You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
 

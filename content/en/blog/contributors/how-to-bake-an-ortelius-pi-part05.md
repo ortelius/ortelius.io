@@ -1,5 +1,5 @@
 ---
-date: 2024-08-10
+date: 2024-10-22
 title: "How to Bake an Ortelius Pi Part 5 | Ortelius Marries Jenkins"
 linkTitle: "How to Bake an Ortelius Pi Part 5 | Ortelius Marries Jenkins"
 author: Sacha Wharton
@@ -22,7 +22,7 @@ author: Sacha Wharton
   - [Kubernetes check | Jenkins](#kubernetes-check--jenkins)
   - [How do we login?](#how-do-we-login)
   - [Jenkins admin password change](#jenkins-admin-password-change)
-  - [Jenkins GitHub Setup](#jenkins-github-setup)
+  - [Jenkins Github Setup](#jenkins-github-setup)
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
   - [Jenkins Restore](#jenkins-restore)
@@ -37,7 +37,7 @@ author: Sacha Wharton
 
 In [part 4](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-cloudflare-certificates-and-traefik/) we configured a certificate for our domain using [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io/).
 
-In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
+In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [Github](https://github.com/). We will then build a demo application and have Ortelius create a component, record an SBOM and Discord will receive a notification to give developers feedback on the state of the build.
 
 ### Jenkins
 
@@ -60,7 +60,7 @@ Right lets get stuck in and deploy Jenkins using Gimlet, Fluxcd, Helm and a spri
 
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
-- Jenkins on GitHub [here](https://github.com/jenkinsci/)
+- Jenkins on Github [here](https://github.com/jenkinsci/)
 - Jenkins docs [here](https://www.jenkins.io/doc)
 - Jenkins Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
 - Jenkins Plugins [here](https://www.jenkins.io/plugins/)
@@ -1715,7 +1715,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 - Change your password and `Save`
 
-#### Jenkins GitHub Setup
+#### Jenkins Github Setup
 
 - Click `Manage Jenkins` in the left hand menu
 
@@ -1731,14 +1731,14 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 </div>
 <p></p>
 
-- Check that you see the following Plugins installed if not install `GitHub API Plugin`, `GitHub Branch Source Plugin`, `GitHub Plugin`
+- Check that you see the following Plugins installed if not install `Github API Plugin`, `Github Branch Source Plugin`, `Github Plugin`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-github.png" alt="jenkins plugins github"/>
 </div>
 <p></p>
 
-- Go to GitHub and create a repository called `ortelius-jenkins-demo-app`
+- Go to Github and create a repository called `ortelius-jenkins-demo-app`
 - Now we need to create a PAT (personal access token) for Jenkins to use to access your repos
 - Click on your profile in the top right hand corner of the browser and select `settings`
 
@@ -1792,13 +1792,22 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 <p></p>
 
 - Select `Global credentials` and click on `Add Credentials`
+- Select `Secret text` and create an `ID` that will be used to reference the credentials in your Jenkins pipeline file
+- Paste you Github PAT in the `Secret` field and when you are ready select `Create`
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/39-jenkins-credentials-gh-pat-secret-text.png" alt="jenkins credentials gh pat secret text"/>
+</div>
+<p></p>
+
+- Once created the credential will look like this example
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/24-jenkins-credentials-gh-pat.png" alt="jenkins credentials gh pat"/>
 </div>
 <p></p>
 
-- Select `Dashboard` in the top left of your browser
+- Select `Dashboard` in the top left of your browser to go back to the home page
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/25-jenkins-dashboard.png" alt="jenkins dashboard"/>
@@ -1808,6 +1817,8 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 #### Jenkins Agent Setup
 
 Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish so thats why we store our config in our Helm Chart which honours the GitOps methodology where your repo is the source of truth. You will see this happening in Gimlet under Helm Releases.
+
+Here we can see the configured pod templates which can be used for building various flavours of code which you can use in your own Helm Chart.
 
 ```yaml
       # Below is the implementation of custom pod templates for the default configured kubernetes cloud.
@@ -1962,6 +1973,14 @@ Agents and agent templates are managed inside your Helm Chart. If you add them t
         TTYEnabled: true
 ```
 
+- Lets git it
+
+```shell
+git add .
+git commit -m "Add Jenkins templates"
+git push
+```
+
 You can view your pod templates by following these steps.
 
 - Click `Manage Jenkins` in the left hand menu
@@ -1988,6 +2007,7 @@ You can view your pod templates by following these steps.
 
 #### Jenkins Backup Setup
 
+- Let backup the Jenkins config
 - Click `Manage Jenkins` in the left hand menu
 
 <div class="col-left">
@@ -2019,11 +2039,11 @@ kubectl exec -it jenkins-0  -- /bin/bash
 mkdir /var/jenkins_home/backup
 ```
 
-- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored here and you can make backups to the `backup` directory
+- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored here and Jenkins can make backups to the `backup` directory
 - To see which PVC your Jenkins POD has mounted run this command
 
 ```shell
-kubectl get pvc | grep jenkins
+kubectl get pvc
 ```
 
 - When you navigate to your NFS server share you will see the `pvc` name that was created for Jenkins
@@ -2081,14 +2101,14 @@ kubectl get pvc | grep jenkins
 
 I tested a restore by simply deleting all the Jenkins config off the NFS server, unzipped one of the backups and copied the Jenkins config files back then deleted the pod and waited for it to be recreated. It worked a charm, all my data, plugins, config, jobs and secrets were restored. I thought that was pretty neat. The Jenkins pod is simply a looking glass that presents all the Jenkins config in a human readable format.
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
-
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
 </div>
 <p></p>
 
 #### Jenkins and Credentials
+
+**Repeat after me "We never use hardcoded sensitive values in our code...ever", "Setting up security is part of the process"**
 
 - Jenkins gives you ways to mask your secrets being displayed in pipeline builds and jobs
 - Jenkins allows you to set credentials at different levels which is described in greater detail [here](https://www.jenkins.io/doc/book/using/using-credentials/)
@@ -2105,14 +2125,37 @@ pipeline {
     }
 ```
 
+- In the Jenkins build log you will see the following
+
+```shell
+[Pipeline] withCredentials
+Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUSER or $DHUSER_PSW
+```
+
 #### Jenkins and Discord Notifications
 
 - To use this plugin you will need a Discord server of your own which you can find out how to setup [here](https://discord.com/)
 - We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
-- Go to `Manage Jenkins` --> `Plugins` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins with `https://<your jenkins server>/restart`
+- Go to `Manage Jenkins` --> `Plugins` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins by putting this URL in your browser `https://<your jenkins server>/restart`
+- For example mine was `https://jenkins.pangarabbit.com/restart`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/36-jenkins-plugin-discord-notifier.png" alt="jenkins plugin discord notifier"/>
+</div>
+<p></p>
+
+- The `DISCORD = credentials('pangarabbit-discord-jenkins')` is the generated webhook url that gets created by mousing over a Discord channel and selecting the cog to get to the menu where you can create a webhook dedicated to that channel
+- You will need to go through the same process you did to add the Github credentials to add the Discord webhook as a Jenkins credential
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/37-jenkins-discord-channel-cog.png" alt="jenkins discord channel cog"/>
+</div>
+<p></p>
+
+- Discord channel webhooks are configured here and are sensitive information
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/38-jenkins-discord-channel-webhook.png" alt="jenkins discord channel hook"/>
 </div>
 <p></p>
 
@@ -2210,10 +2253,33 @@ kubectl create ns app
 
 #### Jenkins meets Ortelius
 
-- Create the following `Jenkinsfile` in the GitHub repo you created and push it to your GitHub repo
+- Create the following `Jenkinsfile` in the Github repo you created and push it to your Github repo
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
+- Create the Ortelius TOML configuration file
+
+```toml
+# Application Name and Version - optional. If not used the Component will not be associated to an Application
+Application = "GLOBAL.PangaRabbit.Jenkins Demo App"
+Application_Version = "1.0.0"
+
+# Define Component Name, Variant and Version - required
+Name = "GLOBAL.PangaRabbit.Jenkins Demo App"
+Variant = "${GIT_BRANCH}"
+Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
+
+# Key/Values to associate to the Component Version
+[Attributes]
+DockerBuildDate = "${BLDDATE}"
+DockerRepo = "${DOCKERREPO}"
+DockerSha = "${DIGEST}"
+DockerTag = "${IMAGE_TAG}"
+ServiceOwner = "${DHUSER}"
+ServiceOwnerEmail = "aliens@pangarabbit.com"
+```
+
+- The complete Ortelius Jenkins pipeline file with Discord notifications
 
 ```groovy
 pipeline {
@@ -2240,10 +2306,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 container('python3') {
-                    checkout([$class: 'GitSCM',
-                        branches: [[name: '*/main']],
-                        userRemoteConfigs: [[url: 'https://github.com/dstar55/docker-hello-world-spring-boot']]
-                    ])
+                    withCredentials([string(credentialsId: 'gh-walle', variable: 'GITHUB_PAT')]) {
+                        sh 'git clone https://${GITHUB_PAT}@github.com/dstar55/docker-hello-world-spring-boot.git'
+                    }
                 }
             }
         }
@@ -2339,7 +2404,7 @@ pipeline {
                                     Commit User: ${env.GIT_COMMIT_USER}
                                     Duration: ${currentBuild.durationString}
                                 """,
-                                footer: "Wall E love you!",
+                                footer: "WallE love you!",
                                 link: env.BUILD_URL,
                                 result: currentBuild.currentResult,
                                 title: env.JOB_NAME,
@@ -2501,6 +2566,8 @@ Commit message: "🛠 NEW: jenkins pod templates"
 ```
 
 ### Conclusion
+
+***FYI make sure you backup your persistent volumes on the NFS server***.
 
 Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used to create a component and record SBOMs in a CI tool such as Jenkins.
 
