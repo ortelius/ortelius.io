@@ -2257,8 +2257,7 @@ kubectl create ns app
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
-
-- The Ortelius TOML configuration file
+- Create the Ortelius TOML configuration file
 
 ```toml
 # Application Name and Version - optional. If not used the Component will not be associated to an Application
@@ -2277,7 +2276,7 @@ DockerRepo = "${DOCKERREPO}"
 DockerSha = "${DIGEST}"
 DockerTag = "${IMAGE_TAG}"
 ServiceOwner = "${DHUSER}"
-ServiceOwnerEmail = "sacha@pangarabbit.com"
+ServiceOwnerEmail = "aliens@pangarabbit.com"
 ```
 
 - The complete Ortelius Jenkins pipeline file with Discord notifications
