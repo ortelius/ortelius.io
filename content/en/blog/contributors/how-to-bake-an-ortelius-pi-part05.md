@@ -37,7 +37,7 @@ author: Sacha Wharton
 
 In [part 4](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-cloudflare-certificates-and-traefik/) we configured a certificate for our domain using [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io/).
 
-In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [Github](https://github.com/). We will then build a demo application and have Ortelius record it.
+In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [Github](https://github.com/). We will then build a demo application and have Ortelius create a component and record an SBOM.
 
 ### Jenkins
 
