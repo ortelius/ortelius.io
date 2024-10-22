@@ -1818,6 +1818,8 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 Agents and agent templates are managed inside your Helm Chart. If you add them through the Jenkins GUI Fluxcd will reconcile the configuration in your Helm Chart and your config will vanish so thats why we store our config in our Helm Chart which honours the GitOps methodology where your repo is the source of truth. You will see this happening in Gimlet under Helm Releases.
 
+Here we can see the configured pod templates which can be used for building various flavours of code which you can use in your own Helm Chart.
+
 ```yaml
       # Below is the implementation of custom pod templates for the default configured kubernetes cloud.
       # Add a key under podTemplates for each pod template. Each key (prior to | character) is just a label, and can be any value.
