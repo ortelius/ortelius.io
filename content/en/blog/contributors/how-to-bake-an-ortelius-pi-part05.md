@@ -2104,6 +2104,7 @@ pipeline {
         DISCORD = credentials('pangarabbit-discord-jenkins')
     }
 ```
+
 - In the Jenkins build log you will see the following
 
 ```shell
