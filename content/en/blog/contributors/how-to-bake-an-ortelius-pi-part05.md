@@ -1807,7 +1807,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 </div>
 <p></p>
 
-- Select `Dashboard` in the top left of your browser to back to the home page
+- Select `Dashboard` in the top left of your browser to go back to the home page
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/25-jenkins-dashboard.png" alt="jenkins dashboard"/>
