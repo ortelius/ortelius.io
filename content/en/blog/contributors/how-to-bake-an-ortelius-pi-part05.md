@@ -2038,7 +2038,7 @@ kubectl exec -it jenkins-0  -- /bin/bash
 mkdir /var/jenkins_home/backup
 ```
 
-- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored here and you can make backups to the `backup` directory
+- If your CSI NFS Kubernetes driver is setup correctly and you enabled persistence in the Helm Chart your Jenkins server configuration files will be stored here and Jenkins can make backups to the `backup` directory
 - To see which PVC your Jenkins POD has mounted run this command
 
 ```shell
