@@ -2042,7 +2042,7 @@ mkdir /var/jenkins_home/backup
 - To see which PVC your Jenkins POD has mounted run this command
 
 ```shell
-kubectl get pvc | grep jenkins
+kubectl get pvc
 ```
 
 - When you navigate to your NFS server share you will see the `pvc` name that was created for Jenkins
