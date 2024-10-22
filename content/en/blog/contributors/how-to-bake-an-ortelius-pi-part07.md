@@ -902,6 +902,8 @@ helm upgrade -f override.yml netdata netdata/netdata
 
 ### Conclusion
 
+***FYI make sure you backup your persistent volumes on the NFS server***.
+
 You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
 
 Happy alien hunting.....

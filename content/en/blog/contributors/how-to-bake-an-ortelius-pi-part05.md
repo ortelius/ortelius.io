@@ -2081,8 +2081,6 @@ kubectl get pvc | grep jenkins
 
 I tested a restore by simply deleting all the Jenkins config off the NFS server, unzipped one of the backups and copied the Jenkins config files back then deleted the pod and waited for it to be recreated. It worked a charm, all my data, plugins, config, jobs and secrets were restored. I thought that was pretty neat. The Jenkins pod is simply a looking glass that presents all the Jenkins config in a human readable format.
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
-
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/17-jenkins-thinbackup-backups.png" alt="jenkins thinbackup backups"/>
 </div>
@@ -2517,6 +2515,8 @@ Commit message: "🛠 NEW: jenkins pod templates"
 ```
 
 ### Conclusion
+
+***FYI make sure you backup your persistent volumes on the NFS server***.
 
 Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used to create a component and record SBOMs in a CI tool such as Jenkins.
 
