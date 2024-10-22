@@ -2007,6 +2007,7 @@ You can view your pod templates by following these steps.
 
 #### Jenkins Backup Setup
 
+- Let backup the Jenkins config
 - Click `Manage Jenkins` in the left hand menu
 
 <div class="col-left">
