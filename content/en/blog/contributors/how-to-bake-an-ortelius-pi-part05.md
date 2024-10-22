@@ -2123,6 +2123,14 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 </div>
 <p></p>
 
+- The `DISCORD = credentials('pangarabbit-discord-jenkins')` is the generated webhook url that gets created by mousing over a Discord channel and selecting the cog to get to the menu where you can create one dedicated to that channel
+
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part05/37-jenkins-discord-channel-cog.png" alt="jenkins discord channel cog"/>
+</div>
+<p></p>
+
+
 - This code snippet sets up the Discord variables to mark the `cloned repo as safe` and pull in the `user of the Git commit`
 
 ```groovy
