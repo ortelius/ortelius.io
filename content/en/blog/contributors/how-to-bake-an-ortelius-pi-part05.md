@@ -2131,7 +2131,6 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 </div>
 <p></p>
 
-
 - This code snippet sets up the Discord variables to mark the `cloned repo as safe` and pull in the `user of the Git commit`
 
 ```groovy
@@ -2230,6 +2229,7 @@ kubectl create ns app
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
+- The complete Ortelius Jenkins pipeline file with Discord notifications
 
 ```groovy
 pipeline {
