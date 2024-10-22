@@ -2257,6 +2257,29 @@ kubectl create ns app
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
+
+- The Ortelius TOML configuration file
+
+```toml
+# Application Name and Version - optional. If not used the Component will not be associated to an Application
+Application = "GLOBAL.PangaRabbit.Jenkins Demo App"
+Application_Version = "1.0.0"
+
+# Define Component Name, Variant and Version - required
+Name = "GLOBAL.PangaRabbit.Jenkins Demo App"
+Variant = "${GIT_BRANCH}"
+Version = "v1.0.0.${BUILD_NUM}-g${SHORT_SHA}"
+
+# Key/Values to associate to the Component Version
+[Attributes]
+DockerBuildDate = "${BLDDATE}"
+DockerRepo = "${DOCKERREPO}"
+DockerSha = "${DIGEST}"
+DockerTag = "${IMAGE_TAG}"
+ServiceOwner = "${DHUSER}"
+ServiceOwnerEmail = "sacha@pangarabbit.com"
+```
+
 - The complete Ortelius Jenkins pipeline file with Discord notifications
 
 ```groovy
