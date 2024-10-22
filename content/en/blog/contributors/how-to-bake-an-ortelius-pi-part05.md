@@ -2116,7 +2116,8 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 
 - To use this plugin you will need a Discord server of your own which you can find out how to setup [here](https://discord.com/)
 - We will be installing the Discord plugin from [here](https://plugins.jenkins.io/discord-notifier/)
-- Go to `Manage Jenkins` --> `Plugins` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins with `https://<your jenkins server>/restart`
+- Go to `Manage Jenkins` --> `Plugins` --> `Available plugins` and search for `Discord Notifier`, then install and restart Jenkins by putting this URL in your browser `https://<your jenkins server>/restart`
+- For example mine was `https://jenkins.pangarabbit.com/restart`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/36-jenkins-plugin-discord-notifier.png" alt="jenkins plugin discord notifier"/>
