@@ -2088,6 +2088,8 @@ I tested a restore by simply deleting all the Jenkins config off the NFS server,
 
 #### Jenkins and Credentials
 
+**Repeat after me "We never use hardcoded sensitive values in our code...ever", "Setting up security is part of the process"**
+
 - Jenkins gives you ways to mask your secrets being displayed in pipeline builds and jobs
 - Jenkins allows you to set credentials at different levels which is described in greater detail [here](https://www.jenkins.io/doc/book/using/using-credentials/)
 - In this case we are setting credentials at the `Global` level which can be referenced by the pipeline securely
