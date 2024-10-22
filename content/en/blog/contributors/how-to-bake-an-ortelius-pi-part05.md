@@ -2109,7 +2109,7 @@ pipeline {
 
 ```shell
 [Pipeline] withCredentials
-Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUSER or $DHUSER_PSW or $QUAYPASS or $QUAYPASS_PSW or $QUAYUSER or $QUAYUSER_PSW
+Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUSER or $DHUSER_PSW
 ```
 
 #### Jenkins and Discord Notifications
