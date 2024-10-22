@@ -22,7 +22,7 @@ author: Sacha Wharton
   - [Kubernetes check | Jenkins](#kubernetes-check--jenkins)
   - [How do we login?](#how-do-we-login)
   - [Jenkins admin password change](#jenkins-admin-password-change)
-  - [Jenkins GitHub Setup](#jenkins-github-setup)
+  - [Jenkins Github Setup](#jenkins-github-setup)
   - [Jenkins Agent Setup](#jenkins-agent-setup)
   - [Jenkins Backup Setup](#jenkins-backup-setup)
   - [Jenkins Restore](#jenkins-restore)
@@ -37,7 +37,7 @@ author: Sacha Wharton
 
 In [part 4](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-cloudflare-certificates-and-traefik/) we configured a certificate for our domain using [Cloudflare](https://www.cloudflare.com/en-gb/), [LetsEncrypt](https://letsencrypt.org/) and [Traefik](https://traefik.io/).
 
-In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/). We will then build a demo application and have Ortelius record it.
+In part 5 we will deploy [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configure integration with [Ortelius](https://ortelius.io/) and [Github](https://github.com/). We will then build a demo application and have Ortelius record it.
 
 ### Jenkins
 
@@ -60,7 +60,7 @@ Right lets get stuck in and deploy Jenkins using Gimlet, Fluxcd, Helm and a spri
 
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
-- Jenkins on GitHub [here](https://github.com/jenkinsci/)
+- Jenkins on Github [here](https://github.com/jenkinsci/)
 - Jenkins docs [here](https://www.jenkins.io/doc)
 - Jenkins Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/jenkinsci/jenkins)
 - Jenkins Plugins [here](https://www.jenkins.io/plugins/)
@@ -1715,7 +1715,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 
 - Change your password and `Save`
 
-#### Jenkins GitHub Setup
+#### Jenkins Github Setup
 
 - Click `Manage Jenkins` in the left hand menu
 
@@ -1731,14 +1731,14 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 </div>
 <p></p>
 
-- Check that you see the following Plugins installed if not install `GitHub API Plugin`, `GitHub Branch Source Plugin`, `GitHub Plugin`
+- Check that you see the following Plugins installed if not install `Github API Plugin`, `Github Branch Source Plugin`, `Github Plugin`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/08-jenkins-plugins-github.png" alt="jenkins plugins github"/>
 </div>
 <p></p>
 
-- Go to GitHub and create a repository called `ortelius-jenkins-demo-app`
+- Go to Github and create a repository called `ortelius-jenkins-demo-app`
 - Now we need to create a PAT (personal access token) for Jenkins to use to access your repos
 - Click on your profile in the top right hand corner of the browser and select `settings`
 
@@ -2136,7 +2136,7 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 <p></p>
 
 - The `DISCORD = credentials('pangarabbit-discord-jenkins')` is the generated webhook url that gets created by mousing over a Discord channel and selecting the cog to get to the menu where you can create a webhook dedicated to that channel
-- You will need to go through the same process you did to add the Github credentials to add the Discord webhook
+- You will need to go through the same process you did to add the Github credentials to add the Discord webhook as a Jenkins credential
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/37-jenkins-discord-channel-cog.png" alt="jenkins discord channel cog"/>
@@ -2244,7 +2244,7 @@ kubectl create ns app
 
 #### Jenkins meets Ortelius
 
-- Create the following `Jenkinsfile` in the GitHub repo you created and push it to your GitHub repo
+- Create the following `Jenkinsfile` in the Github repo you created and push it to your Github repo
 - A `Jenkinsfile` is the logic to instruct Jenkins what to do
 - This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
