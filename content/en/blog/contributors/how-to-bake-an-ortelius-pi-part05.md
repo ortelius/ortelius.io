@@ -2129,7 +2129,7 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 </div>
 <p></p>
 
-- Discord channel webhooks are configured here
+- Discord channel webhooks are configured here and are sensitive information
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/38-jenkins-discord-channel-webhook.png" alt="jenkins discord channel hook"/>
