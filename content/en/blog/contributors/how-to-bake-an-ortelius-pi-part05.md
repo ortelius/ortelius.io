@@ -2135,7 +2135,7 @@ Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUS
 </div>
 <p></p>
 
-- The `DISCORD = credentials('pangarabbit-discord-jenkins')` is the generated webhook url that gets created by mousing over a Discord channel and selecting the cog to get to the menu where you can create one dedicated to that channel
+- The `DISCORD = credentials('pangarabbit-discord-jenkins')` is the generated webhook url that gets created by mousing over a Discord channel and selecting the cog to get to the menu where you can create a webhook dedicated to that channel
 - You will need to go through the same process you did to add the Github credentials to add the Discord webhook
 
 <div class="col-left">
