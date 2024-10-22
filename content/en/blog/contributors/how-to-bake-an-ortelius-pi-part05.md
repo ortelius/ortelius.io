@@ -1973,6 +1973,14 @@ Here we can see the configured pod templates which can be used for building vari
         TTYEnabled: true
 ```
 
+- Lets git it
+
+```shell
+git add .
+git commit -m "Add Jenkins templates"
+git push
+```
+
 You can view your pod templates by following these steps.
 
 - Click `Manage Jenkins` in the left hand menu
