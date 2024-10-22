@@ -1,5 +1,5 @@
 ---
-date: 2024-08-10
+date: 2024-10-22
 title: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
 linkTitle: "How to Bake an Ortelius Pi Part 7 | Observability with Netdata"
 author: Sacha Wharton
