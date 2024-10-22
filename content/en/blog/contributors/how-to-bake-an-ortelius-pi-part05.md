@@ -2104,6 +2104,12 @@ pipeline {
         DISCORD = credentials('pangarabbit-discord-jenkins')
     }
 ```
+- In the Jenkins build log you will see the following
+
+```shell
+[Pipeline] withCredentials
+Masking supported pattern matches of $DHPASS or $DHPASS_PSW or $DISCORD or $DHUSER or $DHUSER_PSW or $QUAYPASS or $QUAYPASS_PSW or $QUAYUSER or $QUAYUSER_PSW
+```
 
 #### Jenkins and Discord Notifications
 
