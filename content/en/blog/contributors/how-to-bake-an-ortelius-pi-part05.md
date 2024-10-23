@@ -2332,7 +2332,7 @@ pipeline {
             steps {
                 container('python3') {
                     sh '''
-                        // Install Docker to use Docker commands e.g. docker tag
+                        // Install Docker to use Docker commands e.g. docker login, docker build, docker push
                         apt-get update && apt-get install -y docker.io
                         // Install the Ortelius CLI
                         pip install ortelius-cli
