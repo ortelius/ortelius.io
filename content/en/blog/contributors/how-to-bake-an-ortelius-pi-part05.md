@@ -2253,8 +2253,9 @@ kubectl create ns app
 #### Jenkins meets Ortelius
 
 - Create the following `Jenkinsfile` in the Github repo you created and push it to your Github repo
-- A `Jenkinsfile` is the logic to instruct Jenkins what to do
-- This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+- A `Jenkinsfile` is the logic to instruct Jenkins what to build
+- The `TOML` file instructs Jenkins how to record the compnonent and SBOM data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+- The Jenkins pipeline file below installs the Ortelius CLI as part of the build process
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
 - Create the Ortelius TOML configuration file
 
@@ -2331,10 +2332,14 @@ pipeline {
             steps {
                 container('python3') {
                     sh '''
+                        // Install Docker to use Docker commands e.g. docker tag
                         apt-get update && apt-get install -y docker.io
+                        // Install the Ortelius CLI
                         pip install ortelius-cli
                         git clone https://github.com/dstar55/docker-hello-world-spring-boot
                         cd docker-hello-world-spring-boot
+                        // Run the Ortelius script to capture the component data and SBOM data using configuration
+                        // from the component.toml file
                         dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
                     '''
                 }
