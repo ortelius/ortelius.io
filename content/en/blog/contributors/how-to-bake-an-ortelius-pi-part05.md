@@ -1689,6 +1689,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 ```
 
 - Head over to this [URL](https://www.base64decode.org/) to decode the base64 string to reveal your password and login.
+- If you don't feel comfortable decoding the base64 encoded string on the public internet I can recommend [DevToys](https://devtoys.app/) to do this locally, plus it comes with many other great dev tools.
 
 #### Jenkins admin password change
 
@@ -2029,8 +2030,8 @@ You can view your pod templates by following these steps.
 </div>
 <p></p>
 
-- You don't need to do this as the backup tool will create the directory for you but it is a nice excercise to understand the volume mount process and to see how it works
-- Open your terminal and lets exec onto the Jenkins pod
+- Now you don't need to do this manual exercise as the backup tool will create the directory for you but it is a nice to understand the volume mount process and to see how it works
+- Open your terminal and lets exec onto the Jenkins pod and manually create the `backup` directory
 
 ```shell
 # Exec onto the pod
@@ -2046,16 +2047,14 @@ mkdir /var/jenkins_home/backup
 kubectl get pvc
 ```
 
-- When you navigate to your NFS server share you will see the `pvc` name that was created for Jenkins
-- The name we want is under `VOLUME`
-- For example mine was this
+- The name we want is under `VOLUME` and mine for example mine was the following
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/10-jenkins-pvc.png" alt="jenkins pvc"/>
 </div>
 <p></p>
 
-- You should see the `backup` directory you created on your NFS storage server
+- You should see the `backup` directory you created on your NFS storage server inside the `jenkins` directory
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/11-jenkins-backup-directory-nfs.png" alt="jenkins backup directory nfs"/>
@@ -2254,8 +2253,9 @@ kubectl create ns app
 #### Jenkins meets Ortelius
 
 - Create the following `Jenkinsfile` in the Github repo you created and push it to your Github repo
-- A `Jenkinsfile` is the logic to instruct Jenkins what to do
-- This `Jenkinsfile` records the build data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+- A `Jenkinsfile` is the logic to instruct Jenkins what to build
+- The `TOML` file instructs Jenkins how to record the compnonent and SBOM data in Ortelius using the `Ortelius CLI` which can be found [here](https://pypi.org/project/ortelius-cli/)
+- The Jenkins pipeline file below installs the Ortelius CLI as part of the build process
 - [Ortelius Open-Source Vulnerability Managment Platform POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf) document to help you get going
 - Create the Ortelius TOML configuration file
 
@@ -2332,10 +2332,13 @@ pipeline {
             steps {
                 container('python3') {
                     sh '''
+                        // Install Docker to use Docker commands e.g. docker login, docker build, docker push
                         apt-get update && apt-get install -y docker.io
+                        // Install the Ortelius CLI
                         pip install ortelius-cli
                         git clone https://github.com/dstar55/docker-hello-world-spring-boot
                         cd docker-hello-world-spring-boot
+                        // Setting up Ortelius environment variables from the component.toml file
                         dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
                     '''
                 }
