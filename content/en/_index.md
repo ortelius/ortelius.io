@@ -49,13 +49,13 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2024HolidayParty.png" alt="Holiday Party" height="400px" width="589px" />
+<img src="/images/2024HolidayPartyBanner.png" alt="Holiday Party" height="400px" width="589px" />
 </div>
 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Time to Celebrate our Committers</h2>
+<h2 class="text-center">Time to Celebrate Our Committers</h2>
 </div>
 
 
@@ -67,7 +67,7 @@ Why You Should Attend:
 - Show your support for our dedicated Committers.
 - Learn how to gather SBOM data via the CI/CD Pipeline.
 - See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
-
+<br>
 
 <div style="font-size:1.5em">
 
@@ -82,11 +82,11 @@ Why You Should Attend:
 <h2 class="text-center">Agenda </h2>
 </div>
 
-8:30-9:30 Beer and Donuts
+<strong>8:30-9:30 Beer and Donuts</strong><p>
 Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
 
-9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management
-Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. 
+<strong>9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management </strong><p>
+Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. The team will then give a demo on how to integrate security tooling into your CI/CD pipeline using the Ortelius command line interface. It is time to start generating and consuming SBOM data as part of the DevOps pipeline. Ortelius makes it easy.  
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
