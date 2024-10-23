@@ -4,7 +4,7 @@ description: Ortelius Events
 summary: Join a Meeting or an Event
 menu:
   main:
-   weight: 100
+   weight: 20
 ---
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}

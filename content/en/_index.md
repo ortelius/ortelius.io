@@ -14,7 +14,7 @@ description: Welcome to the Ortelius Open Source Project Site
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 
 <h1 class="text-center">You Should Always Know Where Log4J is Running</h1>
 <hr>
@@ -23,7 +23,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="margin-top:80px;margin-left:140px">
 
-The Ortelius community is dedicated to strengthening the software supply chain by identifying weak links and continuously analyzing vulnerabilities introduced throughout the DevSecOps pipeline. To effectively manage code-level risks, Software Bill of Materials (SBOM) reports must be actively consumed and scanned for new threats that emerge daily. Simply generating an SBOM isn’t enough—analyzing and acting on the data is essential for a secure supply chain.
+The Ortelius community is dedicated to strengthening the software supply chain by identifying weak links and continuously analyzing vulnerabilities introduced throughout the DevSecOps pipeline - from code to cloud. To effectively manage code-level risks, Software Bill of Materials (SBOM) reports must be actively consumed and scanned for new threats that emerge daily. Simply generating an SBOM isn’t enough—analyzing and acting on the data is essential for a secure supply chain.
 
 Many IT teams struggle to respond to security threats due to fragmented intelligence spread across various tools, often managed only at the container level. Ortelius streamlines this process by gathering and aggregating security and DevOps intelligence, tracking open-source inventory and vulnerabilities at higher organizational levels, including logical applications, runtime environments, and entire domains.
 
@@ -42,7 +42,71 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
+
+{{< blocks/section color=primary >}}
+<div class="col-12">
+<h1 class="text-center">Ortelius Use Cases  </h1>
+<hr>
+<p></p>
+</div>
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Locate and Remediate Vulnerabilities" url="/microservicemapping/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Aggregate SBOMs" url="/catalog/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Continuously Track Changes" url="/versioning/" %}}
+{{% /blocks/feature %}}
+
+
+
+{{< /blocks/section >}}
+
+
+{{< blocks/section color=primary >}}
+<div class="col-12">
+<h1 class="text-center">Ortelius Integrations</h1>
+
+<hr>
+
+</div>
+
+<div class="col-sm"></div>
+
+<div class="col-sm" style="text-wrap:nowrap">
+
+{{% blocks/table_center %}}
+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <i class="fas fa-3x fa-check-square"></i> |<p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> |  <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[View All](https://docs.ortelius.io/guides/userguide/integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | 
+
+
+{{% /blocks/table_center %}}
+</div>
+<div class="col-sm"></div>
+{{< /blocks/section >}}
+
+
+
+
+{{< blocks/section color=primary >}}
+<div class="col-12">
+
+
+<h1 class="text-center">Get Involved:</h1>
+<hr>
+<p></p>
+</div>
+{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
+{{% /blocks/feature %}}
+
+{{< /blocks/section >}}
+
+
+{{< blocks/section color=primary >}}
 
 <h1 class="text-center">Join the Ortelius Holiday Gathering December 11th, 20024 </h1>
 <hr>
@@ -91,69 +155,16 @@ Take a tutorial that walks you through how to manage vulnerabilities in real-tim
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
-<div class="col-12">
-<h1 class="text-center">Learn More About Ortelius </h1>
-<hr>
-<p></p>
-</div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Continuous Software Supply Chain Versioning" url="/versioning/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Supply Chain Evidence" url="/catalog/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Logical Application Tracking" url="/microservicemapping/" %}}
-{{% /blocks/feature %}}
-
-{{< /blocks/section >}}
-
-
-{{< blocks/section color=white >}}
-<div class="col-12">
-<h1 class="text-center">Ortelius Integrations</h1>
-
-<hr>
-
-</div>
-
-<div class="col-sm"></div>
-
-<div class="col-sm" style="text-wrap:nowrap">
-
-{{% blocks/table_center %}}
-
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Swagger](https://docs.ortelius.io/guides/userguide/integrations/swagger/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> | <i class="fas fa-3x fa-check-square"></i> | 
-
-
-{{% /blocks/table_center %}}
-</div>
-<div class="col-sm"></div>
-{{< /blocks/section >}}
-
-
-
-
-{{< blocks/section color=white >}}
-<div class="col-12">
-
-
-<h1 class="text-center">Get Involved:</h1>
-<hr>
-<p></p>
-</div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
-{{% /blocks/feature %}}
-
-{{< /blocks/section >}}
 
 {{< blocks/section color=primary >}}
+<h1 class="text-center">Our Inspiration </h1>
+<hr>
+
 {{< blocks/feature_dual >}}
-## Abraham Ortelius – Our Inspiration
+
+
+
+## Abraham Ortelius
 
 <div class="wrapdiv">
 <img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" style="width:121px; height:170px" />
@@ -169,3 +180,44 @@ Ortelius also in some ways created on open source community of his day. To accom
 Thank you Abraham Ortelius for showing us the way.
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+{{< blocks/section color=gray >}}
+<div class="col-12">
+</div>
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:80px;margin-left:100px">
+
+<div style="margin-top:80px;margin-left:200px">
+
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
+</div>
+
+
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:80px;margin-left:100px">
+
+## Sign-up and Get Started Managing Vulnerabilities
+
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+
+Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Start Today](https://www.deployhub.com/deployhub-team/) 
+</div>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
