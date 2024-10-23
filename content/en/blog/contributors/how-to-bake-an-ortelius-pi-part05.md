@@ -2338,8 +2338,7 @@ pipeline {
                         pip install ortelius-cli
                         git clone https://github.com/dstar55/docker-hello-world-spring-boot
                         cd docker-hello-world-spring-boot
-                        // Run the Ortelius script to capture the component data and SBOM data using configuration
-                        // from the component.toml file
+                        // Setting up Ortelius environment variables from the component.toml file
                         dh envscript --envvars component.toml --envvars_sh ${WORKSPACE}/dhenv.sh
                     '''
                 }
