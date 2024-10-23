@@ -2029,8 +2029,8 @@ You can view your pod templates by following these steps.
 </div>
 <p></p>
 
-- You don't need to do this as the backup tool will create the directory for you but it is a nice excercise to understand the volume mount process and to see how it works
-- Open your terminal and lets exec onto the Jenkins pod
+- Now you don't need to do this manual exercise as the backup tool will create the directory for you but it is a nice to understand the volume mount process and to see how it works
+- Open your terminal and lets exec onto the Jenkins pod and manually create the `backup` directory
 
 ```shell
 # Exec onto the pod
@@ -2046,16 +2046,14 @@ mkdir /var/jenkins_home/backup
 kubectl get pvc
 ```
 
-- When you navigate to your NFS server share you will see the `pvc` name that was created for Jenkins
-- The name we want is under `VOLUME`
-- For example mine was this
+- The name we want is under `VOLUME` and mine for example mine was the following
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/10-jenkins-pvc.png" alt="jenkins pvc"/>
 </div>
 <p></p>
 
-- You should see the `backup` directory you created on your NFS storage server
+- You should see the `backup` directory you created on your NFS storage server inside the `jenkins` directory
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part05/11-jenkins-backup-directory-nfs.png" alt="jenkins backup directory nfs"/>
