@@ -1689,7 +1689,7 @@ U29mdHdhcmUgbGVhcm5pbmcgaXMgdGhlIGZ1dHVyZSBvZiB0ZWNobm9sb2d5IQ==
 ```
 
 - Head over to this [URL](https://www.base64decode.org/) to decode the base64 string to reveal your password and login.
-- If don't feel comfortable decoding the BASE64 encoded string on the public internet I can recommend [DevToys](https://devtoys.app/) to this locally, plus it comes with many other great dev tools.
+- If you don't feel comfortable decoding the base64 encoded string on the public internet I can recommend [DevToys](https://devtoys.app/) to do this locally, plus it comes with many other great dev tools.
 
 #### Jenkins admin password change
 
