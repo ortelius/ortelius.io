@@ -1,7 +1,7 @@
 ---
 date: 2024-10-24
-title: "How to Bake an Ortelius Pi Part 8 | Adding 3 Kubernetes Worker Nodes"
-linkTitle: "How to Bake an Ortelius Pi Part 8 | Adding 3 Kubernetes Worker Nodes"
+title: "How to Bake an Ortelius Pi Part 8 | OS, K8s and Worker Node Upgrades"
+linkTitle: "How to Bake an Ortelius Pi Part 8 | OS, K8s and Worker Node Upgrades"
 author: Sacha Wharton
 ---
 
@@ -14,13 +14,18 @@ author: Sacha Wharton
 - [Raspberry Pi 5s](#raspberry-pi-5s)
   - [Features](#features)
   - [Storage](#storage)
-- [Upgrading the Ubuntu Operating System on each node](#upgrading-the-ubuntu-operating-system-on-each-node)
+- [Master Node Preparation Steps](#master-node-preparation-steps)
   - [Upgrading Microk8s](#upgrading-microk8s)
   - [Microk8s uncordon](#microk8s-uncordon)
   - [Upgrading Ubuntu](#upgrading-ubuntu)
 - [Deploy the worker nodes](#deploy-the-worker-nodes)
   - [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
   - [Choose Storage](#choose-storage)
+  - [IP Addresses and DHCP](#ip-addresses-and-dhcp)
+  - [DNS Configuration](#dns-configuration)
+- [Microk8s](#microk8s)
+  - [Installing Microk8s](#installing-microk8s)
+  - [Joining your worker nodes to the cluster](#joining-your-worker-nodes-to-the-cluster)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -59,12 +64,11 @@ For a more in depth coverage go to this [URL](https://www.pishop.co.za/store/ras
 
 For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.samsung.com/za/memory-storage/memory-card/memory-card-evo-plus-microsd-card-128gb-mb-mc128sa-apc/) which would host [Ubuntu 24.04.1 LTS Noble Numbat](https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat) and for consolidated centralised storage I got 3 [Western Digital My Passport 2TB USB 3 disks](https://www.westerndigital.com/products/portable-drives/wd-my-passport-usb-3-0-hdd?sku=WDBYVG0020BBK-WESN) for each worker Pi which I will cover in another blog how to use software defined storage to present them as a single block of storage to Kubernetes.
 
-### Upgrading the Ubuntu Operating System on each node
+### Master Node Preparation Steps
 
 #### Upgrading Microk8s
 
-- This is a good time to perform maintenance before you add the worker nodes and is a lengthy process
-- Ensure you on the latest version of Microk8s on each node
+- This is a good time to perform maintenance before you add the worker nodes and is a lengthy process to ensure you are on the latest version of Microk8s on each node
 - Do one node at a time
 - SSH onto each Pi and run the following commands
 
@@ -108,7 +112,9 @@ microk8s kubectl uncordon <node name>
 
 #### Upgrading Ubuntu
 
-- Then upgrade your Ubuntu with the following steps
+- Then upgrade Ubuntu with the following steps
+- Do one node at a time
+- Follow the prompts
 
 ```shell
 # Update Current System: Ensure your current installation is fully updated and old packages are cleaned out
@@ -123,7 +129,6 @@ sudo do-release-upgrade -d
 ### Deploy the worker nodes
 
 Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a similar process from [part01](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/).
-
 
 #### Using the Raspberry Pi Imager
 
@@ -209,7 +214,7 @@ Remember to change the `HOSTNAMES` `pi04` | `pi05` | `pi06` before each installa
 - If you are using a Mac or Linux you will find public key marked with a `.pub` extension here `/Users/<your username>/.ssh`
 - If you are using Windows you will find the public key marked with a `.pub` extension here `C:\Users\username\.ssh`
 - Copy the public key each time you perform an install on the SD Card to `Allow public-key authentication only`
-- Append this config to `.ssh/config`
+- **Append** this config to `.ssh/config`
 
 ```shell
 Host pi04.yourdomain.com
@@ -254,6 +259,39 @@ Host pi06.yourdomain.com
 <strong>Rinse and repeat for each SD Card. </strong>
 <p></p>
 <br>
+
+- If all went well you should have 3 Pi 5's with Ubuntu installed
+
+#### IP Addresses and DHCP
+
+- Your new worker nodes should have been assigned IP addresess from the DHCP server
+- Remember to reserve these
+- Refer to [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/) for a refresher
+
+#### DNS Configuration
+
+- Don't forget to configure DNS like we did in [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+
+### Microk8s
+
+#### Installing Microk8s
+
+- Create a folder in your user home directory
+
+```shell
+mkdir ~/.kube
+```
+
+- Install Microk8s and add your user to the Microk8s group
+
+- I always like to use the latest stable version
+
+```shell
+sudo snap install microk8s --classic --channel=1.31/stable && sudo usermod -a -G microk8s $USER && sudo chown -f -R $USER ~/.kube
+```
+
+#### Joining your worker nodes to the cluster
+
 
 
 ### Conclusion
