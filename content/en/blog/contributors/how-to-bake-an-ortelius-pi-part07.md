@@ -910,7 +910,7 @@ Happy alien hunting.....
 
 <!-- ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 8 | Architecture So Far](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 8 | The Upgrades](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
 
 {{< blocks/section color=white >}}
 
