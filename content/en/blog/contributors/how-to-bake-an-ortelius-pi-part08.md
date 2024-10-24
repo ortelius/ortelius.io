@@ -136,7 +136,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo do-release-upgrade -d
 ```
 
-**Rinse and repeat for each SD Card.**
+**Rinse and repeat for each SD Card**
 
 ### Deploy the worker nodes
 
@@ -273,7 +273,7 @@ Host pi06.yourdomain.com
 <p></p>
 <br>
 
-**Rinse and repeat for each SD Card.**
+**Rinse and repeat for each SD Card**
 
 - If all went well you should have 3 Pi 5's with Ubuntu installed
 
@@ -341,7 +341,7 @@ Use the '--worker' flag to join a node as a worker not running the control plane
 microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
 ```
 
-**Rinse and repeat for each node.**
+**Rinse and repeat for each node**
 
 #### Microk8s drain to move workloads to the worker nodes
 
