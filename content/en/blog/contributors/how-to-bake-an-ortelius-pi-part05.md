@@ -2578,7 +2578,7 @@ Happy alien hunting.....
 
 ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 6 | Cloud Dev At Home With Localstack](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/)
+[How to Bake an Ortelius Pi | Part 6 | Cloud Dev At Home With Localstack](https://ortelius.io/blog/2024/09/14/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/)
 
 {{< blocks/section color=white >}}
 
