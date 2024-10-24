@@ -735,9 +735,9 @@ You can access the LocalStack portal at this URL: `https://app.localstack.cloud/
 </div>
 <p></p>
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 You now have a local working cloud to develop against, test applications and learn safely. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy LocalStack and publish the endpoint through Traefik.
 

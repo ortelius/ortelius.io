@@ -4473,9 +4473,9 @@ You should now be able to reach the Ortelius frontend in your browser using the 
 </div>
 <p></p>
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 By this stage you should have three Pi's each with MicroK8s, NFS CSI Driver, Cert Manager, Traefik, Ortelius and a NFS server up and running with Gimlet as the UI to Fluxcd which is all part of the management of our GitOps environment. Stay tuned for Part 4 where we unleash Cloudflare, LetsEncrypt with Traefik for automatic certificate renewal to provide secure services behind a single entrypoint.
 

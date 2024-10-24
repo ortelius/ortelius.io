@@ -178,7 +178,7 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu Server 24.04.1 LTS (64-bit)`
+**Choose** `Ubuntu Server 24.04.1 LTS (64-bit)`
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part08/01-choose-ubuntu-server-24-04-1-lts-x64.png" alt="choose ubuntu server 24.04.4 lts x64" height="300px" width="650px" />
 </div>
@@ -273,9 +273,7 @@ Host pi06.yourdomain.com
 <p></p>
 <br>
 
-<strong>Rinse and repeat for each SD Card. </strong>
-<p></p>
-<br>
+**Rinse and repeat for each SD Card.**
 
 - If all went well you should have 3 Pi 5's with Ubuntu installed
 
@@ -343,6 +341,8 @@ Use the '--worker' flag to join a node as a worker not running the control plane
 microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
 ```
 
+**Rinse and repeat for each node.**
+
 #### Microk8s drain to move workloads to the worker nodes
 
 - **If are adding worker nodes** we want to emulate a enterprise thus we do not want workloads running on our master nodes so we will corden them by performing the drain command again so that workloads cannot be placed on them
@@ -370,9 +370,9 @@ pi05   Ready                      <none>   9d    v1.31.1   192.168.0.115   <none
 pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
 ```
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 You now have a 6 node Microk8s Kubernetes 1.31.1 cluster with 3 master nodes, 3 worker nodes all running Ubuntu 24.04.1 LTS Noble Numbat. Your master nodes can focus on Kubernetes logic and your worker nodes can focus on your applications and infrastructure.
 
