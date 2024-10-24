@@ -318,7 +318,7 @@ sudo microk8s add-node
 
 - You will need to do this `3 times` on the same node and each time you will need to copy the unique `join instruction with the unique key` for each node you wish to join
 - This will return some joining instructions which should be executed on the MicroK8s instance that you wish to join to the cluster `(NOT THE NODE YOU RAN add-node FROM)`
-- Make sure you add the flag `--worker` as these are not to be joined as master nodes
+- Make sure you add the `--worker` flag as these are not to be joined as master nodes
 
 ```shell
 # EXAMPLE from Canonicals docs
@@ -326,20 +326,27 @@ Use the '--worker' flag to join a node as a worker not running the control plane
 microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
 ```
 
-- Use Kubectl to connect to your cluster
-- To view your current kube config
-
 - Run the following to see your new nodes
 
 ```shell
 kubectl get nodes
 ```
 
+```shell
+NAME   STATUS                     ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+pi01   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.48    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi02   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.107   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi03   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.141   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi04   Ready                      <none>   9d    v1.31.1   192.168.0.149   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi05   Ready                      <none>   9d    v1.31.1   192.168.0.115   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+```
+
 ### Conclusion
 
 ***FYI make sure you backup your persistent volumes on the NFS server***.
 
-You now have
+You now have a 6 node Microk8s Kubernetes 1.31.1 cluster with 3 master nodes, 3 worker nodes all running Ubuntu 24.04.1 LTS Noble Numbat. Your master nodes can focus on Kubernetes logic and your worker nodes can focus on your applications and infrastructure.
 
 Happy alien hunting.....
 
