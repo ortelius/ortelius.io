@@ -30,7 +30,7 @@ Each change introduces potential risks from new open-source packages, which may 
 
 <div class="col-center">
 
-<img src="/images/Comparisonreport.png" alt="application comparison report" height="660px" width="1650px" />
+<img src="/images/Comparisonreport.png" alt="application comparison report" height="445px" width="1113px" />
 </div>
 
 {{< /blocks/feature_dual>}} 
@@ -47,7 +47,7 @@ Each change introduces potential risks from new open-source packages, which may 
 
 <div style="margin-top:80px;margin-left:10px">
 
-<img src="/images/applicationandcomponents.png" alt="Federated SBOM" height="375px" width="1350px"/>
+<img src="/images/applicationandcomponents.png" alt="Federated SBOM" height="581px" width="985px"/>
 
 </div>
 
@@ -56,7 +56,7 @@ Each change introduces potential risks from new open-source packages, which may 
 {{< blocks/feature_dual_left_sm >}} 
 
 
-<div style="margin-top:80px;margin-left:270px">
+<div style="margin-top:80px;margin-left:190px">
 
 
 ## Tracking Components to Logical Application Versions

@@ -44,7 +44,7 @@ Ortelius can quickly show you where an open-source package version is running ac
 
 <div style="margin-top:80px;margin-left:10px">
 
-<img src="/images/Openssf-scorecard.png" alt="OpenSSF Scorecard" height="411px" width="856px"/>
+<img src="/images/Fullscreen-OpenSSF-HR-1.svg" alt="OpenSSF Scorecard" height="411px" width="856px"/>
 </div>
 
 {{< /blocks/feature_dual >}} 
