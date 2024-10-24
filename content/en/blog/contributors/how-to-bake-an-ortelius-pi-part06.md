@@ -745,7 +745,7 @@ Happy alien hunting.....
 
 ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 7 | Observability with Netdata](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-7-observability-with-Netdata/)
+[How to Bake an Ortelius Pi | Part 7 | Observability with Netdata](https://ortelius.io/blog/2024/10/22/how-to-bake-an-ortelius-pi-part-7-observability-with-netdata/)
 
 {{< blocks/section color=white >}}
 
