@@ -14,7 +14,7 @@ menu:
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2024HolidayPartyBanner.png" alt="Holiday Party" height="400px" width="589px" />
+<img src="/images/2024HolidayPartybanner-black.png" alt="Holiday Party" height="400px" width="589px" />
 </div>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
