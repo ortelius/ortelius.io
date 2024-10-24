@@ -362,7 +362,7 @@ Happy alien hunting.......
 
 ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 5 | Ortelius Marries Jenkins](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/)
+[How to Bake an Ortelius Pi | Part 5 | Ortelius Marries Jenkins](https://ortelius.io/blog/2024/10/22/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/)
 
 {{< blocks/section color=white >}}
 
