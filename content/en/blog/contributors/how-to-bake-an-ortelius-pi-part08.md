@@ -28,6 +28,7 @@ author: Sacha Wharton
   - [Installing Microk8s](#installing-microk8s)
   - [Joining your worker nodes to the cluster](#joining-your-worker-nodes-to-the-cluster)
   - [Microk8s drain to move workloads to the worker nodes](#microk8s-drain-to-move-workloads-to-the-worker-nodes)
+- [The Pi Nodes Stack](#the-pi-nodes-stack)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -371,6 +372,15 @@ pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none
 ```
 
 **FYI make sure you backup your persistent volumes on the NFS server**
+
+### The Pi Nodes Stack
+
+<p></p>
+<div class="col-left">
+<img src="/images/how-to-bake-an-ortelius-pi/part08/02-pi-nodes-k8s-stack.jpeg" alt="pi nodes k8s stack" height="300px" width="650px" />
+</div>
+<p></p>
+<br>
 
 ### Conclusion
 
