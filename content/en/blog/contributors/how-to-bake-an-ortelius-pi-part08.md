@@ -154,21 +154,24 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Raspberry Pi5`
+**Choose** `Raspberry Pi5`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Other general-purpose OS`
+**Choose** `Other general-purpose OS`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="general purpose os" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu`
+**Choose** `Ubuntu`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="choose ubuntu" height="300px" width="650px" />
 </div>
