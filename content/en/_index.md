@@ -20,7 +20,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:100px;margin-left:200px">
+<div style="text-align:center;width:100%;margin-top:100px;margin-left:50px">
 <img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="558px" width="626px" />
 </div>
 
