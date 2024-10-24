@@ -374,7 +374,7 @@ pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none
 
 ### Conclusion
 
-You now have a 6 node Microk8s Kubernetes 1.31.1 cluster with 3 master nodes, 3 worker nodes all running Ubuntu 24.04.1 LTS Noble Numbat. Your master nodes can focus on Kubernetes logic and your worker nodes can focus on your applications and infrastructure.
+You now have a 6 node Microk8s Kubernetes 1.31.1 cluster with 3 master nodes, 3 worker nodes all running Ubuntu 24.04.1 LTS Noble Numbat. Your master nodes can focus on Kubernetes logic and your worker nodes can focus on your applications and infrastructure workloads.
 
 Happy alien hunting.....
 
