@@ -22,6 +22,7 @@ author: Sacha Wharton
   - [Kubernetes check | Netdata](#kubernetes-check--netdata)
   - [How to add additional nodes in Netdata](#how-to-add-additional-nodes-in-netdata)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -908,9 +909,9 @@ You now have the eye of Netdata like a micro surgeon giving you insight into you
 
 Happy alien hunting.....
 
-<!-- ### Next Steps
+### Next Steps
 
-[How to Bake an Ortelius Pi | Part 8 | The Upgrades](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 8 | OS Upgrades, Microk8s Upgrades and Adding Worker Nodes](https://ortelius.io/blog/2024/10/24/how-to-bake-an-ortelius-pi-part-8-os-upgrades-microk8s-upgrades-and-adding-worker-nodes)
 
 {{< blocks/section color=white >}}
 
