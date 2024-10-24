@@ -1,59 +1,112 @@
 ---
-title: Track Open-Source and Shared Component Changes
-description: Continuous Software Supply Chain Versioning
-summary: Track Open-Source and Shared Component Changes
+title: Track the Changes to Components and Applications 
+description: Track the Numerous Changes Moving Through the CI/CD Pipeline
+summary: Assess the Impact of Changes and Track them Effectively
 type: contributor
 ---
 
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">Continuously Monitor the Updates to Your Software Supply Chain</h1>
+<h1 class="text-center">Continuously Track Changes in Your Software Supply Chain</h1>
 <hr>
+</div>
 
-## Change Happens
+{{< blocks/feature_dual_left_sm >}} 
 
-Software systems undergo daily changes and enhancements driven by the constant need for business agility. High-frequency software updates allow developers to submit modifications, updates, and new features, on a daily to hourly basis, ensuring that the software evolves rapidly in response to business demands. As a result, users benefit from not only the latest features but also ongoing bug fixes. However, with an increase in the frequency of software updates, the risk of introducing a new open-source software vulnerability increases. For this reason, the ability to view the changes to an organization's complete software supply chain is important. Change is where historical data is derived and trends can be analyzed. 
+<div style="margin-top:80px;margin-left:80px">
 
-## Know What Changed
+### Know What Changed and What is Impacted
 
-As we move into a decoupled, cloud-native architecture we must take additional steps to track the hundreds of changes moving across our pipeline. When you fully embrace a decoupled architecture you quickly start asking questions about who is consuming a component, what version is running in what cluster, who owns it, and where are the associated software bill of material and CVE reports.
+Ortelius provides the necessary tools to track the numerous changes moving through the CI/CD pipeline in a decoupled architecture. It offers critical data to understand why and by whom an artifact (such as a container, API, or microservice) was updated, and who the update impacts. By integrating DevSecOps data directly into the CI/CD pipeline, Ortelius helps assess the impact of changes and track them effectively.
 
-In our monolithic days, it was important to version source code so we understood what version of the code was compiled/linked into our builds. We now must track this at the run-time level. A deployment of a new shared container is our new 'compile/link' step. For this reason, software supply chain versioning is critical. Tracking hundreds of changes requires continuous data gathering for every change, with tagged versions. A new version of a lower level component impacts all 'logical' applications who consume it. This means a new application version is created each time a dependency is updated. A single 'logical application' that you deliver to an end user could have many new versions over the course of a few days. Each new version has a new software bill of material and CVE updates. Cloud-native, decoupled architectures are highly dynamic with hundreds of dependencies changing all day long. 
-
-#### Impact on Logical Applications
-
-Decoupled applications disrupts the application release process. Now, the application is collection of independently deployed components (containers, DB Objects, AI Agents, files). A logical representation of the application is needed to aggregate security reports such as SBOMs and CVEs. Managing this data one container at a time impedes a rapid response to high-risk vulnerabilities across the entire organization. A decoupled architecture creates a more stable environment by reducing redundant code and objects. However, it fragments the security and DevOps intelligence causing application level SBOMs and CVE reports to be lost. 
-
-## How Ortelius Helps - Tracking the Software Supply Chain with Logical Applications and Versions
-The Ortelius evidence store has the ability to track component versions aggregated up to the logical application version. Each time a component is updated, a new logical version of all consuming applications is created, along with new SBOMs and new CVE analysis. This tracking information is also associated to any environment where the change has been deployed providing a full inventory of where all open-source packages are running and when they were installed providing CISO Teams the ability to quickly evaluate risk and response to supply chain security events. 
+Each change introduces potential risks from new open-source packages, which may come with vulnerabilities. With hundreds of thousands of vulnerabilities discovered annually, identifying critical ones is vital. Ortelius generates comparison reports and tracks the "blast radius" of every shared component, including its open-source package details. It also aggregates this data at the logical application level, providing insights for both individual components and collections of components delivered to end users.
 
 
-<br>
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+{{< blocks/feature_dual>}} 
 
 <div class="col-center">
-<p class="text-center"><strong>Component Versions</strong></p>
-<img src="/images/componentversions.png" alt="component versions" />
-</div>
-<br>
-<br>
-<br>
-<div class="col-center">
-<p class="text-center"><strong>Application Versions</strong></p>
-<img src="/images/applicationversions.png" alt="application versions" />
-</div>
-<br>
-<br>
-<br>
-<div class="col-center">
-<p class="text-center"><strong>Aggregated Application Version SBOM and CVEs </strong></p>
-<img src="/images/SBOMandCVE.png" alt="application SBOMs in a decoupled architecture" />
-</div>
-<br>
 
-## Conclusion
+<img src="/images/Comparisonreport.png" alt="application comparison report" height="660px" width="1650px" />
+</div>
 
-Ortelius is a central 'evidence' store of all supply chain and DevOps intelligence collected from the DevOps pipeline, and aggregated to application and organizational levels. Ortelius captures security results from tools such as Syft, SonarKube, and Veracode along with deployment insights to create a record of truth for every component update. With this information, Ortelius provides continuous, sweeping insights about open-source usage and inventory, component sharing, and logical application configurations with all security and DevOps insights needed by CISO and Development teams to confidently consume open-source across the organization. 
-
+{{< /blocks/feature_dual>}} 
 
 {{< /blocks/section >}}
+
+
+{{< blocks/section color=white >}}
+<div class="col-12">
+</div>
+
+{{< blocks/feature_dual >}} 
+
+
+<div style="margin-top:80px;margin-left:10px">
+
+<img src="/images/applicationandcomponents.png" alt="Federated SBOM" height="375px" width="1350px"/>
+
+</div>
+
+
+{{< /blocks/feature_dual >}} 
+{{< blocks/feature_dual_left_sm >}} 
+
+
+<div style="margin-top:80px;margin-left:270px">
+
+
+## Tracking Components to Logical Application Versions
+
+The Ortelius vulnerability evidence store tracks component versions, which collectively make up application versions. Each time a component is updated, a new logical version of all consuming applications is generated, along with updated SBOMs and CVE analyses. This version tracking is also linked to the environments where the changes are deployed, providing a complete inventory of components across all environments.
+
+Since components include versions of open-source packages based on their SBOMs, Ortelius can show exactly where each open-source package is installed. This visibility allows CISO teams to quickly assess risks and respond to supply chain security events. 
+
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+{{< /blocks/section >}}
+
+
+
+{{< blocks/section color=gray >}}
+<div class="col-12">
+</div>
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:80px;margin-left:100px">
+
+
+
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
+</div>
+
+
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:80px;margin-left:100px">
+
+## Conclusion and Get Started
+
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+
+Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Start Today](https://www.deployhub.com/deployhub-team/) 
+</div>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+

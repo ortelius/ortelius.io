@@ -4,7 +4,7 @@ description: Talk to an Expert
 summary: Schedule a Chat
 menu:
   main:
-   weight: 80
+   weight: 30
 ---
 
 {{< blocks/section color=primary >}}

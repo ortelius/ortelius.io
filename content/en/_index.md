@@ -14,7 +14,7 @@ description: Welcome to the Ortelius Open Source Project Site
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 
 <h1 class="text-center">You Should Always Know Where Log4J is Running</h1>
 <hr>
@@ -23,7 +23,7 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="margin-top:80px;margin-left:140px">
 
-The Ortelius community is dedicated to strengthening the software supply chain by identifying weak links and continuously analyzing vulnerabilities introduced throughout the DevSecOps pipeline. To effectively manage code-level risks, Software Bill of Materials (SBOM) reports must be actively consumed and scanned for new threats that emerge daily. Simply generating an SBOM isn’t enough—analyzing and acting on the data is essential for a secure supply chain.
+The Ortelius community is dedicated to strengthening the software supply chain by identifying weak links and continuously analyzing vulnerabilities introduced throughout the DevSecOps pipeline - from code to cloud. To effectively manage code-level risks, Software Bill of Materials (SBOM) reports must be actively consumed and scanned for new threats that emerge daily. Simply generating an SBOM isn’t enough—analyzing and acting on the data is essential for a secure supply chain.
 
 Many IT teams struggle to respond to security threats due to fragmented intelligence spread across various tools, often managed only at the container level. Ortelius streamlines this process by gathering and aggregating security and DevOps intelligence, tracking open-source inventory and vulnerabilities at higher organizational levels, including logical applications, runtime environments, and entire domains.
 
@@ -42,72 +42,26 @@ The latest version of Ortelius is maintained by the Ortelius Community managed b
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
 
-<h1 class="text-center">Join the Ortelius Holiday Gathering December 11th, 20024 </h1>
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/2024HolidayParty.png" alt="Holiday Party" height="400px" width="589px" />
-</div>
-
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Time to Celebrate our Committers</h2>
-</div>
-
-
-<div style="margin-top:10px;margin-left:140px">
-Join us on Wednesday, December 11th, 2024 for our annual holiday gathering.
-
-Why You Should Attend:
-
-- Show your support for our dedicated Committers.
-- Learn how to gather SBOM data via the CI/CD Pipeline.
-- See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
-
-
-<div style="font-size:1.5em">
-
-[Register](https://us02web.zoom.us/webinar/register/WN_goeVVZm5Q9KIkROQp574Qw) 
-</div>
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Agenda </h2>
-</div>
-
-8:30-9:30 Beer and Donuts
-Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
-
-9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management
-Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. 
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">Learn More About Ortelius </h1>
+<h1 class="text-center">Ortelius Use Cases  </h1>
 <hr>
 <p></p>
 </div>
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Continuous Software Supply Chain Versioning" url="/versioning/" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Locate and Remediate Vulnerabilities" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Supply Chain Evidence" url="/catalog/" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Aggregate SBOMs" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Logical Application Tracking" url="/microservicemapping/" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Continuously Track Changes" url="/versioning/" %}}
 {{% /blocks/feature %}}
+
+
 
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 <div class="col-12">
 <h1 class="text-center">Ortelius Integrations</h1>
 
@@ -123,7 +77,7 @@ Take a tutorial that walks you through how to manage vulnerabilities in real-tim
 
 |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Swagger](https://docs.ortelius.io/guides/userguide/integrations/swagger/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> | <i class="fas fa-3x fa-check-square"></i> | 
+| [Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <i class="fas fa-3x fa-check-square"></i> |<p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> |  <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> | <i class="fas fa-3x fa-check-square"></i> | <p style="font-size:1.5em">[View All](https://docs.ortelius.io/guides/userguide/integrations/)</p> | <i class="fas fa-3x fa-check-square"></i> | 
 
 
 {{% /blocks/table_center %}}
@@ -134,7 +88,7 @@ Take a tutorial that walks you through how to manage vulnerabilities in real-tim
 
 
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=primary >}}
 <div class="col-12">
 
 
@@ -151,9 +105,66 @@ Take a tutorial that walks you through how to manage vulnerabilities in real-tim
 
 {{< /blocks/section >}}
 
+
 {{< blocks/section color=primary >}}
+
+<h1 class="text-center">Join the Ortelius Holiday Gathering December 11th, 20024 </h1>
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/2024HolidayPartyBanner.png" alt="Holiday Party" height="400px" width="589px" />
+</div>
+
 {{< blocks/feature_dual >}}
-## Abraham Ortelius – Our Inspiration
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Time to Celebrate Our Committers</h2>
+</div>
+
+
+<div style="margin-top:10px;margin-left:140px">
+Join us on Wednesday, December 11th, 2024 for our annual holiday gathering.
+
+Why You Should Attend:
+
+- Show your support for our dedicated Committers.
+- Learn how to gather SBOM data via the CI/CD Pipeline.
+- See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
+<br>
+
+<div style="font-size:1.5em">
+
+[Register](https://us02web.zoom.us/webinar/register/WN_goeVVZm5Q9KIkROQp574Qw) 
+</div>
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Agenda </h2>
+</div>
+
+<strong>8:30-9:30 Beer and Donuts</strong><p>
+Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
+
+<strong>9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management </strong><p>
+Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. The team will then give a demo on how to integrate security tooling into your CI/CD pipeline using the Ortelius command line interface. It is time to start generating and consuming SBOM data as part of the DevOps pipeline. Ortelius makes it easy.  
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color=primary >}}
+<h1 class="text-center">Our Inspiration </h1>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+
+
+## Abraham Ortelius
 
 <div class="wrapdiv">
 <img class="wrapdiv_image" src="images/abrahamortelius.jpg" alt="Abraham Ortelius" style="width:121px; height:170px" />
@@ -169,3 +180,44 @@ Ortelius also in some ways created on open source community of his day. To accom
 Thank you Abraham Ortelius for showing us the way.
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+{{< blocks/section color=gray >}}
+<div class="col-12">
+</div>
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:80px;margin-left:100px">
+
+<div style="margin-top:80px;margin-left:200px">
+
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
+</div>
+
+
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:80px;margin-left:100px">
+
+## Sign-up and Get Started Managing Vulnerabilities
+
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+
+Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Start Today](https://www.deployhub.com/deployhub-team/) 
+</div>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+

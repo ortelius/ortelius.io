@@ -5,7 +5,7 @@ summary: Become Part of our Amazing Community of Contributors and Adopters
 type: contributor
 menu:
   main:
-   weight: 40
+   weight: 10
 ---
 
 {{< blocks/section color="primary">}}
@@ -34,8 +34,9 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 
 <strong>For New Adopters</strong>
 
-* [Install Ortelius](https://docs.ortelius.io/guides/userguide/installation-and-support/0-on-premise-installation-for-pro/)
-* [Add Ortelius to your Pipeline and Perfrom a POC](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)
+* [Install Ortelius](https://docs.ortelius.io/guides/userguide/installation-and-support/)
+* [Take a Quick Tour of the SaaS](https://docs.ortelius.io/guides/userguide/orteliustutorial/)
+* [Add Ortelius to your Pipeline and Perform a POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf)
 
 <strong>For New Contributors</strong>
 

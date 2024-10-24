@@ -4,7 +4,7 @@ description: Ortelius Community Guidelines
 Summary: Become a Contributor, Open Issues, Participate
 menu:
   main:
-   weight: 60
+   weight: 20
 ---
 
 {{< blocks/section color="primary">}}
@@ -12,7 +12,7 @@ menu:
 
 ## Who We Are
 
-The Ortelius project is a community of technologist dedicated to the goal of simplifying the development of microservice applications through the use of a unified microservice catalog. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
+The Ortelius project is a community of technologist dedicated to the goal of simplifying the control of code-level vulnerabilities through the use of a unified evidence catalog. Collectively, we are a group of open-source developers and users who develop, use and promote Ortelius for the benefit of all.
 
 The project is incubating at the [Continuous Delivery Foundation](https://cd.foundation/) a part of the [Linux Foundation](https://www.linuxfoundation.org/) which legally owns the project assets and act as treasury. The Ortelius Governance Board acts as public representatives of the project, when such representation is necessary, for example to interface with external entities such as the Continuous Delivery Foundation or Linux Foundation. The board also acts as the ultimate decision-making authority in case disputes cannot be resolved via the regular project community meeting. The decision-making ability of the board is more symbolic and based on consensus.
 
@@ -50,7 +50,7 @@ As the composition of the Ortelius board changes over time, we want to ensure th
 
 ## Ortelius Project Chair: Steve Taylor
 
-**Steve Taylor** is a visionary and industry leader in the area of microservices, Istio, Kubernetes, DevOps process improvement, software build and release, and configuration management. Steve was designing continuous delivery pipelines for Fortune 1000 companies before the term ‘continuous integration’ was ever used.  Steve is the CTO and Architect of DeployHub, the first [microservice catalog](https://www.deployhub.com) that also versions and maps microservices and their configurations. He is also the  mastermind behind OpenMake Meister, a build automation solution that has served its customers for over 20 years.  In his free time, Steve is the Fire Chief of his local Volunteer fire department, plays hockey, builds houses and hangs out with his 4 dogs on his ranch in New Mexico.
+**Steve Taylor** is a visionary and industry leader in the area of DevSecOps process improvement, software build and release, and vulnerability management. Steve was designing continuous delivery pipelines for Fortune 1000 companies before the term ‘continuous integration’ was ever used.  Steve is the CTO and Architect of DeployHub, the first [vulnerability management platform](https://www.deployhub.com) that also versions and maps component security details to  and their deployed locations. He is also the  mastermind behind OpenMake Meister, a build automation solution that has served its customers for over 20 years. In his free time, Steve is a Volunteer Firefighter, plays hockey, builds houses and hangs out with his 4 dogs on his ranch in New Mexico.
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -73,7 +73,6 @@ Ortelius bugs should be reported to GitHub after signing up for a free [GitHub](
 
 ### How Do I Find Ortelius on Social Media
 
-- Twitter:  [@OrteliusOs](https://twitter.com/OrteliusOs)
 - LinkedIn Group: [Ortelius Open Source](https://www.linkedin.com/company/ortelius-open-source)
 
 ### I’d Like To Join the Ortelius OS Community
