@@ -15,13 +15,20 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< /blocks/section >}}
 
 {{< blocks/section color=black >}}
-
 <h1 class="text-center">Open-Source Continuous Vulnerability Management</h1>
 
 
 {{< blocks/feature_dual >}}
 
-<div style="margin-top:100px;margin-left:140px">
+<div style="text-align:center;width:100%;margin-top:100px;margin-left:200px">
+<img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="558px" width="626px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+
+{{< blocks/feature_dual >}}
+
+<div style="width:100%;margin-top:100px;max-width:500px">
 
 Code-level vulnerabilities pose a significant risk in the intricate landscape of cloud-native environments. Ortelius provides end-to-end monitoring, reporting, and faster remediation of security issues throughout the software supply chain. With Ortelius, organizations can swiftly address vulnerabilities in open-source packages, reducing the risk of costly delays and potential security incidents.
 
@@ -33,12 +40,8 @@ With Ortelius, you can easily answer the question, “where is Log4J running?”
 
 
 </div>
-{{< /blocks/feature_dual >}}
 
-{{< blocks/feature_dual >}}
-<div style="text-align:center;width:100%;margin-top:100px;">
-<img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="558px" width="626px" />
-</div>
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -98,7 +101,7 @@ With Ortelius, you can easily answer the question, “where is Log4J running?”
 <div class="col-12">
 
 
-<h2 class="text-center">Get Involved:</h2>
+<h2 class="text-center">Get Involved</h2>
 <p></p>
 </div>
 {{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
@@ -117,7 +120,7 @@ With Ortelius, you can easily answer the question, “where is Log4J running?”
 
 
 
-<div style="margin-top:10px;margin-left:140px">
+<div style="margin-top:10px;margin-left:200px;">
 Join us on Wednesday, December 11th, 2024 for our annual celebration of the Ortelius Contributor Community.
 
 Why You Should Attend:
