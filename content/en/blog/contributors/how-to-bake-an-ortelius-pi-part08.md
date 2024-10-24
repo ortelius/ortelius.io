@@ -23,7 +23,7 @@ author: Sacha Wharton
   - [Choose Storage](#choose-storage)
   - [IP Addresses and DHCP](#ip-addresses-and-dhcp)
   - [DNS Configuration](#dns-configuration)
-- [Microk8s](#microk8s)
+- [Microk8s Prep](#microk8s-prep)
   - [Installing Microk8s](#installing-microk8s)
   - [Joining your worker nodes to the cluster](#joining-your-worker-nodes-to-the-cluster)
 - [Conclusion](#conclusion)
@@ -272,27 +272,89 @@ Host pi06.yourdomain.com
 
 - Don't forget to configure DNS like we did in [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
 
-### Microk8s
+### Microk8s Prep
+
+- MicroK8s docs [here](https://microk8s.io/docs)
+- [Microk8s on a Raspberry Pi](https://microk8s.io/docs/install-raspberry-pi)
+- [Microk8s host interface configuration](https://microk8s.io/docs/configure-host-interfaces)
+- [Microk8s multi-node cluster creation](https://microk8s.io/docs/clustering)
+- Please find the MicroK8s command reference [here](https://microk8s.io/docs/command-reference)
+- Kubectl quick reference [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
+- `FYI` there are commands related to `Kubectl` such as `kubectl get nodes` which are run from your machine
+- `FYI` there are commands related to `MickroK8s` such as `sudo microk8s config` which are run on the Pis where MicroK8s is installed
 
 #### Installing Microk8s
 
-- Create a folder in your user home directory
+- On each node create a folder in your user home directory
 
 ```shell
 mkdir ~/.kube
 ```
 
-- Install Microk8s and add your user to the Microk8s group
+- SSH into each Pi and configure the Pi BIOS `sudo vi /boot/firmware/cmdline.txt` and add the following `cgroup_enable=memory cgroup_memory=1`
+- Below is the config from my Pi as an example
 
+```shell
+cgroup_enable=memory cgroup_memory=1 console=serial0,115200 dwc_otg.lpm_enable=0 console=tty1 root=LABEL=writable rootfstype=ext4 rootwait fixrtc quiet splash
+```
+
+- Install Kernel Modules `sudo apt install linux-modules-extra-raspi`
+- Referenced from [here](https://microk8s.io/docs/install-raspberry-pi)
 - I always like to use the latest stable version
 
 ```shell
+# Installs Microk8s, sets permissions and ownership to the current user on the .kube directory
 sudo snap install microk8s --classic --channel=1.31/stable && sudo usermod -a -G microk8s $USER && sudo chown -f -R $USER ~/.kube
 ```
 
 #### Joining your worker nodes to the cluster
 
+- Choose a Pi to start the process, I used `pi04`
+- SSH onto `pi04` and run this command on `pi04`
 
+```shell
+sudo microk8s add-node
+```
+
+- You will need to do this `3 times` on the same node and each time you will need to copy the unique `join instruction with the unique key` for each node you wish to join
+- This will return some joining instructions which should be executed on the MicroK8s instance that you wish to join to the cluster `(NOT THE NODE YOU RAN add-node FROM)`
+
+```shell
+# EXAMPLE from Canonicals docs
+Use the '--worker' flag to join a node as a worker not running the control plane, eg:
+microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+```
+
+- Use Kubectl to connect to your cluster
+- To view your current kube config
+
+```shell
+kubectl config view
+```
+
+- Get your available contexts
+
+```shell
+kubectl config get-context
+```
+
+- Switch context to Microk8s
+
+```shell
+kubectl config use-context microk8s
+```
+
+- Run the following to see all namespaces
+
+```shell
+kubectl get ns
+```
+
+- Run the following to see all pods
+
+```shell
+kubectl get pods --all-namespaces
+```
 
 ### Conclusion
 
