@@ -43,7 +43,7 @@ Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-
 
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 
-<strong>or</strong>
+**OR**
 
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
 
@@ -144,21 +144,24 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+**Choose** `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Other general-purpose OS`
+**Choose** `Other general-purpose OS`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu`
+**Choose** `Ubuntu`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
@@ -204,6 +207,7 @@ Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installa
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
+
 <p></p>
 <br>
 <div class="col-left">
@@ -248,7 +252,8 @@ Host pi03.yourdomain.com
 
 - You can also reference this document from [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
-<strong>Check</strong> the boxes specific to your needs.
+**Check** the boxes specific to your needs.
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -256,7 +261,8 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Click</strong> `YES` to apply the OS customisation settings
+**Click** `YES` to apply the OS customisation settings
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -264,9 +270,7 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Rinse and repeat for each SD Card or USB flash stick.</strong>
-<p></p>
-<br>
+**Rinse and repeat for each SD Card or USB flash stick.**
 
 - If all went well you should have 3 Pi 4B's with Ubuntu installed
 

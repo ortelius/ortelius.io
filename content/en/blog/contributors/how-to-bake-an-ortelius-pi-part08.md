@@ -16,6 +16,7 @@ author: Sacha Wharton
   - [Storage](#storage)
 - [Master Node Preparation Steps](#master-node-preparation-steps)
   - [Upgrading Microk8s](#upgrading-microk8s)
+  - [Microk8s drain](#microk8s-drain)
   - [Microk8s uncordon](#microk8s-uncordon)
   - [Upgrading Ubuntu](#upgrading-ubuntu)
 - [Deploy the worker nodes](#deploy-the-worker-nodes)
@@ -26,13 +27,14 @@ author: Sacha Wharton
 - [Microk8s Prep](#microk8s-prep)
   - [Installing Microk8s](#installing-microk8s)
   - [Joining your worker nodes to the cluster](#joining-your-worker-nodes-to-the-cluster)
+  - [Microk8s drain to move workloads to the worker nodes](#microk8s-drain-to-move-workloads-to-the-worker-nodes)
 - [Conclusion](#conclusion)
 
 ### Introduction
 
 In [part 7](https://ortelius.io/blog/2024/10/22/how-to-bake-an-ortelius-pi-part-7-observability-with-netdata/) we deployed [Netdata](https://www.netdata.cloud/) and explored deploying Netdata to gain valuable insights into our cloud infrastracture.
 
-In part 8 I will discuss how I upgraded my cluster from a 3 node Kubernetes cluster to a 6 nodes Kubernetes cluster by incorporating 3 Pi 5s as worker nodes. My goal with this entire series and project is to emulate as close as possible what an enterprise platform would look like using various solutions and what Ortelius can do once deployed in your cloud infrastructure. My focus is always to empower, sharpen other humans and do my best to break down complexity whilst being resourceful. A monumental task in itself.
+In part 8 I will discuss how I upgraded my cluster from a 3 node Kubernetes cluster to a 6 node Kubernetes cluster by incorporating 3 Pi 5s as worker nodes. My goal with this entire series and project is to emulate as close as possible what an enterprise platform would look like using various solutions and what Ortelius can do once deployed in your cloud infrastructure. My focus is always to empower, sharpen other humans and do my best to break down complexity whilst being resourceful. A monumental task in itself.
 
 ### Raspberry Pi 5s
 
@@ -69,29 +71,45 @@ For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.sa
 #### Upgrading Microk8s
 
 - This is a good time to perform maintenance before you add the worker nodes and is a lengthy process
-- Do one node at a time
+- **Do one node at a time**
 - SSH onto each Pi and run the following commands
 
+#### Microk8s drain
+
+- Draining a node migrates workloads to the other nodes
+
 ```shell
-# Draining a node moves all the pods to the other nodes and
 # cordons the node preventing workloads from being scheduled on the node
 microk8s kubectl drain <node name> --ignore-daemonsets --delete-emptydir-data
 ```
 
-- Once that is done upgrade Microk8s
+- Once that is done upgrade Microk8s on that node
 
 ```shell
 # You will need to change the channel version to the latest version at the time
 sudo snap refresh microk8s --channel <latest version>/candidate
+# sudo snap refresh microk8s --channel 1.31.1/candidate
+```
+
+- Restart the node
+
+```shell
+sudo reboot
 ```
 
 #### Microk8s uncordon
 
-- **Only uncordon each node if you are not adding worker nodes and only when you have finished upgrading Ubuntu**
-- **If are adding worker nodes** we want to emulate a enterprise thus we do not want workloads running on our master nodes so we will leave them cordened so that workloads cannot be placed on them
+- SSH onto the rebooted node and uncordon that node to schedule workloads on that node
 
 ```shell
-# This command will show you the state of each node and you will see that my master nodes are SchedulingDisabled
+# Uncordon tells Kubernetes that this node can be used to schedule workloads
+microk8s kubectl uncordon <node name>
+# microk8s kubectl uncordon pi01
+```
+
+- This command will show you the state of each node and you will see that my master nodes are `SchedulingDisabled`
+
+```shell
 kubectl get nodes
 ```
 
@@ -103,11 +121,6 @@ pi03   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.141   <none
 pi04   Ready                      <none>   9d    v1.31.1   192.168.0.149   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
 pi05   Ready                      <none>   9d    v1.31.1   192.168.0.115   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
 pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
-```
-
-```shell
-# Uncordon tells Kubernetes that this node can be used to schedule workloads
-microk8s kubectl uncordon <node name>
 ```
 
 #### Upgrading Ubuntu
@@ -125,6 +138,8 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 # Begin the Upgrade: do-release-upgrade will manage the upgrade smoothly and interactively.
 sudo do-release-upgrade -d
 ```
+
+**Rinse and repeat for each SD Card.**
 
 ### Deploy the worker nodes
 
@@ -270,7 +285,7 @@ Host pi06.yourdomain.com
 
 #### DNS Configuration
 
-- Don't forget to configure DNS like we did in [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+- Don't forget to configure DNS by adding your new nodes like we did in [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
 
 ### Microk8s Prep
 
@@ -326,7 +341,18 @@ Use the '--worker' flag to join a node as a worker not running the control plane
 microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
 ```
 
-- Run the following to see your new nodes
+#### Microk8s drain to move workloads to the worker nodes
+
+- **If are adding worker nodes** we want to emulate a enterprise thus we do not want workloads running on our master nodes so we will corden them by performing the drain command again so that workloads cannot be placed on them
+- Only drain the master nodes which will be the first 3 nodes you installed
+
+```shell
+# cordons the node preventing workloads from being scheduled on the node
+microk8s kubectl drain <node name> --ignore-daemonsets --delete-emptydir-data
+# microk8s kubectl drain pi01 --ignore-daemonsets --delete-emptydir-data
+```
+
+- Run the following to see your new nodes and the master nodes will have `SchedulingDisabled`
 
 ```shell
 kubectl get nodes
