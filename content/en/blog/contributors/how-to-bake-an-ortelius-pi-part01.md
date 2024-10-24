@@ -246,9 +246,9 @@ Host pi03.yourdomain.com
 
 - This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name>` for example `ssh -i ~/.ssh/pis ortelius@pi01.pangarabbit.com`
 
-- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- You can also reference this document from [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
-<strong>Check:</strong> `all boxes specific to your needs.`
+<strong>Check</strong> the boxes specific to your needs.
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -256,7 +256,7 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Click:</strong> `YES to apply the OS customisation settings`
+<strong>Click</strong> `YES` to apply the OS customisation settings
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -264,9 +264,11 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Rinse and repeat for each SD Card or USB flash stick. </strong>
+<strong>Rinse and repeat for each SD Card or USB flash stick.</strong>
 <p></p>
 <br>
+
+- If all went well you should have 3 Pi 4B's with Ubuntu installed
 
 ### Conclusion
 

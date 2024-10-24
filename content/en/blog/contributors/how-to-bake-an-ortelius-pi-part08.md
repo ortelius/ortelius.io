@@ -36,7 +36,7 @@ In part 8 I will discuss how I upgraded my cluster from a 3 node Kubernetes clus
 
 ### Raspberry Pi 5s
 
-The new Raspberry Pi 5 comes with greater processing power, substantially upgraded graphics performance which should really help with MLoPs workloads when deploying your self-hosted platform (yet to test this thou) and USB C.
+The new Raspberry Pi 5 comes with greater processing power, substantially upgraded graphics performance which should really help with MLOP's workloads when deploying your self-hosted platform (yet to test this thou) and USB C.
 
 #### Features
 
@@ -62,7 +62,7 @@ For a more in depth coverage go to this [URL](https://www.pishop.co.za/store/ras
 
 #### Storage
 
-For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.samsung.com/za/memory-storage/memory-card/memory-card-evo-plus-microsd-card-128gb-mb-mc128sa-apc/) which would host [Ubuntu 24.04.1 LTS Noble Numbat](https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat) and for consolidated centralised storage I got 3 [Western Digital My Passport 2TB USB 3 disks](https://www.westerndigital.com/products/portable-drives/wd-my-passport-usb-3-0-hdd?sku=WDBYVG0020BBK-WESN) for each worker Pi which I will cover in another blog how to use software defined storage to present them as a single block of storage to Kubernetes.
+For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.samsung.com/za/memory-storage/memory-card/memory-card-evo-plus-microsd-card-128gb-mb-mc128sa-apc/) which would host [Ubuntu 24.04.1 LTS Noble Numbat](https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat) and for consolidated centralised storage I got 3 [Western Digital My Passport 2TB USB 3 disks](https://www.westerndigital.com/products/portable-drives/wd-my-passport-usb-3-0-hdd?sku=WDBYVG0020BBK-WESN) for each worker Pi which I will cover in another blog on how to use software defined storage to present them as a single block of storage to Kubernetes.
 
 ### Master Node Preparation Steps
 
@@ -172,7 +172,7 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 
 #### Choose Storage
 
-Note: This will look different on your machine especially if you are using either SD Card or USB flash drive
+Note: This will look different on your machine
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -238,9 +238,9 @@ Host pi06.yourdomain.com
 
 - This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name>` for example `ssh -i ~/.ssh/pis ortelius@pi04.pangarabbit.com`
 
-- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- You can also reference this document from [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
-<strong>Check:</strong> `all boxes specific to your needs.`
+<strong>Check</strong> the boxes specific to your needs.
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -248,7 +248,7 @@ Host pi06.yourdomain.com
 <p></p>
 <br>
 
-<strong>Click:</strong> `YES to apply the OS customisation settings`
+<strong>Click</strong> `YES` to apply the OS customisation settings
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
