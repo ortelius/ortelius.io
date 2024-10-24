@@ -255,7 +255,8 @@ Host pi06.yourdomain.com
 
 - You can also reference this document from [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
-<strong>Check</strong> the boxes specific to your needs.
+**Check** the boxes specific to your needs.
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -263,7 +264,8 @@ Host pi06.yourdomain.com
 <p></p>
 <br>
 
-<strong>Click</strong> `YES` to apply the OS customisation settings
+**Click** `YES` to apply the OS customisation settings
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
