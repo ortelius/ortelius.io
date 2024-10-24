@@ -68,7 +68,7 @@ For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.sa
 
 #### Upgrading Microk8s
 
-- This is a good time to perform maintenance before you add the worker nodes and is a lengthy process to ensure you are on the latest version of Microk8s on each node
+- This is a good time to perform maintenance before you add the worker nodes and is a lengthy process
 - Do one node at a time
 - SSH onto each Pi and run the following commands
 
