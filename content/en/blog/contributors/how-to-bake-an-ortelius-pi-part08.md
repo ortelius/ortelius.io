@@ -1,7 +1,7 @@
 ---
 date: 2024-10-24
-title: "How to Bake an Ortelius Pi Part 8 | OS, K8s and Worker Node Upgrades"
-linkTitle: "How to Bake an Ortelius Pi Part 8 | OS, K8s and Worker Node Upgrades"
+title: "How to Bake an Ortelius Pi Part 8 | OS Upgrades, Microk8s Upgrades and Adding Worker Nodes"
+linkTitle: "How to Bake an Ortelius Pi Part 8 | OS Upgrades, Microk8s Upgrades and Adding Worker Nodes"
 author: Sacha Wharton
 ---
 
@@ -300,7 +300,7 @@ cgroup_enable=memory cgroup_memory=1 console=serial0,115200 dwc_otg.lpm_enable=0
 
 - Install Kernel Modules `sudo apt install linux-modules-extra-raspi`
 - Referenced from [here](https://microk8s.io/docs/install-raspberry-pi)
-- I always like to use the latest stable version
+- I like to use the latest stable version
 
 ```shell
 # Installs Microk8s, sets permissions and ownership to the current user on the .kube directory
@@ -318,6 +318,7 @@ sudo microk8s add-node
 
 - You will need to do this `3 times` on the same node and each time you will need to copy the unique `join instruction with the unique key` for each node you wish to join
 - This will return some joining instructions which should be executed on the MicroK8s instance that you wish to join to the cluster `(NOT THE NODE YOU RAN add-node FROM)`
+- Make sure you add the flag `--worker` as these are not to be joined as master nodes
 
 ```shell
 # EXAMPLE from Canonicals docs
@@ -328,32 +329,10 @@ microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 
 - Use Kubectl to connect to your cluster
 - To view your current kube config
 
-```shell
-kubectl config view
-```
-
-- Get your available contexts
+- Run the following to see your new nodes
 
 ```shell
-kubectl config get-context
-```
-
-- Switch context to Microk8s
-
-```shell
-kubectl config use-context microk8s
-```
-
-- Run the following to see all namespaces
-
-```shell
-kubectl get ns
-```
-
-- Run the following to see all pods
-
-```shell
-kubectl get pods --all-namespaces
+kubectl get nodes
 ```
 
 ### Conclusion
