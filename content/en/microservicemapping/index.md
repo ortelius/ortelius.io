@@ -27,7 +27,7 @@ Ortelius can quickly show you where an open-source package version is running ac
 
 <div style="margin-top:80px;margin-left:10px">
 
-<img src="/images/fullscreen-OSSearch3.png" alt="OS Package Search" height="300px" width="1536px"/>
+<img src="/images/fullscreen-OSSearch3.png" alt="OS Package Search" height="210px" width="1075px"/>
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -44,14 +44,14 @@ Ortelius can quickly show you where an open-source package version is running ac
 
 <div style="margin-top:80px;margin-left:10px">
 
-<img src="/images/Openssf-scorecard.png" alt="OpenSSF Scorecard" height="588px" width="1124px"/>
+<img src="/images/Openssf-scorecard.png" alt="OpenSSF Scorecard" height="411px" width="856px"/>
 </div>
 
 {{< /blocks/feature_dual >}} 
 {{< blocks/feature_dual_left_sm >}} 
 
 
-<div style="margin-top:80px;margin-left:70px">
+<div style="margin-top:80px;margin-left:10px">
 
 
 ## Evaluate OS Package OpenSSF Scorecard
@@ -82,7 +82,7 @@ Ortelius integrates with OpenSSF Scorecard giving you a centralized view of the 
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:80px;margin-left:100px">
+<div style="margin-top:80px;margin-left:10px">
 
 ## Centralized Application Security Posture Management
 
@@ -92,9 +92,10 @@ Ortelius seamlessly integrates with popular security tools used in open-source p
 {{< /blocks/feature_dual_left_sm >}} 
 {{< blocks/feature_dual >}} 
 
-<div style="margin-top:80px;margin-left:200px">
+<div style="margin-top:80px;margin-left:100px">
 
-<img src="/images/compliance-greenchecks2.jpg" alt="Centralized ASPM" height="538px" width="913px"/>
+<img src="/images/compliance-greenchecks2.jpg" alt="centralized ASPM" height="430px" width="684px"/>
+
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -123,7 +124,7 @@ Ortelius seamlessly integrates with popular security tools used in open-source p
 
 <div style="margin-top:80px;margin-left:100px">
 
-## Conclusion and Get Started
+## Conclusion and Get Started Managing Vulnerabilities
 
 From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
