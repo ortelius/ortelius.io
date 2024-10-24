@@ -5,47 +5,18 @@ summary: Use the Security Evidence You Already Collect
 type: contributor
 ---
 
-{{< blocks/section color=primary >}}
-<div class="col-12">
-<h1 class="text-center">Create Application Level SBOMS and View Real-time Vulnerabilities</h1>
-<hr>
-</div>
-
-{{< blocks/feature_dual_left_sm >}} 
-
-<div style="margin-top:80px;margin-left:70px">
-
-## SBOM Consumption for Every Artifact
-
-Ortelius is the go-to platform for DevOps and security engineers to view and analyze Software Bill of Materials (SBOMs) data. The Ortelius vulnerability evidence store collects SBOMs for every artifact update. It then aggregates the SBOM to all consuming logical applications, providing consolidated SBOMs in decoupled architecture. 
-
-In a decoupled architecture, each independently deployed container triggers its own pipeline, generating its own SBOM. For this reason, SBOM data becomes fragmented across artifacts and most often, left in the build directory where the pipeline was executed. This makes it difficult to get a complete view of a software application’s security profile, including any vulnerabilities overtime. Ortelius solves this by aggregating SBOM data, providing CISO and development teams with a comprehensive view of critical software supply chain intelligence for fast, informed responses to cyber threats.
-
-Most importantly, Ortelius continuously scans OSV.dev and reports new vulnerabilities found after the software was deployed. 
-
-</div>
-
-{{< /blocks/feature_dual_left_sm >}} 
-{{< blocks/feature_dual>}} 
-
-<div class="col-center">
-
-<img src="/images/fullscreen-sbom-applevel-withvuln-hr.png" alt="Aggregated SBOM" height="450px" width="1400px" />
-</div>
-
-{{< /blocks/feature_dual>}} 
-
-{{< /blocks/section >}}
-
-
 
 {{< blocks/section color=white >}}
 <div class="col-12">
 </div>
 
+<div class="col-12">
+<h1 class="text-center">Create Application Level SBOMS and View Real-time Vulnerabilities</h1>
+<hr>
+</div>
 {{< blocks/feature_dual >}} 
 
-<div style="margin-top:80px;margin-left:200px">
+<div style="margin-top:80px;margin-left:10px">
 
 <img src="/images/federatedsbom.png" alt="Federated SBOM" height="649px" width="711px"/>
 
@@ -56,11 +27,15 @@ Most importantly, Ortelius continuously scans OSV.dev and reports new vulnerabil
 {{< blocks/feature_dual_left_sm >}} 
 
 
-<div style="margin-top:80px;margin-left:70px">
+<div style="margin-top:80px;margin-left:10px">
 
 ## Logical Application SBOMs
 
-In a decoupled architecture, component updates drive new application versions. Each time a shared component is updated, all of the consuming 'logical' applications have new SBOMs. Because Ortelius versions every component update, it automatically provides a new aggregated application level SBOM. This information is critical for meeting Government SBOM requirements such as [EO 14028](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028).
+Ortelius aggregates Software Bill of Materials (SBOM) data across decoupled architectures to ensure comprehensive visibility, security, and compliance in modern software ecosystems. In decoupled systems, where services, applications, and components operate independently, each part may have its own dependencies, vulnerabilities, and licensing requirements. 
+
+Aggregating SBOM data allows for a unified view of all software components and their supply chains. Ortleius helps organizations identify potential risks, manage vulnerabilities proactively, and maintain regulatory compliance. The Ortelius centralized oversight is essential for enhancing security posture, reducing blind spots, and ensuring that the entire architecture remains resilient and up-to-date despite its distributed nature.
+
+The Ortelius aggregated SBOM is critical for meeting [Executive Order 14028 - Improving the Nation's Cybersecurity](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028).
 
 
 <div style="font-size:1.6em;text-align:center;margin-top:10px">
@@ -75,27 +50,52 @@ In a decoupled architecture, component updates drive new application versions. E
 {{< /blocks/section >}}
 
 
+{{< blocks/section color=primary >}}
+
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:80px;margin-left:10px">
+
+## Continuous Vulnerability Updates
+
+Using the stored SBOM data, Ortelius continuously scans for new vulnerabilities found long after the container was created. Continuous vulnerability scanning is essential because software systems are constantly evolving, and new security threats emerge regularly. As developers release updates, introduce new code, or integrate third-party components, new vulnerabilities may be inadvertently introduced.
+
+By scanning for vulnerabilities continuously, Ortelius helps organizations detect potential weaknesses as soon as they arise, enabling faster remediation and reducing the window of opportunity for cyberattacks. Continuous scanning ensures that security measures remain up-to-date, minimizing the risk of breaches and ensuring compliance with security standards in an ever-changing threat landscape.
+
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+{{< blocks/feature_dual>}} 
+
+<div class="col-center">
+
+<img src="/images/fullscreen-vulnerabilities.png" alt="vulnerabilities" height="646px" width="1095px" />
+</div>
+
+{{< /blocks/feature_dual>}} 
+
+{{< /blocks/section >}}
+
+
+
 {{< blocks/section color=gray >}}
 <div class="col-12">
 </div>
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:80px;margin-left:100px">
 
-<div style="margin-top:80px;margin-left:200px">
+<div style="margin-top:80px;margin-left:10px">
 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
-</div>
-
-
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
 
 {{< blocks/feature_dual >}}
 
-<div style="margin-top:80px;margin-left:100px">
+<div style="margin-top:80px;margin-left:10px">
 
 ## Conclusion and Get Started
 
