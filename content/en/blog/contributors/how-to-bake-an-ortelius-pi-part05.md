@@ -2568,9 +2568,9 @@ Commit message: "🛠 NEW: jenkins pod templates"
  > git rev-list --no-walk 3d51ff295a43b243bd1ba65602a000b93522af9e # timeout=10
 ```
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 Hopefully you got this far and I did not forget some crucial configuration or step along the way. If I did please ping me so I can make any fixes. This illustrates how Ortelius can be used to create a component and record SBOMs in a CI tool such as Jenkins.
 
@@ -2578,7 +2578,7 @@ Happy alien hunting.....
 
 ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 6 | Cloud Dev At Home With Localstack](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/)
+[How to Bake an Ortelius Pi | Part 6 | Cloud Dev At Home With Localstack](https://ortelius.io/blog/2024/09/14/how-to-bake-an-ortelius-pi-part-6-cloud-dev-at-home-with-localstack/)
 
 {{< blocks/section color=white >}}
 

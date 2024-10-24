@@ -43,7 +43,7 @@ Use this [article](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-
 
 - 3X 32GB Samsung Evo+ microSD Card (UHS-II: theoretical maximum transfer speeds up to 312MB/s)
 
-<strong>or</strong>
+**OR**
 
 - 3X 32GB USB 3 flash drives but this comes with some caveats performance wise which I will discuss further on
 
@@ -144,21 +144,24 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+**Choose** `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Other general-purpose OS`
+**Choose** `Other general-purpose OS`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu`
+**Choose** `Ubuntu`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
@@ -194,7 +197,7 @@ Use OS Customization by clicking: `EDIT SETTINGS`
 
 Fill in the required info according to your specifications.
 
-Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
+Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installation of Ubuntu on the SD Card
 
 (You can use whatever hostnames make sense to you)
 
@@ -204,6 +207,7 @@ Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
+
 <p></p>
 <br>
 <div class="col-left">
@@ -221,8 +225,7 @@ ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
 ```
 
 - Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
-- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
-- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
+- Copy and paste the `public key` before each installation of Ubuntu to `Allow public-key authentication only` for each Pi
 - Then add this config to `.ssh/config`
 
 ```shell
@@ -245,9 +248,12 @@ Host pi03.yourdomain.com
  User <your user>
 ```
 
-- You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name>` for example `ssh -i ~/.ssh/pis ortelius@pi01.pangarabbit.com`
 
-<strong>Check:</strong> `all boxes specific to your needs.`
+- You can also reference this document from [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
+
+**Check** the boxes specific to your needs.
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -255,7 +261,8 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Click:</strong> `YES to apply the OS customisation settings`
+**Click** `YES` to apply the OS customisation settings
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -263,9 +270,9 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Rinse and repeat for each SD Card or USB flash stick. </strong>
-<p></p>
-<br>
+**Rinse and repeat for each SD Card or USB flash stick.**
+
+- If all went well you should have 3 Pi 4B's with Ubuntu installed
 
 ### Conclusion
 
@@ -273,7 +280,7 @@ By this stage you should have three Pi 4 B's running with Ubuntu 22.04.4 LTS eac
 
 ### Next Steps
 
-[How to Bake on Ortelius Pi | Part 2 | The Preparation](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
+[How to Bake on Ortelius Pi | Part 2 | The Preparation](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/)
 
 {{< blocks/section color=white >}}
 

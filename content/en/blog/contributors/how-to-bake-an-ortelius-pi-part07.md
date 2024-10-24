@@ -22,6 +22,7 @@ author: Sacha Wharton
   - [Kubernetes check | Netdata](#kubernetes-check--netdata)
   - [How to add additional nodes in Netdata](#how-to-add-additional-nodes-in-netdata)
 - [Conclusion](#conclusion)
+- [Next Steps](#next-steps)
 
 ### Introduction
 
@@ -900,17 +901,17 @@ helm upgrade -f override.yml netdata netdata/netdata
 </div>
 <p></p>
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
 
 Happy alien hunting.....
 
-<!-- ### Next Steps
+### Next Steps
 
-[How to Bake an Ortelius Pi | Part 8 | Architecture So Far](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-4-Cloudflare-Certificates-and-Traefik/) -->
+[How to Bake an Ortelius Pi | Part 8 | OS Upgrades, Microk8s Upgrades and Adding Worker Nodes](https://ortelius.io/blog/2024/10/24/how-to-bake-an-ortelius-pi-part-8-os-upgrades-microk8s-upgrades-and-adding-worker-nodes)
 
 {{< blocks/section color=white >}}
 

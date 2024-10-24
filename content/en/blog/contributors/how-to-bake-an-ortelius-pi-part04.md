@@ -352,9 +352,9 @@ All we have done now is secure the Traefik dashboard but how would we do it for 
         tls: true
 ```
 
-### Conclusion
+**FYI make sure you backup your persistent volumes on the NFS server**
 
-***FYI make sure you backup your persistent volumes on the NFS server***.
+### Conclusion
 
 In Part 4 we configured a certificate for our domain using Cloudflare, LetsEncrypt and Traefik. From my experience the crucial configuration change for any workloads to access the frontend securely was to enable the `ingress`, `TLS` and to change the `ingressClassName` to `traefik` in the Helm Release values.
 
@@ -362,7 +362,7 @@ Happy alien hunting.......
 
 ### Next Steps
 
-[How to Bake an Ortelius Pi | Part 5 | Ortelius Marries Jenkins](https://ortelius.io/blog/2024/08/10/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/)
+[How to Bake an Ortelius Pi | Part 5 | Ortelius Marries Jenkins](https://ortelius.io/blog/2024/10/22/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/)
 
 {{< blocks/section color=white >}}
 
