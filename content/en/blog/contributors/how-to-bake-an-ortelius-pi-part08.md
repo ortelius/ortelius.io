@@ -14,10 +14,13 @@ author: Sacha Wharton
 - [Raspberry Pi 5s](#raspberry-pi-5s)
   - [Features](#features)
   - [Storage](#storage)
+- [Upgrading the Ubuntu Operating System on each node](#upgrading-the-ubuntu-operating-system-on-each-node)
+  - [Upgrading Microk8s](#upgrading-microk8s)
+  - [Microk8s uncordon](#microk8s-uncordon)
+  - [Upgrading Ubuntu](#upgrading-ubuntu)
 - [Deploy the worker nodes](#deploy-the-worker-nodes)
   - [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
   - [Choose Storage](#choose-storage)
-  - [Helm-Repository | Netdata](#helm-repository--netdata)
 - [Conclusion](#conclusion)
 
 ### Introduction
@@ -56,9 +59,71 @@ For a more in depth coverage go to this [URL](https://www.pishop.co.za/store/ras
 
 For storage I opted for the [Samsung EVO Plus 128GB MicroSD Card](https://www.samsung.com/za/memory-storage/memory-card/memory-card-evo-plus-microsd-card-128gb-mb-mc128sa-apc/) which would host [Ubuntu 24.04.1 LTS Noble Numbat](https://ubuntu.com/blog/canonical-releases-ubuntu-24-04-noble-numbat) and for consolidated centralised storage I got 3 [Western Digital My Passport 2TB USB 3 disks](https://www.westerndigital.com/products/portable-drives/wd-my-passport-usb-3-0-hdd?sku=WDBYVG0020BBK-WESN) for each worker Pi which I will cover in another blog how to use software defined storage to present them as a single block of storage to Kubernetes.
 
+### Upgrading the Ubuntu Operating System on each node
+
+#### Upgrading Microk8s
+
+- This is a good time to perform maintenance before you add the worker nodes and is a lengthy process
+- Ensure you on the latest version of Microk8s on each node
+- Do one node at a time
+- SSH onto each Pi and run the following commands
+
+```shell
+# Draining a node moves all the pods to the other nodes and
+# cordons the node preventing workloads from being scheduled on the node
+microk8s kubectl drain <node name> --ignore-daemonsets --delete-emptydir-data
+```
+
+- Once that is done upgrade Microk8s
+
+```shell
+# You will need to change the channel version to the latest version at the time
+sudo snap refresh microk8s --channel <latest version>/candidate
+```
+
+#### Microk8s uncordon
+
+- **Only uncordon each node if you are not adding worker nodes and only when you have finished upgrading Ubuntu**
+- **If are adding worker nodes** we want to emulate a enterprise thus we do not want workloads running on our master nodes so we will leave them cordened so that workloads cannot be placed on them
+
+```shell
+# This command will show you the state of each node and you will see that my master nodes are SchedulingDisabled
+kubectl get nodes
+```
+
+```shell
+NAME   STATUS                     ROLES    AGE   VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+pi01   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.48    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi02   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.107   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi03   Ready,SchedulingDisabled   <none>   85d   v1.31.1   192.168.0.141   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi04   Ready                      <none>   9d    v1.31.1   192.168.0.149   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi05   Ready                      <none>   9d    v1.31.1   192.168.0.115   <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+pi06   Ready                      <none>   9d    v1.31.1   192.168.0.23    <none>        Ubuntu 24.04.1 LTS   6.8.0-1013-raspi   containerd://1.6.28
+```
+
+```shell
+# Uncordon tells Kubernetes that this node can be used to schedule workloads
+microk8s kubectl uncordon <node name>
+```
+
+#### Upgrading Ubuntu
+
+- Then upgrade your Ubuntu with the following steps
+
+```shell
+# Update Current System: Ensure your current installation is fully updated and old packages are cleaned out
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+```
+
+```shell
+# Begin the Upgrade: do-release-upgrade will manage the upgrade smoothly and interactively.
+sudo do-release-upgrade -d
+```
+
 ### Deploy the worker nodes
 
 Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a similar process from [part01](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/).
+
 
 #### Using the Raspberry Pi Imager
 
@@ -81,21 +146,21 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 
 <strong>Choose:</strong> `Other general-purpose OS`
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="general purpose os" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
 <strong>Choose:</strong> `Ubuntu`
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="choose ubuntu" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu Server 24.04.4 LTS (64-bit)`
+<strong>Choose:</strong> `Ubuntu Server 24.04.1 LTS (64-bit)`
 <div class="col-left">
-<img src="/images/how-to-bake-an-ortelius-pi/part01/04-choose-ubuntu-server-22-04-4-lts-x64.png" alt="raspberry-pi-4b" height="300px" width="650px" />
+<img src="/images/how-to-bake-an-ortelius-pi/part08/01-choose-ubuntu-server-24-04-1-lts-x64.png" alt="choose ubuntu server 24.04.4 lts x64" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
@@ -122,7 +187,7 @@ Use OS Customization by clicking: `EDIT SETTINGS`
 
 Fill in the required info according to your specifications.
 
-Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
+Remember to change the `HOSTNAMES` `pi04` | `pi05` | `pi06` before each installation of Ubuntu on the SD Card
 
 (You can use whatever hostnames make sense to you)
 
@@ -140,38 +205,33 @@ Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
 </div>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
-- Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
-- Generate the keys in the home folder at this location `C:\Users\username\.ssh` if you are using Windows
+- Add the same public key you generated in [part01](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)to each new worker node
+- If you are using a Mac or Linux you will find public key marked with a `.pub` extension here `/Users/<your username>/.ssh`
+- If you are using Windows you will find the public key marked with a `.pub` extension here `C:\Users\username\.ssh`
+- Copy the public key each time you perform an install on the SD Card to `Allow public-key authentication only`
+- Append this config to `.ssh/config`
 
 ```shell
-ssh-keygen -t ed25519 -C "you-email@domain.com" -f <public key name>`
-ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
-```
-
-- Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
-- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
-- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
-- Then add this config to `.ssh/config`
-
-```shell
-Host pi01.yourdomain.com
- HostName pi01.yourdomain.com
+Host pi04.yourdomain.com
+ HostName pi04.yourdomain.com
     AddKeysToAgent yes
  IdentityFile ~/.ssh/<private key name>
  User <your user>
 
-Host pi02.yourdomain.com
- HostName pi02.yourdomain.com
+Host pi05.yourdomain.com
+ HostName pi05.yourdomain.com
     AddKeysToAgent yes
  IdentityFile ~/.ssh/<private key name>
  User <your user>
 
-Host pi03.yourdomain.com
- HostName pi03.yourdomain.com
+Host pi06.yourdomain.com
+ HostName pi06.yourdomain.com
     AddKeysToAgent yes
     IdentityFile ~/.ssh/<private key name>
  User <your user>
 ```
+
+- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name>` for example `ssh -i ~/.ssh/pis ortelius@pi04.pangarabbit.com`
 
 - You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
@@ -191,24 +251,16 @@ Host pi03.yourdomain.com
 <p></p>
 <br>
 
-<strong>Rinse and repeat for each SD Card or USB flash stick. </strong>
+<strong>Rinse and repeat for each SD Card. </strong>
 <p></p>
 <br>
-
-
-#### Helm-Repository | Netdata
-
-- Lets add the Netdata Helm repository
-- A Helm repository is a collection of Helm charts that are made available for download and installation
-- Helm repositories serve as centralised locations where Helm charts can be stored, shared, and managed
-- Create a file called `netdata.yaml` in the helm-repositories directory and paste the following YAML
 
 
 ### Conclusion
 
 ***FYI make sure you backup your persistent volumes on the NFS server***.
 
-You now have the eye of Netdata like a micro surgeon giving you insight into your Cloud infrastructure without breaking much of a sweat. What you don't have is that fine Leopard vest I am wearing in my profile pic below. I need to remedy that. If I missed any steps or something needs correction please ping me so I can make any fixes. This illustrates how you can deploy Netdata and get all that healthy Observability goodness.
+You now have
 
 Happy alien hunting.....
 

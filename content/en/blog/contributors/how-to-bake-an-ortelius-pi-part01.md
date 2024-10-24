@@ -194,7 +194,7 @@ Use OS Customization by clicking: `EDIT SETTINGS`
 
 Fill in the required info according to your specifications.
 
-Remember to change the: `HOSTNAMES` `pi01` | `pi02` | `pi03`
+Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installation of Ubuntu on the SD Card
 
 (You can use whatever hostnames make sense to you)
 
@@ -221,8 +221,7 @@ ssh-keygen -t ed25519 -C "i-love-aliens@ortelius.com" -f pi8s
 ```
 
 - Then you will end up with two files, one being the `private key` which you never ever share and the other will be the `public key`
-- Copy and paste all the scrambled numbers and text from the `public key` each time on the line under `Allow public-key authentication only` for each Pi
-- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name> | ssh -i ~/.ssh/pi8s ortelius@pi01.pangarabbit.com`
+- Copy and paste the `public key` before each installation of Ubuntu to `Allow public-key authentication only` for each Pi
 - Then add this config to `.ssh/config`
 
 ```shell
@@ -244,6 +243,8 @@ Host pi03.yourdomain.com
     IdentityFile ~/.ssh/<private key name>
  User <your user>
 ```
+
+- This will allow SSH without a password onto each Pi like this `ssh -i ~/.ssh/<your private key name> <your pi username@<your private ip or domain name>` for example `ssh -i ~/.ssh/pis ortelius@pi01.pangarabbit.com`
 
 - You can also reference this document from [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for an alternative explanation
 
