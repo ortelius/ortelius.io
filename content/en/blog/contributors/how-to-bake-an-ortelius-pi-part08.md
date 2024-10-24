@@ -62,7 +62,7 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 
 #### Using the Raspberry Pi Imager
 
-- Repeat these steps for each SD Card or USB flash stick
+- Repeat these steps for each SD Card
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
 - `CHOOSE DEVICE`
 
