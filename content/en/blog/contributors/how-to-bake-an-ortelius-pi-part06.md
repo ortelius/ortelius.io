@@ -256,8 +256,10 @@ spec:
     extraEnvVars:
       - name: GATEWAY_LISTEN
         value: "0.0.0.0:4566"
+      # Use this if you have an API key and comment out the auth token
       - name: LOCALSTACK_API_KEY
         value: "<your api key"
+      # Use this if you have an auth token and comment out the API key
       - name: LOCALSTACK_AUTH_TOKEN
         value: "your auth token"
     ##   - name: SERVICES

@@ -21,7 +21,10 @@ author: Sacha Wharton
   - [Upgrading Ubuntu](#upgrading-ubuntu)
 - [Deploy the worker nodes](#deploy-the-worker-nodes)
   - [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
-  - [Choose Storage](#choose-storage)
+  - [CHOOSE DEVICE](#choose-device)
+  - [CHOOSE OS](#choose-os)
+  - [CHOOSE STORAGE](#choose-storage)
+  - [OS CUSTOMISATION](#os-customisation)
   - [IP Addresses and DHCP](#ip-addresses-and-dhcp)
   - [DNS Configuration](#dns-configuration)
 - [Microk8s Prep](#microk8s-prep)
@@ -108,7 +111,7 @@ microk8s kubectl uncordon <node name>
 # microk8s kubectl uncordon pi01
 ```
 
-- This command will show you the state of each node and you will see that my master nodes are `SchedulingDisabled`
+- This command will show you the state of each node
 
 ```shell
 kubectl get nodes
@@ -137,7 +140,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo do-release-upgrade -d
 ```
 
-**Rinse and repeat for each SD Card**
+**Rinse and repeat for each SD Card or USB flash stick**
 
 ### Deploy the worker nodes
 
@@ -147,12 +150,12 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 
 - Repeat these steps for each SD Card
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
-- `CHOOSE DEVICE`
+
+#### CHOOSE DEVICE
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png" alt="raspberry-pi-5" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Raspberry Pi5`
@@ -160,15 +163,14 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
-<br>
+
+#### CHOOSE OS
 
 **Choose** `Other general-purpose OS`
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="general purpose os" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Ubuntu`
@@ -176,34 +178,33 @@ Right lets deploy those worker nodes by preparing our Raspberry Pi 5's using a s
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="choose ubuntu" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Ubuntu Server 24.04.1 LTS (64-bit)`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part08/01-choose-ubuntu-server-24-04-1-lts-x64.png" alt="choose ubuntu server 24.04.4 lts x64" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
-#### Choose Storage
+#### CHOOSE STORAGE
 
 Note: This will look different on your machine
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 - `Next`
+
+#### OS CUSTOMISATION
 
 Use OS Customization by clicking: `EDIT SETTINGS`
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/07-use-os-customisation.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 Fill in the required info according to your specifications.
@@ -211,19 +212,17 @@ Fill in the required info according to your specifications.
 Remember to change the `HOSTNAMES` `pi04` | `pi05` | `pi06` before each installation of Ubuntu on the SD Card
 
 (You can use whatever hostnames make sense to you)
-
-<p></p>
 <br>
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png" alt="raspberry-pi-4b" height="300px" width="650px" />
-<p></p>
 </div>
+<br>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
 - Add the same public key you generated in [part01](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)to each new worker node
@@ -258,23 +257,19 @@ Host pi06.yourdomain.com
 
 **Check** the boxes specific to your needs.
 
-<p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Click** `YES` to apply the OS customisation settings
 
-<p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
-**Rinse and repeat for each SD Card**
+**Rinse and repeat for each SD Card or USB flash stick**
 
 - If all went well you should have 3 Pi 5's with Ubuntu installed
 
@@ -337,7 +332,7 @@ sudo microk8s add-node
 - Make sure you add the `--worker` flag as these are not to be joined as master nodes
 
 ```shell
-# EXAMPLE from Canonicals docs
+# Example from Canonicals docs
 Use the '--worker' flag to join a node as a worker not running the control plane, eg:
 microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
 ```
