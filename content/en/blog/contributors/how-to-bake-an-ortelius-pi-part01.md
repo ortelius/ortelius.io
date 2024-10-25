@@ -18,7 +18,10 @@ author: Sacha Wharton
   - [USB 3 flash drives](#usb-3-flash-drives)
   - [Example from configuring my Pi to use USB flash sticks](#example-from-configuring-my-pi-to-use-usb-flash-sticks)
 - [Using the Raspberry Pi Imager](#using-the-raspberry-pi-imager)
-  - [Choose Storage](#choose-storage)
+  - [CHOOSE DEVICE](#choose-device)
+  - [CHOOSE OS](#choose-os)
+  - [CHOOSE STORAGE](#choose-storage)
+  - [OS Customisation](#os-customisation)
 - [Conclusion](#conclusion)
 - [Next Steps](#next-steps)
 
@@ -136,7 +139,8 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 
 - Repeat these steps for each SD Card or USB flash stick
 - The opening screen will present you with `CHOOSE DEVICE` | `CHOOSE OS` | `CHOOSE STORAGE`
-- `CHOOSE DEVICE`
+
+#### CHOOSE DEVICE
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -151,6 +155,8 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 </div>
 <p></p>
 <br>
+
+#### CHOOSE OS
 
 **Choose** `Other general-purpose OS`
 
@@ -168,14 +174,15 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <p></p>
 <br>
 
-<strong>Choose:</strong> `Ubuntu Server 22.04.4 LTS (64-bit)`
+**Choose** `Ubuntu Server 22.04.4 LTS (64-bit)`
+
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/04-choose-ubuntu-server-22-04-4-lts-x64.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 <p></p>
 <br>
 
-#### Choose Storage
+#### CHOOSE STORAGE
 
 Note: This will look different on your machine especially if you are using either SD Card or USB flash drive
 
@@ -187,7 +194,10 @@ Note: This will look different on your machine especially if you are using eithe
 
 - `Next`
 
+#### OS Customisation
+
 Use OS Customization by clicking: `EDIT SETTINGS`
+
 <p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/07-use-os-customisation.png" alt="raspberry-pi-4b" height="300px" width="650px" />
@@ -200,9 +210,6 @@ Fill in the required info according to your specifications.
 Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installation of Ubuntu on the SD Card
 
 (You can use whatever hostnames make sense to you)
-
-<p></p>
-<br>
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
