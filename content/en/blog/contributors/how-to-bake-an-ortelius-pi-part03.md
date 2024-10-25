@@ -610,7 +610,7 @@ My configuration for Netdata persistence looks like the following now which I th
 
 #### Update
 
-This has finally been fixed with the lucky `777` permissions. I also suggested to Netdata to allow us to force the permissions using something like this in the Netdata Helm Chart. I made an issue for Netdata [here](https://github.com/netdata/helmchart/issues/449)
+This has finally been fixed with the lucky `777` permissions, I think. I also suggested to Netdata to allow us to force the permissions using something like this in the Netdata Helm Chart. I made an issue for Netdata [here](https://github.com/netdata/helmchart/issues/449)
 
 ```yaml
 volumePermissions:
