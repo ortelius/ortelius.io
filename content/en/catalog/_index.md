@@ -16,7 +16,7 @@ type: contributor
 </div>
 {{< blocks/feature_dual >}} 
 
-<div style="margin-top:80px;margin-left:10px">
+<div style="margin-top:80px;margin-left:200px">
 
 <img src="/images/federatedsbom.png" alt="Federated SBOM" height="649px" width="711px"/>
 
@@ -38,7 +38,7 @@ Aggregating SBOM data allows for a unified view of all software components and t
 The Ortelius aggregated SBOM is critical for meeting [Executive Order 14028 - Improving the Nation's Cybersecurity](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028).
 
 
-<div style="font-size:1.6em;text-align:center;margin-top:10px">
+<div style="font-size:1.6em;text-align:center;margin-top:10px;">
 
 [View Compete Application-level SBOM](/images/application-sbom.pdf)
 
