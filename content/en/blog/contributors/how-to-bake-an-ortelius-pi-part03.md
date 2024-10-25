@@ -42,6 +42,7 @@ author: Sacha Wharton
   - [NFS Architecture](#nfs-architecture)
   - [NFS Observations](#nfs-observations)
   - [NFS Netdata Observations](#nfs-netdata-observations)
+  - [Update](#update)
   - [Mount Permissions](#mount-permissions)
   - [Fluxcd is doing the following under the hood | CSI NFS Driver](#fluxcd-is-doing-the-following-under-the-hood--csi-nfs-driver)
   - [Kubernetes check | CSI NFS Driver](#kubernetes-check--csi-nfs-driver)
@@ -607,6 +608,19 @@ I tried a different approach for the Netdata parent I moved away from the CSI NF
 
 My configuration for Netdata persistence looks like the following now which I thought had fixed the issue but then after a period of time the dreaded `chown` error returned. In the below content I have left the CSI NFS Driver configuration for Netdata to show both methods.
 
+#### Update
+
+This has finally been fixed with the lucky `777` permissions. I also suggested to Netdata to allow us to force the permissions using something like this in the Netdata Helm Chart. I made an issue for Netdata [here](https://github.com/netdata/helmchart/issues/449)
+
+```yaml
+volumePermissions:
+## @param netdata.volumePermissions.enabled Enable init container that changes the owner and group of the persistent volume(s) mountpoint to `runAsUser:fsGroup`
+        ##
+        enabled: true
+        ## @param netdata.volumePermissions.image.tag Init container volume-permissions image tag (immutable tags are recommended)
+```
+
+
 ```yaml
 # netdata-manifest.yaml which is stored in the Gimlet directory manifests
 apiVersion: storage.k8s.io/v1
@@ -668,6 +682,9 @@ spec:
 
 - **Full access only for the owner (rwx------).**
 - The owner has full permissions (read, write, execute), and no permissions are granted to group or others. This is useful for private data that should not be accessible to others.
+
+
+
 
 Here is what my persistent volumes, persistent volume claims and storage classes look like now:
 
