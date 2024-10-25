@@ -111,7 +111,7 @@ microk8s kubectl uncordon <node name>
 # microk8s kubectl uncordon pi01
 ```
 
-- This command will show you the state of each node and you will see that my master nodes are `SchedulingDisabled`
+- This command will show you the state of each node
 
 ```shell
 kubectl get nodes
