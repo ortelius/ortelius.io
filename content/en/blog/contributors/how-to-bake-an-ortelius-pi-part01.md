@@ -145,7 +145,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/00-choose-device-os-storage.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Raspberry Pi4 models B, 400 and Compute Modules 4, 4s`
@@ -153,7 +152,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/01-choose-device.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 #### CHOOSE OS
@@ -163,7 +161,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/02-choose-other-general-purpose-os.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Ubuntu`
@@ -171,7 +168,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/03-choose-ubuntu.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Choose** `Ubuntu Server 22.04.4 LTS (64-bit)`
@@ -179,7 +175,6 @@ usb-storage.quirks=05dc:a838:u cgroup_enable=memory cgroup_memory=1 console=seri
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/04-choose-ubuntu-server-22-04-4-lts-x64.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 #### CHOOSE STORAGE
@@ -189,7 +184,6 @@ Note: This will look different on your machine especially if you are using eithe
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/05-choose-device-media.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 - `Next`
@@ -198,29 +192,24 @@ Note: This will look different on your machine especially if you are using eithe
 
 Use OS Customization by clicking: `EDIT SETTINGS`
 
-<p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/07-use-os-customisation.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
-Fill in the required info according to your specifications.
-
-Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installation of Ubuntu on the SD Card
-
-(You can use whatever hostnames make sense to you)
+- Fill in the required info according to your specifications.
+- Remember to change the `HOSTNAMES` `pi01` | `pi02` | `pi03` before each installation of Ubuntu on the SD Card
+- You can use whatever hostnames make sense to you
 
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/08-general-settings.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
 
-<p></p>
 <br>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/09-enable-ssh-password-auth.png" alt="raspberry-pi-4b" height="300px" width="650px" />
-<p></p>
 </div>
+<br>
 
 - If you decide to use `Allow public-key authentication only` which I would recommend you need to do some extra steps
 - Generate the keys in the home folder at this location `/Users/<your username>/.ssh` if you are using a Mac or Linux
@@ -261,20 +250,16 @@ Host pi03.yourdomain.com
 
 **Check** the boxes specific to your needs.
 
-<p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/10-options.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Click** `YES` to apply the OS customisation settings
 
-<p></p>
 <div class="col-left">
 <img src="/images/how-to-bake-an-ortelius-pi/part01/11-use-os-customisation-yes.png" alt="raspberry-pi-4b" height="300px" width="650px" />
 </div>
-<p></p>
 <br>
 
 **Rinse and repeat for each SD Card or USB flash stick.**
