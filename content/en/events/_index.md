@@ -1,7 +1,7 @@
 ---
-title: Ortelius Events
-description: Ortelius Events
-summary: Join a Meeting or an Event
+title: Events and Resources
+description: Ortelius Events and Rescoures
+summary: Join a Meeting or an Event, download logos and Zoom backgrounds
 menu:
   main:
    weight: 20
