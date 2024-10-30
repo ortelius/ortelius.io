@@ -45,7 +45,7 @@ Each change introduces potential risks from new open-source packages, which may 
 {{< blocks/feature_dual >}} 
 
 
-<div style="margin-top:80px;margin-left:10px">
+<div style="margin-top:80px;margin-left:90px">
 
 <img src="/images/applicationandcomponents.png" alt="Federated SBOM" height="581px" width="985px"/>
 

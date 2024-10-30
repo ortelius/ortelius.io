@@ -89,7 +89,35 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< /blocks/section >}}
 
 
+
 {{< blocks/section color="white" >}}
+{{< blocks/feature_dual >}}
+<div class="col-center">
+<h2 class="col-center">Need an Ortelius Logo?</h2>
+<br>
+
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius Logos" height="290px" width="300px" />
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+You can download different versions of the Ortelius Logo from the CD.Foundation GitHub Site:
+
+- [Horizontal Black/White/Color](https://github.com/cdfoundation/artwork/tree/main/ortelius/horizontal)
+- [Stacked Black/White/Color](https://github.com/cdfoundation/artwork/tree/main/ortelius/stacked)
+- [Icon Black/White/Color](https://github.com/cdfoundation/artwork/tree/main/ortelius/icon)
+- [SVG Color](https://github.com/cdfoundation/artwork/tree/main/ortelius)
+
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
 <h2 class="col-center">Thank You CDF for a Great CDCon</h2>
@@ -124,7 +152,7 @@ cdCon is the annual event hosted by the Continuous Delivery Foundation that brin
 {{< /blocks/section >}}
 
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 <h2>On-Demand</h2>
@@ -173,6 +201,7 @@ cdCon is the annual event hosted by the Continuous Delivery Foundation that brin
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
+
 
 {{< blocks/section color="primary" >}}
 <div class="col-12">
