@@ -32,7 +32,7 @@ Software Package Data Exchange ([SPDX](https://spdx.dev/)) is an open standard (
 ## How Ortelius Integrates SPDX and CycloneDX?
 
 Follow the [Ortelius Installation Guide](https://docs.ortelius.io/guides/userguide/installation-and-support/) to ensure Ortelius is properly installed and configured.
-1. Components are organised within Ortelius by domain and can be linked to specific applications as necessary. Ortelius mandates [adding components and applications](https://docs.ortelius.io/guides/userguide/addingtopipeline/) through CI/CD pipelines, utilising the Ortelius [Command Line Interface (CLI)](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/) within the CI/CD processes to automate the capture of supply chain data at both the build and deployment stages.
+1. Components are organized within Ortelius by domain and can be linked to specific applications as necessary. Ortelius mandates [adding components and applications](https://docs.ortelius.io/guides/userguide/addingtopipeline/) through CI/CD pipelines, utilizing the Ortelius [Command Line Interface (CLI)](https://docs.ortelius.io/guides/userguide/installation-and-support/0-commandlineinterface/) within the CI/CD processes to automate the capture of supply chain data at both the build and deployment stages.
 
 2.	Components such as containers, jar files and executables, organised into Domains and Applications within Ortelius, facilitate systematic tracking and updates. [Ortelius tracks each component's security data](https://docs.ortelius.io/guides/userguide/2-define-components/), including SBOMs and vulnerabilities, providing detailed security profiles. 
 
@@ -42,7 +42,7 @@ Follow the [Ortelius Installation Guide](https://docs.ortelius.io/guides/usergui
 ## Benefits of SBOM Integration with Ortelius
 
 - Aggregated SBOMs are key in a cloud-native architecture. Ortelius shares SBOMs at the Component level and generates a [logical application SBOM](https://ortelius.io/catalog/). 
-- Real-time tracking of all dependencies and versions allows organizations to proactively address vulnerabilities before they are exploited.
+- Real-time tracking of all dependencies and versions allows organizations to proactively address vulnerabilities after the build step and before they are exploited.
 - Documentation of software licenses through SBOMs ensures compliance with open-source licensing and reducing legal risks.
 - Ortelius offers a **single pane of glass** view into the entire software supply chain, simplifying the management of complex microservice-based architectures.
 - Integrating SBOM generation and monitoring into CI/CD pipelines enhances security and compliance workflows.
@@ -60,12 +60,20 @@ Follow the [Ortelius Installation Guide](https://docs.ortelius.io/guides/usergui
 
 </div>
 
-<br>
+## Conclusion
 
-With the growing importance of adopting SBOMs for software transparency and security. Ortelius streamlines the integration and management of SPDX and CycloneDX SBOMs, helping organizations in efficiently securing their software supply chain. For more information on optimizing SBOM management in complex, microservice-based environments, explore [Ortelius](https://docs.ortelius.io/guides/).
+With the growing importance of adopting SBOMs for software transparency and security, Ortelius offers a method of consumption of the data for continuous vulnerability management. Ortelius streamlines the integration and management of SPDX and CycloneDX SBOMs, helping organizations in efficiently securing their software supply chain. For more information on optimizing SBOM management in complex, microservice-based environments, explore [Ortelius](https://docs.ortelius.io/guides/).
 
 ## References
 CycloneDX.org (2024) CycloneDX Use Cases. 2024. https://cyclonedx.org/use-cases/ [Accessed: 25 October 2024].
 
 spdx-spec (2010) spdx-spec/examples/SPDXJSONExample-v2.2.spdx.json at development/v2.2.2 · spdx/spdx-spec. 29 January 2010. GitHub. https://github.com/spdx/spdx-spec/blob/development/v2.2.2/examples/SPDXJSONExample-v2.2.spdx.json [Accessed: 25 October 2024].
+
+
+## Learn More About the Authors:
+
+- [Jing Chen](https://www.linkedin.com/in/jingchen-ku/) 
+- [Jesse Ku](https://www.linkedin.com/in/jesse-ku-978693319/)
+
+
 
