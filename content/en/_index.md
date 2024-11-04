@@ -125,7 +125,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Start Today](https://www.deployhub.com/deployhub-team/) 
+[Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/) 
 </div>
 
 </div>
