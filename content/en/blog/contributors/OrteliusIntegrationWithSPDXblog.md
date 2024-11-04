@@ -70,10 +70,27 @@ CycloneDX.org (2024) CycloneDX Use Cases. 2024. https://cyclonedx.org/use-cases/
 spdx-spec (2010) spdx-spec/examples/SPDXJSONExample-v2.2.spdx.json at development/v2.2.2 · spdx/spdx-spec. 29 January 2010. GitHub. https://github.com/spdx/spdx-spec/blob/development/v2.2.2/examples/SPDXJSONExample-v2.2.spdx.json [Accessed: 25 October 2024].
 
 
-## Learn More About the Authors:
 
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Authors</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
 - [Jing Chen](https://www.linkedin.com/in/jingchen-ku/) 
 - [Jesse Ku](https://www.linkedin.com/in/jesse-ku-978693319/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/Jingandjesse.png" alt="Meet the Speakers"  />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
 
 
 

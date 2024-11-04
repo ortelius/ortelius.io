@@ -37,7 +37,24 @@ Follow the [Ortelius Installation Guide](https://docs.ortelius.io/guides/usergui
 ## Conclusion
 The integration of Ortelius with OSV.dev represents a forward-thinking approach to software development and security. By adopting Ortelius and OSV.dev, organizations can not only enhance the security and compliance of their software but also maintain the agility required in a competitive business environment. Start by evaluating your current security and compliance measures and consider a pilot project with Ortelius to see firsthand the benefits it can bring to your software supply chain management. Embrace the change towards a more secure and efficient software development lifecycle today. For more information on vulnerability management in complex, microservice-based environments, explore [Ortelius](https://docs.ortelius.io/guides/).
 
-## Learn More About the Authors:
 
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Meet the Authors</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+Learn More About:
 - [Jing Chen](https://www.linkedin.com/in/jingchen-ku/) 
 - [Jesse Ku](https://www.linkedin.com/in/jesse-ku-978693319/)
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="position:relative;left:-60%">
+<img src="/images/Jingandjesse.png" alt="Meet the Speakers"  />
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
