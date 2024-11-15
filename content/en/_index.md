@@ -153,7 +153,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 
 {{< blocks/section color=black >}}
-<h2 class="text-center">Holiday Gathering December 11th, 20024 </h2>
+<h2 class="text-center">Holiday Gathering December 11th, 2024 </h2>
 {{< blocks/feature_dual >}}
 
 
@@ -168,7 +168,7 @@ Why You Should Attend:
 - See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
 
 <strong>8:30-9:30 Beer and Donuts</strong><p>
-Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
+Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions, and Legends. 
 
 <strong>9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management </strong><p>
 Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. The team will then give a demo on how to integrate security tooling into your CI/CD pipeline using the Ortelius command line interface. It is time to start generating and consuming SBOM data as part of the DevOps pipeline. Ortelius makes it easy.  
