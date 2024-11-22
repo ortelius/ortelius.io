@@ -9,7 +9,7 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Join the Ortelius Holiday Gathering <p> December 11th, 20024 </h1>
+<h1 class="text-center">Join the Ortelius Holiday Gathering <p> Thursday, December 12th, 20024 </h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
@@ -32,7 +32,7 @@ menu:
 
 
 <div style="margin-top:10px;margin-left:1px">
-Join us on Wednesday, December 11th, 2024 for our annual holiday gathering.
+Join us on Thursday, December 12th, 2024 for our annual holiday gathering.
 
 Why You Should Attend:
 

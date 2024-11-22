@@ -153,13 +153,13 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 
 {{< blocks/section color=black >}}
-<h2 class="text-center">Holiday Gathering December 11th, 2024 </h2>
+<h2 class="text-center">Holiday Gathering December 12th, 2024 </h2>
 {{< blocks/feature_dual >}}
 
 
 
 <div style="margin-top:10px;margin-left:200px;">
-Join us on Wednesday, December 11th, 2024 for our annual celebration of the Ortelius Contributor Community.
+Join us on Thursday, December 12th, 2024 for our annual celebration of the Ortelius Contributor Community.
 
 Why You Should Attend:
 
