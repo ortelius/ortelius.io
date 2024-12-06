@@ -13,7 +13,7 @@ author: Tracy Ragan
 {{< figure src="/images/siftingdata.jpg" width="400px" height="400px" >}}
 
 
-Core to the effort of hardening your software development process is SBOM generation and [SBOM Consumption](https://www.deployhub.com/sbom-consumption/). Software Bill of Materials (SBOM) reports are a critical tool in understanding all of the parts of your software supply chain. Without an SBOM you have little understanding of the dependencies your software is consuming. An SBOM gives you a list of your dependencies, what license they use, provenance (where it came from), and version information. With this information you can derive CVEs with a more comprehensive understanding of the artifact. 
+Core to the effort of hardening your software development process is SBOM generation and [SBOM Consumption](https://www.deployhub.com/understanding-software-bill-of-materials-sboms/). Software Bill of Materials (SBOM) reports are a critical tool in understanding all of the parts of your software supply chain. Without an SBOM you have little understanding of the dependencies your software is consuming. An SBOM gives you a list of your dependencies, what license they use, provenance (where it came from), and version information. With this information you can derive CVEs with a more comprehensive understanding of the artifact. 
 
 An SBOM should be created for every 'build' of your component, that being a monolithic application or decoupled microservice. With the direct link between your artifact and SBOM, you have a much clearer picture of your supply chain, and the CVEs associated to specific releases. 
 
