@@ -15,11 +15,10 @@ author: Tracy Ragan
 
 The Ortelius open-source community will work with DeployHub to develop the open-source governance catalog to create an immutable SBOM audit trail that allows open-source developers to easily register their packages with SBOM information allowing organizations consuming open-source to easily access and act upon SBOM data, CVEs, and other usage information.
 
-"SBOMs are key to understanding the software supply chain; however, they are not well managed, can be easily manipulated, and have no clear audit trail" explains Steve Taylor, CTO, DeployHub, Inc. “The transactions captured by the XRP Ledger will include the creation of the component version NFT, the creation of the application-level SBOM version, and the consumption of a logical application SBOM version.”
+"[SBOMs](https://www.deployhub.com/understanding-software-bill-of-materials-sboms/) are key to understanding the software supply chain; however, they are not well managed, can be easily manipulated, and have no clear audit trail" explains Steve Taylor, CTO, DeployHub, Inc. “The transactions captured by the XRP Ledger will include the creation of the component version NFT, the creation of the application-level SBOM version, and the consumption of a logical application SBOM version.”
 
-“We are honored to have been awarded the prestigious XRPL Grant which will allow the Ortelius community to address the gaps in SBOM management and audit. Providing a central store of this critical information will allow all open-source projects to be more secure” stated Tracy Ragan, CEO, DeployHub.
+“We are honored to have been awarded the prestigious XRPL Grant which will allow the Ortelius community to address the gaps in [SBOM management](https://www.deployhub.com/sbom-management-and-sharing/) and audit. Providing a central store of this critical information will allow all open-source projects to be more secure” stated Tracy Ragan, CEO, DeployHub.
 
-For more information, read the full [DeployHub blog](https://www.deployhub.com/sbom-audit-trail-for-hardening-cybersecurity/)
 
 ## About DeployHub
 

@@ -17,7 +17,7 @@ type: contributor
 
 ## Control Open-Source Vulnerabilities
 
-Take control of your open-source software security with the Ortelius vulnerability evidence store. Ortelius ensures you maintain a secure and up-to-date inventory of all the open-source components within your software supply chain. It empowers you to make fast, informed decisions about open-source usage across your entire infrastructure, from code to cloud.
+Take control of your [open-source software security](https://www.deployhub.com/open-source-software-security/) with the Ortelius vulnerability evidence store. Ortelius ensures you maintain a secure and up-to-date inventory of all the open-source components within your software supply chain. It empowers you to make fast, informed decisions about open-source usage across your entire infrastructure, from code to cloud.
 
 Ortelius can quickly show you where an open-source package version is running across your infrastructure. A simple search on a package and version will provide you with a full inventory of where the package is running, and who is consuming it. This search provides teams a quick way to determine the impact of a CVE, and where it needs to be addressed. 
 </div>

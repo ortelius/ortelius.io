@@ -62,7 +62,7 @@ Follow the [Ortelius Installation Guide](https://docs.ortelius.io/guides/usergui
 
 ## Conclusion
 
-With the growing importance of adopting SBOMs for software transparency and security, Ortelius offers a method of consumption of the data for continuous vulnerability management. Ortelius streamlines the integration and management of SPDX and CycloneDX SBOMs, helping organizations in efficiently securing their software supply chain. For more information on optimizing SBOM management in complex, microservice-based environments, explore [Ortelius](https://docs.ortelius.io/guides/).
+With the growing importance of adopting SBOMs for software transparency and security, Ortelius offers a method of consumption of the data for continuous vulnerability management. Ortelius streamlines the integration and management of SPDX and CycloneDX SBOMs, helping organizations in efficiently securing their software supply chain. For more information on optimizing [SBOM management](https://www.deployhub.com/sbom-management-and-sharing/) SBOM management in complex, microservice-based environments, explore [Ortelius](https://docs.ortelius.io/guides/).
 
 ## References
 CycloneDX.org (2024) CycloneDX Use Cases. 2024. https://cyclonedx.org/use-cases/ [Accessed: 25 October 2024].
