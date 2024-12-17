@@ -55,7 +55,7 @@ Providing tips and tricks, how-to and getting started informational blogs is the
 
 Education on what SBOMs are, how Ortelius consumes them and why they are important. Suggested topics:
 
-- [What is an SBOM?](https://github.com/ortelius/outreach/issues/14)
+- [What is an SBOM?](https://www.deployhub.com/understanding-software-bill-of-materials-sboms/)
 - [What are SBOMs used for?](https://github.com/ortelius/outreach/issues/15)
 - [How Ortelius Tracks SBOMs for microservices and applications](https://github.com/ortelius/outreach/issues/16)
 

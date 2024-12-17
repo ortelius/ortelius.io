@@ -119,7 +119,7 @@ With Ortelius, you can easily answer the question, “where is Log4J running?”
 
 ## Sign-up and Get Started Managing Vulnerabilities
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 
