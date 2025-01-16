@@ -1,6 +1,6 @@
 ---
 title: Events and Resources
-description: Ortelius Events and Rescoures
+description: Ortelius Events and Resources
 summary: Join a Meeting or an Event, download logos and Zoom backgrounds
 menu:
   main:
@@ -9,17 +9,17 @@ menu:
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Join the Ortelius Holiday Gathering <p> Thursday, December 12th, 20024 </h1>
+<h1 class="text-center">CDCon and Open Source Summit - Denver June 23-25 </h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2024HolidayPartybanner-black.png" alt="Holiday Party" height="400px" width="589px" />
+<img src="/images/OSSummit2025.png" alt="Open Source Summit" height="150px" width="589px" />
 </div>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_goeVVZm5Q9KIkROQp574Qw) 
+[Register Today](https://events.linuxfoundation.org/open-source-summit-north-america/register/) 
 </div>
 
 
@@ -27,32 +27,37 @@ menu:
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Time to Celebrate Our Committers</h2>
+<h2 class="text-center">Let's Get Together in Denver for CDCon</h2>
 </div>
+
 
 
 <div style="margin-top:10px;margin-left:1px">
-Join us on Thursday, December 12th, 2024 for our annual holiday gathering.
 
-Why You Should Attend:
+It is time to meet in person.
 
-- Show your support for our dedicated Committers.
-- Learn how to gather SBOM data via the CI/CD Pipeline.
-- See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
+Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
+
+Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
+
+
+
 <br>
 
 
-
 <div style="text-align:left;width:100%;margin-top:20px">
-<h2>Agenda </h2>
+<h2>Attend</h2>
 
 </div>
 
-<strong>8:30-9:30 Beer and Donuts</strong><p>
-Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions and Legends. 
+Why you should attend:
 
-<strong>9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management </strong><p>
-Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. The team will then give a demo on how to integrate security tooling into your CI/CD pipeline using the Ortelius command line interface. It is time to start generating and consuming SBOM data as part of the DevOps pipeline. Ortelius makes it easy.  
+- A place for our contributors to meet face-to-face for problem-solving, discussions and collaboration
+- Share knowledge around latest trends in open source 
+- Meet the experts to learn how to navigate the complex open source environment
+- Learn how others have built their career around open-source development  
+
+[Submit a talk - Call for papers open until Feb. 18](https://events.linuxfoundation.org/open-source-summit-north-america/program/cfp/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -118,41 +123,6 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 
 
 {{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-<div class="col-center">
-<h2 class="col-center">Thank You CDF for a Great CDCon</h2>
-<br>
-
-<img src="/images/cdcon2024.png" alt="cdcon2024" height="168px" width="384px" />
-</div>
-
-Thank you to the CDFoundation for an amazing CDCon 2024. If you could not attend, no problem. You can now watch all sessions on-demand. Learn from the the Jenkins and Ortelius contributors, Continuous Delivery leaders, industry icons, practitioners, and open source developers how continuous delivery is evolving.
-
-[Watch On Demand](https://www.youtube.com/playlist?list=PLbzoR-pLrL6qHuD538QsuJUw3eRuCfvgU
-)
-
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div class="col-center">
-<br>
-
-<img src="/images/utkarsh.png" alt="Utkarsh Sharma"  height="200px" width="200px"/>
-</div>
-<br>
-
-A special congratulations to [Utkarsh Sharma](https://cd.foundation/blog/2023/12/13/utkarsh-sharma-achieves-gold-legend-status/) for receiving both the Ortelius MVP Award and the CDF Top Contributor Award. Thank you for your excellence Utkarsh. 
-
-cdCon is the annual event hosted by the Continuous Delivery Foundation that brings together technology teams, enterprise leadership, and open source communities to drive the future of software delivery. This year, cdCon was part of Open Source Summit North America, along with many other great events.
-
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 <h2>On-Demand</h2>

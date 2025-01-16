@@ -153,29 +153,22 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 
 {{< blocks/section color=black >}}
-<h2 class="text-center">Holiday Gathering December 12th, 2024 </h2>
+<h2 class="text-center">Attend CDCon June 23-25,2025 </h2>
 {{< blocks/feature_dual >}}
 
 
-
 <div style="margin-top:10px;margin-left:200px;">
-Join us on Thursday, December 12th, 2024 for our annual celebration of the Ortelius Contributor Community.
+
+Attend CDCon, held at Open Source Summit 2025 in the mile high city of Denver Colorado. 
 
 Why You Should Attend:
 
-- Show your support for our dedicated Committers.
-- Learn how to gather SBOM data via the CI/CD Pipeline.
-- See how Ortelius leverages SBOM data to expose newly reported vulnerabilities across your Software Supply Chain. 
+Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
 
-<strong>8:30-9:30 Beer and Donuts</strong><p>
-Celebrate the dedicated committers that make up the Ortelius Family. Awards will be given to top Ambassadors, Champions, and Legends. 
-
-<strong>9:45 - 11:30 Uncovering Code-Level Vulnerabilities: Strengthening Your CI/CD Pipeline for Continuous Vulnerability Management </strong><p>
-Take a tutorial that walks you through how to manage vulnerabilities in real-time with Ortelius, and see how Ortelius serves as a single dashboard for security reporting, including OpenSSF Scorecard metrics. The team will then give a demo on how to integrate security tooling into your CI/CD pipeline using the Ortelius command line interface. It is time to start generating and consuming SBOM data as part of the DevOps pipeline. Ortelius makes it easy.  
-
+Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
 <div style="font-size:1.5em">
 
-[Register](https://us02web.zoom.us/webinar/register/WN_goeVVZm5Q9KIkROQp574Qw) 
+[Register](https://events.linuxfoundation.org/open-source-summit-north-america/register/)
 </div>
 </div>
 
@@ -185,7 +178,7 @@ Take a tutorial that walks you through how to manage vulnerabilities in real-tim
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2024HolidayPartyBanner.png" alt="Holiday Party" height="400px" width="589px" />
+<img src="/images/OSSummit2025.png" alt="Holiday Party" height="150px" width="589px" />
 </div>
 
 

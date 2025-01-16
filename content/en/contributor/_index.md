@@ -61,7 +61,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 [Learn More](/blog/2021/04/19/ortelius-community-recognition-program/)
 
 <div>
-<img src="/images/ortelius-evil-lord.png" alt="Ortelius recognition program" height="300px" width="400px" />
+<img src="/images/ortelius-evil-lord.png" alt="Ortelius recognition program" height="200px" width="300px" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -90,7 +90,35 @@ Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/Steve
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary">}}
+
+
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+<div class="col-center">
+<h2 class="col-center">Our Gold Legend Contributors</h2>
+<br>
+
+<img src="/images/GoldLegends.png" alt="Utkarsh Sharma, Sacha Wharton, Arvind Singharpuria"  height="184px" width="644px"/>
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div class="col-center">
+<br>
+
+
+<br>
+</div>
+
+Congratulations to [Sacha Wharton](https://www.linkedin.com/in/sachawharton/) and [Arvind Singharpuria](https://www.linkedin.com/in/arvind-singharpuria-a88686202/) for joining [Utkarsh Sharma](https://www.linkedin.com/in/codewithutkarsh/) in receiving the highest award for contributing to Ortelius -Gold Legend. Sacha and Utkarsh are also recipients of the [Continuous Delivery Foundation's](https://cd.foundation) most valuable contributor award. 
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+{{< blocks/section color="white">}}
 {{< blocks/feature_dual >}}
 
 # Getting Started Resources
@@ -99,24 +127,14 @@ Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/Steve
 - [Sign-up and learn Ortelius](https://www.deployhub.com/register-for-team)
 - [Ortelius YouTube Channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw)
 
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
 # Learn About Open Source
 
 - [An Introduction to Open Source by Digital Ocean](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source)
 - [Git Tutorials by GitKraken.com](https://www.gitkraken.com/learn/git/tutorials?utm_campaign=Learn%20Git%20with%20GitKraken&utm_medium=email&_hsenc=p2ANqtz-83FGJVoZFPeSHnrckHa9YVvbdiBgW299Ch5DZ9AfBlOTQraeHvmiewbhJHIYHenTmFeaV4hMEJBf6qLnoPwbzCxHoLrg&_hsmi=99645055&utm_content=99643100&utm_source=hs_email&hsCtaTracking=edf933f3-dafa-487c-82c4-39ab452552ab%7C62f6dae8-481b-421e-9b19-41a129aaecbc)
 - [Diversity Training for Open Source Communities by the Linux Foundation](https://training.linuxfoundation.org/training/inclusive-open-source-community-orientation-lfc102/)
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
 
-# Technology Oversight Committee (TOC)
-
-- Michael Galloway – Senior Engineering Manager, Netflix
-- Tara Hernandez – Google, Sr. Engineering Manager, CDF TOC
-- Christopher William Palmer – End User, Unisys
-- Hank Hendrickson  – Open Source Community, BP
-- Phil Gibbs – Open Source Community, Red Flag Alert
-- Tim Kelton – Tech Lead Manager, Aurora
-- Doug Orr – ML Architect Dianomic
-- Bill Portelli – Former Collabnet CEO, CEO Quest, Board Advisor
-- Jeremy Davis – Chief Cloud Architect, RedHat
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
