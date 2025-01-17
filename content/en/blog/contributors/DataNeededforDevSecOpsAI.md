@@ -15,7 +15,7 @@ author: Tracy Ragan
 
 As IT teams strive to bolster software supply chains against hidden vulnerabilities in open-source and third-party components, the demand for smart, streamlined, and automated DevSecOps pipelines is soaring. As monolithic applications evolve into intricate, decoupled parts, navigating the security landscape becomes increasingly complex.
 
-To address these challenges, DevSecOps automation is stepping in to streamline software security tasks, sparing IT teams from drowning in manual work. The integration of 'applied' AI into DevOps heralds the dawn of next-generation DevSecOps pipelines, harnessing a wealth of data sources to refine processes, empower decision-making, and enhance overall efficiency.
+To address these challenges, DevSecOps automation is stepping in to streamline software security tasks, sparing IT teams from drowning in manual work. The integration of 'applied' AI into DevOps heralds the dawn of next-generation DevSecOps pipelines, harnessing a wealth of data sources to refine processes, empower decision-making, and perform [continuous vulnerability management](https://www.deployhub.com/), critical to weathering the code-level cybersecurity storm.
 
 At Ortelius, our focus lies in gathering and centralizing data from various DevSecOps processes to forge the path towards the next era of DevSecOps pipelines. Modern pipelines must effectively harness AI and automate risk assessment, package management, vulnerability management, and remediation.
 

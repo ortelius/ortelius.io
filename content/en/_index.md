@@ -34,7 +34,7 @@ Code-level vulnerabilities pose a significant risk in the intricate landscape of
 
 Many IT teams struggle to respond to threats due to the fragmented nature of decoupled, cloud-native architecture. [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report) shows a 156% increase in open-source package vulnerabilities, exceeding 512k, with 80% of them unaddressed for over a year. Ortelius streamlines the remediation process by showing where impacted open-sources packages are running across the infrastructure for continuous package remediation.
 
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  [DeployHub](https://www.deployhub.com).
+The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  DeployHub a [Continuous Vulnerability Management](https://www.deployhub.com) platform designed to expedite remediation patches. 
 
 With Ortelius, you can easily answer the question, “where is Log4J running?”
 

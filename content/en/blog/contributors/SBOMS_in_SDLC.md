@@ -10,7 +10,7 @@ author: Ankur Kumar
 
 # Introduction
 
-The software supply chain is a model for producing quality products with an integrated lifecycle of upstream and downstream dependencies. An SBOM is a key component of the software supply chain. SBOM adoption has increased exponentially considering legal, compliance, and security considerations. This article briefly introduces SBOM and describes its usage in the Software Delivery Life Cycle (SDLC).
+The software supply chain is a model for producing quality products with an integrated lifecycle of upstream and downstream dependencies. A Software Bill of Material (SBOM) is a key component of the software supply chain. SBOM adoption has increased exponentially considering legal, compliance, and security considerations. This article briefly introduces SBOM and describes its usage in the Software Delivery Life Cycle (SDLC).
 
 
 
