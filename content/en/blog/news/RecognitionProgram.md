@@ -12,12 +12,14 @@ author: Tracy Ragan
 
 ## Recognizing our Members for Their Hard Work
 
-Our community members work hard to solve the problem of microservice management. And being an open source project means there is little funding for swag. But we want to recognize our members who have contributed via technical efforts or outreach efforts. There are a few select individuals who do both.
+Our community members are dedicated to tackling the challenges of continuous vulnerability management. As an open-source project, we operate with limited funding for swag, but we deeply value the contributions of those who support our mission through technical efforts, outreach, or both.
 
-To recognize these outstanding individuals, we have created the Ortelius Recognition Program. Individuals who reach certain criteria will be provided an award badge. Everyone can participate regardless of your expertise level.  We have two main tracks to get involved with:
+To honor these exceptional individuals, we have established the Ortelius Recognition Program. Contributors who meet specific criteria will earn an award badge as a token of our appreciation. Participation is open to everyone, regardless of expertise level. There are two main tracks for involvement:
 
-- Champions: Focused on the technical aspects of open source involvement. Individuals who receive 'Champion' badges have achieved certain levels of expertise in coding, documentation, testing and design.
-- Ambassadors: Focused on outreach, adoption and education, this group of individuals work on training, special events and end user communication. Individuals who receive these badges have achieved recognition for their commitment to building powerful content and community engagement.
+Champions: This track recognizes contributors who excel in the technical aspects of open-source involvement. Champions demonstrate expertise in areas such as coding, documentation, testing, and design, earning badges that reflect their achievements.
+
+Ambassadors: This track highlights individuals focused on outreach, adoption, and education. Ambassadors are instrumental in training, organizing special events, and fostering communication with end-users. Their badges signify a commitment to creating impactful content and driving community engagement.
+Through this program, we celebrate the dedication and hard work of our community members who help make Ortelius a success.
 
 Some community members may participate in both Champion and Ambassador activities. We call these super stars "Legends."
 

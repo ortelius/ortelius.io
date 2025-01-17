@@ -20,7 +20,7 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 - We want Members to learn and understand cloud-native development and learn to overcome the challenges through mentorship and a diverse contributor base.
 - We want Members to learn how to harden their cybersecurity through the consumption of SBOM and CVE data.
 - We want our members to develop their careers, skills and gain community recognition for their work and expertise.
-- We want our members to have the opportunity to share and reuse open source microservices to further the adoption of a cloud native development.
+- We want our members to improve their knowledge around managing code-level vulnerabilities through patch remediation.
 - We want members to learn how to contribute to an open source community and become part of the broader conversation around cloud native architecture.
 
 {{< /blocks/feature_dual >}}
