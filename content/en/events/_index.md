@@ -6,9 +6,44 @@ menu:
   main:
    weight: 20
 ---
-{{< blocks/section color="white" >}}
+{{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
+<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - March 5, 2025 11ET</h1>
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<p></p>
+
+[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Crafting Your Career Narrative:</h2>
+<h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
+
+In today’s competitive job market, your personal brand and career story can make all the difference in standing out to recruiters and decision-makers. Join us for an insightful webinar with Darrin Straff, an experienced headhunter who will share strategies for crafting a compelling career narrative. Learn how to highlight your unique skills, showcase your achievements, and position yourself as the ideal candidate. Discover the secrets to telling your story in a way that resonates with employers and sets you apart in your industry. Whether you’re actively job-seeking or preparing for future opportunities, this session will equip you with the insights to build a personal brand that gets attention.
+
+About the Presenter:
+<br> 
+Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="white" >}}
+{{< blocks/feature_dual >}}
 <h1 class="text-center">CDCon and Open Source Summit - Denver June 23-25 </h1>
 <hr>
 
