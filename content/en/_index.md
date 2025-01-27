@@ -54,11 +54,11 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 <p></p>
 </div>
 
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Locate and Remediate Vulnerabilities" url="/microservicemapping/" %}}
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Identify and Neutralize Threats" url="/microservicemapping/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Aggregate SBOMs" url="/catalog/" %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Strengthen Your OS Supply Chain" url="/catalog/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Continuously Track Changes" url="/versioning/" %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Maintain Persistent Surveillance of Changes" url="/versioning/" %}}
 {{% /blocks/feature %}}
 
 
@@ -68,7 +68,7 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 {{< blocks/section color=black >}}
 <div class="col-12">
-<h1 class="text-center">Ortelius Integrations</h1>
+<h1 class="text-center">Ortelius Ecosystem</h1>
 
 </div>
 
@@ -117,7 +117,7 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 <div style="margin-top:80px;margin-left:100px">
 
-## Sign-up and Get Started Managing Vulnerabilities
+## Sign-up and Get Started Patching Vulnerabilities
 
 From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 

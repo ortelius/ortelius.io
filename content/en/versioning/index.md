@@ -1,6 +1,6 @@
 ---
-title: Track the Changes to Components and Applications 
-description: Track the Numerous Changes Moving Through the CI/CD Pipeline
+title: Track the Numerous Changes Moving Through the CI/CD Pipeline
+description: Maintain Persistent Surveillance of Changes
 summary: Assess the Impact of Changes and Track them Effectively
 type: contributor
 ---
@@ -8,7 +8,7 @@ type: contributor
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">Continuously Track Changes in Your Software Supply Chain</h1>
+<h1 class="text-center">Maintain Persistent Surveillance of Changes</h1>
 <hr>
 </div>
 
@@ -16,11 +16,12 @@ type: contributor
 
 <div style="margin-top:80px;margin-left:80px">
 
-### Know What Changed and What is Impacted
+### Track the Impact of Changes with Precision
 
-Ortelius provides the necessary tools to track the numerous changes moving through the CI/CD pipeline in a decoupled architecture. It offers critical data to understand why and by whom an artifact (such as a container, API, or microservice) was updated, and who the update impacts. By integrating DevSecOps data directly into the CI/CD pipeline, Ortelius helps assess the impact of changes and track them effectively.
 
-Each change introduces potential risks from new open-source packages, which may come with vulnerabilities. With hundreds of thousands of vulnerabilities discovered annually, identifying critical ones is vital. Ortelius generates comparison reports and tracks the "blast radius" of every shared component, including its open-source package details. It also aggregates this data at the logical application level, providing insights for both individual components and collections of components delivered to end users.
+Ortelius equips teams with the tactical tools needed to track and monitor the flow of changes through the CI/CD pipeline in a decoupled architecture. It delivers mission-critical intel on why and by whom an artifact—such as a container, API, or microservice—was updated and identifies the operational units impacted by the change. By embedding DevSecOps data directly into the CI/CD pipeline, Ortelius ensures that the impact of changes is assessed and tracked with precision.
+
+Each change poses potential threats from new open-source packages, which may carry vulnerabilities. With hundreds of thousands of vulnerabilities discovered annually, prioritizing and neutralizing critical ones is essential. Ortelius generates comparative reports and calculates the "blast radius" of every shared component, detailing the associated open-source package risks. It consolidates this intelligence at the logical application level, providing strategic insights into both individual components and integrated systems deployed to end users.
 
 
 </div>
@@ -59,11 +60,11 @@ Each change introduces potential risks from new open-source packages, which may 
 <div style="margin-top:80px;margin-left:190px">
 
 
-## Tracking Components to Logical Application Versions
+## Tracking Components Across All Attack Surfaces
 
-The Ortelius vulnerability evidence store tracks component versions, which collectively make up application versions. Each time a component is updated, a new logical version of all consuming applications is generated, along with updated SBOMs and CVE analyses. This version tracking is also linked to the environments where the changes are deployed, providing a complete inventory of components across all environments.
+The Ortelius vulnerability intelligence repository tracks component versions that collectively form application versions. Each time a component is updated, a new logical version of all consuming applications is generated, accompanied by updated SBOMs and CVE analyses. These version updates are directly tied to the deployment environments, providing a comprehensive inventory of components across all attack surfaces. 
 
-Since components include versions of open-source packages based on their SBOMs, Ortelius can show exactly where each open-source package is installed. This visibility allows CISO teams to quickly assess risks and respond to supply chain security events. 
+Because components include versions of open-source packages derived from their SBOMs, Ortelius delivers pinpoint accuracy in identifying where each open-source package is deployed. This visibility equips CISO teams with the actionable intelligence needed to rapidly assess risks and respond decisively to supply chain security threats.
 
 </div>
 
@@ -93,9 +94,9 @@ Since components include versions of open-source packages based on their SBOMs, 
 
 <div style="margin-top:80px;margin-left:100px">
 
-## Conclusion and Get Started
+## Get Started
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+Ortelius serves as a command hub for tracking changes, managing vulnerabilities, and maintaining security across distributed architectures. It provides precise version tracking for components and applications, linking updates to deployment environments and generating updated SBOMs and CVE analyses. By offering detailed visibility into where open-source packages are deployed and assessing their risks, Ortelius enables teams to quickly identify and neutralize supply chain threats, ensuring a resilient and secure operational landscape.
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 

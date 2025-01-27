@@ -1,6 +1,6 @@
 ---
-title: Share and Aggregate SBOMs in Decoupled Architecture
-description: Consume and Use SBOM Data
+title: Strengthen Your OS Supply Chain
+description: Battle-ready Your Supply Chain
 summary: Use the Security Evidence You Already Collect
 type: contributor
 ---
@@ -11,7 +11,7 @@ type: contributor
 </div>
 
 <div class="col-12">
-<h1 class="text-center">Create Application Level SBOMS and View Real-time Vulnerabilities</h1>
+<h1 class="text-center">Battle-ready Your Supply Chain</h1>
 <hr>
 </div>
 {{< blocks/feature_dual >}} 
@@ -29,13 +29,16 @@ type: contributor
 
 <div style="margin-top:80px;margin-left:10px">
 
-## Logical Application SBOMs
+## Full-spectrum OS Package Visibility 
 
-Ortelius aggregates Software Bill of Materials (SBOM) data across decoupled architectures to ensure comprehensive visibility, security, and compliance in modern software ecosystems. In decoupled systems, where services, applications, and components operate independently, each part may have its own dependencies, vulnerabilities, and licensing requirements. 
+The fragmented structure of decoupled cloud-native architectures creates operational blind spots, often weakening IT teams' ability to counter threats swiftly and decisively. Unlike monolithic applications, cloud-native systems may generate hundreds of Software Bill of Materials (SBOM) reports scattered across numerous source code repositories, complicating threat detection and response.
 
-Aggregating SBOM data allows for a unified view of all software components and their supply chains. Ortleius helps organizations identify potential risks, manage vulnerabilities proactively, and maintain regulatory compliance. The Ortelius centralized oversight is essential for enhancing security posture, reducing blind spots, and ensuring that the entire architecture remains resilient and up-to-date despite its distributed nature.
+Ortelius acts as a force multiplier, aggregating SBOM data across these decentralized architectures to deliver full-spectrum visibility, security, and compliance in modern software operations. In distributed systems where services, applications, and components function independently, each element brings its own dependencies, vulnerabilities, and licensing challenges.
 
-The Ortelius aggregated SBOM is critical for meeting [Executive Order 14028 - Improving the Nation's Cybersecurity](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028).
+By consolidating SBOM data, Ortelius provides a unified operational picture of all software components and their supply chains. It empowers organizations to detect risks early, neutralize vulnerabilities proactively, and maintain mission-critical regulatory compliance. This centralized command and control capability enhances your security posture, eliminates blind spots, and ensures your entire architecture remains fortified and mission-ready, even in the face of distributed complexities.
+
+The Ortelius aggregated SBOM is a vital asset for achieving compliance with [Executive Order 14028 - Improving the Nation's Cybersecurity](https://www.gsa.gov/technology/it-contract-vehicles-and-purchasing-programs/information-technology-category/it-security/executive-order-14028).
+
 
 
 <div style="font-size:1.6em;text-align:center;margin-top:10px;">
@@ -57,11 +60,11 @@ The Ortelius aggregated SBOM is critical for meeting [Executive Order 14028 - Im
 
 <div style="margin-top:80px;margin-left:10px">
 
-## Continuous Vulnerability Updates
+## A Battle-ready Software Supply Chain
 
-Using the stored SBOM data, Ortelius continuously scans for new vulnerabilities found long after the container was created. Continuous vulnerability scanning is essential because software systems are constantly evolving, and new security threats emerge regularly. As developers release updates, introduce new code, or integrate third-party components, new vulnerabilities may be inadvertently introduced.
+Leveraging its stored SBOM data, Ortelius conducts ongoing surveillance for new vulnerabilities that may surface long after a container has been deployed. This continuous vulnerability scanning is a critical defense measure, as software systems are dynamic and constantly evolving, with new threats emerging regularly. As developers roll out updates, introduce fresh code, or incorporate third-party components, unforeseen vulnerabilities can infiltrate the system.
 
-By scanning for vulnerabilities continuously, Ortelius helps organizations detect potential weaknesses as soon as they arise, enabling faster remediation and reducing the window of opportunity for cyberattacks. Continuous scanning ensures that security measures remain up-to-date, minimizing the risk of breaches and ensuring compliance with security standards in an ever-changing threat landscape.
+By maintaining persistent scanning operations of OSV.dev, Ortelius enables organizations to detect potential weaknesses immediately upon discovery, allowing for rapid countermeasures and minimizing the hacker’s window of opportunity. Continuous scanning for new vulnerabilities ensures your defenses remain current, fortifying against breaches and maintaining compliance with security protocols in an ever-shifting threat environment. This proactive approach secures your operational landscape, keeping your software supply chain resilient and battle-ready.
 
 </div>
 
@@ -97,9 +100,9 @@ By scanning for vulnerabilities continuously, Ortelius helps organizations detec
 
 <div style="margin-top:80px;margin-left:10px">
 
-## Conclusion and Get Started
+## Get Started
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+Ortelius serves as a centralized command center, delivering full-spectrum visibility and control over open-source software and supply chain security. By aggregating SBOM data and enabling continuous scanning for vulnerabilities, it empowers organizations to assess risks, respond proactively, and maintain resilience across dynamic, distributed architectures. Start securing your software supply chain today with Ortelius' free SaaS version and experience its capabilities firsthand.
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 

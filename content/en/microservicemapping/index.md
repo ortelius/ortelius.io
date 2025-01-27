@@ -1,13 +1,13 @@
 ---
-title: Locate Open-Source Packages
-description: Find Open-Source Package Versions for Quick CVE Response
+title: Control Threats in Your Supply Chain
+description: Identify and Neutralize Threats
 summary: Ortelius Maps CVEs to Endpoints
 type: contributor
 ---
 
 {{< blocks/section color=primary >}}
 <div class="col-12">
-<h1 class="text-center">Locate and Remediate Open-Source Packages</h1>
+<h1 class="text-center">Identify and Neutralize Threats</h1>
 <hr>
 </div>
 
@@ -15,11 +15,13 @@ type: contributor
 
 <div style="margin-top:80px;margin-left:10px">
 
-## Control Open-Source Vulnerabilities
+## Control Threats Across Your Supply Chain
 
-Take control of your [open-source software security](https://www.deployhub.com/open-source-software-security/) with the Ortelius vulnerability evidence store. Ortelius ensures you maintain a secure and up-to-date inventory of all the open-source components within your software supply chain. It empowers you to make fast, informed decisions about open-source usage across your entire infrastructure, from code to cloud.
+Take command of potential threats emerging from your [open-source software security](https://www.deployhub.com/open-source-software-security/) gaps with Ortelius. Ortelius guarantees you maintain an ironclad, up-to-date inventory of all open-source components within your software supply chain, enabling rapid, tactical decisions regarding open-source deployment across your entire operational theater, from code to cloud.
 
-Ortelius can quickly show you where an open-source package version is running across your infrastructure. A simple search on a package and version will provide you with a full inventory of where the package is running, and who is consuming it. This search provides teams a quick way to determine the impact of a CVE, and where it needs to be addressed. 
+Ortelius delivers swift visibility on the deployment of open-source package versions across your infrastructure. A quick search on any package and version reveals a comprehensive inventory of its presence and usage.
+This capability provides your teams with the critical intel required to evaluate the operational impact of CVEs and swiftly deploy resources to neutralize vulnerabilities, pinpointing exactly where CVE patches are urgently needed.
+
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
@@ -56,18 +58,19 @@ Ortelius can quickly show you where an open-source package version is running ac
 
 ## Evaluate OS Package OpenSSF Scorecard
 
-OpenSSF Scorecard is a security tool developed by the Open Source Security Foundation (OpenSSF) designed to automatically assess the security posture of open-source projects. By providing a set of automated checks to evaluate how well a project follows security best practices, it helps developers and organizations understand the security risks associated with the open-source software they rely on.
+[OpenSSF Scorecard](https://scorecard.dev/) is a tactical security tool developed by the [Open Source Security Foundation](https://www.openssf.org) (OpenSSF) to conduct automatic assessments of the security posture of open-source projects. By executing a series of automated checks, it evaluates how closely a project adheres to security best practices, empowering developers and organizations to understand and mitigate the security risks tied to the open-source software in their arsenal.
 
-The Scorecard evaluates various aspects of a project, such as:
+The Scorecard evaluates critical mission areas, such as:
 
-- Code review practices: Ensures changes are reviewed before being merged.
-- Branch protection: Verifies that protected branches are used.
-- Dependency management: Assesses how well the project manages and updates dependencies.
-- Security policy: Checks whether the project has a defined security policy.
-- Vulnerability reporting: Looks for processes in place for reporting and addressing security vulnerabilities.
-- Each project receives a score, allowing users to compare the security health of different open-source projects. This tool is especially useful for organizations looking to manage the risks associated with open-source software in their supply chains. 
+- Code review practices: Ensures all code changes undergo thorough review before integration.
+- Branch protection: Confirms that critical branches are safeguarded.
+- Dependency management: Assesses how effectively the project manages and updates external dependencies.
+- Security policy: Verifies the presence of a defined and actionable security policy.
+- Vulnerability reporting: Ensures processes are in place for promptly reporting and addressing security vulnerabilities.
 
-Ortelius integrates with OpenSSF Scorecard giving you a centralized view of the results based on each individual component in your software supply chain. 
+Each project is assigned a security score, allowing for direct comparison of the security readiness of various open-source projects. This tool is essential for organizations aiming to maintain operational security and mitigate risks across their open-source software supply chain.
+
+Ortelius integrates seamlessly with OpenSSF Scorecard, providing a centralized command view of security assessments for every component within your software supply chain.
 
 </div>
 
@@ -86,7 +89,7 @@ Ortelius integrates with OpenSSF Scorecard giving you a centralized view of the 
 
 ## Centralized Application Security Posture Management
 
-Ortelius seamlessly integrates with popular security tools used in open-source projects, such as Sonatype and Veracode, consolidating results into a unified dashboard, giving teams a clear, comprehensive view of the security status of Components based on all logical Application versions.
+Ortelius operates in lockstep with leading security tools used in open-source projects, such as Sonatype and Veracode, centralizing results into a unified command dashboard. This integration delivers teams a clear, consolidated overview of the security status of components, reflecting the security posture across all relevant application versions within your operational domain.
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
@@ -124,9 +127,9 @@ Ortelius seamlessly integrates with popular security tools used in open-source p
 
 <div style="margin-top:80px;margin-left:100px">
 
-## Conclusion and Get Started Managing Vulnerabilities
+## Get Started Patching Vulnerabilities
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and Application Security Posture Management data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+From pinpointing the deployment of open-source packages to integrating OpenSSF Scorecard and Application Security Posture Management data, Ortelius functions as a centralized command hub. It empowers teams to manage, assess, and patch vulnerabilities while providing a comprehensive understanding of the risks associated with consuming open-source packages across your entire infrastructure, from code to cloud.
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 
