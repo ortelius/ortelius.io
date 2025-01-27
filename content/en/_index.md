@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">A Central Vulnerability Evidence Store for DevSecOps</h1>
+<h1 class="text-left">Open-source Vulnerability Patch Management</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -15,8 +15,8 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< /blocks/section >}}
 
 {{< blocks/section color=black >}}
-<h1 class="text-center">Open-Source Continuous Vulnerability Management</h1>
-
+<h1 class="text-center">Defend Your Software Against Code-Level Threats</h1>
+<h3 class="text-center">Patch Vulnerabilities Before They Attack</h3>
 
 {{< blocks/feature_dual >}}
 
@@ -30,13 +30,13 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="width:100%;margin-top:100px;max-width:500px">
 
-Code-level vulnerabilities pose a significant risk in the intricate landscape of cloud-native environments. Ortelius provides end-to-end monitoring, reporting, and faster remediation of security issues throughout the software supply chain. With Ortelius, organizations can swiftly address vulnerabilities in open-source packages, reducing the risk of costly delays and potential security incidents.
+Code-level vulnerabilities pose a serious threat in the dynamic and interconnected world of cloud-native environments. Ortelius delivers robust defense with end-to-end monitoring, detailed reporting, and rapid elimination of emerging vulnerabilities across your entire attack surface—from development to production. With Ortelius, you can swiftly patch vulnerabilities as they arise, reducing the risk of costly delays, data breaches, and operational disruptions.
 
-Many IT teams struggle to respond to threats due to the fragmented nature of decoupled, cloud-native architecture. [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report) shows a 156% increase in open-source package vulnerabilities, exceeding 512k, with 80% of them unaddressed for over a year. Ortelius streamlines the remediation process by showing where impacted open-sources packages are running across the infrastructure for continuous package remediation.
+The fragmented nature of decoupled cloud-native architectures often hampers IT teams’ ability to respond effectively to threats. According to [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report), open-source package vulnerabilities have surged by 156%, surpassing 512,000, with 80% remaining unaddressed for over a year. Ortelius eliminates guesswork by pinpointing exactly where affected open-source packages are deployed across the infrastructure, enabling proactive and continuous package remediation.
 
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  DeployHub a [Continuous Vulnerability Management](https://www.deployhub.com) platform designed to expedite remediation patches. 
+With Ortelius, you can confidently answer the critical question, “Where is Log4J running?” and stay one step ahead of evolving threats.
 
-With Ortelius, you can easily answer the question, “where is Log4J running?”
+The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  DeployHub a [Continuous Vulnerability Management](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise. 
 
 
 </div>
@@ -152,8 +152,64 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=black >}}
-<h2 class="text-center">Attend CDCon June 23-25,2025 </h2>
+{{< blocks/section color="primary" >}}
+
+<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - March 5, 2025 11ET</h1>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<p></p>
+
+[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Crafting Your Career Narrative:</h2>
+<h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
+
+In today’s competitive job market, your personal brand and career story can make all the difference in standing out to recruiters and decision-makers. Join us for an insightful webinar with Darrin Straff, an experienced headhunter who will share strategies for crafting a compelling career narrative. Learn how to highlight your unique skills, showcase your achievements, and position yourself as the ideal candidate. Discover the secrets to telling your story in a way that resonates with employers and sets you apart in your industry. Whether you’re actively job-seeking or preparing for future opportunities, this session will equip you with the insights to build a personal brand that gets attention.
+
+About the Presenter:
+<br> 
+Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+{{< blocks/section color= "primary" >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h1 class="text-center">Attend CDCon June 23-25,2025 </h2>
+<hr>
+</div>
+
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/OSSummit2025.png" alt="Holiday Party" height="150px" width="589px" />
+</div>
+
+{{< /blocks/feature_dual >}}
+
+
 {{< blocks/feature_dual >}}
 
 
@@ -173,17 +229,7 @@ Open Source Summit is a conference umbrella, composed of a collection of events 
 </div>
 
 {{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
 
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/OSSummit2025.png" alt="Holiday Party" height="150px" width="589px" />
-</div>
-
-
-
-{{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 
