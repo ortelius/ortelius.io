@@ -166,7 +166,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
 <p></p>
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -187,8 +187,56 @@ About the Presenter:
 <br> 
 Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
 
+<div style="font-size:1.5em">
+
+[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+</div>
+
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+
+{{< blocks/section color="primary" >}}
+
+<h1 class="text-center">SecureChainCon, May 16, 2025</h1>
+
+<hr>
+
+{{< blocks/feature_dual >}}
+
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/CallforPapersBanner-2025.png" alt="SecureChainCon" height="474px" width="737px" />
+<p></p>
+
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Level Up Your Security Skills</h2>
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
+Get ready for a half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
+From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
+
+<div style="font-size:1.5em">
+
+[More Info](https://ortelius.io/events/) 
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
 
 
 

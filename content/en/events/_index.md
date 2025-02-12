@@ -42,7 +42,68 @@ Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight
 {{< /blocks/section >}}
 
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="White" >}}
+{{< blocks/feature_dual >}}
+
+<h1 class="text-center">SecureChainCon, May 16th, 2025</h1>
+<h2 class="text-center">Call for Speakers Open Until April 1st</h2> 
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/CallforPapersBanner-2025.png" alt="SecureChainCon" height="474px" width="737px" />
+<p></p>
+
+Submit via Sessionize
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Level Up Your Security Skills</h2>
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
+
+Get ready for a half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
+
+From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
+
+Join us on May 16th for this dynamic online knowledge exchange and take your DevSecOps skills to the next level!
+
+
+<strong>Who should attend:</strong>
+- DevOps Engineers
+- CISO
+- Security Engineers
+- Platform Engineers
+- SREs
+
+<strong>Key Takeaways/Why attend this one:</strong>
+- Security in the DevOps Pipeline
+Discover the critical role of integrating security tooling within the DevOps pipeline to proactively identify and remediate vulnerabilities from code to cloud.
+
+- Vulnerability Management
+Master strategies for controlling vulnerabilities, including SAST, DAST, SBOMs, and continuous vulnerability scanning. Learn how to automate compliance checks and policy enforcement to enhance efficiency and consistency.
+
+- Culture of Collaboration
+Understand the importance of fostering a culture of shared responsibility between development, operations, and security teams to successfully implement DevSecOps best practices.
+
+- Threat Intelligence & Risk Management
+Explore how to leverage threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats before they escalate.
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+
+
+{{< blocks/section color="Primary" >}}
 {{< blocks/feature_dual >}}
 <h1 class="text-center">CDCon and Open Source Summit - Denver June 23-25 </h1>
 <hr>
@@ -208,7 +269,7 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 {{< /blocks/section >}}
 
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 <div class="col-12">
 <h2>Zoom Background Images</h2>
 <hr>
