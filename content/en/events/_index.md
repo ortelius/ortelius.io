@@ -17,9 +17,11 @@ menu:
 <img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
 <p></p>
 
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
 [Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
 </div>
-
+</div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
@@ -54,7 +56,14 @@ Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight
 <img src="/images/CallforPapersBanner-2025.png" alt="SecureChainCon" height="474px" width="737px" />
 <p></p>
 
-Submit via Sessionize
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Submit a Talk Via Sessionize](https://sessionize.com/securechaincon-2025)
+
+[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
+
+
+</div>
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -152,8 +161,6 @@ Why you should attend:
 - Share knowledge around latest trends in open source 
 - Meet the experts to learn how to navigate the complex open source environment
 - Learn how others have built their career around open-source development  
-
-[Submit a talk - Call for papers open until Feb. 18](https://events.linuxfoundation.org/open-source-summit-north-america/program/cfp/)
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}

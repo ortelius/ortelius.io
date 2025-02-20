@@ -228,7 +228,12 @@ Welcome to SecureChainCon, the premier online micro-conference for DevOps and Se
 Get ready for a half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
 From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
 
-<div style="font-size:1.5em">
+
+<div style="font-size:1.5em;text-align:center;margin-top:10px">
+
+[Submit a Talk Via Sessionize](https://sessionize.com/securechaincon-2025)
+
+[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
 
 [More Info](https://ortelius.io/events/) 
 </div>
