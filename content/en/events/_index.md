@@ -9,17 +9,17 @@ menu:
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - March 5, 2025 11ET</h1>
+<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - View On Demand</h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<img src="/images/jobseekers-episode1-ondemand.png" alt="Job Seeker Webinar" height="474px" width="737px" />
 <p></p>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+[View Now](https://youtu.be/vx2pp8p2SJ4?si=HT7LyPNvMMYejL0u) 
 </div>
 </div>
 {{< /blocks/feature_dual >}}
@@ -27,7 +27,7 @@ menu:
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <h2 class="text-center">Crafting Your Career Narrative:</h2>
-<h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
+<h2 class="text-center">Building a Personal Brand That Gets Noticed</h2>
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
@@ -119,7 +119,7 @@ Explore how to leverage threat intelligence and risk management frameworks to pr
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/OSSummit2025.png" alt="Open Source Summit" height="150px" width="589px" />
+<img src="/images/cdcon2025.png" alt="Open Source Summit" height="400px" width="500px" />
 </div>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">

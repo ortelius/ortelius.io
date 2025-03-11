@@ -154,7 +154,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< blocks/section color="primary" >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - March 5, 2025 11ET</h1>
+<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - Now Available On Demand</h1>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -163,7 +163,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/jobseekers-banner.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<img src="/images/jobseekers-episode1-ondemand.png" alt="Job Seeker Webinar" height="474px" width="737px" />
 <p></p>
 
 
@@ -189,7 +189,7 @@ Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight
 
 <div style="font-size:1.5em">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_INskpjMiSQSgpWiU1howNg) 
+[View Today](https://youtu.be/vx2pp8p2SJ4?si=HT7LyPNvMMYejL0u) 
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -257,7 +257,7 @@ From secure coding practices and container security to supply chain management a
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/OSSummit2025.png" alt="Holiday Party" height="150px" width="589px" />
+<img src="/images/cdcon2025.png" alt="open source summit" height="400px" width="500x" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -266,7 +266,14 @@ From secure coding practices and container security to supply chain management a
 {{< blocks/feature_dual >}}
 
 
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Join Open Source Developers in Denver</h2>
+</div>
+
 <div style="margin-top:10px;margin-left:200px;">
+
 
 Attend CDCon, held at Open Source Summit 2025 in the mile high city of Denver Colorado. 
 
