@@ -151,10 +151,56 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< /blocks/section >}}
 
+{{< blocks/section color="primary" >}}
+
+<h1 class="text-center">Job Seekers Webinar Series - Episode 2 April 22nd, 11AM ET</h1>
+<hr>
+{{< blocks/feature_dual >}}
+
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<img src="/images/jobseekers-april2025.png" alt="JobSeekers Webinar" height="379px" width="589px" />
+<p></p>
+
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q) 
+</div>
+
+</div>
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Secrets Unveiled </h2>
+<h2 class="text-center">How Employers Find (and Hire) Top Talent</h2>
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+A panel discussion with [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffi Gresh](https://www.linkedin.com/in/buffig/)
+
+This panel discussion brings together two experienced technical recruiters who will share insights into how they leverage LinkedIn to identify and connect with top talent. They will reveal the strategies they use to search for candidates, what makes a profile stand out, and the common red flags they encounter.
+
+For job seekers, the panelists will provide practical tips on networking effectively, the importance of LinkedIn, and applying for jobs in a way that captures recruiters' attention. They will also discuss the do’s and don’ts of job applications, including how to navigate applicant tracking systems (ATS) and tailor applications for maximum visibility.
+
+This interactive session will provide attendees with actionable advice to enhance their job search or recruitment process, bridging the gap between hiring managers and candidates in the digital age.
+
+About the Presenters:
+<br> 
+Erin Lovern is CEO and Founder of Grove Talent Group. Erin has extensive experience leading exponential growth within technology companies, both pre and post IPO. She brings a passion for helping organizations leverage talent acquisition as a competitive advantage by using a data-driven approach to hiring, eliminating biases through the development of core competencies and success measures to build the strongest, most inclusive teams possible.
+
+Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is a DevOps Leader, speaker working with hyper-growth companies on Business Value Modeling, Enablement, Thought Leadership, Business Development and Product GTM. Buffi has an MS Degree in Computer Science - Lehigh University / BS Physics & Mathematics / MSFT Certification / Cloud Certification
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
 
 {{< blocks/section color="primary" >}}
 
-<h1 class="text-center">Job Seekers Webinar Series </h1>
+<h1 class="text-center">Job Seekers Webinar Series - Episode 1 View Now</h1>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -176,7 +222,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Episode 1: Crafting Your Career Narrative:</h2>
+<h2 class="text-center">Crafting Your Career Narrative:</h2>
 <h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
 </div>
 
