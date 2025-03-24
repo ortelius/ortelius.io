@@ -9,24 +9,23 @@ menu:
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - View On Demand</h1>
+<h1 class="text-center">Job Seekers Webinar Series</h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/jobseekers-episode1-ondemand.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<div style="width:100%">
+{{< youtube vx2pp8p2SJ4 >}}
+</div>
+<h3 class="text-center" >Episode 1:March 4, 2025</h3>
 <p></p>
 
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Now](https://youtu.be/vx2pp8p2SJ4?si=HT7LyPNvMMYejL0u) 
-</div>
 </div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Crafting Your Career Narrative:</h2>
+<h2 class="text-center">Episode 1: Crafting Your Career Narrative:</h2>
 <h2 class="text-center">Building a Personal Brand That Gets Noticed</h2>
 </div>
 

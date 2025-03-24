@@ -154,7 +154,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< blocks/section color="primary" >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - Episode 1 - Now Available On Demand</h1>
+<h1 class="text-center">Job Seekers Webinar Series </h1>
 <hr>
 
 {{< blocks/feature_dual >}}
@@ -163,7 +163,10 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/jobseekers-episode1-ondemand.png" alt="Job Seeker Webinar" height="474px" width="737px" />
+<div style="width:100%">
+{{< youtube vx2pp8p2SJ4 >}}
+</div>
+<h3 class="text-center" >Episode 1</h3>
 <p></p>
 
 
@@ -173,7 +176,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Crafting Your Career Narrative:</h2>
+<h2 class="text-center">Episode 1: Crafting Your Career Narrative:</h2>
 <h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
 </div>
 
@@ -186,11 +189,6 @@ In today’s competitive job market, your personal brand and career story can ma
 About the Presenter:
 <br> 
 Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
-
-<div style="font-size:1.5em">
-
-[View Today](https://youtu.be/vx2pp8p2SJ4?si=HT7LyPNvMMYejL0u) 
-</div>
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
