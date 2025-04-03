@@ -104,11 +104,11 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 {{< blocks/feature_dual >}}
 
-### Beer and Donuts 
+### Agenda
 
 All times in Mountain Time
 
-- 8:30 Recognition Awards presented by Steve Taylor
+- 8:30 Beer and Donuts - Recognition Awards presented by Steve Taylor
 - 9:00 - 9:30  Keynote with Tracy Bannon
 - 9:30 - 10:00 Keynote with John Willis
 - Break
