@@ -151,6 +151,62 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< /blocks/section >}}
 
+
+{{< blocks/section color="primary" >}}
+
+<h1 class="text-center">SecureChainCon, May 16, 2025</h1>
+
+<hr>
+
+{{< blocks/feature_dual >}}
+
+
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="474px" width="737px" />
+<p></p>
+
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Level Up Your Security Skills</h2>
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
+Get ready for a half-day of engaging sessions and invaluable learning designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
+
+KeyNotes: 
+- [Tracy Bannon, Mitre](https://www.linkedin.com/in/tracylbannon/) "#NoHobbyists – What’s Really Needed to Shift CyberSecurity?"
+
+Cybersecurity in software development is often treated as an afterthought, left to developers who must self-educate and experiment in their spare time. The #NoHobbyists movement challenges this status quo, advocating for a fundamental shift where cybersecurity is not a side project but a core discipline, fully integrated throughout the Software Development Lifecycle (SDLC).
+This presentation outlines a holistic approach to embedding security across people, process, technology, and culture. Instead of merely shifting security “left” in the SDLC, the proposal argues for shifting security everywhere, making it an inherent responsibility for all stakeholders, from developers to executives. Key strategies include the adoption of the Secure Software Development Framework (SSDF), threat modeling as a collaborative practice, and leveraging industry best practices such as OWASP, NIST SP 800-218, and secure coding standards.
+
+- [John Willis, Botchagalupe](https://www.linkedin.com/in/johnwillisatlanta/) "AI-Powered Code Parsing and Semantic Analysis for DevOps Pipelines"
+
+As software development ecosystems grow increasingly complex, the need for intelligent DevOps automation in script analysis and dependency management becomes critical. Join Jon Willis as he explores cutting-edge tools and techniques that leverage AI-driven code parsing and semantic analysis to enhance DevOps workflows. He will discuss the application of Large Language Models (LLMs) such as GPT-4, CodeBERT, and OpenAI Codex in parsing infrastructure and automation scripts, including Jenkinsfile, Dockerfile, Makefile, GitHub Actions, and Terraform. These models facilitate the identification of dependency installations (e.g., apt-get install, pip install, npm install) and pinpoint update points within scripts.
+
+
+
+
+<div style="font-size:1.5em;text-align:center;margin-top:10px">
+
+[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
+
+[More Info](https://ortelius.io/events/) 
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
 {{< blocks/section color="primary" >}}
 
 <h1 class="text-center">Job Seekers Webinar Series - Episode 2 April 22nd, 11AM ET</h1>
@@ -167,7 +223,15 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
 [Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q) 
+
 </div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<strong>Previous Episodes:</strong>
+
+[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
+</div>
+
 
 </div>
 {{< /blocks/feature_dual >}}
@@ -194,100 +258,10 @@ Erin Lovern is CEO and Founder of Grove Talent Group. Erin has extensive experie
 
 Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is a DevOps Leader, speaker working with hyper-growth companies on Business Value Modeling, Enablement, Thought Leadership, Business Development and Product GTM. Buffi has an MS Degree in Computer Science - Lehigh University / BS Physics & Mathematics / MSFT Certification / Cloud Certification
 
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
-
-<h1 class="text-center">Job Seekers Webinar Series - Episode 1 View Now</h1>
-<hr>
-
-{{< blocks/feature_dual >}}
-
-
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<div style="width:100%">
-{{< youtube vx2pp8p2SJ4 >}}
-</div>
-<h3 class="text-center" >Episode 1</h3>
-<p></p>
-
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Crafting Your Career Narrative:</h2>
-<h2 class="text-center">Building a Personal Brand That Gets Notice</h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
-
-In today’s competitive job market, your personal brand and career story can make all the difference in standing out to recruiters and decision-makers. Join us for an insightful webinar with Darrin Straff, an experienced headhunter who will share strategies for crafting a compelling career narrative. Learn how to highlight your unique skills, showcase your achievements, and position yourself as the ideal candidate. Discover the secrets to telling your story in a way that resonates with employers and sets you apart in your industry. Whether you’re actively job-seeking or preparing for future opportunities, this session will equip you with the insights to build a personal brand that gets attention.
-
-About the Presenter:
-<br> 
-Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
-
-<h1 class="text-center">SecureChainCon, May 16, 2025</h1>
-
-<hr>
-
-{{< blocks/feature_dual >}}
-
-
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/CallforPapersBanner-2025.png" alt="SecureChainCon" height="474px" width="737px" />
-<p></p>
-
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Level Up Your Security Skills</h2>
-
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
-Get ready for a half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
-From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
-
-
-<div style="font-size:1.5em;text-align:center;margin-top:10px">
-
-[Submit a Talk Via Sessionize](https://sessionize.com/securechaincon-2025)
-
-[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
-
-[More Info](https://ortelius.io/events/) 
-</div>
 
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
-
-
 
 {{< blocks/section color= "primary" >}}
 

@@ -22,6 +22,12 @@ menu:
 [Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q) 
 </div>
 
+<div style="text-align:left;width:100%;margin-top:80px">
+<strong>Previous Episodes:</strong>
+
+[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
+</div>
+
 </div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
@@ -50,71 +56,25 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<h1 class="text-center">Job Seekers Webinar Series Episode 1  View Now</h1>
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<div style="width:100%">
-{{< youtube vx2pp8p2SJ4 >}}
-</div>
-<h3 class="text-center" >March 5, 2025</h3>
-<p></p>
-
-</div>
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Crafting Your Career Narrative:</h2>
-<h2 class="text-center">Building a Personal Brand That Gets Noticed</h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
-
-In today’s competitive job market, your personal brand and career story can make all the difference in standing out to recruiters and decision-makers. Join us for an insightful webinar with Darrin Straff, an experienced headhunter who will share strategies for crafting a compelling career narrative. Learn how to highlight your unique skills, showcase your achievements, and position yourself as the ideal candidate. Discover the secrets to telling your story in a way that resonates with employers and sets you apart in your industry. Whether you’re actively job-seeking or preparing for future opportunities, this session will equip you with the insights to build a personal brand that gets attention.
-
-About the Presenter:
-<br> 
-Darrin Straff is the Senior Brand Strategist at CareerStation. He blends insight into human behavior rooted in a bachelor’s degree in psychology with 14+ years of recruiting experience to navigate the complex landscape of cybersecurity talent acquisition. Darrin excels not just in aligning technical skills with business needs but also at understanding the critical human elements that underpin strong candidate-client relationships. His comprehensive approach extends beyond mere placements, advocating for secure and synergistic connections in our digitalized professional world.
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
 
 {{< blocks/section color="White" >}}
 {{< blocks/feature_dual >}}
 
 <h1 class="text-center">SecureChainCon, May 16th, 2025</h1>
-<h2 class="text-center">Call for Speakers Open Until April 1st</h2> 
 <hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/CallforPapersBanner-2025.png" alt="SecureChainCon" height="379px" width="589px" />
-<p></p>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Submit a Talk Via Sessionize](https://sessionize.com/securechaincon-2025)
-
 [Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
-
-
-</div>
 </div>
 
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="379px" width="589px" />
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <h2 class="text-center">Level Up Your Security Skills</h2>
+</div>
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
@@ -127,13 +87,30 @@ From secure coding practices and container security to supply chain management a
 
 Join us on May 16th for this dynamic online knowledge exchange and take your DevSecOps skills to the next level!
 
+</div>
 
-<strong>Who should attend:</strong>
-- DevOps Engineers
-- CISO
-- Security Engineers
-- Platform Engineers
-- SREs
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<h2 class="text-center">Keynotes</h2>
+</div>
+<div style="text-align:left;width:100%;margin-top:80px">
+
+<h2 class="text-left">Tracy Bannon
+<br>
+#NoHobbyists – What’s Really Needed to Shift CyberSecurity?</h2>
+
+Cybersecurity in software development is often treated as an afterthought, left to developers who must self-educate and experiment in their spare time. The #NoHobbyists movement challenges this status quo, advocating for a fundamental shift where cybersecurity is not a side project but a core discipline, fully integrated throughout the Software Development Lifecycle (SDLC). This presentation outlines a holistic approach to embedding security across people, process, technology, and culture. Instead of merely shifting security “left” in the SDLC, the proposal argues for shifting security everywhere, making it an inherent responsibility for all stakeholders, from developers to executives. Key strategies include the adoption of the Secure Software Development Framework (SSDF), threat modeling as a collaborative practice, and leveraging industry best practices such as OWASP, NIST SP 800-218, and secure coding standards. [@tracylbannon](https://www.linkedin.com/in/tracylbannon/) 
+
+<h2 class="text-left">John Willis 
+<br>AI-Powered Code Parsing and Semantic Analysis for DevOps Pipelines</h2>
+
+
+As software development ecosystems grow increasingly complex, the need for intelligent DevOps automation in script analysis and dependency management becomes critical. Join Jon Willis as he explores cutting-edge tools and techniques that leverage AI-driven code parsing and semantic analysis to enhance DevOps workflows. He will discuss the application of Large Language Models (LLMs) such as GPT-4, CodeBERT, and OpenAI Codex in parsing infrastructure and automation scripts, including Jenkinsfile, Dockerfile, Makefile, GitHub Actions, and Terraform. These models facilitate the identification of dependency installations (e.g., apt-get install, pip install, npm install) and pinpoint update points within scripts. [@Botchagalupe](https://www.linkedin.com/in/johnwillisatlanta/) 
+</div>
+<div style="margin-top:10px;margin-left:1px">
+
 
 <strong>Key Takeaways/Why attend this one:</strong>
 - Security in the DevOps Pipeline
@@ -147,6 +124,8 @@ Understand the importance of fostering a culture of shared responsibility betwee
 
 - Threat Intelligence & Risk Management
 Explore how to leverage threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats before they escalate.
+
+
 
 
 {{< /blocks/feature_dual >}}
