@@ -168,6 +168,14 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <p></p>
 
 
+<div style="font-size:1.5em;text-align:center;margin-top:10px">
+
+[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
+
+[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
+
+</div>
+
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -196,12 +204,6 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 
 
-<div style="font-size:1.5em;text-align:center;margin-top:10px">
-
-[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
-
-[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
-</div>
 
 
 {{< /blocks/feature_dual >}}
@@ -278,6 +280,11 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 <img src="/images/cdcon2025.png" alt="open source summit" height="400px" width="500x" />
 </div>
 
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Register Today](https://events.linuxfoundation.org/open-source-summit-north-america/register/)
+</div>
+
 {{< /blocks/feature_dual >}}
 
 
@@ -300,10 +307,7 @@ Why You Should Attend:
 Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
 
 Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
-<div style="font-size:1.5em">
 
-[Register](https://events.linuxfoundation.org/open-source-summit-north-america/register/)
-</div>
 </div>
 
 {{< /blocks/feature_dual >}}
