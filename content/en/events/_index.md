@@ -125,6 +125,11 @@ Understand the importance of fostering a culture of shared responsibility betwee
 - Threat Intelligence & Risk Management
 Explore how to leverage threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats before they escalate.
 
+<div style="font-size:1.5em;text-align:center;margin-top:10px">
+
+[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
+
+</div>
 
 
 

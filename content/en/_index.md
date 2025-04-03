@@ -200,7 +200,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 [Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
 
-[More Info](https://ortelius.io/events/) 
+[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
 </div>
 
 
