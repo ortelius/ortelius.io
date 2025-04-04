@@ -104,7 +104,6 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 {{< blocks/feature_dual >}}
 
-### Agenda
 
 All times in Mountain Time
 
