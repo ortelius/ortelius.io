@@ -48,6 +48,64 @@ As software development ecosystems grow increasingly complex, the need for intel
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
+
+{{< blocks/section color=white >}}
+
+<h2 class="text-left">Agenda</h2>
+<hr>
+
+{{< blocks/feature_dual >}}
+
+
+All times in Mountain Time
+
+8:30 Beer and Donuts - Recognition Awards presented by Steve Taylor
+
+9:00 - 9:30  Keynote with Tracy Bannon
+
+9:30 - 10:00 Keynote with John Willis
+
+### Sessions: 
+
+<strong>10:15 - 10:45 Shifting Security Left—And Up, Down, and Across the Organization,</strong>
+
+[Jude Wellington](https://www.linkedin.com/in/judewellington/) and [Kate Scarcella](https://www.linkedin.com/in/katescarcellaconnected/) Panel Discussion
+
+Security doesn't start and end in the development environment. While secure coding practices are essential, true organizational security is built on a culture that extends beyond the IDE—into business decisions, leadership priorities, and everyday behaviors across all teams. In this panel session, we will share strategies and real-world examples of how organizations can move beyond a “security as an afterthought” mindset and instead embed security principles into their business process.
+
+<strong>10:45-11:15  Hidden in the Code: Malicious Code Scanning for Open Source Packages,</strong>
+
+[Abhisek Datta](https://www.linkedin.com/in/abh1sek/), Co-Founder, SafeDep
+
+Open Source package distributed with typosquatting and starjacking. Project X is compromised to deliver malware to its 100k+ user base. Sounds familiar? This talk will present our approach of using static code analysis, emulation & LLM inference to protect developers against malicious open source packages. We will share lessons learned while monitoring npm and PyPI registries for malicious packages and practical trade-offs made to balance performance, false positives & proactive guardrails in CI/CD.
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<strong>11:15-11:45 Security Chaos Engineering to Avoid Payments Ransom Gangs,</strong>
+
+[Yury Niño Roa](https://www.linkedin.com/in/yurynino/), Cloud Application Modernization Engineer, Google 
+
+Data breaches are growing in size and frequency, affecting even well-secured infrastructures. Cyberattacks are inevitable, and in some cases, victims must pay to recover their data. Experts say many organizations fail not because of weak security, but because they never test how long data recovery takes. That’s why tabletop exercises, red/blue team drills, and security gamedays are critical. Security Chaos Engineering is a discipline that deliberately injects false positives into production to test how systems respond to security failures. This talk will cover why Security Chaos Engineering is essential today, how it differs from penetration testing, and how organizations can use it to drill breach response plans through regular gamedays.
+
+<strong>11:45 - 12:15 Unlocking Insights from SBOMs: Beyond Generation to Actionable Analytics,</strong> 
+
+[Daniel Nebenzahl](https://www.linkedin.com/in/danny-daniel-nebenzahl-78705a151/), Co-founder & CTO Scribe Security
+
+Generating Software Bills of Materials (SBOMs) has gained widespread attention—but generating is just the beginning. These seemingly mundane, machine-readable documents hold valuable insights waiting to be unlocked. In this talk, we'll explore practical and impactful use cases of SBOM analytics, from strategic decision-making tools for CISOs to actionable, hands-on utilities for practitioners. Join us to discover how to turn SBOMs into strategic assets that strengthen your organization's software security posture.
+
+<strong>12:15 - 12:30 Closing Comments</strong>
+Tracy Ragan DeployHub and Ortelius Community Organizer 
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+<div class="col-center">
+<img src="/images/Speakers-2025.png" alt="SecureChainCon Speakers" height="420px" width="1440px" />
+</div>
+
 {{< blocks/section color=white >}}
 
 {{< blocks/feature_dual >}}
@@ -94,32 +152,5 @@ As software development ecosystems grow increasingly complex, the need for intel
 <strong>Threat Intelligence and Risk Management</strong>: Explore the importance of leveraging threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats.
 
 <strong>Compliance and Governance:</strong> Address the challenges of maintaining compliance with regulatory requirements, such as aggregated SBOMs, and industry standards in DevSecOps environments.
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color=white >}}
-
-<h2 class="text-left">Agenda</h2>
-<hr>
-
-{{< blocks/feature_dual >}}
-
-
-All times in Mountain Time
-
-- 8:30 Beer and Donuts - Recognition Awards presented by Steve Taylor
-- 9:00 - 9:30  Keynote with Tracy Bannon
-- 9:30 - 10:00 Keynote with John Willis
-- Break
-- 10:15 - 11:15 TBD
-- Break
-- 11:30 - 1:00 TBD
-
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
