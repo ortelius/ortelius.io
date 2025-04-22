@@ -211,7 +211,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 {{< blocks/section color="primary" >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - Episode 2 April 22nd, 11AM ET</h1>
+<h1 class="text-center">Job Seekers Webinar Series - On Demand</h1>
 <hr>
 {{< blocks/feature_dual >}}
 
@@ -224,7 +224,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q) 
+[View Now](https://youtu.be/o6nr2jzn3p4) 
 
 </div>
 

@@ -38,16 +38,19 @@ In today’s competitive job market, your personal brand and career story can ma
 <br>
 
 
-### Episode 2 - Airing Live on April 22nd, 11AM ET - Secrets Unveiled: How Employers Find (and Hire) Top Talent
+### Episode 2 - Secrets Unveiled: How Employers Find (and Hire) Top Talent
 
 <hr>
 
 <img src="/images/jobseekers-april2025.png" alt="JobSeekersEpisode2" height="360px" width="590px" />
 
 
+
+<br>
 <div style="font-size:1.4em;text-align:left;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q)
+[View Now](https://youtu.be/o6nr2jzn3p4)
+
 </div>
 
 A panel discussion with Erin Lovern and Buffi Gresh</p>

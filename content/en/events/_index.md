@@ -9,7 +9,7 @@ menu:
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Job Seekers Webinar Series Episode 2 April 22nd, 11AM ET</h1>
+<h1 class="text-center">Job Seekers Webinar Series Episode 2 On-demand</h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
@@ -17,10 +17,13 @@ menu:
 <p></p>
 
 
+
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/webinar/register/WN_rxUcJldOQbuDKMPJWMsE5Q) 
+[View Now](https://youtu.be/o6nr2jzn3p4) 
+
 </div>
+
 
 <div style="text-align:left;width:100%;margin-top:80px">
 <strong>Previous Episodes:</strong>
