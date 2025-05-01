@@ -191,18 +191,11 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
 Get ready for a half-day of engaging sessions and invaluable learning designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
 
-KeyNotes: 
-- [Tracy Bannon, Mitre](https://www.linkedin.com/in/tracylbannon/) "#NoHobbyists – What’s Really Needed to Shift CyberSecurity?"
-
-Cybersecurity in software development is often treated as an afterthought, left to developers who must self-educate and experiment in their spare time. The #NoHobbyists movement challenges this status quo, advocating for a fundamental shift where cybersecurity is not a side project but a core discipline, fully integrated throughout the Software Development Lifecycle (SDLC).
-This presentation outlines a holistic approach to embedding security across people, process, technology, and culture. Instead of merely shifting security “left” in the SDLC, the proposal argues for shifting security everywhere, making it an inherent responsibility for all stakeholders, from developers to executives. Key strategies include the adoption of the Secure Software Development Framework (SSDF), threat modeling as a collaborative practice, and leveraging industry best practices such as OWASP, NIST SP 800-218, and secure coding standards.
+KeyNote: 
 
 - [John Willis, Botchagalupe](https://www.linkedin.com/in/johnwillisatlanta/) "AI-Powered Code Parsing and Semantic Analysis for DevOps Pipelines"
 
 As software development ecosystems grow increasingly complex, the need for intelligent DevOps automation in script analysis and dependency management becomes critical. Join Jon Willis as he explores cutting-edge tools and techniques that leverage AI-driven code parsing and semantic analysis to enhance DevOps workflows. He will discuss the application of Large Language Models (LLMs) such as GPT-4, CodeBERT, and OpenAI Codex in parsing infrastructure and automation scripts, including Jenkinsfile, Dockerfile, Makefile, GitHub Actions, and Terraform. These models facilitate the identification of dependency installations (e.g., apt-get install, pip install, npm install) and pinpoint update points within scripts.
-
-
-
 
 
 
