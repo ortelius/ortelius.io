@@ -6,7 +6,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">Open-source Vulnerability Patch Management</h1>
+<h1 class="text-left">Identify Open-source Threats Post-Deployment to Remediate Fast</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -14,13 +14,13 @@ description: Welcome to the Ortelius Open Source Project Site
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section color=black >}}
-<h1 class="text-center">Defend Your Software Against Code-Level Threats</h1>
-<h3 class="text-center">Patch Vulnerabilities Before They Attack</h3>
+{{< blocks/section color=white >}}
+<h1 class="text-center">Defend Your Software Against Open-Source Threats</h1>
+<h3 class="text-center">Patch OSS Vulnerabilities Before They Attack</h3>
 
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:100px;margin-left:50px">
+<div style="text-align:center;width:100%;margin-top:100px;margin-left:200px">
 <img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="558px" width="626px" />
 </div>
 
@@ -28,11 +28,11 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/feature_dual >}}
 
-<div style="width:100%;margin-top:100px;max-width:500px">
+<div style="width:100%;margin-top:150px;max-width:700px">
 
-Code-level vulnerabilities pose a serious threat in the dynamic and interconnected world of cloud-native environments. Ortelius delivers robust defense with end-to-end monitoring, detailed reporting, and rapid elimination of emerging vulnerabilities across your entire attack surface—from development to production. With Ortelius, you can swiftly patch vulnerabilities as they arise, reducing the risk of costly delays, data breaches, and operational disruptions.
+Open-Source vulnerabilities pose a serious threat in the dynamic and interconnected world of cloud-native environments. Ortelius delivers robust defense with end-to-end monitoring, detailed reporting, and rapid elimination of emerging vulnerabilities across your entire attack surface—from development to production. With Ortelius, you can swiftly patch vulnerabilities as they arise, reducing the risk of costly delays, data breaches, and operational disruptions.
 
-The fragmented nature of decoupled cloud-native architectures often hampers IT teams’ ability to respond effectively to threats. According to [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report), open-source package vulnerabilities have surged by 156%, surpassing 512,000, with 80% remaining unaddressed for over a year. Ortelius eliminates guesswork by pinpointing exactly where affected open-source packages are deployed across the infrastructure, enabling proactive and continuous package remediation.
+The fragmented nature of decoupled cloud-native architectures often hampers IT teams’ ability to respond effectively to threats. According to [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report), open-source package vulnerabilities have surged with 80% remaining unaddressed for over a year. Ortelius eliminates guesswork by pinpointing exactly where affected open-source packages are deployed across the infrastructure, enabling proactive and continuous package remediation.
 
 With Ortelius, you can confidently answer the critical question, “Where is Log4J running?” and stay one step ahead of evolving threats.
 
@@ -62,15 +62,48 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 {{% /blocks/feature %}}
 
 
+{{< /blocks/section >}}
 
+
+{{< blocks/section color=white >}}
+<div class="col-12">
+</div>
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:10px;margin-left:100px">
+
+<div style="margin-top:10px;margin-left:350px">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="300px" width="300px" />
+</div>
+
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:10px;margin-left:50px">
+
+## Extend Jenkins to Post Deployment Security
+
+Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
+<div style="font-size:1.8em;">
+
+[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
+</div>
+</div>
+
+
+{{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 
 {{< blocks/section color=black >}}
 <div class="col-12">
 <h1 class="text-center">Ortelius Ecosystem</h1>
-
 </div>
+
 
 <div class="col-sm"></div>
 
@@ -80,14 +113,17 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|
-| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/) | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p> |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p> |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>  | <p style="font-size:1.5em">[Any CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p> | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p> |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
+| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/)  | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p>  |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p>  |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>   | <p style="font-size:1.5em">[Jenkins and Other CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p>  | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p>  |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
 
 
 {{% /blocks/table_center %}}
 
+<div style="margin-top:40px;margin-left:5px">
+
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
 [View All](https://docs.ortelius.io/guides/userguide/integrations/) 
+</div>
 </div>
 
 </div>
@@ -95,15 +131,15 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=gray >}}
+{{< blocks/section color=white >}}
 <div class="col-12">
 </div>
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:80px;margin-left:100px">
+<div style="margin-top:10px;margin-left:100px">
 
-<div style="margin-top:80px;margin-left:200px">
+<div style="margin-top:10px;margin-left:400px">
 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
 </div>
@@ -115,15 +151,15 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 {{< blocks/feature_dual >}}
 
-<div style="margin-top:80px;margin-left:100px">
+<div style="margin-top:10px;margin-left:100px">
 
-## Sign-up and Get Started Patching Vulnerabilities
+## Sign-up and Get Started Managing Post Deployment CVEs
 
 From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
+<div style="font-size:1.8em;">
 
 [Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/) 
 </div>
@@ -152,7 +188,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< /blocks/section >}}
 
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 
 <h1 class="text-center">SecureChainCon, May 16, 2025</h1>
 
@@ -162,7 +198,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <p></p>
 <img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="474px" width="737px" />
 <p></p>
@@ -181,7 +217,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <h2 class="text-center">Level Up Your Security Skills</h2>
 
 </div>
@@ -202,7 +238,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 
 <h1 class="text-center">Job Seekers Webinar Series - On Demand</h1>
 <hr>
@@ -210,7 +246,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <img src="/images/jobseekers-april2025.png" alt="JobSeekers Webinar" height="379px" width="589px" />
 <p></p>
 
@@ -221,7 +257,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 </div>
 
-<div style="text-align:left;width:100%;margin-top:80px">
+<div style="text-align:left;width:100%;margin-top:10px">
 <strong>Previous Episodes:</strong>
 
 [Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
@@ -232,7 +268,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <h2 class="text-center">Secrets Unveiled </h2>
 <h2 class="text-center">How Employers Find (and Hire) Top Talent</h2>
 </div>
@@ -258,9 +294,9 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color= "primary" >}}
+{{< blocks/section color= "white" >}}
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <h1 class="text-center">Attend CDCon June 23-25,2025 </h2>
 <hr>
 </div>
@@ -268,7 +304,7 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 {{< blocks/feature_dual >}}
 
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <p></p>
 <img src="/images/cdcon2025.png" alt="open source summit" height="400px" width="500x" />
 </div>
@@ -286,7 +322,7 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 
 
 
-<div style="text-align:center;width:100%;margin-top:80px">
+<div style="text-align:center;width:100%;margin-top:10px">
 <h2 class="text-center">Join Open Source Developers in Denver</h2>
 </div>
 
