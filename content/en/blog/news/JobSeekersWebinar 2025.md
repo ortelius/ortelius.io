@@ -1,17 +1,18 @@
 ---
-date: 2025-04-10
-title: "Job Seekers Webinar Series 2025"
-summary: Job Seekers Webinars 2025
-author: Jing Chen
+date: 2025-05-10
+title: "Job Seeker's Tookit"
+summary: Job Seeker's Toolkit 
+author: Jing Chen and Tony Carrato
 ---
+
 
 
 ## Helping Committers Advance Their Careers
 
-In January 2025, the Ortelius Outreach Committee launched a bold initiative to empower contributors—helping them grow their personal brand, boost their earning potential, and land top-tier job opportunities. To support this mission, the team created a dynamic webinar series focused on career advancement. Below, you’ll find upcoming and on-demand Job Seeker sessions, along with additional resources curated to help you thrive.
+In January 2025, the Ortelius Outreach Committee launched a bold initiative to empower contributors—helping them grow their personal brand, boost their earning potential, and land top-tier job opportunities. To support this mission, the team created a dynamic webinar series focused on career advancement and this resource page for tools and information. As you work through the process of finding a new role, there are an increasing number of resources available to you.  The Ortelius team has curated these resources into useful categories. Most are free or offer initial free access, with some offering paid services.  
 
 
-## Webinar Episodes - On-Demand and Upcoming
+## Job Seeker's Webinar - On-Demand and Upcoming
 
 Register for an upcoming webinar, or view previous episodes on-demand. 
 <br>
@@ -72,5 +73,32 @@ This interactive session will provide attendees with actionable advice to enhanc
 ## Articles Worth Exploring 
 
 - [The Reality of Tech Interviews](https://newsletter.pragmaticengineer.com/p/the-reality-of-tech-interviews) - From the Pragmatic Engineer, written by Gergely Orosz, Evan King, and Stefan Mai
+
+
+## Professional Resume Services
+
+-   [Darrin Straff](https://www.linkedin.com/in/darrinstraff/) : Provides Resume and LinkedIn Branding Services and Career Coaching
+-   [Richard Rose](https://www.facebook.com/richard.rose.71653318) : Offers advice on resume writing.
+-   [Greg Langstaff](https://www.facebook.com/greg.langstaff.2024): Provides resume advice.
+
+## Platform Resume Building Services
+
+-   [Jobscan Resume Builder](https://www.jobscan.co/): Offers a free and paid plan with ATS-friendly templates and optimization tips.
+-   [ResumeMaker.Online](https://www.resumemaker.online/free-tools/resume-keyword-scanner-free): A free, AI-powered resume builder that streamlines the resume creation process, creating a professional resume in minutes.
+
+## CV Scanning & Keyword Optimization
+
+-   [Jobscan Resume Scanner](https://www.jobscan.co/): Offers a free and Paid plan. Analyses resumes against job postings for keyword alignment.
+-   [ResumeMaker.Online](https://www.resumemaker.online/free-tools/resume-keyword-scanner-free): Free online resume builder.
+-   [ResyMatch.io by Cultivated Culture](https://cultivatedculture.com/resume-scanner/): Offers a free and paid plan. An ATS resume scanner compares resume to target job description, identifying missing keywords and skills.
+
+
+## Cover Letter Creation
+
+-   [Jobscan Cover Letter Checker](https://www.jobscan.co/): Provides feedback on cover letter content and formatting.
+-   [Jobscan Cover Letter Creation](https://www.jobscan.co/): An AI-powered tool that creates personalized, ATS-friendly cover letters tailored to specific job descriptions.
+
+
+
 
 
