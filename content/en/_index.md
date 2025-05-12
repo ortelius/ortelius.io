@@ -71,10 +71,11 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:10px;margin-left:100px">
-
+<div class="wrapdiv">
+<div style="text-align:center;width:100%;margin-top:10px">
 <div style="margin-top:10px;margin-left:350px">
 <img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="300px" width="300px" />
+</div>
 </div>
 
 </div>
@@ -85,7 +86,7 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 <div style="margin-top:10px;margin-left:50px">
 
-## Extend Jenkins to Post Deployment Security
+## Extend Jenkins for Continuous Post Deployment Security
 
 Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
 <div style="font-size:1.8em;">
@@ -137,7 +138,7 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:10px;margin-left:100px">
+<div style="text-align:center;width:100%;margin-top:10px">
 
 <div style="margin-top:10px;margin-left:400px">
 
@@ -217,9 +218,9 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:10px">
-<h2 class="text-center">Level Up Your Security Skills</h2>
 
+<div style="text-align:center;width:100%;margin-top:10px">
+<h2 class="text-center">Level Up Your Security Skills </h2>
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
@@ -240,28 +241,16 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 {{< blocks/section color="white" >}}
 
-<h1 class="text-center">Job Seekers Webinar Series - On Demand</h1>
+<h1 class="text-center">Job Seeker's Toolkit</h1>
 <hr>
 {{< blocks/feature_dual >}}
 
 
-
 <div style="text-align:center;width:100%;margin-top:10px">
-<img src="/images/jobseekers-april2025.png" alt="JobSeekers Webinar" height="379px" width="589px" />
+<img src="/images/jobseekers-toolkit.png" alt="JobSeekers Webinar" height="379px" width="589px" />
 <p></p>
 
 
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Now](https://youtu.be/o6nr2jzn3p4) 
-
-</div>
-
-<div style="text-align:left;width:100%;margin-top:10px">
-<strong>Previous Episodes:</strong>
-
-[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
-</div>
 
 
 </div>
@@ -269,25 +258,23 @@ As software development ecosystems grow increasingly complex, the need for intel
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:10px">
-<h2 class="text-center">Secrets Unveiled </h2>
-<h2 class="text-center">How Employers Find (and Hire) Top Talent</h2>
+<h2 class="text-center">Webinars and Resources </h2>
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
 
-A panel discussion with [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffi Gresh](https://www.linkedin.com/in/buffig/)
+As you work through the process of finding a new role, there are an increasing number of resources available to you. The Ortelius team has curated these resources into useful categories. Most are free or offer initial free access, with some offering paid services.
 
-This panel discussion brings together two experienced technical recruiters who will share insights into how they leverage LinkedIn to identify and connect with top talent. They will reveal the strategies they use to search for candidates, what makes a profile stand out, and the common red flags they encounter.
+Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) on Job Hunting
 
-For job seekers, the panelists will provide practical tips on networking effectively, the importance of LinkedIn, and applying for jobs in a way that captures recruiters' attention. They will also discuss the do’s and don’ts of job applications, including how to navigate applicant tracking systems (ATS) and tailor applications for maximum visibility.
+</div>
 
-This interactive session will provide attendees with actionable advice to enhance their job search or recruitment process, bridging the gap between hiring managers and candidates in the digital age.
+<div style="text-align:left;width:100%;margin-top:10px">
+<strong>Job Seekers Webinar Episodes:</strong>
 
-About the Presenters:
-<br> 
-Erin Lovern is CEO and Founder of Grove Talent Group. Erin has extensive experience leading exponential growth within technology companies, both pre and post IPO. She brings a passion for helping organizations leverage talent acquisition as a competitive advantage by using a data-driven approach to hiring, eliminating biases through the development of core competencies and success measures to build the strongest, most inclusive teams possible.
+[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
 
-Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is a DevOps Leader, speaker working with hyper-growth companies on Business Value Modeling, Enablement, Thought Leadership, Business Development and Product GTM. Buffi has an MS Degree in Computer Science - Lehigh University / BS Physics & Mathematics / MSFT Certification / Cloud Certification
+[Episode 2 - View Now](https://www.youtube.com/watch?v=o6nr2jzn3p4)   Secrets Unveiled: How Employers Find (and Hire) Top Talent, Presented by [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffie Gresh](https://www.linkedin.com/in/buffig/)
 
 
 
@@ -296,12 +283,14 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 
 {{< blocks/section color= "white" >}}
 
+
 <div style="text-align:center;width:100%;margin-top:10px">
 <h1 class="text-center">Attend CDCon June 23-25,2025 </h2>
 <hr>
 </div>
 
 {{< blocks/feature_dual >}}
+
 
 
 <div style="text-align:center;width:100%;margin-top:10px">
@@ -326,8 +315,6 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 <h2 class="text-center">Join Open Source Developers in Denver</h2>
 </div>
 
-<div style="margin-top:10px;margin-left:200px;">
-
 
 Attend CDCon, held at Open Source Summit 2025 in the mile high city of Denver Colorado. 
 
@@ -337,7 +324,7 @@ Open Source Summit is the premier event for open source developers, technologist
 
 Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
 
-</div>
+
 
 {{< /blocks/feature_dual >}}
 
@@ -361,6 +348,7 @@ Open Source Summit is a conference umbrella, composed of a collection of events 
 <p class="wrapdiv_text">Abraham Ortelius made his name by collecting data from scientists, geographers, and cartographers of his time and transforming it into what the world now knows as a world Atlas. His Atlas, titled Theatrum Orbis Terrarum (Theatre of the World), was published on May 20, 1570. His Atlas disrupted the way the world was seen, with the first concepts imagining continental drift. Also of interest are the sea monsters shown in the water – mythical creatures that were a subject of fascination in Ortelius’ generation.</p>
 </div>
 {{< /blocks/feature_dual >}}
+
 {{< blocks/feature_dual >}}
 
 
