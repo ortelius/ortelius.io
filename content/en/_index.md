@@ -265,7 +265,7 @@ As software development ecosystems grow increasingly complex, the need for intel
 
 As you work through the process of finding a new role, there are an increasing number of resources available to you. The Ortelius team has curated these resources into useful categories. Most are free or offer initial free access, with some offering paid services.
 
-Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) on Job Hunting
+Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) on Job Hunting.
 
 </div>
 
