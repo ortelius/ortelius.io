@@ -20,15 +20,15 @@ description: Welcome to the Ortelius Open Source Project Site
 
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:100px;margin-left:200px">
-<img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="558px" width="626px" />
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="100%" width="100%" />
 </div>
 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
 
-<div style="width:100%;margin-top:150px;max-width:700px">
+<div style="width:100%;margin-top:100px;max-width:700px">
 
 Open-Source vulnerabilities pose a serious threat in the dynamic and interconnected world of cloud-native environments. Ortelius delivers robust defense with end-to-end monitoring, detailed reporting, and rapid elimination of emerging vulnerabilities across your entire attack surface—from development to production. With Ortelius, you can swiftly patch vulnerabilities as they arise, reducing the risk of costly delays, data breaches, and operational disruptions.
 
@@ -66,18 +66,11 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 
 {{< blocks/section color=white >}}
-<div class="col-12">
-</div>
 
-{{< blocks/feature_dual_left_sm >}} 
+{{< blocks/feature_dual_left_sm >}}
 
-<div class="wrapdiv">
-<div style="text-align:center;width:100%;margin-top:10px">
-<div style="margin-top:10px;margin-left:350px">
-<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="300px" width="300px" />
-</div>
-</div>
-
+<div style="margin-top:10px;">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="80%" width="80%" style="margin-left:110px"/>
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
@@ -133,19 +126,11 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 
 {{< blocks/section color=white >}}
-<div class="col-12">
-</div>
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="text-align:center;width:100%;margin-top:10px">
-
-<div style="margin-top:10px;margin-left:400px">
-
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
-</div>
-
-
+<div style="margin-top:10px">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="80%" width="80%" style="margin-left:110px"/>
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
@@ -197,21 +182,15 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< blocks/feature_dual >}}
 
-
-
-<div style="text-align:center;width:100%;margin-top:10px">
-<p></p>
-<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="474px" width="737px" />
-<p></p>
-
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="100%" width="100%" />
+</div>
 
 <div style="font-size:1.5em;text-align:center;margin-top:10px">
 
 [Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
 
 [More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
-
-</div>
 
 </div>
 
@@ -246,14 +225,10 @@ As software development ecosystems grow increasingly complex, the need for intel
 {{< blocks/feature_dual >}}
 
 
-<div style="text-align:center;width:100%;margin-top:10px">
-<img src="/images/jobseekers-toolkit.png" alt="JobSeekers Webinar" height="379px" width="589px" />
-<p></p>
-
-
-
-
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/jobseekers-toolkit.png" alt="JobSeekers Webinar" height="100%" width="100%" />
 </div>
+
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
@@ -275,7 +250,7 @@ Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit
 [Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
 
 [Episode 2 - View Now](https://www.youtube.com/watch?v=o6nr2jzn3p4)   Secrets Unveiled: How Employers Find (and Hire) Top Talent, Presented by [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffie Gresh](https://www.linkedin.com/in/buffig/)
-
+</div>
 
 
 {{< /blocks/feature_dual >}}
@@ -293,9 +268,8 @@ Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit
 
 
 
-<div style="text-align:center;width:100%;margin-top:10px">
-<p></p>
-<img src="/images/cdcon2025.png" alt="open source summit" height="400px" width="500x" />
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/cdcon2025.png" alt="open source summit" height="100%" width="100%" />
 </div>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
