@@ -63,12 +63,12 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 {{< blocks/section color="White" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">SecureChainCon, May 16th, 2025</h1>
+<h1 class="text-center">SecureChainCon, View On-Demand</h1>
 <hr>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
+[View Now](https://www.youtube.com/playlist?list=PLjQ1l9KZoIQ1EO0f55v9Us6FsqtJuTKSS)
 </div>
 
 <div style="text-align:center;width:100%;margin-top:80px">
@@ -84,11 +84,10 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 
 Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
 
-Get ready for a half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
+View our half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security, AI and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
 
 From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
 
-Join us on May 16th for this dynamic online knowledge exchange and take your DevSecOps skills to the next level!
 
 </div>
 

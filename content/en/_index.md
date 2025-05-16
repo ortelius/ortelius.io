@@ -176,7 +176,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< blocks/section color="white" >}}
 
-<h1 class="text-center">SecureChainCon, May 16, 2025</h1>
+<h1 class="text-center">SecureChainCon, Now Available On-Demand</h1>
 
 <hr>
 
@@ -188,7 +188,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="font-size:1.5em;text-align:center;margin-top:10px">
 
-[Register Today](https://us02web.zoom.us/meeting/register/tlCtjtBxTwiOMFXIYYgJeA)
+[View Now](https://www.youtube.com/playlist?list=PLjQ1l9KZoIQ1EO0f55v9Us6FsqtJuTKSS)
 
 [More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
 
@@ -205,7 +205,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <div style="margin-top:10px;margin-left:1px">
 
 Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
-Get ready for a half-day of engaging sessions and invaluable learning designed to keep you ahead in the fast-paced world of software security and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
+View our half-day of engaging sessions and invaluable learning designed to keep you ahead in the fast-paced world of software security, AI, and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
 
 KeyNote: 
 
