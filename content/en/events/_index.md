@@ -9,52 +9,38 @@ menu:
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Job Seekers Webinar Series Episode 2 On-demand</h1>
+<h1 class="text-center">Job Seekers Webinar Series and Toolkit</h1>
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<img src="/images/jobseekers-april2025.png" alt="JobSeekers Webinar" height="379px" width="589px" />
+<img src="/images/jobseekers-toolkit.png" alt="JobSeekers Webinar and toolkit" height="379px" width="589px" />
 <p></p>
 
 
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Now](https://youtu.be/o6nr2jzn3p4) 
-
-</div>
-
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<strong>Previous Episodes:</strong>
-
-[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
-</div>
 
 </div>
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Secrets Unveiled </h2>
-<h2 class="text-center">How Employers Find (and Hire) Top Talent</h2>
+<h2 class="text-center">Job Seekers Links and Resources </h2>
 </div>
 
-<div style="margin-top:10px;margin-left:1px">
 
-A panel discussion with [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffi Gresh](https://www.linkedin.com/in/buffig/)
+[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
 
-This panel discussion brings together two experienced technical recruiters who will share insights into how they leverage LinkedIn to identify and connect with top talent. They will reveal the strategies they use to search for candidates, what makes a profile stand out, and the common red flags they encounter.
+[Episode 2 - View Now](https://www.youtube.com/watch?v=o6nr2jzn3p4)   Secrets Unveiled: How Employers Find (and Hire) Top Talent, Presented by [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffie Gresh](https://www.linkedin.com/in/buffig/)
 
-For job seekers, the panelists will provide practical tips on networking effectively, the importance of LinkedIn, and applying for jobs in a way that captures recruiters' attention. They will also discuss the do’s and don’ts of job applications, including how to navigate applicant tracking systems (ATS) and tailor applications for maximum visibility.
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-This interactive session will provide attendees with actionable advice to enhance their job search or recruitment process, bridging the gap between hiring managers and candidates in the digital age.
+[Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) 
 
-About the Presenters:
-<br> 
-Erin Lovern is CEO and Founder of Grove Talent Group. Erin has extensive experience leading exponential growth within technology companies, both pre and post IPO. She brings a passion for helping organizations leverage talent acquisition as a competitive advantage by using a data-driven approach to hiring, eliminating biases through the development of core competencies and success measures to build the strongest, most inclusive teams possible.
+</div>
 
-Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is a DevOps Leader, speaker working with hyper-growth companies on Business Value Modeling, Enablement, Thought Leadership, Business Development and Product GTM. Buffi has an MS Degree in Computer Science - Lehigh University / BS Physics & Mathematics / MSFT Certification / Cloud Certification
+
+</div>
+
+
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -75,18 +61,11 @@ Buffi Gresh is Chief of Staff, VP Global Business Operatons for Ensono. Buffi is
 <p></p>
 <img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="379px" width="589px" />
 
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Level Up Your Security Skills</h2>
-</div>
+
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
 
-Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
-
-View our half-day of engaging sessions, hands-on workshops, and invaluable learning experiences designed to keep you ahead in the fast-paced world of software security, AI and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
-
-From secure coding practices and container security to supply chain management and threat modeling, our sessions cover a broad spectrum of topics tailored to DevSecOps professionals at all levels. Whether you're a seasoned expert or just starting your DevSecOps journey, there's something for you at SecureChainCon.
 
 
 </div>
@@ -95,21 +74,18 @@ From secure coding practices and container security to supply chain management a
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Keynote</h2>
+
 </div>
 <div style="text-align:left;width:100%;margin-top:80px">
 
 
-<h2 class="text-left">John Willis 
-<br>AI-Powered Code Parsing and Semantic Analysis for DevOps Pipelines</h2>
+<h2 class="text-left">Key Takeaways
+<br></h2>
 
-
-As software development ecosystems grow increasingly complex, the need for intelligent DevOps automation in script analysis and dependency management becomes critical. Join Jon Willis as he explores cutting-edge tools and techniques that leverage AI-driven code parsing and semantic analysis to enhance DevOps workflows. He will discuss the application of Large Language Models (LLMs) such as GPT-4, CodeBERT, and OpenAI Codex in parsing infrastructure and automation scripts, including Jenkinsfile, Dockerfile, Makefile, GitHub Actions, and Terraform. These models facilitate the identification of dependency installations (e.g., apt-get install, pip install, npm install) and pinpoint update points within scripts. [@Botchagalupe](https://www.linkedin.com/in/johnwillisatlanta/) 
 </div>
 <div style="margin-top:10px;margin-left:1px">
 
 
-<strong>Key Takeaways/Why attend this one:</strong>
 - Security in the DevOps Pipeline
 Discover the critical role of integrating security tooling within the DevOps pipeline to proactively identify and remediate vulnerabilities from code to cloud.
 
@@ -135,12 +111,14 @@ Explore how to leverage threat intelligence and risk management frameworks to pr
 
 
 
-
-
 {{< blocks/section color="Primary" >}}
 {{< blocks/feature_dual >}}
+<div style="text-align:left;width:100%;margin-top:80px">
 <h1 class="text-center">CDCon and Open Source Summit - Denver June 23-25 </h1>
+</div>
+
 <hr>
+
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
@@ -193,7 +171,11 @@ Why you should attend:
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
+
+<div style="text-align:left;width:100%;margin-top:80px">
 <h2>Community Meetings</h2>
+</div>
+
 <hr>
 
 <div>
@@ -211,7 +193,10 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
+<div style="text-align:left;width:100%;margin-top:80px">
+
 <h2>Meeting Calendar</h2>
+</div>
 <hr>
 <div>
 <iframe src="https://calendar.google.com/calendar/embed?src=orteliusopensource%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -226,7 +211,10 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 <div class="col-center">
+
+<div style="text-align:left;width:100%;margin-top:80px">
 <h2 class="col-center">Need an Ortelius Logo?</h2>
+</div>
 <br>
 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius Logos" height="290px" width="300px" />
@@ -236,6 +224,7 @@ Attend a meeting to keep up to date, or to get started as a contributor. We look
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
+<div style="text-align:left;width:100%;margin-top:80px">
 
 You can download different versions of the Ortelius Logo from the CD.Foundation GitHub Site:
 
@@ -243,7 +232,7 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 - [Stacked Black/White/Color](https://github.com/cdfoundation/artwork/tree/main/ortelius/stacked)
 - [Icon Black/White/Color](https://github.com/cdfoundation/artwork/tree/main/ortelius/icon)
 - [SVG Color](https://github.com/cdfoundation/artwork/tree/main/ortelius)
-
+</div>
 
 
 {{< /blocks/feature_dual >}}
@@ -253,7 +242,10 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
+<div style="text-align:left;width:100%;margin-top:80px">
+
 <h2>On-Demand</h2>
+</div>
 
 
 
@@ -293,7 +285,11 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+
 <h2>Podcast</h2>
+</div>
 <div style="width:60%">
 <div id='buzzsprout-small-player-1774320'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/1774320.js?container_id=buzzsprout-small-player-1774320&player=small'></script></div>
 {{< /blocks/feature_dual >}}
@@ -303,7 +299,11 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 
 {{< blocks/section color="white" >}}
 <div class="col-12">
+
+<div style="text-align:left;width:100%;margin-top:80px">
 <h2>Zoom Background Images</h2>
+</div>
+
 <hr>
 </div>
 
