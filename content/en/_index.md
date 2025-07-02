@@ -3,10 +3,11 @@ title: Ortelius Open Source Project
 description: Welcome to the Ortelius Open Source Project Site
 ---
 
+
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">Identify Open-source Threats Post-Deployment to Remediate Fast</h1>
+<h1 class="text-left">Track Post-Deployment Vulnerabilities Across Your Live Environments</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -15,13 +16,13 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< /blocks/section >}}
 
 {{< blocks/section color=white >}}
-<h1 class="text-center">Defend Your Software Against Open-Source Threats</h1>
-<h3 class="text-center">Patch OSS Vulnerabilities Before They Attack</h3>
+<h1 class="text-center">Expose Your Real-Time Attack Surface</h1>
+<h3 class="text-center">Patch OSS Vulnerabilities Before Hackers Attack</h3>
 
 {{< blocks/feature_dual >}}
 
 <div style="text-align:center;margin-top:100px;">
-<img src="/images/ortelius-consolidate-concept.png" alt="Ortelius Vulnerability Evidence Store" height="100%" width="100%" />
+<img src="/images/Vulnerabilites.svg" alt="Ortelius Vulnerability Evidence Store" height="100%" width="100%" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -30,11 +31,19 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="width:100%;margin-top:100px;max-width:700px">
 
-Open-Source vulnerabilities pose a serious threat in the dynamic and interconnected world of cloud-native environments. Ortelius delivers robust defense with end-to-end monitoring, detailed reporting, and rapid elimination of emerging vulnerabilities across your entire attack surface—from development to production. With Ortelius, you can swiftly patch vulnerabilities as they arise, reducing the risk of costly delays, data breaches, and operational disruptions.
+Traditional security tools focus on catching vulnerabilities before software is deployed, **but threats don’t stop there**. New vulnerabilities in open-source packages are disclosed daily, long after software has been released into production. That’s where Ortelius steps in.
 
-The fragmented nature of decoupled cloud-native architectures often hampers IT teams’ ability to respond effectively to threats. According to [Sonatype’s 2024 Report](https://www.sonatype.com/en/press-releases/sonatypes-10th-annual-state-of-the-software-supply-chain-report), open-source package vulnerabilities have surged with 80% remaining unaddressed for over a year. Ortelius eliminates guesswork by pinpointing exactly where affected open-source packages are deployed across the infrastructure, enabling proactive and continuous package remediation.
+Ortelius continuously maps your software supply chain and actively monitors live environments to detect vulnerabilities that emerge post-deployment, when the risk is highest and time is critical. Unlike static SBOM solutions or pre-release scanners, Ortelius gives you a dynamic view of what’s actually running in production, staging, and test environments.
 
-With Ortelius, you can confidently answer the critical question, “Where is Log4J running?” and stay one step ahead of evolving threats.
+It connects the dots between CVEs reported by OSV.dev, deployed OS packages, and affected systems, providing:
+
+- Precise Impact Mapping – Instantly identify which applications, containers, or microservices are exposed to new CVEs
+
+- Actionable Intelligence – Understand exactly where vulnerable components are running across all environments
+
+- Faster Remediation Cycles – Reduce MTTR by focusing efforts on live, high-risk threats 
+
+With Ortelius, you're no longer blind to what happens after deployment. You gain real-time, operational awareness of your software attack surface, so your teams can act fast and stay ahead of emerging threats.
 
 The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  DeployHub a [Continuous Vulnerability Management](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise. 
 
@@ -42,9 +51,80 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 </div>
 
 
-
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+
+{{< blocks/section color="primary" >}}
+
+{{< blocks/feature_dual  >}}
+
+<h1 class="text-left">Expose Your Real Time Attack Surface</h1>
+<hr>
+Modern software is assembled from hundreds of components (i.e microservices, containers, libraries, AI Agents) each with potential security risks. Ortelius reveals where each component is running and what’s at risk when a new vulnerability hits.
+
+-  Visualize your live software footprint  
+-  Track every package across all environments  
+-  Detect high-risk CVEs after release  
+-  Know instantly which assets are vulnerable  
+
+{{< /blocks/feature_dual >}}
+
+{{< blocks/feature_dual >}}
+
+<h1 class="text-center">Why Post-Deployment Visibility Matters</h1>
+<hr>
+
+Pre-release scans aren’t enough. New vulnerabilities are disclosed **after** deployment—often days or weeks later. Ortelius fills this critical gap by continuously tracking what’s live, what’s vulnerable, and what needs fixing.
+
+- Real-time CVE exposure  
+- Live attack surface mapping  
+- Risk prioritization per environment  
+- Immediate action for remediation  
+
+{{< /blocks/feature_dual >}}
+
+{{< /blocks/section >}}
+
+{{< blocks/section color="white" >}}
+
+{{< blocks/feature_dual >}}
+
+<h1 class="text-center">The Ortelius Edge</h1>
+<hr>
+
+**Deployed Software Intelligence**  
+Know exactly what version of each component is deployed and where.
+
+ **Real-Time CVE Mapping**  
+Connect new CVEs to deployed components across systems.
+
+**Attack Surface Awareness**  
+View your threat exposure across all environments in real time.
+
+ **Build-to-Deploy Traceability**  
+Map software from code to CI/CD to deployment with full SBOM lineage.
+
+{{< /blocks/feature_dual >}}
+
+{{< blocks/feature_dual  >}}
+<h1 class="text-center">Built for DevSecOps and cATO</h1>
+<hr>
+
+Ortelius supports your DevSecOps pipeline and security compliance:
+
+- Zero Trust enforcement  
+- NIST 800-53 and 800-171 support  
+- Continuous Authority to Operate (cATO) readiness  
+- SBOM and RMF reporting  
+- DoD and civilian security mandates  
+
+{{< /blocks/feature_dual >}}
+
+{{< /blocks/section >}}
+
+
+
 
 
 {{< blocks/section color=black >}}
@@ -332,4 +412,8 @@ Ortelius also in some ways created on open source community of his day. To accom
 Thank you Abraham Ortelius for showing us the way.
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+
+
+
 
