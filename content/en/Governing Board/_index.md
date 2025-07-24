@@ -10,7 +10,7 @@ menu:
 {{< blocks/section color=primary >}}
 {{< blocks/feature_dual >}}
 
-## 2023 Governing Board
+## 2025 Governing Board
 The Ortelius Governing Board (GB) is responsible for strategic direction, business oversight, and business decisions. An overview of the Governing Board is set forth in the [Ortelius Governing Guidelines](https://ortelius.io/guidelines/). 
 
 - [Brian Dawson](https://www.linkedin.com/in/bvdawson/) - Partner Ecosystem Leader, Ripple, California, USA
@@ -33,7 +33,7 @@ Board Advisor
 <p></p>
 
 
-## 2023 Technology Oversight Committee
+## 2025 Technology Oversight Committee
 The Ortelius Technology Oversight Commitee is responsible for facilitating communication and collaboration across the Ortelius committers and making recommendations for architectual and process updates. [Learn more](https://github.com/ortelius/ortelius-toc/blob/main/README.md/). 
 
 - [Vincent Danen](https://www.linkedin.com/in/vdanen/) - Vice President, Red Hat Product Security, Canada
