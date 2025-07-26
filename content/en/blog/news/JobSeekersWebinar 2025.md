@@ -99,6 +99,8 @@ This interactive session will provide attendees with actionable advice to enhanc
 -   [Jobscan Cover Letter Creation](https://www.jobscan.co/): An AI-powered tool that creates personalized, ATS-friendly cover letters tailored to specific job descriptions.
 
 
-
+## Headshot Services
+- [MyEdit](https://myedit.online/en): AI-powered photo editing tool that offers quick headshot generation and professional touch-ups using uploaded selfies or portraits.
+- [HeadshotPro](https://www.headshotpro.com/): AI-based service that creates studio-quality business headshots for individuals or teams, without the need for a physical photo shoot.
 
 
