@@ -49,6 +49,9 @@ menu:
 {{< blocks/section color="White" >}}
 {{< blocks/feature_dual >}}
 
+<div style="text-align:center;width:100%;margin-top:80px">
+</div>
+
 <h1 class="text-center">SecureChainCon, View On-Demand</h1>
 <hr>
 
@@ -73,8 +76,7 @@ menu:
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:80px">
-
+<div style="text-align:center;width:100%;margin-top:160px">
 </div>
 <div style="text-align:left;width:100%;margin-top:80px">
 
@@ -110,15 +112,14 @@ Explore how to leverage threat intelligence and risk management frameworks to pr
 {{< /blocks/section >}}
 
 
-
-{{< blocks/section color="Primary" >}}
+{{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
+
 <div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">CDCon and Open Source Summit - Denver June 23-25 </h1>
+<h1 class="text-center">CDCon and Open Source Summit - View on Demand </h1>
 </div>
 
 <hr>
-
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
@@ -127,48 +128,38 @@ Explore how to leverage threat intelligence and risk management frameworks to pr
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Register Today](https://events.linuxfoundation.org/open-source-summit-north-america/register/) 
+[View Playlist ](https://www.youtube.com/playlist?list=PL2KXbZ9-EY9Qvfxh3i9YtiGLqNFHId1qM) 
 </div>
 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
 
-<div style="text-align:center;width:100%;margin-top:80px">
-<h2 class="text-center">Let's Get Together in Denver for CDCon</h2>
+
+<div style="text-align:center;width:100%;margin-top:160px">
 </div>
 
-
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">It Was Great Seeing You All
+<br></h2>
+</div>
 
 <div style="margin-top:10px;margin-left:1px">
 
-It is time to meet in person.
+The complete playlist is now available. 
 
 Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
 
 Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
 
-
-
 <br>
 
-
-<div style="text-align:left;width:100%;margin-top:20px">
-<h2>Attend</h2>
-
 </div>
-
-Why you should attend:
-
-- A place for our contributors to meet face-to-face for problem-solving, discussions and collaboration
-- Share knowledge around latest trends in open source 
-- Meet the experts to learn how to navigate the complex open source environment
-- Learn how others have built their career around open-source development  
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-{{< blocks/section color="primary" >}}
+{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 
