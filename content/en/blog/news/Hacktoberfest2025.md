@@ -6,13 +6,13 @@ author: Arvind Singharpuria
 ---
 
 <div class="col-left">
-<img src="/images/Hacktoberfest-2024.png" alt="Hacktoberfest 2024" height="500px" width="900px" />
+<img src="/images/Hactoberfest2025.png" alt="Hacktoberfest 2025" height="500px" width="900px" />
 </div>
 <p></p>
 
 [Digital Ocean](https://www.digitalocean.com/) celebrates open source by hosting Hacktoberfest each October. During this month, you can earn a digital badge by contributing changes to the Ortelius project. 
 
-Everyone is invited to participate regardless of your expertise level or knowledge of Ortelius. We look forward to working with 'first time' contributors. 
+Everyone is invited to participate regardless of your expertise level or knowledge of Ortelius. We look forward to working with 'first time' contributors. This year, the Ortelius team is focused on building an MCP Server for DevSecOps. We hope you learn much from this hacking adventure. 
 
 ## Get Started
 
