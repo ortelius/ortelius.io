@@ -81,7 +81,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 
 # Get Your Questions Answered
 
-Don’t be shy, schedule a call with [Steve Taylor](https://go.oncehub.com/SteveTaylor) and ask him for help to get started. Building things and mentoring is what he does.
+Don’t be shy, schedule a call with [Steve Taylor](https://calendar.app.google/1B1V3GM6yvN5scNn7) and ask him for help to get started. Building things and mentoring is what he does.
 
 <div align="center">
 <img src="/images/steveandalien2.png" alt="Steve Taylor" />
