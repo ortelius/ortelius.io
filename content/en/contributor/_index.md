@@ -29,7 +29,7 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 # Tips for Getting Started
 
 * Add yourself to the [Ortelius Google Group](https://groups.google.com/g/ortelius-dev)
-* [Join the Discord Channel](https://discord.gg/ZtXU74x)
+* [Join the Discord Channel](https://discord.gg/ZsqfMmQ)
 * Attend your first [General Community Meeting](https://ortelius.io/events/) and [Create Your First Pull Request](https://docs.ortelius.io/guides/contributorguide/pull-request-cheat-sheet/) by adding yourself to the Readme.
 
 <strong>For New Adopters</strong>
