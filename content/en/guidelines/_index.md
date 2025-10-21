@@ -60,7 +60,7 @@ As the composition of the Ortelius board changes over time, we want to ensure th
 
 ### I’ve Got A Question
 
-Ortelius questions can be asked on the [Ortelius Discord Channel](https://discord.com/invite/ZtXU74x) or asked on the [Ortelius Issues on GitHub List](https://github.com/DeployHubProject/DeployHub/issues).
+Ortelius questions can be asked on the [Ortelius Discord Channel](https://discord.com/invite/ZsqfMmQ) or asked on the [Ortelius Issues on GitHub List](https://github.com/DeployHubProject/DeployHub/issues).
 You will find the Ortelius team will be happy to answer questions and share tips and tricks for using Ortelius.
 
 ### I’d Like To Keep Up With Release Announcements

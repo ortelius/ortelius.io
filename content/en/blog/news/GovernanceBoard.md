@@ -37,4 +37,4 @@ To learn more about the Ortelius Governance By-Laws -  visit the [Guidelines pag
 
 Twitter: @OrteliusOs
 LinkedIn: /company/ortelius-open-source
-Discord: <https://discord.com/invite/ZtXU74x>
+Discord: <https://discord.com/invite/ZsqfMmQ>

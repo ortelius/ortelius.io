@@ -12,7 +12,7 @@ menu:
 
 ## Schedule a Quick Overview
 
-Ask Steve Taylor about Ortelius or any questions around participating from creating a pull request to starting a bigger enhancement effort. [Calendar](https://go.oncehub.com/SteveTaylor)
+Ask Steve Taylor about Ortelius or any questions around participating from creating a pull request to starting a bigger enhancement effort. [Calendar](https://calendar.app.google/1B1V3GM6yvN5scNn7)
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}

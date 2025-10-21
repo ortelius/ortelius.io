@@ -35,7 +35,7 @@ Before reaching out to the Ortelius contributors, it is essential to first revie
 ### Step 3: Join and Post to the Ortelius Discord channel
 ![Ortelius Disc Chan](/images/o3.png)
 
-The [Ortelius Discord channel](https://discord.com/invite/ZtXU74x) is a great place to get help from the Ortelius community when you get stuck during code. To get started, join the channel and introduce yourself. It is an active community of developers who are passionate about Ortelius and are always willing to help others. You can post your coding or non-coding problem on the Ortelius Discord channel, and someone from the community will likely respond to your request for help.
+The [Ortelius Discord channel](https://discord.com/invite/ZsqfMmQ) is a great place to get help from the Ortelius community when you get stuck during code. To get started, join the channel and introduce yourself. It is an active community of developers who are passionate about Ortelius and are always willing to help others. You can post your coding or non-coding problem on the Ortelius Discord channel, and someone from the community will likely respond to your request for help.
 
 ### Step 4: Create a GitHub Issue
 ![Ortelius GH Issue](/images/o4.png)

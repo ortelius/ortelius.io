@@ -29,7 +29,7 @@ Watch how to do it:
 
 # Stay in the Loop with Ortelius Events
 
-The best way to stay abreast with Ortelius and its members is by joining the [Ortelius Google Groups.](https://groups.google.com/g/ortelius-dev) This will give you access to the community documents and  meeting invites so you can start regularly attending community meetings. You can also join the [Discord Channel](https://discord.com/invite/ZtXU74x) and meet the group.
+The best way to stay abreast with Ortelius and its members is by joining the [Ortelius Google Groups.](https://groups.google.com/g/ortelius-dev) This will give you access to the community documents and  meeting invites so you can start regularly attending community meetings. You can also join the [Discord Channel](https://discord.com/invite/ZsqfMmQ) and meet the group.
 
 The three main meetings are:
 

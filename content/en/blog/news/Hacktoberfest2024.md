@@ -18,7 +18,7 @@ Everyone is invited to participate regardless of your expertise level or knowled
 
 1) Register to participate in [Hacktoberfest](https://hacktoberfest.com/)
 2) Join the [Ortelius Google Group](https://groups.google.com/g/ortelius-dev) to keep updated on project activities.
-3) Join the [Ortelius Discord Channel.](https://discord.com/invite/ZtXU74x) 
+3) Join the [Ortelius Discord Channel.](https://discord.com/invite/ZsqfMmQ) 
 4) Check-out the [Become an Ortelius Contributor page](https://ortelius.io/contributor/) for help in getting started with the Ortelius team.
 5) Read the [Become a Contributor Blog](https://ortelius.io/blog/2023/04/10/getting-started-as-an-ortelius-open-source-contributor/) for help on creating your first pull request. 
 6) Learn to [submit a blog.](https://ortelius.io/blog/2024/09/11/ortelius-is-looking-for-a-few-good-blogs/)
