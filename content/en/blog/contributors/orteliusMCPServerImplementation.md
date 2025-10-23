@@ -63,6 +63,14 @@ This bot isn’t just a convenience—it’s a long-term investment in the futur
 
 Stay tuned for more updates—we’re just getting started!
 
+### Links
+
+For more details on the MCP issues, see:
+- [#984](https://github.com/ortelius/ortelius/issues/984)
+- [#978](https://github.com/ortelius/ortelius/issues/978)
+- [#974](https://github.com/ortelius/ortelius/issues/974)
+- [#973](https://github.com/ortelius/ortelius/issues/973)
+
 ### About the Author:
 
 <img src="/images/jing.jpg" alt="Jing Chen"  height="400px" width="250px"  />
