@@ -1,18 +1,18 @@
 ---
-date: 2024-09-11
-title: "Hacktoberfest 2024"
-summary: Ortelius Hacktoberfest 2024
-author: Tracy Ragan
+date: 2025-09-11
+title: "Hacktoberfest 2025"
+summary: Ortelius Hacktoberfest 2025
+author: Arvind Singharpuria
 ---
 
 <div class="col-left">
-<img src="/images/Hacktoberfest-2024.png" alt="Hacktoberfest 2024" height="500px" width="900px" />
+<img src="/images/Hactoberfest2025.png" alt="Hacktoberfest 2025" height="500px" width="900px" />
 </div>
 <p></p>
 
 [Digital Ocean](https://www.digitalocean.com/) celebrates open source by hosting Hacktoberfest each October. During this month, you can earn a digital badge by contributing changes to the Ortelius project. 
 
-Everyone is invited to participate regardless of your expertise level or knowledge of Ortelius. We look forward to working with 'first time' contributors. 
+Everyone is invited to participate regardless of your expertise level or knowledge of Ortelius. We look forward to working with 'first time' contributors. This year, the Ortelius team is focused on building an MCP Server for DevSecOps. We hope you learn much from this hacking adventure. 
 
 ## Get Started
 
@@ -40,20 +40,15 @@ We have created a Hacktoberfest GitHub label so you can easily get credit for yo
 For those of you who are just getting to know Ortelius, the following is a list of project issues with some 'good first issues.'  Ortelius has active maintainers who can assist you with your first time contribution and a quick turnaround on your pull request. Reach out to the team on Discord, we are all happy to help newcomers. 
 
 
-- [#945 Ortelius CLI GitHub Action for Marketplace](https://github.com/ortelius/ortelius/issues/945)
-- [#915 Figma for Details View Design](https://github.com/ortelius/ortelius/issues/915)
-- [#914 Figma for Dashboard/Landing Page Desgin](https://github.com/ortelius/ortelius/issues/914)
-- [#907 Microservice | ms-scorecard | ms-sbom | Newer Amazon Linux ARM64 image](https://github.com/ortelius/ortelius/issues/907)
-- [#872 Create example Svelt hamburger menu](https://github.com/ortelius/ortelius/issues/872)
-- [#683 add telemetry and mitigations to environments](https://github.com/ortelius/ortelius/issues/683)
-- [#674 Rollup badges from Components](https://github.com/ortelius/ortelius/issues/674)
-- [#673 Add badges to the Component](https://github.com/ortelius/ortelius/issues/673)
-- [#672 Add the Workflow file to the Component Details](https://github.com/ortelius/ortelius/issues/672)
-- [#655 Add Pulumi as an additional way to create clusters and deploy Ortelius](https://github.com/ortelius/ortelius/issues/655)
-- [#654 Add SLSA Go releaser Github Workflow to scec-ortelius-cli](https://github.com/ortelius/ortelius/issues/654)
-- [#585 Svelt UI display Component Version data](https://github.com/ortelius/ortelius/issues/585)
-- [#549 UX Component Details](https://github.com/ortelius/ortelius/issues/549)
-- [#545 UX Component List](https://github.com/ortelius/ortelius/issues/545)
-
+- [#987 Update ortelius mcp to bump to fixed pkg version](https://github.com/ortelius/ortelius/issues/987)
+- [#986 Create GH issue for critical or high vuln found](https://github.com/ortelius/ortelius/issues/986)
+- [#985 Create Ortelius Comp and App Version when a new version of Jenkins is released](https://github.com/ortelius/ortelius/issues/985)
+- [#984 Ortelius MCP](https://github.com/ortelius/ortelius/issues/984)
+- [#983 Add rest api endpoint to get critical and high vulns in an env](https://github.com/ortelius/ortelius/issues/983)
+- [#982 Convert Ortelius CLI from python to go](https://github.com/ortelius/ortelius/issues/982)
+- [#979 Reverse engineering a SBOM file from Jenkins' WAR file](https://github.com/ortelius/ortelius/issues/979)
+- [#978 Ortelius MCP - Architecture Design and Discussion](https://github.com/ortelius/ortelius/issues/978)
+- [#977 Create documentation on how to install Jenkins Embedded Badging Plugin](https://github.com/ortelius/ortelius/issues/977)
+- [#988 Update Hacktoberfest landing page for 2025](https://github.com/ortelius/ortelius/issues/988)
 
 We look forward to working with you on becoming a leading Ortelius contributor.

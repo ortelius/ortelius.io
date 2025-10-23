@@ -1,4 +1,15 @@
-# Ortelius MCP Server Accelerates Developers’ CVE Mitigation
+---
+date: 2025-09-03
+title: "Ortelius MCP Server Accelerates Developers’ CVE Mitigation "
+linkTitle: "Ortelius MCP Server Accelerates Developers’ CVE Mitigation"
+author: Jing Chen 
+---
+
+<div class="col-center">
+<img src="/images/MCPBlogFlow.png" alt="Ortelius MCP Server"  height="400px" width="400px"  />
+</div>
+<p></p>
+
 
 ## Ortelius MCP Automated Dependency Bot – Technical Overview
 
@@ -6,7 +17,9 @@ At the Ortelius Open Source Project, we're always working behind the scenes to m
 
 Keeping those dependencies up to date is crucial for security, performance, and compatibility. But routine updates, especially the safe ones, can clutter developer workflows and distract from meaningful work. That’s why we’re building a smart automated bot to handle safe, low-risk dependency upgrades—so our developers don’t have to.
 
-The Ortelius MCP server is designed to accelerate developer productivity by proactively managing software dependencies and mitigating Common Vulnerabilities and Exposures (CVEs) across Ortelius repositories. Our automated dependency bot service is a crucial component of this ecosystem, aiming to streamline safe dependency upgrades with minimal developer intervention.
+The Ortelius MCP server is designed to accelerate developer productivity by proactively managing software dependencies and mitigating Common Vulnerabilities and Exposures (CVEs) across Git repositories. Our automated dependency bot service is a crucial component of this ecosystem, aiming to streamline safe dependency file upgrades with minimal developer intervention.
+
+
 
 ### Core Functionality
 
@@ -34,7 +47,7 @@ The Ortelius MCP server is designed to accelerate developer productivity by proa
 
 ### Technical Architecture Highlights
 
-- **Containerised Service:** The bot runs as a stateless, containerised microservice, enabling scalable deployment across cloud or on-prem environments.  
+- **Containerized Service:** The bot runs as a stateless, containerized microservice, enabling scalable deployment across cloud or on-prem environments.  
 - **API-Driven Integrations:** Interfaces with GitHub API, Ortelius MCP, and multiple package registries to fetch dependency data, apply changes, and manage PRs.  
 - **Modular Risk Analysis:** Extensible framework for vulnerability checks, breaking change detection, and custom risk policies.  
 - **Logging and Monitoring:** Detailed logging of actions and outcomes, with dashboards tracking PR success rates and flagged updates for transparency.
@@ -49,3 +62,13 @@ The Ortelius MCP server is designed to accelerate developer productivity by proa
 This bot isn’t just a convenience—it’s a long-term investment in the future of Ortelius. By automating the routine, we empower our people to do what they do best: innovate, collaborate, and grow the platform for everyone.
 
 Stay tuned for more updates—we’re just getting started!
+
+### About the Author:
+
+<img src="/images/jing.jpg" alt="Jing Chen"  height="400px" width="250px"  />
+<p></p>
+
+[Jing Chen](https://www.linkedin.com/in/jingchen-ku/)
+Jing specializes in driving enterprise-wide digital transformation and delivering significant financial and operational improvements across financial services. With a proven track record of steering complex, large-scale IT programmes from conception to successful completion, she empowers organizations to achieve measurable outcomes, including multi-million dollar budget savings and substantial reductions in manual work and business downtime through strategic automation and DevSecOps initiatives. Her leadership style fosters collaboration and focuses relentlessly on impactful results, building strong stakeholder relationships at all levels.
+
+
