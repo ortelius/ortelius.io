@@ -1,5 +1,42 @@
 /*
-Add styles or override variables from the theme here.
+CRITICAL Docsy Variable Fixes
+This file contains variables that MUST be loaded extremely early in the SASS pipeline.
 */
 
-@import "base";
+// --- CRITICAL DOCSY/HUGO MODULE VARS ---
+$td-font-awesome-font-name: "Font Awesome 6 Free";
+$td-font-awesome-font-style: normal;
+$td-font-awesome-font-weight: 900;
+$td-font-weight-body-text: 400; 
+$td-web-font-path: ""; 
+$td-enable-google-fonts: true;
+
+// Define spacing values Docsy uses early on.
+$spacer: 1rem;
+$td-block-space-top-base: 4 * $spacer;
+$td-block-space-bottom-base: 4 * $spacer;
+
+// --- CRITICAL COLOR DEFINITIONS AND FIXES ---
+$primary: #f9f9f9;  
+$dark: #403F4C;
+$gray-300: #dee2e6; 
+$gray-600: #888;
+$orange: #BA5A31; 
+$ortelius-orange: rgb(248, 149, 26); 
+$td-box-colors: $dark, $primary, $dark, $primary, $dark, $primary, $dark, $primary, $dark, $primary, $dark, $primary, $dark, $primary;
+
+// --- FIX FOR SIDEBAR & BORDER COLORS ---
+$td-sidebar-bg-color: rgba($primary, 0.03); 
+$td-sidebar-border-color: $gray-300;
+$td-sidebar-tree-root-color: $primary;
+$border-color: $gray-300;
+$secondary: #FFA630; 
+
+// --- FIX FOR NAVBAR BACKGROUND ---
+$td-navbar-bg-color: $dark; 
+$navbar-dark-bg: $dark; 
+$navbar-dark-color: rgba($white, 0.9); 
+
+// --- FIX FOR REMAINING UNDEFINED VARIABLES ---
+$pagination-color: $gray-600;
+$yiq-contrasted-threshold: 200;

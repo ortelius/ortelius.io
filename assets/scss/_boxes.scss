@@ -3,7 +3,7 @@
 // box-variant creates the main style for a colored section
 @mixin box-variant($parent, $color-name, $color-value) {
     $text-color: color-contrast($color-value);
-    $link-color: mix($ortelius_orange, $text-color, lightness($color-value));
+    $link-color: mix($ortelius-orange, $text-color, lightness($color-value));
     $link-hover-color: if(
       color-contrast($link-color) == $color-contrast-light,
       shade-color($link-color, $link-shade-percentage),

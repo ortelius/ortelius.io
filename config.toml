@@ -137,6 +137,8 @@ enable = true
 yes = 'Glad to hear it! Please <a href="https://github.com/ortelius/website/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/ortelius/website/issues/new">tell us how we can improve</a>.'
 
+navbar_translucent_over_cover_disable = true
+
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page,
 # add "hide_readingtime: true" to the page's front matter

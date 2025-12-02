@@ -6,6 +6,65 @@ menu:
   main:
    weight: 20
 ---
+
+
+{{< blocks/section color="white" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">Ortelius Holiday Party 2025</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/AlienholdingManura.png" alt="Open Source Summit" height="400px" width="500px" />
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">December 17th, 2025 8:30 AM MT
+<br></h2>
+
+[Join via Zoom](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86287561020&jst=3#success) 
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+<h2 class="text-left">Keynote with Eric Brewer 9:00 AM MT
+<br></h2>
+
+<img src="/images/EricBrewer.jpg" alt="Eric Brewer" height="270px" width="200px" />
+
+Eric Brewer is one of the most influential thinkers in modern computing. As the creator of the CAP Theorem, his work reshaped how distributed systems balance consistency, availability, and fault tolerance, laying the foundation for today’s cloud and microservice architectures. Join us as he answers the questions we all want to know - platform engineering, the future of DevOps, and of course AI.
+
+### Tech Talks
+9:50 - 10:20: Sacha Wharton - Platform Engineering in Easy Steps
+
+10:20 - 10:50: Brian Dawson- MCP setup for Local Development
+
+<br>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
@@ -36,11 +95,6 @@ menu:
 [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) 
 
 </div>
-
-
-</div>
-
-
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
@@ -111,53 +165,6 @@ Explore how to leverage threat intelligence and risk management frameworks to pr
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">CDCon and Open Source Summit - View on Demand </h1>
-</div>
-
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/cdcon2025.png" alt="Open Source Summit" height="400px" width="500px" />
-</div>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Playlist ](https://www.youtube.com/playlist?list=PL2KXbZ9-EY9Qvfxh3i9YtiGLqNFHId1qM) 
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">It Was Great Seeing You All
-<br></h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-The complete playlist is now available. 
-
-Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
-
-Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
-
-<br>
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
@@ -283,6 +290,7 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 </div>
 <div style="width:60%">
 <div id='buzzsprout-small-player-1774320'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/1774320.js?container_id=buzzsprout-small-player-1774320&player=small'></script></div>
+</div>
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
