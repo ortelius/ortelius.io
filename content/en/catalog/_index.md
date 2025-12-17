@@ -1,7 +1,7 @@
 ---
 title: Strengthen Your OS Supply Chain
-description: Battle-ready Your Supply Chain
-summary: Use the Security Evidence You Already Collect
+description: Address Operational Blind Spots in Live Systems
+summary: Make your SBOM Intelligence Actionable
 type: contributor
 ---
 
@@ -33,11 +33,11 @@ The Ortelius aggregated SBOM supports compliance with [Executive Order 14028 –
 {{< blocks/section color=primary >}}
 
 {{< blocks/feature_dual_left_sm >}} 
-## A Battle-ready Software Supply Chain
+## Actionable SBOM Intelligence
 
-Using its stored SBOM data, Ortelius conducts continuous surveillance for new vulnerabilities—even after containers are deployed. This is critical as modern software constantly evolves, introducing new risks.
+Using stored SBOM data for every deployment, Ortelius conducts continuous surveillance for new vulnerabilities, even after artifacts are deployed. This is critical as open-source software vulnerabilities are announced daily, introducing new risks.
 
-By persistently scanning OSV.dev, Ortelius detects newly disclosed vulnerabilities the moment they're published. This enables rapid response, reduces attacker dwell time, and helps ensure compliance in a shifting threat environment.
+By persistently synching OSV.dev, Ortelius detects newly disclosed vulnerabilities the moment they're published. This enables rapid response, reduces attacker dwell time, and helps ensure compliance in a shifting threat environment.
 
 Continuous scanning means your defenses stay current, your supply chain stays secure, and your operations remain resilient.
 
@@ -49,7 +49,7 @@ Continuous scanning means your defenses stay current, your supply chain stays se
 
 {{< /blocks/section >}}
 
-{{< blocks/section color=gray >}}
+{{< blocks/section color=primary >}}
 
 {{< blocks/feature_dual_left_sm >}} 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
@@ -63,7 +63,8 @@ Ortelius acts as a centralized command center for software supply chain security
 Try Ortelius for free and see how it can transform your vulnerability response and compliance readiness.
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
-[Start Today](https://www.deployhub.com/deployhub-team/)
+
+[Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/)
 </div>
 {{< /blocks/feature_dual >}}
 

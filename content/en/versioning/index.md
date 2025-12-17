@@ -41,7 +41,7 @@ Because components include open-source packages identified in their SBOMs, Ortel
 
 {{< /blocks/section >}}
 
-{{< blocks/section color=gray >}}
+{{< blocks/section color=white >}}
 
 {{< blocks/feature_dual_left_sm >}} 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
@@ -55,7 +55,8 @@ Ortelius acts as a command hub for tracking changes, managing vulnerabilities, a
 Try the free SaaS version of Ortelius and experience its powerful capabilities firsthand.
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
-[Start Today](https://www.deployhub.com/deployhub-team/)
+
+[Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/)
 </div>
 {{< /blocks/feature_dual >}}
 

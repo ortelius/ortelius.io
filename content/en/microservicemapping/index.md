@@ -82,7 +82,7 @@ Ortelius operates in lockstep with leading security tools used in open-source pr
 
 {{< /blocks/section >}}
 
-{{< blocks/section color=gray >}}
+{{< blocks/section color=white >}}
 
 {{< blocks/feature_dual_left_sm >}} 
 <img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="300px" width="290px"/>
@@ -97,7 +97,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Start Today](https://www.deployhub.com/deployhub-team/) 
+[Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/) 
 </div>
 {{< /blocks/feature_dual >}}
 

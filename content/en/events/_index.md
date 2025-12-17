@@ -38,7 +38,8 @@ menu:
 <h2 class="text-left">December 17th, 2025 8:30 AM MT
 <br></h2>
 
-[Join via Zoom](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86287561020&jst=3#success) 
+[View On-Demand Awards and Recap](https://youtu.be/-0xiasS2-oM)
+
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
@@ -48,12 +49,17 @@ menu:
 
 <img src="/images/EricBrewer.jpg" alt="Eric Brewer" height="270px" width="200px" />
 
+[View On-Demand](https://youtu.be/CCoIqrLT4Gw)
+
 Eric Brewer is one of the most influential thinkers in modern computing. As the creator of the CAP Theorem, his work reshaped how distributed systems balance consistency, availability, and fault tolerance, laying the foundation for today’s cloud and microservice architectures. Join us as he answers the questions we all want to know - platform engineering, the future of DevOps, and of course AI.
 
 ### Tech Talks
 9:50 - 10:20: Sacha Wharton - Platform Engineering in Easy Steps
+[View On-Demand](https://youtu.be/dt3lkicLWvo)
+
 
 10:20 - 10:50: Brian Dawson- MCP setup for Local Development
+[View On-Demand](https://youtu.be/kmldxVQWzUM)
 
 <br>
 
@@ -99,71 +105,6 @@ Eric Brewer is one of the most influential thinkers in modern computing. As the 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
-
-{{< blocks/section color="White" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-</div>
-
-<h1 class="text-center">SecureChainCon, View On-Demand</h1>
-<hr>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Now](https://www.youtube.com/playlist?list=PLjQ1l9KZoIQ1EO0f55v9Us6FsqtJuTKSS)
-</div>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="379px" width="589px" />
-
-
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-<div style="text-align:left;width:100%;margin-top:80px">
-
-
-<h2 class="text-left">Key Takeaways
-<br></h2>
-
-</div>
-<div style="margin-top:10px;margin-left:1px">
-
-
-- Security in the DevOps Pipeline
-Discover the critical role of integrating security tooling within the DevOps pipeline to proactively identify and remediate vulnerabilities from code to cloud.
-
-- Vulnerability Management
-Master strategies for controlling vulnerabilities, including SAST, DAST, SBOMs, and continuous vulnerability scanning. Learn how to automate compliance checks and policy enforcement to enhance efficiency and consistency.
-
-- Culture of Collaboration
-Understand the importance of fostering a culture of shared responsibility between development, operations, and security teams to successfully implement DevSecOps best practices.
-
-- Threat Intelligence & Risk Management
-Explore how to leverage threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats before they escalate.
-
-<div style="font-size:1.5em;text-align:center;margin-top:10px">
-
-[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
-
-</div>
-
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
 
 
 {{< blocks/section color="white" >}}
@@ -234,65 +175,6 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 
 
 {{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-
-<h2>On-Demand</h2>
-</div>
-
-
-
-<br>
-<div style="width:60%">
-{{< youtube bqQRqbVjSx4 >}}
-</div>
-<br>
-
-<div style="width:60%">
-{{< youtube nBzN9S5np44 >}}
-</div>
-<br>
-
-
-<div style="width:60%">
-{{< youtube C9-olwp1Rss >}}
-</div>
-<br> 
-
-<div style="width:60%">
-{{< youtube Lk7R_92QcFQ >}}
-</div>
-<br> 
-
-
-<div style="width:60%">
-{{< youtube xez36h_WJRI >}}
-</div>
-<br>
-
-<div style="width:60%">
-{{< youtube HftLrIDc4s0 >}}
-</div>
-
-
-{{< /blocks/feature_dual >}}
-
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-
-<h2>Podcast</h2>
-</div>
-<div style="width:60%">
-<div id='buzzsprout-small-player-1774320'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/1774320.js?container_id=buzzsprout-small-player-1774320&player=small'></script></div>
-</div>
-{{< /blocks/feature_dual >}}
-
 {{< /blocks/section >}}
 
 
