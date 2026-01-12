@@ -8,6 +8,64 @@ menu:
 ---
 
 
+
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">Open Source Summit and CDCon 2026</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/cdcon2026.png" alt="Open Source Summit and CDCon 2026" height="300px" width="600px" />
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">Driving the Next Evolution of DevOps Through AI, Platform Engineering, Security, and Open Source
+<br></h2>
+
+
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+<h3 class="text-left">Minneapolis, Minnesota, May 18th - 20th, 2026</h3>
+
+<br>
+
+[Submit a Talk](https://cd.foundation/cdcon-2026/)
+
+<br></h2>
+
+
+This year, cdCon is intentionally designed around intensive learning and deep knowledge sharing in four critical areas that are actively driving the evolution of DevOps, CI/CD, and platform engineering. The way we build, deliver, and operate software is changing rapidly. CI/CD pipelines are no longer responsible for shipping application code alone; they now support complex platforms, distributed systems, and increasingly, AI and machine learning workloads. At the same time, security expectations are rising, and open source software continues to form the backbone of modern delivery. cdCon 2026 is focused on giving practitioners the clarity, skills, and shared understanding needed to navigate and lead this change.
+
+
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
@@ -35,7 +93,7 @@ menu:
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">December 17th, 2025 8:30 AM MT
+<h2 class="text-left">View On Demand
 <br></h2>
 
 [View On-Demand Awards and Recap](https://youtu.be/-0xiasS2-oM)
@@ -44,7 +102,7 @@ menu:
 
 <div style="margin-top:10px;margin-left:1px">
 
-<h2 class="text-left">Keynote with Eric Brewer 9:00 AM MT
+<h2 class="text-left">Keynote with Eric Brewer 
 <br></h2>
 
 <img src="/images/EricBrewer.jpg" alt="Eric Brewer" height="270px" width="200px" />
@@ -54,11 +112,11 @@ menu:
 Eric Brewer is one of the most influential thinkers in modern computing. As the creator of the CAP Theorem, his work reshaped how distributed systems balance consistency, availability, and fault tolerance, laying the foundation for today’s cloud and microservice architectures. Join us as he answers the questions we all want to know - platform engineering, the future of DevOps, and of course AI.
 
 ### Tech Talks
-9:50 - 10:20: Sacha Wharton - Platform Engineering in Easy Steps
+Sacha Wharton - Platform Engineering in Easy Steps
 [View On-Demand](https://youtu.be/dt3lkicLWvo)
 
 
-10:20 - 10:50: Brian Dawson- MCP setup for Local Development
+Brian Dawson- MCP setup for Local Development
 [View On-Demand](https://youtu.be/kmldxVQWzUM)
 
 <br>
