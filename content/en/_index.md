@@ -22,15 +22,12 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="width:100%;margin-top:100px;max-width:1000px">
 
-Most security tools focus on pre-release scanning, finding issues before software ships.
+<h2>Your platform doesn’t stop changing after deployment.</h2>
+<p></p>
 
-<strong>But for platform engineers, the real challenge begins after deployment, when services are running across clusters, environments, and infrastructure you are expected to operate, govern, and support. </strong>
+Once services hit production, dependency graphs shift, versions drift, and new CVEs appear daily, but most platforms lose visibility the moment software ships. Ortelius provides a real-time deployment control plane built on a continuously updated digital twin of your runtime environment. It models deployed services, containers, packages, and their dependency topology across clusters and environments.
 
-Open-source components continue to change, new vulnerabilities are disclosed daily, and yet most platforms lose visibility once software reaches production. Ortelius closes this operational visibility gap.
-
-Ortelius continuously maintains a deployment digital twin that models what is actually running across your environments, applications, microservices, containers, packages, and their dependencies. It provides platform teams with a living map of the software supply chain in production, enabling real-time insight into system composition, CVE threat landscape, version drift, and downstream impact when change occurs.
-
-Rather than relying on pre-deployment scans, Ortelius delivers runtime-aware context, showing a components' open-source package usage, where they are deployed, and how they relate across the platform. This allows teams to understand the true operational footprint of their services and the attack surface of emerging issues.
+No agents. No rescanning. No stale SBOMs.
 </div>
 
 {{< /blocks/feature_dual  >}}
@@ -39,15 +36,15 @@ Rather than relying on pre-deployment scans, Ortelius delivers runtime-aware con
 
 <div style="width:100%;margin-top:100px;max-width:1000px">
 
-By correlating <strong>SBOM data and CVEs from OSV.dev </strong>with deployed components, operating system packages, and endpoint metadata, Ortelius enables:
+With Ortelius, platform teams can:
 
-- <strong>Dependency & Impact Visibility</strong> – Instantly identify which running services in each environment are affected when a new vulnerability is introduced
+- <strong>Track CVE Impact</strong> – Instantly identify which running services in each environment are affected when a new vulnerability is introduced
 
-- <strong>Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
+- <strong>Maintain Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
 
-- <strong>Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
+- <strong>Deliver Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
 
-With Ortelius, platform engineers are no longer operating in the dark after deployment. You gain continuous awareness of what is running, how it is connected, and what is impacted, providing the foundation for effective platform governance, reliable operations, and security informed by real runtime impact to deliver faster, safer change across complex distributed systems.
+
 
 The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
 
