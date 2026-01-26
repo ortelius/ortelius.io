@@ -137,7 +137,7 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 {{< blocks/section color=black >}}
 
 <div class="col-12">
-<h1 class="text-left">Ortelius Ecosystem</h1>
+<h1 class="text-left">Explore the Ortelius Ecosystem</h1>
 </div>
 
 {{< blocks/feature_dual  >}}
