@@ -138,11 +138,12 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 {{< /blocks/section >}}
 
 {{< blocks/section color=black >}}
+
 <div class="col-12">
-<h1 class="text-center">Ortelius Ecosystem</h1>
+<h1 class="text-left">Ortelius Ecosystem</h1>
 </div>
 
-
+{{< blocks/feature_dual  >}}
 <div class="col-sm"></div>
 
 <div class="col-sm" style="text-wrap:nowrap">
@@ -156,16 +157,28 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 {{% /blocks/table_center %}}
 
+</div>
+
 <div style="margin-top:40px;margin-left:5px">
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
 [View All](https://docs.ortelius.io/guides/userguide/integrations/) 
 </div>
-</div>
 
 </div>
-<div class="col-sm"></div>
+
+
+{{< /blocks/feature_dual  >}}
+
+{{< blocks/feature_dual  >}}
+
+<div style="margin-top:10px">
+<img src="/images/explore-ecosystem.jpg" alt="Ortelius Ecosystem" height="25%" width="25%" style="margin-left:110px"/>
+</div>
+
+
+{{< /blocks/feature_dual  >}}
 {{< /blocks/section >}}
 
 
@@ -205,7 +218,9 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 <div style="margin-top:10px;margin-left:50px">
 
-## Extend Jenkins for Continuous Post Deployment Security
+<h1 class="text-center">Extend Jenkins for Continuous Post Deployment Security </h1>
+<hr>
+
 
 Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
 <div style="font-size:1.8em;">
@@ -222,19 +237,13 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 {{< blocks/section color=black >}}
 
-{{< blocks/feature_dual_left_sm >}} 
+{{< blocks/feature_dual >}} 
 
-<div style="margin-top:10px">
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:110px"/>
-</div>
+<div style="margin-top:10px;margin-left:50px">
 
-{{< /blocks/feature_dual_left_sm >}} 
+<h1 class="text-center">Sign-up and Get Started Managing Post Deployment CVEs</h1>
+<hr>
 
-{{< blocks/feature_dual >}}
-
-<div style="margin-top:10px;margin-left:100px">
-
-## Sign-up and Get Started Managing Post Deployment CVEs
 
 From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
@@ -247,7 +256,17 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 </div>
 
-{{< /blocks/feature_dual >}}
+{{< /blocks/feature_dual >}} 
+
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:10px">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:110px"/>
+</div>
+
+
+
+{{< /blocks/feature_dual_left_sm >}} 
 {{< /blocks/section >}}
 
 
@@ -257,7 +276,9 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 
 <h2 class="text-center">Get Involved</h2>
-<p></p>
+
+<hr>
+
 </div>
 {{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
 {{% /blocks/feature %}}
