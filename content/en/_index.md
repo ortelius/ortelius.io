@@ -15,61 +15,65 @@ description: Welcome to the Ortelius Open Source Project Site
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
-<h1 class="text-center">Post-Deployment Open-Source Vulnerabilities is the New Front Line</h1>
-<h3 class="text-center">Ortelius Delivers Continuous, Defensive Vulnerability Management for Live Systems</h3>
-
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/Vulnerabilites.svg" alt="Ortelius Vulnerability Evidence Store" height="100%" width="100%" />
-</div>
-
-{{< /blocks/feature_dual >}}
-
-{{< blocks/feature_dual >}}
-
-<div style="width:100%;margin-top:100px;max-width:700px">
-
-Most security tools are designed for offense, catching vulnerabilities before software ships. But risk does not end at release. New vulnerabilities in open-source packages are disclosed daily, long after applications are deployed and running in production. This post-deployment gap is where most security stacks fall short, and where Ortelius delivers critical defensive coverage.
-
-Ortelius continuously maintains a deployment digital twin that maps your software supply chain to live environments. It monitors what is actually running in production, staging, and test systems, detecting newly disclosed vulnerabilities the moment they become relevant to deployed software, when impact is real and response time matters most. Unlike static SBOM repositories or pre-release scanners, Ortelius provides operational visibility into the true runtime attack surface.
-
-By correlating Software Bill of Materials and CVEs from OSV.dev with deployed OS packages, application components, and endpoint metadata, Ortelius delivers:
-
-- Precise Impact Mapping – Immediately identify which live applications, containers, microservices, or systems are affected by newly disclosed CVEs
-
-- Actionable SBOM Intelligence – See exactly where vulnerable components are running across environments, without scanning or agents
-
-- Accelerated Remediation – Reduce MTTR by prioritizing vulnerabilities that threaten live, mission-critical systems
-
-With Ortelius, teams are no longer blind after deployment. You gain continuous, real-time awareness of your operational attack surface, enabling a clear defensive strategy focused on fixing the vulnerabilities that actually matter.
-
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
-
-
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
+{{< blocks/section color=black >}}
+<h1 class="text-center">Ortelius Delivers Post-Deployment, Defensive Vulnerability Management for Live Systems</h1>
 
 {{< blocks/feature_dual  >}}
 
-<h1 class="text-left">Exposing Threats Where They Matter Most</h1>
+<div style="width:100%;margin-top:100px;max-width:1000px">
+
+Most security tools focus on pre-release scanning, finding issues before software ships.
+
+<strong>But for platform engineers, the real challenge begins after deployment, when services are running across clusters, environments, and infrastructure you are expected to operate, govern, and support. </strong>
+
+Open-source components continue to change, new vulnerabilities are disclosed daily, and yet most platforms lose visibility once software reaches production. Ortelius closes this operational visibility gap.
+
+Ortelius continuously maintains a deployment digital twin that models what is actually running across your environments, applications, microservices, containers, packages, and their dependencies. It provides platform teams with a living map of the software supply chain in production, enabling real-time insight into system composition, CVE threat landscape, version drift, and downstream impact when change occurs.
+
+Rather than relying on pre-deployment scans, Ortelius delivers runtime-aware context, showing a components' open-source package usage, where they are deployed, and how they relate across the platform. This allows teams to understand the true operational footprint of their services and the attack surface of emerging issues.
+</div>
+
+{{< /blocks/feature_dual  >}}
+
+{{< blocks/feature_dual  >}}
+
+<div style="width:100%;margin-top:100px;max-width:1000px">
+
+By correlating <strong>SBOM data and CVEs from OSV.dev </strong>with deployed components, operating system packages, and endpoint metadata, Ortelius enables:
+
+- <strong>Dependency & Impact Visibility</strong> – Instantly identify which running services in each environment are affected when a new vulnerability is introduced
+
+- <strong>Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
+
+- <strong>Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
+
+With Ortelius, platform engineers are no longer operating in the dark after deployment. You gain continuous awareness of what is running, how it is connected, and what is impacted, providing the foundation for effective platform governance, reliable operations, and security informed by real runtime impact to deliver faster, safer change across complex distributed systems.
+
+The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
+
+{{< /blocks/feature_dual  >}}
+
+</div>
+
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/Ortelius-Dashboard1.svg" alt="Ortelius Post-Deployment Vulnerability Detection" height="100%" width="100%" />
+</div>
+
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="black" >}}
+
+{{< blocks/feature_dual  >}}
+
+<h1 class="text-center">Exposing Threats and Reducing MTTR</h1>
 <hr>
-Modern software is no longer a single application, it is a distributed system composed of hundreds of microservices, containers, open-source libraries, and increasingly, AI agents. Each deployed component expands the attack surface and introduces risk that traditional, pre-release security tools cannot see. Ortelius delivers post-deployment visibility mapping CVEs to where they are running, and what is at risk when a new vulnerability is disclosed. With Ortelius, teams can:
 
-- Visualize the live software attack surface across production, including edge devices
+Ortelius enables platform teams to convert operational insight into executive-level security intelligence. When a newly disclosed vulnerability affects a running service, Ortelius immediately identifies the exposed systems and the urgency of response, providing clarity the moment risk appears.
 
-- Continuously track deployed packages and dependencies without scanning or agents installed on end-points
+With exploits now emerging in days, not months, and average remediation timelines <strong>stretching beyond 60–100 days</strong>, Ortelius focuses attention on the vulnerabilities that matter now. CISOs gain real-time visibility into threats impacting live production systems, allowing teams to prioritize response within hours, not weeks.
 
-- Detect critical and high-risk CVEs after release, when exposure is real
-
-This shifts security from theoretical risk assessment to real-world defense, focusing remediation efforts on the vulnerabilities that threaten live systems.  
+This shared, runtime-driven view of risk aligns platform engineering and security leadership around a single source of truth, reducing mean time to remediation, shrinking the attack surface, and enabling faster containment before exposure escalates into operational outages or reportable security incidents.
 
 {{< /blocks/feature_dual >}}
 
@@ -78,40 +82,47 @@ This shifts security from theoretical risk assessment to real-world defense, foc
 <h1 class="text-center">Why Post-Deployment Visibility Matters</h1>
 <hr>
 
-Pre-release scans aren’t enough. New vulnerabilities are disclosed **after** deployment—often days or weeks later. Ortelius fills this critical gap by continuously tracking what’s live, what’s vulnerable, and what needs fixing.
+Risk doesn’t stop at release. New vulnerabilities are disclosed continuously after software is deployed, when services are already running in production. Without runtime visibility, teams cannot determine what is truly exposed.
 
-- Real-time CVE exposure  
-- Live attack surface mapping  
-- Risk prioritization per environment  
-- Immediate action for remediation  
+Ortelius correlates new CVEs with what is actually deployed, enabling teams to act on real risk, not assumptions.
+
+- Real-time CVE relevance for running workloads
+
+- Live attack surface visibility across environments
+
+- Environment-based risk prioritization
+
+- Executive-ready reporting of immediate production threats
+
+- For CISOs: Ortelius delivers a real-time view of which vulnerabilities pose active risk to live systems—separating urgent threats from theoretical exposure. 
 
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color=black >}}
 
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">The Ortelius Edge</h1>
+<h1 class="text-center">Ortelius - a Defensive Edge</h1>
 <hr>
 
-**Deployed Software Intelligence**  
-Know exactly what version of each component is deployed and where.
+**CVE-to-Runtime Dependency Correlation**  
+Automatically correlate newly disclosed CVEs to deployed dependency graphs, identifying impacted workloads, services, and clusters in real time.
 
- **Real-Time CVE Mapping**  
-Connect new CVEs to deployed components across systems.
+**Live Attack Surface Topology Awareness**  
+Visualize the runtime attack surface as a dynamic topology map spanning production, cloud, hybrid, and edge environments—based on actual deployment state.
 
-**Attack Surface Awareness**  
-View your threat exposure across all environments in real time.
+**Continuous Attack Surface Insight**  
+Understand your true runtime exposure across production, cloud, and edge environments based on what is actually deployed, not theoretical risk.
 
- **Build-to-Deploy Traceability**  
-Map software from code to CI/CD to deployment with full SBOM lineage.
+**End-to-End Delivery Lineage & Provenance**  
+Trace software from source commit through CI/CD workflows to deployed runtime artifacts, preserving SBOM provenance and build-to-deploy lineage for audit, incident response, and change governance.
 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual  >}}
-<h1 class="text-center">Built for DevSecOps and cATO</h1>
+<h1 class="text-center">Built for Platform Engineers and CISO</h1>
 <hr>
 
 Ortelius supports your DevSecOps pipeline and security compliance:
@@ -125,56 +136,6 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
-
-
-
-
-
-{{< blocks/section color=black >}}
-
-<div class="col-12">
-<h2 class="text-center">Ortelius Use Cases  </h2>
-<p></p>
-</div>
-
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Identify and Neutralize Threats" url="/microservicemapping/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Strengthen Your OS Supply Chain" url="/catalog/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Maintain Persistent Surveillance of Changes" url="/versioning/" %}}
-{{% /blocks/feature %}}
-
-
-{{< /blocks/section >}}
-
-
-{{< blocks/section color=white >}}
-
-{{< blocks/feature_dual_left_sm >}}
-
-<div style="margin-top:10px;">
-<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="80%" width="80%" style="margin-left:110px"/>
-</div>
-
-{{< /blocks/feature_dual_left_sm >}} 
-
-{{< blocks/feature_dual >}}
-
-<div style="margin-top:10px;margin-left:50px">
-
-## Extend Jenkins for Continuous Post Deployment Security
-
-Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
-<div style="font-size:1.8em;">
-
-[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
-</div>
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
 
 {{< blocks/section color=black >}}
 <div class="col-12">
@@ -208,12 +169,63 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=white >}}
+
+<!-- Commenting this section out for now  
+{{< blocks/section color=black >}}
+
+<div class="col-12">
+<h2 class="text-center">Ortelius Use Cases  </h2>
+<p></p>
+</div>
+
+{{% blocks/feature icon="fas fa-3x fa-box-open" title="Identify and Neutralize Threats" url="/post-deployment-vulnerability-threat/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-share-square" title="Strengthen Your OS Supply Chain" url="/digital-twin/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Maintain Persistent Surveillance of Changes" url="/versioning/" %}}
+{{% /blocks/feature %}}
+
+
+{{< /blocks/section >}}
+-->
+
+{{< blocks/section color=black >}}
+
+{{< blocks/feature_dual_left_sm >}}
+
+<div style="margin-top:10px;">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:110px"/>
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:10px;margin-left:50px">
+
+## Extend Jenkins for Continuous Post Deployment Security
+
+Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
+<div style="font-size:1.8em;">
+
+[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
+</div>
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+{{< blocks/section color=black >}}
 
 {{< blocks/feature_dual_left_sm >}} 
 
 <div style="margin-top:10px">
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="80%" width="80%" style="margin-left:110px"/>
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:110px"/>
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
