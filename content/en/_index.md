@@ -242,7 +242,7 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 {{< blocks/feature_dual >}} 
 
-<div style="margin-top:10px;margin-left:300px">
+<div style="margin-top:10px;margin-left:150px">
 <h1 class="text-center">Sign-up and Get Started Managing Post Deployment CVEs</h1>
 <hr>
 
