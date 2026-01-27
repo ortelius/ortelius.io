@@ -278,7 +278,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <div class="col-12">
 
 
-<h2 class="text-center">Get Involved</h2>
+<h2 class="text-center">Pull Request Encouraged - Become a Committer</h2>
 
 <hr>
 
