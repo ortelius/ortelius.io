@@ -134,48 +134,52 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 {{< /blocks/section >}}
 
+
+
 {{< blocks/section color=black >}}
 
-<div class="col-12">
-<h1 class="text-left">Explore the Ortelius Ecosystem</h1>
-</div>
-
 {{< blocks/feature_dual  >}}
-<div class="col-sm"></div>
 
-<div class="col-sm" style="text-wrap:nowrap">
+
+
+<div style="margin-top:10px;margin-left:200px">
+
+
+<h1 class="text-center">Explore the Ortelius Ecosystem</h1>
+
+<div style="text-wrap:nowrap">
 
 {{% blocks/table_center %}}
 
 |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|
-| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/)  | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p>  |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p>  |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>   | <p style="font-size:1.5em">[Jenkins and Other CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p>  | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p>  |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
+| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/)  | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p>  |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p>  |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>   | <p style="font-size:1.5em">[CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p>  | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p>  |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
 
 
 {{% /blocks/table_center %}}
 
 </div>
 
-<div style="margin-top:40px;margin-left:5px">
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
 [View All](https://docs.ortelius.io/guides/userguide/integrations/) 
 </div>
-
 </div>
+
 
 
 {{< /blocks/feature_dual  >}}
 
-{{< blocks/feature_dual  >}}
+{{< blocks/feature_dual_left_sm >}}
 
-<div style="margin-top:10px">
-<img src="/images/explore-ecosystem.jpg" alt="Ortelius Ecosystem" height="25%" width="25%" style="margin-left:110px"/>
+<div style="margin-top:2px;margin-right:50px">
+<img src="/images/explore-ecosystem.jpg" alt="Ortelius Ecosystem" height="40%" width="40%" style="margin-left:300px"/>
 </div>
 
 
-{{< /blocks/feature_dual  >}}
+{{< /blocks/feature_dual_left_sm >}}
+
 {{< /blocks/section >}}
 
 
@@ -203,8 +207,8 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 {{< blocks/feature_dual_left_sm >}}
 
-<div style="margin-top:10px;">
-<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:110px"/>
+<div style="margin-top:2px;">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:300px"/>
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
@@ -234,10 +238,11 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 {{< blocks/section color=black >}}
 
+
+
 {{< blocks/feature_dual >}} 
 
-<div style="margin-top:10px;margin-left:50px">
-
+<div style="margin-top:10px;margin-left:300px">
 <h1 class="text-center">Sign-up and Get Started Managing Post Deployment CVEs</h1>
 <hr>
 
@@ -257,8 +262,9 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:10px">
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:110px"/>
+<div style="margin-top:2px">
+<div style="margin-top:2px;margin-left:50px">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:150px"/>
 </div>
 
 
