@@ -207,7 +207,6 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 {{< /blocks/section >}}
 
 
-
 {{< blocks/section color=black >}}
 
 {{< blocks/feature_dual_left_sm >}}
