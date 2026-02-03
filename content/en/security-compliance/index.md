@@ -1,11 +1,11 @@
 ---
 title: Continuous Open-Source Security Compliance from Scorecards to Runtime
-description: Ortelius uses SBOM and Deployment Data to Meet Compliance
-summary: Know the compliance level of the open-source you consume
+description: An OpenSSF Scorecard and NIST Compliance Dashboard
+summary: Continuous Alignment with NIST 800-218 (SSDF)
 type: contributor
 ---
 
-{{< blocks/section color=primary >}}
+{{< blocks/section color=black >}}
 <h1 class="text-center">Continuous Open-Source Security Compliance from Scorecards to Runtime</h1>
 <hr>
 
@@ -23,7 +23,7 @@ Ortelius closes this gap by serving as a continuous security compliance dashboar
 
 ## Operationalizing OpenSSF Scorecard Data
 
-The OpenSSF Scorecard offers critical insight into how open-source projects are maintained, evaluating practices such as code review, release signing, CI security controls, and vulnerability disclosure processes. While this data is valuable, it is often consumed as a static signal, useful for evaluation, but disconnected from day-to-day operational risk.
+The [OpenSSF Scorecard](https://scorecard.dev/) offers critical insight into how open-source projects are maintained, evaluating practices such as code review, release signing, CI security controls, and vulnerability disclosure processes. While this data is valuable, it is often consumed as a static signal, useful for evaluation, but disconnected from day-to-day operational risk.
 
 Ortelius operationalizes Scorecard data by correlating repository-level security hygiene with actual usage in production. By linking Scorecard results to the specific open-source packages and versions deployed across environments, Ortelius allows teams to see which low-scoring projects represent real exposure and which do not. This context shifts Scorecard from an abstract assessment into actionable intelligence that directly informs prioritization and remediation decisions.
 This allows teams to distinguish between theoretical risk and active exposure, focusing remediation efforts on low-scoring projects that are truly impacting production systems.
@@ -88,7 +88,7 @@ This dramatically reduces alert fatigue while improving response speed—transfo
 
 ## Continuous Alignment with NIST 800-218 (SSDF)
 
-Modern compliance frameworks emphasize ongoing assurance, not periodic checks. NIST 800-218 (SSDF) explicitly calls for continuous identification, tracking, and remediation of vulnerabilities across the software lifecycle.
+Modern compliance frameworks emphasize ongoing assurance, not periodic checks. [NIST 800-218 (SSDF)](https://www.cisa.gov/resources-tools/resources/nist-sp-800-218-secure-software-development-framework-v11-recommendations-mitigating-risk-software) explicitly calls for continuous identification, tracking, and remediation of vulnerabilities across the software lifecycle.
 Ortelius supports these outcomes by operating where compliance risk is greatest: post-deployment.
 
 Key SSDF alignments include:
@@ -112,7 +112,9 @@ Ortelius transforms SBOMs and vulnerability data into active security controls, 
 ## From Compliance Artifacts to Defensible Security
 
 Many organizations can demonstrate that they generate SBOMs or run security scans. Far fewer can prove what was actually running when a vulnerability was disclosed, which systems were exposed, and how quickly the issue was resolved. By unifying OpenSSF Scorecard insights, versioned SBOMs, ten-minute CVE correlation, and post-deployment remediation tracking, Ortelius delivers a defensible, real-time view of open-source security compliance. In an environment where software and threats constantly evolve, this continuous approach ensures that compliance and security remain grounded in operational reality, not static assumptions.
+{{< /blocks/section >}}
 
+{{< blocks/section color="primary">}}
 
 ## Join the Conversation & Contribute
 Ortelius exists because of the open source community: from dependency topology modeling to vulnerability workflows that shape how teams think about post-deployment defense. If you’re interested in runtime vulnerability management, active risk prioritization, or tooling that surfaces real-world attack surface insight, we invite you to:

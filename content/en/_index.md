@@ -22,12 +22,15 @@ description: Welcome to the Ortelius Open Source Project Site
 
 <div style="width:100%;margin-top:100px;max-width:1000px">
 
-<h2>Your platform doesn’t stop changing after deployment.</h2>
+<h2>Deployment Isn’t the End of Vulnerabilities</h2>
 <p></p>
 
-Once services hit production, dependency graphs shift, versions drift, and new CVEs appear daily, but most platforms lose visibility the moment software ships. Ortelius provides a real-time deployment control plane built on a continuously updated digital twin of your runtime environment. It models deployed services, containers, packages, and their dependency topology across clusters and environments.
+Once services hit production, dependency graphs shift, versions drift, and new CVEs appear daily, but most platforms lose visibility the moment software ships. Ortelius provides a real-time [post-deployment vulnerability control plane](https://ortelius.io/post-deployment-vulnerability-threat/) built on a continuously updated [digital twin](https://ortelius.io/digital-twin/) of your runtime environment. It models deployed services, containers, packages, and their dependency topology across clusters and environments.
 
 No agents. No rescanning. No stale SBOMs.
+
+The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
+
 </div>
 
 {{< /blocks/feature_dual  >}}
@@ -43,10 +46,11 @@ With Ortelius, platform teams can:
 - <strong>Maintain Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
 
 - <strong>Deliver Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
+- <stong>Provide Continuous Compliance Evidence – Automatically maintain auditable proof of software security compliance by linking deployed SBOMs, CVE exposure, and remediation timelines</strong>
 
 
 
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
+
 
 {{< /blocks/feature_dual  >}}
 

@@ -7,7 +7,7 @@ type: contributor
 
 
 
-{{< blocks/section color=primary >}}
+{{< blocks/section color=black >}}
 <h1 class="text-center">Digital Twins for Software Security: A New Paradigm in Post-Deployment Defense</h1>
 <hr>
 
@@ -112,6 +112,10 @@ By grounding security decisions in live deployment context, remediation becomes 
 ## Digital Twins and the Future of Secure Software
 
 As software environments become more ephemeral and complex, digital twins will evolve beyond visibility tools into self-defending systems — where automated intelligence continuously monitors, detects, and mitigates threats in real time. In the context of the Ortelius open-source ecosystem, this means pairing twin-based visibility with community-driven tooling that integrates seamlessly with your CI/CD workflows, SBOM pipelines, and vulnerability intelligence sources.
+
+{{< /blocks/section >}}
+
+{{< blocks/section color=primary >}}
 
 ## Join the Conversation & Contribute
 Ortelius exists because of the open source community: from dependency topology modeling to vulnerability workflows that shape how teams think about post-deployment defense. If you’re interested in runtime vulnerability management, active risk prioritization, or tooling that surfaces real-world attack surface insight, we invite you to:
