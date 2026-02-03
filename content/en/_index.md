@@ -97,6 +97,8 @@ Ortelius correlates new CVEs with what is actually deployed, enabling teams to a
 
 {{< /blocks/section >}}
 
+
+
 {{< blocks/section color=black >}}
 
 {{< blocks/feature_dual >}}
@@ -184,7 +186,6 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 
 
-<!-- Commenting this section out for now  
 {{< blocks/section color=black >}}
 
 <div class="col-12">
@@ -192,16 +193,16 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 <p></p>
 </div>
 
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Identify and Neutralize Threats" url="/post-deployment-vulnerability-threat/" %}}
+{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="Defend Live Systems - Post-Deployment" url="/post-deployment-vulnerability-threat/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Strengthen Your OS Supply Chain" url="/digital-twin/" %}}
+{{% blocks/feature icon="fa-solid fa-check-double" title="Gain Live System Visability using a Digital Twin" url="/digital-twin/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Maintain Persistent Surveillance of Changes" url="/versioning/" %}}
+{{% blocks/feature icon="fa-solid fa-shield" title="Track Compliance and OpenSSF Scores" url="/security-compliance/" %}}
 {{% /blocks/feature %}}
-
 
 {{< /blocks/section >}}
--->
+
+
 
 {{< blocks/section color=black >}}
 
@@ -283,11 +284,11 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 <hr>
 
 </div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
+{{% blocks/feature icon="fa-brands fa-github" title="Contribute" url="/contributor/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
+{{% blocks/feature icon="fa-solid fa-bug" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
+{{% blocks/feature icon="fa-regular fa-handshake" title="Attend Out Community Meetings and Events" url="/events/" %}}
 {{% /blocks/feature %}}
 
 {{< /blocks/section >}}
