@@ -131,7 +131,7 @@ Trace software from source commit through CI/CD workflows to deployed runtime ar
 Ortelius supports your DevSecOps pipeline and security compliance:
 
 - Zero Trust enforcement  
-- NIST 800-53 and 800-171 support  
+- NIST 800-53, 800-218 and 800-171 support  
 - Continuous Authority to Operate (cATO) readiness  
 - SBOM and RMF reporting  
 - DoD and civilian security mandates  
