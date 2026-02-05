@@ -165,7 +165,7 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 <div class="col-12">
 <h2 class="text-center">Why Ortelius, and Why Now? </h2>
 <hr>
-<p class="text-center">Becuase post-deployment open-Source vulnerabilitie are the new security gap and attack surface. Learn how Ortelius fixes the gap and helps team detect and remediate fast. </p>
+<p class="text-center">Post-deployment open-Source vulnerabilitie are the new security gap and attack surface. Learn how Ortelius fixes the gap and helps team detect and remediate fast. </p>
 </div>
 
 <div class="col-12">
