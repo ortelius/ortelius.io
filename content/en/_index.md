@@ -142,6 +142,74 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 
 
+
+
+{{< blocks/section color=black >}}
+
+<div class="col-12">
+<h2 class="text-center">Ortelius Use Cases  </h2>
+<p></p>
+</div>
+
+{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="Defend Live Systems - Post-Deployment" url="/post-deployment-vulnerability-threat/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-solid fa-check-double" title="Gain Live System Visability using a Digital Twin" url="/digital-twin/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-solid fa-shield" title="Track Compliance and OpenSSF Scores" url="/security-compliance/" %}}
+{{% /blocks/feature %}}
+
+{{< /blocks/section >}}
+
+{{< blocks/section color=black >}}
+
+<div class="col-12">
+<h2 class="text-center">Why Ortelius, and Why Now? </h2>
+<hr>
+<p class="text-center">Becuase post-deployment open-Source vulnerabilitie are the new security gap and attack surface. Learn how Ortelius fixes the gap and helps team detect and remediate fast. </p>
+</div>
+
+<div class="col-12">
+<iframe src="https://www.youtube.com/embed/_dwF2xf2yd4" title="Ortelis Explained" frameborder="0"      
+      allowfullscreen 
+      style="position: relative; top: 0; left: 0; width: 100%; height: 600px; padding-left: 20%; padding-right: 20%"
+    ></iframe>
+</div>
+
+{{< /blocks/section >}}
+
+
+{{< blocks/section color=black >}}
+
+{{< blocks/feature_dual_left_sm >}}
+
+<div style="margin-top:2px;">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:300px"/>
+</div>
+
+{{< /blocks/feature_dual_left_sm >}} 
+
+
+
+{{< blocks/feature_dual >}}
+
+<div style="margin-top:10px;margin-left:50px">
+
+<h1 class="text-center">Extend Jenkins for Continuous Post Deployment Security </h1>
+<hr>
+
+
+Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
+<div style="font-size:1.8em;">
+
+[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
+</div>
+</div>
+
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
 {{< blocks/section color=black >}}
 
 {{< blocks/feature_dual  >}}
@@ -192,56 +260,16 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 
 {{< blocks/section color=black >}}
 
-<div class="col-12">
-<h2 class="text-center">Ortelius Use Cases  </h2>
-<p></p>
+{{< blocks/feature_dual_left_sm >}} 
+
+<div style="margin-top:2px">
+<div style="margin-top:2px;margin-left:50px">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:150px"/>
+</div>
 </div>
 
-{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="Defend Live Systems - Post-Deployment" url="/post-deployment-vulnerability-threat/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fa-solid fa-check-double" title="Gain Live System Visability using a Digital Twin" url="/digital-twin/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fa-solid fa-shield" title="Track Compliance and OpenSSF Scores" url="/security-compliance/" %}}
-{{% /blocks/feature %}}
-
-{{< /blocks/section >}}
-
-
-{{< blocks/section color=black >}}
-
-{{< blocks/feature_dual_left_sm >}}
-
-<div style="margin-top:2px;">
-<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:300px"/>
-</div>
 
 {{< /blocks/feature_dual_left_sm >}} 
-
-
-
-{{< blocks/feature_dual >}}
-
-<div style="margin-top:10px;margin-left:50px">
-
-<h1 class="text-center">Extend Jenkins for Continuous Post Deployment Security </h1>
-<hr>
-
-
-Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
-<div style="font-size:1.8em;">
-
-[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
-</div>
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-
-{{< blocks/section color=black >}}
-
 
 
 {{< blocks/feature_dual >}} 
@@ -264,16 +292,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 {{< /blocks/feature_dual >}} 
 
-{{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:2px">
-<div style="margin-top:2px;margin-left:50px">
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:150px"/>
-</div>
-
-
-
-{{< /blocks/feature_dual_left_sm >}} 
 {{< /blocks/section >}}
 
 
@@ -281,9 +300,9 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< blocks/section color=black >}}
 <div class="col-12">
 
-
+<div style="margin-top:10px">
 <h2 class="text-center">Pull Request Encouraged - Become a Committer</h2>
-
+</div>
 <hr>
 
 </div>
