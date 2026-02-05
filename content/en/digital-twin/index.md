@@ -63,7 +63,7 @@ Because the twin lives outside the live environment, it provides real-time secur
 {{< blocks/feature_dual  >}}
 
 <div style="text-align:left;margin-top:100px;">
-<img src="/images/digital-twin-concept.png" alt="Ortelius Digital Twin" height="75%" width="75%" />
+<img src="/images/Ortelius-DTArch.png" alt="Ortelius Digital Twin" height="75%" width="75%" />
 </div>
 
 
