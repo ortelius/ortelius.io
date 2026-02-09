@@ -19,8 +19,13 @@ The Ortelius Governing Board (GB) is responsible for strategic direction, busine
 - [Ann Marie Fred](https://www.linkedin.com/in/amfred/)  - Senior Principal Software Engineer on the Developer Experience Engineering team, Red Hat, USA
 - [Sergio Canales](https://www.linkedin.com/in/sergio-canales-espinoza/) - Application Development and Practices Architect, Red Hat, Chile
 - [Sacha Wharton](https://www.linkedin.com/in/sachawharton/) - Sr. DevOps Engineer, Nagarro, South Africa
-- [Steve Taylor](https://www.linkedin.com/in/steve-taylor-oms/)  - CTO DeployHub, Inc., Santa FE, NM
+- [Steve Taylor](https://www.linkedin.com/in/steve-taylor-oms/)  - CTO DeployHub, Inc., Santa Fe, NM
 
+Chief Technical Advisor
+- [Steve Taylor](https://www.linkedin.com/in/steve-taylor-oms/)  - CTO DeployHub, Inc., Santa Fe, NM
+
+Community Director
+- [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/)
 
 Board Advisor
 - [Tony Carrato](https://www.linkedin.com/in/tonycarrato/) - Cybersecurity Specialist, Consulting Architect 
