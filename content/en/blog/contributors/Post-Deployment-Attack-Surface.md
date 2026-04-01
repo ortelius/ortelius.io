@@ -1,5 +1,5 @@
 ---
-title: "Production Is the New Attack Surface: Why Post-Deployment Endpoint Detection Is Now Critical"
+title: "Why Post-Deployment Endpoint Detection Is Now Critical"
 date: 2026-04-01
 draft: false
 author: "Tracy Ragan"
@@ -21,7 +21,6 @@ categories:
 Most security teams still treat vulnerability management as a build-time activity. But attackers don’t. Modern supply-chain attacks don’t target source code repositories or CI pipelines alone—they mainly target running systems. Production is now the real attack surface, and organizations that stop security at deployment leave their most critical infrastructure exposed.
 
 It’s time to rethink how vulnerability detection works.
-
 
 
 ## The Production Security Gap
@@ -96,6 +95,11 @@ Neither model fully solves runtime supply-chain exposure.
 A better model is emerging for post-deployment vulnerability detection: the deployment digital twin.
 
 Instead of repeatedly scanning endpoints, the digital twin treats SBOMs as operational telemetry and correlates them with deployment metadata for every release. This allows organizations to map software components directly to live endpoints and continuously synchronize exposure against vulnerability intelligence feeds. As new CVEs are disclosed, affected runtime systems can be identified immediately. The result is a shift from periodic scanning cycles to continuous vulnerability correlation aligned with what is actually running in production.
+
+
+<div style="text-align:center; margin: 2rem 0;">
+<img src="/images/DigitalTwinSolution.png" alt="Deployment Digital Twin" height="800px" width="600px" />
+</div>
 
 ## Making SBOMs Operational
 
