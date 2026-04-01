@@ -6,12 +6,26 @@ author: Steve Taylor
 ---
 
 
+
+
+
 Security teams today face a constant barrage of CVE notifications, so many that the signal gets buried in the noise. Over time, alert fatigue sets in, and remediation remains a manual, time-consuming source of engineering toil rather than a fast path to risk reduction.
 
 Updating a dependency is rarely just a version bump. It requires understanding transitive dependency trees, constraint conflicts, ecosystem semantics, and runtime impact. What security teams actually need is not another scanner, but an intelligent remediation agent that behaves like an experienced security engineer.
 
 This post introduces a production-ready architecture for an AI-driven CVE remediation agent designed to analyze dependency graphs, select remediation strategies, and generate validated Pull Requests automatically, without sending proprietary code to external AI services.
 
+{{< blocks/section color=white >}}
+
+<div class="col-12">
+<iframe src="https://www.youtube.com/embed/HcJstyTzJOQ" title="AI Automation for Secure Dependency Fixes Explained" frameborder="0"      
+      allowfullscreen 
+      style="position: relative; top: 0; left: 0; width: 100%; height: 400px; padding-left: 20%; padding-right: 20%"
+    ></iframe>
+</div>
+
+
+{{< /blocks/section >}}
 
 
 ## Why CVE Remediation Is Harder Than Detection
@@ -251,6 +265,8 @@ This makes the architecture viable for:
 - regulated CI/CD infrastructure
 
 
+
+
 ## Conclusion and Get Involved: Help Build the Future of AI-Driven Remediation
 
 Automated CVE remediation is entering a new phase, moving beyond detection toward intelligent, constraint-aware resolution that operates safely inside real development workflows. This architecture represents an important step toward that future, but it is only the beginning.
@@ -281,3 +297,5 @@ Learn More About:
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
+
+
