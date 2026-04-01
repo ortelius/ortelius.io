@@ -3,7 +3,6 @@ title: "Why Post-Deployment Endpoint Detection Is Now Critical"
 date: 2026-04-01
 draft: false
 author: "Tracy Ragan"
-description: "Most security teams stop vulnerability detection at build time—but attackers don’t. Learn why production is now the real attack surface and how deployment digital twins enable continuous post-deployment vulnerability detection."
 tags:
   - SBOM
   - DevSecOps
@@ -18,7 +17,7 @@ categories:
   - DevSecOps
 ---
 
-Most security teams still treat vulnerability management as a build-time activity. But attackers don’t. Modern supply-chain attacks don’t target source code repositories or CI pipelines alone—they mainly target running systems. Production is now the real attack surface, and organizations that stop security at deployment leave their most critical infrastructure exposed.
+Most security teams still treat vulnerability management as a build-time activity. But attackers don’t. Modern supply-chain attacks don’t target source code repositories or CI pipelines alone, they mainly target running systems. Production is now the real attack surface, and organizations that stop security at deployment leave their most critical infrastructure exposed.
 
 It’s time to rethink how vulnerability detection works.
 
