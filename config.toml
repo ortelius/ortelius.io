@@ -172,5 +172,5 @@ enable = false
 [[menu.main]]
     name = "SaaS Login"
     weight = 92
-    url = "https://console.deployhub.com/dmadminweb/Home"
+    url = "https://app.deployhub.com/"
 
