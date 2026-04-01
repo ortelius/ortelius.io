@@ -3,6 +3,18 @@ date: 2026-04-01
 title: "AI Automation for Secure Dependency Fixes"
 linkTitle: "AI Automation for Secure Dependency Fixes"
 author: Steve Taylor
+tags:
+  - SBOM
+  - DevSecOps
+  - Vulnerability Management
+  - Software Supply Chain Security
+  - Post-Deployment Security
+  - Ortelius
+  - DeployHub
+categories:
+  - Security
+  - Software Supply Chain
+  - DevSecOps
 ---
 
 
@@ -279,7 +291,7 @@ Watch for upcoming Ortelius releases that will begin delivering these AI-assiste
 
 {{< blocks/section color=white >}}
 
-<h2 class="text-left">Meet the Authors</h2>
+<h2 class="text-left">Meet the Author</h2>
 <hr>
 
 {{< blocks/feature_dual >}}
