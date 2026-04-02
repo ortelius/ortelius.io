@@ -6,15 +6,15 @@ author: "Tracy Ragan"
 tags:
   - SBOM
   - DevSecOps
-  - Vulnerability Management
+  - Post-Deployment Vulnerability Management
   - Software Supply Chain Security
   - Post-Deployment Security
   - Ortelius
-  - DeployHub
 categories:
   - Security
   - Software Supply Chain
   - DevSecOps
+  - Continuous Threat Exposure Management (CTEM)
 ---
 
 Most security teams still treat vulnerability management as a build-time activity. But attackers don’t. Modern supply-chain attacks don’t target source code repositories or CI pipelines alone, they mainly target running systems. Production is now the real attack surface, and organizations that stop security at deployment leave their most critical infrastructure exposed.

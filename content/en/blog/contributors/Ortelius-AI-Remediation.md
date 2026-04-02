@@ -7,17 +7,18 @@ tags:
   - SBOM
   - DevSecOps
   - Vulnerability Management
+  - Continuous Threat Exposure Management (CTEM) 
   - Software Supply Chain Security
   - Post-Deployment Security
   - Ortelius
-  - DeployHub
+  - Dependency Remediation 
 categories:
+  - AI Remediation
+  - MCP
   - Security
   - Software Supply Chain
   - DevSecOps
 ---
-
-
 
 
 
