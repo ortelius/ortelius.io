@@ -114,7 +114,7 @@ By Sacha Wharton | Wednesday, March 28, 2024
 
 - [Read Part 1 Now](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)
 
-- [Read Part 2 Now](https://ortelius.io/blog/2024/04/08/how-to-bake-an-ortelius-pi-part-2-the-preparation//)
+- [Read Part 2 Now](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation//)
 
 - [Read Part 3 Now](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-1-the-hardware/)
 

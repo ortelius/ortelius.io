@@ -121,7 +121,7 @@ Ortelius exists because of the open source community: from dependency topology m
 
 <div style="margin-left:8px">
 
-- Try [Ortelius on GitHub](https://github.com/ortelius/ortelius) and contribute features
+- Try [Ortelius on GitHub](https://github.com/ortelius/pdvd-backend) and contribute features
 - Open issues or PRs around runtime risk signals you care about
 - Join the [community calls](https://ortelius.io/events/) to discuss vulnerabilities, attacker models, and remediation workflows
 
