@@ -46,12 +46,11 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
 - Localstack on GitHub [here](https://github.com/localstack/)
-- Localstack docs [here](https://www.jenkins.io/doc)
-- Localstack integrations [here](https://docs.localstack.cloud/integrations/)
+- Localstack docs [here](https://docs.localstack.cloud/)
+- Localstack integrations [here](https://docs.localstack.cloud/aws/integrations/)
 - Localstack academy [here](https://docs.localstack.cloud/academy/)
 - Localstack tutorials [here](https://docs.localstack.cloud/tutorials/)
 - Localstack applications [here](https://docs.localstack.cloud/applications/)
-- Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
 
 #### Helm-Repository | Localstack
