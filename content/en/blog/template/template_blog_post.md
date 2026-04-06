@@ -19,7 +19,7 @@ draft: true
 
 Hello!
 
-This is the draft template for an Ortelius blog post. If you are seeing this on the public URL, something has probably gone wrong so please log an issue: [Ortelius Github](https://github.com/ortelius/ortelius)
+This is the draft template for an Ortelius blog post. If you are seeing this on the public URL, something has probably gone wrong so please log an issue: [Ortelius Github](https://github.com/ortelius/pdvd-backend)
 
 # How to create a new blog post
 

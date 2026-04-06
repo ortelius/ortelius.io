@@ -121,7 +121,7 @@ As software environments become more ephemeral and complex, digital twins will e
 Ortelius exists because of the open source community: from dependency topology modeling to vulnerability workflows that shape how teams think about post-deployment defense. If you’re interested in runtime vulnerability management, active risk prioritization, or tooling that surfaces real-world attack surface insight, we invite you to:
 <div style="margin-left:8px">
 
-- Try [Ortelius on GitHub](https://github.com/ortelius/ortelius) and contribute features
+- Try [Ortelius on GitHub](https://github.com/ortelius/pdvd-backend) and contribute features
 - Open issues or PRs around runtime risk signals you care about
 - Join the [community calls](https://ortelius.io/events/) to discuss vulnerabilities, attacker models, and remediation workflows
 </div>
