@@ -25,7 +25,6 @@ menu:
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -39,8 +38,6 @@ menu:
 <h2 class="text-left">Driving the Next Evolution of DevOps Through AI, Platform Engineering, Security, and Open Source
 <br></h2>
 
-
-
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
@@ -49,14 +46,12 @@ menu:
 
 <br>
 
-[Submit a Talk](https://cd.foundation/cdcon-2026/)
+[Learn More and Register](https://cd.foundation/cdcon-2026/)
 
 <br></h2>
 
 
 This year, cdCon is intentionally designed around intensive learning and deep knowledge sharing in four critical areas that are actively driving the evolution of DevOps, CI/CD, and platform engineering. The way we build, deliver, and operate software is changing rapidly. CI/CD pipelines are no longer responsible for shipping application code alone; they now support complex platforms, distributed systems, and increasingly, AI and machine learning workloads. At the same time, security expectations are rising, and open source software continues to form the backbone of modern delivery. cdCon 2026 is focused on giving practitioners the clarity, skills, and shared understanding needed to navigate and lead this change.
-
-
 
 </div>
 
@@ -65,23 +60,21 @@ This year, cdCon is intentionally designed around intensive learning and deep kn
 
 
 
-
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">Ortelius Holiday Party 2025</h1>
+<h1 class="text-center">SecureChainCon 2026</h1>
 </div>
 
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/AlienholdingManura.png" alt="Open Source Summit" height="400px" width="500px" />
+<img src="/images/SecureChainCon2026.png" alt="SecureChainCon 2026" height="300px" width="600px" />
 </div>
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
-
 
 </div>
 
@@ -93,39 +86,39 @@ This year, cdCon is intentionally designed around intensive learning and deep kn
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">View On Demand
+<h2 class="text-left">Run Free, Run Safe: Defend Post-Deployment in the Age of AI
 <br></h2>
-
-[View On-Demand Awards and Recap](https://youtu.be/-0xiasS2-oM)
 
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
 
-<h2 class="text-left">Keynote with Eric Brewer 
-<br></h2>
-
-<img src="/images/EricBrewer.jpg" alt="Eric Brewer" height="270px" width="200px" />
-
-[View On-Demand](https://youtu.be/CCoIqrLT4Gw)
-
-Eric Brewer is one of the most influential thinkers in modern computing. As the creator of the CAP Theorem, his work reshaped how distributed systems balance consistency, availability, and fault tolerance, laying the foundation for today’s cloud and microservice architectures. Join us as he answers the questions we all want to know - platform engineering, the future of DevOps, and of course AI.
-
-### Tech Talks
-Sacha Wharton - Platform Engineering in Easy Steps
-[View On-Demand](https://youtu.be/dt3lkicLWvo)
-
-
-Brian Dawson- MCP setup for Local Development
-[View On-Demand](https://youtu.be/kmldxVQWzUM)
+<h3 class="text-left">June 25, 2026 - 11-1 ET  Online and Free to All</h3>
+<h3>Hosted by the Ortelius Community</h3>
 
 <br>
+
+[Learn More and Register](https://ortelius.io/blog/2026/04/06/securechaincon-2026/)
+
+<br></h2>
+
+
+Software supply chain security is entering a new phase. Attackers are no longer limited to exploiting weaknesses discovered during development. They are targeting what’s already running in production, often within days of a vulnerability being disclosed. As AI accelerates both vulnerability discovery and weaponization, organizations must evolve from build-time scanning to continuous post-deployment defense. SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments. This is not another conference about scanning earlier in the pipeline; it’s about Continuous Threat Exposure Management (CTEM) and Remediation for what’s already deployed.
+
+SecureChainCon is designed for teams ready to move beyond pre-deployment scanning and toward continuous defense of the software that is already in production—where today’s attacks actually happen.
+
+Topics:
+
+- Demos for Ortelius V.12
+- Resources and Tooling for Post Deployment Vulnerability Detection/Remediation
+- Sense, Reason, Act AI Models for Vulnerability Management
+- Continuous Threat Exposure Management
+- Meeting CRA and CISA vulnerability response requirements
 
 </div>
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
-
 
 
 
