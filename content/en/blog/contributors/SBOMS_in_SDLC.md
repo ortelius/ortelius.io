@@ -69,7 +69,7 @@ While there are many different areas of SBOM usage, below are the three most com
 ## Conclusion
 
 At every supply chain level, the shift from herd vulnerability to herd immunity highlights the cumulative, public health-like benefits of the added transparency and resiliency unlocked by SBOMs (NIST). Large and small enterprises will benefit from the insights that SBOMs provide. Critical to the process is the consumption and catalog of SBOM data along with the versions of components managed across the SDLC. An illustration of the end-to-end SBOM data analysis flow is shown below:
-![End-ot-end SBOM Flow](images/supply-chain-sbom-sdlc.png)
+![End-ot-end SBOM Flow](/images/supply-chain-sbom-sdlc.png)
 
 ## References
 
