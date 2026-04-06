@@ -3,6 +3,16 @@ date: 2026-04-06
 title: "SecureChainCon 2026"
 summary: SecureChainCon 2026
 author: Tracy Ragan
+tags:
+  - SBOM
+  - DevSecOps
+  - Post-Deployment Vulnerability Management
+  - Software Supply Chain Security
+  - Post-Deployment Security
+  - Ortelius
+  - CTEM
+categories:
+  - News
 ---
 
 
