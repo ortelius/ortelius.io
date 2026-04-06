@@ -640,7 +640,7 @@ endpoint_url     = https://localstack.pangarabbit.com:4566 # Replace with your e
 addressing_style = path
 ```
 
-- Install [Granted]((https://docs.commonfate.io/granted/getting-started)) for your OS flavour
+- Install [Granted](https://docs.commonfate.io/granted/getting-started) for your OS flavour
 - Test that Granted was installed correctly
 
 ```shell

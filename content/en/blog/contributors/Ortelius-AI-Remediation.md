@@ -240,7 +240,7 @@ Teams can move from alert-driven security to resolution-driven security.
 
 ## Where This Fits in the Future of Automated Remediation Platforms
 
-This design pattern aligns directly with emerging approaches in [post-deployment vulnerability defense](www.deployhub.com), especially platforms that focus on identifying which vulnerable components are actually running in production environments and prioritizing remediation accordingly.
+This design pattern aligns directly with emerging approaches in [post-deployment vulnerability defense](https://www.deployhub.com), especially platforms that focus on identifying which vulnerable components are actually running in production environments and prioritizing remediation accordingly.
 
 When runtime visibility is combined with intelligent remediation agents like this one, organizations gain:
 

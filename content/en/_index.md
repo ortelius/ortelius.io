@@ -175,8 +175,6 @@ Ortelius supports your DevSecOps pipeline and security compliance:
     ></iframe>
 </div>
 
-https://youtu.be/n_aNHMYKXKw?si=_YaomY7Vw3z7Me-s
-
 {{< /blocks/section >}}
 
 
