@@ -74,6 +74,6 @@ Help us get the BlogAThon info out. Here are some suggested posts.
 Post Type | Caption
  --- | -----------
 General Post | I'm participating in the #Ortelius #BlogAThon starting Feb 1st thru April 1st with a diverse global open source community. Learn how you can too at: [Ortelius.io](https://ortelius.io/blog/)
-General Post | I'm excited to announce that I'll be participating in the #Ortelius #BlogAThon starting Feb 1st thru April 1st. @OrteliusOs. Participate with me for some great #softwaresupplychain learning. Learn More: [Ortelius.io](https://ortelius.io/blog/2023/01/18/2024-blogathon/).
-Topic Post | Excited to be participating in the #Ortelius #BlogAThon on [YOUR TOPIC]! Tune in with @OrteliusOs, the #softwaresupplychain evidence store. Learn More: [ortelius.io](https://ortelius.io/blog/2023/01/18/2024-blogathon/)
+General Post | I'm excited to announce that I'll be participating in the #Ortelius #BlogAThon starting Feb 1st thru April 1st. @OrteliusOs. Participate with me for some great #softwaresupplychain learning. Learn More: [Ortelius.io](https://ortelius.io/blog/2024/01/12/2024-blogathon/).
+Topic Post | Excited to be participating in the #Ortelius #BlogAThon on [YOUR TOPIC]! Tune in with @OrteliusOs, the #softwaresupplychain evidence store. Learn More: [ortelius.io](https://ortelius.io/blog/2024/01/12/2024-blogathon/)
 {{% /blocks/table_center2 %}}
