@@ -31,7 +31,7 @@ author: Tracy Ragan
 
 Join the project – [Google Groups (Ortelius-dev)](https://groups.google.com/g/ortelius-dev)
 
-GitHub Repository – [https://github.com/ortelius/ortelius](https://github.com/ortelius/ortelius)
+GitHub Repository – [https://github.com/ortelius/ortelius](https://github.com/ortelius/pdvd-backend)
 
 Reach us by email: [request-info@ortelius.io](mailto:request-info@ortelius.io/)
 

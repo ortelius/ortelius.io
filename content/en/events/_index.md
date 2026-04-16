@@ -6,6 +6,122 @@ menu:
   main:
    weight: 20
 ---
+
+
+
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">Open Source Summit and CDCon 2026</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/cdcon2026.png" alt="Open Source Summit and CDCon 2026" height="300px" width="600px" />
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">Driving the Next Evolution of DevOps Through AI, Platform Engineering, Security, and Open Source
+<br></h2>
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+<h3 class="text-left">Minneapolis, Minnesota, May 18th - 20th, 2026</h3>
+
+<br>
+
+[Learn More and Register](https://cd.foundation/cdcon-2026/)
+
+<br></h2>
+
+
+This year, cdCon is intentionally designed around intensive learning and deep knowledge sharing in four critical areas that are actively driving the evolution of DevOps, CI/CD, and platform engineering. The way we build, deliver, and operate software is changing rapidly. CI/CD pipelines are no longer responsible for shipping application code alone; they now support complex platforms, distributed systems, and increasingly, AI and machine learning workloads. At the same time, security expectations are rising, and open source software continues to form the backbone of modern delivery. cdCon 2026 is focused on giving practitioners the clarity, skills, and shared understanding needed to navigate and lead this change.
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+{{< blocks/section color="white" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">SecureChainCon 2026</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/SecureChainCon2026.png" alt="SecureChainCon 2026" height="300px" width="600px" />
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">Run Free, Run Safe: Defend Post-Deployment in the Age of AI
+<br></h2>
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+
+<h3 class="text-left">June 25, 2026 - 11-1 ET  Online and Free to All</h3>
+<h3>Hosted by the Ortelius Community</h3>
+
+<br>
+
+[Learn More and Register](https://ortelius.io/blog/2026/04/06/securechaincon-2026/)
+
+<br></h2>
+
+
+Software supply chain security is entering a new phase. Attackers are no longer limited to exploiting weaknesses discovered during development. They are targeting what’s already running in production, often within days of a vulnerability being disclosed. As AI accelerates both vulnerability discovery and weaponization, organizations must evolve from build-time scanning to continuous post-deployment defense. SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments. This is not another conference about scanning earlier in the pipeline; it’s about Continuous Threat Exposure Management (CTEM) and Remediation for what’s already deployed.
+
+SecureChainCon is designed for teams ready to move beyond pre-deployment scanning and toward continuous defense of the software that is already in production—where today’s attacks actually happen.
+
+Topics:
+
+- Demos for Ortelius V.12
+- Resources and Tooling for Post Deployment Vulnerability Detection/Remediation
+- Sense, Reason, Act AI Models for Vulnerability Management
+- Continuous Threat Exposure Management
+- Meeting CRA and CISA vulnerability response requirements
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
 {{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
@@ -37,127 +153,10 @@ menu:
 
 </div>
 
-
-</div>
-
-
-
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
 
 
-{{< blocks/section color="White" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:80px">
-</div>
-
-<h1 class="text-center">SecureChainCon, View On-Demand</h1>
-<hr>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Now](https://www.youtube.com/playlist?list=PLjQ1l9KZoIQ1EO0f55v9Us6FsqtJuTKSS)
-</div>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="379px" width="589px" />
-
-
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-<div style="text-align:left;width:100%;margin-top:80px">
-
-
-<h2 class="text-left">Key Takeaways
-<br></h2>
-
-</div>
-<div style="margin-top:10px;margin-left:1px">
-
-
-- Security in the DevOps Pipeline
-Discover the critical role of integrating security tooling within the DevOps pipeline to proactively identify and remediate vulnerabilities from code to cloud.
-
-- Vulnerability Management
-Master strategies for controlling vulnerabilities, including SAST, DAST, SBOMs, and continuous vulnerability scanning. Learn how to automate compliance checks and policy enforcement to enhance efficiency and consistency.
-
-- Culture of Collaboration
-Understand the importance of fostering a culture of shared responsibility between development, operations, and security teams to successfully implement DevSecOps best practices.
-
-- Threat Intelligence & Risk Management
-Explore how to leverage threat intelligence and risk management frameworks to prioritize security efforts, allocate resources effectively, and mitigate emerging threats before they escalate.
-
-<div style="font-size:1.5em;text-align:center;margin-top:10px">
-
-[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
-
-</div>
-
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">CDCon and Open Source Summit - View on Demand </h1>
-</div>
-
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/cdcon2025.png" alt="Open Source Summit" height="400px" width="500px" />
-</div>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[View Playlist ](https://www.youtube.com/playlist?list=PL2KXbZ9-EY9Qvfxh3i9YtiGLqNFHId1qM) 
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">It Was Great Seeing You All
-<br></h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-The complete playlist is now available. 
-
-Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
-
-Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
-
-<br>
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
@@ -227,64 +226,6 @@ You can download different versions of the Ortelius Logo from the CD.Foundation 
 
 
 {{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-
-<h2>On-Demand</h2>
-</div>
-
-
-
-<br>
-<div style="width:60%">
-{{< youtube bqQRqbVjSx4 >}}
-</div>
-<br>
-
-<div style="width:60%">
-{{< youtube nBzN9S5np44 >}}
-</div>
-<br>
-
-
-<div style="width:60%">
-{{< youtube C9-olwp1Rss >}}
-</div>
-<br> 
-
-<div style="width:60%">
-{{< youtube Lk7R_92QcFQ >}}
-</div>
-<br> 
-
-
-<div style="width:60%">
-{{< youtube xez36h_WJRI >}}
-</div>
-<br>
-
-<div style="width:60%">
-{{< youtube HftLrIDc4s0 >}}
-</div>
-
-
-{{< /blocks/feature_dual >}}
-
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-
-<h2>Podcast</h2>
-</div>
-<div style="width:60%">
-<div id='buzzsprout-small-player-1774320'></div><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/1774320.js?container_id=buzzsprout-small-player-1774320&player=small'></script></div>
-{{< /blocks/feature_dual >}}
-
 {{< /blocks/section >}}
 
 

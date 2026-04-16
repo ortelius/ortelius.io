@@ -182,7 +182,7 @@ The Governance Board has the power to define Officer roles and hold elections of
 
 Officer roles can be shared between multiple individuals and called ‘co-officers’ if needed.
 
-[Current Governing Board Members](https://ortelius.io/blog/2022/12/13/ortelius-2023-governing-board/) 
+[Current Governing Board Members](https://ortelius.io/governing-board/) 
 
 ### Non-Voting Board Attendees
 

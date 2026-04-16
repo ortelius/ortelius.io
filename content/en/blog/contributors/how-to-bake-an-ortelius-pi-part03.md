@@ -76,7 +76,7 @@ author: Sacha Wharton
 
 ### Introduction
 
-In [part 2](https://ortelius.io/blog/2024/04/05/how-to-bake-an-ortelius-pi-part-2-the-preparation/), of this series we deployed DHCP, DNS, NFS with a Synology NAS and deployed MicroK8s in HA mode.
+In [part 2](https://ortelius.io/blog/2024/04/11/how-to-bake-an-ortelius-pi-part-2-the-preparation/), of this series we deployed DHCP, DNS, NFS with a Synology NAS and deployed MicroK8s in HA mode.
 
 In part 3 we will use the [GitOps Methodology](https://opengitops.dev/) to deploy [Cert Manager](https://cert-manager.io/), [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) for Kubernetes to connect to the Synology NAS for centralised dynamic volume storage, [Metallb Load Balancer](https://metallb.universe.tf/), [Traefik Proxy](https://traefik.io/) as the entrypoint for our Microservices and [Ortelius](https://ortelius.io/) the ultimate evidence store using [Gimlet](https://gimlet.io/) as the UI to our GitOps controller [Fluxcd](https://fluxcd.io/).
 
@@ -472,7 +472,7 @@ With the [NFS CSI Driver](https://github.com/kubernetes-csi/csi-driver-nfs) we w
 - [What is network-attached storage (NAS)?](https://www.purestorage.com/knowledge/what-is-nas.html)
 - [What is NFS?](https://www.minitool.com/lib/what-is-nfs.html)
 - An excellent blog written by Rudi Martinsen on the NFS CSI Driver with step-by-step instructions for reference [here](https://rudimartinsen.com/2024/01/09/nfs-csi-driver-kubernetes/)
-- [Basic NFS Security - NFS, no_root_squash and SUID](https://www.thegeekdiary.com/basic-nfs-security-nfs-no_root_squash-and-suid/)
+- [Basic NFS Security - NFS, no_root_squash and SUID](https://thegeekdiary.com/basic-nfs-security-nfs-no_root_squash-and-suid/)
 
 #### Helm-Repository | CSI NFS Driver
 

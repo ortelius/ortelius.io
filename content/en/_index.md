@@ -7,7 +7,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">Track Post-Deployment Vulnerabilities Across Your Live Environments</h1>
+<h1 class="text-left">Find and Fix Open-Source Vulnerabilities Impacting Live Systems</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -15,58 +15,66 @@ description: Welcome to the Ortelius Open Source Project Site
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section color=white >}}
-<h1 class="text-center">Expose Your Real-Time Attack Surface</h1>
-<h3 class="text-center">Patch OSS Vulnerabilities Before Hackers Attack</h3>
-
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/Vulnerabilites.svg" alt="Ortelius Vulnerability Evidence Store" height="100%" width="100%" />
-</div>
-
-{{< /blocks/feature_dual >}}
-
-{{< blocks/feature_dual >}}
-
-<div style="width:100%;margin-top:100px;max-width:700px">
-
-Traditional security tools focus on catching vulnerabilities before software is deployed, **but threats don’t stop there**. New vulnerabilities in open-source packages are disclosed daily, long after software has been released into production. That’s where Ortelius steps in.
-
-Ortelius continuously maps your software supply chain and actively monitors live environments to detect vulnerabilities that emerge post-deployment, when the risk is highest and time is critical. Unlike static SBOM solutions or pre-release scanners, Ortelius gives you a dynamic view of what’s actually running in production, staging, and test environments.
-
-It connects the dots between CVEs reported by OSV.dev, deployed OS packages, and affected systems, providing:
-
-- Precise Impact Mapping – Instantly identify which applications, containers, or microservices are exposed to new CVEs
-
-- Actionable Intelligence – Understand exactly where vulnerable components are running across all environments
-
-- Faster Remediation Cycles – Reduce MTTR by focusing efforts on live, high-risk threats 
-
-With Ortelius, you're no longer blind to what happens after deployment. You gain real-time, operational awareness of your software attack surface, so your teams can act fast and stay ahead of emerging threats.
-
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate support from  DeployHub a [Continuous Vulnerability Management](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise. 
-
-
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="primary" >}}
+{{< blocks/section color=black >}}
+<h1 class="text-center">Ortelius Delivers Post-Deployment, Defensive Vulnerability Management for Live Systems</h1>
 
 {{< blocks/feature_dual  >}}
 
-<h1 class="text-left">Expose Your Real Time Attack Surface</h1>
-<hr>
-Modern software is assembled from hundreds of components (i.e microservices, containers, libraries, AI Agents) each with potential security risks. Ortelius reveals where each component is running and what’s at risk when a new vulnerability hits.
+<div style="width:100%;margin-top:100px;max-width:1000px">
 
--  Visualize your live software footprint  
--  Track every package across all environments  
--  Detect high-risk CVEs after release  
--  Know instantly which assets are vulnerable  
+<h2>Deployment Isn’t the End of Vulnerabilities</h2>
+<p></p>
+
+Once services hit production, dependency graphs shift, versions drift, and new CVEs appear daily, but most platforms lose visibility the moment software ships. Ortelius provides a real-time [post-deployment vulnerability control plane](https://ortelius.io/post-deployment-vulnerability-threat/) built on a continuously updated [digital twin](https://ortelius.io/digital-twin/) of your runtime environment. It models deployed services, containers, packages, and their dependency topology across clusters and environments.
+
+No agents. No rescanning. No stale SBOMs.
+
+The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
+
+</div>
+
+{{< /blocks/feature_dual  >}}
+
+{{< blocks/feature_dual  >}}
+
+<div style="width:100%;margin-top:100px;max-width:1000px">
+
+With Ortelius, platform teams can:
+
+- <strong>Track CVE Impact</strong> – Instantly identify which running services in each environment are affected when a new vulnerability is introduced
+
+- <strong>Maintain Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
+
+- <strong>Deliver Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
+- <stong>Provide Continuous Compliance Evidence – Automatically maintain auditable proof of software security compliance by linking deployed SBOMs, CVE exposure, and remediation timelines</strong>
+
+
+
+
+
+{{< /blocks/feature_dual  >}}
+
+</div>
+
+<div style="text-align:center;margin-top:100px;">
+<img src="/images/Ortelius-Dashboard1.svg" alt="Ortelius Post-Deployment Vulnerability Detection" height="100%" width="100%" />
+</div>
+
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="black" >}}
+
+{{< blocks/feature_dual  >}}
+
+<h1 class="text-center">Exposing Threats and Reducing MTTR</h1>
+<hr>
+
+Ortelius enables platform teams to convert operational insight into executive-level security intelligence. When a newly disclosed vulnerability affects a running service, Ortelius immediately identifies the exposed systems and the urgency of response, providing clarity the moment risk appears.
+
+With exploits now emerging in days, not months, and average remediation timelines <strong>stretching beyond 60–100 days</strong>, Ortelius focuses attention on the vulnerabilities that matter now. CISOs gain real-time visibility into threats impacting live production systems, allowing teams to prioritize response within hours, not weeks.
+
+This shared, runtime-driven view of risk aligns platform engineering and security leadership around a single source of truth, reducing mean time to remediation, shrinking the attack surface, and enabling faster containment before exposure escalates into operational outages or reportable security incidents.
 
 {{< /blocks/feature_dual >}}
 
@@ -75,46 +83,55 @@ Modern software is assembled from hundreds of components (i.e microservices, con
 <h1 class="text-center">Why Post-Deployment Visibility Matters</h1>
 <hr>
 
-Pre-release scans aren’t enough. New vulnerabilities are disclosed **after** deployment—often days or weeks later. Ortelius fills this critical gap by continuously tracking what’s live, what’s vulnerable, and what needs fixing.
+Risk doesn’t stop at release. New vulnerabilities are disclosed continuously after software is deployed, when services are already running in production. Without runtime visibility, teams cannot determine what is truly exposed.
 
-- Real-time CVE exposure  
-- Live attack surface mapping  
-- Risk prioritization per environment  
-- Immediate action for remediation  
+Ortelius correlates new CVEs with what is actually deployed, enabling teams to act on real risk, not assumptions.
+
+- Real-time CVE relevance for running workloads
+
+- Live attack surface visibility across environments
+
+- Environment-based risk prioritization
+
+- Executive-ready reporting of immediate production threats
+
+- For CISOs: Ortelius delivers a real-time view of which vulnerabilities pose active risk to live systems—separating urgent threats from theoretical exposure. 
 
 {{< /blocks/feature_dual >}}
 
 {{< /blocks/section >}}
 
-{{< blocks/section color="white" >}}
+
+
+{{< blocks/section color=black >}}
 
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">The Ortelius Edge</h1>
+<h1 class="text-center">Ortelius - a Defensive Edge</h1>
 <hr>
 
-**Deployed Software Intelligence**  
-Know exactly what version of each component is deployed and where.
+**CVE-to-Runtime Dependency Correlation**  
+Automatically correlate newly disclosed CVEs to deployed dependency graphs, identifying impacted workloads, services, and clusters in real time.
 
- **Real-Time CVE Mapping**  
-Connect new CVEs to deployed components across systems.
+**Live Attack Surface Topology Awareness**  
+Visualize the runtime attack surface as a dynamic topology map spanning production, cloud, hybrid, and edge environments—based on actual deployment state.
 
-**Attack Surface Awareness**  
-View your threat exposure across all environments in real time.
+**Continuous Attack Surface Insight**  
+Understand your true runtime exposure across production, cloud, and edge environments based on what is actually deployed, not theoretical risk.
 
- **Build-to-Deploy Traceability**  
-Map software from code to CI/CD to deployment with full SBOM lineage.
+**End-to-End Delivery Lineage & Provenance**  
+Trace software from source commit through CI/CD workflows to deployed runtime artifacts, preserving SBOM provenance and build-to-deploy lineage for audit, incident response, and change governance.
 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual  >}}
-<h1 class="text-center">Built for DevSecOps and cATO</h1>
+<h1 class="text-center">Built for Platform Engineers and CISO</h1>
 <hr>
 
 Ortelius supports your DevSecOps pipeline and security compliance:
 
 - Zero Trust enforcement  
-- NIST 800-53 and 800-171 support  
+- NIST 800-53, 800-218 and 800-171 support  
 - Continuous Authority to Operate (cATO) readiness  
 - SBOM and RMF reporting  
 - DoD and civilian security mandates  
@@ -134,32 +151,52 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 <p></p>
 </div>
 
-{{% blocks/feature icon="fas fa-3x fa-box-open" title="Identify and Neutralize Threats" url="/microservicemapping/" %}}
+{{% blocks/feature icon="fa-solid fa-triangle-exclamation" title="Defend Live Systems - Post-Deployment" url="/post-deployment-vulnerability-threat/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-share-square" title="Strengthen Your OS Supply Chain" url="/catalog/" %}}
+{{% blocks/feature icon="fa-solid fa-check-double" title="Gain Live System Visability using a Digital Twin" url="/digital-twin/" %}}
 {{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-sitemap" title="Maintain Persistent Surveillance of Changes" url="/versioning/" %}}
+{{% blocks/feature icon="fa-solid fa-shield" title="Track Compliance and OpenSSF Scores" url="/security-compliance/" %}}
 {{% /blocks/feature %}}
 
+{{< /blocks/section >}}
+
+{{< blocks/section color=black >}}
+
+<div class="col-12">
+<h2 class="text-center">Why Ortelius, and Why Now? </h2>
+<hr>
+<p class="text-center">Post-deployment open-Source vulnerabilitie are the new security gap and attack surface. Learn how Ortelius fixes the gap and helps team detect and remediate fast. </p>
+</div>
+
+<div class="col-12">
+<iframe src="https://www.youtube.com/embed/n_aNHMYKXKw" title="Ortelis Explained" frameborder="0"      
+      allowfullscreen 
+      style="position: relative; top: 0; left: 0; width: 100%; height: 600px; padding-left: 20%; padding-right: 20%"
+    ></iframe>
+</div>
 
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=white >}}
+{{< blocks/section color=black >}}
 
 {{< blocks/feature_dual_left_sm >}}
 
-<div style="margin-top:10px;">
-<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="80%" width="80%" style="margin-left:110px"/>
+<div style="margin-top:2px;">
+<img src="/images/JenkinsandOrtelius.png" alt="Jenkins and Ortelius" height="50%" width="50%" style="margin-left:300px"/>
 </div>
 
 {{< /blocks/feature_dual_left_sm >}} 
+
+
 
 {{< blocks/feature_dual >}}
 
 <div style="margin-top:10px;margin-left:50px">
 
-## Extend Jenkins for Continuous Post Deployment Security
+<h1 class="text-center">Extend Jenkins for Continuous Post Deployment Security </h1>
+<hr>
+
 
 Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
 <div style="font-size:1.8em;">
@@ -174,25 +211,29 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 
 
 {{< blocks/section color=black >}}
-<div class="col-12">
-<h1 class="text-center">Ortelius Ecosystem</h1>
-</div>
+
+{{< blocks/feature_dual  >}}
 
 
-<div class="col-sm"></div>
 
-<div class="col-sm" style="text-wrap:nowrap">
+<div style="margin-top:10px;margin-left:200px">
+
+
+<h1 class="text-center">Explore the Ortelius Ecosystem</h1>
+
+<div style="text-wrap:nowrap">
 
 {{% blocks/table_center %}}
 
 |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|
-| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/)  | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p>  |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p>  |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>   | <p style="font-size:1.5em">[Jenkins and Other CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p>  | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p>  |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
+| |<p style="font-size:1.5em">[Syft](https://docs.ortelius.io/guides/userguide/integrations/spdx-syft-cyclonedx/)  | <p style="font-size:1.5em">[OpenSSF Scorecard](https://docs.ortelius.io/guides/userguide/integrations/openssf-scorecard/)  </p>  |  <p style="font-size:1.5em">[SonarQube](https://docs.ortelius.io/guides/userguide/integrations/sonarqube/)</p>  |  <p style="font-size:1.5em">[VeraCode](https://docs.ortelius.io/guides/userguide/integrations/veracode/)</p>   | <p style="font-size:1.5em">[CI/CD](https://docs.ortelius.io/guides/userguide/integrations/ci-cd_integrations/)</p>  | <p style="font-size:1.5em">[OSV.dev](https://docs.ortelius.io/guides/userguide/integrations/osvdev/)</p>  |  <p style="font-size:1.5em">[Helm](https://docs.ortelius.io/guides/userguide/integrations/helmmetrics/)</p> |  
 
 
 {{% /blocks/table_center %}}
 
-<div style="margin-top:40px;margin-left:5px">
+</div>
+
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
@@ -200,28 +241,46 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 </div>
 </div>
 
+
+
+{{< /blocks/feature_dual  >}}
+
+{{< blocks/feature_dual_left_sm >}}
+
+<div style="margin-top:2px;margin-right:50px">
+<img src="/images/explore-ecosystem.jpg" alt="Ortelius Ecosystem" height="40%" width="40%" style="margin-left:300px"/>
 </div>
-<div class="col-sm"></div>
+
+
+{{< /blocks/feature_dual_left_sm >}}
+
 {{< /blocks/section >}}
 
 
-{{< blocks/section color=white >}}
+
+{{< blocks/section color=black >}}
 
 {{< blocks/feature_dual_left_sm >}} 
 
-<div style="margin-top:10px">
-<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="80%" width="80%" style="margin-left:110px"/>
+<div style="margin-top:2px">
+<div style="margin-top:2px;margin-left:50px">
+<img src="/images/Otelius-transparent1-300x290.png" alt="Ortelius" height="50%" width="50%" style="margin-left:150px"/>
 </div>
+</div>
+
 
 {{< /blocks/feature_dual_left_sm >}} 
 
-{{< blocks/feature_dual >}}
 
-<div style="margin-top:10px;margin-left:100px">
+{{< blocks/feature_dual >}} 
 
-## Sign-up and Get Started Managing Post Deployment CVEs
+<div style="margin-top:10px;margin-left:150px">
+<h1 class="text-center">Sign-up and Get Started Managing Post Deployment CVEs</h1>
+<hr>
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Post-Deployment Vulnerability
+Detection Platform](https://www.deployhub.com/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 
@@ -232,7 +291,9 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 </div>
 
-{{< /blocks/feature_dual >}}
+{{< /blocks/feature_dual >}} 
+
+
 {{< /blocks/section >}}
 
 
@@ -240,151 +301,20 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 {{< blocks/section color=black >}}
 <div class="col-12">
 
-
-<h2 class="text-center">Get Involved</h2>
-<p></p>
+<div style="margin-top:10px">
+<h2 class="text-center">Pull Request Encouraged - Become a Committer</h2>
 </div>
-{{% blocks/feature icon="fab fa-3x fa-github-square" title="Contribute" url="/contributor/" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-ticket-alt" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
-{{% /blocks/feature %}}
-{{% blocks/feature icon="fas fa-3x fa-users" title="Attend Out Community Meetings and Events" url="/events/" %}}
-{{% /blocks/feature %}}
-
-{{< /blocks/section >}}
-
-
-{{< blocks/section color="white" >}}
-
-<h1 class="text-center">SecureChainCon, Now Available On-Demand</h1>
-
 <hr>
 
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/2025securechainconkeynotes.png" alt="SecureChainCon" height="100%" width="100%" />
 </div>
-
-<div style="font-size:1.5em;text-align:center;margin-top:10px">
-
-[View Now](https://www.youtube.com/playlist?list=PLjQ1l9KZoIQ1EO0f55v9Us6FsqtJuTKSS)
-
-[More Info](https://ortelius.io/blog/2025/04/03/securechaincon-2025/) 
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;width:100%;margin-top:10px">
-<h2 class="text-center">Level Up Your Security Skills </h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-Welcome to SecureChainCon, the premier online micro-conference for DevOps and Security professionals, proudly hosted by the Ortelius open-source community!
-View our half-day of engaging sessions and invaluable learning designed to keep you ahead in the fast-paced world of software security, AI, and DevOps automation. Our lineup of expert speakers from top organizations will share their insights, best practices, and real-world case studies on seamlessly integrating security into DevOps workflows.
-
-KeyNote: 
-
-- [John Willis, Botchagalupe](https://www.linkedin.com/in/johnwillisatlanta/) "AI-Powered Code Parsing and Semantic Analysis for DevOps Pipelines"
-
-As software development ecosystems grow increasingly complex, the need for intelligent DevOps automation in script analysis and dependency management becomes critical. Join Jon Willis as he explores cutting-edge tools and techniques that leverage AI-driven code parsing and semantic analysis to enhance DevOps workflows. He will discuss the application of Large Language Models (LLMs) such as GPT-4, CodeBERT, and OpenAI Codex in parsing infrastructure and automation scripts, including Jenkinsfile, Dockerfile, Makefile, GitHub Actions, and Terraform. These models facilitate the identification of dependency installations (e.g., apt-get install, pip install, npm install) and pinpoint update points within scripts.
-
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color="white" >}}
-
-<h1 class="text-center">Job Seeker's Toolkit</h1>
-<hr>
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/jobseekers-toolkit.png" alt="JobSeekers Webinar" height="100%" width="100%" />
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:center;width:100%;margin-top:10px">
-<h2 class="text-center">Webinars and Resources </h2>
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-As you work through the process of finding a new role, there are an increasing number of resources available to you. The Ortelius team has curated these resources into useful categories. Most are free or offer initial free access, with some offering paid services.
-
-Get [Resources and Links](https://ortelius.io/blog/2025/05/10/job-seekers-tookit/) on Job Hunting.
-
-</div>
-
-<div style="text-align:left;width:100%;margin-top:10px">
-<strong>Job Seekers Webinar Episodes:</strong>
-
-[Episode 1 - View Now](https://youtu.be/vx2pp8p2SJ4)   Building Your LinkedIn Personal Brand to Get Noticed, Presented by [Darrin Straff, CareerStation](https://www.linkedin.com/in/darrinstraff/)
-
-[Episode 2 - View Now](https://www.youtube.com/watch?v=o6nr2jzn3p4)   Secrets Unveiled: How Employers Find (and Hire) Top Talent, Presented by [Erin Lovern](https://www.linkedin.com/in/erinlovern/) and [Buffie Gresh](https://www.linkedin.com/in/buffig/)
-</div>
-
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-{{< blocks/section color= "white" >}}
-
-
-<div style="text-align:center;width:100%;margin-top:10px">
-<h1 class="text-center">Attend CDCon June 23-25,2025 </h2>
-<hr>
-</div>
-
-{{< blocks/feature_dual >}}
-
-
-
-<div style="text-align:center;margin-top:100px;">
-<img src="/images/cdcon2025.png" alt="open source summit" height="100%" width="100%" />
-</div>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-[Register Today](https://events.linuxfoundation.org/open-source-summit-north-america/register/)
-</div>
-
-{{< /blocks/feature_dual >}}
-
-
-{{< blocks/feature_dual >}}
-
-
-
-
-<div style="text-align:center;width:100%;margin-top:10px">
-<h2 class="text-center">Join Open Source Developers in Denver</h2>
-</div>
-
-
-Attend CDCon, held at Open Source Summit 2025 in the mile high city of Denver Colorado. 
-
-Why You Should Attend:
-
-Open Source Summit is the premier event for open source developers, technologists, and community leaders to collaborate, share information, solve problems, and gain knowledge, furthering open source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for open-source code and community contributors.
-
-Open Source Summit is a conference umbrella, composed of a collection of events covering the most important technologies, topics, and issues affecting open source today including CDCon where DevOps is explored and improved. 
-
-
-
-{{< /blocks/feature_dual >}}
+{{% blocks/feature icon="fa-brands fa-github" title="Contribute" url="/contributor/" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-solid fa-bug" title="Open an Issue" url="https://github.com/ortelius/ortelius/issues" %}}
+{{% /blocks/feature %}}
+{{% blocks/feature icon="fa-regular fa-handshake" title="Attend Out Community Meetings and Events" url="/events/" %}}
+{{% /blocks/feature %}}
 
 {{< /blocks/section >}}
-
-
 
 
 {{< blocks/section color=black >}}

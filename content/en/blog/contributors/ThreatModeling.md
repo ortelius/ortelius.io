@@ -43,7 +43,7 @@ Cybersecurity is not just about an all or nothing kind of approach, but the in b
 
 - [What is Cybersecurity?](https://www.ibm.com/topics/cybersecurity)
 - [How Cybersecurity Works](https://www.cisco.com/c/en/us/products/security/what-is-cybersecurity.html)
-- [Threat Modeling](https://vdocuments.mx/threat-modeling-isaca.html?page=3)
+- [Threat Modeling](https://owasp.org/www-community/Threat_Modeling)
 - [Threat Modeling & Secure by Design Applications](https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2024/threat-modeling-and-secure-by-design-applications)
 - [Threat Modeling-Available Methods](https://insights.sei.cmu.edu/blog/threat-modeling-12-available-methods/)
 - [Mitre Attack](https://www.mitre.org/focus-areas/cybersecurity/mitre-attack)
