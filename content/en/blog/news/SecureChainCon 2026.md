@@ -23,6 +23,8 @@ categories:
 
 <div style="font-size:1.8em;text-align:center;margin-top:20px">
 
+**100% Online Event and Free to All**
+
 [Register Today](https://us02web.zoom.us/meeting/register/dMo-7hpmSYygkhsbzp_VgQ#/registration)
 <br>
 
@@ -33,6 +35,8 @@ categories:
 
 
 <h3 class="text-left">Run Free, Run Safe: Defend Post-Deployment in the Age of AI</h3>
+
+
 
 Software supply chain security is entering a new phase. Attackers are no longer limited to exploiting weaknesses discovered during development. They are targeting what’s already running in production, often within days of a vulnerability being disclosed. As AI accelerates both vulnerability discovery and weaponization, organizations must evolve from build-time scanning to continuous post-deployment defense.
 SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments.
