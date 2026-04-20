@@ -27,7 +27,7 @@ author: Sacha Wharton
 
 ### Introduction
 
-I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/]) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts.
+I recently started building a [Cloud Native Environment](https://filedn.eu/lJEPcSQWQQPRsWJKijxnXCQ/ortelius/gitops/01-ci-dev-ortelius-cloudnative-architecture-poc.html) on three [Raspberry Pi](https://www.raspberrypi.com/) 4 B's with a [Synology DS413j NAS (ARMv5 architecture)](https://www.synology.com/) running the latest firmware update DSM 6.2.4-25556 Update 7 [Release Notes](https://www.synology.com/en-af/releaseNote/DSM) and so far its been quite a journey. In this blog post I would like to share my undertakings in a series of blog posts.
 
 Raspberry Pi 4 B's pack a punch with a Broadcom Quad Core ARMv8 processor and 8 GB ram. They are very light on electricy thus saving on cost and only require a single small UPS (uninterruptable power supply) to stay online. They are very mobile and take up extremely little space in my man cave.
 

@@ -175,8 +175,6 @@ Ortelius supports your DevSecOps pipeline and security compliance:
     ></iframe>
 </div>
 
-https://youtu.be/n_aNHMYKXKw?si=_YaomY7Vw3z7Me-s
-
 {{< /blocks/section >}}
 
 
@@ -281,7 +279,8 @@ Ortelius extends Jenkins by adding continuous vulnerability monitoring for deplo
 <hr>
 
 
-From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Application Security Posture Management](https://www.deployhub.com/application-security-posture-management/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
+From discovering where open-source packages are being used, to federating OpenSSF Scorecard and [Post-Deployment Vulnerability
+Detection Platform](https://www.deployhub.com/) data, Ortelius serves as a central hub for managing, evaluating, and responding to vulnerabilities, and understanding the risk associated to consuming open-source packages from code to cloud. 
 
 Get started with Ortelius using the free SaaS version. Take a quick tutorial and see it in action. 
 

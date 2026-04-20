@@ -69,7 +69,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 
 ## Ortelius Governing Board
 
-- [Meet the Ortelius Governance Board](https://ortelius.io/blog/2021/12/13/ortelius-2022-governing-board/)
+- [Meet the Ortelius Governance Board](https://ortelius.io/governing-board/)
 
 ## Ortelius Architecture Chair
 
@@ -84,7 +84,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 Don’t be shy, schedule a call with [Steve Taylor](https://calendar.app.google/1B1V3GM6yvN5scNn7) and ask him for help to get started. Building things and mentoring is what he does.
 
 <div align="center">
-<img src="/images/steveandalien2.png" alt="Steve Taylor" />
+<img src="/images/steveandalien2.png" alt="Steve Taylor" width="30%" height="30%" />
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -124,7 +124,7 @@ Congratulations to [Sacha Wharton](https://www.linkedin.com/in/sachawharton/) an
 # Getting Started Resources
 
 - [Ortelius Contributor and User Documentation](https://docs.ortelius.io/guides/)
-- [Sign-up and learn Ortelius](https://www.deployhub.com/register-for-team)
+- [Sign-up and learn Ortelius](https://www.deployhub.com/open-source-vulnerability-management/)
 - [Ortelius YouTube Channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw)
 
 

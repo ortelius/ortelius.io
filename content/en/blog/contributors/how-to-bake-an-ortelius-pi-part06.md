@@ -29,7 +29,7 @@ author: Sacha Wharton
 
 In [part 5](https://ortelius.io/blog/2024/10/22/how-to-bake-an-ortelius-pi-part-5-ortelius-marries-jenkins/) we deployed [Jenkins](https://www.jenkins.io/) on our Kubernetes cluster and configured integration with [Ortelius](https://ortelius.io/) and [GitHub](https://github.com/) and built a demo application to demonstrate Ortelius's ability to record it.
 
-In part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://www.granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
+In part 6 we will deploy [LocalStack](https://www.localstack.cloud/) and expose the endpoints through [Traefik](https://traefik.io/). We will use the AWS cli and the Localstack wrapper `awslocal` to create and list S3 buckets. To make using profiles with the cli easier we will use [Granted](https://granted.dev/) created by Commonfate. This will give us our very own cloud dev environment at home without all the cash burning worries and security headaches.
 
 ### Gimlet GitOps Infrastructure
 
@@ -46,12 +46,11 @@ Right lets get stuck in and deploy Localtack using Gimlet, Fluxcd, Helm and a sp
 - Kubectl quick reference guide [here](https://kubernetes.io/docs/reference/kubectl/quick-reference/)
 - Helm cheat sheet [here](https://helm.sh/docs/intro/cheatsheet/)
 - Localstack on GitHub [here](https://github.com/localstack/)
-- Localstack docs [here](https://www.jenkins.io/doc)
-- Localstack integrations [here](https://docs.localstack.cloud/integrations/)
+- Localstack docs [here](https://docs.localstack.cloud/)
+- Localstack integrations [here](https://docs.localstack.cloud/aws/integrations/)
 - Localstack academy [here](https://docs.localstack.cloud/academy/)
 - Localstack tutorials [here](https://docs.localstack.cloud/tutorials/)
 - Localstack applications [here](https://docs.localstack.cloud/applications/)
-- Localstack extensions [here](https://docs.localstack.cloud/user-guide/extensions/)
 - Localstack Helm Chart on ArtifactHub [here](https://artifacthub.io/packages/helm/localstack/localstack)
 
 #### Helm-Repository | Localstack
@@ -640,7 +639,7 @@ endpoint_url     = https://localstack.pangarabbit.com:4566 # Replace with your e
 addressing_style = path
 ```
 
-- Install [Granted]((https://docs.commonfate.io/granted/getting-started)) for your OS flavour
+- Install [Granted](https://docs.commonfate.io/granted/getting-started) for your OS flavour
 - Test that Granted was installed correctly
 
 ```shell
