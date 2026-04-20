@@ -26,9 +26,6 @@ categories:
 [Register Today](https://us02web.zoom.us/meeting/register/dMo-7hpmSYygkhsbzp_VgQ#/registration)
 <br>
 
-<!-- 
-[Submit To Speak](https://youtu.be/oMJ2yXpPF9o?si=IygPXYAxhd-hfI2y)
--->
 
 </div>
 
@@ -41,7 +38,6 @@ Software supply chain security is entering a new phase. Attackers are no longer 
 SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments.
 This is not another conference about scanning earlier in the pipeline; it’s about Continuous Threat Exposure Management (CTEM) and Remediation for what’s already deployed.
 
-
 SecureChainCon is designed for teams ready to move beyond pre-deployment scanning and toward continuous defense of the software that is already in production—where today’s attacks actually happen.
 
 Topics: 
@@ -51,11 +47,32 @@ Topics:
 - Continuous Threat Exposure Management 
 - Meeting CRA and CISA vulnerability response requirements
 
-<!-- 
+{{< /blocks/section >}}
+{{< blocks/section color=primary >}}
 
-[Submit To Speak ](https://youtu.be/oMJ2yXpPF9o?si=IygPXYAxhd-hfI2y)
+<h3>Call for Speakers Open Through May 25, 2026</h3>
 
--->
+
+[Submit To Speak ](https://sessionize.com/securechaincon-2026)
+
+**Suggested Topics:**
+
+We welcome technical talks, practitioner case studies, architecture deep dives, research insights, and open-source demonstrations in areas including:
+
+- Demos for Ortelius V.12
+- Resources and Tooling for Post Deployment Vulnerability Detection/Remediation
+- Sense, Reason, Act AI Models for Vulnerability Management
+- Continuous Threat Exposure Management
+- Meeting CRA and CISA vulnerability response requirements
+
+Speaking at SecureChainCon gives you the opportunity to:
+
+Speaking at SecureChainCon gives you the opportunity to share innovations shaping the future of post-deployment vulnerability defense while influencing emerging practices around Continuous Threat Exposure Management (CTEM). You’ll help define how AI is transforming remediation workflows and connect with platform engineers and security practitioners working to solve real exposure problems in production environments. Presenters also contribute to the growing movement toward continuous runtime visibility across the software supply chain and engage directly with the Ortelius open-source security community, advancing the next generation of deployment intelligence and software supply chain defense.
+
+Talk Formats:
+
+- 20-minute technical talks
+- 10-minute lightning talks
 
 {{< /blocks/section >}}
 
