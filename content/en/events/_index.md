@@ -114,8 +114,71 @@ The Open Group is a global consortium that enables the achievement of business o
 {{< /blocks/section >}}
 
 
-
 {{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">2026 Ortelius BlogAThon</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/2026-BlogAThon.png" alt="Open Source Summit and CDCon 2026" height="300px" width="300px" />
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">Share Your Knowledge - Submit a Blog
+<br></h2>
+
+</div>
+
+<br>
+
+[Learn More and Submit Your Blog](https://ortelius.io/blog/2026/02/22/2026-blogathon/)
+
+<br></h2>
+
+
+Join the Ortelius community for our 5th annual BlogAThon, a celebration of ideas, learning, and open source collaboration. Whether you’re just getting started with open source or you’re a seasoned practitioner, BlogAThon is your opportunity to share knowledge, tell your story, and help shape the future of post-deployment vulnerability management.
+
+Submit your blog between April 1st and July 31st to be considered a participant. 
+
+By participating, you’ll help advance the Ortelius mission to:
+
+- Empower new contributors to become confident, productive members of the Ortelius open source community
+
+- Accelerate adoption of the Ortelius platform by new users
+
+- Educate the broader ecosystem on software supply chain, security, and DevOps topics—especially those focused on post-deployment vulnerability management
+
+Our BlogAThon isn’t just about writing—it’s about becoming part of the Ortelius team and contributing to a growing community that values openness, collaboration, and impact. We can’t wait to welcome you.
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+
+
+
+
+
+{{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
 
 <h1 class="text-center">Job Seekers Webinar Series and Toolkit</h1>
@@ -151,7 +214,7 @@ The Open Group is a global consortium that enables the achievement of business o
 
 
 
-{{< blocks/section color="white" >}}
+{{< blocks/section color="primary" >}}
 {{< blocks/feature_dual >}}
 
 
