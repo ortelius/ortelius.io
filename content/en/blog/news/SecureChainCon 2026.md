@@ -36,8 +36,6 @@ categories:
 
 <h3 class="text-left">Run Free, Run Safe: Defend Post-Deployment in the Age of AI</h3>
 
-
-
 Software supply chain security is entering a new phase. Attackers are no longer limited to exploiting weaknesses discovered during development. They are targeting what’s already running in production, often within days of a vulnerability being disclosed. As AI accelerates both vulnerability discovery and weaponization, organizations must evolve from build-time scanning to continuous post-deployment defense.
 SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments.
 This is not another conference about scanning earlier in the pipeline; it’s about Continuous Threat Exposure Management (CTEM) and Remediation for what’s already deployed.
@@ -50,6 +48,20 @@ Topics:
 - Sense, Reason, Act AI Models for Vulnerability Management 
 - Continuous Threat Exposure Management 
 - Meeting CRA and CISA vulnerability response requirements
+
+<h3>Keynote Speaker - John Linford, The Open Group</h3>
+
+
+[John Linford](https://www.linkedin.com/in/johndouglaslinford/) is the [The Open Group](https://www.opengroup.org/) Security Portfolio Forum Director, responsible for facilitating the creation and delivery of standards and certification programs from the Security Forum, Open Trusted Technology Forum (OTTF), and Assured Dependability Work Group. These groups comprise the cybersecurity and supply chain security SMEs in The Open Group.
+
+The Open Group is a global consortium that enables the achievement of business objectives through technology standards. As Forum Director, John supports the leaders and participants of his Forums and Work Group in utilizing the resources of The Open Group to facilitate collaboration and follow The Open Group consensus-based Standards process to publish their deliverables.
+
+<div style="text-align:left;width:100%;margin-top:30px">
+<p></p>
+<img src="/images/JohnLinford.jpg" alt="John Linford" height="250px" width="250px"/>
+</div>
+
+<br>
 
 {{< /blocks/section >}}
 {{< blocks/section color=primary >}}
