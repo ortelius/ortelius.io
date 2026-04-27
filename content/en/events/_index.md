@@ -101,11 +101,13 @@ Software supply chain security is entering a new phase. Attackers are no longer 
 [Learn More and Register](https://ortelius.io/blog/2026/04/06/securechaincon-2026/)
 
 
-**Keynote - John Linford, The Open Group**
+<h3>Keynote - John Linford, The Open Group</h3>
 
-[John Linford](https://www.linkedin.com/in/johndouglaslinford/) is the [The Open Group](https://www.opengroup.org/) Security Portfolio Forum Director, responsible for facilitating the creation and delivery of standards and certification programs from the Security Forum, Open Trusted Technology Forum (OTTF), and Assured Dependability Work Group. These groups comprise the cybersecurity and supply chain security SMEs in The Open Group.
+**You Can’t Manage What You Can’t See: The Role for Open Standards in the Age of AI**
 
-The Open Group is a global consortium that enables the achievement of business objectives through technology standards. As Forum Director, John supports the leaders and participants of his Forums and Work Group in utilizing the resources of The Open Group to facilitate collaboration and follow The Open Group consensus-based Standards process to publish their deliverables.
+With the ever-increasing adoption of AI, designing and developing products securely has been still more critical, but actively managing your deployed products has become imperative. So how do you manage those vulnerabilities post-deployment?
+
+Join this conversation with John Linford, The Open Group Security Portfolio Director, to learn more about tools, techniques, and (open) standards that can help you and your company gain visibility into your vulnerabilities and actively manage and mitigate them. [John Linford](https://www.linkedin.com/in/johndouglaslinford/) is the [The Open Group](https://www.opengroup.org/) Security Portfolio Forum Director, responsible for facilitating the creation and delivery of standards and certification programs from the Security Forum, Open Trusted Technology Forum (OTTF), and Assured Dependability Work Group. These groups comprise the cybersecurity and supply chain security SMEs in The Open Group. The Open Group is a global consortium that enables the achievement of business objectives through technology standards. As Forum Director, John supports the leaders and participants of his Forums and Work Group in utilizing the resources of The Open Group to facilitate collaboration and follow The Open Group consensus-based Standards process to publish their deliverables.
 
 
 </div>
