@@ -65,9 +65,9 @@ The system separates reasoning, orchestration, and execution responsibilities:
 
 | Component | Technology |  Responsibility |
 |----------|------|-------|
-| Sense | Digital Twin | Phage 1 Gathers SBOM and Deployment Metadata (Helm Charts, Kubernetes logs) and synchronizes with OSV.dev |
-| Reason | Qwen2.5-Coder-7B LLM and Node.js Orchestrator | This phase follows the ReAct pattern to determine if a fix requires an update or an override. |
-| Act | @modelcontextprotocol/sdk| Final phase exposes 5 specific tools to the LLM and executes remediaiton logic programmatically. |
+| Sense | Digital Twin | Phase 1 Gathers SBOM and Deployment Metadata (Helm Charts, Kubernetes logs) and synchronizes with OSV.dev |
+| Reason | Qwen2.5-Coder-7B LLM and Node.js Orchestrator | Phase 2 follows the ReAct pattern to determine if a fix requires an update or an override. |
+| Act | @modelcontextprotocol/sdk| Phase 3 exposes 5 specific tools to the LLM and executes remediaiton logic programmatically. |
 
 This separation ensures:
 
