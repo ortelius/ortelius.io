@@ -9,56 +9,6 @@ menu:
 
 
 
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">Open Source Summit and CDCon 2026</h1>
-</div>
-
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/cdcon2026.png" alt="Open Source Summit and CDCon 2026" height="300px" width="500px" />
-</div>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">Driving the Next Evolution of DevOps Through AI, Platform Engineering, Security, and Open Source
-<br></h2>
-
-</div>
-
-<div style="margin-top:10px;margin-left:1px">
-
-<h3 class="text-left">Minneapolis, Minnesota, May 18th - 20th, 2026</h3>
-
-<br>
-
-[Learn More and Register](https://cd.foundation/cdcon-2026/)
-
-<br></h2>
-
-
-This year, cdCon is intentionally designed around intensive learning and deep knowledge sharing in four critical areas that are actively driving the evolution of DevOps, CI/CD, and platform engineering. The way we build, deliver, and operate software is changing rapidly. CI/CD pipelines are no longer responsible for shipping application code alone; they now support complex platforms, distributed systems, and increasingly, AI and machine learning workloads. At the same time, security expectations are rising, and open source software continues to form the backbone of modern delivery. cdCon 2026 is focused on giving practitioners the clarity, skills, and shared understanding needed to navigate and lead this change.
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
-
-
 
 {{< blocks/section color="white" >}}
 {{< blocks/feature_dual >}}
