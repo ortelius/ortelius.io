@@ -57,6 +57,7 @@ Get recognized for your contribution through the Ortelius Recognition Program. B
 - Champions - focused on technical contribution.
 - Ambassadors - focused on education and outreach.
 - Legends - those who excel in both of the above.
+- Pathfinders - recognizes contributors for on-boarding open-source projects into the Ortelius platform.
 
 [Learn More](/blog/2021/04/19/ortelius-community-recognition-program/)
 
