@@ -16,7 +16,13 @@ Our community members are dedicated to tackling the challenges of continuous vul
 
 To honor these exceptional individuals, we have established the Ortelius Recognition Program. Contributors who meet specific criteria will earn an award badge as a token of our appreciation. Participation is open to everyone, regardless of expertise level. There are four tracks for involvement:
 
-<strong>Champions</strong>
+
+<br>
+
+
+<h2>Champions</h2>
+
+[View all Champion Badge Recipients](/contributor/championbadgerecipients/)
 
 The Ortelius Champions Badge recognizes individuals who actively help guide and advance the Ortelius open source project. Champions contribute through meaningful participation in architectural discussions, issue creation, pull requests, design reviews, and architectural planning. This badge honors community members who help shape Ortelius by sharing ideas, solving problems, improving project direction, and supporting the continued growth of the platform.
 
@@ -25,9 +31,10 @@ Achievement Levels:
 - Silver - 10 Pull Request or Issues
 - Gold - 10 Pull Request or Issues
 
-<br>
 
-<strong>Ambassador</strong>
+<h2>Ambassador</h2>
+
+[View all Ambassador Badge Recipients](/contributor/ambassadorbadgerecipients/)
 
 Earners of the Ambassador badge are individuals who have lent their time and expertise alongside fellow Ambassadors in the Ortelius open source development community. The badge is achieved based on focusing on creating powerful content, speaking at or participating at in-person or online events such as SecureChainCon, cdCon, OpenSSF Community Days or the annual Ortelius Holiday Party.  
 
@@ -36,8 +43,9 @@ Achievement Levels:
 - Silver - 4 Blogs or Videos, attend organizational or educational programs
 - Gold -  Participation in 4 events and be part of at least one event planning committee
 
-<strong>Legend</strong>
+<h2>Legend</h2>
 
+[View all Legend Badge Recipients](/contributor/legendbadgerecipients/)
 
 The Ortelius Legends Badge recognizes community members who contribute at the highest level by combining outreach and advocacy with technical leadership. Legends actively promote Ortelius through community engagement while also helping shape the project through architectural discussions, issues, pull requests, and design contributions.
 
@@ -46,7 +54,7 @@ Achievement Levels:
 - Silver - Achieve Silver level status in both Ambassador and Champion categories
 - Gold  - Achieve Gold level status in both Amabassador and Champion categories
 
-<strong>Pathfinder</strong>
+<h2>Pathfinder</h2>
 
 The Ortelius Pathfinder Badge recognizes contributors who put Ortelius into action by implementing it for private or open source projects. Pathfinders help expand the Ortelius ecosystem by onboarding projects, connecting software supply chain data, validating real-world use cases, and demonstrating how Ortelius can improve visibility, traceability, and vulnerability management across deployed applications.
 
