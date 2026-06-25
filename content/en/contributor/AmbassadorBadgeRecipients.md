@@ -121,6 +121,7 @@ Achievement Levels:
 <tr><td>Saim Safdar</td></tr>
 <tr><td>Siddharth Jain</td></tr>
 <tr><td>Ujwal Reddy</td></tr>
+<tr><td>Vanessa Toves</td></tr>
 <tr><td>Miklos Sagi</td></tr>
 <tr><td>Piha Adhikari</td></tr>
 <tr><td>Viktor Farcic</td></tr>
