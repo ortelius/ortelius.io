@@ -44,8 +44,10 @@ This is not another conference about scanning earlier in the pipeline; it’s ab
 
 <h3 class="text-center">Beer and Donuts</h3>
 
-Awards, roadmap and community annoucements. Meet the team - a lively discussion of contributors and friends. 
+<div class="text-center">
 
+Awards, roadmap and community annoucements. Meet the team - a lively discussion of contributors and friends. 
+</div>
 
 {{< /blocks/feature_dual_left_sm >}}
 
