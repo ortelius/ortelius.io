@@ -26,6 +26,8 @@ menu:
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
+[Watch Now](https://ortelius.io/blog/2026/06/25/securechaincon-2026/)
+
 </div>
 
 {{< /blocks/feature_dual >}}
@@ -48,7 +50,7 @@ menu:
 
 Software supply chain security is entering a new phase. Attackers are no longer limited to exploiting weaknesses discovered during development. They are targeting what’s already running in production, often within days of a vulnerability being disclosed. As AI accelerates both vulnerability discovery and weaponization, organizations must evolve from build-time scanning to continuous post-deployment defense. SecureChainCon, hosted by the Ortelius open-source community, brings together practitioners, security leaders, platform engineers, and open-source contributors working to close the gap between vulnerability detection and real-world exposure. The conference focuses on making SBOMs operational, improving deployment visibility, and using automation and AI-assisted remediation workflows to reduce risk across live environments. This is not another conference about scanning earlier in the pipeline; it’s about Continuous Threat Exposure Management (CTEM) and Remediation for what’s already deployed.
 
-[Watch Now](https://ortelius.io/blog/2026/06/25/securechaincon-2026/)
+
 
 
 <h3>Keynote - John Linford, The Open Group</h3>
