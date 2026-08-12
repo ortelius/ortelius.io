@@ -202,7 +202,7 @@ Help strengthen open-source software security by becoming an Ortelius Pathfinder
 
 <div style="font-size:1.8em;">
 
-[Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
+[Learn More](https://ortelius.io/blog/2026/08/12/become-an-ortelius-pathfinder-put-your-favorite-open-source-project-on-the-map/) 
 </div>
 </div>
 
