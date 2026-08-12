@@ -198,7 +198,8 @@ Ortelius supports your DevSecOps pipeline and security compliance:
 <hr>
 
 
-Ortelius extends Jenkins by adding continuous vulnerability monitoring for deployed applications. Unlike traditional SCA tools that scan source code or container images during the build, Ortelius focuses on what matters most: what’s actually running in production and is the most vulnerable to attack.
+Help strengthen open-source software security by becoming an Ortelius Pathfinder. Onboard your favorite open-source or private project into Ortelius, connect its software supply chain and deployment data, and help demonstrate a better way to find and fix vulnerabilities in software already running in production. Earn Bronze, Silver, and Gold Pathfinder badges as you expand the Ortelius ecosystem and help show others the path toward stronger software supply chain security.
+
 <div style="font-size:1.8em;">
 
 [Learn More](https://ortelius.io/blog/2025/05/08/enhance-jenkins-with-post-deployment-cve-exposure/) 
