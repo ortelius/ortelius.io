@@ -65,4 +65,4 @@ Achievement Levels:
 - Silver - Implement 5 open-source or private project
 - Gold  - Implement 10 open-source or private project
 
-We thank all of our committers for the efforts towards solving a really difficult problem, finding and fixing post-deployment open-source software vulnerabilties. You are all heroes.
+We thank all of our committers for the efforts towards solving a really difficult problem, finding and fixing post-deployment open-source software vulnerabilities. You are all heroes.
