@@ -7,7 +7,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=dark >}}
 <div class="col-12">
 <div style="max-width:500px">
-<h1 class="text-left">Find and Fix Open-Source Vulnerabilities Impacting Live Systems</h1>
+<h1 class="text-left">Know What's Vulnerable. Know Exactly Where It's Running.</h1>
 </div>
 <div id="home-github">
 <p class="text-left"><button ><a href="https://github.com/ortelius/ortelius"><span>Join the GitHub Project</span></a></button></p>
@@ -16,20 +16,45 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< /blocks/section >}}
 
 {{< blocks/section color=black >}}
-<h1 class="text-center">Ortelius Delivers Post-Deployment, Defensive Vulnerability Management for Live Systems</h1>
+<h1 class="text-center">SBOM tells you what OS packages you have. Ortelius tells you where they are running. .</h1>
+
+Ortelius connects the software inventory in your SBOMs with Helm and deployment metadata to map open-source packages and versions to the endpoints and where they are running. Ortelius then continuously monitors that inventory for newly disclosed vulnerabilities. Already have an SBOM? We consume it. Don't have one? We will generate it. Ortelius then continuously monitors that mapped software inventory for newly disclosed vulnerabilities—so when the next critical CVE appears, you can quickly determine whether you have it, which application contains it, and exactly where it is deployed.
+
+[Get Started Today](https://app.deployhub.com/) 
+
+
 
 {{< blocks/feature_dual  >}}
 
 <div style="width:100%;margin-top:100px;max-width:1000px">
 
-<h2>Deployment Isn’t the End of Vulnerabilities</h2>
+<h2>Finding a CVE Is Easy. Finding Where It's Running Is Hard.</h2>
 <p></p>
 
-Once services hit production, dependency graphs shift, versions drift, and new CVEs appear daily, but most platforms lose visibility the moment software ships. Ortelius provides a real-time [post-deployment vulnerability control plane](https://ortelius.io/post-deployment-vulnerability-threat/) built on a continuously updated [digital twin](https://ortelius.io/digital-twin/) of your runtime environment. It models deployed services, containers, packages, and their dependency topology across clusters and environments.
+Modern software relies on hundreds or thousands of open-source packages, containers, and microservices. Pre-deployment scans provide only a point-in-time view and often generate significant noise without showing what actually reached production. Post-deployment agent-based scanning can fill that gap, but deploying and maintaining agents across every environment is expensive, resource-intensive, and operationally heavy.
 
-No agents. No rescanning. No stale SBOMs.
 
-The Ortelius Community, managed by the [Continuous Delivery Foundation](https://cd.foundation), maintains the latest version, with corporate SaaS hosting support from  DeployHub a [post-deployment vulnerability detection](https://www.deployhub.com) platform designed to expedite remediation patches for the Enterprise.
+<p></p>
+<h4>Don't Rediscover Your Software. Remember What You Deployed.</h4>
+<p></p>
+
+Your CI/CD pipeline already knows what was built and where it was deployed. Ortelius connects SBOM package and version data with Helm and deployment metadata to map software to artifacts, environments, and endpoints—so when a new CVE appears, you already know where the affected software is running.
+
+
+<h4>When a New CVE Drops, Ortelius Answers These Questions</h4>
+<p></p>
+
+**Do we use it?** - Ortelius searches the SBOM inventory for the affected package and version.
+
+**Which artifact is impacted?** - Ortelius maps packages and dependencies to artifact versions.
+
+**Where is that exact version running?** - Ortelius uses Helm and deployment metadata to connect the OS package version to its deployed endpoints.
+
+**What actually needs to be fixed?** - - Teams get the package, version, application, deployment, and ownership context needed to act.
+
+
+
+
 
 </div>
 
@@ -39,17 +64,19 @@ The Ortelius Community, managed by the [Continuous Delivery Foundation](https://
 
 <div style="width:100%;margin-top:100px;max-width:1000px">
 
-With Ortelius, platform teams can:
-
-- <strong>Track CVE Impact</strong> – Instantly identify which running services in each environment are affected when a new vulnerability is introduced
-
-- <strong>Maintain Operational Service Intelligence </strong>– Maintain an accurate, continuously updated inventory of deployed components without agents or rescanning
-
-- <strong>Deliver Faster Change Response </strong>– Prioritize remediation based on real deployment impact, reducing mean time to resolution for issues affecting live systems
-- <stong>Provide Continuous Compliance Evidence – Automatically maintain auditable proof of software security compliance by linking deployed SBOMs, CVE exposure, and remediation timelines</strong>
 
 
+<h2>From OS Package to Production Endpoint.</h2>
+<p></p>
+The harder question comes after a CVE is discovered.
 
+**Where is the affected software actually running?**
+
+Once your SBOM and deployment metadata is collected, Ortelius continuously correlates its packages against vulnerability intelligence. When a new CVE is disclosed tomorrow, next month, or next year, Ortelius can identify the software that contains the affected dependency and where it is installed across your production endpoints.
+<div class="col-center">
+<img src="/images/Frontpage-flow.png" alt="Ortelius SBOM Collection" height="545px" width="360px" />
+</div>
+<p></p>
 
 
 {{< /blocks/feature_dual  >}}
@@ -67,35 +94,25 @@ With Ortelius, platform teams can:
 
 {{< blocks/feature_dual  >}}
 
-<h1 class="text-center">Exposing Threats and Reducing MTTR</h1>
+<h1 class="text-center">Collect</h1>
 <hr>
 
-Ortelius enables platform teams to convert operational insight into executive-level security intelligence. When a newly disclosed vulnerability affects a running service, Ortelius immediately identifies the exposed systems and the urgency of response, providing clarity the moment risk appears.
+Bring the SBOMs your development teams already produce. Ortelius consumes standard SBOM formats including SPDX and CycloneDX. If an SBOM doesn't exist, Ortelius will use the open-source Syft tool to generate one.
 
-With exploits now emerging in days, not months, and average remediation timelines <strong>stretching beyond 60–100 days</strong>, Ortelius focuses attention on the vulnerabilities that matter now. CISOs gain real-time visibility into threats impacting live production systems, allowing teams to prioritize response within hours, not weeks.
-
-This shared, runtime-driven view of risk aligns platform engineering and security leadership around a single source of truth, reducing mean time to remediation, shrinking the attack surface, and enabling faster containment before exposure escalates into operational outages or reportable security incidents.
+Different teams can continue using different development and security tools while Ortelius provides a common software inventory.
 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Why Post-Deployment Visibility Matters</h1>
+<h1 class="text-center">Map</h1>
 <hr>
 
-Risk doesn’t stop at release. New vulnerabilities are disclosed continuously after software is deployed, when services are already running in production. Without runtime visibility, teams cannot determine what is truly exposed.
+This is where Ortelius goes beyond basic SBOM management. An SBOM tells you what is inside the software. Deployment evidence tells you where that software went.
 
-Ortelius correlates new CVEs with what is actually deployed, enabling teams to act on real risk, not assumptions.
+Ortelius combines SBOM data with Helm charts and deployment metadata to maintain the relationships between packages, component versions, applications, deployments, environments, and endpoints.
 
-- Real-time CVE relevance for running workloads
-
-- Live attack surface visibility across environments
-
-- Environment-based risk prioritization
-
-- Executive-ready reporting of immediate production threats
-
-- For CISOs: Ortelius delivers a real-time view of which vulnerabilities pose active risk to live systems—separating urgent threats from theoretical exposure. 
+ 
 
 {{< /blocks/feature_dual >}}
 
@@ -107,34 +124,32 @@ Ortelius correlates new CVEs with what is actually deployed, enabling teams to a
 
 {{< blocks/feature_dual >}}
 
-<h1 class="text-center">Ortelius - a Defensive Edge</h1>
+<h1 class="text-center">Monitor</h1>
 <hr>
 
-**CVE-to-Runtime Dependency Correlation**  
-Automatically correlate newly disclosed CVEs to deployed dependency graphs, identifying impacted workloads, services, and clusters in real time.
+Software doesn't stop becoming vulnerable after it ships. A package may have no known vulnerabilities when an application is released and have a critical CVE disclosed days, months, or even years later. The application didn't change. The threat did.
 
-**Live Attack Surface Topology Awareness**  
-Visualize the runtime attack surface as a dynamic topology map spanning production, cloud, hybrid, and edge environments—based on actual deployment state.
-
-**Continuous Attack Surface Insight**  
-Understand your true runtime exposure across production, cloud, and edge environments based on what is actually deployed, not theoretical risk.
-
-**End-to-End Delivery Lineage & Provenance**  
-Trace software from source commit through CI/CD workflows to deployed runtime artifacts, preserving SBOM provenance and build-to-deploy lineage for audit, incident response, and change governance.
+Ortelius continuously evaluates the packages in its software inventory against newly disclosed vulnerability information. Your SBOM becomes more than a compliance artifact. It becomes the foundation for continuous post-deployment vulnerability monitoring.
 
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual  >}}
-<h1 class="text-center">Built for Platform Engineers and CISO</h1>
+<h1 class="text-center">Quickly Pinpoint</h1>
 <hr>
 
-Ortelius supports your DevSecOps pipeline and security compliance:
+When a new vulnerability appears, knowing the package name is only the beginning.
 
-- Zero Trust enforcement  
-- NIST 800-53, 800-218 and 800-171 support  
-- Continuous Authority to Operate (cATO) readiness  
-- SBOM and RMF reporting  
-- DoD and civilian security mandates  
+Ortelius uses its software relationships to trace the affected package through the application and deployment chain.
+
+Instead of:
+
+CVE → Start Investigation
+
+Ortelius gives you:
+
+CVE → Affected Package + Version → Artifact → Deployment → Endpoint
+
+That means security and development teams can quickly understand the real exposure and prioritize the systems that actually require attention. 
 
 {{< /blocks/feature_dual >}}
 

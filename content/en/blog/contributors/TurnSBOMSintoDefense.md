@@ -137,7 +137,7 @@ Two weeks later, researchers disclose a critical vulnerability affecting Package
 
 Traditional vulnerability scanning frequently focuses on the point when software is built, creating a point-in-time snapshot that can generate significant noise and false positives without showing what is actually running in production. Once software is deployed, organizations often turn to agent-based scanners to recreate that inventory and continually search for new vulnerabilities. But deploying and maintaining agents across every server, container, endpoint, and environment can be expensive, resource-intensive, and operationally heavy. This leaves organizations caught between noisy pre-deployment scans and costly post-deployment infrastructure—without a simple way to continuously use the software inventory they already created during the build process.
 
-Ortelius solves this problem using a unique approach - A Digital Twin. Once the software inventory has been captured, Ortelius can continue evaluating that inventory as new vulnerability intelligence becomes available. Ortelius continuously synchrnoizes against OSV.dev to correlate packages contained in collected SBOMs, allowing organizations to continuously monitor for new vulnerabilities after the original artifact was created.
+Ortelius solves this problem using a unique approach - A [Digital Twin](https://ortelius.io/digital-twin/). Once the software inventory has been captured, Ortelius can continue evaluating that inventory as new vulnerability intelligence becomes available. Ortelius continuously synchrnoizes against OSV.dev to correlate packages contained in collected SBOMs, allowing organizations to continuously monitor for new vulnerabilities after the original artifact was created.
 
 You do not need to regenerate or rescan the application every time a new CVE is published just to determine whether its dependencies may be affected. The SBOM provides the inventory. Ortelius keeps checking that inventory.
 
@@ -197,8 +197,8 @@ A better question is:
 
 With Ortelius, organizations can create a workflow in which:
 
-1. Existing SPDX and CycloneDX SBOMs are automatically collected.
-2. Syft can generate an SBOM when one does not already exist.
+1. Existing [SPDX](https://spdx.dev/) and [CycloneDX](https://cyclonedx.org/) SBOMs are automatically collected.
+2. [Syft](https://github.com/anchore/syft) can generate an SBOM when one does not already exist.
 3. SBOMs are associated with specific software component and application versions.
 4. Components and dependencies become centrally searchable.
 5. Deployment information adds operational context.
