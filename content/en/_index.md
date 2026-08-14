@@ -110,7 +110,7 @@ Different teams can continue using different development and security tools whil
 
 This is where Ortelius goes beyond basic SBOM management. An SBOM tells you what is inside the software. Deployment evidence tells you where that software went.
 
-Ortelius combines SBOM data with Helm charts and deployment metadata to maintain the relationships between packages, component versions, applications, deployments, environments, and endpoints.
+Ortelius combines SBOM data with Helm charts and deployment metadata to maintain the relationships between packages, component versions, artifacts, deployments, environments, and endpoints.
 
  
 
@@ -129,7 +129,7 @@ Ortelius combines SBOM data with Helm charts and deployment metadata to maintain
 
 Software doesn't stop becoming vulnerable after it ships. A package may have no known vulnerabilities when an application is released and have a critical CVE disclosed days, months, or even years later. The application didn't change. The threat did.
 
-Ortelius continuously evaluates the packages in its software inventory against newly disclosed vulnerability information. Your SBOM becomes more than a compliance artifact. It becomes the foundation for continuous post-deployment vulnerability monitoring.
+Ortelius continuously evaluates the packages in its software inventory against OSV.dev for newly disclosed vulnerability information. Your SBOM becomes more than a compliance artifact. It becomes the foundation for continuous post-deployment vulnerability monitoring.
 
 {{< /blocks/feature_dual >}}
 
@@ -139,15 +139,11 @@ Ortelius continuously evaluates the packages in its software inventory against n
 
 When a new vulnerability appears, knowing the package name is only the beginning.
 
-Ortelius uses its software relationships to trace the affected package through the application and deployment chain.
+Ortelius uses its software relationships to trace the affected package through the artifact and deployment chain.
 
-Instead of:
+Instead of CVE → Start Investigation
 
-CVE → Start Investigation
-
-Ortelius gives you:
-
-CVE → Affected Package + Version → Artifact → Deployment → Endpoint
+Ortelius gives you: CVE → Affected Package + Version → Artifact → Deployment → Endpoint
 
 That means security and development teams can quickly understand the real exposure and prioritize the systems that actually require attention. 
 
