@@ -18,7 +18,7 @@ description: Welcome to the Ortelius Open Source Project Site
 {{< blocks/section color=black >}}
 <h1 class="text-center">SBOM tells you what OS packages you have. Ortelius tells you where they are running. .</h1>
 
-Ortelius connects the software inventory in your SBOMs with Helm and deployment metadata to map open-source packages and versions to the endpoints and where they are running. Ortelius then continuously monitors that inventory for newly disclosed vulnerabilities. Already have an SBOM? We consume it. Don't have one? We will generate it. Ortelius then continuously monitors that mapped software inventory for newly disclosed vulnerabilities—so when the next critical CVE appears, you can quickly determine whether you have it, which application contains it, and exactly where it is deployed.
+Ortelius connects the software inventory in your SBOMs with Helm and deployment metadata to map open-source packages and versions to the endpoints and where they are running. Ortelius then continuously monitors that inventory for newly disclosed vulnerabilities. Already have an SBOM? We consume it. Don't have one? We will generate it. Ortelius maps software inventory to newly disclosed vulnerabilities within 10 minutes of reporting —so when the next critical CVE appears, you can quickly determine whether you have it, which application contains it, and exactly where it is deployed.
 
 [Get Started Today](https://app.deployhub.com/) 
 
