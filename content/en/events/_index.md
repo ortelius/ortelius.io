@@ -183,12 +183,12 @@ Our BlogAThon isn’t just about writing—it’s about becoming part of the Ort
 <p></p>
 </div>
 
-Attend a meeting to keep up to date, or to get started as a contributor. We look forward to your help and input on the Ortelius project:
+Our Bi-Weekly Community Meeting:
 
-- **Ortelius General Community Meeting** – this monthly meeting is an ‘all hands’ meeting giving the everyone an opportunity to share their progress. This is a good meeting for new contributors to meet the teams and hear what's up. 
-- **Ortelius Architecture Meeting** – This group is driven to help define the future roadmap of Ortelius and Emporous including a global evidence store for sharing security profiles, SBOMs, open-source libraries, with historical data.  
-- **Ortelius Outreach Meeting** – This group helps drive adoption and messaging of the Ortelius platform.
+- **Ortelius Architecture and Outreach Meeting** – this bi-weekly meeting covers both outreach and architecture topics and activities. 
+- **Meetings as Needed** – At times, additional meetings are scheduled to support the release schedule, or prepare for upcoming events.   
 
+Sign up to the [Ortelius Google Groups](https://groups.google.com/g/ortelius-dev/) for meeting invites. 
 
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
