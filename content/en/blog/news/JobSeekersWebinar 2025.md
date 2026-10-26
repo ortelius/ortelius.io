@@ -103,4 +103,5 @@ This interactive session will provide attendees with actionable advice to enhanc
 - [MyEdit](https://myedit.online/en): AI-powered photo editing tool that offers quick headshot generation and professional touch-ups using uploaded selfies or portraits.
 - [HeadshotPro](https://www.headshotpro.com/): AI-based service that creates studio-quality business headshots for individuals or teams, without the need for a physical photo shoot.
 
-
+## What To Do After You Have Been Laid Off
+- [Now What?](https://justgotlaidoff.org/): Whether you had warning or got ambushed on a Tuesday morning, we’ll help you understand your rights, protect your finances, and figure out your next move.
