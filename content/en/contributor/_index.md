@@ -100,7 +100,7 @@ Don’t be shy, schedule a call with [Steve Taylor](https://calendar.app.google/
 <h2 class="col-center">Our Gold Legend Contributors</h2>
 <br>
 
-<img src="/images/GoldLegends.png" alt="Utkarsh Sharma, Sacha Wharton, Arvind Singharpuria"  height="184px" width="644px"/>
+<img src="/images/GoldLegends.png" alt="Utkarsh Sharma, Sacha Wharton, Arvind Singharpuria, Jing Chen"  height="184px" width="644px"/>
 </div>
 
 
@@ -114,7 +114,7 @@ Don’t be shy, schedule a call with [Steve Taylor](https://calendar.app.google/
 <br>
 </div>
 
-Congratulations to [Sacha Wharton](https://www.linkedin.com/in/sachawharton/) and [Arvind Singharpuria](https://www.linkedin.com/in/arvind-singharpuria-a88686202/) for joining [Utkarsh Sharma](https://www.linkedin.com/in/codewithutkarsh/) in receiving the highest award for contributing to Ortelius -Gold Legend. Sacha and Utkarsh are also recipients of the [Continuous Delivery Foundation's](https://cd.foundation) most valuable contributor award. 
+Congratulations to [Sacha Wharton](https://www.linkedin.com/in/sachawharton/), [Arvind Singharpuria](https://www.linkedin.com/in/arvind-singharpuria-a88686202/),  [Utkarsh Sharma](https://www.linkedin.com/in/codewithutkarsh/), and [Jing Chen](https://www.linkedin.com/in/jingchen-ku/) in receiving the highest award for contributing to Ortelius -Gold Legend. Sacha and Utkarsh are also recipients of the [Continuous Delivery Foundation's](https://cd.foundation) most valuable contributor award. 
 
 
 {{< /blocks/feature_dual >}}

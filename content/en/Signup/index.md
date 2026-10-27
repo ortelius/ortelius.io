@@ -4,7 +4,7 @@ description: Get Started with Ortelius SaaS
 summary: Take control of software supply chain vulnerabilities with Ortelius SaaS
 menu:
   main:
-   weight: 100
+   weight: 5
 ---
 
 {{< blocks/section color=primary >}}
