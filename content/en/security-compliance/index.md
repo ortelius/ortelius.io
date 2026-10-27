@@ -1,9 +1,14 @@
 ---
-title: Continuous Open-Source Security Compliance from Scorecards to Runtime
-description: An OpenSSF Scorecard and NIST Compliance Dashboard
-summary: Continuous Alignment with NIST 800-218 (SSDF)
+title: "Open Source Security Compliance"
+seo_title: "Open Source Security Compliance and OpenSSF Scorecards"
+description: "An OpenSSF Scorecard and NIST Compliance Dashboard"
+summary: "Continuous Alignment with NIST 800-218 (SSDF)"
+seo_description: "Track open-source security compliance with Ortelius. Connect OpenSSF Scorecards, versioned SBOMs, deployed software, and CVE monitoring to support NIST SSDF."
 type: contributor
+draft: false
 ---
+
+
 
 {{< blocks/section color=black >}}
 <h1 class="text-center">Continuous Open-Source Security Compliance from Scorecards to Runtime</h1>

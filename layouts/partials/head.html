@@ -1,23 +1,74 @@
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 {{ hugo.Generator }}
+
 {{- $outputFormat := partial "outputformat.html" . -}}
 
+{{/* SEO title: use seo_title when provided, otherwise page title */}}
+{{- $pageTitle := .Title -}}
+{{- with .Params.seo_title -}}
+  {{- $pageTitle = . -}}
+{{- end -}}
+
+{{/* Description: page description, summary, or site default */}}
+{{- $description := .Site.Params.description | default "Ortelius is an open-source software supply chain vulnerability management platform that connects SBOMs with deployed applications and endpoints to identify, track, and fix software vulnerabilities impacting live environments." -}}
+
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- if and (not .IsHome) .Summary -}}
+    {{- $description = .Summary | plainify | htmlUnescape | truncate 160 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $description = $description | plainify | htmlUnescape | strings.TrimSpace -}}
+
+{{/* Alternative output formats */}}
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 
-{{ if and (eq (getenv "HUGO_ENV") "production") (ne $outputFormat "print") -}}
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-{{ else -}}
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-{{ end -}}
+{{/* Search engine indexing */}}
+{{- if and (eq (getenv "HUGO_ENV") "production") (ne $outputFormat "print") -}}
+<meta name="robots" content="index, follow">
+{{- else -}}
+<meta name="robots" content="noindex, nofollow">
+{{- end -}}
 
+{{/* Favicons */}}
 {{ partialCached "favicons.html" . }}
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+{{/* SEO title */}}
+<title>
+{{- if .IsHome -}}
+  {{- with .Params.seo_title -}}
+    {{ . }}
+  {{- else -}}
+    Open Source Vulnerability Management | Ortelius
+  {{- end -}}
+{{- else -}}
+  {{ $pageTitle }} | {{ .Site.Title }}
+{{- end -}}
+</title>
+
+{{/* Meta description */}}
+<meta name="description" content="{{ $description }}">
+
+{{/* Canonical URL */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph social metadata */}}
 {{- template "_internal/opengraph.html" . -}}
+
+{{/* Hugo structured data */}}
 {{- template "_internal/schema.html" . -}}
+
+{{/* Twitter/X card metadata */}}
 {{- template "_internal/twitter_cards.html" . -}}
+
+{{/* Google Analytics GA4 */}}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9DFNW3B0V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -25,19 +76,28 @@
   gtag('js', new Date());
   gtag('config', 'G-D9DFNW3B0V');
 </script>
+
+{{/* Docsy CSS */}}
 {{ partialCached "head-css.html" . "asdf" }}
+
+{{/* jQuery */}}
 <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
   crossorigin="anonymous"></script>
+
+{{/* Lunr offline search */}}
 {{ if .Site.Params.offlineSearch }}
 <script
   src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
-{{end}}
-{{ if .Site.Params.prism_syntax_highlighting }}
-<!-- stylesheet for Prism -->
-<link rel="stylesheet" href="{{ "/css/prism.css" | relURL }}"/>
 {{ end }}
+
+{{/* Prism syntax highlighting */}}
+{{ if .Site.Params.prism_syntax_highlighting }}
+<link rel="stylesheet" href="{{ "/css/prism.css" | relURL }}">
+{{ end }}
+
+{{/* Docsy custom head hooks */}}
 {{ partial "hooks/head-end.html" . }}

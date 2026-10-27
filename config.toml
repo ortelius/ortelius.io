@@ -1,176 +1,261 @@
-baseURL = "/"
+
+# ============================================================
+# ORTELIUS.IO - HUGO CONFIGURATION
+# SEO Optimized Configuration
+# ============================================================
+
+# Site configuration
+baseURL = "https://ortelius.io/"
 title = "Ortelius"
 
-# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+# Hugo Docsy theme
 theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Language settings
 contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+
+# Search engine crawling
 enableRobotsTXT = true
+
+# Existing site behavior
 disableBrowserError = true
 enableSourceMap = false
 
+# Preserve existing taxonomy configuration.
+# Remove "taxonomy" only if you plan to publish tag/category pages.
 disableKinds = ["taxonomy"]
 
-ignoreFiles = [ "(?:^|/)OWNERS$", "README[-]+[a-z]*\\.md", "^node_modules$", "content/en/docs/doc-contributor-tools" ]
+# Files excluded from Hugo processing
+ignoreFiles = [
+  "(?:^|/)OWNERS$",
+  "README[-]+[a-z]*\\.md",
+  "^node_modules$",
+  "content/en/docs/doc-contributor-tools"
+]
 
 timeout = 3000
 
-# Highlighting config
+# ============================================================
+# SYNTAX HIGHLIGHTING
+# ============================================================
+
 pygmentsCodeFences = true
 pygmentsUseClasses = false
-# Use the new Chroma Go highlighter in Hugo.
 pygmentsUseClassic = false
-#pygmentsOptions = "linenos=table"
-# See https://help.farbox.com/pygments.html
 pygmentsStyle = "emacs"
 
-# Will give values to .Lastmod etc.
+# Git metadata for page modification dates
 enableGitInfo = true
+
+# ============================================================
+# FRONT MATTER
+# ============================================================
 
 [frontmatter]
 date = ["date", ":filename", "publishDate", "lastmod"]
 
+# ============================================================
+# PERMALINKS
+# IMPORTANT: Preserve existing URLs for indexed blog posts.
+# ============================================================
+
 [permalinks]
 blog = "/:section/:year/:month/:day/:slug/"
 
+# ============================================================
+# XML SITEMAP
+# ============================================================
+
 [sitemap]
-  filename = "sitemap.xml"
-  priority = 0.75
+filename = "sitemap.xml"
+priority = 0.75
 
-# Be explicit about the output formats. We (currently) only want an RSS feed for the home page.
+# ============================================================
+# OUTPUT FORMATS
+# ============================================================
+
 [outputs]
-home = [ "HTML", "RSS"]
-page = [ "HTML"]
-section = [ "HTML"]
+home = ["HTML", "RSS"]
+page = ["HTML"]
+section = ["HTML"]
 
-## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+# ============================================================
+# LEGACY MARKDOWN SETTINGS
+# Preserved from existing configuration
+# ============================================================
+
 [blackfriday]
 plainIDAnchors = true
 hrefTargetBlank = true
 angledQuotes = false
 latexDashes = true
 
-# Image processing configuration.
+# ============================================================
+# IMAGE PROCESSING
+# ============================================================
+
 [imaging]
 resampleFilter = "CatmullRom"
 quality = 75
 anchor = "smart"
 
+# ============================================================
+# GOOGLE ANALYTICS
+# ============================================================
+
 [services]
 [services.googleAnalytics]
-# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+
+# Google Analytics is already included in head.html.
+# Leave disabled here to avoid duplicate GA4 initialization.
 # id = "G-D9DFNW3B0V"
+
+# ============================================================
+# MARKDOWN RENDERING
+# ============================================================
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
-# Everything below this are Site Params
+# ============================================================
+# SITE PARAMETERS AND SEO
+# ============================================================
 
 [params]
+
 copyright = "Linux Foundation"
 
-# First one is picked as the Twitter card image if not set on page.
-# images = ["images/project-illustration.png"]
+# Sitewide SEO description
+# Used by the updated head.html when individual pages
+# do not provide a description.
 
-# Menu title if your navbar has a versions selector to access old versions of your site.
-# This menu appears only if you have at least one [params.versions] set.
+description = "Ortelius is an open-source software supply chain vulnerability management platform that connects SBOMs with deployed applications and endpoints to identify, locate, track and fix software vulnerabilities impacting live environments."
+
+# Social sharing images
+# Uncomment after adding an actual image at:
+# static/images/ortelius-social.png
+#
+# images = ["images/ortelius-social.png"]
+
+# ============================================================
+# DOCSY VERSION SETTINGS
+# ============================================================
+
 version_menu = "Releases"
 
-# Flag used in the "version-banner" partial to decide whether to display a
-# banner on every page indicating that this is an archived version of the docs.
-# Set this flag to "true" if you want to display the banner.
 archived_version = false
 
-# The version number for the version of the docs represented in this doc set.
-# Used in the "version-banner" partial to display a version number for the
-# current doc set.
 version = "9.0"
 
-# A link to latest version of the docs. Used in the "version-banner" partial to
-# point people to the main doc site.
 url_latest_version = "https://docs.ortelius.io"
 
-# Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-#github_repo = "https://github.com/ortelius/website"
-#github_branch= "main"
+# ============================================================
+# GITHUB REPOSITORY SETTINGS
+# ============================================================
 
-# An optional link to a related project repo. For example, the sibling repository where your product code lives.
-#github_project_repo = "https://github.com/OrteliusProject/docsy"
+# Uncomment if you want Docsy edit and issue links.
+# github_repo = "https://github.com/ortelius/ortelius.io"
+# github_branch = "main"
 
-# Specify a value here if your content directory is not in your repo's root directory
+# Optional related project repository
+# github_project_repo = "https://github.com/ortelius/ortelius"
+
 # github_subdir = ""
 
-# Google Custom Search Engine ID. Remove or comment out to disable search.
-#gcs_engine_id = "011737558837375720776:fsdu1nryfng"
+# ============================================================
+# SITE SEARCH
+# ============================================================
 
-# Enable Algolia DocSearch
-#algolia_docsearch = false
+# Google Custom Search Engine
+# gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
-# Enable Lunr.js offline search
-#offlineSearch = false
+# Algolia DocSearch
+# algolia_docsearch = false
 
-# User interface configuration
+# Enable Lunr offline search if desired.
+# offlineSearch = false
+
+# ============================================================
+# DOCSY USER INTERFACE
+# ============================================================
+
 [params.ui]
-# Enable to show the side bar menu in its compact state.
+
 sidebar_menu_compact = false
-#  Set to true to disable breadcrumb navigation.
+
+# Keep breadcrumb navigation enabled.
+# Useful for navigation and internal linking.
 breadcrumb_disable = false
-#  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+
 sidebar_search_disable = false
-#  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
+
 navbar_logo = true
-# Set to true to disable the About link in the site footer
+
 footer_about_enable = false
 
-# Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
-# This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
-# If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
-# add "hide_feedback: true" to the page's front matter.
+# ============================================================
+# DOCSY FEEDBACK
+# ============================================================
+
 [params.ui.feedback]
+
 enable = true
-# The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
+
 yes = 'Glad to hear it! Please <a href="https://github.com/ortelius/website/issues/new">tell us how we can improve</a>.'
+
 no = 'Sorry to hear that. Please <a href="https://github.com/ortelius/website/issues/new">tell us how we can improve</a>.'
 
 navbar_translucent_over_cover_disable = true
 
-# Adds a reading time to the top of each doc.
-# If you want this feature, but occasionally need to remove the Reading time from a single page,
-# add "hide_readingtime: true" to the page's front matter
+# ============================================================
+# DOCSY READING TIME
+# ============================================================
+
 [params.ui.readingtime]
+
 enable = false
 
+# ============================================================
+# SOCIAL AND COMMUNITY LINKS
+# ============================================================
+
 [params.links]
-# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+
+# LinkedIn
 [[params.links.user]]
-	name ="LinkedIn"
-	url = "https://www.linkedin.com/company/ortelius-open-source/"
-	icon = "fab fa-linkedin"
-        desc = "Follow us on LinkedIn to get the latest news!"
+name = "LinkedIn"
+url = "https://www.linkedin.com/company/ortelius-open-source/"
+icon = "fab fa-linkedin"
+desc = "Follow us on LinkedIn to get the latest news!"
+
+# YouTube
 [[params.links.user]]
-	name ="YouTube"
-	url = "https://www.youtube.com/@orteliusopensource1086"
-	icon = "fab fa-youtube"
-        desc = "Follow us on YouTube to get the latest videos!"
-# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+name = "YouTube"
+url = "https://www.youtube.com/@orteliusopensource1086"
+icon = "fab fa-youtube"
+desc = "Follow us on YouTube to get the latest videos!"
+
+# GitHub
 [[params.links.developer]]
-	name = "GitHub"
-	url = "https://github.com/ortelius/ortelius"
-	icon = "fab fa-github"
-        desc = "Development takes place here!"
+name = "GitHub"
+url = "https://github.com/ortelius/ortelius"
+icon = "fab fa-github"
+desc = "Development takes place here!"
+
+# ============================================================
+# MAIN NAVIGATION
+# ============================================================
 
 [[menu.main]]
-    name = "Documentation"
-    weight = 90
-    url = "https://docs.ortelius.io/guides/"
+name = "Documentation"
+weight = 90
+url = "https://docs.ortelius.io/guides/"
 
 [[menu.main]]
-    name = "SaaS Login"
-    weight = 92
-    url = "https://app.deployhub.com/"
-
+name = "SaaS Login"
+weight = 92
+url = "https://app.deployhub.com/"

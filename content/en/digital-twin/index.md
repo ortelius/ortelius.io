@@ -1,10 +1,12 @@
 ---
-title: Digital Twins for Software Security
-description: Bringing Real-Time Defense to Post-Deployment Open Source Software
-summary: Ortelius uses a digital twin to detect vulenrabiliites in live systems. 
+title: "Digital Twins for Software Security"
+seo_title: "Software Digital Twins for Post-Deployment Security"
+description: "Bringing Real-Time Defense to Post-Deployment Vulnerability Management"
+summary: "Ortelius uses a digital twin to detect vulnerabilities in live systems."
+seo_description: "Discover how Ortelius uses software digital twins and SBOMs to detect CVEs, track vulnerable applications, and locate affected software in production."
 type: contributor
+draft: false
 ---
-
 
 
 {{< blocks/section color=black >}}

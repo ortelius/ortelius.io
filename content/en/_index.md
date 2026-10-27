@@ -1,8 +1,9 @@
 ---
-title: Ortelius Open Source Project
-description: Welcome to the Ortelius Open Source Project Site
+title: "Open Source Software Supply Chain Vulnerability Management"
+seo_title: "Open Source Software Supply Chain Vulnerability Management | Ortelius"
+description: "Ortelius connects SBOMs to deployed applications and endpoints, helping DevSecOps teams detect, locate, track and fix open-source vulnerabilities impacting operational endpoints."
+draft: false
 ---
-
 
 {{< blocks/section color=dark >}}
 <div class="col-12">
