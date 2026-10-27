@@ -21,7 +21,7 @@ Don't wait for the next critical CVE to discover where your vulnerable software 
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Get Started with Ortelius SaaS](https://app.deployhub.com/)
+[Login and Get Started](https://app.deployhub.com/)
 
 </div
 >
