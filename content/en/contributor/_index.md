@@ -1,5 +1,5 @@
 ---
-title: "Become an Ortelius Contributor"
+title: "Become a Contributor"
 seo_title: "Contribute to Open Source DevSecOps and Security"
 description: "Help Us Build a Safer Software Supply Chain"
 summary: "Join the Ortelius community of open-source contributors and adopters."
