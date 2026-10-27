@@ -1,8 +1,11 @@
 ---
-title: Become A Contributor
-description: Help us Build a Supply Chain Catalog
-summary: Become Part of our Amazing Community of Contributors and Adopters
+title: "Become an Ortelius Contributor"
+seo_title: "Contribute to Open Source DevSecOps and Security"
+description: "Help Us Build a Safer Software Supply Chain"
+summary: "Join the Ortelius community of open-source contributors and adopters."
+seo_description: "Contribute to Ortelius, an open-source DevSecOps security project. Help improve SBOM tracking, vulnerability management, integrations, and documentation."
 type: contributor
+draft: false
 menu:
   main:
    weight: 10

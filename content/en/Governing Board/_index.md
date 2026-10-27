@@ -1,7 +1,11 @@
 ---
-title: Governing Board
-description: Governing Board
-summary: Meet the Governing Board
+title: "Governing Board"
+seo_title: "Open Source Governance and Project Leadership"
+description: "Meet the Governing Board"
+summary: "Meet the community leaders guiding the Ortelius open-source project."
+seo_description: "Meet the Ortelius Governing Board and Technology Oversight Committee, providing strategic direction, technical leadership, and open-source project governance."
+type: contributor
+draft: false
 menu:
   main:
    weight: 75

@@ -1,7 +1,11 @@
 ---
-title: Events and Resources
-description: Ortelius Events and Resources
-summary: Join a Meeting or an Event, download logos and Zoom backgrounds
+title: "Events and Resources"
+seo_title: "Open Source Security Events and DevSecOps Webinars"
+description: "Ortelius Events and Resources"
+summary: "Join community meetings, security webinars, and open-source events."
+seo_description: "Explore Ortelius events, DevSecOps webinars, SecureChainCon sessions, and community meetings focused on software supply chain security and vulnerability management."
+type: contributor
+draft: false
 menu:
   main:
    weight: 20

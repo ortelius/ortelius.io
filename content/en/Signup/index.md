@@ -1,7 +1,11 @@
 ---
-title: Get Started with Ortelius SaaS
-description: Get Started with Ortelius SaaS
-summary: Take control of software supply chain vulnerabilities with Ortelius SaaS
+title: "Get Started with Ortelius SaaS"
+seo_title: "Free Open Source Vulnerability Management | Ortelius SaaS"
+description: "Get Started with Ortelius SaaS"
+summary: "Take control of software supply chain vulnerabilities with Ortelius SaaS."
+seo_description: "Try Ortelius free to monitor open-source vulnerabilities, connect SBOMs to deployed applications, and locate affected software endpoints. Get started today."
+type: contributor
+draft: false
 menu:
   main:
    weight: 5

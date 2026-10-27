@@ -1,7 +1,11 @@
 ---
-title: Guidelines
-description: Ortelius Community Guidelines
-Summary: Become a Contributor, Open Issues, Participate
+title: "Community Guidelines"
+seo_title: "Open Source Community Guidelines and Code of Conduct"
+description: "Ortelius Community Guidelines"
+summary: "Become a Contributor, Open Issues, Participate"
+seo_description: "Explore Ortelius community guidelines, contributor policies, code of conduct, governance bylaws, and ways to participate in open-source development."
+type: contributor
+draft: false
 ---
 
 {{< blocks/section color="primary">}}
