@@ -298,7 +298,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="font-size:1.8em;">
 
-[Start Today](https://docs.ortelius.io/guides/userguide/orteliustutorial/) 
+[Get Started Today](/Signup/) 
 </div>
 
 </div>
