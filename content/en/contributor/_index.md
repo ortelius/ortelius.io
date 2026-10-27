@@ -37,7 +37,7 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 
 <strong>For New Adopters</strong>
 
-* [Signup for Ortelius SaaS](/Signup/)
+* [Signup for Ortelius SaaS](/signup/)
 * [Take a Quick Tour of the SaaS](https://docs.ortelius.io/guides/userguide/orteliustutorial/)
 * [Add Ortelius to your Pipeline and Perform a POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf)
 

@@ -27,8 +27,8 @@ Don't wait for the next critical CVE to discover where your vulnerable software 
 
 [Login and Get Started](https://app.deployhub.com/)
 
-</div
->
+</div>
+
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}
@@ -189,6 +189,7 @@ Ortelius is built around the principle that post-deployment software vulnerabili
 - [Explore the Ortelius GitHub Organization](https://github.com/ortelius)
 
 </div>
+
 {{< /blocks/feature_dual >}}
 
 {{< blocks/feature_dual >}}

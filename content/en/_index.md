@@ -299,7 +299,7 @@ Get started with Ortelius using the free SaaS version. Take a quick tutorial and
 
 <div style="font-size:1.8em;">
 
-[Get Started Today](/Signup/) 
+[Get Started Today](/signup/) 
 </div>
 
 </div>
