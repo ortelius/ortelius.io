@@ -7,18 +7,58 @@ menu:
    weight: 20
 ---
 
-
-
-
-{{< blocks/section color="white" >}}
+{{< blocks/section color="black" >}}
 {{< blocks/feature_dual >}}
 
 <div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">SecureChainCon 2026</h1>
+<h1 class="text-center">2026 Holiday Party</h1>
 </div>
 
 <hr>
 
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/2026HolidayParty.png" alt="Holiday Party 2026" height="300px" width="500px" />
+</div>
+
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">You're Invited to the Ortelius 2026 Holiday Party<br></h2>
+
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+<h3 class="text-left">December 18, 2026</h3>
+
+As we wrap up another exciting year, it's time to celebrate the people who make Ortelius possible—our amazing open-source contributors! Your ideas, code, collaboration, and commitment have helped move Ortelius forward, and we couldn't do it without you. Join us for our 2026 Holiday Party as we celebrate our accomplishments, recognize our contributors, share some laughs, and connect beyond our usual GitHub issues and community meetings. Whether you've contributed code, documentation, ideas, or simply joined the conversation, you're an important part of our community. Come celebrate with us—we'd love to see you there!
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+Use this [Link to Join the Event](https://us02web.zoom.us/j/89908157552) on December 18th, 8:30 AM MT
+</div>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">2026 SecureChain Con - On-Demand</h1>
+</div>
+
+<hr>
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
 <img src="/images/SecureChainCon2026.png" alt="SecureChainCon 2026" height="300px" width="500px" />
@@ -30,9 +70,9 @@ menu:
 
 </div>
 
+
 {{< /blocks/feature_dual >}}
 {{< blocks/feature_dual >}}
-
 
 <div style="text-align:center;width:100%;margin-top:160px">
 </div>
@@ -64,63 +104,9 @@ Join this conversation with John Linford, The Open Group Security Portfolio Dire
 
 </div>
 
-{{< /blocks/feature_dual >}}
-{{< /blocks/section >}}
 
 
-{{< blocks/section color="primary" >}}
-{{< blocks/feature_dual >}}
 
-<div style="text-align:left;width:100%;margin-top:80px">
-<h1 class="text-center">2026 Ortelius BlogAThon</h1>
-</div>
-
-<hr>
-
-<div style="text-align:center;width:100%;margin-top:80px">
-<p></p>
-<img src="/images/2026-BlogAThon.png" alt="Open Source Summit and CDCon 2026" height="300px" width="300px" />
-</div>
-
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
-
-</div>
-
-{{< /blocks/feature_dual >}}
-{{< blocks/feature_dual >}}
-
-
-<div style="text-align:center;width:100%;margin-top:160px">
-</div>
-
-<div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">Share Your Knowledge - Submit a Blog
-<br></h2>
-
-</div>
-
-<br>
-
-[Learn More and Submit Your Blog](https://ortelius.io/blog/2026/02/22/2026-blogathon/)
-
-<br></h2>
-
-
-Join the Ortelius community for our 5th annual BlogAThon, a celebration of ideas, learning, and open source collaboration. Whether you’re just getting started with open source or you’re a seasoned practitioner, BlogAThon is your opportunity to share knowledge, tell your story, and help shape the future of post-deployment vulnerability management.
-
-Submit your blog between April 1st and July 31st to be considered a participant. 
-
-By participating, you’ll help advance the Ortelius mission to:
-
-- Empower new contributors to become confident, productive members of the Ortelius open source community
-
-- Accelerate adoption of the Ortelius platform by new users
-
-- Educate the broader ecosystem on software supply chain, security, and DevOps topics—especially those focused on post-deployment vulnerability management
-
-Our BlogAThon isn’t just about writing—it’s about becoming part of the Ortelius team and contributing to a growing community that values openness, collaboration, and impact. We can’t wait to welcome you.
-
-</div>
 
 {{< /blocks/feature_dual >}}
 {{< /blocks/section >}}
