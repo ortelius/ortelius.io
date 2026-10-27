@@ -10,7 +10,7 @@ menu:
 {{< blocks/section color=primary >}}
 {{< blocks/feature_dual >}}
 
-## 2025 Governing Board
+## 2025 / 2026 Governing Board
 The Ortelius Governing Board (GB) is responsible for strategic direction, business oversight, and business decisions. An overview of the Governing Board is set forth in the [Ortelius Governing Guidelines](https://ortelius.io/guidelines/). 
 
 - [Brian Dawson](https://www.linkedin.com/in/bvdawson/) - Partner Ecosystem Leader, Ripple, California, USA
