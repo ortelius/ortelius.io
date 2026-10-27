@@ -34,12 +34,13 @@ The Ortelius Team needs you. Regardless of your previous involvement in an open 
 
 <strong>For New Adopters</strong>
 
-* [Install Ortelius](https://docs.ortelius.io/guides/userguide/installation-and-support/)
+* [Signup for Ortelius SaaS](/Signup/)
 * [Take a Quick Tour of the SaaS](https://docs.ortelius.io/guides/userguide/orteliustutorial/)
 * [Add Ortelius to your Pipeline and Perform a POC](https://docs.ortelius.io/Ortelius-General-Poc.pdf)
 
 <strong>For New Contributors</strong>
 
+* [Review the Guidelines and Code of Conduct](/guidelines/)
 * [Review the Ortelius Contributor Guide](https://docs.ortelius.io/guides/contributorguide/)
 * [General Tools for Setting Up Your Development Environment](https://docs.ortelius.io/guides/contributorguide/dev-environment/)
 * [Required Tools for Contributing to Ortelius](https://docs.ortelius.io/guides/contributorguide/application-build-and-containerisation/)
@@ -126,7 +127,6 @@ Congratulations to [Sacha Wharton](https://www.linkedin.com/in/sachawharton/), [
 # Getting Started Resources
 
 - [Ortelius Contributor and User Documentation](https://docs.ortelius.io/guides/)
-- [Sign-up and learn Ortelius](https://www.deployhub.com/open-source-vulnerability-management/)
 - [Ortelius YouTube Channel](https://www.youtube.com/channel/UCw2LfF0mqkaXdvqfVnIPWmw)
 
 
