@@ -11,6 +11,57 @@ menu:
    weight: 20
 ---
 
+
+{{< blocks/section color="primary" >}}
+{{< blocks/feature_dual >}}
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h1 class="text-center">Ready to Build? Developer Environment Workshop</h1>
+</div>
+
+<hr>
+
+<div style="text-align:center;width:100%;margin-top:80px">
+<p></p>
+<img src="/images/alienonzoom.jpg" alt="Developer Environment Workshop" height="300px" width="500px" />
+</div>
+
+
+
+{{< /blocks/feature_dual >}}
+{{< blocks/feature_dual >}}
+
+
+<div style="text-align:center;width:100%;margin-top:160px">
+</div>
+
+<div style="text-align:left;width:100%;margin-top:80px">
+<h2 class="text-left">Get Ready to Contribute to Ortelius<br></h2>
+</div>
+
+<div style="margin-top:10px;margin-left:1px">
+<h3 class="text-left">November 20th, 2026 8AM MT / 10AM ET</h3>
+
+Steve Taylor will be leading a hands-on workshop to help get your development environment ready for contributing to Ortelius, including buildig the site locally. 
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Learn More](https://ortelius.io/blog/2026/11/10/ready-to-build-join-the-ortelius-developer-workshop/)
+</div>
+
+<div style="font-size:1.8em;text-align:center;margin-top:10px">
+
+[Link to Join the Event](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86778580135) 
+</div>
+
+</div>
+
+{{< /blocks/feature_dual >}}
+{{< /blocks/section >}}
+
+
+
+
 {{< blocks/section color="black" >}}
 {{< blocks/feature_dual >}}
 
@@ -46,7 +97,7 @@ As we wrap up another exciting year, it's time to celebrate the people who make 
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-Use this [Link to Join the Event](https://us02web.zoom.us/j/89908157552) on December 18th, 8:30 AM MT
+[Link to Join the Event](https://us02web.zoom.us/j/89908157552) on December 18th, 8:30 AM MT
 </div>
 
 </div>
