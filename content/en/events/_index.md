@@ -110,6 +110,7 @@ Grab your favorite holiday beverage and donut, gather your questions, and bring 
 
 [Join the Event Here](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86778580135) 
 
+[Learn More](https://ortelius.io/blog/2026/11/17/ortelius-holiday-gathering-december-2026/)
 
 </div>
 
