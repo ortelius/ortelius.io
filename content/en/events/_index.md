@@ -67,13 +67,14 @@ Steve Taylor will be leading a hands-on workshop to help get your development en
 
 <div style="text-align:left;width:100%;margin-top:80px">
 <h1 class="text-center">2026 Holiday Party</h1>
+<h2 class="text-center">Ready to give your LinkedIn presence a little holiday magic? </h2>
 </div>
 
 <hr>
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/2026HolidayParty.png" alt="Holiday Party 2026" height="300px" width="500px" />
+<img src="/images/LoriRandle-keynote.png" alt="Lorri Kane Randle" height="300px" width="500px" />
 </div>
 
 
@@ -86,18 +87,30 @@ Steve Taylor will be leading a hands-on workshop to help get your development en
 </div>
 
 <div style="text-align:left;width:100%;margin-top:80px">
-<h2 class="text-left">You're Invited to the Ortelius 2026 Holiday Party<br></h2>
+<h2 class="text-left">Join the Ortelius 2026 Holiday Party<br></h2>
 
 </div>
 
 <div style="margin-top:10px;margin-left:1px">
-<h3 class="text-left">December 18, 2026</h3>
+<h3 class="text-left">December 18, 2026, 8:30AM - 11AM MT (10:30AM - 1PM ET) </h3>
 
-As we wrap up another exciting year, it's time to celebrate the people who make Ortelius possible—our amazing open-source contributors! Your ideas, code, collaboration, and commitment have helped move Ortelius forward, and we couldn't do it without you. Join us for our 2026 Holiday Party as we celebrate our accomplishments, recognize our contributors, share some laughs, and connect beyond our usual GitHub issues and community meetings. Whether you've contributed code, documentation, ideas, or simply joined the conversation, you're an important part of our community. Come celebrate with us—we'd love to see you there!
+
+
+Join the Ortelius community for a fun-filled Holiday Party featuring special guest [Lorri Kane Randle](https://www.linkedin.com/in/lorrirandle/), who will share tips and tricks for growing your LinkedIn following, expanding your professional network, and getting more engagement with your posts.
+
+Whether you're a developer, open-source contributor, community leader, or just someone who wants to build a stronger professional presence, this session is for you!
+
+We'll talk about how to make meaningful connections, get noticed, and turn your LinkedIn activity into real opportunities—all while celebrating another great year with the Ortelius community.
+
+Start with Beer and Donuts where you can chat with the contributors, stay for the LinkedIn tips with Lorri, and leave ready to grow your network in 2027! 🚀
+
+Grab your favorite holiday beverage and donut, gather your questions, and bring a little festive spirit!
 
 <div style="font-size:1.8em;text-align:center;margin-top:10px">
 
-[Link to Join the Event](https://us02web.zoom.us/j/89908157552) on December 18th, 8:30 AM MT
+[Join the Event Here](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86778580135) 
+
+
 </div>
 
 </div>
