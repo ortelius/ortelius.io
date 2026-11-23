@@ -39,20 +39,20 @@ menu:
 <h2 class="text-left">Get Ready to Contribute to Ortelius<br></h2>
 </div>
 
-<div style="margin-top:10px;margin-left:1px">
-<h3 class="text-left">November 20th, 2026 8AM MT / 10AM ET</h3>
+[View On-Demand](https://youtu.be/oxz8oZQO3Cw)
 
 Steve Taylor will be leading a hands-on workshop to help get your development environment ready for contributing to Ortelius, including buildig the site locally. 
 
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
+Our goal is simple: Get more developers comfortable working with the Ortelius codebase so they can start making real contributions.
 
-[Learn More](https://ortelius.io/blog/2026/11/10/ready-to-build-join-the-ortelius-developer-workshop/)
-</div>
+We’re particularly interested in growing the community of developers who can work on the Ortelius front-end. Whether it’s improving the user experience, updating interfaces, fixing bugs, or adding new features, there’s plenty of opportunity to make an impact. During the workshop, we’ll focus on:
 
-<div style="font-size:1.8em;text-align:center;margin-top:10px">
+- Setting up a local development environment using VS Code and the Ortelius developer resources.
+- Building Ortelius locally so contributors can work with and test the application.
+- Getting ready for front-end development by understanding how to configure the environment and begin making changes.
+- Troubleshooting setup challenges so more developers can get past the initial hurdles and start contributing.
+The objective isn’t just to get Ortelius running on your laptop. It’s to give developers the foundation they need to make changes, test their work, and eventually submit pull requests.
 
-[Link to Join the Event](https://us02web.zoom.us/j/5054246440?pwd=NFRwZWd3RGdlV09JdTBneHI1WGJWdz09&omn=86778580135) 
-</div>
 
 </div>
 
