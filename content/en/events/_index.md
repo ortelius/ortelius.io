@@ -74,9 +74,14 @@ The objective isn’t just to get Ortelius running on your laptop. It’s to giv
 
 <div style="text-align:center;width:100%;margin-top:80px">
 <p></p>
-<img src="/images/LoriRandle-keynote.png" alt="Lorri Kane Randle" height="300px" width="500px" />
-</div>
+<img src="/images/LoriRandle-keynote.png" alt="Lorri Kane Randle" height="200px" width="400px" />
+<p></p>
+<br>
 
+<img src="/images/AkritesIntroduction-CFreeman.jpg" alt="Christina Freman" height="200px" width="400px" />
+<p></p>
+<br>
+</div>
 
 
 {{< /blocks/feature_dual >}}
@@ -95,14 +100,9 @@ The objective isn’t just to get Ortelius running on your laptop. It’s to giv
 <h3 class="text-left">December 18, 2026, 8:30AM - 11AM MT (10:30AM - 1PM ET) </h3>
 
 
+Join the Ortelius community for a fun-filled Holiday Party featuring special guest [Lorri Kane Randle](https://www.linkedin.com/in/lorrirandle/), who will share tips and tricks for growing your LinkedIn following, expanding your professional network, and getting more engagement with your posts. We'll talk about how to make meaningful connections, get noticed, and turn your LinkedIn activity into real opportunities—all while celebrating another great year with the Ortelius community.
 
-Join the Ortelius community for a fun-filled Holiday Party featuring special guest [Lorri Kane Randle](https://www.linkedin.com/in/lorrirandle/), who will share tips and tricks for growing your LinkedIn following, expanding your professional network, and getting more engagement with your posts.
-
-Whether you're a developer, open-source contributor, community leader, or just someone who wants to build a stronger professional presence, this session is for you!
-
-We'll talk about how to make meaningful connections, get noticed, and turn your LinkedIn activity into real opportunities—all while celebrating another great year with the Ortelius community.
-
-Start with Beer and Donuts where you can chat with the contributors, stay for the LinkedIn tips with Lorri, and leave ready to grow your network in 2027! 🚀
+In addition we will be hearing from [Christina Freeman](https://www.linkedin.com/in/christina-freeman-4b08062/), Incident Commander/Technical Program Management Director for Akrites at The Linux Foundation. Christina will give us a briefing on Akrities and answer our questions about the project goals and direction. We will complete the day with Tracy Ragan presenting a workshop on on-boarding open-source projects into Ortelius.
 
 Grab your favorite holiday beverage and donut, gather your questions, and bring a little festive spirit!
 
