@@ -35,7 +35,7 @@ Join us for Beer & Donuts, our semi-annual Ortelius tradition celebrating the in
 
 <p></p>
 
-[Lorri Kane Randle](https://www.linkedin.com/in/lorrirandle/) will be our special guest speaker. She will share tips and tricks for growing your LinkedIn following, expanding your professional network, and getting more engagement with your posts.Whether you're a developer, open-source contributor, community leader, or just someone who wants to build a stronger professional presence, this session is for you! We'll talk about how to make meaningful connections, get noticed, and turn your LinkedIn activity into real opportunities—all while celebrating another great year with the Ortelius community.
+[Lorri Kane Randle](https://www.linkedin.com/in/lorrirandle/) will be our special guest speaker. She will share tips and tricks for growing your LinkedIn following, expanding your professional network, and getting more engagement with your posts. Whether you're a developer, open-source contributor, community leader, or just someone who wants to build a stronger professional presence, this session is for you! We'll talk about how to make meaningful connections, get noticed, and turn your LinkedIn activity into real opportunities—all while celebrating another great year with the Ortelius community.
 
 ### 9:30AM MT - 10:00AM MT The Gift of a More Secure Open Source Ecosystem: Introducing Akrites 
 
@@ -49,7 +49,7 @@ As AI accelerates vulnerability discovery, open source maintainers face increasi
 
 <p></p>
 
-Start working toward your [Pathfinder badge](https://ortelius.io/blog/2026/08/12/become-an-ortelius-pathfinder-put-your-favorite-open-source-project-on-the-map/). [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/) will walk through how to onboard an OS project into Ortelius. In 2027, we want to build adoption for Ortelius. Our pathway, provide post-deployment vulnerabiltiy detection services to our fellow Open-Source Projects. 
+Start working toward your [Pathfinder badge](https://ortelius.io/blog/2026/08/12/become-an-ortelius-pathfinder-put-your-favorite-open-source-project-on-the-map/). [Tracy Ragan](https://www.linkedin.com/in/tracy-ragan-oms/) will walk through how to onboard an OS project into Ortelius. In 2027, we want to build adoption for Ortelius. Our pathway, provide post-deployment vulnerability detection services to our fellow Open-Source Projects. 
 
 
 
